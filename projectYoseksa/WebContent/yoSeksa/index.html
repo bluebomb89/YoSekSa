@@ -71,11 +71,17 @@ $(document).ready(function() {
 	  $(".prev").click(function(){
 	    owl.trigger('owl.prev');
 	  })
-	  $(".play").click(function(){
-	    owl.trigger('owl.play',1000); //owl.play event accept autoPlay speed as second parameter
+	  $("#startmain").click(function(){
+	    owl.trigger('owl.play',1500); //owl.play event accept autoPlay speed as second parameter
 	  })
 	  $(".stop").click(function(){
 	    owl.trigger('owl.stop');
+	  })
+	  $("#owl-demo").mouseover(function(){
+	    owl.trigger('owl.stop');
+	  })
+	  $("#owl-demo").mouseout(function(){
+	  	owl.trigger('owl.play',1500);
 	  })
 	 
 	});
@@ -155,7 +161,7 @@ $(document).ready(function() {
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav navbar-right">
 							<li class="active"><a href="index.html">Home</a></li>
-							<li><a class="scroll" href="#section1">Search</a></li>
+							<li><a class="scroll" id=startmain href="#section1">Search</a></li>
 							<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
 								<ul class="dropdown-menu">
 									<li><a href="about.html">about1</a></li>
@@ -193,7 +199,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 -->
 
 
-	<div id="section1">
+	<div id="section1" style="margin-bottom: 14px;">
 		<div class="slider">
 			<div class="callbacks_container" style="padding-left: 15px; padding-right: 15px;">
 			  <ul class="rslides" id="slider">
@@ -240,97 +246,75 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 			</ul>
 		  </div>
 	  </div>
-	<div id="owl-demo" class="owl-carousel owl-theme">
-		<div class="item col-sm-3 col-md-3">
-			<div class="thumbnail">
-				<img src="http://images.bigoven.com/image/upload/t_recipe-256/crispy-chicken-sandwich-250c6c.jpg" alt="...">
-				<div class="caption">
-					<h3>Thumbnail label</h3>
+	  	<div align=left style="position: absolute;"><a class="btn prev">Previous</a></div>
+	  	<div align=right><a class="btn next">Next</a></div>
+		<div id="owl-demo" class="owl-carousel owl-theme">
+			<div class="item col-sm-3 col-md-3">
+				<div class="thumbnail">
+					<img src="http://images.bigoven.com/image/upload/t_recipe-256/crispy-chicken-sandwich-250c6c.jpg" alt="...">
+					<div class="caption">
+						<h3>Categori 1</h3>
+					</div>
 				</div>
+			</div>
+			<div class="item col-sm-3 col-md-3">
+				<div class="thumbnail">
+					<img src="http://images.bigoven.com/image/upload/t_recipe-256/crispy-chicken-sandwich-250c6c.jpg" alt="...">
+					<div class="caption">
+						<h3>Categori 2</h3>
+					</div>
+				</div>
+			</div>
+			<div class="item col-sm-3 col-md-3">
+				<div class="thumbnail">
+					<img src="http://images.bigoven.com/image/upload/t_recipe-256/crispy-chicken-sandwich-250c6c.jpg" alt="...">
+					<div class="caption">
+						<h3>Categori 3</h3>
+					</div>
+				</div>
+			</div>
+			<div class="item col-sm-3 col-md-3">
+				<div class="thumbnail">
+					<img src="http://images.bigoven.com/image/upload/t_recipe-256/crispy-chicken-sandwich-250c6c.jpg" alt="...">
+					<div class="caption">
+						<h3>Categori 4</h3>
+					</div>
+				</div>
+			</div>
+			<div class="item col-sm-3 col-md-3">
+				<div class="thumbnail">
+					<img src="http://images.bigoven.com/image/upload/t_recipe-256/crispy-chicken-sandwich-250c6c.jpg" alt="...">
+					<div class="caption">
+						<h3>Categori 5</h3>
+					</div>
+				</div>
+			</div>
+			<div class="item col-sm-3 col-md-3">
+				<div class="thumbnail">
+					<img src="http://images.bigoven.com/image/upload/t_recipe-256/crispy-chicken-sandwich-250c6c.jpg" alt="...">
+					<div class="caption">
+						<h3>Categori 6</h3>
+					</div>
+				</div>
+			</div>
+			<div class="item col-sm-3 col-md-3">
+				<div class="thumbnail">
+					<img src="http://images.bigoven.com/image/upload/t_recipe-256/crispy-chicken-sandwich-250c6c.jpg" alt="...">
+					<div class="caption">
+						<h3>Categori 7</h3>
+					</div>
+				</div>
+			</div>
+			<div class="item col-sm-3 col-md-3">
+				<div class="thumbnail">
+					<img src="http://images.bigoven.com/image/upload/t_recipe-256/crispy-chicken-sandwich-250c6c.jpg" alt="...">
+					<div class="caption">
+						<h3>Categori 8</h3>
+					</div>
+				</div>
+				</div>	
 			</div>
 		</div>
-		<div class="item col-sm-3 col-md-3">
-			<div class="thumbnail">
-				<img src="http://images.bigoven.com/image/upload/t_recipe-256/crispy-chicken-sandwich-250c6c.jpg" alt="...">
-				<div class="caption">
-					<h3>Thumbnail label</h3>
-				</div>
-			</div>
-		</div>
-		<div class="item col-sm-3 col-md-3">
-			<div class="thumbnail">
-				<img src="http://images.bigoven.com/image/upload/t_recipe-256/crispy-chicken-sandwich-250c6c.jpg" alt="...">
-				<div class="caption">
-					<h3>Thumbnail label</h3>
-				</div>
-			</div>
-		</div>
-		<div class="item col-sm-3 col-md-3">
-			<div class="thumbnail">
-				<img src="http://images.bigoven.com/image/upload/t_recipe-256/crispy-chicken-sandwich-250c6c.jpg" alt="...">
-				<div class="caption">
-					<h3>Thumbnail label</h3>
-				</div>
-			</div>
-		</div>
-		<div class="item col-sm-3 col-md-3">
-			<div class="thumbnail">
-				<img src="http://images.bigoven.com/image/upload/t_recipe-256/crispy-chicken-sandwich-250c6c.jpg" alt="...">
-				<div class="caption">
-					<h3>Thumbnail label</h3>
-				</div>
-			</div>
-		</div>
-		<div class="item col-sm-3 col-md-3">
-			<div class="thumbnail">
-				<img src="http://images.bigoven.com/image/upload/t_recipe-256/crispy-chicken-sandwich-250c6c.jpg" alt="...">
-				<div class="caption">
-					<h3>Thumbnail label</h3>
-				</div>
-			</div>
-		</div>
-		<div class="item col-sm-3 col-md-3">
-			<div class="thumbnail" style="height=350px;height: 350px;margin-top: 12px;margin-bottom: 0px;">
-				<img src="http://images.bigoven.com/image/upload/t_recipe-256/crispy-chicken-sandwich-250c6c.jpg" alt="...">
-				<div class="caption">
-					<h3>Thumbnail label</h3>
-				</div>
-			</div>
-		</div>
-		<div class="item col-sm-3 col-md-3">
-			<div class="thumbnail" style="height=350px;height: 350px;margin-top: 12px;margin-bottom: 0px;">
-				<img src="http://images.bigoven.com/image/upload/t_recipe-256/crispy-chicken-sandwich-250c6c.jpg" alt="...">
-				<div class="caption">
-					<h3>Thumbnail label</h3>
-				</div>
-			</div>
-		</div>	
-	</div>
- 
-<div class="customNavigation">
-  <a class="btn prev">Previous</a>
-  <a class="btn next">Next</a>
-  <a class="btn play">Autoplay</a>
-  <a class="btn stop">Stop</a>
-</div>
-<!---->
-<div class="content">
-	 <div class="container">
-		 <div class="content-grids">
-			 <div class="col-md-6 content-left">
-				 <img src="images/w1.jpg" class="img-responsive" alt=""/>
-			 </div>
-			 <div class="col-md-6 content-right">
-				 <h2>Etiam ornare nisi eget quam pretium ipsum semper.</h2>
-				 <p>Vestibulum augue nisi, mattis et mattis sed, commodo id turpis. Maecenas quis felis enim. Integer lacinia in ex quis laoreet.
-				 Aliquam justo urna, ullamcorper non pellentesque sit amet, ultrices in lacus. Curabitur vitae nisl vel tellus rutrum ullamcorper.
-				 Proin volutpat, magna eget posuere laoreet, est massa lobortis mi, a commodo dui nisi eget risus.</p>
-				 <p>Maecenas eget magna volutpat, tincidunt urna id, imperdiet mi. Suspendisse dignissim eros sit amet nulla faucibus tristique quis ac libero.Vestibulum molestie maximus felis, rhoncus dignissim metus.</p>
-			 </div>
-			 <div class="clearfix"></div>
-		 </div>
-	 </div>
-</div>	 	 
 <!-- services -->
 <div id="services" class="services">
 	 <div class="container">
