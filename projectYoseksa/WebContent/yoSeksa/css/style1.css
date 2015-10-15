@@ -163,3 +163,10 @@ header {
 	margin-top: 12px;
 	margin-bottom: 0px;
 }
+ul.callbacks_tabs.callbacks1_tabs {
+    position: absolute;
+    bottom: 50;
+    bottom: 400px;
+    z-index: 999;
+    left: 47%;
+}
