@@ -1,5 +1,4 @@
-html,
-body {
+html,body {
   height: 100%;
 }
 .row {
@@ -81,8 +80,8 @@ header {
 }
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-    color: #fff;
-    background-color: #F43C60;
+    background-color: transparent;
+    color: #ffffff;
 }
 #footer > .container {
   
@@ -128,8 +127,8 @@ header {
 	background-size:cover;
 }
 #owl-demo .item{
-  background: #3fbf79;
-  padding: 30px 0px;
+  background: rgba(63, 191, 121, 0);
+  padding: 0px 0px 0px 0px;
   margin: 10px;
   color: #FFF;
   -webkit-border-radius: 3px;
@@ -158,4 +157,16 @@ header {
     position: relative;
     color: #333;
     z-index: 5000;
+}
+#owl-demo .item .thumbnail{
+    min-height: 300px;
+	margin-top: 12px;
+	margin-bottom: 0px;
+}
+ul.callbacks_tabs.callbacks1_tabs {
+    position: absolute;
+    bottom: 50;
+    bottom: 400px;
+    z-index: 999;
+    left: 45%;
 }
