@@ -4,38 +4,37 @@
 <html>
 <head>
 <title>Flooring a Interior category Flat Bootstarp Responsive Website Template | Home :: w3layouts</title>
-<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
-<link href="css/component.css" rel="stylesheet" type="text/css"  />
+<link href="../../css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="../../css/component.css" rel="stylesheet" type="text/css"  />
 <!-- jQuery (necessary JavaScript plugins) -->
 <!-- Custom Theme files -->
-<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
-<link href="css/bootstrapTheme.css" rel="stylesheet">
-<link href="css/style1.css" type="text/css" rel="stylesheet" media="all">
-<link href="css/custom.css" rel="stylesheet">
-<link href="css/owl.carousel.css" rel="stylesheet">
-<link href="css/owl.theme.css" rel="stylesheet">
+<link href="../../css/style.css" type="text/css" rel="stylesheet" media="all">
+<link href="../../css/bootstrapTheme.css" rel="stylesheet">
+<link href="../../css/style1.css" type="text/css" rel="stylesheet" media="all">
+<link href="../../css/custom.css" rel="stylesheet">
+<link href="../../css/owl.carousel.css" rel="stylesheet">
+<link href="../../css/owl.theme.css" rel="stylesheet">
 <!-- Custom Theme files -->
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Flooring Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //footer -->
 
-<script type="text/javascript" src="js/saved_resource"></script>
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script src="js/modernizr.custom.js"></script>
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/responsiveslides.min.js"></script>
-<script type="text/javascript" src="js/jquery.cycle.all.js"></script>
-<script src="js/owl.carousel.js"></script>
-<script src="js/owl.carousel.min.js"></script>
+<script src="../../js/saved_resource"></script>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/modernizr.custom.js"></script>
+<script src="../../js/jquery-1.11.1.min.js"></script>
+<script src="../../js/responsiveslides.min.js"></script>
+<script src="../../js/jquery.cycle.all.js"></script>
+<script src="../../js/owl.carousel.js"></script>
+<script src="../../js/owl.carousel.min.js"></script>
 <!--/animated-css-->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
-<script src="js/bootstrap.js"></script> 
+<script src="../../js/move-top.js"></script>
+<script src="../../js/easing.js"></script>
+<script src="../../js/bootstrap.js"></script> 
 <!--/script-->
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
@@ -116,36 +115,15 @@ $(document).ready(function() {
 <body  class="cbp-spmenu-push">
 		<!--bottom-->
 		  <section class="button">
-					<button id="showLeftPush"><img src="images/menu-icon.png" alt=""></button>
+					<button id="showLeftPush"><img src="../../images/menu-icon.png" alt=""></button>
 		   </section>
 			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
 			<h3>Menu</h3>
 			<!-- 왼쪽상단에 있는 버튼을 클릭했을때 나오는 링크or속성값을 지정하는곳 -->
 		  </nav>
 		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
-		<script src="js/classie.js"></script>
-		<script>
-			var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
-				showLeftPush = document.getElementById( 'showLeftPush' ),
-				showRightPush = document.getElementById( 'showRightPush' ),
-				body = document.body;
+		<script src="../../js/classie.js"></script>
 
-			showLeftPush.onclick = function() {
-				classie.toggle( this, 'active' );
-				classie.toggle( body, 'cbp-spmenu-push-toright' );
-				classie.toggle( menuLeft, 'cbp-spmenu-open' );
-				disableOther( 'showLeftPush' );
-			};
-
-			function disableOther( button ) {
-				if( button !== 'showLeftPush' ) {
-					classie.toggle( showLeftPush, 'disabled' );
-				}
-				if( button !== 'showRightPush' ) {
-					classie.toggle( showRightPush, 'disabled' );
-				}
-			}
-		</script>
 <!-- 메인화면 -->
 <header class="masthead">
 			<div class="bannersearch"></div>
@@ -316,7 +294,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어주면 된다.
 			</div>
 		</div>
 <!-- services -->
-<div id="services" class="services" style="padding-top: 51px">
+<div id="services"  style="padding-top: 51px">
 	 <div class="container">
 			<div class="service-info">
 				<h3>Services</h3>
@@ -377,7 +355,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어주면 된다.
 							<li>
 								<div class="testimonial-grids">
 									<div class="testimonial-left">
-										<img src="images/t1.jpg" alt="" />
+										<img src="../../images/t1.jpg" alt="" />
 									</div>
 									<div class="testimonial-right">
 										<h5>Mary Wilson</h5>
@@ -391,7 +369,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어주면 된다.
 							<li>
 								<div class="testimonial-grids">
 									<div class="testimonial-left">
-										<img src="images/t3.jpg" alt="" />
+										<img src="../../images/t3.jpg" alt="" />
 									</div>
 									<div class="testimonial-right">
 										<h5>David Smith</h5>
@@ -405,7 +383,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어주면 된다.
 							<li>
 								<div class="testimonial-grids">
 									<div class="testimonial-left">
-										<img src="images/t2.jpg" alt="" />
+										<img src="../../images/t2.jpg" alt="" />
 									</div>
 									<div class="testimonial-right">
 										<h5>Lora  Alance</h5>
@@ -434,7 +412,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어주면 된다.
 					 <p>03/2015</p>
 				 </div>
 				 <div class="event-grid_pic">
-					 <img src="images/pc.jpg" alt=""/>
+					 <img src="../../images/pc.jpg" alt=""/>
 					 <h3><a href="#">Morbi pellentesque urna scelerisque justo rutrum.</a></h3>
 					 <p>Nullam placerat aliquet nisl id finibus. Nulla mollis mattis magna in hendrerit. Pellentesque nunc nisl, dapibus eget erat non,
 					 sagittis accumsan dolor.</p>
@@ -446,7 +424,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어주면 된다.
 					 <p>02/2015</p>
 				 </div>
 				 <div class="event-grid_pic">
-					 <img src="images/pc1.jpg" alt=""/>
+					 <img src="../../images/pc1.jpg" alt=""/>
 					 <h3><a href="#">Morbi pellentesque urna scelerisque justo rutrum.</a></h3>
 					 <p>Nullam placerat aliquet nisl id finibus. Nulla mollis mattis magna in hendrerit. Pellentesque nunc nisl, dapibus eget erat non,
 					 sagittis accumsan dolor.</p>
@@ -458,7 +436,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어주면 된다.
 					 <p>04/2015</p>
 				 </div>
 				 <div class="event-grid_pic">
-					 <img src="images/pc2.jpg" alt=""/>
+					 <img src="../../images/pc2.jpg" alt=""/>
 					 <h3><a href="#">Morbi pellentesque urna scelerisque justo rutrum.</a></h3>
 					 <p>Nullam placerat aliquet nisl id finibus. Nulla mollis mattis magna in hendrerit. Pellentesque nunc nisl, dapibus eget erat non,
 					 sagittis accumsan dolor.</p>
@@ -513,7 +491,30 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어주면 된다.
 		$().UItoTop({ easingType: 'easeOutQuart' });
 });
 </script>
-<a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<script>
+			var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+				showLeftPush = document.getElementById( 'showLeftPush' ),
+				showRightPush = document.getElementById( 'showRightPush' ),
+				body = document.body;
+
+			showLeftPush.onclick = function() {
+				classie.toggle( this, 'active' );
+				classie.toggle( body, 'cbp-spmenu-push-toright' );
+				classie.toggle( menuLeft, 'cbp-spmenu-open' );
+				disableOther( 'showLeftPush' );
+			};
+
+			function disableOther( button ) {
+				if( button !== 'showLeftPush' ) {
+					classie.toggle( showLeftPush, 'disabled' );
+				}
+				if( button !== 'showRightPush' ) {
+					classie.toggle( showRightPush, 'disabled' );
+				}
+			}
+</script>
+<a href="#to-top" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"> </span></a>
+<!-- 자바 스크립트 호출-->
 <!----> 
 <!-- Bootstrap core JavaScript
     ================================================== -->
