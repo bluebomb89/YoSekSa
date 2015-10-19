@@ -11,6 +11,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <head>
 <title>Flooring a Interior category Flat Bootstarp Responsive Website Template | Home :: w3layouts</title>
 <link href="../../css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="../../css/owl.theme.css" rel="stylesheet">
 <link href="../../css/component.css" rel="stylesheet" type="text/css"  />
 <!-- jQuery (necessary JavaScript plugins) -->
 <!-- Custom Theme files -->
@@ -18,7 +19,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <link href="../../css/bootstrapTheme.css" rel="stylesheet">
 <link href="../../css/custom.css" rel="stylesheet">
 <link href="../../css/owl.carousel.css" rel="stylesheet">
-<link href="../../css/owl.theme.css" rel="stylesheet">
+<link href="../../css/indesxggong.css" rel="stylesheet">
+
 
 <!-- Custom Theme files -->
 <!--//theme-style-->
@@ -185,7 +187,7 @@ $(document).ready(function() {
 <link rel="stylesheet" href="http://www.webnoriter.com/~imsi/store/css/default_shop.css">
 <link rel="stylesheet" href="http://www.webnoriter.com/~imsi/store/skin/shop/basic/style.css">
 <link rel="stylesheet" href="http://www.webnoriter.com/~imsi/store/skin/member/basic/style.css">
-<link href="css/styleggong.css" type="text/css" rel="stylesheet" media="all">
+<link href="../../css/styleggong.css" type="text/css" rel="stylesheet" media="all">
 <!--[if lte IE 8]>
 <script src="http://www.webnoriter.com/~imsi/store/js/html5.js"></script>
 <![endif]-->
@@ -574,7 +576,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 				};
 				*/
 		$().UItoTop({ easingType: 'easeOutQuart' });
-});
+		});
 </script>
 <a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 <!----> 
