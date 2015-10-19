@@ -1,4 +1,6 @@
-ï»¿<!DOCTYPE HTML>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE HTML>
 <html>
 <head>
 <title>Flooring a Interior category Flat Bootstarp Responsive Website Template | Home :: w3layouts</title>
@@ -86,11 +88,11 @@ $(document).ready(function() {
 			offset: {top: $('header').height()-$('#nav').height()}
 		});
 		
-		/* affix-top ì—ì„œ affixë¡œ ìˆ˜ì •ë ëŒ€ ì´ë²¤íŠ¸ ë°œìƒ*/
+		/* affix-top ¿¡¼­ affix·Î ¼öÁ¤µÉ´ë ÀÌº¥Æ® ¹ß»ı*/
 		$('#nav').on("affix.bs.affix",function(){
 			$("#startmain").text("haa!");
 		});
-		/* affixì—ì„œ affix-topìœ¼ë¡œ ì „í™˜ë ë•Œ ì´ë²¤íŠ¸ ë°œìƒ*/
+		/* affix¿¡¼­ affix-topÀ¸·Î ÀüÈ¯µÉ¶§ ÀÌº¥Æ® ¹ß»ı*/
 		$('#nav').on("affix-top.bs.affix",function(){
 			$("#startmain").text("Search");
 		});
@@ -118,7 +120,7 @@ $(document).ready(function() {
 		   </section>
 			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
 			<h3>Menu</h3>
-			<!-- ì™¼ìª½ìƒë‹¨ì— ìˆëŠ” ë²„íŠ¼ì„ í´ë¦­í–ˆì„ë•Œ ë‚˜ì˜¤ëŠ” ë§í¬orì†ì„±ê°’ì„ ì§€ì •í•˜ëŠ”ê³³ -->
+			<!-- ¿ŞÂÊ»ó´Ü¿¡ ÀÖ´Â ¹öÆ°À» Å¬¸¯ÇßÀ»¶§ ³ª¿À´Â ¸µÅ©or¼Ó¼º°ªÀ» ÁöÁ¤ÇÏ´Â°÷ -->
 		  </nav>
 		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
 		<script src="js/classie.js"></script>
@@ -144,11 +146,11 @@ $(document).ready(function() {
 				}
 			}
 		</script>
-<!-- ë©”ì¸í™”ë©´ -->
+<!-- ¸ŞÀÎÈ­¸é -->
 <header class="masthead">
 			<div class="bannersearch"></div>
 </header>
-<!-- íƒ€ì´í‹€ ë©”ë‰´ë°” -->
+<!-- Å¸ÀÌÆ² ¸Ş´º¹Ù -->
 <div class="navbar navbar-inverse navbar-static-top affix-top" id="nav">
 		<div class="container">
 			<nav class="navbar navbar-default">
@@ -183,7 +185,7 @@ $(document).ready(function() {
 	</div>
 
 <!---->
-<!--  style.cssì•ˆì— ì´ë¯¸ì§€ ì¶”ê°€í•´ì„œ div classì´ë¦„ì— ë„£ì–´ë¼. ì´ë¯¸ì§€ëŠ” ì „ì²´ì ìœ¼ë¡œ style.cssì•ˆì—. 
+<!--  style.css¾È¿¡ ÀÌ¹ÌÁö Ãß°¡ÇØ¼­ div classÀÌ¸§¿¡ ³Ö¾î¶ó. ÀÌ¹ÌÁö´Â ÀüÃ¼ÀûÀ¸·Î style.css¾È¿¡. 
 	  
 .bannersearch{
 	background:url(../images/bannersearch.jpg) no-repeat 0px 0px;
@@ -191,10 +193,10 @@ $(document).ready(function() {
 	min-height:895px;
 }
 
-cssì•ˆì— ì´ë¯¸ì§€ ì´ëŸ°ì‹ìœ¼ë¡œ ì¶”ê°€í•˜ê³  divì•ˆì— í´ë˜ìŠ¤ëª… ë„£ì–´ì£¼ë©´ ëœë‹¤.
+css¾È¿¡ ÀÌ¹ÌÁö ÀÌ·±½ÄÀ¸·Î Ãß°¡ÇÏ°í div¾È¿¡ Å¬·¡½º¸í ³Ö¾îÁÖ¸é µÈ´Ù.
 -->
 
-<!-- ì„œë¹„ìŠ¤ëˆŒë €ì„ë•Œ ê²€ìƒ‰í™”ë©´ì´ë™ -->
+<!-- ¼­ºñ½º´­·¶À»¶§ °Ë»öÈ­¸éÀÌµ¿ -->
 		<div id="section1" class="slider" style="margin-bottom: 14px;">
 			<div class="callbacks_container" style="padding-left: 15px; padding-right: 15px;">
 			  <ul class="rslides" id="slider">
