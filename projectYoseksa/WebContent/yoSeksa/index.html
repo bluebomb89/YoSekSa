@@ -1,4 +1,3 @@
-
 ﻿<!--A Design by W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
@@ -18,7 +17,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <link href="css/style1.css" type="text/css" rel="stylesheet" media="all">
 <link href="css/custom.css" rel="stylesheet">
 <link href="css/owl.carousel.css" rel="stylesheet">
-<link href="cssl/owl.theme.css" rel="stylesheet">
+<link href="css/owl.theme.css" rel="stylesheet">
 <!-- Custom Theme files -->
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,6 +26,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //footer -->
+
 <script type="text/javascript" src="js/saved_resource"></script>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -39,18 +39,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--/animated-css-->
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
+<script src="js/bootstrap.js"></script> 
 <!--/script-->
 <script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){		
-					event.preventDefault();
-					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
-				});
-			    $('.slideshow').cycle({
-					fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
-				});
-			    
-			});
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
+		});
+	    $('.slideshow').cycle({
+			fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+		});
+
+	    
+	});
 </script>
 <script>
 $(document).ready(function() {
@@ -72,30 +74,32 @@ $(document).ready(function() {
 	  $(".prev").click(function(){
 	    owl.trigger('owl.prev');
 	  })
-	  $("#startmain").click(function(){
-	    owl.trigger('owl.play',1500); //owl.play event accept autoPlay speed as second parameter
-	  })
-	  $(".stop").click(function(){
-	    owl.trigger('owl.stop');
-	  })
 	  $("#owl-demo").mouseover(function(){
 	    owl.trigger('owl.stop');
 	  })
 	  $("#owl-demo").mouseout(function(){
 	  	owl.trigger('owl.play',1500);
 	  })
-	 
+	  $("#startmain").click(function(){
+		  	owl.trigger('owl.play',1500);
+		  })	 
 	});
 </script>
 <script type="text/javascript">
 	$(document).ready(function() {
 		/* affix the navbar after scroll below header */
 		$('#nav').affix({
-			offset: {
-				top: $('header').height()-$('#nav').height()
-				}
+			offset: {top: $('header').height()-$('#nav').height()}
 		});
 		
+		/* affix-top 에서 affix로 수정될대 이벤트 발생*/
+		$('#nav').on("affix.bs.affix",function(){
+			$("#startmain").text("haa!");
+		});
+		/* affix에서 affix-top으로 전환될때 이벤트 발생*/
+		$('#nav').on("affix-top.bs.affix",function(){
+			$("#startmain").text("Search");
+		});
 	});        
 </script>
 <script>
@@ -146,11 +150,11 @@ $(document).ready(function() {
 				}
 			}
 		</script>
-<!-- header -->
+<!-- 메인화면 -->
 <header class="masthead">
 			<div class="bannersearch"></div>
 </header>
-
+<!-- 타이틀 메뉴바 -->
 <div class="navbar navbar-inverse navbar-static-top affix-top" id="nav">
 		<div class="container">
 			<nav class="navbar navbar-default">
@@ -196,7 +200,7 @@ $(document).ready(function() {
 css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어주면 된다.
 -->
 
-
+<!-- 서비스눌렀을때 검색화면이동 -->
 		<div id="section1" class="slider" style="margin-bottom: 14px;">
 			<div class="callbacks_container" style="padding-left: 15px; padding-right: 15px;">
 			  <ul class="rslides" id="slider">
@@ -242,8 +246,12 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 				</div>
 			</ul>
 		  </div>
-	  	<div align=left style="position: absolute;"><a class="btn prev">Previous</a></div>
-	  	<div align=right><a class="btn next">Next</a></div>
+	  	<div align=left style="position: absolute;">
+	  		<a class="btn prev">Previous</a>
+	  	</div>
+	  	<div align=right>
+	  		<a class="btn next">Next</a>
+	  	</div>
 		<div id="owl-demo" class="owl-carousel owl-theme">
 			<div class="item col-sm-3 col-md-3">
 				<div class="thumbnail">
@@ -312,7 +320,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 			</div>
 		</div>
 <!-- services -->
-<div id="services" class="services">
+<div id="services" class="services" style="padding-top: 51px">
 	 <div class="container">
 			<div class="service-info">
 				<h3>Services</h3>
@@ -514,6 +522,6 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/bootstrap.js"></script>	  
+
 </body>
 </html>

@@ -119,7 +119,37 @@ Calendar cal = Calendar.getInstance();
 
 <html>
 <head>
+
+<style>
+	a:LINK {color: #999999; text-decoration: none;}
+    a:VISITED {color: #999999; text-decoration: none;}
+    a:ACTIVE {color: #999999; text-decoration: none;}
+    a:HOVER {color: #000000; text-decoration: none;}
+</style>
+
+
+<link href="css/meal_table.css" type="text/css" rel="stylesheet" media="all">
+<link rel="stylesheet" type="text/css" href="shadow/css/shadowbox.css"/>
+<script type="text/javascript" src="shadow/js/shadowbox.js"></script>
+
+<script type="text/javascript">
+Shadowbox.init({
+	players:["iframe"]
+});
+function addRecipeOnTable()
+{
+	Shadowbox.open({
+		content:'add_recipe_popup.jsp',
+		player:'iframe',
+		title:'ADD NEW RECIPE',
+		width:600,
+		height:400
+	});
+}
+</script>
+
 </head>
+<body>
 
 <table border='0' width='100%' height="10%" celpadding='0' cellspacing='0'>
   <tr>
@@ -127,33 +157,24 @@ Calendar cal = Calendar.getInstance();
    <td width='33%' align='center' valign='middle'><b><%=getDateName (cal.get(cal.MONTH)) + " " + cal.get(cal.YEAR)%></b></td>
    <td width='33%' align='left' valign='middle'><a href="cal.jsp?month=<%=currMonth%>&year=<%=currYear%>&action=1"><font size="1">Next Month</font></a></td>
   </tr>
-  <tr>
-    <td colspan="3" align="center"><input type="radio" name="bld" value="">Breakfast
-     <input type="radio" name="bld" value="Lunch" checked>Lunch
-     <input type="radio" name="bld" value="Dinner">Dinner
-     </td>
-  </tr>
-  <tr>
-     <td colspan="3" align="center">DATE : <input type="date" name="date"> <input type="text" name="recipe"> <input type="submit" value="ADD"></td>
-  </tr>
 </table>
-<table border="0" width="100%" height="90%" bordercolorlight="#C0C0C0" bordercolordark="#808080" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" cellspacing="0">
+<table border="0" width="100%" height="90%" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" cellspacing="0">
   <td width="100%" height="90%">
-    <table id="mealtable" border="2" width=100% height="90%" bordercolorlight="#C0C0C0" bordercolordark="#000000" style="border-collapse: collapse" bordercolor="#000000" cellpadding="0" cellspacing="0" bgcolor="#DFDCD8">
+    <table id="mealtable" border="1" width=100% height="90%" style="border-collapse: collapse" bordercolor="#f4f4f4" cellpadding="0" cellspacing="0" bgcolor="#DFDCD8">
      <tr>
-          <td width="14%" align="center" nowrap bordercolor="#666666" bgcolor="#666666">
+          <td width="14%" align="center" nowrap bordercolor="#666666" bgcolor="#ff8181">
           <font color="#FFFFFF"><b>Sun</b></font></td>
-          <td width="14%" align="center" nowrap bordercolor="#666666" bgcolor="#666666">
+          <td width="14%" align="center" nowrap bordercolor="#666666" bgcolor="#81c5ff">
           <font color="#FFFFFF"><b>Mon</b></font></td>
-          <td width="14%" align="center" nowrap bordercolor="#666666" bgcolor="#666666">
+          <td width="14%" align="center" nowrap bordercolor="#666666" bgcolor="#81c5ff">
           <font color="#FFFFFF"><b>Tues</b></font></td>
-          <td width="14%" align="center" nowrap bordercolor="#666666" bgcolor="#666666">
+          <td width="14%" align="center" nowrap bordercolor="#666666" bgcolor="#81c5ff">
          <font color="#FFFFFF"><b>Wed</b></font></td>
-          <td width="14%" align="center" nowrap bordercolor="#666666" bgcolor="#666666">
+          <td width="14%" align="center" nowrap bordercolor="#666666" bgcolor="#81c5ff">
           <font color="#FFFFFF"><b>Thurs</b></font></td>
-          <td width="14%" align="center" nowrap bordercolor="#666666" bgcolor="#666666">
+          <td width="14%" align="center" nowrap bordercolor="#666666" bgcolor="#81c5ff">
           <font color="#FFFFFF"><b>Fri</b></font></td>
-          <td width="14%" align="center" nowrap bordercolor="#666666" bgcolor="#666666">
+          <td width="14%" align="center" nowrap bordercolor="#666666" bgcolor="#81c5ff">
           <font color="#FFFFFF"><b>Sat</b></font></td>
      </tr>
 <%
@@ -190,14 +211,14 @@ Calendar cal = Calendar.getInstance();
 
                if ( dispDay == c.get(c.DAY_OF_MONTH) && c.get(c.MONTH) == cal.get(cal.MONTH) && c.get(c.YEAR) == cal.get(cal.YEAR)) // Here we check to see if the current day is today
                     {
-                     todayColor = "#6C7EAA";
+                     todayColor = "#ffe17b";
                   }
                   else
                   {
                      todayColor = "#ffffff";
                   }
 %> 
-      <td bgcolor ="<%=todayColor%>" align="left" valign="top">&nbsp;<%=dispDay%><br>
+      <td bgcolor ="<%=todayColor%>" align="left" valign="top">&nbsp;<a href="#" onclick="addRecipeOnTable()"><%=dispDay%></a><br>
       </td>
 <%
                count += 1;
