@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+	pageEncoding="EUC-KR"%>
 <!--A Design by W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
@@ -17,7 +17,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- jQuery (necessary JavaScript plugins) -->
 <!-- Custom Theme files -->
 <!-- <link href="css/style.css" type="text/css" rel="stylesheet" media="all"> -->
-<link href="../../css/style3.css" type="text/css" rel="stylesheet" media="all">
+<link href="../../css/style3.css" type="text/css" rel="stylesheet"
+	media="all">
 <link href="../../css/bootstrapTheme.css" rel="stylesheet">
 <link href="../../css/custom.css" rel="stylesheet">
 <link href="../../css/owl.carousel.css" rel="stylesheet">
@@ -31,7 +32,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript">
 	
+	
+	
 	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+
+
 
 </script>
 <!-- //footer -->
@@ -128,7 +133,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left"
 		id="cbp-spmenu-s1">
 		<h3>Menu</h3>
-		<!-- øﬁ¬ ªÛ¥‹ø° ¿÷¥¬ πˆ∆∞¿ª ≈¨∏Ø«ﬂ¿ª∂ß ≥™ø¿¥¬ ∏µ≈©orº”º∫∞™¿ª ¡ˆ¡§«œ¥¬∞˜ -->
+		<!-- ÏôºÏ™ΩÏÉÅÎã®Ïóê ÏûàÎäî Î≤ÑÌäºÏùÑ ÌÅ¥Î¶≠ÌñàÏùÑÎïå ÎÇòÏò§Îäî ÎßÅÌÅ¨orÏÜçÏÑ±Í∞íÏùÑ ÏßÄÏ†ïÌïòÎäîÍ≥≥ -->
 	</nav>
 	<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
 	<script src="../../js/classie.js"></script>
@@ -195,7 +200,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 
 	<!---->
-	<!--  style.cssæ»ø° ¿ÃπÃ¡ˆ √ﬂ∞°«ÿº≠ div class¿Ã∏ßø° ≥÷æÓ∂Û. ¿ÃπÃ¡ˆ¥¬ ¿¸√º¿˚¿∏∑Œ style.cssæ»ø°. 
+	<!--  style.cssÏïàÏóê Ïù¥ÎØ∏ÏßÄ Ï∂îÍ∞ÄÌï¥ÏÑú div classÏù¥Î¶ÑÏóê ÎÑ£Ïñ¥Îùº. Ïù¥ÎØ∏ÏßÄÎäî Ï†ÑÏ≤¥Ï†ÅÏúºÎ°ú style.cssÏïàÏóê. 
 	  
 .bannersearch{
 	background:url(../images/bannersearch.jpg) no-repeat 0px 0px;
@@ -203,13 +208,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	min-height:895px;
 }
 
-cssæ»ø° ¿ÃπÃ¡ˆ ¿Ã∑±Ωƒ¿∏∑Œ √ﬂ∞°«œ∞Ì divæ»ø° ≈¨∑°Ω∫∏Ì ≥÷æÓ¡÷∏È µ»¥Ÿ.
+cssÏïàÏóê Ïù¥ÎØ∏ÏßÄ Ïù¥Îü∞ÏãùÏúºÎ°ú Ï∂îÍ∞ÄÌïòÍ≥† divÏïàÏóê ÌÅ¥ÎûòÏä§Î™Ö ÎÑ£Ïñ¥Ï£ºÎ©¥ ÎêúÎã§.
 -->
 	<div class="container" style="margin-top: 60px;">
-		<div class="row" style="margin-bottom: 20px;margin-left: 0px;">
+		<div class="row" style="margin-bottom: 0px; margin-left: 0px;">
 			<h3>My Recipe</h3>
 		</div>
-		<div class="col-md-9">
+		<div class="col-md-12">
 			<div class="row">
 				<div class="col-lg-4">
 					<div class="input-group">
@@ -222,6 +227,10 @@ cssæ»ø° ¿ÃπÃ¡ˆ ¿Ã∑±Ωƒ¿∏∑Œ √ﬂ∞°«œ∞Ì divæ»ø° ≈¨∑°Ω∫∏Ì ≥÷æÓ¡÷∏È µ»¥Ÿ.
 					<!-- /input-group -->
 				</div>
 				<!-- /.col-lg-6 -->
+				<button type="button" class="btn btn-default"
+					aria-label="Left Align">
+					<span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+				</button>
 			</div>
 			<!-- /.row -->
 
@@ -238,7 +247,7 @@ cssæ»ø° ¿ÃπÃ¡ˆ ¿Ã∑±Ωƒ¿∏∑Œ √ﬂ∞°«œ∞Ì divæ»ø° ≈¨∑°Ω∫∏Ì ≥÷æÓ¡÷∏È µ»¥Ÿ.
 			<p></p>
 
 			<div class="row">
-				<div class="col-sm-3 col-md-4">
+				<div class="col-sm-3 col-md-3.5">
 					<div class="thumbnail">
 						<img src="../../images/g1.jpg" alt="">
 						<div class="caption">
@@ -249,7 +258,7 @@ cssæ»ø° ¿ÃπÃ¡ˆ ¿Ã∑±Ωƒ¿∏∑Œ √ﬂ∞°«œ∞Ì divæ»ø° ≈¨∑°Ω∫∏Ì ≥÷æÓ¡÷∏È µ»¥Ÿ.
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-3 col-md-4">
+				<div class="col-sm-3 col-md-3.5">
 					<div class="thumbnail">
 						<img src="../../images/g1.jpg" alt="">
 						<div class="caption">
@@ -260,7 +269,7 @@ cssæ»ø° ¿ÃπÃ¡ˆ ¿Ã∑±Ωƒ¿∏∑Œ √ﬂ∞°«œ∞Ì divæ»ø° ≈¨∑°Ω∫∏Ì ≥÷æÓ¡÷∏È µ»¥Ÿ.
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-3 col-md-4">
+				<div class="col-sm-3 col-md-3.5">
 					<div class="thumbnail">
 						<img src="../../images/g1.jpg" alt="">
 						<div class="caption">
@@ -271,7 +280,7 @@ cssæ»ø° ¿ÃπÃ¡ˆ ¿Ã∑±Ωƒ¿∏∑Œ √ﬂ∞°«œ∞Ì divæ»ø° ≈¨∑°Ω∫∏Ì ≥÷æÓ¡÷∏È µ»¥Ÿ.
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-3 col-md-4">
+				<div class="col-sm-3 col-md-3.5">
 					<div class="thumbnail">
 						<img src="../../images/g1.jpg" alt="">
 						<div class="caption">
@@ -282,7 +291,7 @@ cssæ»ø° ¿ÃπÃ¡ˆ ¿Ã∑±Ωƒ¿∏∑Œ √ﬂ∞°«œ∞Ì divæ»ø° ≈¨∑°Ω∫∏Ì ≥÷æÓ¡÷∏È µ»¥Ÿ.
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-3 col-md-4">
+				<div class="col-sm-3 col-md-3.5">
 					<div class="thumbnail">
 						<img src="../../images/g1.jpg" alt="">
 						<div class="caption">
@@ -293,7 +302,7 @@ cssæ»ø° ¿ÃπÃ¡ˆ ¿Ã∑±Ωƒ¿∏∑Œ √ﬂ∞°«œ∞Ì divæ»ø° ≈¨∑°Ω∫∏Ì ≥÷æÓ¡÷∏È µ»¥Ÿ.
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-3 col-md-4">
+				<div class="col-sm-3 col-md-3.5">
 					<div class="thumbnail">
 						<img src="../../images/g1.jpg" alt="">
 						<div class="caption">
@@ -304,7 +313,7 @@ cssæ»ø° ¿ÃπÃ¡ˆ ¿Ã∑±Ωƒ¿∏∑Œ √ﬂ∞°«œ∞Ì divæ»ø° ≈¨∑°Ω∫∏Ì ≥÷æÓ¡÷∏È µ»¥Ÿ.
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-3 col-md-4">
+				<div class="col-sm-3 col-md-3.5">
 					<div class="thumbnail">
 						<img src="../../images/g1.jpg" alt="">
 						<div class="caption">
@@ -315,7 +324,7 @@ cssæ»ø° ¿ÃπÃ¡ˆ ¿Ã∑±Ωƒ¿∏∑Œ √ﬂ∞°«œ∞Ì divæ»ø° ≈¨∑°Ω∫∏Ì ≥÷æÓ¡÷∏È µ»¥Ÿ.
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-3 col-md-4">
+				<div class="col-sm-3 col-md-3.5">
 					<div class="thumbnail">
 						<img src="../../images/g1.jpg" alt="">
 						<div class="caption">
@@ -326,7 +335,7 @@ cssæ»ø° ¿ÃπÃ¡ˆ ¿Ã∑±Ωƒ¿∏∑Œ √ﬂ∞°«œ∞Ì divæ»ø° ≈¨∑°Ω∫∏Ì ≥÷æÓ¡÷∏È µ»¥Ÿ.
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-3 col-md-4">
+				<div class="col-sm-3 col-md-3.5">
 					<div class="thumbnail">
 						<img src="../../images/g1.jpg" alt="">
 						<div class="caption">
@@ -337,15 +346,22 @@ cssæ»ø° ¿ÃπÃ¡ˆ ¿Ã∑±Ωƒ¿∏∑Œ √ﬂ∞°«œ∞Ì divæ»ø° ≈¨∑°Ω∫∏Ì ≥÷æÓ¡÷∏È µ»¥Ÿ.
 						</div>
 					</div>
 				</div>
-				<nav align=center>
-					<ul class="pagination">
-						<li class="disabled"><a href="#" aria-label="Previous"><span
-								aria-hidden="true">&laquo;</span></a></li>
-						<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-						...
-					</ul>
-				</nav>
 			</div>
+			<nav align=center>
+				<ul class="pagination">
+					<li><a href="#" aria-label="Previous"> <span
+							aria-hidden="true">&laquo;</span>
+					</a></li>
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#" aria-label="Next"> <span
+							aria-hidden="true">&raquo;</span>
+					</a></li>
+				</ul>
+			</nav>
 
 			<!---->
 			<script type="text/javascript">
