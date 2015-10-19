@@ -13,11 +13,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- jQuery (necessary JavaScript plugins) -->
 <!-- Custom Theme files -->
 <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
-<link href="css/styleggong.css" type="text/css" rel="stylesheet" media="all">
 <link href="css/bootstrapTheme.css" rel="stylesheet">
 <link href="css/custom.css" rel="stylesheet">
 <link href="css/owl.carousel.css" rel="stylesheet">
 <link href="cssl/owl.theme.css" rel="stylesheet">
+
 <!-- Custom Theme files -->
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -183,6 +183,7 @@ $(document).ready(function() {
 <link rel="stylesheet" href="http://www.webnoriter.com/~imsi/store/css/default_shop.css">
 <link rel="stylesheet" href="http://www.webnoriter.com/~imsi/store/skin/shop/basic/style.css">
 <link rel="stylesheet" href="http://www.webnoriter.com/~imsi/store/skin/member/basic/style.css">
+<link href="css/styleggong.css" type="text/css" rel="stylesheet" media="all">
 <!--[if lte IE 8]>
 <script src="http://www.webnoriter.com/~imsi/store/js/html5.js"></script>
 <![endif]-->
@@ -272,17 +273,17 @@ var g5_cookie_domain = "";
             <th scope="row"><label for="reg_mb_id">아이디<strong class="sound_only">필수</strong></label></th>
             <td>
                 <span class="frm_info">영문자, 숫자, _ 만 입력 가능. 최소 3자이상 입력하세요.</span>
-                <input type="text" name="mb_id" value="" id="reg_mb_id" required="" class="frm_input required " minlength="3" maxlength="20">
+                <input type="text" name="mb_id" value="" id="reg_mb_id" required="" class="frm_input required " minlength="6" maxlength="20">
                 <span id="msg_mb_id"></span>
             </td>
         </tr>
         <tr>
             <th scope="row"><label for="reg_mb_password">비밀번호<strong class="sound_only">필수</strong></label></th>
-            <td><input type="password" name="mb_password" id="reg_mb_password" required="" class="frm_input required" minlength="3" maxlength="20"></td>
+            <td><input type="password" name="mb_password" id="reg_mb_password" required="" class="frm_input required" minlength="6" maxlength="20"></td>
         </tr>
         <tr>
             <th scope="row"><label for="reg_mb_password_re">비밀번호 확인<strong class="sound_only">필수</strong></label></th>
-            <td><input type="password" name="mb_password_re" id="reg_mb_password_re" required="" class="frm_input required" minlength="3" maxlength="20"></td>
+            <td><input type="password" name="mb_password_re" id="reg_mb_password_re" required="" class="frm_input required" minlength="" maxlength="20"></td>
         </tr>
         </tbody>
         </table>
@@ -392,7 +393,7 @@ var g5_cookie_domain = "";
         }
 
         if (f.w.value == "") {
-            if (f.mb_password.value.length < 3) {
+            if (f.mb_password.value.length < 6) {
                 alert("비밀번호를 3글자 이상 입력하십시오.");
                 f.mb_password.focus();
                 return false;
@@ -406,7 +407,7 @@ var g5_cookie_domain = "";
         }
 
         if (f.mb_password.value.length > 0) {
-            if (f.mb_password_re.value.length < 3) {
+            if (f.mb_password_re.value.length < 6) {
                 alert("비밀번호를 3글자 이상 입력하십시오.");
                 f.mb_password_re.focus();
                 return false;
@@ -478,7 +479,7 @@ var g5_cookie_domain = "";
             }
         }
 
-        if (!chk_captcha()) return false;
+        if (!chk_captcha()) return false;{
 
         document.getElementById("btn_submit").disabled = "disabled";
 
@@ -545,7 +546,7 @@ $(function() {
 
 
 
-</body></html>
+
 <!---->
 <!--  style.css안에 이미지 추가해서 div class이름에 넣어라. 이미지는 전체적으로 style.css안에. 
 	  
