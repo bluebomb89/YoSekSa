@@ -1,10 +1,4 @@
-﻿<!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <html>
 <head>
 <title>Flooring a Interior category Flat Bootstarp Responsive Website Template | Home :: w3layouts</title>
@@ -79,7 +73,10 @@ $(document).ready(function() {
 	  })
 	  $("#owl-demo").mouseout(function(){
 	  	owl.trigger('owl.play',1500);
-	  })	 
+	  })
+	  $("#startmain").click(function(){
+		  	owl.trigger('owl.play',1500);
+		  })	 
 	});
 </script>
 <script type="text/javascript">
@@ -243,8 +240,12 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 				</div>
 			</ul>
 		  </div>
-	  	<div align=left style="position: absolute;"><a class="btn prev">Previous</a></div>
-	  	<div align=right><a class="btn next">Next</a></div>
+	  	<div align=left style="position: absolute;">
+	  		<a class="btn prev">Previous</a>
+	  	</div>
+	  	<div align=right>
+	  		<a class="btn next">Next</a>
+	  	</div>
 		<div id="owl-demo" class="owl-carousel owl-theme">
 			<div class="item col-sm-3 col-md-3">
 				<div class="thumbnail">
@@ -313,7 +314,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 			</div>
 		</div>
 <!-- services -->
-<div id="services" class="services">
+<div id="services" class="services" style="padding-top: 51px">
 	 <div class="container">
 			<div class="service-info">
 				<h3>Services</h3>
