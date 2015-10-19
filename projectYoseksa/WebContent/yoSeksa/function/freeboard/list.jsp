@@ -1,20 +1,17 @@
-ï»¿<!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<!DOCTYPE HTML>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+
 <title>Flooring a Interior category Flat Bootstarp Responsive Website Template | Home :: w3layouts</title>
-<link href="../../css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="../../css/bootstrap_taejin.css" type="text/css" rel="stylesheet" media="all">
 <link href="../../css/component.css" rel="stylesheet" type="text/css"  />
 <!-- jQuery (necessary JavaScript plugins) -->
 <!-- Custom Theme files -->
 <link href="../../css/style.css" type="text/css" rel="stylesheet" media="all">
-<link href="../../css/style1.css" type="text/css" rel="stylesheet" media="all">
-<link href="../../css/meal_table.css" type="text/css" rel="stylesheet" media="all">
+<link href="../../css/style_taejin.css" type="text/css" rel="stylesheet" media="all">
 <link href="../../css/bootstrapTheme.css" rel="stylesheet">
 <link href="../../css/custom.css" rel="stylesheet">
 <link href="../../css/owl.carousel.css" rel="stylesheet">
@@ -27,18 +24,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //footer -->
-<script type="text/javascript" src="../../js/saved_resource"></script>
-<script type="text/javascript" src="../../js/jquery.min.js"></script>
-<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/saved_resource"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script src="../../js/modernizr.custom.js"></script>
 <script src="../../js/jquery-1.11.1.min.js"></script>
 <script src="../../js/responsiveslides.min.js"></script>
-<script type="text/javascript" src="../../js/jquery.cycle.all.js"></script>
+<script type="text/javascript" src="js/jquery.cycle.all.js"></script>
 <script src="../../js/owl.carousel.js"></script>
 <script src="../../js/owl.carousel.min.js"></script>
 <!--/animated-css-->
-<script type="text/javascript" src="../../js/move-top.js"></script>
-<script type="text/javascript" src="../../js/easing.js"></script>
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
 <!--/script-->
 <script type="text/javascript">
 			jQuery(document).ready(function($) {
@@ -114,10 +111,10 @@ $(document).ready(function() {
 		   </section>
 			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
 			<h3>Menu</h3>
-			<!-- ì™¼ìª½ìƒë‹¨ì— ìžˆëŠ” ë²„íŠ¼ì„ í´ë¦­í–ˆì„ë•Œ ë‚˜ì˜¤ëŠ” ë§í¬orì†ì„±ê°’ì„ ì§€ì •í•˜ëŠ”ê³³ -->
+			<!-- ¿ÞÂÊ»ó´Ü¿¡ ÀÖ´Â ¹öÆ°À» Å¬¸¯ÇßÀ»¶§ ³ª¿À´Â ¸µÅ©or¼Ó¼º°ªÀ» ÁöÁ¤ÇÏ´Â°÷ -->
 		  </nav>
 		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
-		<script src="../../js/classie.js"></script>
+		<script src="js/classie.js"></script>
 		<script>
 			var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
 				showLeftPush = document.getElementById( 'showLeftPush' ),
@@ -140,9 +137,6 @@ $(document).ready(function() {
 				}
 			}
 		</script>
-<!-- header -->
-
-
 <div class="navbar navbar-inverse navbar-static-top affix-top" id="nav">
 		<div class="container">
 			<nav class="navbar navbar-default">
@@ -175,9 +169,97 @@ $(document).ready(function() {
 			</nav>	
 		</div>
 	</div>
-
+	<!-- ÆäÀÌÁö °¡¿îµ¥ -->
+<div class="pages">
+		<div class="container">
+			 <h2 class="top">FreeBoard</h2> 
+			  <div align="right">
+			    <ul class="nav navbar-nav">
+			      <li class="active">
+			        <a href=""><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/72548-200.png" width="40px" height="40px"></a>
+			      </li>
+			    </ul>
+			  </div>
+			<div class="headdings">
+						<table class="table">
+						    <tr>
+				            <td align=left colspan="2">¹øÈ£1</td>
+				            <td align="right">
+					              <input type="button" value="´ñ±Û">
+				            </td>
+			          </tr>
+			          <tr>
+				            <td width=10% align=center height=10% rowspan="3">
+				              <img src ="https://d30y9cdsu7xlg0.cloudfront.net/png/78590-200.png" width="60px" height="60px">
+				            </td>
+			          </tr>
+			          <tr>
+				            <td width=10% align=left bgcolor="#e2e2e2">´Ð³×ÀÓ1</td>
+				
+				            <td width=70% align=center bgcolor="#d2d2d2" height=70 rowspan="2">
+					           ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë
+					           ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë
+					           </td>
+			          </tr>
+			          <tr>
+				            <td width=10% align=left bgcolor="#e2e2e2">ÀÛ¼ºÀÏ</td>
+			          </tr>
+						</table>
+			</div>
+			<div class="headdings">
+						<table class="table">
+						    <tr>
+				            <td align=left colspan="2">¹øÈ£2</td>
+				            <td align="right" >
+					              <input type="button" value="´ñ±Û">
+				            </td>
+			          </tr>
+			          <tr>
+				            <td width=10% align=center height=10% rowspan="3">
+				              <img src ="https://d30y9cdsu7xlg0.cloudfront.net/png/78590-200.png" width="60px" height="60px">
+				            </td>
+			          </tr>
+			          <tr>
+				            <td width=10% align=left bgcolor="#e2e2e2">´Ð³×ÀÓ2</td>
+				
+				            <td width=70% align=center bgcolor="#d2d2d2" height=70 rowspan="2">
+					           ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë
+					           ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë
+					           </td>
+			          </tr>
+			          <tr>
+				            <td width=10% align=left bgcolor="#e2e2e2">ÀÛ¼ºÀÏ</td>
+			          </tr>
+						</table>
+			</div>
+			<div class="headdings">
+						<table class="table">
+						    <tr>
+				            <td align=left colspan="2">¹øÈ£3</td>
+				            <td align="right" >
+					              <input type="button" value="´ñ±Û">
+				            </td>
+			          </tr>
+			          <tr>
+				            <td width=10% align=center height=10% rowspan="3">
+				              <img src ="https://d30y9cdsu7xlg0.cloudfront.net/png/78590-200.png" width="60px" height="60px">
+				            </td>
+			          </tr>
+			          <tr>
+				            <td width=10% align=left bgcolor="#e2e2e2">´Ð³×ÀÓ3</td>
+				
+				            <td width=70% align=center bgcolor="#d2d2d2" height=70 rowspan="2">
+					           ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë
+					           ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë
+					           </td>
+			          </tr>
+			          <tr>
+				            <td width=10% align=left bgcolor="#e2e2e2">ÀÛ¼ºÀÏ</td>
+			          </tr>
+						</table>
+			</div>
 <!---->
-<!--  style.cssì•ˆì— ì´ë¯¸ì§€ ì¶”ê°€í•´ì„œ div classì´ë¦„ì— ë„£ì–´ë¼. ì´ë¯¸ì§€ëŠ” ì „ì²´ì ìœ¼ë¡œ style.cssì•ˆì—. 
+<!--  style.css¾È¿¡ ÀÌ¹ÌÁö Ãß°¡ÇØ¼­ div classÀÌ¸§¿¡ ³Ö¾î¶ó. ÀÌ¹ÌÁö´Â ÀüÃ¼ÀûÀ¸·Î style.css¾È¿¡. 
 	  
 .bannersearch{
 	background:url(../images/bannersearch.jpg) no-repeat 0px 0px;
@@ -185,12 +267,9 @@ $(document).ready(function() {
 	min-height:895px;
 }
 
-cssì•ˆì— ì´ë¯¸ì§€ ì´ëŸ°ì‹ìœ¼ë¡œ ì¶”ê°€í•˜ê³  divì•ˆì— í´ëž˜ìŠ¤ëª… ë„£ì–´ì£¼ë©´ ëœë‹¤.
+css¾È¿¡ ÀÌ¹ÌÁö ÀÌ·±½ÄÀ¸·Î Ãß°¡ÇÏ°í div¾È¿¡ Å¬·¡½º¸í ³Ö¾îÁÖ¸é µÈ´Ù.
 -->
-<br><br><br>
-<div class="embed-container">
-	<iframe src="cal.jsp" frameborder="0" scrolling = "no" allowfullscreen></iframe>
-</div>
+
 <!---->
 <script type="text/javascript">
 		$(document).ready(function() {
