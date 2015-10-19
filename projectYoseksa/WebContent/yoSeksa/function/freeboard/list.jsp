@@ -1,26 +1,21 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<!DOCTYPE HTML>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+
 <title>Flooring a Interior category Flat Bootstarp Responsive Website Template | Home :: w3layouts</title>
-<link href="../../css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="../../css/bootstrap_taejin.css" type="text/css" rel="stylesheet" media="all">
 <link href="../../css/component.css" rel="stylesheet" type="text/css"  />
 <!-- jQuery (necessary JavaScript plugins) -->
 <!-- Custom Theme files -->
 <link href="../../css/style.css" type="text/css" rel="stylesheet" media="all">
-
+<link href="../../css/style_taejin.css" type="text/css" rel="stylesheet" media="all">
 <link href="../../css/bootstrapTheme.css" rel="stylesheet">
 <link href="../../css/custom.css" rel="stylesheet">
 <link href="../../css/owl.carousel.css" rel="stylesheet">
-<link href="../../cssl/owl.theme.css" rel="stylesheet">
-<link href="../../css/style2.css" type="text/css" rel="stylesheet" media="all">
+<link href="../../css/owl.theme.css" rel="stylesheet">
 <!-- Custom Theme files -->
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,18 +24,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //footer -->
-<script type="text/javascript" src="../../js/saved_resource"></script>
-<script type="text/javascript" src="../../js/jquery.min.js"></script>
-<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/saved_resource"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script src="../../js/modernizr.custom.js"></script>
 <script src="../../js/jquery-1.11.1.min.js"></script>
 <script src="../../js/responsiveslides.min.js"></script>
-<script type="text/javascript" src="../../js/jquery.cycle.all.js"></script>
+<script type="text/javascript" src="js/jquery.cycle.all.js"></script>
 <script src="../../js/owl.carousel.js"></script>
 <script src="../../js/owl.carousel.min.js"></script>
 <!--/animated-css-->
-<script type="text/javascript" src="../../js/move-top.js"></script>
-<script type="text/javascript" src="../../js/easing.js"></script>
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
 <!--/script-->
 <script type="text/javascript">
 			jQuery(document).ready(function($) {
@@ -116,10 +111,10 @@ $(document).ready(function() {
 		   </section>
 			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
 			<h3>Menu</h3>
-			<!-- ì™¼ìª½ìƒë‹¨ì— ìˆëŠ” ë²„íŠ¼ì„ í´ë¦­í–ˆì„ë•Œ ë‚˜ì˜¤ëŠ” ë§í¬orì†ì„±ê°’ì„ ì§€ì •í•˜ëŠ”ê³³ -->
+			<!-- ¿ŞÂÊ»ó´Ü¿¡ ÀÖ´Â ¹öÆ°À» Å¬¸¯ÇßÀ»¶§ ³ª¿À´Â ¸µÅ©or¼Ó¼º°ªÀ» ÁöÁ¤ÇÏ´Â°÷ -->
 		  </nav>
 		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
-		<script src="../../js/classie.js"></script>
+		<script src="js/classie.js"></script>
 		<script>
 			var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
 				showLeftPush = document.getElementById( 'showLeftPush' ),
@@ -142,9 +137,6 @@ $(document).ready(function() {
 				}
 			}
 		</script>
-<!-- header -->
-
-
 <div class="navbar navbar-inverse navbar-static-top affix-top" id="nav">
 		<div class="container">
 			<nav class="navbar navbar-default">
@@ -177,9 +169,97 @@ $(document).ready(function() {
 			</nav>	
 		</div>
 	</div>
-
+	<!-- ÆäÀÌÁö °¡¿îµ¥ -->
+<div class="pages">
+		<div class="container">
+			 <h2 class="top">FreeBoard</h2> 
+			  <div align="right">
+			    <ul class="nav navbar-nav">
+			      <li class="active">
+			        <a href=""><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/72548-200.png" width="40px" height="40px"></a>
+			      </li>
+			    </ul>
+			  </div>
+			<div class="headdings">
+						<table class="table">
+						    <tr>
+				            <td align=left colspan="2">¹øÈ£1</td>
+				            <td align="right">
+					              <input type="button" value="´ñ±Û">
+				            </td>
+			          </tr>
+			          <tr>
+				            <td width=10% align=center height=10% rowspan="3">
+				              <img src ="https://d30y9cdsu7xlg0.cloudfront.net/png/78590-200.png" width="60px" height="60px">
+				            </td>
+			          </tr>
+			          <tr>
+				            <td width=10% align=left bgcolor="#e2e2e2">´Ğ³×ÀÓ1</td>
+				
+				            <td width=70% align=center bgcolor="#d2d2d2" height=70 rowspan="2">
+					           ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë
+					           ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë
+					           </td>
+			          </tr>
+			          <tr>
+				            <td width=10% align=left bgcolor="#e2e2e2">ÀÛ¼ºÀÏ</td>
+			          </tr>
+						</table>
+			</div>
+			<div class="headdings">
+						<table class="table">
+						    <tr>
+				            <td align=left colspan="2">¹øÈ£2</td>
+				            <td align="right" >
+					              <input type="button" value="´ñ±Û">
+				            </td>
+			          </tr>
+			          <tr>
+				            <td width=10% align=center height=10% rowspan="3">
+				              <img src ="https://d30y9cdsu7xlg0.cloudfront.net/png/78590-200.png" width="60px" height="60px">
+				            </td>
+			          </tr>
+			          <tr>
+				            <td width=10% align=left bgcolor="#e2e2e2">´Ğ³×ÀÓ2</td>
+				
+				            <td width=70% align=center bgcolor="#d2d2d2" height=70 rowspan="2">
+					           ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë
+					           ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë
+					           </td>
+			          </tr>
+			          <tr>
+				            <td width=10% align=left bgcolor="#e2e2e2">ÀÛ¼ºÀÏ</td>
+			          </tr>
+						</table>
+			</div>
+			<div class="headdings">
+						<table class="table">
+						    <tr>
+				            <td align=left colspan="2">¹øÈ£3</td>
+				            <td align="right" >
+					              <input type="button" value="´ñ±Û">
+				            </td>
+			          </tr>
+			          <tr>
+				            <td width=10% align=center height=10% rowspan="3">
+				              <img src ="https://d30y9cdsu7xlg0.cloudfront.net/png/78590-200.png" width="60px" height="60px">
+				            </td>
+			          </tr>
+			          <tr>
+				            <td width=10% align=left bgcolor="#e2e2e2">´Ğ³×ÀÓ3</td>
+				
+				            <td width=70% align=center bgcolor="#d2d2d2" height=70 rowspan="2">
+					           ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë
+					           ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë
+					           </td>
+			          </tr>
+			          <tr>
+				            <td width=10% align=left bgcolor="#e2e2e2">ÀÛ¼ºÀÏ</td>
+			          </tr>
+						</table>
+			</div>
 <!---->
-<!--  style.cssì•ˆì— ì´ë¯¸ì§€ ì¶”ê°€í•´ì„œ div classì´ë¦„ì— ë„£ì–´ë¼. ì´ë¯¸ì§€ëŠ” ì „ì²´ì ìœ¼ë¡œ style.cssì•ˆì—. 
+<!--  style.css¾È¿¡ ÀÌ¹ÌÁö Ãß°¡ÇØ¼­ div classÀÌ¸§¿¡ ³Ö¾î¶ó. ÀÌ¹ÌÁö´Â ÀüÃ¼ÀûÀ¸·Î style.css¾È¿¡. 
 	  
 .bannersearch{
 	background:url(../images/bannersearch.jpg) no-repeat 0px 0px;
@@ -187,142 +267,10 @@ $(document).ready(function() {
 	min-height:895px;
 }
 
-cssì•ˆì— ì´ë¯¸ì§€ ì´ëŸ°ì‹ìœ¼ë¡œ ì¶”ê°€í•˜ê³  divì•ˆì— í´ë˜ìŠ¤ëª… ë„£ì–´ì£¼ë©´ ëœë‹¤.
+css¾È¿¡ ÀÌ¹ÌÁö ÀÌ·±½ÄÀ¸·Î Ãß°¡ÇÏ°í div¾È¿¡ Å¬·¡½º¸í ³Ö¾îÁÖ¸é µÈ´Ù.
 -->
 
-	 
 <!---->
-<div class="contact" style="
-    padding-left: 200px;
-">
-		<div class="container">
-			<div class="contact-top" style="
-    padding-left: 0px;
-    padding-right: 250px;
-">
-				<h3 style="margin-top: 50px;">ììœ ê²Œì‹œíŒ</h3>
-			</div>
-			<div class="contact-bottom">
-				 <div class="contact-text">					
-					<div class="col-md-9 contact-left" style="">
-						<form>
-
- <div class="form-group" style="
-    width: 2000px;
-">
-    <label for="exampleInputEmail1">ì´ë¦„</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" style="
-    width: 147px;
-    border-top-width: 1px;
-    margin-bottom: 1px;
-    height: 30px;
-">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">ì œëª©</label>
-    <input type="text" class="form-control" id="exampleInputPassword1" style="
-    width: 347px;
-    height: 31px;
-">
-    
-      <div class="form-group" style="
-    margin-top: 15px;
-">
-    <label for="exampleInputPassword1">ë‚´ìš©</label>
-   <textarea rows="5" cols="30" id="exampleInputPassword1"
-   style="margin-left: 6px;">
-</textarea>
-
-  </div>
-    
-    
-  </div>
-  <div class="form-group">
-    <label for="exampleInputFile">íŒŒì¼ ì—…ë¡œë“œ</label>
-    <input type="file" id="exampleInputFile" style="
-    margin-left: 0px;
-">
-
-    
-  </div>
-  <div class="checkbox" style="
-    margin-top: 10px;
-    margin-bottom: 10px;
-">
-    <label style="
-    padding-left: 0px;
-">
-      <label style="
-    padding-left: 0px;
-    width: 140px;
-">
-      <input type="checkbox"> ì…ë ¥ì„ ê¸°ì–µí•©ë‹ˆë‹¤
-    </label>
-  </label></div>
-
-  </div>
-  
-
-
-
-
-<div class="submit-btn" style="
-    margin-top: 0px;
-">								
-<input type="submit" value="ë“±ë¡" style="
-    position: absolute;
-    left: 940px;
-    margin-bottom: 0px;
-    top: 600px;
-">		
-
-</div>
-</form>
-					</div>
-					
-					<div class="clearfix"></div>
-			 </div>
-				
-				
-		 </div>
-	 </div>
-</div>		 
-	<!-- footer -->
-<div class="footer">
-	 <div class="container">
-		 <div class="footer-grids">
-			 <div class="col-md-6 ftr-grid1">
-				 <h4>About</h4>
-				 <p>Nam ac interdum dui, eget iaculis augue. Cras sagittis orci leo, quis luctus diam sollicitudin in. Nullam in convallis sem. Aliquam erat felis, iaculis ac semper et, congue feugiat nibh. Nullam commodo fermentum venenatis.</p>
-				 <div class="social">
-					<ul>
-						<li><a href="file:///C:/Users/sist/Desktop/3%EC%A1%B0%20%EC%9B%B9%ED%85%9C%ED%94%8C%EB%A6%BF(v2)/contact.html#"><i class="facebok"> </i></a></li>
-						<li><a href="file:///C:/Users/sist/Desktop/3%EC%A1%B0%20%EC%9B%B9%ED%85%9C%ED%94%8C%EB%A6%BF(v2)/contact.html#"><i class="twiter"> </i></a></li>
-						<li><a href="file:///C:/Users/sist/Desktop/3%EC%A1%B0%20%EC%9B%B9%ED%85%9C%ED%94%8C%EB%A6%BF(v2)/contact.html#"><i class="in"> </i></a></li>
-						<li><a href="file:///C:/Users/sist/Desktop/3%EC%A1%B0%20%EC%9B%B9%ED%85%9C%ED%94%8C%EB%A6%BF(v2)/contact.html#"><i class="goog"> </i></a></li>						
-							<div class="clearfix"></div>	
-					</ul>
-				 </div>
-			 </div>
-			 <div class="col-md-6 news-ltr">
-				 <h4>Newsletter</h4>
-				 <p>Aenean sagittis est eget elit pulvinar cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non purus at risus consequat finibus.</p>
-				 <form>					 
-					  <input type="text" class="text" value="Enter Email" onfocus="this.value = &#39;&#39;;" onblur="if (this.value == &#39;&#39;) {this.value = &#39;Enter Email&#39;;}">
-					 <input type="submit" value="Subscribe">
-					 <div class="clearfix"></div>
-				 </form>
-			</div>
-			 <div class="clearfix"></div>
-		 </div>		 
-	 </div>
-</div>
-<div class="copywrite">
-	 <div class="container">
-			 <p> Â© 2015 Flooring. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
-	 </div>
-</div> 
-
 <script type="text/javascript">
 		$(document).ready(function() {
 				/*

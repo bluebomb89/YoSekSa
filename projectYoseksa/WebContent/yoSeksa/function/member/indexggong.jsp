@@ -10,15 +10,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html>
 <head>
 <title>Flooring a Interior category Flat Bootstarp Responsive Website Template | Home :: w3layouts</title>
-<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
-<link href="css/component.css" rel="stylesheet" type="text/css"  />
+<link href="../../css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="../../css/owl.theme.css" rel="stylesheet">
+<link href="../../css/component.css" rel="stylesheet" type="text/css"  />
 <!-- jQuery (necessary JavaScript plugins) -->
 <!-- Custom Theme files -->
-<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
-<link href="css/bootstrapTheme.css" rel="stylesheet">
-<link href="css/custom.css" rel="stylesheet">
-<link href="css/owl.carousel.css" rel="stylesheet">
-<link href="cssl/owl.theme.css" rel="stylesheet">
+<link href="../../css/style.css" type="text/css" rel="stylesheet" media="all">
+<link href="../../css/bootstrapTheme.css" rel="stylesheet">
+<link href="../../css/custom.css" rel="stylesheet">
+<link href="../../css/owl.carousel.css" rel="stylesheet">
+<link href="../../css/indesxggong.css" rel="stylesheet">
+
 
 <!-- Custom Theme files -->
 <!--//theme-style-->
@@ -28,18 +30,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //footer -->
-<script type="text/javascript" src="js/saved_resource"></script>
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script src="js/modernizr.custom.js"></script>
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/responsiveslides.min.js"></script>
-<script type="text/javascript" src="js/jquery.cycle.all.js"></script>
-<script src="js/owl.carousel.js"></script>
-<script src="js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="../../js/saved_resource"></script>
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script src="../../js/modernizr.custom.js"></script>
+<script src="../../js/jquery-1.11.1.min.js"></script>
+<script src="../../js/responsiveslides.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.cycle.all.js"></script>
+<script src="../../js/owl.carousel.js"></script>
+<script src="../../js/owl.carousel.min.js"></script>
 <!--/animated-css-->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript" src="../../js/move-top.js"></script>
+<script type="text/javascript" src="../../js/easing.js"></script>
 <!--/script-->
 <script type="text/javascript">
 			jQuery(document).ready(function($) {
@@ -112,7 +114,7 @@ $(document).ready(function() {
 		<!--bottom-->
 
 		  <section class="button">
-				<button id="showLeftPush"><img src="images/menu-icon.png" alt=""></button>
+				<button id="showLeftPush"><img src="../../images/menu-icon.png" alt=""></button>
 		   </section>
 			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
 			<h3>Menu</h3>
@@ -121,7 +123,7 @@ $(document).ready(function() {
 		  </nav>
 
 		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
-		<script src="js/classie.js"></script>
+		<script src="../../js/classie.js"></script>
 		<script>
 			var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
 				showLeftPush = document.getElementById( 'showLeftPush' ),
@@ -185,7 +187,7 @@ $(document).ready(function() {
 <link rel="stylesheet" href="http://www.webnoriter.com/~imsi/store/css/default_shop.css">
 <link rel="stylesheet" href="http://www.webnoriter.com/~imsi/store/skin/shop/basic/style.css">
 <link rel="stylesheet" href="http://www.webnoriter.com/~imsi/store/skin/member/basic/style.css">
-<link href="css/styleggong.css" type="text/css" rel="stylesheet" media="all">
+<link href="../../css/styleggong.css" type="text/css" rel="stylesheet" media="all">
 <!--[if lte IE 8]>
 <script src="http://www.webnoriter.com/~imsi/store/js/html5.js"></script>
 <![endif]-->
@@ -574,13 +576,13 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 				};
 				*/
 		$().UItoTop({ easingType: 'easeOutQuart' });
-});
+		});
 </script>
 <a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 <!----> 
 <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/bootstrap.js"></script>	  
+    <script src="../../js/bootstrap.js"></script>	  
 </body>
 </html>
