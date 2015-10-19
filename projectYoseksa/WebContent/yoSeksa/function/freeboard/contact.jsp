@@ -10,17 +10,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html>
 <head>
 <title>Flooring a Interior category Flat Bootstarp Responsive Website Template | Home :: w3layouts</title>
-<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
-<link href="css/component.css" rel="stylesheet" type="text/css"  />
+<link href="../../css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="../../css/component.css" rel="stylesheet" type="text/css"  />
 <!-- jQuery (necessary JavaScript plugins) -->
 <!-- Custom Theme files -->
-<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+<link href="../../css/style.css" type="text/css" rel="stylesheet" media="all">
 
-<link href="css/bootstrapTheme.css" rel="stylesheet">
-<link href="css/custom.css" rel="stylesheet">
-<link href="css/owl.carousel.css" rel="stylesheet">
-<link href="cssl/owl.theme.css" rel="stylesheet">
-<link href="css/style2.css" type="text/css" rel="stylesheet" media="all">
+<link href="../../css/bootstrapTheme.css" rel="stylesheet">
+<link href="../../css/custom.css" rel="stylesheet">
+<link href="../../css/owl.carousel.css" rel="stylesheet">
+<link href="../../cssl/owl.theme.css" rel="stylesheet">
+<link href="../../css/style2.css" type="text/css" rel="stylesheet" media="all">
 <!-- Custom Theme files -->
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,18 +29,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //footer -->
-<script type="text/javascript" src="js/saved_resource"></script>
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script src="js/modernizr.custom.js"></script>
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/responsiveslides.min.js"></script>
-<script type="text/javascript" src="js/jquery.cycle.all.js"></script>
-<script src="js/owl.carousel.js"></script>
-<script src="js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="../../js/saved_resource"></script>
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script src="../../js/modernizr.custom.js"></script>
+<script src="../../js/jquery-1.11.1.min.js"></script>
+<script src="../../js/responsiveslides.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.cycle.all.js"></script>
+<script src="../../js/owl.carousel.js"></script>
+<script src="../../js/owl.carousel.min.js"></script>
 <!--/animated-css-->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript" src="../../js/move-top.js"></script>
+<script type="text/javascript" src="../../js/easing.js"></script>
 <!--/script-->
 <script type="text/javascript">
 			jQuery(document).ready(function($) {
@@ -112,14 +112,14 @@ $(document).ready(function() {
 <body  class="cbp-spmenu-push">
 		<!--bottom-->
 		  <section class="button">
-					<button id="showLeftPush"><img src="images/menu-icon.png" alt=""></button>
+					<button id="showLeftPush"><img src="../../images/menu-icon.png" alt=""></button>
 		   </section>
 			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
 			<h3>Menu</h3>
 			<!-- 왼쪽상단에 있는 버튼을 클릭했을때 나오는 링크or속성값을 지정하는곳 -->
 		  </nav>
 		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
-		<script src="js/classie.js"></script>
+		<script src="../../js/classie.js"></script>
 		<script>
 			var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
 				showLeftPush = document.getElementById( 'showLeftPush' ),
@@ -189,57 +189,7 @@ $(document).ready(function() {
 
 css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어주면 된다.
 -->
-<div class="top-header">
-		<div class="container">
-			<nav class="navbar navbar-default">
-				<div class="container-fluid">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<div class="logo">
-							<h1></h1>
-						</div>
-					</div>
-					<form class="navbar-form navbar-left search" role="search">						
-						<div class="form-group">
-							<button type="submit" class="btn btn-default" aria-label="Left Align">
-								<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-							</button>
-							<input type="text" class="form-control" placeholder="Search">
-						</div>						
-					</form>  
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-						<ul class="nav navbar-nav">
-							<li><a href="file:///C:/Users/sist/Desktop/3%EC%A1%B0%20%EC%9B%B9%ED%85%9C%ED%94%8C%EB%A6%BF(v2)/index.html">Home</a></li>
-							<li><a href="file:///C:/Users/sist/Desktop/3%EC%A1%B0%20%EC%9B%B9%ED%85%9C%ED%94%8C%EB%A6%BF(v2)/contact.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li><a href="file:///C:/Users/sist/Desktop/3%EC%A1%B0%20%EC%9B%B9%ED%85%9C%ED%94%8C%EB%A6%BF(v2)/about.html">about1</a></li>
-									<li><a href="file:///C:/Users/sist/Desktop/3%EC%A1%B0%20%EC%9B%B9%ED%85%9C%ED%94%8C%EB%A6%BF(v2)/about.html">about2</a></li>
-									<li><a href="file:///C:/Users/sist/Desktop/3%EC%A1%B0%20%EC%9B%B9%ED%85%9C%ED%94%8C%EB%A6%BF(v2)/about.html">about3</a></li>           
-								</ul>
-							</li>
-							<li><a href="file:///C:/Users/sist/Desktop/3%EC%A1%B0%20%EC%9B%B9%ED%85%9C%ED%94%8C%EB%A6%BF(v2)/index.html">Services</a></li>
-							<li><a href="file:///C:/Users/sist/Desktop/3%EC%A1%B0%20%EC%9B%B9%ED%85%9C%ED%94%8C%EB%A6%BF(v2)/typo.html">News</a></li>
-							<li><a href="file:///C:/Users/sist/Desktop/3%EC%A1%B0%20%EC%9B%B9%ED%85%9C%ED%94%8C%EB%A6%BF(v2)/contact.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li><a href="file:///C:/Users/sist/Desktop/3%EC%A1%B0%20%EC%9B%B9%ED%85%9C%ED%94%8C%EB%A6%BF(v2)/gallery.html">gallery1</a></li>
-									<li><a href="file:///C:/Users/sist/Desktop/3%EC%A1%B0%20%EC%9B%B9%ED%85%9C%ED%94%8C%EB%A6%BF(v2)/gallery.html">gallery2</a></li>
-									<li><a href="file:///C:/Users/sist/Desktop/3%EC%A1%B0%20%EC%9B%B9%ED%85%9C%ED%94%8C%EB%A6%BF(v2)/gallery.html">gallery3</a></li>           
-								</ul>
-							</li>
-							<li class="active"><a href="file:///C:/Users/sist/Desktop/Flooring%20a%20Interior%20category%20Flat%20Bootstarp%20Responsive%20Website%20Template%20_%20Contact%20__%20w3layouts_files/Flooring%20a%20Interior%20category%20Flat%20Bootstarp%20Responsive%20Website%20Template%20_%20Contact%20__%20w3layouts.html">Mail</a></li>
-						</ul>         
-					</div><!-- /.navbar-collapse -->
-				</div><!-- /.container-fluid -->
-			</nav>	
-		</div>
-	</div>
+
 	 
 <!---->
 <div class="contact" style="
@@ -391,6 +341,6 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/bootstrap.js"></script>	  
+    <script src="../../js/bootstrap.js"></script>	  
 </body>
 </html>
