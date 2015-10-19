@@ -170,3 +170,6 @@ ul.callbacks_tabs.callbacks1_tabs {
     z-index: 999;
     left: 45%;
 }
+.owl-pagination{
+	display: none;
+}
