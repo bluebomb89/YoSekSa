@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -88,11 +88,11 @@ $(document).ready(function() {
 			offset: {top: $('header').height()-$('#nav').height()}
 		});
 		
-		/* affix-top ¿¡¼­ affix·Î ¼öÁ¤µÉ´ë ÀÌº¥Æ® ¹ß»ı*/
+		/* affix-top ì—ì„œ affixë¡œ ìˆ˜ì •ë ëŒ€ ì´ë²¤íŠ¸ ë°œìƒ*/
 		$('#nav').on("affix.bs.affix",function(){
 			$("#startmain").text("haa!");
 		});
-		/* affix¿¡¼­ affix-topÀ¸·Î ÀüÈ¯µÉ¶§ ÀÌº¥Æ® ¹ß»ı*/
+		/* affixì—ì„œ affix-topìœ¼ë¡œ ì „í™˜ë ë•Œ ì´ë²¤íŠ¸ ë°œìƒ*/
 		$('#nav').on("affix-top.bs.affix",function(){
 			$("#startmain").text("Search");
 		});
@@ -120,7 +120,7 @@ $(document).ready(function() {
 		   </section>
 			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
 			<h3>Menu</h3>
-			<!-- ¿ŞÂÊ»ó´Ü¿¡ ÀÖ´Â ¹öÆ°À» Å¬¸¯ÇßÀ»¶§ ³ª¿À´Â ¸µÅ©or¼Ó¼º°ªÀ» ÁöÁ¤ÇÏ´Â°÷ -->
+			<!-- ì™¼ìª½ìƒë‹¨ì— ìˆëŠ” ë²„íŠ¼ì„ í´ë¦­í–ˆì„ë•Œ ë‚˜ì˜¤ëŠ” ë§í¬orì†ì„±ê°’ì„ ì§€ì •í•˜ëŠ”ê³³ -->
 		  </nav>
 		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
 		<script src="js/classie.js"></script>
@@ -146,11 +146,11 @@ $(document).ready(function() {
 				}
 			}
 		</script>
-<!-- ¸ŞÀÎÈ­¸é -->
+<!-- ë©”ì¸í™”ë©´ -->
 <header class="masthead">
 			<div class="bannersearch"></div>
 </header>
-<!-- Å¸ÀÌÆ² ¸Ş´º¹Ù -->
+<!-- íƒ€ì´í‹€ ë©”ë‰´ë°” -->
 <div class="navbar navbar-inverse navbar-static-top affix-top" id="nav">
 		<div class="container">
 			<nav class="navbar navbar-default">
@@ -158,7 +158,7 @@ $(document).ready(function() {
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav navbar-right">
-							<li class="active"><a href="index.html">Home</a></li>
+							<li class="active"><a href="index.html">í™ˆ</a></li>
 							<li><a class="scroll" id=startmain href="#section1">Search</a></li>
 							<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
 								<ul class="dropdown-menu">
@@ -185,7 +185,7 @@ $(document).ready(function() {
 	</div>
 
 <!---->
-<!--  style.css¾È¿¡ ÀÌ¹ÌÁö Ãß°¡ÇØ¼­ div classÀÌ¸§¿¡ ³Ö¾î¶ó. ÀÌ¹ÌÁö´Â ÀüÃ¼ÀûÀ¸·Î style.css¾È¿¡. 
+<!--  style.cssì•ˆì— ì´ë¯¸ì§€ ì¶”ê°€í•´ì„œ div classì´ë¦„ì— ë„£ì–´ë¼. ì´ë¯¸ì§€ëŠ” ì „ì²´ì ìœ¼ë¡œ style.cssì•ˆì—. 
 	  
 .bannersearch{
 	background:url(../images/bannersearch.jpg) no-repeat 0px 0px;
@@ -193,10 +193,10 @@ $(document).ready(function() {
 	min-height:895px;
 }
 
-css¾È¿¡ ÀÌ¹ÌÁö ÀÌ·±½ÄÀ¸·Î Ãß°¡ÇÏ°í div¾È¿¡ Å¬·¡½º¸í ³Ö¾îÁÖ¸é µÈ´Ù.
+cssì•ˆì— ì´ë¯¸ì§€ ì´ëŸ°ì‹ìœ¼ë¡œ ì¶”ê°€í•˜ê³  divì•ˆì— í´ë˜ìŠ¤ëª… ë„£ì–´ì£¼ë©´ ëœë‹¤.
 -->
 
-<!-- ¼­ºñ½º´­·¶À»¶§ °Ë»öÈ­¸éÀÌµ¿ -->
+<!-- ì„œë¹„ìŠ¤ëˆŒë €ì„ë•Œ ê²€ìƒ‰í™”ë©´ì´ë™ -->
 		<div id="section1" class="slider" style="margin-bottom: 14px;">
 			<div class="callbacks_container" style="padding-left: 15px; padding-right: 15px;">
 			  <ul class="rslides" id="slider">
