@@ -1,0 +1,586 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Flooring a Interior category Flat Bootstarp Responsive Website Template | Home :: w3layouts</title>
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/component.css" rel="stylesheet" type="text/css"  />
+<!-- jQuery (necessary JavaScript plugins) -->
+<!-- Custom Theme files -->
+<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/bootstrapTheme.css" rel="stylesheet">
+<link href="css/custom.css" rel="stylesheet">
+<link href="css/owl.carousel.css" rel="stylesheet">
+<link href="cssl/owl.theme.css" rel="stylesheet">
+
+<!-- Custom Theme files -->
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Flooring Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //footer -->
+<script type="text/javascript" src="js/saved_resource"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/responsiveslides.min.js"></script>
+<script type="text/javascript" src="js/jquery.cycle.all.js"></script>
+<script src="js/owl.carousel.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<!--/animated-css-->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<!--/script-->
+<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
+				});
+			    $('.slideshow').cycle({
+					fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+				});
+			    
+			});
+</script>
+<script>
+$(document).ready(function() {
+	 
+	  var owl = $("#owl-demo");
+	 
+	  owl.owlCarousel({
+	      items : 10, //10 items above 1000px browser width
+	      itemsDesktop : [1000,5], //5 items between 1000px and 901px
+	      itemsDesktopSmall : [900,3], // betweem 900px and 601px
+	      itemsTablet: [600,2], //2 items between 600 and 0
+	      itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
+	  });
+	 
+	  // Custom Navigation Events
+	  $(".next").click(function(){
+	    owl.trigger('owl.next');
+	  })
+	  $(".prev").click(function(){
+	    owl.trigger('owl.prev');
+	  })
+	  $(".play").click(function(){
+	    owl.trigger('owl.play',1000); //owl.play event accept autoPlay speed as second parameter
+	  })
+	  $(".stop").click(function(){
+	    owl.trigger('owl.stop');
+	  })
+	 
+	});
+</script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		/* affix the navbar after scroll below header */
+		$('#nav').affix({
+			offset: {
+				top: $('header').height()-$('#nav').height()
+				}
+		});
+		
+	});        
+</script>
+<script>
+    $(function () {
+      $("#slider").responsiveSlides({
+      	auto: true,
+      	nav: true,
+      	speed: 500,
+        namespace: "callbacks",
+        pager: true,
+      });
+    });
+</script>
+
+<!--script-->
+
+</head>
+<body  class="cbp-spmenu-push">
+		<!--bottom-->
+
+		  <section class="button">
+				<button id="showLeftPush"><img src="images/menu-icon.png" alt=""></button>
+		   </section>
+			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+			<h3>Menu</h3>
+			<!-- 왼쪽상단에 있는 버튼을 클릭했을때 나오는 링크or속성값을 지정하는곳 -->
+				<div>aaaaaaaaa</div>
+		  </nav>
+
+		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
+		<script src="js/classie.js"></script>
+		<script>
+			var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+				showLeftPush = document.getElementById( 'showLeftPush' ),
+				showRightPush = document.getElementById( 'showRightPush' ),
+				body = document.body;
+
+			showLeftPush.onclick = function() {
+				classie.toggle( this, 'active' );
+				classie.toggle( body, 'cbp-spmenu-push-toright' );
+				classie.toggle( menuLeft, 'cbp-spmenu-open' );
+				disableOther( 'showLeftPush' );
+			};
+
+			function disableOther( button ) {
+				if( button !== 'showLeftPush' ) {
+					classie.toggle( showLeftPush, 'disabled' );
+				}
+				if( button !== 'showRightPush' ) {
+					classie.toggle( showRightPush, 'disabled' );
+				}
+			}
+		</script>
+	
+<div class="navbar navbar-inverse navbar-static-top affix-top" id="nav">
+		<div class="container">
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav navbar-right">
+							<li class="active"><a href="index.html">Home</a></li>
+							<li><a class="scroll" href="#section1">Search</a></li>
+							<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="about.html">about1</a></li>
+									<li><a href="about.html">about2</a></li>
+									<li><a href="about.html">about3</a></li>           
+								</ul>
+							</li>
+							<li><a class="scroll" href="#services">Services</a></li>
+							<li><a href="typo.html">News</a></li>
+							<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="gallery.html">gallery1</a></li>
+									<li><a href="gallery.html">gallery2</a></li>
+									<li><a href="gallery.html">gallery3</a></li>           
+								</ul>
+							</li>
+							<li><a href="contact.html">Mail</a></li>
+						</ul>         
+					</div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
+			</nav>	
+		</div>
+	</div>
+<html lang="ko"><head>
+<meta charset="utf-8">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
+<title>회원 가입 | </title>
+<link rel="stylesheet" href="http://www.webnoriter.com/~imsi/store/css/default_shop.css">
+<link rel="stylesheet" href="http://www.webnoriter.com/~imsi/store/skin/shop/basic/style.css">
+<link rel="stylesheet" href="http://www.webnoriter.com/~imsi/store/skin/member/basic/style.css">
+<link href="css/styleggong.css" type="text/css" rel="stylesheet" media="all">
+<!--[if lte IE 8]>
+<script src="http://www.webnoriter.com/~imsi/store/js/html5.js"></script>
+<![endif]-->
+<script>
+// 자바스크립트에서 사용하는 전역변수 선언
+var g5_url       = "http://www.webnoriter.com/~imsi/store";
+var g5_bbs_url   = "http://www.webnoriter.com/~imsi/store/bbs";
+var g5_is_member = "";
+var g5_is_admin  = "";
+var g5_is_mobile = "";
+var g5_bo_table  = "";
+var g5_sca       = "";
+var g5_editor    = "";
+var g5_cookie_domain = "";
+</script>
+<script src="http://www.webnoriter.com/~imsi/store/js/jquery-1.8.3.min.js"></script>
+<script src="http://www.webnoriter.com/~imsi/store/js/jquery.shop.menu.js"></script>
+<script src="http://www.webnoriter.com/~imsi/store/js/common.js"></script>
+<script src="http://www.webnoriter.com/~imsi/store/js/wrest.js"></script>
+
+</head>
+<body style="cursor: default;">
+
+<!-- 상단 시작 { -->
+	
+<div id="hd">
+    <h1 id="hd_h1">회원 가입</h1>
+
+    <div id="skip_to_container"><a href="#container">본문 바로가기</a></div>
+
+    <div id="hd_wrapper">
+        <div id="logo"><a href="http://www.webnoriter.com/~imsi/store/"></a></div>
+
+        <div id="hd_sch">
+            <form name="frmsearch1" action="http://www.webnoriter.com/~imsi/store/shop/search.php" onsubmit="return search_submit(this);">
+
+            <label for="sch_str" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
+            
+            
+
+            </form>
+            <script>
+            function search_submit(f) {
+                if (f.q.value.length < 2) {
+                    alert("검색어는 두글자 이상 입력하십시오.");
+                    f.q.select();
+                    f.q.focus();
+                    return false;
+                }
+
+                return true;
+            }
+            </script>
+        </div>
+
+
+    </div>
+
+</div>
+<div id="wrapper">
+    <div id="container">
+        <div id="wrapper_title">회원 가입</div>        <!-- 글자크기 조정 display:none 되어 있음 시작 { -->
+        <div id="text_size">
+            <button class="no_text_resize" onclick="font_resize('container', 'decrease');">작게</button>
+            <button class="no_text_resize" onclick="font_default('container');">기본</button>
+            <button class="no_text_resize" onclick="font_resize('container', 'increase');">크게</button>
+        </div>
+        <!-- } 글자크기 조정 display:none 되어 있음 끝 -->
+<!-- 회원정보 입력/수정 시작 { -->
+<div class="mbskin">
+
+    <script src="http://www.webnoriter.com/~imsi/store/js/jquery.register_form.js"></script>
+    
+    <form id="fregisterform" name="fregisterform" action="http://www.webnoriter.com/~imsi/store/bbs/register_form_update.php" onsubmit="return fregisterform_submit(this);" method="post" enctype="multipart/form-data" autocomplete="off">
+    <input type="hidden" name="w" value="">
+    <input type="hidden" name="url" value="%2F%7Eimsi%2Fstore%2Fbbs%2Fregister_form.php">
+    <input type="hidden" name="agree" value="1">
+    <input type="hidden" name="agree2" value="1">
+    <input type="hidden" name="cert_type" value="">
+    <input type="hidden" name="cert_no" value="">
+    <input type="hidden" name="mb_sex" value="">    
+    <div class="tbl_frm01 tbl_wrap">
+        <table>
+        <caption>사이트 이용정보 입력</caption>
+        <tbody>
+        <tr>
+            <th scope="row"><label for="reg_mb_id">아이디<strong class="sound_only">필수</strong></label></th>
+            <td>
+                <span class="frm_info">영문자, 숫자, _ 만 입력 가능. 최소 3자이상 입력하세요.</span>
+                <input type="text" name="mb_id" value="" id="reg_mb_id" required="" class="frm_input required " minlength="6" maxlength="20">
+                <span id="msg_mb_id"></span>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row"><label for="reg_mb_password">비밀번호<strong class="sound_only">필수</strong></label></th>
+            <td><input type="password" name="mb_password" id="reg_mb_password" required="" class="frm_input required" minlength="6" maxlength="20"></td>
+        </tr>
+        <tr>
+            <th scope="row"><label for="reg_mb_password_re">비밀번호 확인<strong class="sound_only">필수</strong></label></th>
+            <td><input type="password" name="mb_password_re" id="reg_mb_password_re" required="" class="frm_input required" minlength="" maxlength="20"></td>
+        </tr>
+        </tbody>
+        </table>
+    </div>
+
+    <div class="tbl_frm01 tbl_wrap">
+        <table>
+        <caption>개인정보 입력</caption>
+        <tbody>
+        <tr>
+            <th scope="row"><label for="reg_mb_name">이름<strong class="sound_only">필수</strong></label></th>
+            <td>
+                                <input type="text" id="reg_mb_name" name="mb_name" value="" required="" class="frm_input required " size="10">
+                                            </td>
+        </tr>
+                <tr>
+            <th scope="row"><label for="reg_mb_nick">닉네임<strong class="sound_only">필수</strong></label></th>
+            <td>
+                <span class="frm_info">
+                    공백없이 한글,영문,숫자만 입력 가능 (한글2자, 영문4자 이상)<br>
+                    닉네임을 바꾸시면 앞으로 60일 이내에는 변경 할 수 없습니다.
+                </span>
+                <input type="hidden" name="mb_nick_default" value="">
+                <input type="text" name="mb_nick" value="" id="reg_mb_nick" required="" class="frm_input required nospace" size="10" maxlength="20">
+                <span id="msg_mb_nick"></span>
+            </td>
+        </tr>
+        
+        <tr>
+            <th scope="row"><label for="reg_mb_email">E-mail<strong class="sound_only">필수</strong></label></th>
+            <td>
+                                <input type="hidden" name="old_email" value="">
+                <input type="text" name="mb_email" value="" id="reg_mb_email" required="" class="frm_input email required" size="70" maxlength="100">
+            </td>
+        </tr>
+
+        
+        
+        
+                </tbody>
+        </table>
+    </div>
+
+    <div class="tbl_frm01 tbl_wrap">
+        <table>
+        <caption>기타 개인설정</caption>
+        <tbody>
+        
+        
+        
+        <tr>
+            <th scope="row"><label for="reg_mb_mailling">메일링서비스</label></th>
+            <td>
+                <input type="checkbox" name="mb_mailling" value="1" id="reg_mb_mailling" checked="">
+                정보 메일을 받겠습니다.
+            </td>
+        </tr>
+
+        
+                <tr>
+            <th scope="row"><label for="reg_mb_open">정보공개</label></th>
+            <td>
+                <span class="frm_info">
+                    정보공개를 바꾸시면 앞으로 0일 이내에는 변경이 안됩니다.
+                </span>
+                <input type="hidden" name="mb_open_default" value="">
+                <input type="checkbox" name="mb_open" value="1" checked="" id="reg_mb_open">
+                다른분들이 나의 정보를 볼 수 있도록 합니다.
+            </td>
+        </tr>
+        
+        
+        <tr>
+            
+            <td>
+<script>var g5_captcha_url  = "http://www.webnoriter.com/~imsi/store/plugin/kcaptcha";</script>
+<script src="http://www.webnoriter.com/~imsi/store/plugin/kcaptcha/kcaptcha.js"></script>
+</td>
+        </tr>
+        </tbody>
+        </table>
+    </div>
+
+    <div class="btn_confirm">
+        <input type="submit" value="회원가입" id="btn_submit" class="btn_submit" accesskey="s">
+        <a href="http://www.webnoriter.com/~imsi/store" class="btn_cancel">취소</a>
+    </div>
+    </form>
+
+    <script>
+    $(function() {
+        $("#reg_zip_find").css("display", "inline-block");
+
+                    });
+
+    // submit 최종 폼체크
+    function fregisterform_submit(f)
+    {
+        // 회원아이디 검사
+        if (f.w.value == "") {
+            var msg = reg_mb_id_check();
+            if (msg) {
+                alert(msg);
+                f.mb_id.select();
+                return false;
+            }
+        }
+
+        if (f.w.value == "") {
+            if (f.mb_password.value.length < 6) {
+                alert("비밀번호를 3글자 이상 입력하십시오.");
+                f.mb_password.focus();
+                return false;
+            }
+        }
+
+        if (f.mb_password.value != f.mb_password_re.value) {
+            alert("비밀번호가 같지 않습니다.");
+            f.mb_password_re.focus();
+            return false;
+        }
+
+        if (f.mb_password.value.length > 0) {
+            if (f.mb_password_re.value.length < 6) {
+                alert("비밀번호를 3글자 이상 입력하십시오.");
+                f.mb_password_re.focus();
+                return false;
+            }
+        }
+
+        // 이름 검사
+        if (f.w.value=="") {
+            if (f.mb_name.value.length < 1) {
+                alert("이름을 입력하십시오.");
+                f.mb_name.focus();
+                return false;
+            }
+
+            /*
+            var pattern = /([^가-힣\x20])/i;
+            if (pattern.test(f.mb_name.value)) {
+                alert("이름은 한글로 입력하십시오.");
+                f.mb_name.select();
+                return false;
+            }
+            */
+        }
+
+        
+        // 닉네임 검사
+        if ((f.w.value == "") || (f.w.value == "u" && f.mb_nick.defaultValue != f.mb_nick.value)) {
+            var msg = reg_mb_nick_check();
+            if (msg) {
+                alert(msg);
+                f.reg_mb_nick.select();
+                return false;
+            }
+        }
+
+        // E-mail 검사
+        if ((f.w.value == "") || (f.w.value == "u" && f.mb_email.defaultValue != f.mb_email.value)) {
+            var msg = reg_mb_email_check();
+            if (msg) {
+                alert(msg);
+                f.reg_mb_email.select();
+                return false;
+            }
+        }
+
+        
+        if (typeof f.mb_icon != "undefined") {
+            if (f.mb_icon.value) {
+                if (!f.mb_icon.value.toLowerCase().match(/.(gif)$/i)) {
+                    alert("회원아이콘이 gif 파일이 아닙니다.");
+                    f.mb_icon.focus();
+                    return false;
+                }
+            }
+        }
+
+        if (typeof(f.mb_recommend) != "undefined" && f.mb_recommend.value) {
+            if (f.mb_id.value == f.mb_recommend.value) {
+                alert("본인을 추천할 수 없습니다.");
+                f.mb_recommend.focus();
+                return false;
+            }
+
+            var msg = reg_mb_recommend_check();
+            if (msg) {
+                alert(msg);
+                f.mb_recommend.select();
+                return false;
+            }
+        }
+
+        if (!chk_captcha()) return false;{
+
+        document.getElementById("btn_submit").disabled = "disabled";
+
+        return true;
+    }
+    </script>
+
+</div>
+<!-- } 회원정보 입력/수정 끝 -->
+    </div>
+    <!-- } 콘텐츠 끝 -->
+
+<!-- 하단 시작 { -->
+</div>
+
+<div id="ft">
+    <div>
+        <a href="http://www.webnoriter.com/~imsi/store/" id="ft_logo"></a>
+        <ul>
+			<li><a href="http://www.webnoriter.com/~imsi/store/" onmouseover="this.innerText='HOME'" onmouseout="this.innerText='HOME'">HOME</a></li>
+            <li><a href="http://www.webnoriter.com/~imsi/store/bbs/content.php?co_id=company" onmouseover="this.innerText='회사소개'" onmouseout="this.innerText='ABOUT US'">ABOUT US</a></li>
+            <li><a href="http://www.webnoriter.com/~imsi/store/bbs/content.php?co_id=provision" onmouseover="this.innerText='서비스이용약관'" onmouseout="this.innerText='AGREEMENT'">AGREEMENT</a></li>
+            <li><a href="http://www.webnoriter.com/~imsi/store/bbs/content.php?co_id=privacy" onmouseover="this.innerText='개인정보취급방침'" onmouseout="this.innerText='PRIVACY POLICY'">PRIVACY POLICY</a></li>
+        </ul>
+        <p>
+            <span><b>회사명</b> Null</span>
+            <span><b>주소</b> Null</span><br>
+            <span><b>사업자 등록번호</b> Null</span>
+            <span><b>대표</b> Null</span>
+            <span><b>전화</b> Null</span>
+            <span><b>팩스</b> Null</span><br>
+            <!-- <span><b>운영자</b> 최고관리자</span><br> -->
+            <span><b>통신판매업신고번호</b> Null</span>
+            <span><b>개인정보관리책임자</b> Null</span>
+
+            <span><b>부가통신사업신고번호</b> Null</span><br>
+            Copyright © 20015-2016 Null. All Rights Reserved.
+        </p>
+        <a href="#" id="ft_totop"><img src="http://www.webnoriter.com/~imsi/store/shop/img/top.png" title=""></a>
+    </div>
+</div>
+
+
+<script src="http://www.webnoriter.com/~imsi/store/js/sns.js"></script>
+<!-- } 하단 끝 -->
+
+
+
+<!-- ie6,7에서 사이드뷰가 게시판 목록에서 아래 사이드뷰에 가려지는 현상 수정 -->
+<!--[if lte IE 7]>
+<script>
+$(function() {
+    var $sv_use = $(".sv_use");
+    var count = $sv_use.length;
+
+    $sv_use.each(function() {
+        $(this).css("z-index", count);
+        $(this).css("position", "relative");
+        count = count - 1;
+    });
+});
+</script>
+<![endif]-->
+
+
+
+
+<!---->
+<!--  style.css안에 이미지 추가해서 div class이름에 넣어라. 이미지는 전체적으로 style.css안에. 
+	  
+.bannersearch{
+	background:url(../images/bannersearch.jpg) no-repeat 0px 0px;
+	background-size:100% 100%;
+	min-height:895px;
+}
+
+css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어주면 된다.
+-->
+
+
+<!---->
+<script type="text/javascript">
+		$(document).ready(function() {
+				/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+				*/
+		$().UItoTop({ easingType: 'easeOutQuart' });
+});
+</script>
+<a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<!----> 
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.js"></script>	  
+</body>
+</html>
