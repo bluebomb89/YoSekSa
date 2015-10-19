@@ -1,4 +1,6 @@
-﻿<!--A Design by W3layouts
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!--A Design by W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
@@ -9,17 +11,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <head>
 <title>Flooring a Interior category Flat Bootstarp Responsive
 	Website Template | Home :: w3layouts</title>
-<link href="css/bootstrap.css" type="text/css" rel="stylesheet"
+<link href="../../css/bootstrap.css" type="text/css" rel="stylesheet"
 	media="all">
-<link href="css/component.css" rel="stylesheet" type="text/css" />
+<link href="../../css/component.css" rel="stylesheet" type="text/css" />
 <!-- jQuery (necessary JavaScript plugins) -->
 <!-- Custom Theme files -->
 <!-- <link href="css/style.css" type="text/css" rel="stylesheet" media="all"> -->
-<link href="css/style3.css" type="text/css" rel="stylesheet" media="all">
-<link href="css/bootstrapTheme.css" rel="stylesheet">
-<link href="css/custom.css" rel="stylesheet">
-<link href="css/owl.carousel.css" rel="stylesheet">
-<link href="cssl/owl.theme.css" rel="stylesheet">
+<link href="../../css/style3.css" type="text/css" rel="stylesheet" media="all">
+<link href="../../css/bootstrapTheme.css" rel="stylesheet">
+<link href="../../css/custom.css" rel="stylesheet">
+<link href="../../css/owl.carousel.css" rel="stylesheet">
+<link href="../../cssl/owl.theme.css" rel="stylesheet">
 <!-- Custom Theme files -->
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,18 +35,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 </script>
 <!-- //footer -->
-<script type="text/javascript" src="js/saved_resource"></script>
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script src="js/modernizr.custom.js"></script>
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/responsiveslides.min.js"></script>
-<script type="text/javascript" src="js/jquery.cycle.all.js"></script>
-<script src="js/owl.carousel.js"></script>
-<script src="js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="../../js/saved_resource"></script>
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script src="../../js/modernizr.custom.js"></script>
+<script src="../../js/jquery-1.11.1.min.js"></script>
+<script src="../../js/responsiveslides.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.cycle.all.js"></script>
+<script src="../../js/owl.carousel.js"></script>
+<script src="../../js/owl.carousel.min.js"></script>
 <!--/animated-css-->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript" src="../../js/move-top.js"></script>
+<script type="text/javascript" src="../../js/easing.js"></script>
 <!--/script-->
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
@@ -120,16 +122,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!--bottom-->
 	<section class="button">
 		<button id="showLeftPush">
-			<img src="images/menu-icon.png" alt="">
+			<img src="../../images/menu-icon.png" alt="">
 		</button>
 	</section>
 	<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left"
 		id="cbp-spmenu-s1">
 		<h3>Menu</h3>
-		<!-- 왼쪽상단에 있는 버튼을 클릭했을때 나오는 링크or속성값을 지정하는곳 -->
+		<!-- ���ʻ�ܿ� �ִ� ��ư�� Ŭ�������� ������ ��ũor�Ӽ����� �����ϴ°� -->
 	</nav>
 	<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
-	<script src="js/classie.js"></script>
+	<script src="../../js/classie.js"></script>
 	<script>
 		var menuLeft = document.getElementById('cbp-spmenu-s1'), showLeftPush = document
 				.getElementById('showLeftPush'), showRightPush = document
@@ -193,7 +195,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 
 	<!---->
-	<!--  style.css안에 이미지 추가해서 div class이름에 넣어라. 이미지는 전체적으로 style.css안에. 
+	<!--  style.css�ȿ� �̹��� �߰��ؼ� div class�̸��� �־��. �̹����� ��ü������ style.css�ȿ�. 
 	  
 .bannersearch{
 	background:url(../images/bannersearch.jpg) no-repeat 0px 0px;
@@ -201,7 +203,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	min-height:895px;
 }
 
-css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어주면 된다.
+css�ȿ� �̹��� �̷������� �߰��ϰ� div�ȿ� Ŭ������ �־��ָ� �ȴ�.
 -->
 	<div class="container" style="margin-top: 60px;">
 		<div class="row" style="margin-bottom: 20px;margin-left: 0px;">
@@ -238,7 +240,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 			<div class="row">
 				<div class="col-sm-3 col-md-4">
 					<div class="thumbnail">
-						<img src="images/g1.jpg" alt="">
+						<img src="../../images/g1.jpg" alt="">
 						<div class="caption">
 							<h3>Thumbnail label</h3>
 							aaaaaaaaaaaaaaaaaaaaaaaa<br> bbbbbbbbbbbbbbbbbbbbbbbb<br>
@@ -249,7 +251,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 				</div>
 				<div class="col-sm-3 col-md-4">
 					<div class="thumbnail">
-						<img src="images/g1.jpg" alt="">
+						<img src="../../images/g1.jpg" alt="">
 						<div class="caption">
 							<h3>Thumbnail label</h3>
 							aaaaaaaaaaaaaaaaaaaaaaaa<br> bbbbbbbbbbbbbbbbbbbbbbbb<br>
@@ -260,7 +262,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 				</div>
 				<div class="col-sm-3 col-md-4">
 					<div class="thumbnail">
-						<img src="images/g1.jpg" alt="">
+						<img src="../../images/g1.jpg" alt="">
 						<div class="caption">
 							<h3>Thumbnail label</h3>
 							aaaaaaaaaaaaaaaaaaaaaaaa<br> bbbbbbbbbbbbbbbbbbbbbbbb<br>
@@ -271,7 +273,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 				</div>
 				<div class="col-sm-3 col-md-4">
 					<div class="thumbnail">
-						<img src="images/g1.jpg" alt="">
+						<img src="../../images/g1.jpg" alt="">
 						<div class="caption">
 							<h3>Thumbnail label</h3>
 							aaaaaaaaaaaaaaaaaaaaaaaa<br> bbbbbbbbbbbbbbbbbbbbbbbb<br>
@@ -282,7 +284,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 				</div>
 				<div class="col-sm-3 col-md-4">
 					<div class="thumbnail">
-						<img src="images/g1.jpg" alt="">
+						<img src="../../images/g1.jpg" alt="">
 						<div class="caption">
 							<h3>Thumbnail label</h3>
 							aaaaaaaaaaaaaaaaaaaaaaaa<br> bbbbbbbbbbbbbbbbbbbbbbbb<br>
@@ -293,7 +295,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 				</div>
 				<div class="col-sm-3 col-md-4">
 					<div class="thumbnail">
-						<img src="images/g1.jpg" alt="">
+						<img src="../../images/g1.jpg" alt="">
 						<div class="caption">
 							<h3>Thumbnail label</h3>
 							aaaaaaaaaaaaaaaaaaaaaaaa<br> bbbbbbbbbbbbbbbbbbbbbbbb<br>
@@ -304,7 +306,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 				</div>
 				<div class="col-sm-3 col-md-4">
 					<div class="thumbnail">
-						<img src="images/g1.jpg" alt="">
+						<img src="../../images/g1.jpg" alt="">
 						<div class="caption">
 							<h3>Thumbnail label</h3>
 							aaaaaaaaaaaaaaaaaaaaaaaa<br> bbbbbbbbbbbbbbbbbbbbbbbb<br>
@@ -315,7 +317,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 				</div>
 				<div class="col-sm-3 col-md-4">
 					<div class="thumbnail">
-						<img src="images/g1.jpg" alt="">
+						<img src="../../images/g1.jpg" alt="">
 						<div class="caption">
 							<h3>Thumbnail label</h3>
 							aaaaaaaaaaaaaaaaaaaaaaaa<br> bbbbbbbbbbbbbbbbbbbbbbbb<br>
@@ -326,7 +328,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 				</div>
 				<div class="col-sm-3 col-md-4">
 					<div class="thumbnail">
-						<img src="images/g1.jpg" alt="">
+						<img src="../../images/g1.jpg" alt="">
 						<div class="caption">
 							<h3>Thumbnail label</h3>
 							aaaaaaaaaaaaaaaaaaaaaaaa<br> bbbbbbbbbbbbbbbbbbbbbbbb<br>
@@ -368,6 +370,6 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 			<!-- Bootstrap core JavaScript
     ================================================== -->
 			<!-- Placed at the end of the document so the pages load faster -->
-			<script src="js/bootstrap.js"></script>
+			<script src="../../js/bootstrap.js"></script>
 </body>
 </html>
