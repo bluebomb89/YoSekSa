@@ -211,7 +211,7 @@ var g5_cookie_domain = "";
         <tr>
             <th scope="row"><label for="reg_mb_id">아이디<strong class="sound_only">필수</strong></label></th>
             <td>
-                <span class="frm_info">영문자, 숫자, _ 만 입력 가능. 최소 3자이상 입력하세요.</span>
+                <span class="frm_info">영문자, 숫자, _ 만 입력 가능. 최소 6자이상 입력하세요.</span>
                 <input type="text" name="mb_id" value="" id="reg_mb_id" required="" class="frm_input required " minlength="6" maxlength="20">
                 <span id="msg_mb_id"></span>
             </td>
@@ -232,12 +232,7 @@ var g5_cookie_domain = "";
         <table>
         <caption>개인정보 입력</caption>
         <tbody>
-        <tr>
-            <th scope="row"><label for="reg_mb_name">이름<strong class="sound_only">필수</strong></label></th>
-            <td>
-                                <input type="text" id="reg_mb_name" name="mb_name" value="" required="" class="frm_input required " size="10">
-                                            </td>
-        </tr>
+       
                 <tr>
             <th scope="row"><label for="reg_mb_nick">닉네임<strong class="sound_only">필수</strong></label></th>
             <td>
@@ -282,7 +277,7 @@ var g5_cookie_domain = "";
         </tr>
 
         
-                <tr>
+        <tr>
             <th scope="row"><label for="reg_mb_open">정보공개</label></th>
             <td>
                 <span class="frm_info">
@@ -293,14 +288,19 @@ var g5_cookie_domain = "";
                 다른분들이 나의 정보를 볼 수 있도록 합니다.
             </td>
         </tr>
-        
-        
-        <tr>
-            
-            <td>
-<script>var g5_captcha_url  = "http://www.webnoriter.com/~imsi/store/plugin/kcaptcha";</script>
-<script src="http://www.webnoriter.com/~imsi/store/plugin/kcaptcha/kcaptcha.js"></script>
-</td>
+         <tr>
+            <th scope="row">자동등록방지</th>
+    <td>
+				<script>var g5_captcha_url  = "http://www.webnoriter.com/~imsi/store/plugin/kcaptcha";</script>
+				<script src="http://www.webnoriter.com/~imsi/store/plugin/kcaptcha/kcaptcha.js"></script>
+		<fieldset id="captcha" class="captcha">
+				<legend><label for="captcha_key"></label></legend>
+				<img src="http://www.webnoriter.com/~imsi/store/plugin/kcaptcha/kcaptcha_image.php?t=1445304681965" alt="" id="captcha_img">
+				<button type="button" id="captcha_mp3" style="cursor: pointer;"><span></span>숫자음성듣기</button>
+				<button type="button" id="captcha_reload"><span></span>새로고침</button><input type="text" name="captcha_key" id="captcha_key" required="" class="captcha_box required" size="6" maxlength="6">
+				<span id="captcha_info">자동등록방지 숫자를 순서대로 입력하세요.</span>
+		</fieldset>
+	</td>
         </tr>
         </tbody>
         </table>
