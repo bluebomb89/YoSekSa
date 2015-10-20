@@ -19,22 +19,20 @@
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 
 <!--/script-->
-
-
 <!--script-->
 
 </head>
 <body  class="cbp-spmenu-push">
 		<!--bottom-->
 		  <section class="button">
-					<button id="showLeftPush"><img src="../../images/menu-icon.png" alt=""></button>
+					<button id="showLeftPush"><img src="images/menu-icon.png" alt=""></button>
 		   </section>
 			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
 			<h3>Menu</h3>
 			<!-- 왼쪽상단에 있는 버튼을 클릭했을때 나오는 링크or속성값을 지정하는곳 -->
 		  </nav>
 		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
-		<script src="../../js/classie.js"></script>
+		<script src="js/classie.js"></script>
 <!-- 타이틀 메뉴바 -->
 <div class="navbar navbar-inverse navbar-static-top affix-top" id="nav">
 		<div class="container">
@@ -58,7 +56,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<ul class="dropdown-menu">
 									<li><a href="main.jsp?no=4">gallery1</a></li>
 									<li><a href="main.jsp?no=4">gallery2</a></li>
-									<li><a href="main.jsp?no=4">gallery3</a></li>           
+									<li><a href="main.jsp?no=3">회원가입</a></li>           
 								</ul>
 							</li>
 							<li><a href="main.jsp?no=5">자게글쓰기</a></li>

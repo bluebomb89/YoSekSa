@@ -113,72 +113,7 @@ $(document).ready(function() {
 <body  class="cbp-spmenu-push">
 		<!--bottom-->
 
-		  <section class="button">
-				<button id="showLeftPush"><img src="../../images/menu-icon.png" alt=""></button>
-		   </section>
-			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
-			<h3>Menu</h3>
-			<!-- 왼쪽상단에 있는 버튼을 클릭했을때 나오는 링크or속성값을 지정하는곳 -->
-				<div>aaaaaaaaa</div>
-		  </nav>
-
-		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
-		<script src="../../js/classie.js"></script>
-		<script>
-			var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
-				showLeftPush = document.getElementById( 'showLeftPush' ),
-				showRightPush = document.getElementById( 'showRightPush' ),
-				body = document.body;
-
-			showLeftPush.onclick = function() {
-				classie.toggle( this, 'active' );
-				classie.toggle( body, 'cbp-spmenu-push-toright' );
-				classie.toggle( menuLeft, 'cbp-spmenu-open' );
-				disableOther( 'showLeftPush' );
-			};
-
-			function disableOther( button ) {
-				if( button !== 'showLeftPush' ) {
-					classie.toggle( showLeftPush, 'disabled' );
-				}
-				if( button !== 'showRightPush' ) {
-					classie.toggle( showRightPush, 'disabled' );
-				}
-			}
-		</script>
-	
-<div class="navbar navbar-inverse navbar-static-top affix-top" id="nav">
-		<div class="container">
-			<nav class="navbar navbar-default">
-				<div class="container-fluid">
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-						<ul class="nav navbar-nav navbar-right">
-							<li class="active"><a href="index.html">Home</a></li>
-							<li><a class="scroll" href="#section1">Search</a></li>
-							<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li><a href="about.html">about1</a></li>
-									<li><a href="about.html">about2</a></li>
-									<li><a href="about.html">about3</a></li>           
-								</ul>
-							</li>
-							<li><a class="scroll" href="#services">Services</a></li>
-							<li><a href="typo.html">News</a></li>
-							<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li><a href="gallery.html">gallery1</a></li>
-									<li><a href="gallery.html">gallery2</a></li>
-									<li><a href="gallery.html">gallery3</a></li>           
-								</ul>
-							</li>
-							<li><a href="contact.html">Mail</a></li>
-						</ul>         
-					</div><!-- /.navbar-collapse -->
-				</div><!-- /.container-fluid -->
-			</nav>	
-		</div>
-	</div>
+		
 <html lang="ko"><head>
 <meta charset="utf-8">
 <meta http-equiv="imagetoolbar" content="no">
@@ -276,7 +211,7 @@ var g5_cookie_domain = "";
         <tr>
             <th scope="row"><label for="reg_mb_id">아이디<strong class="sound_only">필수</strong></label></th>
             <td>
-                <span class="frm_info">영문자, 숫자, _ 만 입력 가능. 최소 3자이상 입력하세요.</span>
+                <span class="frm_info">영문자, 숫자, _ 만 입력 가능. 최소 6자이상 입력하세요.</span>
                 <input type="text" name="mb_id" value="" id="reg_mb_id" required="" class="frm_input required " minlength="6" maxlength="20">
                 <span id="msg_mb_id"></span>
             </td>
@@ -297,12 +232,7 @@ var g5_cookie_domain = "";
         <table>
         <caption>개인정보 입력</caption>
         <tbody>
-        <tr>
-            <th scope="row"><label for="reg_mb_name">이름<strong class="sound_only">필수</strong></label></th>
-            <td>
-                                <input type="text" id="reg_mb_name" name="mb_name" value="" required="" class="frm_input required " size="10">
-                                            </td>
-        </tr>
+       
                 <tr>
             <th scope="row"><label for="reg_mb_nick">닉네임<strong class="sound_only">필수</strong></label></th>
             <td>
@@ -347,7 +277,7 @@ var g5_cookie_domain = "";
         </tr>
 
         
-                <tr>
+        <tr>
             <th scope="row"><label for="reg_mb_open">정보공개</label></th>
             <td>
                 <span class="frm_info">
@@ -358,14 +288,19 @@ var g5_cookie_domain = "";
                 다른분들이 나의 정보를 볼 수 있도록 합니다.
             </td>
         </tr>
-        
-        
-        <tr>
-            
-            <td>
-<script>var g5_captcha_url  = "http://www.webnoriter.com/~imsi/store/plugin/kcaptcha";</script>
-<script src="http://www.webnoriter.com/~imsi/store/plugin/kcaptcha/kcaptcha.js"></script>
-</td>
+         <tr>
+            <th scope="row">자동등록방지</th>
+    <td>
+				<script>var g5_captcha_url  = "http://www.webnoriter.com/~imsi/store/plugin/kcaptcha";</script>
+				<script src="http://www.webnoriter.com/~imsi/store/plugin/kcaptcha/kcaptcha.js"></script>
+		<fieldset id="captcha" class="captcha">
+				<legend><label for="captcha_key"></label></legend>
+				<img src="http://www.webnoriter.com/~imsi/store/plugin/kcaptcha/kcaptcha_image.php?t=1445304681965" alt="" id="captcha_img">
+				<button type="button" id="captcha_mp3" style="cursor: pointer;"><span></span>숫자음성듣기</button>
+				<button type="button" id="captcha_reload"><span></span>새로고침</button><input type="text" name="captcha_key" id="captcha_key" required="" class="captcha_box required" size="6" maxlength="6">
+				<span id="captcha_info">자동등록방지 숫자를 순서대로 입력하세요.</span>
+		</fieldset>
+	</td>
         </tr>
         </tbody>
         </table>
@@ -565,20 +500,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 
 
 <!---->
-<script type="text/javascript">
-		$(document).ready(function() {
-				/*
-				var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-				};
-				*/
-		$().UItoTop({ easingType: 'easeOutQuart' });
-		});
-</script>
-<a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
 <!----> 
 <!-- Bootstrap core JavaScript
     ================================================== -->
