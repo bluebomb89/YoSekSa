@@ -4,16 +4,16 @@
 <html>
 <head>
 <title>Flooring a Interior category Flat Bootstarp Responsive Website Template | Home :: w3layouts</title>
-<link href="../../css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
-<link href="../../css/component.css" rel="stylesheet" type="text/css"  />
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/component.css" rel="stylesheet" type="text/css"  />
 <!-- jQuery (necessary JavaScript plugins) -->
 <!-- Custom Theme files -->
-<link href="../../css/style.css" type="text/css" rel="stylesheet" media="all">
-<link href="../../css/bootstrapTheme.css" rel="stylesheet">
-<link href="../../css/style1.css" type="text/css" rel="stylesheet" media="all">
-<link href="../../css/custom.css" rel="stylesheet">
-<link href="../../css/owl.carousel.css" rel="stylesheet">
-<link href="../../css/owl.theme.css" rel="stylesheet">
+<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/bootstrapTheme.css" rel="stylesheet">
+<link href="css/style1.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/custom.css" rel="stylesheet">
+<link href="css/owl.carousel.css" rel="stylesheet">
+<link href="css/owl.theme.css" rel="stylesheet">
 <!-- Custom Theme files -->
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,19 +22,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //footer -->
 
-<script src="../../js/saved_resource"></script>
-<script src="../../js/jquery.min.js"></script>
-<script src="../../js/bootstrap.min.js"></script>
-<script src="../../js/modernizr.custom.js"></script>
-<script src="../../js/jquery-1.11.1.min.js"></script>
-<script src="../../js/responsiveslides.min.js"></script>
-<script src="../../js/jquery.cycle.all.js"></script>
-<script src="../../js/owl.carousel.js"></script>
-<script src="../../js/owl.carousel.min.js"></script>
+<script src="js/saved_resource"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/responsiveslides.min.js"></script>
+<script src="js/jquery.cycle.all.js"></script>
+<script src="js/owl.carousel.js"></script>
+<script src="js/owl.carousel.min.js"></script>
 <!--/animated-css-->
-<script src="../../js/move-top.js"></script>
-<script src="../../js/easing.js"></script>
-<script src="../../js/bootstrap.js"></script> 
+<script src="js/move-top.js"></script>
+<script src="js/easing.js"></script>
+<script src="js/bootstrap.js"></script> 
 <!--/script-->
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
@@ -115,7 +115,7 @@ $(document).ready(function() {
 <body  class="cbp-spmenu-push">
 		<!--bottom-->
 		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
-		<script src="../../js/classie.js"></script>
+		<script src="js/classie.js"></script>
 <!---->
 <!--  style.css안에 이미지 추가해서 div class이름에 넣어라. 이미지는 전체적으로 style.css안에. 
 	  
@@ -256,85 +256,36 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 			<div class="service-info">
 				<h3>Notice</h3>
 			</div>
-			<div class="showmenu" id="menu">Click Here</div>
-				<div id="menu-cont" style="display: none;"><ul><li>Button1</li><li>Button2</li><li>Button3</li></ul></div>
-			<div class="showmenu" id="menu1">Click Here</div>
+			<div class="showmenu" id="menu1">공지사항1</div>
 				<div id="menu1-cont" style="display: none;"><ul><li>Button1</li><li>Button2</li><li>Button3</li></ul></div>
-			<div class="showmenu" id="menu2">Click Here</div>
+			<div class="showmenu" id="menu2">공지사항2</div>
 				<div id="menu2-cont" style="display: none;"><ul><li>Button1</li><li>Button2</li><li>Button3</li></ul></div>
+			<div class="showmenu" id="menu3">공지사항3</div>
+				<div id="menu3-cont" style="display: none;"><ul><li>Button1</li><li>Button2</li><li>Button3</li></ul></div>
+			<div class="showmenu" id="menu4">공지사항4</div>
+				<div id="menu4-cont" style="display: none;"><ul><li>Button1</li><li>Button2</li><li>Button3</li></ul></div>
+			<div class="showmenu" id="menu5">공지사항5</div>
+				<div id="menu5-cont" style="display: none;"><ul><li>Button1</li><li>Button2</li><li>Button3</li></ul></div>
+			<div class="showmenu" id="menu6">공지사항6</div>
+				<div id="menu6-cont" style="display: none;"><ul><li>Button1</li><li>Button2</li><li>Button3</li></ul></div>
+			<div class="showmenu" id="menu7">공지사항7</div>
+				<div id="menu7-cont" style="display: none;"><ul><li>Button1</li><li>Button2</li><li>Button3</li></ul></div>
+			<div class="showmenu" id="menu8">공지사항8</div>
+				<div id="menu8-cont" style="display: none;"><ul><li>Button1</li><li>Button2</li><li>Button3</li></ul></div>
+			<div class="showmenu" id="menu9">공지사항9</div>
+				<div id="menu9-cont" style="display: none;"><ul><li>Button1</li><li>Button2</li><li>Button3</li></ul></div>
+			<div class="showmenu" id="menu10">공지사항10</div>
+				<div id="menu10-cont" style="display: none;"><ul><li>Button1</li><li>Button2</li><li>Button3</li></ul></div>
+				
 	 </div>		
 </div>
  <!-- testimonial -->
 <div class="testimonial">
 		<!-- container -->
-		<div class="container">
-		 	<script>
-						// You can also use "$(window).load(function() {"
-						$(function () {
-						  // Slideshow 4
-						  $("#slider2").responsiveSlides({
-							auto: true,
-							pager: true,
-							nav: false,
-							speed: 500,
-							namespace: "callbacks",
-							before: function () {
-							  $('.events').append("<li>before event fired.</li>");
-							},
-							after: function () {
-							  $('.events').append("<li>after event fired.</li>");
-							}
-						  });
-					
-						});
-					</script>
-					<div  id="top" class="callbacks_container">
-						<ul class="rslides" id="slider2">
-							<li>
-								<div class="testimonial-grids">
-									<div class="testimonial-left">
-										<img src="../../images/t1.jpg" alt="" />
-									</div>
-									<div class="testimonial-right">
-										<h5>Mary Wilson</h5>
-										<p><span>"</span> Lorem ipsum dolor sit amet consec tetuer adi piscing elit Praesent vestibulum 
-											molestie lacus consec tetuer piscing voluptatem accusantium doloremque laudantium elerisque ipsum vehicula pharetra elit Praesent vestibulum lacus<span>"</span>
-										</p>
-									</div>
-									<div class="clearfix"> </div>
-								</div>
-							</li>
-							<li>
-								<div class="testimonial-grids">
-									<div class="testimonial-left">
-										<img src="../../images/t3.jpg" alt="" />
-									</div>
-									<div class="testimonial-right">
-										<h5>David Smith</h5>
-										<p><span>"</span> Lorem ipsum dolor sit amet consec tetuer adi piscing elit Praesent vestibulum 
-											molestie lacus consec tetuer piscing voluptatem accusantium doloremque laudantium elerisque ipsum vehicula pharetra elit Praesent vestibulum lacus<span>"</span>
-										</p>
-									</div>
-									<div class="clearfix"> </div>
-								</div>
-							</li>
-							<li>
-								<div class="testimonial-grids">
-									<div class="testimonial-left">
-										<img src="../../images/t2.jpg" alt="" />
-									</div>
-									<div class="testimonial-right">
-										<h5>Lora  Alance</h5>
-										<p><span>"</span> Lorem ipsum dolor sit amet consec tetuer adi piscing elit Praesent vestibulum 
-											molestie lacus consec tetuer piscing voluptatem accusantium doloremque laudantium elerisque ipsum vehicula pharetra elit Praesent vestibulum lacus<span>"</span>
-										</p>
-									</div>
-									<div class="clearfix"> </div>
-								</div>
-							</li>
-						</ul>
-				</div>
-		</div>
+	<div class="service-info">
+		<h3>what is it?</h3>
+	</div>
+		
  </div>
 
 <!-- projects -->
@@ -350,7 +301,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 					 <p>03/2015</p>
 				 </div>
 				 <div class="event-grid_pic">
-					 <img src="../../images/pc.jpg" alt=""/>
+					 <img src="images/pc.jpg" alt=""/>
 					 <h3><a href="#">Morbi pellentesque urna scelerisque justo rutrum.</a></h3>
 					 <p>Nullam placerat aliquet nisl id finibus. Nulla mollis mattis magna in hendrerit. Pellentesque nunc nisl, dapibus eget erat non,
 					 sagittis accumsan dolor.</p>
@@ -362,7 +313,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 					 <p>02/2015</p>
 				 </div>
 				 <div class="event-grid_pic">
-					 <img src="../../images/pc1.jpg" alt=""/>
+					 <img src="images/pc1.jpg" alt=""/>
 					 <h3><a href="#">Morbi pellentesque urna scelerisque justo rutrum.</a></h3>
 					 <p>Nullam placerat aliquet nisl id finibus. Nulla mollis mattis magna in hendrerit. Pellentesque nunc nisl, dapibus eget erat non,
 					 sagittis accumsan dolor.</p>
@@ -374,7 +325,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 					 <p>04/2015</p>
 				 </div>
 				 <div class="event-grid_pic">
-					 <img src="../../images/pc2.jpg" alt=""/>
+					 <img src="images/pc2.jpg" alt=""/>
 					 <h3><a href="#">Morbi pellentesque urna scelerisque justo rutrum.</a></h3>
 					 <p>Nullam placerat aliquet nisl id finibus. Nulla mollis mattis magna in hendrerit. Pellentesque nunc nisl, dapibus eget erat non,
 					 sagittis accumsan dolor.</p>
