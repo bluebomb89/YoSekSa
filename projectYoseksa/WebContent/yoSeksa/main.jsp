@@ -19,8 +19,6 @@
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 
 <!--/script-->
-
-
 <!--script-->
 
 </head>
