@@ -11,18 +11,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <head>
 <title>Flooring a Interior category Flat Bootstarp Responsive
 	Website Template | Home :: w3layouts</title>
-<link href="../../css/bootstrap.css" type="text/css" rel="stylesheet"
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet"
 	media="all">
-<link href="../../css/component.css" rel="stylesheet" type="text/css" />
+<link href="css/component.css" rel="stylesheet" type="text/css" />
 <!-- jQuery (necessary JavaScript plugins) -->
 <!-- Custom Theme files -->
 <!-- <link href="css/style.css" type="text/css" rel="stylesheet" media="all"> -->
-<link href="../../css/style3.css" type="text/css" rel="stylesheet"
+<link href="css/style3.css" type="text/css" rel="stylesheet"
 	media="all">
-<link href="../../css/bootstrapTheme.css" rel="stylesheet">
-<link href="../../css/custom.css" rel="stylesheet">
-<link href="../../css/owl.carousel.css" rel="stylesheet">
-<link href="../../cssl/owl.theme.css" rel="stylesheet">
+<link href="css/bootstrapTheme.css" rel="stylesheet">
+<link href="css/custom.css" rel="stylesheet">
+<link href="css/owl.carousel.css" rel="stylesheet">
+<link href="cssl/owl.theme.css" rel="stylesheet">
 <!-- Custom Theme files -->
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,18 +42,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 </script>
 <!-- //footer -->
-<script type="text/javascript" src="../../js/saved_resource"></script>
-<script type="text/javascript" src="../../js/jquery.min.js"></script>
-<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
-<script src="../../js/modernizr.custom.js"></script>
-<script src="../../js/jquery-1.11.1.min.js"></script>
-<script src="../../js/responsiveslides.min.js"></script>
-<script type="text/javascript" src="../../js/jquery.cycle.all.js"></script>
-<script src="../../js/owl.carousel.js"></script>
-<script src="../../js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="js/saved_resource"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/responsiveslides.min.js"></script>
+<script type="text/javascript" src="js/jquery.cycle.all.js"></script>
+<script src="js/owl.carousel.js"></script>
+<script src="js/owl.carousel.min.js"></script>
 <!--/animated-css-->
-<script type="text/javascript" src="../../js/move-top.js"></script>
-<script type="text/javascript" src="../../js/easing.js"></script>
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
 <!--/script-->
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
@@ -168,7 +168,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 			<div class="row" style="margin-top: 20px;">
 				<div class="col-sm-3 col-md-3.5">
 					<div class="thumbnail" style="margin-bottom: 10px;">
-						<img src="../../images/g1.jpg" alt="">
+						<img src="images/g1.jpg" alt="">
 						<div class="caption">
 							<h3>Thumbnail label</h3>
 							aaaaaaaaaaaaaaaaaaaaaaaa<br> bbbbbbbbbbbbbbbbbbbbbbbb<br>
@@ -180,7 +180,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 				</div>
 				<div class="col-sm-3 col-md-3.5">
 					<div class="thumbnail" style="margin-bottom: 10px;">
-						<img src="../../images/g1.jpg" alt="">
+						<img src="images/g1.jpg" alt="">
 						<div class="caption">
 							<h3>Thumbnail label</h3>
 							aaaaaaaaaaaaaaaaaaaaaaaa<br> bbbbbbbbbbbbbbbbbbbbbbbb<br>
@@ -192,7 +192,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 				</div>
 				<div class="col-sm-3 col-md-3.5">
 					<div class="thumbnail" style="margin-bottom: 10px;">
-						<img src="../../images/g1.jpg" alt="">
+						<img src="images/g1.jpg" alt="">
 						<div class="caption">
 							<h3>Thumbnail label</h3>
 							aaaaaaaaaaaaaaaaaaaaaaaa<br> bbbbbbbbbbbbbbbbbbbbbbbb<br>
@@ -204,7 +204,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 				</div>
 				<div class="col-sm-3 col-md-3.5">
 					<div class="thumbnail" style="margin-bottom: 10px;">
-						<img src="../../images/g1.jpg" alt="">
+						<img src="images/g1.jpg" alt="">
 						<div class="caption">
 							<h3>Thumbnail label</h3>
 							aaaaaaaaaaaaaaaaaaaaaaaa<br> bbbbbbbbbbbbbbbbbbbbbbbb<br>
@@ -216,7 +216,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 				</div>
 				<div class="col-sm-3 col-md-3.5">
 					<div class="thumbnail" style="margin-bottom: 10px;">
-						<img src="../../images/g1.jpg" alt="">
+						<img src="images/g1.jpg" alt="">
 						<div class="caption">
 							<h3>Thumbnail label</h3>
 							aaaaaaaaaaaaaaaaaaaaaaaa<br> bbbbbbbbbbbbbbbbbbbbbbbb<br>
@@ -228,7 +228,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 				</div>
 				<div class="col-sm-3 col-md-3.5">
 					<div class="thumbnail" style="margin-bottom: 10px;">
-						<img src="../../images/g1.jpg" alt="">
+						<img src="images/g1.jpg" alt="">
 						<div class="caption">
 							<h3>Thumbnail label</h3>
 							aaaaaaaaaaaaaaaaaaaaaaaa<br> bbbbbbbbbbbbbbbbbbbbbbbb<br>
@@ -240,7 +240,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 				</div>
 				<div class="col-sm-3 col-md-3.5">
 					<div class="thumbnail" style="margin-bottom: 10px;">
-						<img src="../../images/g1.jpg" alt="">
+						<img src="images/g1.jpg" alt="">
 						<div class="caption">
 							<h3>Thumbnail label</h3>
 							aaaaaaaaaaaaaaaaaaaaaaaa<br> bbbbbbbbbbbbbbbbbbbbbbbb<br>
@@ -252,7 +252,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 				</div>
 				<div class="col-sm-3 col-md-3.5">
 					<div class="thumbnail" style="margin-bottom: 10px;">
-						<img src="../../images/g1.jpg" alt="">
+						<img src="images/g1.jpg" alt="">
 						<div class="caption">
 							<h3>Thumbnail label</h3>
 							aaaaaaaaaaaaaaaaaaaaaaaa<br> bbbbbbbbbbbbbbbbbbbbbbbb<br>
@@ -264,7 +264,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 				</div>
 				<div class="col-sm-3 col-md-3.5">
 					<div class="thumbnail" style="margin-bottom: 10px;">
-						<img src="../../images/g1.jpg" alt="">
+						<img src="images/g1.jpg" alt="">
 						<div class="caption">
 							<h3>Thumbnail label</h3>
 							aaaaaaaaaaaaaaaaaaaaaaaa<br> bbbbbbbbbbbbbbbbbbbbbbbb<br>
@@ -296,6 +296,6 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 			<!-- Bootstrap core JavaScript
     ================================================== -->
 			<!-- Placed at the end of the document so the pages load faster -->
-			<script src="../../js/bootstrap.js"></script>
+			<script src="js/bootstrap.js"></script>
 </body>
 </html>
