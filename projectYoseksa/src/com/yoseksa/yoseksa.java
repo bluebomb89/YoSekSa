@@ -2,7 +2,7 @@ package com.yoseksa;
 
 public class yoseksa {
 	private static String[] jsp={
-			"function/main/index.jsp",
+			"index.jsp",
 			"function/calander/typo.html",//Ä¶¸°´õ
 			"function/freeboard/list.jsp",//ÇÁ¸®º¸µå
 			"function/member/indexggong.jsp",//¸â¹ö
