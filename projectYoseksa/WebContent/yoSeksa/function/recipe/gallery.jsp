@@ -34,7 +34,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	
 	
 	
+	
 	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+
 
 
 
@@ -228,25 +230,14 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 				</div>
 				<!-- /.col-lg-6 -->
 				<button type="button" class="btn btn-default"
-					aria-label="Left Align">
-					<span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+					aria-label="Left Align" style="margin-left: 705px;">
+					<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
 				</button>
 			</div>
 			<!-- /.row -->
 
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
 
-			<div class="row">
+			<div class="row" style="margin-top: 20px;">
 				<div class="col-sm-3 col-md-3.5">
 					<div class="thumbnail">
 						<img src="../../images/g1.jpg" alt="">
