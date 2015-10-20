@@ -1,47 +1,46 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" import="java.util.*"%>
 <!DOCTYPE HTML>
 <html>
 <head>
 <title>Flooring a Interior category Flat Bootstarp Responsive Website Template | Home :: w3layouts</title>
-<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
-<link href="css/component.css" rel="stylesheet" type="text/css"  />
+<link href="../../css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="../../css/component.css" rel="stylesheet" type="text/css"  />
 <!-- jQuery (necessary JavaScript plugins) -->
 <!-- Custom Theme files -->
-<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
-<link href="css/bootstrapTheme.css" rel="stylesheet">
-<link href="css/style1.css" type="text/css" rel="stylesheet" media="all">
-<link href="css/custom.css" rel="stylesheet">
-<link href="css/owl.carousel.css" rel="stylesheet">
-<link href="css/owl.theme.css" rel="stylesheet">
+<link href="../../css/style.css" type="text/css" rel="stylesheet" media="all">
+<link href="../../css/bootstrapTheme.css" rel="stylesheet">
+<link href="../../css/style1.css" type="text/css" rel="stylesheet" media="all">
+<link href="../../css/custom.css" rel="stylesheet">
+<link href="../../css/owl.carousel.css" rel="stylesheet">
+<link href="../../css/owl.theme.css" rel="stylesheet">
 <!-- Custom Theme files -->
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Flooring Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //footer -->
 
-<script type="text/javascript" src="js/saved_resource"></script>
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script src="js/modernizr.custom.js"></script>
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/responsiveslides.min.js"></script>
-<script type="text/javascript" src="js/jquery.cycle.all.js"></script>
-<script src="js/owl.carousel.js"></script>
-<script src="js/owl.carousel.min.js"></script>
+<script src="../../js/saved_resource"></script>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/modernizr.custom.js"></script>
+<script src="../../js/jquery-1.11.1.min.js"></script>
+<script src="../../js/responsiveslides.min.js"></script>
+<script src="../../js/jquery.cycle.all.js"></script>
+<script src="../../js/owl.carousel.js"></script>
+<script src="../../js/owl.carousel.min.js"></script>
 <!--/animated-css-->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
-<script src="js/bootstrap.js"></script> 
+<script src="../../js/move-top.js"></script>
+<script src="../../js/easing.js"></script>
+<script src="../../js/bootstrap.js"></script> 
 <!--/script-->
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
 		$(".scroll").click(function(event){		
 			event.preventDefault();
-			$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},950);
 		});
 	    $('.slideshow').cycle({
 			fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
@@ -88,11 +87,11 @@ $(document).ready(function() {
 			offset: {top: $('header').height()-$('#nav').height()}
 		});
 		
-		/* affix-top ø°º≠ affix∑Œ ºˆ¡§µ…¥Î ¿Ã∫•∆Æ πﬂª˝*/
+		/* affix-top ÏóêÏÑú affixÎ°ú ÏàòÏ†ïÎê†ÎåÄ Ïù¥Î≤§Ìä∏ Î∞úÏÉù*/
 		$('#nav').on("affix.bs.affix",function(){
 			$("#startmain").text("haa!");
 		});
-		/* affixø°º≠ affix-top¿∏∑Œ ¿¸»Øµ…∂ß ¿Ã∫•∆Æ πﬂª˝*/
+		/* affixÏóêÏÑú affix-topÏúºÎ°ú Ï†ÑÌôòÎê†Îïå Ïù¥Î≤§Ìä∏ Î∞úÏÉù*/
 		$('#nav').on("affix-top.bs.affix",function(){
 			$("#startmain").text("Search");
 		});
@@ -115,77 +114,10 @@ $(document).ready(function() {
 </head>
 <body  class="cbp-spmenu-push">
 		<!--bottom-->
-		  <section class="button">
-					<button id="showLeftPush"><img src="images/menu-icon.png" alt=""></button>
-		   </section>
-			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
-			<h3>Menu</h3>
-			<!-- øﬁ¬ ªÛ¥‹ø° ¿÷¥¬ πˆ∆∞¿ª ≈¨∏Ø«ﬂ¿ª∂ß ≥™ø¿¥¬ ∏µ≈©orº”º∫∞™¿ª ¡ˆ¡§«œ¥¬∞˜ -->
-		  </nav>
 		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
-		<script src="js/classie.js"></script>
-		<script>
-			var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
-				showLeftPush = document.getElementById( 'showLeftPush' ),
-				showRightPush = document.getElementById( 'showRightPush' ),
-				body = document.body;
-
-			showLeftPush.onclick = function() {
-				classie.toggle( this, 'active' );
-				classie.toggle( body, 'cbp-spmenu-push-toright' );
-				classie.toggle( menuLeft, 'cbp-spmenu-open' );
-				disableOther( 'showLeftPush' );
-			};
-
-			function disableOther( button ) {
-				if( button !== 'showLeftPush' ) {
-					classie.toggle( showLeftPush, 'disabled' );
-				}
-				if( button !== 'showRightPush' ) {
-					classie.toggle( showRightPush, 'disabled' );
-				}
-			}
-		</script>
-<!-- ∏ﬁ¿Œ»≠∏È -->
-<header class="masthead">
-			<div class="bannersearch"></div>
-</header>
-<!-- ≈∏¿Ã∆≤ ∏ﬁ¥∫πŸ -->
-<div class="navbar navbar-inverse navbar-static-top affix-top" id="nav">
-		<div class="container">
-			<nav class="navbar navbar-default">
-				<div class="container-fluid">
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-						<ul class="nav navbar-nav navbar-right">
-							<li class="active"><a href="index.html">Home</a></li>
-							<li><a class="scroll" id=startmain href="#section1">Search</a></li>
-							<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li><a href="about.html">about1</a></li>
-									<li><a href="about.html">about2</a></li>
-									<li><a href="about.html">about3</a></li>           
-								</ul>
-							</li>
-							<li><a class="scroll" href="#services">Services</a></li>
-							<li><a href="typo.html">News</a></li>
-							<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li><a href="gallery.html">gallery1</a></li>
-									<li><a href="gallery.html">gallery2</a></li>
-									<li><a href="gallery.html">gallery3</a></li>           
-								</ul>
-							</li>
-							<li><a href="contact.html">Mail</a></li>
-						</ul>         
-					</div><!-- /.navbar-collapse -->
-				</div><!-- /.container-fluid -->
-			</nav>	
-		</div>
-	</div>
-
+		<script src="../../js/classie.js"></script>
 <!---->
-<!--  style.cssæ»ø° ¿ÃπÃ¡ˆ √ﬂ∞°«ÿº≠ div class¿Ã∏ßø° ≥÷æÓ∂Û. ¿ÃπÃ¡ˆ¥¬ ¿¸√º¿˚¿∏∑Œ style.cssæ»ø°. 
+<!--  style.cssÏïàÏóê Ïù¥ÎØ∏ÏßÄ Ï∂îÍ∞ÄÌï¥ÏÑú div classÏù¥Î¶ÑÏóê ÎÑ£Ïñ¥Îùº. Ïù¥ÎØ∏ÏßÄÎäî Ï†ÑÏ≤¥Ï†ÅÏúºÎ°ú style.cssÏïàÏóê. 
 	  
 .bannersearch{
 	background:url(../images/bannersearch.jpg) no-repeat 0px 0px;
@@ -193,10 +125,13 @@ $(document).ready(function() {
 	min-height:895px;
 }
 
-cssæ»ø° ¿ÃπÃ¡ˆ ¿Ã∑±Ωƒ¿∏∑Œ √ﬂ∞°«œ∞Ì divæ»ø° ≈¨∑°Ω∫∏Ì ≥÷æÓ¡÷∏È µ»¥Ÿ.
+cssÏïàÏóê Ïù¥ÎØ∏ÏßÄ Ïù¥Îü∞ÏãùÏúºÎ°ú Ï∂îÍ∞ÄÌïòÍ≥† divÏïàÏóê ÌÅ¥ÎûòÏä§Î™Ö ÎÑ£Ïñ¥Ï£ºÎ©¥ ÎêúÎã§.
 -->
-
-<!-- º≠∫ÒΩ∫¥≠∑∂¿ª∂ß ∞Àªˆ»≠∏È¿Ãµø -->
+<!-- Î©îÏù∏ÌôîÎ©¥ -->
+<header class="masthead">
+	<div class="bannersearch"></div>
+</header>
+<!-- ÏÑúÎπÑÏä§ÎàåÎ†ÄÏùÑÎïå Í≤ÄÏÉâÌôîÎ©¥Ïù¥Îèô -->
 		<div id="section1" class="slider" style="margin-bottom: 14px;">
 			<div class="callbacks_container" style="padding-left: 15px; padding-right: 15px;">
 			  <ul class="rslides" id="slider">
@@ -316,36 +251,17 @@ cssæ»ø° ¿ÃπÃ¡ˆ ¿Ã∑±Ωƒ¿∏∑Œ √ﬂ∞°«œ∞Ì divæ»ø° ≈¨∑°Ω∫∏Ì ≥÷æÓ¡÷∏È µ»¥Ÿ.
 			</div>
 		</div>
 <!-- services -->
-<div id="services" class="services" style="padding-top: 51px">
+<div id="services"  style="padding-top: 51px">
 	 <div class="container">
 			<div class="service-info">
-				<h3>Services</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel risus non mauris volutpat pellentesque. Sed rhoncus, arcu nec euismod ultrices tellus nulla varius tellus ac blandit nunc ex vel felis pellentesque imperdiet imperdiet nibh</p>
+				<h3>Notice</h3>
 			</div>
-			<div class="specialty-grids-top">
-				<div class="col-md-4 service-box" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-					<figure class="icon">
-						<span class="glyphicon3 glyphicon-home" aria-hidden="true"></span>
-					</figure>
-					<h5>Proin eget ipsum ultrices</h5>
-					<p>Sed ut perspiciis iste natus error sit voluptatem accusantium doloremque laudantium elerisque ipsum vehicula pharetra laoreet.</p>
-				</div>
-				<div class="col-md-4 service-box wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-					<figure class="icon">
-						<span class="glyphicon3 glyphicon-time" aria-hidden="true"></span>
-					</figure>
-					<h5>Proin eget ipsum ultrices</h5>
-					<p>Sed ut perspiciis iste natus error sit voluptatem accusantium doloremque laudantium elerisque ipsum vehicula pharetra laoreet.</p>
-				</div>
-				<div class="col-md-4 service-box wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-					<figure class="icon">
-						<span class="glyphicon3 glyphicon-edit" aria-hidden="true"></span>
-					</figure>
-					<h5>Proin eget ipsum ultrices</h5>
-					<p>Sed ut perspiciis iste natus error sit voluptatem accusantium doloremque laudantium elerisque ipsum vehicula pharetra laoreet.</p>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
+			<div class="showmenu" id="menu">Click Here</div>
+				<div id="menu-cont" style="display: none;"><ul><li>Button1</li><li>Button2</li><li>Button3</li></ul></div>
+			<div class="showmenu" id="menu1">Click Here</div>
+				<div id="menu1-cont" style="display: none;"><ul><li>Button1</li><li>Button2</li><li>Button3</li></ul></div>
+			<div class="showmenu" id="menu2">Click Here</div>
+				<div id="menu2-cont" style="display: none;"><ul><li>Button1</li><li>Button2</li><li>Button3</li></ul></div>
 	 </div>		
 </div>
  <!-- testimonial -->
@@ -377,7 +293,7 @@ cssæ»ø° ¿ÃπÃ¡ˆ ¿Ã∑±Ωƒ¿∏∑Œ √ﬂ∞°«œ∞Ì divæ»ø° ≈¨∑°Ω∫∏Ì ≥÷æÓ¡÷∏È µ»¥Ÿ.
 							<li>
 								<div class="testimonial-grids">
 									<div class="testimonial-left">
-										<img src="images/t1.jpg" alt="" />
+										<img src="../../images/t1.jpg" alt="" />
 									</div>
 									<div class="testimonial-right">
 										<h5>Mary Wilson</h5>
@@ -391,7 +307,7 @@ cssæ»ø° ¿ÃπÃ¡ˆ ¿Ã∑±Ωƒ¿∏∑Œ √ﬂ∞°«œ∞Ì divæ»ø° ≈¨∑°Ω∫∏Ì ≥÷æÓ¡÷∏È µ»¥Ÿ.
 							<li>
 								<div class="testimonial-grids">
 									<div class="testimonial-left">
-										<img src="images/t3.jpg" alt="" />
+										<img src="../../images/t3.jpg" alt="" />
 									</div>
 									<div class="testimonial-right">
 										<h5>David Smith</h5>
@@ -405,7 +321,7 @@ cssæ»ø° ¿ÃπÃ¡ˆ ¿Ã∑±Ωƒ¿∏∑Œ √ﬂ∞°«œ∞Ì divæ»ø° ≈¨∑°Ω∫∏Ì ≥÷æÓ¡÷∏È µ»¥Ÿ.
 							<li>
 								<div class="testimonial-grids">
 									<div class="testimonial-left">
-										<img src="images/t2.jpg" alt="" />
+										<img src="../../images/t2.jpg" alt="" />
 									</div>
 									<div class="testimonial-right">
 										<h5>Lora  Alance</h5>
@@ -434,7 +350,7 @@ cssæ»ø° ¿ÃπÃ¡ˆ ¿Ã∑±Ωƒ¿∏∑Œ √ﬂ∞°«œ∞Ì divæ»ø° ≈¨∑°Ω∫∏Ì ≥÷æÓ¡÷∏È µ»¥Ÿ.
 					 <p>03/2015</p>
 				 </div>
 				 <div class="event-grid_pic">
-					 <img src="images/pc.jpg" alt=""/>
+					 <img src="../../images/pc.jpg" alt=""/>
 					 <h3><a href="#">Morbi pellentesque urna scelerisque justo rutrum.</a></h3>
 					 <p>Nullam placerat aliquet nisl id finibus. Nulla mollis mattis magna in hendrerit. Pellentesque nunc nisl, dapibus eget erat non,
 					 sagittis accumsan dolor.</p>
@@ -446,7 +362,7 @@ cssæ»ø° ¿ÃπÃ¡ˆ ¿Ã∑±Ωƒ¿∏∑Œ √ﬂ∞°«œ∞Ì divæ»ø° ≈¨∑°Ω∫∏Ì ≥÷æÓ¡÷∏È µ»¥Ÿ.
 					 <p>02/2015</p>
 				 </div>
 				 <div class="event-grid_pic">
-					 <img src="images/pc1.jpg" alt=""/>
+					 <img src="../../images/pc1.jpg" alt=""/>
 					 <h3><a href="#">Morbi pellentesque urna scelerisque justo rutrum.</a></h3>
 					 <p>Nullam placerat aliquet nisl id finibus. Nulla mollis mattis magna in hendrerit. Pellentesque nunc nisl, dapibus eget erat non,
 					 sagittis accumsan dolor.</p>
@@ -458,7 +374,7 @@ cssæ»ø° ¿ÃπÃ¡ˆ ¿Ã∑±Ωƒ¿∏∑Œ √ﬂ∞°«œ∞Ì divæ»ø° ≈¨∑°Ω∫∏Ì ≥÷æÓ¡÷∏È µ»¥Ÿ.
 					 <p>04/2015</p>
 				 </div>
 				 <div class="event-grid_pic">
-					 <img src="images/pc2.jpg" alt=""/>
+					 <img src="../../images/pc2.jpg" alt=""/>
 					 <h3><a href="#">Morbi pellentesque urna scelerisque justo rutrum.</a></h3>
 					 <p>Nullam placerat aliquet nisl id finibus. Nulla mollis mattis magna in hendrerit. Pellentesque nunc nisl, dapibus eget erat non,
 					 sagittis accumsan dolor.</p>
@@ -501,19 +417,21 @@ cssæ»ø° ¿ÃπÃ¡ˆ ¿Ã∑±Ωƒ¿∏∑Œ √ﬂ∞°«œ∞Ì divæ»ø° ≈¨∑°Ω∫∏Ì ≥÷æÓ¡÷∏È µ»¥Ÿ.
 </div>
 <!---->
 <script type="text/javascript">
-		$(document).ready(function() {
-				/*
-				var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-				};
-				*/
-		$().UItoTop({ easingType: 'easeOutQuart' });
+
+$(document).ready(function() {
+	var id;
+	$('.showmenu').mouseover(function() {
+		id = $(this).attr('id');
+		return(id);
+		});
+	$('.showmenu').click(function() {
+		var a= id+"-cont";
+		$('#'+a).slideToggle("fast");
+		});
 });
 </script>
-<a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+<!-- ÏûêÎ∞î Ïä§ÌÅ¨Î¶ΩÌä∏ Ìò∏Ï∂ú-->
 <!----> 
 <!-- Bootstrap core JavaScript
     ================================================== -->
