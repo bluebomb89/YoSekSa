@@ -182,3 +182,6 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
     transition: border linear .2s, box-shadow linear .2s;
 
 }
+.write_pic2{
+	background-color: #DFE6E4;
+}
