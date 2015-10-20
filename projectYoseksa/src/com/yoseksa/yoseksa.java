@@ -3,7 +3,7 @@ package com.yoseksa;
 public class yoseksa {
 	private static String[] jsp={
 			"index.jsp",
-			"../calander/typo.html",//Ä¶¸°´õ
+			"../calender/typo.html",//Ä¶¸°´õ
 			"../freeboard/list.jsp",//ÇÁ¸®º¸µå
 			"../member/indexggong.jsp",//¸â¹ö
 			"../recipe/gallery.jsp",//·¹½ÃÇÇ
