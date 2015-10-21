@@ -7,29 +7,41 @@
 <title></title>
 </head>
 <style type="text/css">
-.noticemenu{
-display: inline;
-float: left;
+.showmenu{
+width: 80%;
+padding-top: 10px;
+margin: 0 auto;
+border-bottom: 1px solid #eaeaea;
 }
 .noticea{
 	list-style-type: none;
 }
 .noticesub{
 display: inline;
-width: 70%;
+width: 50%;
 float: left;
+text-align: left;
 }
 .noticehire{
 display: inline;
-width: 15%;
+width: 25%;
 float: left;
+text-align: center;
 }
 .noticeday{
 display: inline;
 width: 15%;
+text-align: center;
 }
+
 div ul li{
 	list-style-type: none;
+}
+#serviceyo{
+border-bottom: 2px solid #757575;
+padding-bottom: 5px;
+width: 80%;
+margin: 0 auto;
 }
 </style>
 <script type="text/javascript">
@@ -47,7 +59,7 @@ $(document).ready(function() {
 </script>
 <body>
 		 <div class="container">
-			<div class="service-info">
+			<div class="service-info" id="serviceyo">
 				<h3>Notice</h3>
 			</div>
 			<div class="showmenu" id="menu1">
