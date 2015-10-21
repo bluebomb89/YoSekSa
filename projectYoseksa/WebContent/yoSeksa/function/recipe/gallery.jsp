@@ -140,7 +140,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어주면 된다.
 -->
-	<div class="container" style="margin-top: 60px;">
+	<div class="container" style="margin-top: 60px; margin-left: 30px;">
 		<div class="row" style="margin-bottom: 0px; margin-left: 0px;">
 			<h3>My Recipe</h3>
 		</div>
@@ -158,7 +158,11 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 				</div>
 				<!-- /.col-lg-6 -->
 				<button type="button" class="btn btn-default"
-					aria-label="Left Align" style="margin-left: 705px;">
+					aria-label="Left Align" style="margin-left: 650px;">
+					<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+				</button>
+				<button type="button" class="btn btn-default"
+					aria-label="Left Align" style="margin-left: 10px;">
 					<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
 				</button>
 			</div>
@@ -167,7 +171,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 
 			<div class="row" style="margin-top: 20px;">
 				<div class="col-sm-3 col-md-3.5">
-					<div class="thumbnail">
+					<div class="thumbnail" style="margin-bottom: 5px;">
 						<img src="../../images/g1.jpg" alt="">
 						<div class="caption">
 							<h3>Thumbnail label</h3>
@@ -176,9 +180,11 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 								href="#" class="btn btn-default" role="button">Plan</a>
 						</div>
 					</div>
+					<div class="list_check" align=center><input type="checkbox" id="selRecipe_thumb_6836049" value="3770820"
+					 style="margin-bottom: 10px;"></div>
 				</div>
 				<div class="col-sm-3 col-md-3.5">
-					<div class="thumbnail">
+					<div class="thumbnail" style="margin-bottom: 5px;">
 						<img src="../../images/g1.jpg" alt="">
 						<div class="caption">
 							<h3>Thumbnail label</h3>
@@ -187,9 +193,11 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 								href="#" class="btn btn-default" role="button">Plan</a>
 						</div>
 					</div>
+					<div class="list_check" align=center><input type="checkbox" id="selRecipe_thumb_6836049" value="3770820"
+					 style="margin-bottom: 10px;"></div>
 				</div>
 				<div class="col-sm-3 col-md-3.5">
-					<div class="thumbnail">
+					<div class="thumbnail" style="margin-bottom: 5px;">
 						<img src="../../images/g1.jpg" alt="">
 						<div class="caption">
 							<h3>Thumbnail label</h3>
@@ -198,9 +206,11 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 								href="#" class="btn btn-default" role="button">Plan</a>
 						</div>
 					</div>
+					<div class="list_check" align=center><input type="checkbox" id="selRecipe_thumb_6836049" value="3770820"
+					 style="margin-bottom: 10px;"></div>
 				</div>
 				<div class="col-sm-3 col-md-3.5">
-					<div class="thumbnail">
+					<div class="thumbnail" style="margin-bottom: 5px;">
 						<img src="../../images/g1.jpg" alt="">
 						<div class="caption">
 							<h3>Thumbnail label</h3>
@@ -209,9 +219,11 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 								href="#" class="btn btn-default" role="button">Plan</a>
 						</div>
 					</div>
+					<div class="list_check" align=center><input type="checkbox" id="selRecipe_thumb_6836049" value="3770820"
+					 style="margin-bottom: 10px;"></div>
 				</div>
 				<div class="col-sm-3 col-md-3.5">
-					<div class="thumbnail">
+					<div class="thumbnail" style="margin-bottom: 5px;">
 						<img src="../../images/g1.jpg" alt="">
 						<div class="caption">
 							<h3>Thumbnail label</h3>
@@ -220,9 +232,11 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 								href="#" class="btn btn-default" role="button">Plan</a>
 						</div>
 					</div>
+					<div class="list_check" align=center><input type="checkbox" id="selRecipe_thumb_6836049" value="3770820"
+					 style="margin-bottom: 10px;"></div>
 				</div>
 				<div class="col-sm-3 col-md-3.5">
-					<div class="thumbnail">
+					<div class="thumbnail" style="margin-bottom: 5px;">
 						<img src="../../images/g1.jpg" alt="">
 						<div class="caption">
 							<h3>Thumbnail label</h3>
@@ -231,9 +245,11 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 								href="#" class="btn btn-default" role="button">Plan</a>
 						</div>
 					</div>
+					<div class="list_check" align=center><input type="checkbox" id="selRecipe_thumb_6836049" value="3770820"
+					 style="margin-bottom: 10px;"></div>
 				</div>
 				<div class="col-sm-3 col-md-3.5">
-					<div class="thumbnail">
+					<div class="thumbnail" style="margin-bottom: 5px;">
 						<img src="../../images/g1.jpg" alt="">
 						<div class="caption">
 							<h3>Thumbnail label</h3>
@@ -242,9 +258,11 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 								href="#" class="btn btn-default" role="button">Plan</a>
 						</div>
 					</div>
+					<div class="list_check" align=center><input type="checkbox" id="selRecipe_thumb_6836049" value="3770820"
+					 style="margin-bottom: 10px;"></div>
 				</div>
 				<div class="col-sm-3 col-md-3.5">
-					<div class="thumbnail">
+					<div class="thumbnail" style="margin-bottom: 5px;">
 						<img src="../../images/g1.jpg" alt="">
 						<div class="caption">
 							<h3>Thumbnail label</h3>
@@ -253,9 +271,11 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 								href="#" class="btn btn-default" role="button">Plan</a>
 						</div>
 					</div>
+					<div class="list_check" align=center><input type="checkbox" id="selRecipe_thumb_6836049" value="3770820"
+					 style="margin-bottom: 10px;"></div>
 				</div>
 				<div class="col-sm-3 col-md-3.5">
-					<div class="thumbnail">
+					<div class="thumbnail" style="margin-bottom: 5px;">
 						<img src="../../images/g1.jpg" alt="">
 						<div class="caption">
 							<h3>Thumbnail label</h3>
@@ -264,6 +284,8 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 								href="#" class="btn btn-default" role="button">Plan</a>
 						</div>
 					</div>
+					<div class="list_check" align=center><input type="checkbox" id="selRecipe_thumb_6836049" value="3770820"
+					 style="margin-bottom: 10px;"></div>
 				</div>
 			</div>
 			<nav align=center>

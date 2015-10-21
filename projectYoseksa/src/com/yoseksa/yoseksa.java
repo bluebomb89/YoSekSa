@@ -8,7 +8,9 @@ public class yoseksa {
 			"../member/indexggong.jsp",//멤버
 			"../recipe/gallery.jsp",//레시피
 			"../freeboard/contact.jsp",//자게 글쓰기
-			"../QnA/qna.jsp"//qna질답
+			"../QnA/qna.jsp",//qna질답
+			"../notice/notice.jsp"//공지사항
+
 	};
 	public static String change(int no){
 		return jsp[no];
