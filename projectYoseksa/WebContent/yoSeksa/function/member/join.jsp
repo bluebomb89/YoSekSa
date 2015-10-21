@@ -220,7 +220,7 @@
 
 				<script src="http://www.webnoriter.com/~imsi/store/js/jquery.register_form.js"></script>
 				
-				<form id="regform" name="regfrom">
+				<form id="regform" name="regform">
 					<div class="tbl_frm01 tbl_wrap">
 						<table>
 							<tbody>
