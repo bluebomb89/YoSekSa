@@ -19,6 +19,7 @@
 <link href="../../css/custom.css" rel="stylesheet">
 <link href="../../css/owl.carousel.css" rel="stylesheet">
 <link href="../../css/owl.theme.css" rel="stylesheet">
+<link href="../../css/qna.css" rel="stylesheet">
 <!-- Custom Theme files -->
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -151,6 +152,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </script>
 </head>
 <body>
+
+<div id="qna_label">
+<div class="alert alert-info" role="alert">여러분들이 자주묻는 질문!</div>
+</div>
+
+<div id="qna_title">
+<span class="label label-warning">Q&A</span>
+</div>
+
 
 
 <div id="qna_div">
