@@ -353,11 +353,6 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 <!---->
 
 
-<!-- 자바 스크립트 호출-->
-<!----> 
-<!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
 
 </body>
 </html>
