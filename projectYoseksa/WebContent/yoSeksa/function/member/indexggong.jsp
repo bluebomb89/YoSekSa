@@ -222,7 +222,7 @@ var g5_cookie_domain = "";
         </tr>
         <tr>
             <th scope="row"><label for="reg_mb_password_re">비밀번호 확인<strong class="sound_only">필수</strong></label></th>
-            <td><input type="password" name="mb_password_re" id="reg_mb_password_re" required="" class="frm_input required" minlength="" maxlength="20"></td>
+            <td><input type="password" name="mb_password_re" id="reg_mb_password_re" required="" class="frm_input required" minlength="6" maxlength="20"></td>
         </tr>
         </tbody>
         </table>
@@ -235,6 +235,7 @@ var g5_cookie_domain = "";
        
                 <tr>
             <th scope="row"><label for="reg_mb_nick">닉네임<strong class="sound_only">필수</strong></label></th>
+            
             <td>
                 <span class="frm_info">
                     공백없이 한글,영문,숫자만 입력 가능 (한글2자, 영문4자 이상)<br>
@@ -288,20 +289,21 @@ var g5_cookie_domain = "";
                 다른분들이 나의 정보를 볼 수 있도록 합니다.
             </td>
         </tr>
-         <tr>
+ 	<tr>
             <th scope="row">자동등록방지</th>
-    <td>
-				<script>var g5_captcha_url  = "http://www.webnoriter.com/~imsi/store/plugin/kcaptcha";</script>
+        <td>
+			<script>var g5_captcha_url  = "http://www.webnoriter.com/~imsi/store/plugin/kcaptcha";</script>
 				<script src="http://www.webnoriter.com/~imsi/store/plugin/kcaptcha/kcaptcha.js"></script>
-		<fieldset id="captcha" class="captcha">
-				<legend><label for="captcha_key"></label></legend>
-				<img src="http://www.webnoriter.com/~imsi/store/plugin/kcaptcha/kcaptcha_image.php?t=1445304681965" alt="" id="captcha_img">
-				<button type="button" id="captcha_mp3" style="cursor: pointer;"><span></span>숫자음성듣기</button>
-				<button type="button" id="captcha_reload"><span></span>새로고침</button><input type="text" name="captcha_key" id="captcha_key" required="" class="captcha_box required" size="6" maxlength="6">
-				<span id="captcha_info">자동등록방지 숫자를 순서대로 입력하세요.</span>
-		</fieldset>
-	</td>
-        </tr>
+					<fieldset id="captcha" class="captcha">
+						<legend><label for="captcha_key"></label></legend>
+
+							<img src="http://www.webnoriter.com/~imsi/store/plugin/kcaptcha/kcaptcha_image.php?t=1445386483091" alt="" id="captcha_img">
+								<button type="button" id="captcha_mp3" style="cursor: pointer;"><span></span>숫자음성듣기</button>
+									<button type="button" id="captcha_reload"><span></span>새로고침</button><input type="text" name="captcha_key" id="captcha_key" required="" class="captcha_box required" size="6" maxlength="6">
+										<span id="captcha_info">자동등록방지 숫자를 순서대로 입력하세요.</span>
+					</fieldset>
+		</td>
+    </tr>
         </tbody>
         </table>
     </div>
