@@ -1,5 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="java.util.*"%>
+    pageEncoding="UTF-8" import="java.util.*,com.dao.*,com.yoseksa.*"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%
+	String noticeNo=request.getParameter("ntno");
+	if(noticeNo==null)
+		noticeNo="6";
+	String ntjsp=yoseksa.change(Integer.parseInt(noticeNo));
+%>
+<c:set var="ntpath" value="<%=ntjsp %>"/> 
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -251,90 +259,17 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 			</div>
 		</div>
 <!-- services -->
+<!-- 여기에 공지사항 추가 -->
 <div id="services"  style="padding-top: 51px">
-	 <div class="container">
-			<div class="service-info">
-				<h3>Notice</h3>
-			</div>
-			<div class="showmenu" id="menu">Click Here</div>
-				<div id="menu-cont" style="display: none;"><ul><li>Button1</li><li>Button2</li><li>Button3</li></ul></div>
-			<div class="showmenu" id="menu1">Click Here</div>
-				<div id="menu1-cont" style="display: none;"><ul><li>Button1</li><li>Button2</li><li>Button3</li></ul></div>
-			<div class="showmenu" id="menu2">Click Here</div>
-				<div id="menu2-cont" style="display: none;"><ul><li>Button1</li><li>Button2</li><li>Button3</li></ul></div>
-	 </div>		
+<jsp:include page="${ntpath }"></jsp:include>
 </div>
  <!-- testimonial -->
 <div class="testimonial">
 		<!-- container -->
-		<div class="container">
-		 	<script>
-						// You can also use "$(window).load(function() {"
-						$(function () {
-						  // Slideshow 4
-						  $("#slider2").responsiveSlides({
-							auto: true,
-							pager: true,
-							nav: false,
-							speed: 500,
-							namespace: "callbacks",
-							before: function () {
-							  $('.events').append("<li>before event fired.</li>");
-							},
-							after: function () {
-							  $('.events').append("<li>after event fired.</li>");
-							}
-						  });
-					
-						});
-					</script>
-					<div  id="top" class="callbacks_container">
-						<ul class="rslides" id="slider2">
-							<li>
-								<div class="testimonial-grids">
-									<div class="testimonial-left">
-										<img src="../../images/t1.jpg" alt="" />
-									</div>
-									<div class="testimonial-right">
-										<h5>Mary Wilson</h5>
-										<p><span>"</span> Lorem ipsum dolor sit amet consec tetuer adi piscing elit Praesent vestibulum 
-											molestie lacus consec tetuer piscing voluptatem accusantium doloremque laudantium elerisque ipsum vehicula pharetra elit Praesent vestibulum lacus<span>"</span>
-										</p>
-									</div>
-									<div class="clearfix"> </div>
-								</div>
-							</li>
-							<li>
-								<div class="testimonial-grids">
-									<div class="testimonial-left">
-										<img src="../../images/t3.jpg" alt="" />
-									</div>
-									<div class="testimonial-right">
-										<h5>David Smith</h5>
-										<p><span>"</span> Lorem ipsum dolor sit amet consec tetuer adi piscing elit Praesent vestibulum 
-											molestie lacus consec tetuer piscing voluptatem accusantium doloremque laudantium elerisque ipsum vehicula pharetra elit Praesent vestibulum lacus<span>"</span>
-										</p>
-									</div>
-									<div class="clearfix"> </div>
-								</div>
-							</li>
-							<li>
-								<div class="testimonial-grids">
-									<div class="testimonial-left">
-										<img src="../../images/t2.jpg" alt="" />
-									</div>
-									<div class="testimonial-right">
-										<h5>Lora  Alance</h5>
-										<p><span>"</span> Lorem ipsum dolor sit amet consec tetuer adi piscing elit Praesent vestibulum 
-											molestie lacus consec tetuer piscing voluptatem accusantium doloremque laudantium elerisque ipsum vehicula pharetra elit Praesent vestibulum lacus<span>"</span>
-										</p>
-									</div>
-									<div class="clearfix"> </div>
-								</div>
-							</li>
-						</ul>
-				</div>
-		</div>
+	<div class="service-info">
+		<h3>what is it?</h3>
+	</div>
+		
  </div>
 
 <!-- projects -->
@@ -416,26 +351,8 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 	 </div>
 </div>
 <!---->
-<script type="text/javascript">
 
-$(document).ready(function() {
-	var id;
-	$('.showmenu').mouseover(function() {
-		id = $(this).attr('id');
-		return(id);
-		});
-	$('.showmenu').click(function() {
-		var a= id+"-cont";
-		$('#'+a).slideToggle("fast");
-		});
-});
-</script>
 
-<!-- 자바 스크립트 호출-->
-<!----> 
-<!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
 
 </body>
 </html>

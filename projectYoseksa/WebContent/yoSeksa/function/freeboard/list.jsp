@@ -106,69 +106,8 @@ $(document).ready(function() {
 </head>
 <body  class="cbp-spmenu-push">
 		<!--bottom-->
-		  <section class="button">
-					<button id="showLeftPush"><img src="../../images/menu-icon.png" alt=""></button>
-		   </section>
-			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
-			<h3>Menu</h3>
-			<!-- 왼쪽상단에 있는 버튼을 클릭했을때 나오는 링크or속성값을 지정하는곳 -->
-		  </nav>
-		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
-		<script src="js/classie.js"></script>
-		<script>
-			var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
-				showLeftPush = document.getElementById( 'showLeftPush' ),
-				showRightPush = document.getElementById( 'showRightPush' ),
-				body = document.body;
 
-			showLeftPush.onclick = function() {
-				classie.toggle( this, 'active' );
-				classie.toggle( body, 'cbp-spmenu-push-toright' );
-				classie.toggle( menuLeft, 'cbp-spmenu-open' );
-				disableOther( 'showLeftPush' );
-			};
 
-			function disableOther( button ) {
-				if( button !== 'showLeftPush' ) {
-					classie.toggle( showLeftPush, 'disabled' );
-				}
-				if( button !== 'showRightPush' ) {
-					classie.toggle( showRightPush, 'disabled' );
-				}
-			}
-		</script>
-<div class="navbar navbar-inverse navbar-static-top affix-top" id="nav">
-		<div class="container">
-			<nav class="navbar navbar-default">
-				<div class="container-fluid">
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-						<ul class="nav navbar-nav navbar-right">
-							<li class="active"><a href="index.html">Home</a></li>
-							<li><a class="scroll" href="#section1">Search</a></li>
-							<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li><a href="about.html">about1</a></li>
-									<li><a href="about.html">about2</a></li>
-									<li><a href="about.html">about3</a></li>           
-								</ul>
-							</li>
-							<li><a class="scroll" href="#services">Services</a></li>
-							<li><a href="typo.html">News</a></li>
-							<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li><a href="gallery.html">gallery1</a></li>
-									<li><a href="gallery.html">gallery2</a></li>
-									<li><a href="gallery.html">gallery3</a></li>           
-								</ul>
-							</li>
-							<li><a href="contact.html">Mail</a></li>
-						</ul>         
-					</div><!-- /.navbar-collapse -->
-				</div><!-- /.container-fluid -->
-			</nav>	
-		</div>
-	</div>
 	<!-- 페이지 가운데 -->
 <div class="pages">
 		<div class="container">
@@ -271,20 +210,6 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어주면 된다.
 -->
 
 <!---->
-<script type="text/javascript">
-		$(document).ready(function() {
-				/*
-				var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-				};
-				*/
-		$().UItoTop({ easingType: 'easeOutQuart' });
-});
-</script>
-<a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 <!----> 
 <!-- Bootstrap core JavaScript
     ================================================== -->
