@@ -87,6 +87,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<!-- 여기는 작업하지 마요 -->
 		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
 		<script src="js/classie.js"></script>
+
 	<!-- 페이지 가운데 -->
 	<html lang="ko"><head>
 		

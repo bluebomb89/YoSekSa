@@ -185,3 +185,62 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 .write_pic2{
 	background-color: #DFE6E4;
 }
+#submit_btn{
+	border: 2px solid #F43C60;
+    color: #ffffff;
+}
+.btn-primary {
+    background-color: #F43C60;
+}
+.form-control:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+}
+body{
+	  font-family: ¸¼Àº °íµñ,ÈÞ¸Õ¸ÅÁ÷Ã¼;
+	  font-size: 9pt;
+	  color: black;
+	  background-color: #fff;
+}
+
+#post_wrapper{
+	width: 100%;
+	min-height: 100%;
+	
+}
+#postForm{
+	display: table;
+	margin: 10px auto;
+	border-collapse: collapse;
+}
+#postForm p{
+	display: table-row;
+	padding: 5px;
+	border-bottom: 1px solid #898989;
+}
+#postForm label{
+	display: table-cell;
+	padding-left: 10px;
+	
+}
+#postForm input[type="text"]{
+	border:1px solid,#FF3399;
+	padding: 3px;
+	background-color: #efefef;
+	margin: 5px;
+	width: 150px;
+}
+#postForm span{
+	padding: 5px;
+	margin: 20px;
+	width: 150px;
+}
+#postForm input[type="button"]{
+	background-color: #fff;
+	border: 2px solid #F39;
+	padding: 3px 10px;
+	border-radius:10px;
+	
+}

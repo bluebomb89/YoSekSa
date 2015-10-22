@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!--A Design by W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
@@ -131,7 +131,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- header -->
 
 	<!---->
-	<!--  style.css¾È¿¡ ÀÌ¹ÌÁö Ãß°¡ÇØ¼­ div classÀÌ¸§¿¡ ³Ö¾î¶ó. ÀÌ¹ÌÁö´Â ÀüÃ¼ÀûÀ¸·Î style.css¾È¿¡. 
+	<!--  style.cssì•ˆì— ì´ë¯¸ì§€ ì¶”ê°€í•´ì„œ div classì´ë¦„ì— ë„£ì–´ë¼. ì´ë¯¸ì§€ëŠ” ì „ì²´ì ìœ¼ë¡œ style.cssì•ˆì—. 
 	  
 .bannersearch{
 	background:url(../images/bannersearch.jpg) no-repeat 0px 0px;
@@ -139,7 +139,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	min-height:895px;
 }
 
-css¾È¿¡ ÀÌ¹ÌÁö ÀÌ·±½ÄÀ¸·Î Ãß°¡ÇÏ°í div¾È¿¡ Å¬·¡½º¸í ³Ö¾îÁÖ¸é µÈ´Ù.
+cssì•ˆì— ì´ë¯¸ì§€ ì´ëŸ°ì‹ìœ¼ë¡œ ì¶”ê°€í•˜ê³  divì•ˆì— í´ëž˜ìŠ¤ëª… ë„£ì–´ì£¼ë©´ ëœë‹¤.
 -->
 	<form name="insFrm" id="insFrm" method="post" style="height: 1996px;">
 	<div class="container recipe_regi" style="margin-top: 60px; margin-left: 11px;margin-right: 11px;width: 1240px;padding-left: 0px;padding-right: 0px;">
