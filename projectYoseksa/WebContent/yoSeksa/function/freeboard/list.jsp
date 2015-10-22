@@ -56,14 +56,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			offset: {top: $('header').height()-$('#nav').height()}
 		});
 		
-		/* affix-top 에서 affix로 수정될대 이벤트 발생*/
+		/* affix-top ���� affix濡� �������� �대깽�� 諛���*/
 		$('#nav').on("affix.bs.affix",function(){
 			$("#startmain").text("haa!");
 		});
-		/* affix에서 affix-top으로 전환될때 이벤트 발생*/
+		/* affix���� affix-top�쇰� �������� �대깽�� 諛���*/
 		$('#nav').on("affix-top.bs.affix",function(){
 			$("#startmain").text("Search");
 		});
+		   $('#myModal').on('shown.bs.modal', function () {
+		        $('#myInput').focus()
+		      })
 	});        
 </script>
 <script>
@@ -83,11 +86,46 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body  class="cbp-spmenu-push">
 		<!--bottom-->
-		
-		<!-- 여기는 작업하지 마요 -->
+		            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+               등록
+            </button>
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                 <div class="modal-dialog">
+                   <div class="modal-content" style="width: 531px; left: 5px; height: 650px;">
+                     <div class="modal-header">
+                       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                       <h4 class="modal-title" id="myModalLabel">게시판 글쓰기</h4>
+                     </div>
+                     <div class="modal-body">
+                       <div id="post_wrapper">
+						<form id="postForm" name="post_frm" method=post
+							action="postfind_result.jsp">
+							<textarea name="board_tx" class="form-control" placeholder="내용"
+								style="height: 400px; width: 470px; margin-top: 20px;"></textarea>
+							<div class="write_pic2" style="width: 370px;">
+								<input type="file" name="file" id="file_1"
+									style="display: none;" />
+								<div class="complete_pic">
+									<img src="http://recipe1.ezmember.co.kr/img/pic_none3.gif"
+										alt="파일첨부" width="140" height="40"
+										onclick="document.getElementById('file_1').click();"
+										style="cursor: pointer;" />
+								</div>
+							</div>
+						</form>
+					</div>
+                     </div>
+                     <div class="modal-footer" style="margin-top: 500px;">
+                       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                       <button type="button" class="btn btn-primary">Save changes</button>
+                     </div>
+                   </div>
+                 </div>
+               </div>   
+		<!-- �ш린�� ������吏� 留��� -->
 		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
 		<script src="js/classie.js"></script>
-	<!-- 페이지 가운데 -->
+	<!-- ���댁� 媛��대�� -->
 <div class="pages">
 		<div class="container">
 			 <h2 class="top">FreeBoard</h2> 
@@ -101,9 +139,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="headdings">
 						<table class="table">
 						    <tr>
-				            <td align=left colspan="2">번호1</td>
+				            <td align=left colspan="2">踰���1</td>
 				            <td align="right">
-					              <input type="button" value="댓글">
+					              <input type="button" value="��湲�">
 				            </td>
 			          </tr>
 			          <tr>
@@ -112,24 +150,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				            </td>
 			          </tr>
 			          <tr>
-				            <td width=10% align=left bgcolor="#e2e2e2">닉네임1</td>
+				            <td width=10% align=left bgcolor="#e2e2e2">���ㅼ��1</td>
 				
 				            <td width=70% align=center bgcolor="#d2d2d2" height=70 rowspan="2">
-					           자유게시판 내용 자유게시판 내용 자유게시판 내용 자유게시판 내용
-					           자유게시판 내용 자유게시판 내용 자유게시판 내용 자유게시판 내용
+					           ����寃����� �댁�� ����寃����� �댁�� ����寃����� �댁�� ����寃����� �댁��
+					           ����寃����� �댁�� ����寃����� �댁�� ����寃����� �댁�� ����寃����� �댁��
 					           </td>
 			          </tr>
 			          <tr>
-				            <td width=10% align=left bgcolor="#e2e2e2">작성일</td>
+				            <td width=10% align=left bgcolor="#e2e2e2">���깆��</td>
 			          </tr>
 						</table>
 			</div>
 			<div class="headdings">
 						<table class="table">
 						    <tr>
-				            <td align=left colspan="2">번호2</td>
+				            <td align=left colspan="2">踰���2</td>
 				            <td align="right" >
-					              <input type="button" value="댓글">
+					              <input type="button" value="��湲�">
 				            </td>
 			          </tr>
 			          <tr>
@@ -138,24 +176,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				            </td>
 			          </tr>
 			          <tr>
-				            <td width=10% align=left bgcolor="#e2e2e2">닉네임2</td>
+				            <td width=10% align=left bgcolor="#e2e2e2">���ㅼ��2</td>
 				
 				            <td width=70% align=center bgcolor="#d2d2d2" height=70 rowspan="2">
-					           자유게시판 내용 자유게시판 내용 자유게시판 내용 자유게시판 내용
-					           자유게시판 내용 자유게시판 내용 자유게시판 내용 자유게시판 내용
+					           ����寃����� �댁�� ����寃����� �댁�� ����寃����� �댁�� ����寃����� �댁��
+					           ����寃����� �댁�� ����寃����� �댁�� ����寃����� �댁�� ����寃����� �댁��
 					           </td>
 			          </tr>
 			          <tr>
-				            <td width=10% align=left bgcolor="#e2e2e2">작성일</td>
+				            <td width=10% align=left bgcolor="#e2e2e2">���깆��</td>
 			          </tr>
 						</table>
 			</div>
 			<div class="headdings">
 						<table class="table">
 						    <tr>
-				            <td align=left colspan="2">번호3</td>
+				            <td align=left colspan="2">踰���3</td>
 				            <td align="right" >
-					              <input type="button" value="댓글">
+					              <input type="button" value="��湲�">
 				            </td>
 			          </tr>
 			          <tr>
@@ -164,20 +202,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				            </td>
 			          </tr>
 			          <tr>
-				            <td width=10% align=left bgcolor="#e2e2e2">닉네임3</td>
+				            <td width=10% align=left bgcolor="#e2e2e2">���ㅼ��3</td>
 				
 				            <td width=70% align=center bgcolor="#d2d2d2" height=70 rowspan="2">
-					           자유게시판 내용 자유게시판 내용 자유게시판 내용 자유게시판 내용
-					           자유게시판 내용 자유게시판 내용 자유게시판 내용 자유게시판 내용
+					           ����寃����� �댁�� ����寃����� �댁�� ����寃����� �댁�� ����寃����� �댁��
+					           ����寃����� �댁�� ����寃����� �댁�� ����寃����� �댁�� ����寃����� �댁��
 					           </td>
 			          </tr>
 			          <tr>
-				            <td width=10% align=left bgcolor="#e2e2e2">작성일</td>
+				            <td width=10% align=left bgcolor="#e2e2e2">���깆��</td>
 			          </tr>
 						</table>
 			</div>
 <!---->
-<!--  style.css안에 이미지 추가해서 div class이름에 넣어라. 이미지는 전체적으로 style.css안에. 
+<!--  style.css���� �대�몄� 異�媛��댁�� div class�대��� �ｌ�대��. �대�몄��� ��泥댁���쇰� style.css����. 
 	  
 .bannersearch{
 	background:url(../images/bannersearch.jpg) no-repeat 0px 0px;
@@ -185,7 +223,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	min-height:895px;
 }
 
-css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어주면 된다.
+css���� �대�몄� �대�곗���쇰� 異�媛���怨� div���� �대���ㅻ� �ｌ�댁＜硫� ����.
 -->
 
 <!---->
