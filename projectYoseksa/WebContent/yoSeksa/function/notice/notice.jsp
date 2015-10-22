@@ -60,7 +60,6 @@ $(document).ready(function() {
 		  $('#myInput').focus()
 		})
 });
-
 </script>
 <body>
 		 <div class="container">
