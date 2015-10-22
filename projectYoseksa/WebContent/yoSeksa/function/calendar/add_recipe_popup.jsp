@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link href="../../css/add_recipe_popup.css" type="text/css" rel="stylesheet" media="all">
 <title>Add Recipe</title>
 </head>
@@ -12,15 +12,15 @@
 
 <div id="addRecipeOnTable">	
 <center>
-<h2>¿ä¸®¸¦ Ãß°¡ÇÏ¼¼¿ä!</h3>
+<h2>ìš”ë¦¬ë¥¼ ì¶”ê°€í•˜ì„¸ìš”!</h3>
 </center>
 <br>
      &nbsp;<input type="radio" name="bld" value="">Breakfast
      <input type="radio" name="bld" value="Lunch" checked>Lunch
      <input type="radio" name="bld" value="Dinner">Dinner
      <br><br>
-        &nbsp;³¯Â¥ : <input type="date" name="date"><br><br>
-        &nbsp;¿ä¸®¸í : <input type="text" name="recipe">&nbsp;<input type="submit" value="Ãß°¡">
+        &nbsp;ë‚ ì§œ : <input type="date" name="date"><br><br>
+        &nbsp;ìš”ë¦¬ëª… : <input type="text" name="recipe">&nbsp;<input type="submit" value="ì¶”ê°€">
 </div>
 
 </body>

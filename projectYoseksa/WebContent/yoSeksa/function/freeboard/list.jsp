@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <title>Flooring a Interior category Flat Bootstarp Responsive Website Template | Home :: w3layouts</title>
 <link href="../../css/bootstrap_taejin.css" type="text/css" rel="stylesheet" media="all">
@@ -108,7 +108,7 @@ $(document).ready(function() {
 		<!--bottom-->
 
 
-	<!-- ÆäÀÌÁö °¡¿îµ¥ -->
+	<!-- íŽ˜ì´ì§€ ê°€ìš´ë° -->
 <div class="pages">
 		<div class="container">
 			 <h2 class="top">FreeBoard</h2> 
@@ -122,9 +122,9 @@ $(document).ready(function() {
 			<div class="headdings">
 						<table class="table">
 						    <tr>
-				            <td align=left colspan="2">¹øÈ£1</td>
+				            <td align=left colspan="2">ë²ˆí˜¸1</td>
 				            <td align="right">
-					              <input type="button" value="´ñ±Û">
+					              <input type="button" value="ëŒ“ê¸€">
 				            </td>
 			          </tr>
 			          <tr>
@@ -133,24 +133,24 @@ $(document).ready(function() {
 				            </td>
 			          </tr>
 			          <tr>
-				            <td width=10% align=left bgcolor="#e2e2e2">´Ð³×ÀÓ1</td>
+				            <td width=10% align=left bgcolor="#e2e2e2">ë‹‰ë„¤ìž„1</td>
 				
 				            <td width=70% align=center bgcolor="#d2d2d2" height=70 rowspan="2">
-					           ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë
-					           ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë
+					           ìžìœ ê²Œì‹œíŒ ë‚´ìš© ìžìœ ê²Œì‹œíŒ ë‚´ìš© ìžìœ ê²Œì‹œíŒ ë‚´ìš© ìžìœ ê²Œì‹œíŒ ë‚´ìš©
+					           ìžìœ ê²Œì‹œíŒ ë‚´ìš© ìžìœ ê²Œì‹œíŒ ë‚´ìš© ìžìœ ê²Œì‹œíŒ ë‚´ìš© ìžìœ ê²Œì‹œíŒ ë‚´ìš©
 					           </td>
 			          </tr>
 			          <tr>
-				            <td width=10% align=left bgcolor="#e2e2e2">ÀÛ¼ºÀÏ</td>
+				            <td width=10% align=left bgcolor="#e2e2e2">ìž‘ì„±ì¼</td>
 			          </tr>
 						</table>
 			</div>
 			<div class="headdings">
 						<table class="table">
 						    <tr>
-				            <td align=left colspan="2">¹øÈ£2</td>
+				            <td align=left colspan="2">ë²ˆí˜¸2</td>
 				            <td align="right" >
-					              <input type="button" value="´ñ±Û">
+					              <input type="button" value="ëŒ“ê¸€">
 				            </td>
 			          </tr>
 			          <tr>
@@ -159,24 +159,24 @@ $(document).ready(function() {
 				            </td>
 			          </tr>
 			          <tr>
-				            <td width=10% align=left bgcolor="#e2e2e2">´Ð³×ÀÓ2</td>
+				            <td width=10% align=left bgcolor="#e2e2e2">ë‹‰ë„¤ìž„2</td>
 				
 				            <td width=70% align=center bgcolor="#d2d2d2" height=70 rowspan="2">
-					           ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë
-					           ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë
+					           ìžìœ ê²Œì‹œíŒ ë‚´ìš© ìžìœ ê²Œì‹œíŒ ë‚´ìš© ìžìœ ê²Œì‹œíŒ ë‚´ìš© ìžìœ ê²Œì‹œíŒ ë‚´ìš©
+					           ìžìœ ê²Œì‹œíŒ ë‚´ìš© ìžìœ ê²Œì‹œíŒ ë‚´ìš© ìžìœ ê²Œì‹œíŒ ë‚´ìš© ìžìœ ê²Œì‹œíŒ ë‚´ìš©
 					           </td>
 			          </tr>
 			          <tr>
-				            <td width=10% align=left bgcolor="#e2e2e2">ÀÛ¼ºÀÏ</td>
+				            <td width=10% align=left bgcolor="#e2e2e2">ìž‘ì„±ì¼</td>
 			          </tr>
 						</table>
 			</div>
 			<div class="headdings">
 						<table class="table">
 						    <tr>
-				            <td align=left colspan="2">¹øÈ£3</td>
+				            <td align=left colspan="2">ë²ˆí˜¸3</td>
 				            <td align="right" >
-					              <input type="button" value="´ñ±Û">
+					              <input type="button" value="ëŒ“ê¸€">
 				            </td>
 			          </tr>
 			          <tr>
@@ -185,20 +185,20 @@ $(document).ready(function() {
 				            </td>
 			          </tr>
 			          <tr>
-				            <td width=10% align=left bgcolor="#e2e2e2">´Ð³×ÀÓ3</td>
+				            <td width=10% align=left bgcolor="#e2e2e2">ë‹‰ë„¤ìž„3</td>
 				
 				            <td width=70% align=center bgcolor="#d2d2d2" height=70 rowspan="2">
-					           ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë
-					           ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë ÀÚÀ¯°Ô½ÃÆÇ ³»¿ë
+					           ìžìœ ê²Œì‹œíŒ ë‚´ìš© ìžìœ ê²Œì‹œíŒ ë‚´ìš© ìžìœ ê²Œì‹œíŒ ë‚´ìš© ìžìœ ê²Œì‹œíŒ ë‚´ìš©
+					           ìžìœ ê²Œì‹œíŒ ë‚´ìš© ìžìœ ê²Œì‹œíŒ ë‚´ìš© ìžìœ ê²Œì‹œíŒ ë‚´ìš© ìžìœ ê²Œì‹œíŒ ë‚´ìš©
 					           </td>
 			          </tr>
 			          <tr>
-				            <td width=10% align=left bgcolor="#e2e2e2">ÀÛ¼ºÀÏ</td>
+				            <td width=10% align=left bgcolor="#e2e2e2">ìž‘ì„±ì¼</td>
 			          </tr>
 						</table>
 			</div>
 <!---->
-<!--  style.css¾È¿¡ ÀÌ¹ÌÁö Ãß°¡ÇØ¼­ div classÀÌ¸§¿¡ ³Ö¾î¶ó. ÀÌ¹ÌÁö´Â ÀüÃ¼ÀûÀ¸·Î style.css¾È¿¡. 
+<!--  style.cssì•ˆì— ì´ë¯¸ì§€ ì¶”ê°€í•´ì„œ div classì´ë¦„ì— ë„£ì–´ë¼. ì´ë¯¸ì§€ëŠ” ì „ì²´ì ìœ¼ë¡œ style.cssì•ˆì—. 
 	  
 .bannersearch{
 	background:url(../images/bannersearch.jpg) no-repeat 0px 0px;
@@ -206,7 +206,7 @@ $(document).ready(function() {
 	min-height:895px;
 }
 
-css¾È¿¡ ÀÌ¹ÌÁö ÀÌ·±½ÄÀ¸·Î Ãß°¡ÇÏ°í div¾È¿¡ Å¬·¡½º¸í ³Ö¾îÁÖ¸é µÈ´Ù.
+cssì•ˆì— ì´ë¯¸ì§€ ì´ëŸ°ì‹ìœ¼ë¡œ ì¶”ê°€í•˜ê³  divì•ˆì— í´ëž˜ìŠ¤ëª… ë„£ì–´ì£¼ë©´ ëœë‹¤.
 -->
 
 <!---->
