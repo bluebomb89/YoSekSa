@@ -57,7 +57,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
 								<ul class="dropdown-menu">
 									<li><a href="main.jsp?no=4">gallery1</a></li>
-									<li><a href="main.jsp?no=4">gallery2</a></li>
+									<li><a href="main.jsp?no=7">Q&A</a></li>
 									<li><a href="main.jsp?no=3">회원가입</a></li>           
 								</ul>
 							</li>

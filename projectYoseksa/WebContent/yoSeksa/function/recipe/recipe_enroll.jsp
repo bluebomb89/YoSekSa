@@ -23,7 +23,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <link href="../../css/custom.css" rel="stylesheet">
 <link href="../../css/owl.carousel.css" rel="stylesheet">
 <link href="../../css/owl.theme.css" rel="stylesheet">
-<link href="../../css/recipe_regi.css rel="stylesheet">
+<link href="../../css/recipe_regi.css" rel="stylesheet">
 <!-- Custom Theme files -->
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -141,13 +141,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어주면 된다.
 -->
-	<div class="container" style="margin-top: 60px; margin-left: 30px;">
-	  <div class="regi_center">
-		<div class="row" style="margin-bottom: 0px; margin-left: 0px;"><h3>Wirte Recipe</h3></div>
-		<form name="insFrm" id="insFrm" method="post">
-		  
-	    </form>	  
-	  </div>
+	<form name="insFrm" id="insFrm" method="post" style="height: 1996px;">
+	<div class="container recipe_regi" style="margin-top: 60px; margin-left: 11px;margin-right: 11px;width: 1240px;padding-left: 0px;padding-right: 0px;">
+	  <div class="regi_center" style="height: 1870px;">
+		<div class="regi_title">Wirte Recipe</b></div>
+		  <div class="cont_box pad_l_60" style="height: 422px;">
+		  	<div id="divMainPhotoUpload" class="cont_pic2">
+		  	 <div style="position:absolute;left:-3000px">
+		  	  <input type="file" name="q_main_file" id="q_main_file" file_gubun="main" accept="jpeg,png,gif" style="display:;width:0px;height:0px;font-size:0px;" text="">
+		  	 </div>
+		  	 <div id="divMainPhotoBox" is_over="0">
+               <img id="mainPhotoHolder" onclick="browseMainFile()" src="http://recipe1.ezmember.co.kr/img/pic_none4.gif" style="width: 250px; height: 250px; cursor:pointer">
+        	 </div>
+        	
+		  	</div>
+		  	<div class="cont_line"><p class="cont_tit4">레시피 제목</p><input type="text" name="cok_title" id="cok_title" value="" class="form-control" placeholder="예) 소고기 미역국 끓이기" style="width:610px; "></div>
+		  </div>
+	    </div>
+	 </div>
+	</form>
 	<!-- recipe enroll form -->
 	
 
