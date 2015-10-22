@@ -61,6 +61,7 @@ $(document).ready(function() {
 		 <div class="container">
 			<div class="service-info" id="serviceyo">
 				<h3>Notice</h3>
+				<input type="button" value="등록" style="position: absolute">
 			</div>
 			<div class="showmenu" id="menu1">
 				<div class="noticesub">제목</div>
