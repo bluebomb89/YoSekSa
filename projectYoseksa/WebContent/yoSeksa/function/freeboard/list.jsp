@@ -49,44 +49,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			    
 			});
 </script>
-<script>
-$(document).ready(function() {
-	 
-	  var owl = $("#owl-demo");
-	 
-	  owl.owlCarousel({
-	      items : 10, //10 items above 1000px browser width
-	      itemsDesktop : [1000,5], //5 items between 1000px and 901px
-	      itemsDesktopSmall : [900,3], // betweem 900px and 601px
-	      itemsTablet: [600,2], //2 items between 600 and 0
-	      itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
-	  });
-	 
-	  // Custom Navigation Events
-	  $(".next").click(function(){
-	    owl.trigger('owl.next');
-	  })
-	  $(".prev").click(function(){
-	    owl.trigger('owl.prev');
-	  })
-	  $(".play").click(function(){
-	    owl.trigger('owl.play',1000); //owl.play event accept autoPlay speed as second parameter
-	  })
-	  $(".stop").click(function(){
-	    owl.trigger('owl.stop');
-	  })
-	 
-	});
-</script>
 <script type="text/javascript">
 	$(document).ready(function() {
 		/* affix the navbar after scroll below header */
 		$('#nav').affix({
-			offset: {
-				top: $('header').height()-$('#nav').height()
-				}
+			offset: {top: $('header').height()-$('#nav').height()}
 		});
 		
+		/* affix-top 에서 affix로 수정될대 이벤트 발생*/
+		$('#nav').on("affix.bs.affix",function(){
+			$("#startmain").text("haa!");
+		});
+		/* affix에서 affix-top으로 전환될때 이벤트 발생*/
+		$('#nav').on("affix-top.bs.affix",function(){
+			$("#startmain").text("Search");
+		});
 	});        
 </script>
 <script>
@@ -106,7 +83,10 @@ $(document).ready(function() {
 </head>
 <body  class="cbp-spmenu-push">
 		<!--bottom-->
-
+		
+		<!-- 여기는 작업하지 마요 -->
+		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
+		<script src="js/classie.js"></script>
 
 	<!-- 페이지 가운데 -->
 <div class="pages">
