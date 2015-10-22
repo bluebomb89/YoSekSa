@@ -31,4 +31,8 @@ public class MemberDAO {
 	{
 		return ssf.openSession().selectList("memberAllData");
 	}
+	public void memberInsert(MemberDTO dto){
+		ssf.openSession(true).insert("memberInsert",dto); //true 값을 주면 자동으로 commit;(auto commit)
+		// true를 주지 않는다면 ssf.openSession().commit();
+	}
 }
