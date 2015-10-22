@@ -157,10 +157,14 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 					<!-- /input-group -->
 				</div>
 				<!-- /.col-lg-6 -->
+  
+			</script>
 				<button type="button" class="btn btn-default"
 					aria-label="Left Align" style="margin-left: 650px;">
+					
 					<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
 				</button>
+			
 				<button type="button" class="btn btn-default"
 					aria-label="Left Align" style="margin-left: 10px;">
 					<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
@@ -320,6 +324,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 					});
 				});
 			</script>
+			
 
 			<a href="#to-top" id="toTop" style="display: block;"> <span
 				id="toTopHover" style="opacity: 1;"> </span></a>
