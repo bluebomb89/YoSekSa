@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <title>Flooring a Interior category Flat Bootstarp Responsive Website Template | Home :: w3layouts</title>
 <link href="../../css/bootstrap_taejin.css" type="text/css" rel="stylesheet" media="all">
@@ -56,11 +56,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			offset: {top: $('header').height()-$('#nav').height()}
 		});
 		
-		/* affix-top ���� affix濡� �������� �대깽�� 諛���*/
+		/* affix-top 에서 affix로 수정될대 이벤트 발생*/
 		$('#nav').on("affix.bs.affix",function(){
 			$("#startmain").text("haa!");
 		});
-		/* affix���� affix-top�쇰� �������� �대깽�� 諛���*/
+		/* affix에서 affix-top으로 전환될때 이벤트 발생*/
 		$('#nav').on("affix-top.bs.affix",function(){
 			$("#startmain").text("Search");
 		});
@@ -117,10 +117,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                    </div>
                  </div>
                </div>   
-		<!-- �ш린�� ������吏� 留��� -->
+		<!-- 여기는 작업하지 마요 -->
 		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
 		<script src="js/classie.js"></script>
-	<!-- ���댁� 媛��대�� -->
+
+	<!-- 페이지 가운데 -->
 <div class="pages">
 		<div class="container">
 			 <h2 class="top">FreeBoard</h2> 
@@ -134,9 +135,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="headdings">
 						<table class="table">
 						    <tr>
-				            <td align=left colspan="2">踰���1</td>
+				            <td align=left colspan="2">번호1</td>
 				            <td align="right">
-					              <input type="button" value="��湲�">
+					              <input type="button" value="댓글">
 				            </td>
 			          </tr>
 			          <tr>
@@ -145,24 +146,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				            </td>
 			          </tr>
 			          <tr>
-				            <td width=10% align=left bgcolor="#e2e2e2">���ㅼ��1</td>
+				            <td width=10% align=left bgcolor="#e2e2e2">닉네임1</td>
 				
 				            <td width=70% align=center bgcolor="#d2d2d2" height=70 rowspan="2">
-					           ����寃����� �댁�� ����寃����� �댁�� ����寃����� �댁�� ����寃����� �댁��
-					           ����寃����� �댁�� ����寃����� �댁�� ����寃����� �댁�� ����寃����� �댁��
+					           자유게시판 내용 자유게시판 내용 자유게시판 내용 자유게시판 내용
+					           자유게시판 내용 자유게시판 내용 자유게시판 내용 자유게시판 내용
 					           </td>
 			          </tr>
 			          <tr>
-				            <td width=10% align=left bgcolor="#e2e2e2">���깆��</td>
+				            <td width=10% align=left bgcolor="#e2e2e2">작성일</td>
 			          </tr>
 						</table>
 			</div>
 			<div class="headdings">
 						<table class="table">
 						    <tr>
-				            <td align=left colspan="2">踰���2</td>
+				            <td align=left colspan="2">번호2</td>
 				            <td align="right" >
-					              <input type="button" value="��湲�">
+					              <input type="button" value="댓글">
 				            </td>
 			          </tr>
 			          <tr>
@@ -171,24 +172,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				            </td>
 			          </tr>
 			          <tr>
-				            <td width=10% align=left bgcolor="#e2e2e2">���ㅼ��2</td>
+				            <td width=10% align=left bgcolor="#e2e2e2">닉네임2</td>
 				
 				            <td width=70% align=center bgcolor="#d2d2d2" height=70 rowspan="2">
-					           ����寃����� �댁�� ����寃����� �댁�� ����寃����� �댁�� ����寃����� �댁��
-					           ����寃����� �댁�� ����寃����� �댁�� ����寃����� �댁�� ����寃����� �댁��
+					           자유게시판 내용 자유게시판 내용 자유게시판 내용 자유게시판 내용
+					           자유게시판 내용 자유게시판 내용 자유게시판 내용 자유게시판 내용
 					           </td>
 			          </tr>
 			          <tr>
-				            <td width=10% align=left bgcolor="#e2e2e2">���깆��</td>
+				            <td width=10% align=left bgcolor="#e2e2e2">작성일</td>
 			          </tr>
 						</table>
 			</div>
 			<div class="headdings">
 						<table class="table">
 						    <tr>
-				            <td align=left colspan="2">踰���3</td>
+				            <td align=left colspan="2">번호3</td>
 				            <td align="right" >
-					              <input type="button" value="��湲�">
+					              <input type="button" value="댓글">
 				            </td>
 			          </tr>
 			          <tr>
@@ -197,20 +198,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				            </td>
 			          </tr>
 			          <tr>
-				            <td width=10% align=left bgcolor="#e2e2e2">���ㅼ��3</td>
+				            <td width=10% align=left bgcolor="#e2e2e2">닉네임3</td>
 				
 				            <td width=70% align=center bgcolor="#d2d2d2" height=70 rowspan="2">
-					           ����寃����� �댁�� ����寃����� �댁�� ����寃����� �댁�� ����寃����� �댁��
-					           ����寃����� �댁�� ����寃����� �댁�� ����寃����� �댁�� ����寃����� �댁��
+					           자유게시판 내용 자유게시판 내용 자유게시판 내용 자유게시판 내용
+					           자유게시판 내용 자유게시판 내용 자유게시판 내용 자유게시판 내용
 					           </td>
 			          </tr>
 			          <tr>
-				            <td width=10% align=left bgcolor="#e2e2e2">���깆��</td>
+				            <td width=10% align=left bgcolor="#e2e2e2">작성일</td>
 			          </tr>
 						</table>
 			</div>
 <!---->
-<!--  style.css���� �대�몄� 異�媛��댁�� div class�대��� �ｌ�대��. �대�몄��� ��泥댁���쇰� style.css����. 
+<!--  style.css안에 이미지 추가해서 div class이름에 넣어라. 이미지는 전체적으로 style.css안에. 
 	  
 .bannersearch{
 	background:url(../images/bannersearch.jpg) no-repeat 0px 0px;
@@ -218,7 +219,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	min-height:895px;
 }
 
-css���� �대�몄� �대�곗���쇰� 異�媛���怨� div���� �대���ㅻ� �ｌ�댁＜硫� ����.
+css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어주면 된다.
 -->
 
 <!---->

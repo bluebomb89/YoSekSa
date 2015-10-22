@@ -10,7 +10,7 @@ public class MainClass {
 		List<MemberDTO> list=dao.memberAllData();
 		for(MemberDTO d:list)
 		{
-			System.out.println(d.getMember_no()+" "+d.getMember_id()+" "+d.getMember_pw()+" "+d.getNickname()+" "+d.getMember_pic());
+			System.out.println(d.getMember_no()+" "+d.getMember_id()+" "+d.getMember_pw()+" "+d.getNickname()+" "+d.getEmail()+" "+d.getMember_pic());
 		}
 	}
 }
