@@ -157,55 +157,60 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="alert alert-info" role="alert">여러분들이 자주묻는 질문!</div>
 </div>
 
+<div id="qna_icon">
+<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+</div>
+
 <div id="qna_title">
-<span class="label label-warning">Q&A</span>
+<span>Q&A를 통해서 궁금증을 해결하세요.</span>
 </div>
 
 
 
+
 <div id="qna_div">
-	<h5 onClick="expandcontent('sc1')" style="cursor:hand; cursor:pointer"><span>Q&nbsp;요섹사는 어떤곳인가요?</span></h5>
+	<h5 onClick="expandcontent('sc1')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;요섹사는 어떤곳인가요?</span></h5>
 	<div id="sc1" class="switchcontent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<span>
 	요섹사</span>
 	</div>
 	
-	<h5 onClick="expandcontent('sc2')" style="cursor:hand; cursor:pointer"><span>Q&nbsp;아이디를 변경 할 수 있나요?</span></h5>
+	<h5 onClick="expandcontent('sc2')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;아이디를 변경 할 수 있나요?</span></h5>
 	<div id="sc2" class="switchcontent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<span>
 	아이디는 변경이 불가능 합니다.
 	</span>
 	</div>
 	
-	<h5 onClick="expandcontent('sc3')" style="cursor:hand; cursor:pointer"><span>Q&nbsp;회원이 아닐 경우 서비스를 이용 할 수 없나요?</span></h5>
+	<h5 onClick="expandcontent('sc3')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;회원이 아닐 경우 서비스를 이용 할 수 없나요?</span></h5>
 	<div id="sc3" class="switchcontent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<span>
 	요섹사의 오든 서비스는 회원을 기반으로 제공되고 있습니다.
 	</span>
 	</div>
 	
-	<h5 onClick="expandcontent('sc4')" style="cursor:hand; cursor:pointer"><span>Q&nbsp;검색은 어떻게 하나요?</span></h5>
+	<h5 onClick="expandcontent('sc4')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;검색은 어떻게 하나요?</span></h5>
 	<div id="sc4" class="switchcontent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<span>
 	검색하세요
 	</span>
 	</div>
 	
-	<h5 onClick="expandcontent('sc5')" style="cursor:hand; cursor:pointer"><span>Q&nbsp;레시피 추가는 어디서 하나요?</span></h5>
+	<h5 onClick="expandcontent('sc5')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;레시피 추가는 어디서 하나요?</span></h5>
 	<div id="sc5" class="switchcontent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<span>
 	추가하세요
 	</span>
 	</div>
 	
-	<h5 onClick="expandcontent('sc6')" style="cursor:hand; cursor:pointer"><span>Q&nbsp;회원 정보를 바꿀수 있나요?</span></h5>
+	<h5 onClick="expandcontent('sc6')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;회원 정보를 바꿀수 있나요?</span></h5>
 	<div id="sc6" class="switchcontent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<span>
 	네
 	</span>
 	</div>
 	
-	<h5 onClick="expandcontent('sc7')" style="cursor:hand; cursor:pointer"><span>Q&nbsp;여기는?</span></h5>
+	<h5 onClick="expandcontent('sc7')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;여기는?</span></h5>
 	<div id="sc7" class="switchcontent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<span>
 	요섹사
