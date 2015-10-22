@@ -1,10 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title></title>
+<link href="../../css/notice.css" rel="stylesheet">
 </head>
 <style type="text/css">
 .showmenu{
@@ -55,136 +56,169 @@ $(document).ready(function() {
 		var a= id+"-cont";
 		$('#'+a).slideToggle("fast");
 		});
+	$('#myModal').on('shown.bs.modal', function () {
+		  $('#myInput').focus()
+		})
 });
 </script>
 <body>
 		 <div class="container">
 			<div class="service-info" id="serviceyo">
 				<h3>Notice</h3>
-				<input type="button" value="µî·Ï" style="position: absolute">
+				<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+					ë“±ë¡
+				</button>
+					 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					  <div class="modal-dialog">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					        <h4 class="modal-title" id="myModalLabel">ê³µì§€ ì‚¬í•­</h4>
+					      </div>
+					      <div class="modal-body">
+					        <!-- ë°ì´í„° ìž…ë ¥ -->
+							<form id="postForm" name="post_frm" method=post action="postfind_result.jsp">
+								<!-- ì œëª© -->
+								<input type="text" placeholder="ì œëª©"><br>
+								<!-- ë‚´ìš© -->
+								<textarea name="board_tx" class="form-control" placeholder="ë‚´ìš©" style="min-height:300px;width: 100%; margin-top: 20px;"></textarea>
+								<!-- ê²Œì‹œíŒ ë²ˆí˜¸ ë“±ë¡ ê³µì§€ì‚¬í•­=1ë²ˆ -->
+								<input type="hidden" name="noticeboardnumber" value="1">
+						    </form>
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-default" data-dismiss="modal">ì·¨ì†Œ</button>
+					        <button type="button" class="btn btn-primary">ë“±ë¡</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>	
 			</div>
 			<div class="showmenu" id="menu1">
-				<div class="noticesub">Á¦¸ñ</div>
-				<div class="noticehire"> ÀÛ¼ºÀÏ </div>
-				<div class="noticeday"> Á¶È¸¼ö</div>
+				<div class="noticesub">ì œëª©</div>
+				<div class="noticehire"> ìž‘ì„±ì¼ </div>
+				<div class="noticeday"> ì¡°íšŒìˆ˜</div>
 				<div id="menu1-cont" style="display: none;">
 						<pre>
-							³»¿ëÀÌ ±æ¾î
-							³»¿ëÀÌ ¾öÃ»±äµ¥?
-							ÀÌ·¯¸é ¾î¶»°Ô Ãâ·ÂµÇ?
+							ë‚´ìš©ì´ ê¸¸ì–´
+							ë‚´ìš©ì´ ì—„ì²­ê¸´ë°?
+							ì´ëŸ¬ë©´ ì–´ë–»ê²Œ ì¶œë ¥ë˜?
 						</pre>
 				</div>
 			</div>
 			<div class="showmenu" id="menu2">
-				<div class="noticesub"> Á¦¸ñ</div>
-				<div class="noticehire"> ÀÛ¼ºÀÏ </div>
-				<div class="noticeday"> Á¶È¸¼ö</div>
+				<div class="noticesub"> ì œëª©</div>
+				<div class="noticehire"> ìž‘ì„±ì¼ </div>
+				<div class="noticeday"> ì¡°íšŒìˆ˜</div>
 				<div id="menu2-cont" style="display: none;">
 					<pre>
-							³»¿ëÀÌ ±æ¾î
-							³»¿ëÀÌ ¾öÃ»±äµ¥?
-							ÀÌ·¯¸é ¾î¶»°Ô Ãâ·ÂµÇ?
+							ë‚´ìš©ì´ ê¸¸ì–´
+							ë‚´ìš©ì´ ì—„ì²­ê¸´ë°?
+							ì´ëŸ¬ë©´ ì–´ë–»ê²Œ ì¶œë ¥ë˜?
 					</pre>
 				</div>
 			</div>
 			<div class="showmenu" id="menu3">
-				<div class="noticesub"> Á¦¸ñ</div>
-				<div class="noticehire"> ÀÛ¼ºÀÏ </div>
-				<div class="noticeday"> Á¶È¸¼ö</div>
+				<div class="noticesub"> ì œëª©</div>
+				<div class="noticehire"> ìž‘ì„±ì¼ </div>
+				<div class="noticeday"> ì¡°íšŒìˆ˜</div>
 				<div id="menu3-cont" style="display: none;">
 					<pre>
-						³»¿ëÀÌ ±æ¾î
-						³»¿ëÀÌ ¾öÃ»±äµ¥?
-						ÀÌ·¯¸é ¾î¶»°Ô Ãâ·ÂµÇ?
+						ë‚´ìš©ì´ ê¸¸ì–´
+						ë‚´ìš©ì´ ì—„ì²­ê¸´ë°?
+						ì´ëŸ¬ë©´ ì–´ë–»ê²Œ ì¶œë ¥ë˜?
 					</pre>
 				</div>
 			</div>
 			<div class="showmenu" id="menu4">
-				<div class="noticesub"> Á¦¸ñ</div>
-				<div class="noticehire"> ÀÛ¼ºÀÏ </div>
-				<div class="noticeday"> Á¶È¸¼ö</div>
+				<div class="noticesub"> ì œëª©</div>
+				<div class="noticehire"> ìž‘ì„±ì¼ </div>
+				<div class="noticeday"> ì¡°íšŒìˆ˜</div>
 				<div id="menu4-cont" style="display: none;">
 					<pre>
-						³»¿ëÀÌ ±æ¾î
-						³»¿ëÀÌ ¾öÃ»±äµ¥?
-						ÀÌ·¯¸é ¾î¶»°Ô Ãâ·ÂµÇ?
+						ë‚´ìš©ì´ ê¸¸ì–´
+						ë‚´ìš©ì´ ì—„ì²­ê¸´ë°?
+						ì´ëŸ¬ë©´ ì–´ë–»ê²Œ ì¶œë ¥ë˜?
 					</pre>
 				</div>
 			</div>
 			<div class="showmenu" id="menu5">
-				<div class="noticesub"> Á¦¸ñ</div>
-				<div class="noticehire"> ÀÛ¼ºÀÏ </div>
-				<div class="noticeday"> Á¶È¸¼ö</div>
+				<div class="noticesub"> ì œëª©</div>
+				<div class="noticehire"> ìž‘ì„±ì¼ </div>
+				<div class="noticeday"> ì¡°íšŒìˆ˜</div>
 				<div id="menu5-cont" style="display: none;">
 					<pre>
-						³»¿ëÀÌ ±æ¾î
-						³»¿ëÀÌ ¾öÃ»±äµ¥?
-						ÀÌ·¯¸é ¾î¶»°Ô Ãâ·ÂµÇ?
+						ë‚´ìš©ì´ ê¸¸ì–´
+						ë‚´ìš©ì´ ì—„ì²­ê¸´ë°?
+						ì´ëŸ¬ë©´ ì–´ë–»ê²Œ ì¶œë ¥ë˜?
 					</pre>
 				</div>
 			</div>
 			<div class="showmenu" id="menu6">
-				<div class="noticesub"> Á¦¸ñ</div>
-				<div class="noticehire"> ÀÛ¼ºÀÏ </div>
-				<div class="noticeday"> Á¶È¸¼ö</div>
+				<div class="noticesub"> ì œëª©</div>
+				<div class="noticehire"> ìž‘ì„±ì¼ </div>
+				<div class="noticeday"> ì¡°íšŒìˆ˜</div>
 				<div id="menu6-cont" style="display: none;">
 					<pre>
-						³»¿ëÀÌ ±æ¾î
-						³»¿ëÀÌ ¾öÃ»±äµ¥?
-						ÀÌ·¯¸é ¾î¶»°Ô Ãâ·ÂµÇ?
+						ë‚´ìš©ì´ ê¸¸ì–´
+						ë‚´ìš©ì´ ì—„ì²­ê¸´ë°?
+						ì´ëŸ¬ë©´ ì–´ë–»ê²Œ ì¶œë ¥ë˜?
 					</pre>
 				</div>
 			</div>
 			<div class="showmenu" id="menu7">
-				<div class="noticesub"> Á¦¸ñ</div>
-				<div class="noticehire"> ÀÛ¼ºÀÏ </div>
-				<div class="noticeday"> Á¶È¸¼ö</div>
+				<div class="noticesub"> ì œëª©</div>
+				<div class="noticehire"> ìž‘ì„±ì¼ </div>
+				<div class="noticeday"> ì¡°íšŒìˆ˜</div>
 				<div id="menu7-cont" style="display: none;">
 					<pre>
-						³»¿ëÀÌ ±æ¾î
-						³»¿ëÀÌ ¾öÃ»±äµ¥?
-						ÀÌ·¯¸é ¾î¶»°Ô Ãâ·ÂµÇ?
+						ë‚´ìš©ì´ ê¸¸ì–´
+						ë‚´ìš©ì´ ì—„ì²­ê¸´ë°?
+						ì´ëŸ¬ë©´ ì–´ë–»ê²Œ ì¶œë ¥ë˜?
 					</pre>
 				</div>
 			</div>
 			<div class="showmenu" id="menu8">
-				<div class="noticesub"> Á¦¸ñ</div>
-				<div class="noticehire"> ÀÛ¼ºÀÏ </div>
-				<div class="noticeday"> Á¶È¸¼ö</div>
+				<div class="noticesub"> ì œëª©</div>
+				<div class="noticehire"> ìž‘ì„±ì¼ </div>
+				<div class="noticeday"> ì¡°íšŒìˆ˜</div>
 				<div id="menu8-cont" style="display: none;">
 					<pre>
-						³»¿ëÀÌ ±æ¾î
-						³»¿ëÀÌ ¾öÃ»±äµ¥?
-						ÀÌ·¯¸é ¾î¶»°Ô Ãâ·ÂµÇ?
+						ë‚´ìš©ì´ ê¸¸ì–´
+						ë‚´ìš©ì´ ì—„ì²­ê¸´ë°?
+						ì´ëŸ¬ë©´ ì–´ë–»ê²Œ ì¶œë ¥ë˜?
 					</pre>
 				</div>
 			</div>
 			<div class="showmenu" id="menu9">
-				<div class="noticesub"> Á¦¸ñ</div>
-				<div class="noticehire"> ÀÛ¼ºÀÏ </div>
-				<div class="noticeday"> Á¶È¸¼ö</div>
+				<div class="noticesub"> ì œëª©</div>
+				<div class="noticehire"> ìž‘ì„±ì¼ </div>
+				<div class="noticeday"> ì¡°íšŒìˆ˜</div>
 				<div id="menu9-cont" style="display: none;">
 					<pre>
-						³»¿ëÀÌ ±æ¾î
-						³»¿ëÀÌ ¾öÃ»±äµ¥?
-						ÀÌ·¯¸é ¾î¶»°Ô Ãâ·ÂµÇ?
+						ë‚´ìš©ì´ ê¸¸ì–´
+						ë‚´ìš©ì´ ì—„ì²­ê¸´ë°?
+						ì´ëŸ¬ë©´ ì–´ë–»ê²Œ ì¶œë ¥ë˜?
 					</pre>
 				</div>
 			</div>
 			<div class="showmenu" id="menu10">
-				<div class="noticesub"> Á¦¸ñ</div>
-				<div class="noticehire"> ÀÛ¼ºÀÏ </div>
-				<div class="noticeday"> Á¶È¸¼ö</div>
+				<div class="noticesub"> ì œëª©</div>
+				<div class="noticehire"> ìž‘ì„±ì¼ </div>
+				<div class="noticeday"> ì¡°íšŒìˆ˜</div>
 				<div id="menu10-cont" style="display: none;">
 					<pre>
-						³»¿ëÀÌ ±æ¾î
-						³»¿ëÀÌ ¾öÃ»±äµ¥?
-						ÀÌ·¯¸é ¾î¶»°Ô Ãâ·ÂµÇ?
+						ë‚´ìš©ì´ ê¸¸ì–´
+						ë‚´ìš©ì´ ì—„ì²­ê¸´ë°?
+						ì´ëŸ¬ë©´ ì–´ë–»ê²Œ ì¶œë ¥ë˜?
 					</pre>
 				</div>
 			</div>
-				
+			<!-- Modal -->
+
 	 </div>
+
+	 
 
 </body>
 </html>

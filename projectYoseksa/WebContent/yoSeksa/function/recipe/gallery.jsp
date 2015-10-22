@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!--A Design by W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
@@ -130,7 +130,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- header -->
 
 	<!---->
-	<!--  style.css안에 이미지 추가해서 div class이름에 넣어라. 이미지는 전체적으로 style.css안에. 
+	<!--  style.css���� �대�몄� 異�媛��댁�� div class�대��� �ｌ�대��. �대�몄��� ��泥댁���쇰� style.css����. 
 	  
 .bannersearch{
 	background:url(../images/bannersearch.jpg) no-repeat 0px 0px;
@@ -138,7 +138,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	min-height:895px;
 }
 
-css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어주면 된다.
+css���� �대�몄� �대�곗���쇰� 異�媛���怨� div���� �대���ㅻ� �ｌ�댁＜硫� ����.
 -->
 	<div class="container" style="margin-top: 60px; margin-left: 30px;">
 		<div class="row" style="margin-bottom: 0px; margin-left: 0px;">
