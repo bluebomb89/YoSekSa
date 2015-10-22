@@ -22,6 +22,7 @@
 <link href="../../css/custom.css" rel="stylesheet">
 <link href="../../css/owl.carousel.css" rel="stylesheet">
 <link href="../../css/owl.theme.css" rel="stylesheet">
+<link href="../../css/index.css" rel="stylesheet">
 <!-- Custom Theme files -->
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -53,9 +54,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	    $('.slideshow').cycle({
 			fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
 		});
-
-	    
 	});
+	$(window).load(function(){
+		  $('body').addClass('loaded');
+		  $('h1').addClass('letter-spacing')
+		});
 </script>
 <script>
 $(document).ready(function() {
@@ -103,7 +106,7 @@ $(document).ready(function() {
 		$('#nav').on("affix-top.bs.affix",function(){
 			$("#startmain").text("Search");
 		});
-	});        
+	});
 </script>
 <script>
     $(function () {
@@ -137,7 +140,10 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 -->
 <!-- 메인화면 -->
 <header class="masthead">
-	<div class="bannersearch"></div>
+<div class="theTron animated panel-section dark">
+  <div id="kb-bg" class="activated-KB"></div>
+  <h1 class="">Well Come <span>To</span> Yoseksa</div>
+
 </header>
 <!-- 서비스눌렀을때 검색화면이동 -->
 		<div id="section1" class="slider" style="margin-bottom: 14px;">
@@ -153,7 +159,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 					 -->
 					</div>
 				</div>
-				<div class="slid banner2">				  
+				<div class="slid banner2">			  
 					<div class="caption">
 						<!-- 
 						<h3>Donec ut turpis sit amet enim mattis commodo velit.</h3>

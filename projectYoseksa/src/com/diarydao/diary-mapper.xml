@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.dao.diary-mapper">
-
+<mapper namespace="com.dao.emp-mapper">
+	<select id="empAllData" resultType="Emp">
+		SELECT empno,ename,job,hiredate,sal
+		FROM emp
+	</select>
+	<select id="empRowCount" resultType="int">
+		SELECT COUNT(*) FROM emp
+	</select>
+	<!-- public EmpDTO empFindData(int empno) -->
+	<select id="empFindData" resultType="Emp" parameterType="int">
+		SELECT empno,ename,job,hiredate,sal
+		FROM emp
+		WHERE empno=#{empno}
+		<!-- 
+			String sql=""
+			sql=sql.substring(0,sql.lastIndexOf('#')+1)
+			sql.replace('#','?')
+			ps.setInt(1,empno);
+			${a.name}
+		 -->
+	</select>
 </mapper>
