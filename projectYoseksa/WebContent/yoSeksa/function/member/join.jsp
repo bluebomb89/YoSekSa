@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8" import="com.dao.*"%>
+	pageEncoding="UTF-8"%>
 
 <!DOCTYPE HTML>
 <html>
@@ -28,7 +28,6 @@
 <link href="../../css/bootstrapTheme.css" rel="stylesheet">
 <link href="../../css/custom.css" rel="stylesheet">
 <link href="../../css/owl.carousel.css" rel="stylesheet">
-<link href="../../css/indesxggong.css" rel="stylesheet">
 
 
 <!-- Custom Theme files -->
