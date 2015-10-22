@@ -86,36 +86,31 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body  class="cbp-spmenu-push">
 		<!--bottom-->
-		            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+		                   <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
                등록
             </button>
                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                 <div class="modal-dialog">
-                   <div class="modal-content" style="width: 531px; left: 5px; height: 650px;">
+                 <div class="modal-dialog" style="width: 635px;">
+                   <div class="modal-content" style="margin-right: 50px">
                      <div class="modal-header">
                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                       <h4 class="modal-title" id="myModalLabel">게시판 글쓰기</h4>
+                       <h4 class="modal-title" id="myModalLabel">Modal title</h4>
                      </div>
                      <div class="modal-body">
-                       <div id="post_wrapper">
-						<form id="postForm" name="post_frm" method=post
-							action="postfind_result.jsp">
-							<textarea name="board_tx" class="form-control" placeholder="내용"
-								style="height: 400px; width: 470px; margin-top: 20px;"></textarea>
-							<div class="write_pic2" style="width: 370px;">
+                       <textarea name="board_tx" class="form-control" placeholder="내용"
+								style="height: 210px; width: 525px; margin-top: 5px;"></textarea>
+							<div class="write_pic2" style="width: 400px; margin-top: 5px;">
 								<input type="file" name="file" id="file_1"
 									style="display: none;" />
 								<div class="complete_pic">
 									<img src="http://recipe1.ezmember.co.kr/img/pic_none3.gif"
-										alt="파일첨부" width="140" height="40"
+										alt="파일첨부" width="140" height="80"
 										onclick="document.getElementById('file_1').click();"
 										style="cursor: pointer;" />
 								</div>
 							</div>
-						</form>
-					</div>
                      </div>
-                     <div class="modal-footer" style="margin-top: 500px;">
+                     <div class="modal-footer">
                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                        <button type="button" class="btn btn-primary">Save changes</button>
                      </div>
