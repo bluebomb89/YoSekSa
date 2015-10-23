@@ -151,8 +151,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		window.onunload=saveswitchstate
 </script>
 </head>
-<body>
-
+<body style="background-image:URL('../../images/qna_background2.jpg')">
 
 
 
@@ -160,11 +159,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <span>Q&A를 통해서 궁금증을 해결하세요.</span>
 </div>
 
-<div id="hr1">
-<hr>
-</div>
-
+<div id="icon_zoom">
 <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+</div>
 
 <div id="qna_label1">
 <div class="alert alert-info" role="alert">여러분들이 자주묻는 질문!</div>
