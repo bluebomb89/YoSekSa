@@ -11,6 +11,7 @@ public class RecipeDTO {
 	private int material_no;
 	private int source_no;
 	private int member_no;
+	
 	private String recipe_sub;
 	public int getRecipe_no() {
 		return recipe_no;
