@@ -7,7 +7,7 @@ public class NoticeDTO {
 	private int board_no;
 	private int member_no;
 	private String notice_sub;
-	private String notive_content;
+	private String notice_content;
 	private Date notice_date;
 	private int notice_hit;
 	public int getNotice_no() {
@@ -35,10 +35,10 @@ public class NoticeDTO {
 		this.notice_sub = notice_sub;
 	}
 	public String getNotive_content() {
-		return notive_content;
+		return notice_content;
 	}
 	public void setNotive_content(String notive_content) {
-		this.notive_content = notive_content;
+		this.notice_content = notive_content;
 	}
 	public Date getNotice_date() {
 		return notice_date;
