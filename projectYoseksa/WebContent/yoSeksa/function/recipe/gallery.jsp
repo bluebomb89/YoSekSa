@@ -167,7 +167,7 @@ css���� �대�몄� �대�곗���쇰� 異�媛����
 			
 				<button type="button" class="btn btn-default"
 					aria-label="Left Align" style="margin-left: 10px;">
-					<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+					<a href="recipe_enroll.jsp"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
 				</button>
 			</div>
 			<!-- /.row -->
