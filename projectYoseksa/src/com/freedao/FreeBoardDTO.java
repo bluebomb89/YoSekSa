@@ -5,6 +5,7 @@ public class FreeBoardDTO {
 	private String free_content;
 	private Date free_date;
 	private int free_hit;
+	
 	public int getFree_no() {
 		return free_no;
 	}
