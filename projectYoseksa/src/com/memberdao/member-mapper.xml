@@ -14,5 +14,4 @@
 		SELECT member_no,member_id,member_pw,nickname,email
 		FROM yoseksa_member
 	</select> -->
-	
 </mapper>
