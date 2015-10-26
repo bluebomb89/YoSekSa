@@ -29,6 +29,7 @@
   width: 100%;
   margin: 0;
   padding: 0;
+  
 }
 #sb-container {
   height: 100%;
@@ -63,7 +64,7 @@ body > #sb-container {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  border: 1px solid #303030;
+  border: 1px solid #00ff40;
 }
 #sb-body-inner {
   position: relative;
@@ -84,7 +85,7 @@ body > #sb-container {
   padding-top: 10px;
 }
 #sb-body, #sb-loading {
-  background-color: #060606; /* should match loading image background color */
+  
 }
 
 /*____________________________________________________________  title & info  */

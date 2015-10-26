@@ -121,9 +121,9 @@ Calendar cal = Calendar.getInstance();
 <head>
 
 <style>
-	a:LINK {color: #fff; font-size: 15pt; text-decoration: none;}
-    a:VISITED {color: #fff; text-decoration: none;}
-    a:ACTIVE {color: #fff; text-decoration: none;}
+	a:LINK {color: #999999; text-decoration: none;}
+    a:VISITED {color: #999999; text-decoration: none;}
+    a:ACTIVE {color: #999999; text-decoration: none;}
     a:HOVER {color: #000000; text-decoration: none;}
 </style>
 
@@ -143,39 +143,39 @@ function addRecipeOnTable()
 		content:'add_recipe_popup.jsp',
 		player:'iframe',
 		title:'ADD NEW RECIPE',
-		width:800,
-		height:600
+		width:600,
+		height:400
 	});
 }
 </script>
 
 </head>
-<body style="background-image: url('../../images/calendar_background.jpg')">
+<body>
 
 <table border='0' width='100%' height="10%" celpadding='0' cellspacing='0'>
   <tr>
-   <td width='33%' align='right' valign='middle'><a href="../../function/calendar/calendar.jsp?month=<%=currMonth%>&year=<%=currYear%>&action=0"><font size="1">Previous Month</font></a></td>
+   <td width='33%' align='right' valign='middle'><a href="cal.jsp?month=<%=currMonth%>&year=<%=currYear%>&action=0"><font size="1">Previous Month</font></a></td>
    <td width='33%' align='center' valign='middle'><b><%=getDateName (cal.get(cal.MONTH)) + " " + cal.get(cal.YEAR)%></b></td>
-   <td width='33%' align='left' valign='middle'><a href="../../function/calendar/calendar.jsp?month=<%=currMonth%>&year=<%=currYear%>&action=1"><font size="1">Next Month</font></a></td>
+   <td width='33%' align='left' valign='middle'><a href="cal.jsp?month=<%=currMonth%>&year=<%=currYear%>&action=1"><font size="1">Next Month</font></a></td>
   </tr>
 </table>
 <table border="0" width="100%" height="90%" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" cellspacing="0">
   <td width="100%" height="90%">
-    <table id="mealtable" border="0" width=100% height="90%" style="border-collapse: collapse;background-color: rgba( 255, 255, 255, 0 )" bordercolor="#f4f4f4" cellpadding="10" cellspacing="0" >
-     <tr style="border-bottom: solid 1px;border-bottom-color: rgba( 255, 255, 255, 0.2">
-          <td width="14%" align="center" nowrap bordercolor="#666666" style="background-color: rgba( 255, 255, 255, 0 )">
+    <table id="mealtable" border="1" width=100% height="90%" style="border-collapse: collapse" bordercolor="#f4f4f4" cellpadding="0" cellspacing="0" bgcolor="#DFDCD8">
+     <tr>
+          <td width="14%" align="center" nowrap bordercolor="#666666" bgcolor="#ff8181">
           <font color="#FFFFFF"><b>Sun</b></font></td>
-          <td width="14%" align="center" nowrap bordercolor="#666666" style="background-color: rgba( 255, 255, 255, 0 )">
+          <td width="14%" align="center" nowrap bordercolor="#666666" bgcolor="#81c5ff">
           <font color="#FFFFFF"><b>Mon</b></font></td>
-          <td width="14%" align="center" nowrap bordercolor="#666666" style="background-color: rgba( 255, 255, 255, 0 )">
+          <td width="14%" align="center" nowrap bordercolor="#666666" bgcolor="#81c5ff">
           <font color="#FFFFFF"><b>Tues</b></font></td>
-          <td width="14%" align="center" nowrap bordercolor="#666666" style="background-color: rgba( 255, 255, 255, 0 )">
+          <td width="14%" align="center" nowrap bordercolor="#666666" bgcolor="#81c5ff">
          <font color="#FFFFFF"><b>Wed</b></font></td>
-          <td width="14%" align="center" nowrap bordercolor="#666666" style="background-color: rgba( 255, 255, 255, 0 )">
+          <td width="14%" align="center" nowrap bordercolor="#666666" bgcolor="#81c5ff">
           <font color="#FFFFFF"><b>Thurs</b></font></td>
-          <td width="14%" align="center" nowrap bordercolor="#666666" style="background-color: rgba( 255, 255, 255, 0 )">
+          <td width="14%" align="center" nowrap bordercolor="#666666" bgcolor="#81c5ff">
           <font color="#FFFFFF"><b>Fri</b></font></td>
-          <td width="14%" align="center" nowrap bordercolor="#666666" style="background-color: rgba( 255, 255, 255, 0 )">
+          <td width="14%" align="center" nowrap bordercolor="#666666" bgcolor="#81c5ff">
           <font color="#FFFFFF"><b>Sat</b></font></td>
      </tr>
 <%
@@ -185,7 +185,6 @@ function addRecipeOnTable()
 
    int currDay;
    String todayColor;
-   String bgStyle;
    int count = 1;
    int dispDay = 1;
 
@@ -214,15 +213,13 @@ function addRecipeOnTable()
                if ( dispDay == c.get(c.DAY_OF_MONTH) && c.get(c.MONTH) == cal.get(cal.MONTH) && c.get(c.YEAR) == cal.get(cal.YEAR)) // Here we check to see if the current day is today
                     {
                      todayColor = "#ffe17b";
-                     bgStyle="background-color: rgba( 255, 255, 255, 0.2 )";
                   }
                   else
                   {
                      todayColor = "#ffffff";
-                     bgStyle="background-color: rgba( 255, 255, 255, 0 );color:#FFFFFF";
                   }
 %> 
-      <td style="<%=bgStyle %>" align="left" valign="top">&nbsp;<a href="#" onclick="addRecipeOnTable()"><%=dispDay%></a><br>
+      <td bgcolor ="<%=todayColor%>" align="left" valign="top">&nbsp;<a href="#" onclick="addRecipeOnTable()"><%=dispDay%></a><br>
       </td>
 <%
                count += 1;

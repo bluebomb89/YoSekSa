@@ -5,9 +5,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link href="../../css/add_recipe_popup.css" type="text/css" rel="stylesheet" media="all">
+
+
 <title>Add Recipe</title>
 </head>
-<body>
+<body style="background-color: rgba( 255, 255, 255, 0 );">
+
+
 
 
 <div id="addRecipeOnTable">	
@@ -20,8 +24,26 @@
      <input type="radio" name="bld" value="Dinner">Dinner
      <br><br>
         &nbsp;날짜 : <input type="date" name="date"><br><br>
-        &nbsp;요리명 : <input type="text" name="recipe">&nbsp;<input type="submit" value="추가">
+        &nbsp;요리명 : <input type="text" name="recipe" class="form_input_recipe">&nbsp;<input type="submit" value="추가">
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
