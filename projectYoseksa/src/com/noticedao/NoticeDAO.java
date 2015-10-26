@@ -1,7 +1,23 @@
 package com.noticedao;
 
+import java.io.*;
+import java.util.*;
+
+import org.apache.ibatis.*;
+import org.apache.ibatis.io.*;
+import org.apache.ibatis.session.*;
+
 public class NoticeDAO {
-	public static void main(String[] args){
-		System.out.println("메인지우고 DAO,DTO 코딩");
+	private static SqlSessionFactory ssf;
+	static{
+		try{
+			Reader reader=Resources.getResourceAsReader("Config.xml");
+			ssf=new SqlSessionFactoryBuilder().build(reader);
+		}catch(Exception ex){
+			System.out.println(ex.getMessage());
+		}
+	}
+	public List<NoticeDTO> empAllData(){
+		return ssf.openSession().selectList("empAllData");
 	}
 }

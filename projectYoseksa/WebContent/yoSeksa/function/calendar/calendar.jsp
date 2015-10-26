@@ -129,8 +129,9 @@ Calendar cal = Calendar.getInstance();
 
 
 <link href="../../css/meal_table.css" type="text/css" rel="stylesheet" media="all">
-<link rel="stylesheet" type="text/css" href="../../shadow/css/shadowbox.css"/>
-<script type="text/javascript" src="../../shadow/js/shadowbox.js"></script>
+<link rel="stylesheet" type="text/css" href="../../shadow_calendar/css/shadowbox.css"/>
+<link href="../../css/calendar.css" type="text/css" rel="stylesheet" media="all">
+<script type="text/javascript" src="../../shadow_calendar/js/shadowbox.js"></script>
 
 <script type="text/javascript">
 Shadowbox.init({
