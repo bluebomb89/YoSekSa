@@ -1,5 +1,7 @@
 package com.freedao;
 import java.util.*;
+import java.util.*;
+
 public class FreeBoardDTO {
 	private int board_no;
 	private int free_no;
