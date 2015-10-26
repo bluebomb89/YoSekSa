@@ -104,3 +104,8 @@ h1 span {color:red}
     transform: scale(1.15) translate3d(75px, -25px, 0);
   }
 }
+.navbar-nav > li > .dropdown-menu {
+    left: 15px;
+}
+
+
