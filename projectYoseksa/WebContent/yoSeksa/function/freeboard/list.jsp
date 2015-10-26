@@ -169,12 +169,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body  class="cbp-spmenu-push">
 		<!--bottom-->
-		                   <button type="button" class="btn btn-primary btn-lg" style="margin-top: 70px;margin-left: 50px;"data-toggle="modal" data-target="#myModal">
-               등록
+		    <button type="button" class="btn btn-primary btn-lg" style="margin-top: 70px;
+		       margin-left: 50px;"data-toggle="modal" data-target="#myModal">등록
             </button>
             	
                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                 <h4 align="center" style="margin-top: 60px;">자유게시판</h4>
+                 <h4 align="center" style="margin-top: 60px; font-size: 17px; color:#544D4D">글 작성</h4>
                  <div class="modal-body">
                        <textarea name="board_tx" class="form-control" placeholder="내용" style="height: 210px; width: 446px;margin-left: 80px; border:1px solid #CACACA;
                            background-color: rgba(255, 255, 255, 0);"></textarea>
@@ -195,7 +195,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
                      </div>
                      <div class="modal-footer" style="margin-top:10px; margin-right: 70px;" >
-                       <button type="button" class="btn btn-primary">등록</button>
+                       <button type="button" class="btn btn-primary" >등록</button>
                        <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
                      </div>
                </div>   
