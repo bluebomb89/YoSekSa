@@ -153,15 +153,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어주면 된다.
 -->
-	<form name="insFrm" id="insFrm" method="post" style="height: 1996px;">
+	<form name="insFrm" id="insFrm" method="post" style="height: 1996px;margin-left: 30px;margin-top: 100px;">
 		<div class="container recipe_regi"
-			style="margin-top: 60px; margin-left: 11px; margin-right: 11px; width: 1240px; padding-left: 0px; padding-right: 0px;">
+			style="margin-top: 60px; margin-left: 11px; margin-right: 11px; width: 1140px; padding-left: 0px; padding-right: 0px;">
 			<div class="regi_center" style="height: 1870px;">
 				<div id="regi_title">
 					Wirte Recipe</b>
 				</div>
 				<div class="cont_box pad_l_60" style="height: 422px;">
-					<div id="divMainPhotoUpload" class="cont_pic2">
+					<div id="divMainPhotoUpload" class="cont_pic2" style="
+    margin-right: 10px;">
 						<div style="position: absolute; left: -3000px">
 							<input type="file" name="q_main_file" id="q_main_file"
 								file_gubun="main" accept="jpeg,png,gif"
