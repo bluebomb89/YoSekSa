@@ -144,9 +144,26 @@
 <script src="../../js/easing.js"></script>
 <script src="../../js/bootstrap.js"></script> 
 <!--/script-->
+<script type="text/javascript">
+	$(document).ready(function() {
+		/* affix the navbar after scroll below header */
+		$('#nav').affix({
+			offset: {top: $('header').height()-$('#nav').height()}
+		});
+		
+		/* affix-top 에서 affix로 수정될대 이벤트 발생*/
+		$('#nav').on("affix.bs.affix",function(){
+			$("#startmain").text("haa!");
+		});
+		/* affix에서 affix-top으로 전환될때 이벤트 발생*/
+		$('#nav').on("affix-top.bs.affix",function(){
+			$("#startmain").text("Search");
+		});
+	});
+</script>
 </head>
 <body class="cbp-spmenu-push">
-	<script src="../../js/classie.js"></script>
+
 
 	<!---->
 	<!--  style.css안에 이미지 추가해서 div class이름에 넣어라. 이미지는 전체적으로 style.css안에. 
@@ -173,45 +190,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 	
 <!-- jQuery (necessary JavaScript plugins) -->
-<script type="text/javascript"
-	src="http://recipe.ezmember.co.kr/static/js/jquery-1.11.2.min.js"
-	charset="utf-8"></script>
 <!-- Custom Theme files -->
 <!-- <link href="../../css/style.css" type="text/css" rel="stylesheet" media="all"> -->
 
 <!-- Custom Theme files -->
 <!-- //footer -->
-<script src="../../js/saved_resource"></script>
-<script src="../../js/jquery.min.js"></script>
-<script src="../../js/bootstrap.min.js"></script>
-<script src="../../js/modernizr.custom.js"></script>
-<script src="../../js/jquery-1.11.1.min.js"></script>
-<script src="../../js/responsiveslides.min.js"></script>
-<script src="../../js/jquery.cycle.all.js"></script>
-<script src="../../js/owl.carousel.js"></script>
-<script src="../../js/owl.carousel.min.js"></script>
-<!--/animated-css-->
-<script src="../../js/move-top.js"></script>
-<script src="../../js/easing.js"></script>
-<script src="../../js/bootstrap.js"></script> 
-<!--/script-->
-<script type="text/javascript">
-	$(document).ready(function() {
-		/* affix the navbar after scroll below header */
-		$('#nav').affix({
-			offset: {top: $('header').height()-$('#nav').height()}
-		});
-		
-		/* affix-top 에서 affix로 수정될대 이벤트 발생*/
-		$('#nav').on("affix.bs.affix",function(){
-			$("#startmain").text("haa!");
-		});
-		/* affix에서 affix-top으로 전환될때 이벤트 발생*/
-		$('#nav').on("affix-top.bs.affix",function(){
-			$("#startmain").text("Search");
-		});
-	});
-</script>
+
 
 	<!--script-->
 	<div class="container"
