@@ -6,50 +6,35 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <title>Flooring a Interior category Flat Bootstarp Responsive Website Template | Home :: w3layouts</title>
-<link href="../../css/bootstrap_taejin.css" type="text/css" rel="stylesheet" media="all">
+<link href="../../css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="../../css/component.css" rel="stylesheet" type="text/css"  />
 <!-- jQuery (necessary JavaScript plugins) -->
 <!-- Custom Theme files -->
 <link href="../../css/style.css" type="text/css" rel="stylesheet" media="all">
-<link href="../../css/style_taejin.css" type="text/css" rel="stylesheet" media="all">
 <link href="../../css/bootstrapTheme.css" rel="stylesheet">
+<link href="../../css/style1.css" type="text/css" rel="stylesheet" media="all">
 <link href="../../css/custom.css" rel="stylesheet">
 <link href="../../css/owl.carousel.css" rel="stylesheet">
 <link href="../../css/owl.theme.css" rel="stylesheet">
+<link href="../../css/index.css" rel="stylesheet">
 <link href="../../css/listwrite.css" rel="stylesheet">
 <!-- Custom Theme files -->
 <!--//theme-style-->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Flooring Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //footer -->
-<script type="text/javascript" src="js/saved_resource"></script>
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script src="../../js/saved_resource"></script>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
 <script src="../../js/modernizr.custom.js"></script>
 <script src="../../js/jquery-1.11.1.min.js"></script>
 <script src="../../js/responsiveslides.min.js"></script>
-<script type="text/javascript" src="js/jquery.cycle.all.js"></script>
+<script src="../../js/jquery.cycle.all.js"></script>
 <script src="../../js/owl.carousel.js"></script>
 <script src="../../js/owl.carousel.min.js"></script>
-<!--/animated-css-->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
+<script src="../../js/move-top.js"></script>
+<script src="../../js/easing.js"></script>
+<script src="../../js/bootstrap.js"></script> 
 <!--/script-->
-<script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){		
-					event.preventDefault();
-					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
-				});
-			    $('.slideshow').cycle({
-					fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
-				});
-			    
-			});
-</script>
+<!--/script-->
 <script type="text/javascript">
 	$(document).ready(function() {
 		/* affix the navbar after scroll below header */
@@ -65,21 +50,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		$('#nav').on("affix-top.bs.affix",function(){
 			$("#startmain").text("Search");
 		});
-		   $('#myModal').on('shown.bs.modal', function () {
-		        $('#myInput').focus()
-		      })
-	});        
-</script>
-<script>
-    $(function () {
-      $("#slider").responsiveSlides({
-      	auto: true,
-      	nav: true,
-      	speed: 500,
-        namespace: "callbacks",
-        pager: true,
-      });
-    });
+	});
 </script>
 
 <script type="text/javascript">
@@ -853,329 +824,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<script type="text/javascript" src="/resource/script/web/common/socket.io.js"></script>
 <script type="text/javascript" src="http://static.melon.co.kr/static/web/resource/script/w1/fl/7/uot4m6bho9.js"></script>
 <!-- D. 해당 메뉴 관련 공통 스크립트 -->
-<!-- <script type="text/javascript" src="http://static.melon.co.kr/static/web/resource/script/w1/ry/z/13686ujiqt.js"></script> -->
 
-<!-- D. 화면 내부 전용 스크립트 -->
-<script type="text/javascript">
-$(function() {
-	"use strict";
-	var $doc = $(document),
-		WEBSVC = MELON.WEBSVC,
-		PBPGN = MELON.PBPGN,
-		addComma = WEBSVC.number.addComma;
-
-	/* ********************************************************************************
-	 * 앨범이미지 확대
-	 ******************************************************************************** */
-	$("a.photoDetailThumb").click(function(e) {
-		e.preventDefault();
-
-		var $img = $(this).children('img');
-		//window.open('http://image.melon.co.kr' + $img.attr('org_src'), "이미지크게보기", "height=" + screen.height + ", width=" + screen.width + ", toolbar=no, menubar=no, scrollbars=no, resizable=yes, fullscreen=no");
-		MELON.WEBSVC.openPopup('http://image.melon.co.kr' + $img.attr('org_src'), screen.width, screen.height, {
-			'scrollbars':'no',
-			'toolbar' : 'no',
-			'menubar' : 'no',
-			'resizable' : 'yes',
-			'fullscreen' : 'no'
-		}, 'center', '');
-	});
-	// 평점 팝업  Show /hide SEt
-	var checkPopup = true;
-	if( "" == 'Y') {
-		checkPopup = false;
-	}
-	$('div.stPointLayer').on('beforeshow', function(e) {
-		if( !checkPopup ) { // 만약 드롭다운이 띄워지면 안되는 조건일 때,
-			alert("이미 참여하셨습니다.");
-			e.preventDefault(); // 이 부분을 넣어주면 된다.
-			return false;
-		}
-	});
-	 // 댓글 카운트 URL SET
-	 // 리뷰 영역을 확인하여 영역보다 길경우 더보기 노출 및 영역 줄임
-	 melon.show.moreButton('d_video_summary', 203);
-
-	/* ********************************************************************************
-	 * 앨범평점
-	 ******************************************************************************** */
-	$("#d_starRate").starRating().on('changedrate', function(e, val) {
-		setTimeout(function(){  // IE 렌더링 버그 fixed
-			$('#d_rate').html(val.rate.toFixed(1));
-		}, 0);
-	}).on('click', '[data-role=ok]', function(){
-		if(!MELON.WEBSVC.POC.login.isMelonLogin()) {
-			MELON.WEBSVC.POC.login.loginPopupLayerd('');
-			return;
-		}
-		if( "" == 'Y') {
-			alert("이미 참여하셨습니다.");
-			return;
-		}
-		// 서버 로직
-		$.ajax({
-			type:"post",
-			url: '/album/insertAlbumGrade.json',
-			dataType:"json",
-			async:true,
-			data : {
-				albumId: '2646429',
-				evalScore	: $('#d_rate').html()
-			},
-			success:function(obj){
-				if(obj.result.RESULT == '1') {
-					alert("평점을 등록 했습니다.");
-					var vTempCount = MELON.WEBSVC.number.addComma(obj.result.PTCPNMPRCO);
-					$("#gradCountLayer").html(vTempCount+"명");
-					var totalAvgScore = obj.result.TOTAVRGSCORE;
-					var roundScore = parseFloat(totalAvgScore).toFixed(1);
-					$("#gradPointLayer").html(roundScore);
-					var viewValue =(obj.result.TOTAVRGSCORE)*20;
-					$("#contt_evalscore01_view").attr("style", "width:"+viewValue+"%");
-					checkPopup = false;
-				} else if(obj.result.RESULT == '2'){
-					alert("이미 참여하셨습니다.");
-				} else {
-					alert("평정 등록중 오류가  발생했습니다");
-				}
-			},
-			error: function(request,error) {
-				alert("평점 등록중 오류가  발생했습니다");
-			}
-		});
-		$("#d_starRate").hideLayer();
-	});
-
-	// 뮤직비디오 탭
-	$('.section_mv').toggleSlider({
-		type:'count-on',
-		selectors: {
-			tabs: '>div.wrap_page>div.page>span.wrap_btn>a',
-			contents: '>div.wrap_list_mv>ul',
-			nowpages: '>div.wrap_page>div.page>span.page_num>strong',
-			totalpages: '>div.wrap_page>div.page>span.page_num>span'
-		}
-	});
-
-	// 시리즈앨범 탭
-	$('div.section_seris').ajaxToggle({
-		type:'count-on',
-		selectors: {
-			// 버튼 영역 [d_btn]은 공통이기 때문에 특정 클래스를 준다.
-			tabs: 'a.relationBtnTmp',
-			// 현재 페이지 DP 영역
-			nowpages: 'strong.d_now_page',
-			// 토탈 페이지 DP 영역
-			totalpages: 'span.d_total_page',
-			// AJAX 호출후 InnerHtml 해줘야할 영역
-			contents: 'div.wrap_list_seris'
-		}
-	});
-
-	// 좋아요한 사람
-	$('div.section_intst').ajaxToggle({
-		type:'count-on',
-		selectors: {
-			// 버튼 영역 [d_btn]은 공통이기 때문에 특정 클래스를 준다.
-			tabs: 'a.withLikeBtnTmp',
-			// 현재 페이지 DP 영역
-			nowpages: 'strong.d_now_page',
-			// 토탈 페이지 DP 영역
-			totalpages: 'span.d_total_page',
-			// AJAX 호출후 InnerHtml 해줘야할 영역
-			contents: 'div.wrap_list_intst',
-			orderlayer : 'a.orderClass' // 정렬 Layer
-		}
-	});
-	// 좋아요한 사람 정렬 클릭
-	$('a.orderClass').on('click', function(e){
-		$('.list_sort').find(">li").each(function() {
-			$(this).removeClass("on");
-		})
-		$(this).parent().addClass("on");
-		var inputId = this.id;
-		$("a.withLikeBtnTmp").each(function() {
-			$(this).attr("data-orderby-type",inputId);
-		});
-	});
-	/******************SNS *****************/
-	 //페이스북
-    $("#albumFacebook").click(function(){
-    	$.albumName = "솔라감성 Part.1";
-		$.artistName = "솔라 (마마무)";
-		$.imgUrl = $("#albumImgArea img").attr("src");
-		$.menuId = $(this).attr("data-menuId");
-		melon.sns.facebook({
-			type 		: "alb",
-			contsId 	: "2646429",
-			albumName	: $.albumName,
-			artistName  : $.artistName,
-			imgUrl      : $.imgUrl,
-			menuId		: $.menuId
-		});
-    });
-    $("#albumTwitter").click(function(){
-		$.albumName = "솔라감성 Part.1";
-		$.artistName = "솔라 (마마무)";
-		$.menuId = $(this).attr("data-menuId");
-		melon.sns.twitter({
-			type 		: "alb",
-			contsId 	: "2646429",
-			albumName	: $.albumName,
-			artistName  : $.artistName,
-			menuId		: $.menuId
-		});
-	});
-
-
- 	// Banner Info
-	var serverTime = "2015:10:23 11:23:24"; 	// 시간은 서버에서 찍어주세요.(yyyy:MM:dd hh:mm:ss)
-	$(document).on('limitpopup', function( e, cookieId ) {
-		if ( cookieId === 'linebanner01' ) {
-			$('div.line_ban').show();
-			$('div.line_ban').timeLimitSet({cookieType:'array',timeLocation:'local',timeType:'dayafter',selectors:{closebtn:'>button.d_fadeout', checkbox:''}});
-		}
-	});
- 	// 바인드 후에 호출 해야함
-	PBPGN.TimeLimitPopup.init({ cookieType:'array', cookieId:'linebanner01', limitType:'day', serverTime:serverTime });
-
-	$('.btn_ver').on('click', function(){
-		if('0' == "1"){
-			melon.link.goAlbumDetail('');
-		} else {
-			WEBSVC.openPopup('/album/popup/otherAlbumPopup.htm?albumId=2646429', 834, 640);
-		}
-	});
-
-	// 북클릿 소개 배너
-	var bookletBnr = WEBSVC.Cookie.get('commerceBanner2');
-	if (!bookletBnr) {
-		$('.booklet_bnr').show();
-	};
-	$('.booklet_bnr .d_limit_btn').click(function() {
-		var expiresDay = new Date();
-		expiresDay.setDate(expiresDay.getDate() + 100000);
-		$('.booklet_bnr').hide();
-		WEBSVC.Cookie.set('commerceBanner2', true, {expires : expiresDay});
-	});
-
-	// 상단의 좋아요..
-	$('div.like_area button.btn_like_b').on('click', function(){
-		// 131114_수정
-		var $btn = $(this),
-			albumNo = $btn.attr('data-album-no'),
-			menuId = $btn.attr('data-album-menuId'),
-			title = $btn.attr('title').split(' 좋아요'),
-			isLike = $btn.hasClass('on'), doLike = !isLike,
-			addComma = WEBSVC.number.addComma,
-			$target = (function(){
-				var targetId = $btn.attr('data-target-id');
-				if(!targetId) { return $btn; }
-				targetId = targetId.substr(0, 1) === '#' ? targetId : '#' + targetId;
-				return $(targetId);
-			})(),
-			defer, event;
-
-		$btn.trigger((event = $.Event('likebefore')), [albumNo, doLike]);
-		if(event.isDefaultPrevented()){ return; }
-
-		if(isLike) {
-			WEBSVC.alert2('좋아요 취소되었습니다.',{opener :$btn, removeOnClose:true});
-			defer = WEBSVC.AlbumList.dislike(albumNo,menuId)
-		} else {
-			defer = WEBSVC.AlbumList.like(albumNo,menuId);
-		}
-
-		defer.done(function(json) {
-
-			if(json.result === true) {
-				$btn.trigger((event = $.Event('likechanged')), [albumNo, title[0], doLike, json.data.SUMMCNT.toString().replace(/(\d)(?=(?:\d{3})+$)/g, "$1,")]);
-				if(event.isDefaultPrevented()){ return; }
-
-				$btn[doLike ? 'addClass' : 'removeClass']('on').attr('title', title[0] + (doLike ? ' 좋아요 취소' : ' 좋아요'));
-
-				$target.html(json.data.SUMMCNT.toString().replace(/(\d)(?=(?:\d{3})+$)/g, "$1,"));
-				doLike && WEBSVC.alert2('좋아요 반영되었습니다.',{opener :$btn, removeOnClose:true});
-				loadTopLike();
-				loadBottomLike();
-				loadLikeUserTotCount();
-			} else {
-				alert(json.errorMessage);
-			}
-		}).fail(function(msg){
-			alert(msg);
-		});
-	});
-
-	function loadTopLike() {
-		$.ajax({
-			url: '/album/albumTopLikeUser.htm',
-			data: {
-				contsId : '2646429',
-				viewPage : '1'
-			},
-			async : false
-		}).done(function(html) {
-			$('#albumTopLikeUserLayer').html(html);
-		});
-	}
-
-	function loadBottomLike() {
-		$.ajax({
-			url: '/album/withLikeUser.htm',
-			data: {
-				contsId : '2646429',
-				viewPage : '1'
-			},
-			async : false
-		}).done(function(html) {
-			$('.wrap_list_intst').html(html);
-		});
-	}
-	function loadLikeUserTotCount() {
-		$.ajax({
-			url: '/album/withLikeUser.json',
-			dataType:"json",
-			data: {
-				contsId : '2646429',
-				viewPage : '1'
-			},
-			async : false
-		}).done(function(json) {
-
-			if(json.withLikeListTotCountPg == 0)
-				$("#bottomListUserLayer").hide();
-			else
-				$("#bottomListUserLayer").show();
-
-			$("#withLikeBtnTmp1").attr("data-limit-count",json.withLikeListTotCountPg);
-			$("#withLikeBtnTmp2").attr("data-limit-count",json.withLikeListTotCountPg);
-			$('div.section_intst').ajaxToggle({
-				type:'count-on',
-				selectors: {
-					// 버튼 영역 [d_btn]은 공통이기 때문에 특정 클래스를 준다.
-					tabs: 'a.withLikeBtnTmp',
-					// 현재 페이지 DP 영역
-					nowpages: 'strong.d_now_page',
-					// 토탈 페이지 DP 영역
-					totalpages: 'span.d_total_page',
-					// AJAX 호출후 InnerHtml 해줘야할 영역
-					contents: 'div.wrap_list_intst',
-					orderlayer : 'a.orderClass' // 정렬 Layer
-				}
-			});
-		});
-	}
-
-});
-function goArtist(obj){
-	location.href="/artist/detail.htm?artistId="+obj;
-}
-function goReview(){
-	var position = $("#section_rvew").offset();
-	$("html, body").animate({scrollTop : position.top}, 0);
-}
-</script>
 <script type="text/javascript">document.domain='melon.com';</script>
 <!-- 플러그인 스크립트 -->
 <script type="text/javascript" src=" http://cmt.melon.com/cmt/plugin/release/melonweb_cmtpgn_pc_sumry_type.js"></script>
@@ -1184,9 +833,6 @@ function goReview(){
 	</div>
 	<!-- footer -->
 	<div id="footer" class="my_fold">
-		<div class="btn_top_wrap" style="position: fixed; display: none;">
-			<a href="#skip_nav" class="btn_top" title="맨 위로 가기" style=""><span>맨 위로 가기</span></a>
-		</div>
 
 		
 		
@@ -1256,26 +902,6 @@ function goReview(){
 	</div>
 	<!-- //footer -->
 </div>
-
-	
-	<!--  요기까징 -->
-	<!---->
-<!--  style.css안에 이미지 추가해서 div class이름에 넣어라. 이미지는 전체적으로 style.css안에. 
 	  
-.bannersearch{
-	background:url(../images/bannersearch.jpg) no-repeat 0px 0px;
-	background-size:100% 100%;
-	min-height:895px;
-}
-
-css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어주면 된다.
--->
-
-<!---->
-<!----> 
-<!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../../js/bootstrap.js"></script>	  
 </body>
 </html>
