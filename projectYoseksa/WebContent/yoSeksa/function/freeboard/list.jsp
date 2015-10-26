@@ -176,12 +176,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                  <h4 align="center" style="margin-top: 60px;">자유게시판</h4>
                  <div class="modal-body">
-                       <textarea name="board_tx" class="form-control" placeholder="내용" style="height: 210px; width: 446px;margin-left: 80px;
+                       <textarea name="board_tx" class="form-control" placeholder="내용" style="height: 210px; width: 446px;margin-left: 80px; border:1px solid #CACACA;
                            background-color: rgba(255, 255, 255, 0);"></textarea>
 							<div class="write_pic2" style="width: 400px; margin-top: 5px;">
 								<input type="file" name="file" id="file_1"
 									style="display: none;" />
-								<div class="complete_pic" id="previewId" style="width: 70px; height: 70px; color: black; font-size: 9pt; margin-left: 80px; border: 1px solid #F43C60; margin-bottom: 10px;">
+								<div class="complete_pic" id="previewId" style="width: 70px; height: 70px; 
+								color: black; font-size: 9pt; margin-left: 80px; border: 1px solid #F43C60;
+								 margin-bottom: 10px; border: 1px solid #CACACA">
 									<!-- <img src="../../images/photo-image.jpg" alt="파일첨부" width="70" height="70"
 										onclick="document.getElementById('file_1').click();"
 										style="cursor: pointer; margin-left:80px;"/> -->
