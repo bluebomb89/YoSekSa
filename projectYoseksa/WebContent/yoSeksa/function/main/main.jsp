@@ -50,7 +50,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<ul class="dropdown-menu">
 									<li><a href="main.jsp?no=2">about1</a></li>
 									<li><a href="main.jsp?no=2">about2</a></li>
-									<li><a href="main.jsp?no=2">about3</a></li>           
+									<li><a href="main.jsp?no=8">레시피 내용보기</a></li>           
 								</ul>
 							</li>
 							<li><a href="main.jsp?no=1">캘린더</a></li>

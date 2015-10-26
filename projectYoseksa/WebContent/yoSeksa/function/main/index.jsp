@@ -46,6 +46,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="../../js/bootstrap.js"></script> 
 <!--/script-->
 <script type="text/javascript">
+	$(document).ready(function() {
+		/* affix the navbar after scroll below header */
+		$('#nav').affix({
+			offset: {top: $('header').height()-$('#nav').height()}
+		});
+		
+		/* affix-top 에서 affix로 수정될대 이벤트 발생*/
+		$('#nav').on("affix.bs.affix",function(){
+			$("#startmain").text("haa!");
+		});
+		/* affix에서 affix-top으로 전환될때 이벤트 발생*/
+		$('#nav').on("affix-top.bs.affix",function(){
+			$("#startmain").text("Search");
+		});
+	});
+</script>
+<script type="text/javascript">
 	jQuery(document).ready(function($) {
 		$(".scroll").click(function(event){		
 			event.preventDefault();
@@ -89,23 +106,6 @@ $(document).ready(function() {
 	  $("#startmain").click(function(){
 		  	owl.trigger('owl.play',1500);
 		  })	 
-	});
-</script>
-<script type="text/javascript">
-	$(document).ready(function() {
-		/* affix the navbar after scroll below header */
-		$('#nav').affix({
-			offset: {top: $('header').height()-$('#nav').height()}
-		});
-		
-		/* affix-top 에서 affix로 수정될대 이벤트 발생*/
-		$('#nav').on("affix.bs.affix",function(){
-			$("#startmain").text("haa!");
-		});
-		/* affix에서 affix-top으로 전환될때 이벤트 발생*/
-		$('#nav').on("affix-top.bs.affix",function(){
-			$("#startmain").text("Search");
-		});
 	});
 </script>
 <script>

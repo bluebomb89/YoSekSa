@@ -1,17 +1,10 @@
 package com.memberdao;
 import java.io.Reader;
-import java.sql.*;
-import javax.sql.*;
-
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import com.memberdao.MemberDTO;
-
-import oracle.jdbc.OracleTypes;
-
-import javax.naming.*;
 import java.util.*;
 
 public class MemberDAO {
