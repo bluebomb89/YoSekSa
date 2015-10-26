@@ -162,3 +162,19 @@ header {
 .cbp-spmenu-push{
 	position: absolute;
 }
+
+
+.top_title {
+    border-top: 2px solid #666;
+    border-bottom: 1px solid #e6e7e8;
+    position: relative;
+    padding: 18px 10px;
+    margin: 12px 0 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.top_title_r {
+    position: absolute;
+    right: 0;
+    top: 16px;
+}
