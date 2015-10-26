@@ -151,7 +151,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		window.onunload=saveswitchstate
 </script>
 </head>
-<body style="background-image:URL('../../images/qna_background2.jpg')">
+<body style="background-image:URL('../../images/qna_background.jpg')">
 
 
 
