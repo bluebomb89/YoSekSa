@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.memberdao.member-mapper">
-	<!-- <insert id="memberInsert">
-		INSERT INTO yoseksa_member 
+	
+	<insert id="memberInsert" parameterType="Member">
+		<selectKey keyProperty="member_no" resultType="int" order="BEFORE">
+			SELECT NVL(MAX(member_no)+1,1) ad member_no FROM yoseksa_member
+		</selectKey>
+		INSERT INTO yoseksa_member(member_no,member_id,member_pw,nickname,email,member_pic) 
 		VALUES(#{member_no},#{member_id},#{member_pw},#{nickname},#{email},#{member_pic})
-	</insert> -->
-	<select id="memberAllData" resultType="Member">
+	</insert>
+	
+	<!-- <select id="memberAllData" resultType="Member">
 		SELECT member_no,member_id,member_pw,nickname,email
 		FROM yoseksa_member
-	</select>
+	</select> -->
+	
 </mapper>
