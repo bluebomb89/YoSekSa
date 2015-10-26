@@ -1,55 +1,50 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+
+<!DOCTYPE html>
+<!-- saved from url=(0053)http://www.melon.com/album/detail.htm?albumId=2646527 -->
+<html lang="ko">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-<title>Flooring a Interior category Flat Bootstarp Responsive Website Template | Home :: w3layouts</title>
-<link href="../../css/bootstrap_taejin.css" type="text/css" rel="stylesheet" media="all">
+<!-- css -->
+<link href="../../css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="../../css/component.css" rel="stylesheet" type="text/css"  />
 <!-- jQuery (necessary JavaScript plugins) -->
 <!-- Custom Theme files -->
 <link href="../../css/style.css" type="text/css" rel="stylesheet" media="all">
-<link href="../../css/style_taejin.css" type="text/css" rel="stylesheet" media="all">
 <link href="../../css/bootstrapTheme.css" rel="stylesheet">
+<link href="../../css/style1.css" type="text/css" rel="stylesheet" media="all">
 <link href="../../css/custom.css" rel="stylesheet">
 <link href="../../css/owl.carousel.css" rel="stylesheet">
 <link href="../../css/owl.theme.css" rel="stylesheet">
-<link href="../../css/listwrite.css" rel="stylesheet">
-<!-- Custom Theme files -->
-<!--//theme-style-->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Flooring Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<link href="../../css/index.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../../css/font.css">
+<link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/recipe_content.css">
+<link rel="stylesheet" href="../../css/list/b0zjmc9xwx.css" type="text/css">
+<link rel="stylesheet" href="../../css/list/kt3ych75bx.css" type="text/css">
+<!-- 댓글 css 파일 네임 변경 -->
+<link rel="stylesheet" href="../../css/list/ktwzk0vhtx.css" type="text/css"> 
+<link rel="stylesheet" href="../../css/list/melonweb_album.css" type="text/css">
+<link rel="stylesheet" href="../../css/list/ggong.css" type="text/css">
+<!-- script -->
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //footer -->
-<script type="text/javascript" src="js/saved_resource"></script>
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<script src="../../js/saved_resource"></script>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
 <script src="../../js/modernizr.custom.js"></script>
 <script src="../../js/jquery-1.11.1.min.js"></script>
 <script src="../../js/responsiveslides.min.js"></script>
-<script type="text/javascript" src="js/jquery.cycle.all.js"></script>
+<script src="../../js/jquery.cycle.all.js"></script>
 <script src="../../js/owl.carousel.js"></script>
 <script src="../../js/owl.carousel.min.js"></script>
 <!--/animated-css-->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
+<script src="../../js/move-top.js"></script>
+<script src="../../js/easing.js"></script>
+<script src="../../js/bootstrap.js"></script> 
 <!--/script-->
-<script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){		
-					event.preventDefault();
-					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
-				});
-			    $('.slideshow').cycle({
-					fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
-				});
-			    
-			});
-</script>
 <script type="text/javascript">
 	$(document).ready(function() {
 		/* affix the navbar after scroll below header */
@@ -65,107 +60,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		$('#nav').on("affix-top.bs.affix",function(){
 			$("#startmain").text("Search");
 		});
-		   $('#myModal').on('shown.bs.modal', function () {
-		        $('#myInput').focus()
-		      })
-	});        
+	});
 </script>
-<script>
-    $(function () {
-      $("#slider").responsiveSlides({
-      	auto: true,
-      	nav: true,
-      	speed: 500,
-        namespace: "callbacks",
-        pager: true,
-      });
-    });
-</script>
-
-<script type="text/javascript">
-       function previewImage(targetObj, previewId) {
-
-        var preview = document.getElementById(previewId); //div id   
-        var ua = window.navigator.userAgent;
-
-        if (ua.indexOf("MSIE") > -1) {//ie일때
-
-            targetObj.select();
-
-            try {
-                var src = document.selection.createRange().text; // get file full path 
-                var ie_preview_error = document
-                        .getElementById("ie_preview_error_" + previewId);
-
-                if (ie_preview_error) {
-                    preview.removeChild(ie_preview_error); //error가 있으면 delete
-                }
-
-                var img = document.getElementById(previewId); //이미지가 뿌려질 곳 
-
-                img.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='"
-                        + src + "', sizingMethod='scale')"; //이미지 로딩, sizingMethod는 div에 맞춰서 사이즈를 자동조절 하는 역할
-            } catch (e) {
-                if (!document.getElementById("ie_preview_error_" + previewId)) {
-                    var info = document.createElement("<p>");
-                    info.id = "ie_preview_error_" + previewId;
-                    info.innerHTML = "a";
-                    preview.insertBefore(info, null);
-                }
-            }
-        } else { //ie가 아닐때
-            var files = targetObj.files;
-            for ( var i = 0; i < files.length; i++) {
-
-                var file = files[i];
-
-                var imageType = /image.*/; //이미지 파일일경우만.. 뿌려준다.
-                if (!file.type.match(imageType))
-                    continue;
-
-                var prevImg = document.getElementById("prev_" + previewId); //이전에 미리보기가 있다면 삭제
-                if (prevImg) {
-                    preview.removeChild(prevImg);
-                }
-
-                var img = document.createElement("img"); //크롬은 div에 이미지가 뿌려지지 않는다. 그래서 자식Element를 만든다.
-                img.id = "prev_" + previewId;
-                img.classList.add("obj");
-                img.file = file;
-                img.style.width = '80px'; //기본설정된 div의 안에 뿌려지는 효과를 주기 위해서 div크기와 같은 크기를 지정해준다.
-                img.style.height = '80px';
-                
-                preview.appendChild(img);
-
-                if (window.FileReader) { // FireFox, Chrome, Opera 확인.
-                    var reader = new FileReader();
-                    reader.onloadend = (function(aImg) {
-                        return function(e) {
-                            aImg.src = e.target.result;
-                        };
-                    })(img);
-                    reader.readAsDataURL(file);
-                } else { // safari is not supported FileReader
-                    //alert('not supported FileReader');
-                    if (!document.getElementById("sfr_preview_error_"
-                            + previewId)) {
-                        var info = document.createElement("p");
-                        info.id = "sfr_preview_error_" + previewId;
-                        info.innerHTML = "not supported FileReader";
-                        preview.insertBefore(info, null);
-                    }
-                }
-            }
-        }
-    }
-</script>
-
-
-
-
-
-<!--script-->
-
 </head>
 <body  class="cbp-spmenu-push">
 		<!--bottom-->
