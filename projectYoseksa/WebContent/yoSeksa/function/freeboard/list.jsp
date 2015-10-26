@@ -89,7 +89,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<script src="js/classie.js"></script>
 
 	<!-- 페이지 가운데 -->
-	<html lang="ko"><head>
+
 		
 	
 	
@@ -110,7 +110,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	
 		
 		
-		<link rel="alternate" href="android-app://com.iloen.melon/melonapp/details/album/15920">
+		<link rel="alternate" href="android-app://com.iloen.melon/melonapp/details/album/2646429">
 		
 		
 	
@@ -151,7 +151,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   	
 	
 	
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
 	<script>window.jQuery || document.write('<script type="text/javascript" src="/resource/script/web/common/jquery-1.9.1.min.js"><\/script>')</script>
 	<script type="text/javascript" src="http://member.melon.com/resource/script/web/member/melonweb_member_external.js?tm=20150722"></script>
 	<script type="text/javascript" src="http://static.melon.co.kr/static/web/resource/script/w1/qo/z/uoipb1qotx.js"></script> 
@@ -409,11 +409,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div id="conts_section" class="my_fold">
 			<!-- contents -->
 			
-				<div id="conts" class="clfix ban"> <!-- 띠배너일때 ban 클래스 추가 -->
+				<div id="conts" class="clfix ban"> 
 					
-					<!-- 띠배너 -->
 					
-					<!-- //띠배너 -->
+					
+					
 					<!-- 앨범 기본 정보 -->
 					
 <div class="wrap_dtl_album">
@@ -431,18 +431,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	"@context": "http://schema.org",
 	"@type": "MusicAlbum",
 	"url": [
-			"http://www.melon.com/album/detail.htm?albumId=15920",
-			"android-app://com.iloen.melon/melonapp/details/album/15920"
+			"http://www.melon.com/album/detail.htm?albumId=2646429",
+			"android-app://com.iloen.melon/melonapp/details/album/2646429"
 	],
-	"image": "http://image.melon.co.kr/cm/album/images/000/15/920/15920.jpg",
-	"name": "Choose My Life-U",
-	"sameAs": "http://www.melon.com/album/detail.htm?albumId=15920",
-	"description": "",
+	"image": "http://image.melon.co.kr/cm/album/images/026/46/429/2646429.jpg",
+	"name": "솔라감성 Part.1",
+	"sameAs": "http://www.melon.com/album/detail.htm?albumId=2646429",
+	"description": "&lt;div&gt;	&lt;strong&gt;지금 이순간, 솔라감성&lt;/strong&gt;&lt;/div&gt;&lt;div&gt;	&lt;strong&gt;- 솔라만의 정서를 담아낸 [솔라감성]이 주는 여운&lt;/strong&gt;&lt;/div&gt;&lt;div&gt;	&lt;strong&gt;- &amp;#39;보컬리스트&amp;#39; 솔라가 풀어낸 소박하고 담담한 힐링 음원&lt;/strong&gt;&lt;br /&gt;	&lt;br /&gt;	마마무 솔라가 23일 자정, [솔라감성 Part.1] &amp;quot;바보처럼 살았군요&amp;quot;의 음원을 공개했다. &amp;#39;유쾌하고 친구 같은, 그러나 무대 위에선 개성있는 모습으로 노련하게 무대를 즐길 줄 아는 실력파 걸그룹&amp;#39; 이라는 수식어가 붙으며 지난 여름 걸그룹 대전에서 단숨에 대세로 떠오른 마마무의 메인보컬 솔라가 이번에는 감성적인 음원으로 화려하게 무대를 오르는 &amp;#39;아이돌&amp;#39;의 모습이 아닌, 지치고 힘든 스케줄 속에서도 음악을 통해 치유를 받는 &amp;#39;솔라&amp;#39;의 진짜 모습을 담아냈다.&lt;br /&gt;	&lt;br /&gt;	[솔라감성 Part.1] &amp;quot;바보처럼 살았군요&amp;quot;는 잔잔한 피아노 반주에 담담하게 불러낸 솔라의 목소리가 더해져 깊은 울림을 선사한다. 자신이 태어난 해보다 훨씬 이전에 발표된 원곡을 자신만의 정서로 재해석하며 기존 마마무의 음원과는 또 다른 소박하고 차분한 매력으로 다가온 것. &amp;quot;바보처럼 살았군요&amp;quot;는 실제로 솔라에게 &amp;#39;힐링&amp;#39;이 되어준 음악이다. 솔라는 팬카페를 통해 &amp;#39;후회스러웠던 일들, 초침 흘러가듯 똑같이 흘러가는 일상들, 그 일상에서 놓친 많은 것들에 대해 생각하며 불렀기에 이 노래로 위로도 받고 힐링이 되었다&amp;#39;라고 밝히며 &amp;#39;늘 받기만 하는 팬들에게 주는 작은 선물이었으면 좋겠다&amp;#39;는 진심을 전했다.&lt;br /&gt;	&lt;br /&gt;	[솔라감성]은 &amp;quot;바보처럼 살았군요&amp;quot;를 시작으로, 솔라에게 &amp;#39;힐링&amp;#39;이 되어준, 그리고 팬들에게 &amp;#39;힐링&amp;#39;이 되어줄 음원을 시리즈로 선보일 예정이다. 자신의 감성을 탄탄히 쌓아갈수록 더욱더 진한 감동으로 다가올 앞으로의 음악들이 더 기대가 되는 이유는 아티스트가 가지는 음악 앞에서의 &amp;#39;진지함&amp;#39;이 만들어 낼 여운 때문일 것이다. 앞으로의 시리즈를 통해 보여줄 솔라의 감성은 세대가 바뀌어도 두고두고 감상하는 명곡처럼, 지치고 힘들 때마다 꺼내 듣는 빛바랜 사진첩 같은 선물이 될 것이다.&lt;/div&gt;",
 	"potentialAction": {
 		"@type": "ListenAction",
 		"target": [
-					"http://www.melon.com/album/detail.htm?albumId=15920",
-					"android-app://com.iloen.melon/melonapp/details/album/15920"
+					"http://www.melon.com/album/detail.htm?albumId=2646429",
+					"android-app://com.iloen.melon/melonapp/details/album/2646429"
 		],
 		"expectsAcceptanceOf": {
 			"@type": "Offer",
@@ -457,73 +457,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </script>
 
 					<!-- //앨범 기본 정보 -->
-					<!-- 수록곡 -->
 					
-					<!-- //수록곡 -->
-					<!-- 앨범소개 -->
 					
-					<!-- //앨범소개 -->
-					<!-- 뮤직비디오  -->
 					
-					<div class="section_mv">
-						
-						<div class="wrap_list_mv">
-								<!-- 영상4 -->
-	
-	
-	
-	
-	
-	<!-- //영상4 -->
-<script type="text/javascript">
-$(function(){
-
-    /* 좋아요 셋팅부 */
-    var LIKE_SET = {
-        likeCnt  : '<span class="icon">{TXT}</span>\n<strong class="none">총건수</strong>{CNT}',
-        likeObj  : $('ul.d_video_list a.btn_like'),
-        likeAttr : 'data-video-no',
-        likeUrl  : '/commonlike/getMvLike.json'
-    };
-
-    /* 좋아요 공통부 */
-    var contsIdList = LIKE_SET['likeObj'].map(function() { return $(this).attr(LIKE_SET['likeAttr']); }).get().join(',');
-    var tmpl, title;
-    if ( contsIdList === '' || contsIdList === null  ) { return; }
-    $.get(LIKE_SET['likeUrl'], { contsIds : contsIdList }, function(data) {
-        var robj;
-        $.each(data.contsLike, function(i, v) {
-        	var SUMMCNT = MELON.WEBSVC.number.addComma(v.SUMMCNT);
-            robj  = LIKE_SET['likeObj'].eq(i);
-            tmpl  = LIKE_SET['likeCnt'];
-            title = robj.attr('title').split(' 좋아요');
-            robj[v.LIKEYN == 'Y' ? 'addClass' : 'removeClass']('on').attr('title', title[0] + (v.LIKEYN == 'Y' ? ' 좋아요 취소' : ' 좋아요'));
-            robj.html(
-                tmpl.replace(/\{TXT\}/g, (v.LIKEYN == 'Y' ? '좋아요 취소' : '좋아요')).replace(/\{CNT\}/g, SUMMCNT)
-            );
-        });
-    });
-});
-</script>
-						</div>
-						<div class="wrap_page">
-							<div class="page">
-								
-								<span class="wrap_btn">
-									<a href="#" title="이전" class="btn btn_pre disabled"></a>
-									<a href="#" title="다음" class="btn btn_next disabled"></a>
-								</span>
-							</div>
-						</div>
-					</div>
 					
-					<!-- //뮤직비디오  -->
-					<!-- 리뷰  -->
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
 					<div id="section_rvew" class="section_rvew">
-						<h3 class="title arr">게시판</h3>
+				<li class="on first_child"><strong title="최신순으로 보기">게시판</strong></li>
 						
-						<div class="d_cmtpgn " id="d_cmtpgn" data-sqwidget="templateType:pc-summary-type;textareaType:large-size;pageType:generic-page" data-sqwidget-settings="cmtPocType:pc.web;pocId:WP10;menuId:28010101;chnlSeq:102;contsRefValue:15920;listPageUrl:http://www.melon.com//album/detail.htm?albumId=15920">				<div id="d_cmtpgn_cmt_write_box" class="re_notice  d_cmtpgn_cmt_edit_box" data-cmt-id="-1">		<div class="thumb_wrap">		<a class="thumb d_cmtpgn_user" data-member-key="null" id="commentWriteBoxImage">			<img onerror="this.src='http://image.melon.co.kr//resource/image/cmt/web/common/noArtist02_54.jpg'" src="http://image.melon.co.kr/resource/image/cmt/web/common/noArtist03_54.jpg" width="54" height="54" alt="">			<span class="thumb_frame"></span>		</a>	</div>		<div class="re_textarea_wrap">			<div title="리뷰 입력 창 (1000자 이내 입력 가능)" class="textarea" style="min-height: 60px; overflow: hidden;">				<div class="ancm d_cmtpgn_cmt_guide" style="min-height: 54px;"><p>* 게시물의 저작권 등 분쟁, 개인정보 노출로 인한 책임은 작성자 또는 게시자에게 있음을 유의해 주세요.</p></div>				<div class="scroll d_cmtpgn_cmt_edit_area" style="display: none; max-height: 144px;"></div>				<span class="num_board d_cmtpgn_char_count">					<span class="none">현재 입력 글자수</span>					<strong class="d_cmtpgn_char_cnt">0</strong>					/					<span class="none">총 입력 가능 글자수</span>					1000자				</span>			</div>			<div class="wrap_btn">		<div class="wrap_btn_atach_cmt d_cmtpgn_atach_btn_wrapper">			<div class="wrap_btn_attach first_child">		<button type="button" title="음악 첨부" class="btn_atach_cmt sound" aria-haspopup="true" data-control="dropdown"><span class="odd_span">음원</span></button>		<div style="position:absolute; left:0; bottom:-8px; *bottom:-5px; display:none;" class="mt8 d_dropdown d_notpos d_cmtpgn_atach_music_layer"><div class="l_popup_cmt" style="width:456px;">		<div class="cntt">			<h1>음악 첨부</h1>			<div class="wrap_search d_cmtpgn_atach_srch_box">				<input type="text" class="d_cmtpgn_atach_music_srch_hidden" style="display: none;">				<input type="text" title="검색 입력 창 (검색어를 입력해 주세요)" placeholder="검색어를 입력해 주세요" class="text31 d_cmtpgn_atach_music_srch_input" style="width:344px;">				<button type="button" title="검색" class="btn_b31 d_cmtpgn_atach_music_srch_btn"><span class="odd_span"><span class="even_span">검색</span></span></button>			</div>			<div class="search_loading d_cmtpgn_loading" style="display: none;">				<img src="http://image.melon.co.kr/resource/image/cmt/web/common/img_loading.gif" width="40" height="40" alt="">				<p>잠시 기다려 주세요.</p>			</div>			<p class="search_wrong d_cmtpgn_noresult" style="display: none;">검색 된 내용이 없습니다.</p>			<p class="search_wrong d_cmtpgn_fallback" style="display: none;">접속이 지연되고 있습니다.<br>잠시 후 다시 이용해 주시기 바랍니다.<br>이용에 불편을 드려 대단히 죄송합니다.</p>		</div>		<button type="button" title="음악 첨부 닫기" class="btn_close d_cmtpgn_layer_close_btn"><span class="odd_span">닫기</span></button>		<span class="shadow"></span>		<span class="bullet" style="left:9px;"></span>	</div></div>	</div>			<div class="wrap_btn_attach">		<button type="button" title="사진 첨부" class="btn_atach_cmt photo" aria-haspopup="true" data-control="dropdown"><span class="odd_span">사진</span></button>		<div style="position:absolute; left:-29px; bottom:-8px; *bottom:-5px; display:none;" class="mt8 d_dropdown d_notpos d_cmtpgn_atach_image_layer"><div class="l_popup_cmt" style="width:456px;">	<form name="imageUploadForm" method="post" enctype="multipart/form-data" encoding="multipart/form-data" action="http://cmtimgup.melon.com/hs_upload_jsonp_html.php?callback=parent._imageAtachUploadHandler" target="d_cmtpgn_atach_image_frame">		<div class="cntt">			<h1>사진 첨부</h1>			<div class="wrap_search">				<input type="file" title="첨부 이미지 찾아보기" placeholder="파일을 선택해 주세요" class="text31 d_cmtpgn_atach_image_input" style="width:408px;padding:0">			</div>			<div class="wrap_btn_c">				<button type="button" title="사진 첨부 등록 완료" class="btn_emphs_small d_cmtpgn_atach_image_btn"><span class="odd_span"><span class="even_span">등록</span></span></button>				<button type="button" title="사진 첨부 취소" class="btn_emphs02_small d_close"><span class="odd_span"><span class="even_span">취소</span></span></button>			</div>		</div>		<button type="button" title="사진 첨부 닫기" class="btn_close d_cmtpgn_layer_close_btn"><span class="odd_span">닫기</span></button>		<span class="shadow"></span>		<span class="bullet" style="left:38px;"></span>	</form>	</div></div>	</div>			<div class="wrap_btn_attach">		<button type="button" title="영상 첨부" class="btn_atach_cmt video" aria-haspopup="true" data-control="dropdown"><span class="odd_span">영상</span></button>		<div style="position:absolute; left:-59px; bottom:-8px; *bottom:-5px; display:none;" class="mt8 d_dropdown d_notpos d_cmtpgn_atach_video_layer"><div class="l_popup_cmt" style="width:456px;">		<div class="cntt">			<h1>영상 첨부</h1>			<div class="wrap_search d_cmtpgn_atach_srch_box">				<input type="text" class="d_cmtpgn_atach_video_srch_hidden" style="display: none;">				<input type="text" title="검색 입력 창 (검색어를 입력해 주세요)" placeholder="검색어를 입력해 주세요" class="text31 d_cmtpgn_atach_video_srch_input" style="width:344px;">				<button type="button" title="검색" class="btn_b31 d_cmtpgn_atach_video_srch_btn"><span class="odd_span"><span class="even_span">검색</span></span></button>			</div>			<div class="search_loading d_cmtpgn_loading" style="display: none;">				<img src="http://image.melon.co.kr/resource/image/cmt/web/common/img_loading.gif" width="40" height="40" alt="">				<p>잠시 기다려 주세요.</p>			</div>			<p class="search_wrong d_cmtpgn_noresult" style="display: none;">검색 된 내용이 없습니다.</p>			<p class="search_wrong d_cmtpgn_fallback" style="display: none;">접속이 지연되고 있습니다.<br>잠시 후 다시 이용해 주시기 바랍니다.<br>이용에 불편을 드려 대단히 죄송합니다.</p>		</div>		<button type="button" title="영상 첨부 닫기" class="btn_close d_cmtpgn_layer_close_btn"><span class="odd_span">닫기</span></button>		<span class="shadow"></span>		<span class="bullet" style="left:68px;"></span>	</div></div>	</div>			<div class="wrap_btn_attach">		<button type="button" title="링크 첨부" class="btn_atach_cmt link" aria-haspopup="true" data-control="dropdown"><span class="odd_span">링크</span></button>		<div style="position:absolute; left:-89px; bottom:-8px; *bottom:-5px; display:none;" class="mt8 d_dropdown d_notpos d_cmtpgn_atach_link_layer"><div class="l_popup_cmt" style="width:456px;">		<div class="cntt">			<h1>링크 첨부</h1>			<div class="wrap_search type02">				<div class="select_wrap d_cmtpgn_atach_link_option_wrapper" style="display: none;">					<select title="링크 종류 선택" class="d_selectbox" style="width: 60px; display: none;">						<option value="link_video">영상링크</option>											</select><div class="select_type01"><span class="select_box" tabindex="0" title="링크 종류 선택"><span class="sel_r" style="width: 60px;">영상링크</span></span><div class="select_open" style="position: absolute; display: none;" tabindex="0"><ul><li class="on"><a href="#" data-value="link_video" data-text="영상링크">영상링크</a></li></ul></div></div>				</div>				<input type="text" title="링크 첨부 입력 창 (첨부 URL을 입력해 주세요)" placeholder="http://" class="text31 d_cmtpgn_atach_link_input" style="width:408px;">			</div>			<p class="bul_info02 d_atach_video_link_guide">영상링크 첨부는 유튜브 영상 링크만 가능합니다.</p>			<div class="wrap_btn_c">				<button type="button" title="링크 첨부 등록 완료" class="btn_emphs_small d_cmtpgn_atach_link_btn"><span class="odd_span"><span class="even_span">등록</span></span></button>				<button type="button" title="링크 첨부 취소" class="btn_emphs02_small d_close"><span class="odd_span"><span class="even_span">취소</span></span></button>			</div>		</div>		<button type="button" title="링크 첨부 닫기" class="btn_close d_cmtpgn_layer_close_btn"><span class="odd_span">닫기</span></button>		<span class="shadow"></span>		<span class="bullet" style="left:97px;"></span>	</div></div>	</div>		</div>		<span class="wrap_btn_sns d_cmtpgn_sns_btn_wrapper">			<button type="button" title="페이스북에 리뷰 함께 등록" class="btn_cmt_sns facebook d_cmtpgn_syncpost_btn"><span class="odd_span">페이스북</span></button>			<button type="button" title="트위터에 리뷰 함께 등록" class="btn_cmt_sns twitter d_cmtpgn_syncpost_btn"><span class="odd_span">트위터</span></button>											</span>	</div>			<div class="wrap_btn02">		<button type="button" title="글 등록" class="btn_reg d_cmtpgn_cmt_reg_btn"><span class="odd_span"><span class="even_span">등록</span></span></button>	</div>		</div>	</div><div class="clfix mb8" id="d_cmtpgn_cmt_count_wrapper" style=""><div class="fl_left">		<strong class="fc_strong">총 <span class="fc_point d_cmtpgn_srch_cnt">140</span>개</strong>	</div>	<ul class="list_sort fl_right d_cmtpgn_sort_option_wrapper" style="">		<li class="on first_child"><strong title="최신순으로 보기">최신순</strong></li>		<li><a href="#cmtpgn=&amp;pageNo=1&amp;sortType=1&amp;srchType=2&amp;srchWord=" title="추천순으로 보기">추천순</a></li>		<li><a href="#cmtpgn=&amp;pageNo=1&amp;sortType=2&amp;srchType=2&amp;srchWord=" title="답글순으로 보기">답글순</a></li>	</ul></div>		<div class="list_cmt" id="d_cmtpgn_cmt_list_wrapper" style="">			<div class="search_loading d_cmtpgn_loading" style="display: none;">				<img src="http://image.melon.co.kr/resource/image/cmt/web/common/img_loading.gif" width="40" height="40" alt="">				<p>잠시 기다려 주세요.</p>			</div>
-<li data-cmt-id="48820215" data-cmt-owner="off" class="first_child">		<div class="wrap_cmt_cntt d_cmtpgn_cmt_wrapper">			<div class="wrap_nicnmname d_cmtpgn_cmt_member_wrapper">				<span class="none">작성자</span>		<span class="thumb_wrap">			<a class="thumb d_cmtpgn_user" data-member-key="1608499" style="cursor:pointer;text-decoration:none;">				<img onerror="this.src='http://image.melon.co.kr//resource/image/cmt/web/common/noArtist02_54.jpg'" src="http://cdnimg.melon.co.kr/svc/user_images/user/17/9/1608499_194.jpg?tm=20151001140215" width="54" height="54" alt="">				<span class="thumb_frame"></span>			</a>		</span>					<!--<span class="none">작성자</span>					<span class="thumb_wrap">						<a class="thumb d_cmtpgn_user" data-member-key="1608499" style="cursor:pointer;text-decoration:none;">							<img onerror="this.src='http://image.melon.co.kr//resource/image/cmt/web/common/noArtist02_54.jpg'" src="http://cdnimg.melon.co.kr/svc/user_images/user/17/9/1608499_194.jpg?tm=20151001140215" width="54" height="54" alt="" />							<span class="thumb_frame"></span>						</a>					</span>				</span>-->				<div class="ellipsis" style="max-width: 102px;">															<a class="thumb d_cmtpgn_user" data-member-key="1608499" style="cursor:pointer;text-decoration:none;"><span class="d_cmtpgn_member_nickname" title="코리락쿠마z">코리락쿠마z</span></a>				</div>							</div>			<div class="wrap_cntt d_cmtpgn_cmt_cont_wrapper">				<div class="cntt">										<div class="cmt_text d_cmtpgn_cmt_full_contents" style="-ms-word-break: break-all; word-break: break-all; word-break: break-word; word-wrap:break-word; -webkit-hyphens: auto; -ms-hyphens: auto; hyphens: auto; display:block">		<div class="cmt_cont">		<span class="none">내용</span>		</div>										ㅠㅠㅠㅠㅠㅠ 말이 필요 없음	</div>				</div>				<div>					<span class="none">작성일자</span>					<span class="date">						<span>2015.10.20</span>						<span class="time">14:45</span>					</span>				</div>						<div class="wrap_btn d_cmtpgn_cmt_info_wrapper">			<button type="button" title="답글 더보기" class="btn_text arrow_d02 d_cmtpgn_adcmt_expand_btn" data-expand-target="#cmt_adcmt_48820215" data-control="expand" role="button"><span class="odd_span">		<span class="text">답글 <strong class="d_cmtpgn_adcmt_cnt">0</strong>개</span>		<span class="icon"></span>	</span></button>			<div class="wrap_btn_right">								<span class="wrap_btn_recm d_cmtpgn_recm_box">			<button type="button" title="글 추천" class="btn_recm positive d_cmtpgn_cmt_recm_btn"><span class="odd_span">				<span class="icon">추천</span>				<span class="none">총건수</span>1			</span></button>			<button type="button" title="글 비추천" class="btn_recm negative d_cmtpgn_cmt_non_recm_btn"><span class="odd_span">				<span class="icon">비추천</span>				<span class="none">총건수</span>0			</span></button>		</span>						<span class="wrap_btn_report d_cmtpgn_cmt_btn_wrapper">		<button type="button" title="글 신고하기" class="btn_reprt d_cmtpgn_cmt_reprt_btn"><span class="odd_span">신고</span></button>	</span>											</div>				</div>			</div>		</div>		<ul class="lower_cmt d_cmtpgn_adcmt_list" id="cmt_adcmt_48820215" style=""></ul>	</li>			<p class="search_wrong d_cmtpgn_nodata" style="display: none;">등록된 글이 없습니다.</p><div class="wrap_check_sys d_cmtpgn_fallback" style="display: none; margin-top: 40px; margin-bottom: 40px;">		<div>			<div class="img_check_sys" style="width:320px"></div>			<div class="msge">				<h3>접속이 지연되고 있습니다.</h3>				<p>잠시 후 다시 이용해 주시기 바랍니다.<br>이용에 불편을 드려 대단히 죄송합니다.</p>			</div>		</div>	</div>		</div>			<div class="paginate" id="d_cmtpgn_paginate_wrapper" style=""><a class="btn_first disabled d_cmtpgn_navigator" title="맨 처음"><span>맨 처음</span></a>	<a class="btn_pre disabled d_cmtpgn_navigator" title="이전"><span>이전</span></a>	<span class="page_num"><strong><span class="none">현재페이지</span>1</strong><a href="#cmtpgn=&amp;pageNo=2&amp;sortType=0&amp;srchType=2&amp;srchWord=" class="d_cmtpgn_navigator">2</a><a href="#cmtpgn=&amp;pageNo=3&amp;sortType=0&amp;srchType=2&amp;srchWord=" class="d_cmtpgn_navigator">3</a><a href="#cmtpgn=&amp;pageNo=4&amp;sortType=0&amp;srchType=2&amp;srchWord=" class="d_cmtpgn_navigator">4</a><a href="#cmtpgn=&amp;pageNo=5&amp;sortType=0&amp;srchType=2&amp;srchWord=" class="d_cmtpgn_navigator">5</a><a href="#cmtpgn=&amp;pageNo=6&amp;sortType=0&amp;srchType=2&amp;srchWord=" class="d_cmtpgn_navigator">6</a><a href="#cmtpgn=&amp;pageNo=7&amp;sortType=0&amp;srchType=2&amp;srchWord=" class="d_cmtpgn_navigator">7</a><a href="#cmtpgn=&amp;pageNo=8&amp;sortType=0&amp;srchType=2&amp;srchWord=" class="d_cmtpgn_navigator">8</a><a href="#cmtpgn=&amp;pageNo=9&amp;sortType=0&amp;srchType=2&amp;srchWord=" class="d_cmtpgn_navigator">9</a><a href="#cmtpgn=&amp;pageNo=10&amp;sortType=0&amp;srchType=2&amp;srchWord=" class="d_cmtpgn_navigator">10</a></span>	<a href="#cmtpgn=&amp;pageNo=11&amp;sortType=0&amp;srchType=2&amp;srchWord=" class="btn_next d_cmtpgn_navigator" title="다음"><span>다음</span></a>	<a href="#cmtpgn=&amp;pageNo=14&amp;sortType=0&amp;srchType=2&amp;srchWord=" class="btn_last d_cmtpgn_navigator" title="맨 끝"><span>맨 끝</span></a></div>		<div class="wrap_search" id="d_cmtpgn_srch_wrapper" style=""><div class="select_wrap d_cmtpgn_srch_option_wrapper">		<select title="검색 방법 선택" class="d_selectbox" style="width: 55px; display: none;" data-class="select_type02">			<option value="2" selected="selected">내용</option>			<option value="1">작성자</option>		</select><div class="select_type02"><span class="select_box" tabindex="0" title="검색 방법 선택"><span class="sel_r" style="width: 55px;">내용</span></span><div class="select_open" style="position: absolute; display: none;" tabindex="0"><ul><li class="on"><a href="#" data-value="2" data-text="내용">내용</a></li><li><a href="#" data-value="1" data-text="작성자">작성자</a></li></ul></div></div>	</div>	<input type="text" title="검색 입력 창 (검색어를 입력해 주세요)" placeholder="검색어를 입력해 주세요" class="input_text d_cmtpgn_srch_input" style="width:184px;">	<button type="button" title="검색" class="btn_base02 d_cmtpgn_cmt_srch_btn"><span class="odd_span"><span class="even_span">검색</span></span></button></div><textarea id="d_cmtpgn_dummy_textarea" cols="30" rows="20" style="width:652px; height:0px; margin:0; padding:0; border:0;"></textarea><form id="d_cmtpgn_dummy_form" name="d_cmtpgn_dummy_form"></form></div>
+						<div class="d_cmtpgn " id="d_cmtpgn" data-sqwidget="templateType:pc-summary-type;textareaType:large-size;pageType:generic-page" data-sqwidget-settings="cmtPocType:pc.web;pocId:WP10;menuId:28010101;chnlSeq:102;contsRefValue:2646429;listPageUrl:http://www.melon.com//album/detail.htm?albumId=2646429">				<div id="d_cmtpgn_cmt_write_box" class="re_notice  d_cmtpgn_cmt_edit_box" data-cmt-id="-1">		<div class="thumb_wrap">		<a class="thumb d_cmtpgn_user" data-member-key="null" id="commentWriteBoxImage">			<img onerror="this.src='http://image.melon.co.kr//resource/image/cmt/web/common/noArtist02_54.jpg'" src="http://image.melon.co.kr/resource/image/cmt/web/common/noArtist03_54.jpg" width="54" height="54" alt="">			<span class="thumb_frame"></span>		</a>	</div>		<div class="re_textarea_wrap">			<div title="리뷰 입력 창 (1000자 이내 입력 가능)" class="textarea" style="min-height: 60px; overflow: hidden;">				<div class="ancm d_cmtpgn_cmt_guide" style="min-height: 54px;"><p>* 게시물의 저작권 등 분쟁, 개인정보 노출로 인한 책임은 작성자 또는 게시자에게 있음을 유의해 주세요.</p></div>				<div class="scroll d_cmtpgn_cmt_edit_area" style="display: none; max-height: 144px;"></div>				<span class="num_board d_cmtpgn_char_count">					<span class="none">현재 입력 글자수</span>					<strong class="d_cmtpgn_char_cnt">0</strong>					/					<span class="none">총 입력 가능 글자수</span>					1000자				</span>			</div>			<div class="wrap_btn">		<div class="wrap_btn_atach_cmt d_cmtpgn_atach_btn_wrapper">			<div class="wrap_btn_attach first_child">		<button type="button" title="음악 첨부" class="btn_atach_cmt sound" aria-haspopup="true" data-control="dropdown"><span class="odd_span">음원</span></button>		<div style="position:absolute; left:0; bottom:-8px; *bottom:-5px; display:none;" class="mt8 d_dropdown d_notpos d_cmtpgn_atach_music_layer"><div class="l_popup_cmt" style="width:456px;">		<div class="cntt">			<h1>음악 첨부</h1>			<div class="wrap_search d_cmtpgn_atach_srch_box">				<input type="text" class="d_cmtpgn_atach_music_srch_hidden" style="display: none;">				<input type="text" title="검색 입력 창 (검색어를 입력해 주세요)" placeholder="검색어를 입력해 주세요" class="text31 d_cmtpgn_atach_music_srch_input" style="width:344px;">				<button type="button" title="검색" class="btn_b31 d_cmtpgn_atach_music_srch_btn"><span class="odd_span"><span class="even_span">검색</span></span></button>			</div>			<div class="search_loading d_cmtpgn_loading" style="display: none;">				<img src="http://image.melon.co.kr/resource/image/cmt/web/common/img_loading.gif" width="40" height="40" alt="">				<p>잠시 기다려 주세요.</p>			</div>			<p class="search_wrong d_cmtpgn_noresult" style="display: none;">검색 된 내용이 없습니다.</p>			<p class="search_wrong d_cmtpgn_fallback" style="display: none;">접속이 지연되고 있습니다.<br>잠시 후 다시 이용해 주시기 바랍니다.<br>이용에 불편을 드려 대단히 죄송합니다.</p>		</div>		<button type="button" title="음악 첨부 닫기" class="btn_close d_cmtpgn_layer_close_btn"><span class="odd_span">닫기</span></button>		<span class="shadow"></span>		<span class="bullet" style="left:9px;"></span>	</div></div>	</div>			<div class="wrap_btn_attach">		<button type="button" title="사진 첨부" class="btn_atach_cmt photo" aria-haspopup="true" data-control="dropdown"><span class="odd_span">사진</span></button>		<div style="position:absolute; left:-29px; bottom:-8px; *bottom:-5px; display:none;" class="mt8 d_dropdown d_notpos d_cmtpgn_atach_image_layer"><div class="l_popup_cmt" style="width:456px;">	<form name="imageUploadForm" method="post" enctype="multipart/form-data" encoding="multipart/form-data" action="http://cmtimgup.melon.com/hs_upload_jsonp_html.php?callback=parent._imageAtachUploadHandler" target="d_cmtpgn_atach_image_frame">		<div class="cntt">			<h1>사진 첨부</h1>			<div class="wrap_search">				<input type="file" title="첨부 이미지 찾아보기" placeholder="파일을 선택해 주세요" class="text31 d_cmtpgn_atach_image_input" style="width:408px;padding:0">			</div>			<div class="wrap_btn_c">				<button type="button" title="사진 첨부 등록 완료" class="btn_emphs_small d_cmtpgn_atach_image_btn"><span class="odd_span"><span class="even_span">등록</span></span></button>				<button type="button" title="사진 첨부 취소" class="btn_emphs02_small d_close"><span class="odd_span"><span class="even_span">취소</span></span></button>			</div>		</div>		<button type="button" title="사진 첨부 닫기" class="btn_close d_cmtpgn_layer_close_btn"><span class="odd_span">닫기</span></button>		<span class="shadow"></span>		<span class="bullet" style="left:38px;"></span>	</form>	</div></div>	</div>			<div class="wrap_btn_attach">		<button type="button" title="영상 첨부" class="btn_atach_cmt video" aria-haspopup="true" data-control="dropdown"><span class="odd_span">영상</span></button>		<div style="position:absolute; left:-59px; bottom:-8px; *bottom:-5px; display:none;" class="mt8 d_dropdown d_notpos d_cmtpgn_atach_video_layer"><div class="l_popup_cmt" style="width:456px;">		<div class="cntt">			<h1>영상 첨부</h1>			<div class="wrap_search d_cmtpgn_atach_srch_box">				<input type="text" class="d_cmtpgn_atach_video_srch_hidden" style="display: none;">				<input type="text" title="검색 입력 창 (검색어를 입력해 주세요)" placeholder="검색어를 입력해 주세요" class="text31 d_cmtpgn_atach_video_srch_input" style="width:344px;">				<button type="button" title="검색" class="btn_b31 d_cmtpgn_atach_video_srch_btn"><span class="odd_span"><span class="even_span">검색</span></span></button>			</div>			<div class="search_loading d_cmtpgn_loading" style="display: none;">				<img src="http://image.melon.co.kr/resource/image/cmt/web/common/img_loading.gif" width="40" height="40" alt="">				<p>잠시 기다려 주세요.</p>			</div>			<p class="search_wrong d_cmtpgn_noresult" style="display: none;">검색 된 내용이 없습니다.</p>			<p class="search_wrong d_cmtpgn_fallback" style="display: none;">접속이 지연되고 있습니다.<br>잠시 후 다시 이용해 주시기 바랍니다.<br>이용에 불편을 드려 대단히 죄송합니다.</p>		</div>		<button type="button" title="영상 첨부 닫기" class="btn_close d_cmtpgn_layer_close_btn"><span class="odd_span">닫기</span></button>		<span class="shadow"></span>		<span class="bullet" style="left:68px;"></span>	</div></div>	</div>			<div class="wrap_btn_attach">		<button type="button" title="링크 첨부" class="btn_atach_cmt link" aria-haspopup="true" data-control="dropdown"><span class="odd_span">링크</span></button>		<div style="position:absolute; left:-89px; bottom:-8px; *bottom:-5px; display:none;" class="mt8 d_dropdown d_notpos d_cmtpgn_atach_link_layer"><div class="l_popup_cmt" style="width:456px;">		<div class="cntt">			<h1>링크 첨부</h1>			<div class="wrap_search type02">				<div class="select_wrap d_cmtpgn_atach_link_option_wrapper" style="display: none;">					<select title="링크 종류 선택" class="d_selectbox" style="width: 60px; display: none;">						<option value="link_video">영상링크</option>											</select><div class="select_type01"><span class="select_box" tabindex="0" title="링크 종류 선택"><span class="sel_r" style="width: 60px;">영상링크</span></span><div class="select_open" style="position: absolute; display: none;" tabindex="0"><ul><li class="on"><a href="#" data-value="link_video" data-text="영상링크">영상링크</a></li></ul></div></div>				</div>				<input type="text" title="링크 첨부 입력 창 (첨부 URL을 입력해 주세요)" placeholder="http://" class="text31 d_cmtpgn_atach_link_input" style="width:408px;">			</div>			<p class="bul_info02 d_atach_video_link_guide">영상링크 첨부는 유튜브 영상 링크만 가능합니다.</p>			<div class="wrap_btn_c">				<button type="button" title="링크 첨부 등록 완료" class="btn_emphs_small d_cmtpgn_atach_link_btn"><span class="odd_span"><span class="even_span">등록</span></span></button>				<button type="button" title="링크 첨부 취소" class="btn_emphs02_small d_close"><span class="odd_span"><span class="even_span">취소</span></span></button>			</div>		</div>		<button type="button" title="링크 첨부 닫기" class="btn_close d_cmtpgn_layer_close_btn"><span class="odd_span">닫기</span></button>		<span class="shadow"></span>		<span class="bullet" style="left:97px;"></span>	</div></div>	</div>		</div>		<span class="wrap_btn_sns d_cmtpgn_sns_btn_wrapper">			<button type="button" title="페이스북에 리뷰 함께 등록" class="btn_cmt_sns facebook d_cmtpgn_syncpost_btn"><span class="odd_span">페이스북</span></button>			<button type="button" title="트위터에 리뷰 함께 등록" class="btn_cmt_sns twitter d_cmtpgn_syncpost_btn"><span class="odd_span">트위터</span></button>											</span>	</div>			<div class="wrap_btn02">		<button type="button" title="글 등록" class="btn_reg d_cmtpgn_cmt_reg_btn"><span class="odd_span"><span class="even_span">등록</span></span></button>	</div>		</div>	</div><div class="clfix mb8" id="d_cmtpgn_cmt_count_wrapper" style=""><div class="fl_left">		<strong class="fc_strong">총 <span class="fc_point d_cmtpgn_srch_cnt">707</span>개</strong>	</div>	<ul class="list_sort fl_right d_cmtpgn_sort_option_wrapper" style="">		<li class="on first_child"><strong title="최신순으로 보기">최신순</strong></li>		<li><a href="#cmtpgn=&amp;pageNo=1&amp;sortType=1&amp;srchType=2&amp;srchWord=" title="추천순으로 보기">추천순</a></li>		<li><a href="#cmtpgn=&amp;pageNo=1&amp;sortType=2&amp;srchType=2&amp;srchWord=" title="답글순으로 보기">답글순</a></li>	</ul></div>		<div class="list_cmt" id="d_cmtpgn_cmt_list_wrapper" style="">			<div class="search_loading d_cmtpgn_loading" style="display: none;">				<img src="http://image.melon.co.kr/resource/image/cmt/web/common/img_loading.gif" width="40" height="40" alt="">				<p>잠시 기다려 주세요.</p>			</div>			<p class="search_wrong d_cmtpgn_nodata" style="display: none;">등록된 글이 없습니다.</p><div class="wrap_check_sys d_cmtpgn_fallback" style="display: none; margin-top: 40px; margin-bottom: 40px;">		<div>			<div class="img_check_sys" style="width:320px"></div>			<div class="msge">				<h3>접속이 지연되고 있습니다.</h3>				<p>잠시 후 다시 이용해 주시기 바랍니다.<br>이용에 불편을 드려 대단히 죄송합니다.</p>			</div>		</div>	</div>		</div>			<div class="paginate" id="d_cmtpgn_paginate_wrapper" style=""><a class="btn_first disabled d_cmtpgn_navigator" title="맨 처음"><span>맨 처음</span></a>	<a class="btn_pre disabled d_cmtpgn_navigator" title="이전"><span>이전</span></a>	<span class="page_num"><strong><span class="none">현재페이지</span>1</strong><a href="#cmtpgn=&amp;pageNo=2&amp;sortType=0&amp;srchType=2&amp;srchWord=" class="d_cmtpgn_navigator">2</a><a href="#cmtpgn=&amp;pageNo=3&amp;sortType=0&amp;srchType=2&amp;srchWord=" class="d_cmtpgn_navigator">3</a><a href="#cmtpgn=&amp;pageNo=4&amp;sortType=0&amp;srchType=2&amp;srchWord=" class="d_cmtpgn_navigator">4</a><a href="#cmtpgn=&amp;pageNo=5&amp;sortType=0&amp;srchType=2&amp;srchWord=" class="d_cmtpgn_navigator">5</a><a href="#cmtpgn=&amp;pageNo=6&amp;sortType=0&amp;srchType=2&amp;srchWord=" class="d_cmtpgn_navigator">6</a><a href="#cmtpgn=&amp;pageNo=7&amp;sortType=0&amp;srchType=2&amp;srchWord=" class="d_cmtpgn_navigator">7</a><a href="#cmtpgn=&amp;pageNo=8&amp;sortType=0&amp;srchType=2&amp;srchWord=" class="d_cmtpgn_navigator">8</a><a href="#cmtpgn=&amp;pageNo=9&amp;sortType=0&amp;srchType=2&amp;srchWord=" class="d_cmtpgn_navigator">9</a><a href="#cmtpgn=&amp;pageNo=10&amp;sortType=0&amp;srchType=2&amp;srchWord=" class="d_cmtpgn_navigator">10</a></span>	<a href="#cmtpgn=&amp;pageNo=11&amp;sortType=0&amp;srchType=2&amp;srchWord=" class="btn_next d_cmtpgn_navigator" title="다음"><span>다음</span></a>	<a href="#cmtpgn=&amp;pageNo=71&amp;sortType=0&amp;srchType=2&amp;srchWord=" class="btn_last d_cmtpgn_navigator" title="맨 끝"><span>맨 끝</span></a></div>		<div class="wrap_search" id="d_cmtpgn_srch_wrapper" style=""><div class="select_wrap d_cmtpgn_srch_option_wrapper">		<select title="검색 방법 선택" class="d_selectbox" style="width: 55px; display: none;" data-class="select_type02">			<option value="2" selected="selected">내용</option>			<option value="1">작성자</option>		</select><div class="select_type02"><span class="select_box" tabindex="0" title="검색 방법 선택"><span class="sel_r" style="width: 55px;">내용</span></span><div class="select_open" style="position: absolute; display: none;" tabindex="0"><ul><li class="on"><a href="#" data-value="2" data-text="내용">내용</a></li><li><a href="#" data-value="1" data-text="작성자">작성자</a></li></ul></div></div>	</div>	<input type="text" title="검색 입력 창 (검색어를 입력해 주세요)" placeholder="검색어를 입력해 주세요" class="input_text d_cmtpgn_srch_input" style="width:184px;">	<button type="button" title="검색" class="btn_base02 d_cmtpgn_cmt_srch_btn" style="
+    padding-bottom: 10px;
+"><span class="odd_span"><span class="even_span">검색</span></span></button></div><textarea id="d_cmtpgn_dummy_textarea" cols="30" rows="20" style="width:652px; height:0px; margin:0; padding:0; border:0;"></textarea><form id="d_cmtpgn_dummy_form" name="d_cmtpgn_dummy_form"></form></div>
 					</div>
 					<!-- //리뷰  -->
 					<!-- 연관 앨범  -->
@@ -533,44 +486,13 @@ $(function(){
 					
 					<div class="section_playlist">
 						
-						<div class="list_dj_play">
-							<ul class="clfix">
-								
-								<li>
-									
-								</li>
-								
-								
-								
-								
-								
-							</ul>
-						</div>
+						
 					</div>
 					
 					<!-- //수록 곡이 포함된 DJ 플레이리스트  -->
 					<!-- 좋아요 한 사람  -->
 					
-					<div class="section_intst">
-						
-						<div class="wrap_list_intst">
-							
-			
-						</div>
-						<div class="wrap_page">
-							<ul class="list_sort withListOrderLayedr">
-								<li class="first_child on"></li>
-								<li></li>
-							</ul>
-							<div class="page">
-								
-								<span class="wrap_btn">
-									<a href="#;" title="이전" class="btn btn_pre d_btn withLikeBtnTmp disabled" id="withLikeBtnTmp1" data-orderby-type="MELONDJ_YN" data-limit-count="13" data-view-type="withLikeUser" data-view-contsid="15920"></a>
-									<a href="#;" title="다음" class="btn btn_next d_btn withLikeBtnTmp" id="withLikeBtnTmp2" data-orderby-type="MELONDJ_YN" data-limit-count="13" data-view-type="withLikeUser" data-view-contsid="15920"></a>
-								</span>
-							</div>
-						</div>
-					</div>
+					
 					
 					<!-- //좋아요 한 사람  -->
 				</div>
@@ -670,7 +592,7 @@ $(function() {
 			dataType:"json",
 			async:true,
 			data : {
-				albumId: '15920',
+				albumId: '2646429',
 				evalScore	: $('#d_rate').html()
 			},
 			success:function(obj){
@@ -752,13 +674,13 @@ $(function() {
 	/******************SNS *****************/
 	 //페이스북
     $("#albumFacebook").click(function(){
-    	$.albumName = "Choose My Life-U";
-		$.artistName = "S.E.S.";
+    	$.albumName = "솔라감성 Part.1";
+		$.artistName = "솔라 (마마무)";
 		$.imgUrl = $("#albumImgArea img").attr("src");
 		$.menuId = $(this).attr("data-menuId");
 		melon.sns.facebook({
 			type 		: "alb",
-			contsId 	: "15920",
+			contsId 	: "2646429",
 			albumName	: $.albumName,
 			artistName  : $.artistName,
 			imgUrl      : $.imgUrl,
@@ -766,12 +688,12 @@ $(function() {
 		});
     });
     $("#albumTwitter").click(function(){
-		$.albumName = "Choose My Life-U";
-		$.artistName = "S.E.S.";
+		$.albumName = "솔라감성 Part.1";
+		$.artistName = "솔라 (마마무)";
 		$.menuId = $(this).attr("data-menuId");
 		melon.sns.twitter({
 			type 		: "alb",
-			contsId 	: "15920",
+			contsId 	: "2646429",
 			albumName	: $.albumName,
 			artistName  : $.artistName,
 			menuId		: $.menuId
@@ -780,7 +702,7 @@ $(function() {
 
 
  	// Banner Info
-	var serverTime = "2015:10:22 11:29:38"; 	// 시간은 서버에서 찍어주세요.(yyyy:MM:dd hh:mm:ss)
+	var serverTime = "2015:10:23 11:23:24"; 	// 시간은 서버에서 찍어주세요.(yyyy:MM:dd hh:mm:ss)
 	$(document).on('limitpopup', function( e, cookieId ) {
 		if ( cookieId === 'linebanner01' ) {
 			$('div.line_ban').show();
@@ -794,7 +716,7 @@ $(function() {
 		if('0' == "1"){
 			melon.link.goAlbumDetail('');
 		} else {
-			WEBSVC.openPopup('/album/popup/otherAlbumPopup.htm?albumId=15920', 834, 640);
+			WEBSVC.openPopup('/album/popup/otherAlbumPopup.htm?albumId=2646429', 834, 640);
 		}
 	});
 
@@ -862,7 +784,7 @@ $(function() {
 		$.ajax({
 			url: '/album/albumTopLikeUser.htm',
 			data: {
-				contsId : '15920',
+				contsId : '2646429',
 				viewPage : '1'
 			},
 			async : false
@@ -875,7 +797,7 @@ $(function() {
 		$.ajax({
 			url: '/album/withLikeUser.htm',
 			data: {
-				contsId : '15920',
+				contsId : '2646429',
 				viewPage : '1'
 			},
 			async : false
@@ -888,7 +810,7 @@ $(function() {
 			url: '/album/withLikeUser.json',
 			dataType:"json",
 			data: {
-				contsId : '15920',
+				contsId : '2646429',
 				viewPage : '1'
 			},
 			async : false
@@ -934,12 +856,83 @@ function goReview(){
 		</div>
 	</div>
 	<!-- footer -->
-	
+	<div id="footer" class="my_fold">
+		<div class="btn_top_wrap" style="position: fixed; display: none;">
+			<a href="#skip_nav" class="btn_top" title="맨 위로 가기" style=""><span>맨 위로 가기</span></a>
+		</div>
+
+		
+		
+		
+		
+		<!-- 두 줄일때 add 클래스 추가 -->
+		<!-- <div class="ban add">
+			<a href="http://www.melon.com/cds/event/web/event_first.htm?SUB=FB" title="2012 대한민국 퍼스트브랜드 대상
+"><img height="32" width="110" src="http://cdnimg.melon.co.kr/resource/image/web/common/ban_footer01.png" alt="2012 대한민국 퍼스트브랜드 대상"/></a><a href="http://www.melon.com/cds/event/web/event_kbpi.htm?SUB=FB" title="한국능률협회컨설팅 2012 브랜드 파워 1위
+"><img height="32" width="122" src="http://cdnimg.melon.co.kr/resource/image/web/common/ban_footer02.png" alt="한국능률협회컨설팅 2012 브랜드 파워 1위"/></a>
+		</div> -->
+		<a href="#" class="btn_top" title="맨 위로 가기" style="display: none;">맨 위로 가기</a>
+		<!--140602 추가 lyr-->
+		<div id="btnMobileWeb" class="mobile_btn_wrap" style="display:none;">
+			<p>접속하신 단말/브라우저에서는 멜론 서비스의 사용이 일부 제한될 수 있습니다. 양해부탁드립니다.</p>
+			<a href="javascript:;" onclick="goMelonTPage();" class="btn btn_big" title="모바일 웹 버전">
+				<span class="odd_span">
+					<span class="even_span">모바일 웹 버전</span>
+				</span>
+			</a>
+		</div>
+		<script type="text/javascript">
+
+			$(function() {
+				// 모바일(t.com)에서 넘어온 경우 - 모바일(t.com) 서비스 종료로 삭제
+/*
+				var fromMobileWeb = getCookie("D");
+
+				if(fromMobileWeb != null && fromMobileWeb.indexOf('T') > -1){
+					$("#btnMobileWeb").css("display", "block");
+				}
+*/
+				// 엣지 브라우저이고 해당 팝업이 뜬 적이 없는 경우 체크하여 팝업을 띄운다.
+				var isEdge = (navigator.userAgent.indexOf("Edge") > 0);
+				var edgeCheckYN = getCookie("EDGE_CHECK") != 'Y';
+				
+				if(isEdge && edgeCheckYN){
+					window.open('http://www.melon.com/error_page/error_edgeTypeA.html','edgeCheck','scrollbars=no, resizable=no, location=no, width=560, height=498');
+				}
+				
+				// 타블렛이고 해당 팝업이 뜬 적이 없는 경우 체크하여 팝업을 띄운다.
+				var tabletCheckYN = getCookie("TABLET_CHECK") != 'Y';
+
+				if(melon.isTablet() && tabletCheckYN){
+					window.open('http://www.melon.com/error_page/error_tabletTypeA.html','tabletPopTypeA','scrollbars=no, resizable=no, location=no, width=560, height=483');
+				}
+				
+				// 해당 쿠키가 존재하면 쿠키 삭제
+				if(getCookie("CHECK_POP") != ''){
+					// 체크 후 해당 쿠키는 제거
+					var expireDate = new Date();
+					expireDate.setDate(expireDate.getDate()-1);
+					document.cookie = "CHECK_POP=;path=/;expires="+expireDate.toGMTString()+";domain=.melon.com";
+				}
+			});
+
+			function goMelonTPage(){
+				// 쿠키 삭제 후 t.com으로 페이지 이동
+				var expireDate = new Date();
+				expireDate.setDate(expireDate.getDate()-1);
+				document.cookie = "D=;path=/;expires="+expireDate.toGMTString()+";domain=.melon.com";
+
+				location.href= 'http://t.melon.com';
+			}
+		</script>
+		<!--//140602 추가 lyr-->
+	</div>
 	<!-- //footer -->
 </div>
 
-</body></html>
-<!---->
+	
+	<!--  요기까징 -->
+	<!---->
 <!--  style.css안에 이미지 추가해서 div class이름에 넣어라. 이미지는 전체적으로 style.css안에. 
 	  
 .bannersearch{
