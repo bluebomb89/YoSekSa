@@ -2816,15 +2816,15 @@ input[type="button"].btn-block {
   color: rgba(255, 255, 255, 0.75);
 }
 .btn-primary {
-  background-color: #F43C60;
-  color: #544D4D;
-  *background-color: #F43C60;
+  background-color: rgba(255, 255, 255, 0);
+  color: #000000;
+  *background-color: rgba(255, 255, 255, 0);
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
 }
 .btn-default {
- 	background-color: #F43C60;
-  	color: #544D4D;
-	*background-color: #F43C60;
+ 	background-color: rgba(255, 255, 255, 0);
+  	color: #000000;
+	*background-color: rgba(255, 255, 255, 0);
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
 }
 .btn-primary:hover,
@@ -4269,7 +4269,7 @@ input[type="submit"].btn.btn-mini {
   bottom: 0;
   left: 0;
   z-index: 1040;
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.07);
 }
 .modal-backdrop.fade {
   opacity: 0;
@@ -4342,6 +4342,8 @@ input[type="submit"].btn.btn-mini {
   text-align: right;
   background-color: rgba(255, 255, 255, 0);
   *zoom: 1;
+  border-top: 1px solid rgba(255, 255, 255, 0);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0);
 }
 .modal-footer:before,
 .modal-footer:after {
@@ -5836,7 +5838,7 @@ a.badge:focus {
 }
 
 #myModal{
-	background:url(../images/food.PNG) no-repeat 0px 0px;
+	background:url(../images/food-background1.jpg) no-repeat 0px 0px;
 	background-size:100% 100%;
 	min-height:400px;
 	box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
