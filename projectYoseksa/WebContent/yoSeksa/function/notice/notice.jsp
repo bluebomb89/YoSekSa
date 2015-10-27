@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title></title>
 <link href="../../css/notice.css" rel="stylesheet">
-</head>
+</head> 
 <style type="text/css">
 .showmenu{
 width: 80%;
