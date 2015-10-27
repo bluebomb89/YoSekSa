@@ -15,14 +15,22 @@
 
 
 <div id="addRecipeOnTable">	
-<center>
-<h2>요리를 추가하세요!</h3>
-</center>
+	<center>
+		<div id="h2_title">
+			<h2>요리를 추가하세요!</h2>
+		</div>
+	</center>
+	
+	<div id="icon_title">
+		<span class="glyphicon glyphicon-plus" aria-hidden="true">
+	</div>
+	
+	
 
-<hr id="title_underline">
-
-
-<br>
+	<hr id="title_underline">
+	
+	
+	<br>
 
       <div id="food_date">
        <label>날짜</label>
@@ -45,7 +53,7 @@
 
 	  <div id="bld">
 	   <input type="radio" name="bld" value="">&nbsp;아침&nbsp;&nbsp;<span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span><br><br>
-	   <input type="radio" name="bld" value="Lunch" checked&nbsp;>&nbsp;점심&nbsp;&nbsp;<span class="glyphicon glyphicon-glass" aria-hidden="true"></span><br><br>
+	   <input type="radio" name="bld" value="Lunch" checked>&nbsp;점심&nbsp;&nbsp;<span class="glyphicon glyphicon-glass" aria-hidden="true"></span><br><br>
 	   <input type="radio" name="bld" value="Dinner">&nbsp;저녁&nbsp;&nbsp;<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
       </div>
       
