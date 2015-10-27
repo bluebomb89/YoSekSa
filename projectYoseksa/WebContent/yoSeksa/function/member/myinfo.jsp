@@ -33,7 +33,6 @@
 <link href="../../css/custom.css" rel="stylesheet">
 <link href="../../css/owl.carousel.css" rel="stylesheet">
 
-
 <!-- Custom Theme files -->
 <!--//theme-style-->
 
@@ -73,37 +72,6 @@
 	});
 </script>
 
-<script>
-	$(document).ready(function() {
-
-		var owl = $("#owl-demo");
-
-		owl.owlCarousel({
-			items : 10, //10 items above 1000px browser width
-			itemsDesktop : [ 1000, 5 ], //5 items between 1000px and 901px
-			itemsDesktopSmall : [ 900, 3 ], // betweem 900px and 601px
-			itemsTablet : [ 600, 2 ], //2 items between 600 and 0
-			itemsMobile : false
-		// itemsMobile disabled - inherit from itemsTablet option
-		});
-
-		// Custom Navigation Events
-		$(".next").click(function() {
-			owl.trigger('owl.next');
-		})
-		$(".prev").click(function() {
-			owl.trigger('owl.prev');
-		})
-		$(".play").click(function() {
-			owl.trigger('owl.play', 1000); //owl.play event accept autoPlay speed as second parameter
-		})
-		$(".stop").click(function() {
-			owl.trigger('owl.stop');
-		})
-
-	});
-</script>
-
 <script type="text/javascript">
 	$(document).ready(function() {
 		/* affix the navbar after scroll below header */
@@ -137,21 +105,21 @@
 						<td align="center">
 							<a href="#"> 
 							<!--레시피 --> 
-								<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/51422-200.png" width="200" height="200">
+								<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/51422-200.png" width="150" height="150">
 								<br><b>내가쓴레시피</b>
 							</a>
 						</td>
 						<td align="center">
 							<a href="#">
 							<!--다이어리 --> 
-								<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/136494-200.png" width="200" height="200">
+								<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/136494-200.png" width="150" height="150">
 								<br><b>다이어리</b>
 							</a>
 						</td>
 						<td align="center">
 							<a href="#">
 							<!-- 스크랩 --> 
-								<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/109234-200.png" width="200" height="200">
+								<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/109234-200.png" width="150" height="150">
 								<br><b>스크랩</b>
 							</a>
 						</td>
@@ -161,9 +129,6 @@
 				<!-- 끝 -->
 			</div>
 		</div>
-	</div>
-
-	<!-- 하단 시작 { -->
 	</div>
 
 	<script src="../../js/bootstrap.js"></script>
