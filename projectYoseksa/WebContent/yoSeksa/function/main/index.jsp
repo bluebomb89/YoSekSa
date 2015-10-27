@@ -1,13 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="java.util.*,com.yoseksa.*"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%
-	String noticeNo=request.getParameter("ntno");
-	if(noticeNo==null)
-		noticeNo="6";
-	String ntjsp=yoseksa.change(Integer.parseInt(noticeNo));
-%>
-<c:set var="ntpath" value="<%=ntjsp %>"/> 
+    pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -46,6 +38,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="../../js/bootstrap.js"></script> 
 <!--/script-->
 <script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},950);
+		});
+	    $('.slideshow').cycle({
+			fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+		});
+	});
+	$(window).load(function(){
+		  $('body').addClass('loaded');
+		  $('h1').addClass('letter-spacing')
+		});
+</script>
+<script type="text/javascript">
 	$(document).ready(function() {
 		/* affix the navbar after scroll below header */
 		$('#nav').affix({
@@ -61,21 +68,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			$("#startmain").text("Search");
 		});
 	});
-</script>
-<script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){		
-			event.preventDefault();
-			$('html,body').animate({scrollTop:$(this.hash).offset().top},950);
-		});
-	    $('.slideshow').cycle({
-			fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
-		});
-	});
-	$(window).load(function(){
-		  $('body').addClass('loaded');
-		  $('h1').addClass('letter-spacing')
-		});
 </script>
 <script>
 $(document).ready(function() {
@@ -267,7 +259,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 <!-- services -->
 <!-- 여기에 공지사항 추가 -->
 <div id="services"  style="padding-top: 51px">
-<jsp:include page="${ntpath }"></jsp:include>
+<!-- <jsp:include page="${ntpage }"></jsp:include> -->
 </div>
  <!-- testimonial -->
 <div class="testimonial">

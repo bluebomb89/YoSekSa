@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- startDocument(): 문서가 시작 -->
+<beans> <!-- startElement() -->
+	<!-- 메모리 할당 Class.forName(clsName) -->
+	<!-- startElement() 속성을 일고 endElement() -->
+	<bean id="main" class="com.yoseksa.YoseksaMain"></bean>
+	<!-- startElement() 속성을 일고 endElement() -->
+	<bean id="board_list" class="com.board.model.BoardListModel"></bean>
+	<!-- startElement() 속성을 일고 endElement() -->
+	<bean id="board_insert" class="com.board.model.BoardInsertModel"></bean>
+	<!-- startElement() 속성을 일고 endElement() -->
+	<bean id="board_insert_ok" class="com.board.model.BoardInsertOK"></bean>
+	<bean id="notice" class="com.noticedao.YoseksaNotice"></bean>
+	
+</beans> <!-- endElement() -->
+<!-- endDocument() : 문서가 종료 -->

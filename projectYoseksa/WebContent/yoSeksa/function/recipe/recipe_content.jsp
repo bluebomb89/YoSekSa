@@ -1,15 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!-- saved from url=(0041)http://www.10000recipe.com/recipe/6836699 -->
-<html><!--[endif]-->
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <title>고구마수프</title>
 <link href="../../css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="../../css/component.css" rel="stylesheet" type="text/css"  />
-<!-- jQuery (necessary JavaScript plugins) -->
 <!-- Custom Theme files -->
 <link href="../../css/style.css" type="text/css" rel="stylesheet" media="all">
 <link href="../../css/bootstrapTheme.css" rel="stylesheet">
@@ -21,14 +19,7 @@
 <link rel="stylesheet" type="text/css" href="../../css/font.css">
 <link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="../../css/recipe_content.css">
-<!-- Custom Theme files -->
-<!--//theme-style-->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="keywords" content="Flooring Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- //footer -->
-
+<!-- script -->
 <script src="../../js/saved_resource"></script>
 <script src="../../js/jquery.min.js"></script>
 <script src="../../js/bootstrap.min.js"></script>
@@ -38,7 +29,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="../../js/jquery.cycle.all.js"></script>
 <script src="../../js/owl.carousel.js"></script>
 <script src="../../js/owl.carousel.min.js"></script>
-<!--/animated-css-->
 <script src="../../js/move-top.js"></script>
 <script src="../../js/easing.js"></script>
 <script src="../../js/bootstrap.js"></script> 

@@ -1,4 +1,4 @@
-package com.yoseksa;
+/*package com.yoseksa;
 
 public class yoseksa {
 	private static String[] jsp={
@@ -17,3 +17,4 @@ public class yoseksa {
 		return jsp[no];
 	}
 }
+*/

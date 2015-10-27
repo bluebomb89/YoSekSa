@@ -1,27 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="com.yoseksa.*"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%
-	String strNo=request.getParameter("no");
-	if(strNo==null)
-		strNo="0";
-	String jsp=yoseksa.change(Integer.parseInt(strNo));
-%>
-<c:set var="path" value="<%=jsp %>"/> 
+    pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
 <html>
 <head>
 <title>Flooring a Interior category Flat Bootstarp Responsive Website Template | Home :: w3layouts</title>
-<!-- Custom Theme files -->
-<!--//theme-style-->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="keywords" content="Flooring Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-
-<!--/script-->
-
-
-<!--script-->
 
 </head>
 <body  class="cbp-spmenu-push">
@@ -34,7 +16,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<!-- 왼쪽상단에 있는 버튼을 클릭했을때 나오는 링크or속성값을 지정하는곳 -->
 		  </nav>
 		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
-		<script src="../../js/classie.js"></script>
+<!-- 		<script src="../../js/classie.js"></script>  -->
 <!-- 타이틀 메뉴바 -->
 <div class="navbar navbar-inverse navbar-static-top affix-top" id="nav">
 		<div class="container">
@@ -82,7 +64,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 -->
 
 <!-- 여기에 include 작성-->
-<jsp:include page="${path }"></jsp:include>
+<jsp:include page="${jsp }"></jsp:include>.
 <!--  메인인인인인이닌이니이 -->
 <script type="text/javascript">
 		$(document).ready(function() {
