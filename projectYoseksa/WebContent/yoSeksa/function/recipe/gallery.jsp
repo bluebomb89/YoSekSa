@@ -120,7 +120,7 @@
 <link href="../../css/component.css" rel="stylesheet" type="text/css"  />
 <!-- jQuery (necessary JavaScript plugins) -->
 <!-- Custom Theme files -->
-<link href="../../css/style.css" type="text/css" rel="stylesheet" media="all">
+<!-- <link href="../../css/style.css" type="text/css" rel="stylesheet" media="all"> -->
 <link href="../../css/bootstrapTheme.css" rel="stylesheet">
 <link href="../../css/style1.css" type="text/css" rel="stylesheet" media="all">
 <link href="../../css/custom.css" rel="stylesheet">
@@ -130,57 +130,6 @@
 <link href="../../css/style3.css" type="text/css" rel="stylesheet" media="all">
 <!--script-->
 
-<script src="../../js/saved_resource"></script>
-<script src="../../js/jquery.min.js"></script>
-<script src="../../js/bootstrap.min.js"></script>
-<script src="../../js/modernizr.custom.js"></script>
-<script src="../../js/jquery-1.11.1.min.js"></script>
-<script src="../../js/responsiveslides.min.js"></script>
-<script src="../../js/jquery.cycle.all.js"></script>
-<script src="../../js/owl.carousel.js"></script>
-<script src="../../js/owl.carousel.min.js"></script>
-<!--/animated-css-->
-<script src="../../js/move-top.js"></script>
-<script src="../../js/easing.js"></script>
-<script src="../../js/bootstrap.js"></script> 
-<!--/script-->
-</head>
-<body class="cbp-spmenu-push">
-	<script src="../../js/classie.js"></script>
-
-	<!---->
-	<!--  style.css안에 이미지 추가해서 div class이름에 넣어라. 이미지는 전체적으로 style.css안에. 
-	  
-.bannersearch{
-	background:url(../images/bannersearch.jpg) no-repeat 0px 0px;
-	background-size:100% 100%;
-	min-height:895px;
-}
-
-css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어주면 된다.
--->
-
-	<!-- 여기에 include 작성-->
-
-	<!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-
-
-
-	
-<!-- jQuery (necessary JavaScript plugins) -->
-<script type="text/javascript"
-	src="http://recipe.ezmember.co.kr/static/js/jquery-1.11.2.min.js"
-	charset="utf-8"></script>
-<!-- Custom Theme files -->
-<!-- <link href="../../css/style.css" type="text/css" rel="stylesheet" media="all"> -->
-
-<!-- Custom Theme files -->
-<!-- //footer -->
 <script src="../../js/saved_resource"></script>
 <script src="../../js/jquery.min.js"></script>
 <script src="../../js/bootstrap.min.js"></script>
@@ -212,8 +161,42 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		});
 	});
 </script>
+</head>
+<body class="cbp-spmenu-push">
 
-	<!--script-->
+
+	<!---->
+	<!--  style.css안에 이미지 추가해서 div class이름에 넣어라. 이미지는 전체적으로 style.css안에. 
+	  
+.bannersearch{
+	background:url(../images/bannersearch.jpg) no-repeat 0px 0px;
+	background-size:100% 100%;
+	min-height:895px;
+}
+
+css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어주면 된다.
+-->
+
+	<!-- 여기에 include 작성-->
+
+	<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+
+
+	
+<!-- jQuery (necessary JavaScript plugins) -->
+<!-- Custom Theme files -->
+<!-- <link href="../../css/style.css" type="text/css" rel="stylesheet" media="all"> -->
+
+<!-- Custom Theme files -->
+<!-- //footer -->
+
+<!--script------------------------------------------------------------------------------------------------------->
 	<div class="container"
 		style="margin-top: 60px; margin-left: 30px; padding-top: 40px;">
 		<div class="top_title"
@@ -248,10 +231,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>
 			</div>
 		</div>
+<!----------------------------------------------------------------------------------------------------------------------->
 
-		<div class="row" style="margin-bottom: 0px; margin-left: 0px;">
-
-		</div>
+<!-- 검색 창 -------------------------------------------------------------------------------------------- ------------------>
 		<div class="col-md-12" style="padding-top: 15px;">
 			<!-- <div class="row">
 				<div class="col-lg-4">
@@ -263,15 +245,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					/input-group
 				</div> -->
 			<!-- /.col-lg-6 -->
-
-
-
-
-
 		</div>
-		<!-- /.row -->
+<!---------------------------------------------------------------------------------------------------- ------------------>
 
-
+	<!-- /.row -->
 		<div class="col-md-12" style="margin-top: 20px;">
 			<div class="col-sm-3 col-md-3.5">
 				<div class="thumbnail" style="margin-bottom: 5px;">
@@ -502,6 +479,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>
 			</div>
 		</div>
+		
 		<nav align="center">
 			<ul class="pagination" style="margin-top: 80px;">
 				<li><a href="#" aria-label="Previous"> <span
