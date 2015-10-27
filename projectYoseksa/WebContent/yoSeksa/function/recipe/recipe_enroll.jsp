@@ -31,29 +31,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <meta name="keywords"
 	content="Flooring Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-<script type="application/x-javascript">
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
 
-
-
-
-
-
-
-
-
-
-</script>
 <!-- //footer -->
 <script type="text/javascript" src="js/saved_resource"></script>
 <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -68,7 +46,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
 <!--/script-->
-<script type="text/javascript">
+
+
+<!-- <script type="text/javascript">
 	jQuery(document).ready(function($) {
 		$(".scroll").click(function(event) {
 			event.preventDefault();
@@ -134,8 +114,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		});
 	});
 </script>
-
+ -->
 <!--script-->
+
 
 </head>
 <body class="cbp-spmenu-push">
@@ -153,7 +134,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어주면 된다.
 -->
-	<form name="insFrm" id="insFrm" method="post" style="height: 1996px;margin-left: 30px;margin-top: 100px;">
+	<form name="insFrm" id="insFrm" method="post"
+		style="height: 1996px; margin-left: 30px; margin-top: 100px;">
 		<div class="container recipe_regi"
 			style="margin-top: 60px; margin-left: 11px; margin-right: 11px; width: 1140px; padding-left: 0px; padding-right: 0px;">
 			<div class="regi_center" style="height: 1870px;">
@@ -161,8 +143,8 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 					Wirte Recipe</b>
 				</div>
 				<div class="cont_box pad_l_60" style="height: 422px;">
-					<div id="divMainPhotoUpload" class="cont_pic2" style="
-    margin-right: 10px;">
+					<div id="divMainPhotoUpload" class="cont_pic2"
+						style="margin-right: 10px;">
 						<div style="position: absolute; left: -3000px">
 							<input type="file" name="q_main_file" id="q_main_file"
 								file_gubun="main" accept="jpeg,png,gif"
@@ -387,118 +369,199 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 					</div>
 				</div>
 				<div class="cont_box pad_l_60">
-      <p class="cont_tit3">요리순서</p>
-      <div id="divStepArea" class="ui-sortable"><div id="divStepItem_1" class="step">
-            <p id="divStepNum_1" class="cont_tit2_1 ui-sortable-handle" style="cursor:pointer" data-original-title="" title="">Step1</p>
-            <div id="divStepUpload_1" style="display:inline-block">
-                <input type="hidden" name="step_no[]" id="step_no_1" value="">
-                <input type="hidden" name="step_photo[]" id="step_photo_1" value="">
-                <input type="hidden" name="new_step_photo[]" id="new_step_photo_1" value="">
-                <input type="hidden" name="del_step_photo[]" id="del_step_photo_1" value="">
-                <div style="position:absolute;left:-3000px"><input type="file" name="q_step_file_1" id="q_step_file_1" file_gubun="step" accept="jpeg,png,gif" style="display:;width:0px;height:0px;font-size:0px;" text=""></div>
-                <div id="divStepPhotoBox_1" is_over="0">
-                    <img id="stepPhotoHolder_1" onclick="browseStepFile(1)" src="http://recipe1.ezmember.co.kr/img/pic_none2.gif" width="160" height="160" style="cursor:pointer">
-                </div>
-            </div>
-            <div id="divStepText_1" style="display:inline-block">
-                <textarea name="step_text[]" id="step_text_1" class="form-control step_cont" placeholder="예) 소고기는 기름기를 떼어내고 적당한 크기로 썰어주세요." style="height:160px; width:430px; resize:none;"></textarea>
-            </div>
-            <div id="divStepBtn_1" class="step_btn" style="display: none;">
-                <a href="javascript:void(0)"><span class="glyphicon glyphicon-chevron-up moveUp"></span></a>
-                <a href="javascript:void(0)"><span class="glyphicon glyphicon-chevron-down moveDown"></span></a>
-                <a href="javascript:adjustStep(1)"><b>맞춤</b></a>
-                <a href="javascript:addStep(1)"><span class="glyphicon glyphicon-plus"></span></a>
-                <a href="javascript:delStep(1)"><span class="glyphicon glyphicon-remove"></span></a>
+					<p class="cont_tit3">요리순서</p>
+					<div id="divStepArea" class="ui-sortable">
+						<div id="divStepItem_1" class="step">
+							<p id="divStepNum_1" class="cont_tit2_1 ui-sortable-handle"
+								style="cursor: pointer" data-original-title="" title="">Step1</p>
+							<div id="divStepUpload_1" style="display: inline-block">
+								<input type="hidden" name="step_no[]" id="step_no_1" value="">
+								<input type="hidden" name="step_photo[]" id="step_photo_1"
+									value=""> <input type="hidden" name="new_step_photo[]"
+									id="new_step_photo_1" value=""> <input type="hidden"
+									name="del_step_photo[]" id="del_step_photo_1" value="">
+								<div style="position: absolute; left: -3000px">
+									<input type="file" name="q_step_file_1" id="q_step_file_1"
+										file_gubun="step" accept="jpeg,png,gif"
+										style="display:; width: 0px; height: 0px; font-size: 0px;"
+										text="">
+								</div>
+								<div id="divStepPhotoBox_1" is_over="0">
+									<img id="stepPhotoHolder_1" onclick="browseStepFile(1)"
+										src="http://recipe1.ezmember.co.kr/img/pic_none2.gif"
+										width="160" height="160" style="cursor: pointer">
+								</div>
+							</div>
+							<div id="divStepText_1" style="display: inline-block">
+								<textarea name="step_text[]" id="step_text_1"
+									class="form-control step_cont"
+									placeholder="예) 소고기는 기름기를 떼어내고 적당한 크기로 썰어주세요."
+									style="height: 160px; width: 430px; resize: none;"></textarea>
+							</div>
+							<div id="divStepBtn_1" class="step_btn" style="display: none;">
+								<a href="javascript:void(0)"><span
+									class="glyphicon glyphicon-chevron-up moveUp"></span></a> <a
+									href="javascript:void(0)"><span
+									class="glyphicon glyphicon-chevron-down moveDown"></span></a> <a
+									href="javascript:adjustStep(1)"><b>맞춤</b></a> <a
+									href="javascript:addStep(1)"><span
+									class="glyphicon glyphicon-plus"></span></a> <a
+									href="javascript:delStep(1)"><span
+									class="glyphicon glyphicon-remove"></span></a>
 
-            </div>
-          </div></div>
-      <!-- step template -->
-      <div id="divStepTemplate" style="display:none">
-          <div id="divStepItem_STEP" class="step">
-            <p id="divStepNum_STEP" class="cont_tit2_1" style="cursor:pointer">Step 1</p>
-            <div id="divStepUpload_STEP" style="display:inline-block">
-                <input type="hidden" name="step_no[]" id="step_no_STEP" value="">
-                <input type="hidden" name="step_photo[]" id="step_photo_STEP" value="">
-                <input type="hidden" name="new_step_photo[]" id="new_step_photo_STEP" value="">
-                <input type="hidden" name="del_step_photo[]" id="del_step_photo_STEP" value="">
-                <div style="position:absolute;left:-3000px"><input type="file" name="q_step_file_STEP" id="q_step_file_STEP" file_gubun="step" accept="jpeg,png,gif" style="display:;width:0px;height:0px;font-size:0px;" text=""></div>
-                <div id="divStepPhotoBox_STEP" is_over="0">
-                    <img id="stepPhotoHolder_STEP" onclick="browseStepFile(__STEP)" src="http://recipe1.ezmember.co.kr/img/pic_none2.gif" width="160" height="160" style="cursor:pointer">
-                </div>
-            </div>
-            <div id="divStepText_STEP" style="display:inline-block">
-                <textarea name="step_text[]" id="step_text_STEP" class="form-control step_cont" placeholder="" style="height:160px; width:430px; resize:none;"></textarea>
-            </div>
-            <div id="divStepBtn_STEP" class="step_btn" style="display:none">
-                <a href="javascript:void(0)"><span class="glyphicon glyphicon-chevron-up moveUp"></span></a>
-                <a href="javascript:void(0)"><span class="glyphicon glyphicon-chevron-down moveDown"></span></a>
-                <a href="javascript:adjustStep(__STEP)"><b>맞춤</b></a>
-                <a href="javascript:addStep(__STEP)"><span class="glyphicon glyphicon-plus"></span></a>
-                <a href="javascript:delStep(__STEP)"><span class="glyphicon glyphicon-remove"></span></a>
+							</div>
+						</div>
+					</div>
+					<!-- step template -->
+					<div id="divStepTemplate" style="display: none">
+						<div id="divStepItem_STEP" class="step">
+							<p id="divStepNum_STEP" class="cont_tit2_1"
+								style="cursor: pointer">Step 1</p>
+							<div id="divStepUpload_STEP" style="display: inline-block">
+								<input type="hidden" name="step_no[]" id="step_no_STEP" value="">
+								<input type="hidden" name="step_photo[]" id="step_photo_STEP"
+									value=""> <input type="hidden" name="new_step_photo[]"
+									id="new_step_photo_STEP" value=""> <input type="hidden"
+									name="del_step_photo[]" id="del_step_photo_STEP" value="">
+								<div style="position: absolute; left: -3000px">
+									<input type="file" name="q_step_file_STEP"
+										id="q_step_file_STEP" file_gubun="step" accept="jpeg,png,gif"
+										style="display:; width: 0px; height: 0px; font-size: 0px;"
+										text="">
+								</div>
+								<div id="divStepPhotoBox_STEP" is_over="0">
+									<img id="stepPhotoHolder_STEP" onclick="browseStepFile(__STEP)"
+										src="http://recipe1.ezmember.co.kr/img/pic_none2.gif"
+										width="160" height="160" style="cursor: pointer">
+								</div>
+							</div>
+							<div id="divStepText_STEP" style="display: inline-block">
+								<textarea name="step_text[]" id="step_text_STEP"
+									class="form-control step_cont" placeholder=""
+									style="height: 160px; width: 430px; resize: none;"></textarea>
+							</div>
+							<div id="divStepBtn_STEP" class="step_btn" style="display: none">
+								<a href="javascript:void(0)"><span
+									class="glyphicon glyphicon-chevron-up moveUp"></span></a> <a
+									href="javascript:void(0)"><span
+									class="glyphicon glyphicon-chevron-down moveDown"></span></a> <a
+									href="javascript:adjustStep(__STEP)"><b>맞춤</b></a> <a
+									href="javascript:addStep(__STEP)"><span
+									class="glyphicon glyphicon-plus"></span></a> <a
+									href="javascript:delStep(__STEP)"><span
+									class="glyphicon glyphicon-remove"></span></a>
 
-            </div>
-          </div>
-      </div><!--/step template-->
+							</div>
+						</div>
+					</div>
+					<!--/step template-->
 
-      <div class="btn_add mag_b_25" style="padding:0 0 20px 180px; width:820px;"><button type="button" onclick="addStep()" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span>순서추가</button></div>
+					<div class="btn_add mag_b_25"
+						style="padding: 0 0 20px 180px; width: 820px;">
+						<button type="button" onclick="addStep()" class="btn btn-default">
+							<span class="glyphicon glyphicon-plus-sign"></span>순서추가
+						</button>
+					</div>
 
 
-      <p class="cont_tit4">요리완성사진</p>
-      <div id="divWorkArea" style="display:inline-block">
-                <div id="divWorkUpload_1" class="complete_pic">
-            <input type="hidden" name="work_photo[]" id="work_photo_1" value="">
-            <input type="hidden" name="new_work_photo[]" id="new_work_photo_1" value="">
-            <input type="hidden" name="del_work_photo[]" id="del_work_photo_1" value="">
-            <div style="position:absolute;left:-3000px"><input type="file" name="q_work_file_1" id="q_work_file_1" file_gubun="work" accept="jpeg,png,gif" style="display:;width:0px;height:0px;font-size:0px;" text=""></div>
-            <div id="divWorkPhotoBox_1" is_over="0">
-                <a href="#" class="pic_del" style="display:none"></a>
-                <img id="workPhotoHolder_1" onclick="browseWorkFile(1)" src="http://recipe1.ezmember.co.kr/img/pic_none3.gif" alt="No Image" style="width: 140px; height: 140px; cursor:pointer">
-            </div>
-        </div>
-                <div id="divWorkUpload_2" class="complete_pic">
-            <input type="hidden" name="work_photo[]" id="work_photo_2" value="">
-            <input type="hidden" name="new_work_photo[]" id="new_work_photo_2" value="">
-            <input type="hidden" name="del_work_photo[]" id="del_work_photo_2" value="">
-            <div style="position:absolute;left:-3000px"><input type="file" name="q_work_file_2" id="q_work_file_2" file_gubun="work" accept="jpeg,png,gif" style="display:;width:0px;height:0px;font-size:0px;" text=""></div>
-            <div id="divWorkPhotoBox_2" is_over="0">
-                <a href="#" class="pic_del" style="display:none"></a>
-                <img id="workPhotoHolder_2" onclick="browseWorkFile(2)" src="http://recipe1.ezmember.co.kr/img/pic_none3.gif" alt="No Image" style="width: 140px; height: 140px; cursor:pointer">
-            </div>
-        </div>
-                <div id="divWorkUpload_3" class="complete_pic">
-            <input type="hidden" name="work_photo[]" id="work_photo_3" value="">
-            <input type="hidden" name="new_work_photo[]" id="new_work_photo_3" value="">
-            <input type="hidden" name="del_work_photo[]" id="del_work_photo_3" value="">
-            <div style="position:absolute;left:-3000px"><input type="file" name="q_work_file_3" id="q_work_file_3" file_gubun="work" accept="jpeg,png,gif" style="display:;width:0px;height:0px;font-size:0px;" text=""></div>
-            <div id="divWorkPhotoBox_3" is_over="0">
-                <a href="#" class="pic_del" style="display:none"></a>
-                <img id="workPhotoHolder_3" onclick="browseWorkFile(3)" src="http://recipe1.ezmember.co.kr/img/pic_none3.gif" alt="No Image" style="width: 140px; height: 140px; cursor:pointer">
-            </div>
-        </div>
-                <div id="divWorkUpload_4" class="complete_pic">
-            <input type="hidden" name="work_photo[]" id="work_photo_4" value="">
-            <input type="hidden" name="new_work_photo[]" id="new_work_photo_4" value="">
-            <input type="hidden" name="del_work_photo[]" id="del_work_photo_4" value="">
-            <div style="position:absolute;left:-3000px"><input type="file" name="q_work_file_4" id="q_work_file_4" file_gubun="work" accept="jpeg,png,gif" style="display:;width:0px;height:0px;font-size:0px;" text=""></div>
-            <div id="divWorkPhotoBox_4" is_over="0">
-                <a href="#" class="pic_del" style="display:none"></a>
-                <img id="workPhotoHolder_4" onclick="browseWorkFile(4)" src="http://recipe1.ezmember.co.kr/img/pic_none3.gif" alt="No Image" style="width: 140px; height: 140px; cursor:pointer">
-            </div>
-        </div>
-              </div>
-              
-    </div>
-<div class="cont_box pad_l_60">
-    <p class="cont_tit4">요리팁</p>
-    <textarea name="cok_tip" id="cok_tip" class="form-control step_cont" placeholder="예) 고기요리에는 소금보다 설탕을 먼저 넣어야 단맛이 겉돌지 않고 육질이 부드러워요." style="height:120px; width:620px; resize:none;"></textarea>
-    </div>
-    <div class="regi_btm">
-    <button type="button" onclick="doSubmit('save')" class="btn-lg btn-primary">저장</button>
-		<button type="button" onclick="doSubmit('save_public')" class="btn-lg btn-warning">공개하기</button>
-	    <button type="button" onclick="history.back();" class="btn-lg btn-default">취소</button>
-      </div>
+					<p class="cont_tit4">요리완성사진</p>
+					<div id="divWorkArea" style="display: inline-block">
+						<div id="divWorkUpload_1" class="complete_pic">
+							<input type="hidden" name="work_photo[]" id="work_photo_1"
+								value=""> <input type="hidden" name="new_work_photo[]"
+								id="new_work_photo_1" value=""> <input type="hidden"
+								name="del_work_photo[]" id="del_work_photo_1" value="">
+							<div style="position: absolute; left: -3000px">
+								<input type="file" name="q_work_file_1" id="q_work_file_1"
+									file_gubun="work" accept="jpeg,png,gif"
+									style="display:; width: 0px; height: 0px; font-size: 0px;"
+									text="">
+							</div>
+							<div id="divWorkPhotoBox_1" is_over="0">
+								<a href="#" class="pic_del" style="display: none"></a> <img
+									id="workPhotoHolder_1" onclick="browseWorkFile(1)"
+									src="http://recipe1.ezmember.co.kr/img/pic_none3.gif"
+									alt="No Image"
+									style="width: 140px; height: 140px; cursor: pointer">
+							</div>
+						</div>
+						<div id="divWorkUpload_2" class="complete_pic">
+							<input type="hidden" name="work_photo[]" id="work_photo_2"
+								value=""> <input type="hidden" name="new_work_photo[]"
+								id="new_work_photo_2" value=""> <input type="hidden"
+								name="del_work_photo[]" id="del_work_photo_2" value="">
+							<div style="position: absolute; left: -3000px">
+								<input type="file" name="q_work_file_2" id="q_work_file_2"
+									file_gubun="work" accept="jpeg,png,gif"
+									style="display:; width: 0px; height: 0px; font-size: 0px;"
+									text="">
+							</div>
+							<div id="divWorkPhotoBox_2" is_over="0">
+								<a href="#" class="pic_del" style="display: none"></a> <img
+									id="workPhotoHolder_2" onclick="browseWorkFile(2)"
+									src="http://recipe1.ezmember.co.kr/img/pic_none3.gif"
+									alt="No Image"
+									style="width: 140px; height: 140px; cursor: pointer">
+							</div>
+						</div>
+						<div id="divWorkUpload_3" class="complete_pic">
+							<input type="hidden" name="work_photo[]" id="work_photo_3"
+								value=""> <input type="hidden" name="new_work_photo[]"
+								id="new_work_photo_3" value=""> <input type="hidden"
+								name="del_work_photo[]" id="del_work_photo_3" value="">
+							<div style="position: absolute; left: -3000px">
+								<input type="file" name="q_work_file_3" id="q_work_file_3"
+									file_gubun="work" accept="jpeg,png,gif"
+									style="display:; width: 0px; height: 0px; font-size: 0px;"
+									text="">
+							</div>
+							<div id="divWorkPhotoBox_3" is_over="0">
+								<a href="#" class="pic_del" style="display: none"></a> <img
+									id="workPhotoHolder_3" onclick="browseWorkFile(3)"
+									src="http://recipe1.ezmember.co.kr/img/pic_none3.gif"
+									alt="No Image"
+									style="width: 140px; height: 140px; cursor: pointer">
+							</div>
+						</div>
+						<div id="divWorkUpload_4" class="complete_pic">
+							<input type="hidden" name="work_photo[]" id="work_photo_4"
+								value=""> <input type="hidden" name="new_work_photo[]"
+								id="new_work_photo_4" value=""> <input type="hidden"
+								name="del_work_photo[]" id="del_work_photo_4" value="">
+							<div style="position: absolute; left: -3000px">
+								<input type="file" name="q_work_file_4" id="q_work_file_4"
+									file_gubun="work" accept="jpeg,png,gif"
+									style="display:; width: 0px; height: 0px; font-size: 0px;"
+									text="">
+							</div>
+							<div id="divWorkPhotoBox_4" is_over="0">
+								<a href="#" class="pic_del" style="display: none"></a> <img
+									id="workPhotoHolder_4" onclick="browseWorkFile(4)"
+									src="http://recipe1.ezmember.co.kr/img/pic_none3.gif"
+									alt="No Image"
+									style="width: 140px; height: 140px; cursor: pointer">
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="cont_box pad_l_60">
+					<p class="cont_tit4">요리팁</p>
+					<textarea name="cok_tip" id="cok_tip"
+						class="form-control step_cont"
+						placeholder="예) 고기요리에는 소금보다 설탕을 먼저 넣어야 단맛이 겉돌지 않고 육질이 부드러워요."
+						style="height: 120px; width: 620px; resize: none;"></textarea>
+				</div>
+				<div class="regi_btm">
+					<button type="button" onclick="doSubmit('save')"
+						class="btn-lg btn-primary">저장</button>
+					<button type="button" onclick="doSubmit('save_public')"
+						class="btn-lg btn-warning">공개하기</button>
+					<button type="button" onclick="history.back();"
+						class="btn-lg btn-default">취소</button>
+				</div>
 			</div>
-			
+
 		</div>
 	</form>
 	<!-- recipe enroll form -->
@@ -507,7 +570,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 
 
 	<!---->
-	<script type="text/javascript">
+<!-- 	<script type="text/javascript">
 		$(document).ready(function() {
 			/*
 			var defaults = {
@@ -521,7 +584,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 				easingType : 'easeOutQuart'
 			});
 		});
-	</script>
+	</script> -->
 
 	<a href="#to-top" id="toTop" style="display: block;"> <span
 		id="toTopHover" style="opacity: 1;"> </span></a>

@@ -28,6 +28,8 @@
 <link rel="stylesheet" href="../../css/list/melonweb_album.css" type="text/css">
 <link href="../../css/listwrite.css" rel="stylesheet">
 <link rel="stylesheet" href="../../css/list/ggong.css" type="text/css">
+
+<link rel="stylesheet" href="../../css/list/onepage_201401.css" type="text/css">
 <!-- //footer -->
 
 <script src="../../js/saved_resource"></script>
@@ -195,6 +197,56 @@
 		<script src="js/classie.js"></script>
 <div id="wrap">
    <!-- //header -->
+   <div class="mainArea02">
+		<div class="tabReview">
+	<div id="tab3"></div>
+	<div class="reviewWrap">
+		<div class="goodReview">
+			<div class="top">
+				
+				
+				<dl class="topSub">
+					<dt class="warning">상대방에 대한 심한 비방, 욕설을 포함한 글, 광고홍보성 글, 실명이 확인되지 않는 글들은 의 판단하에 임의로 삭제 가능합니다.</dt>
+				</dl>
+			</div>
+	
+			<ul class="boardNotice">
+	
+				<li>
+					<dl>
+						<dt></dt>
+						<dd><a href="javascript:;" onclick="window.open('/common/board/noticeboardview_pop.asp?id=489', 'noticeboardview_pop', 'width=636, height=500, scrollbars=yes');return false;"><span class="subject"></span>[NEW]게시판 운영방안 및 게시물 삭제 기준 안내</a></dd>
+					</dl>
+				</li>
+	
+				<li>
+					<dl>
+						<dt></dt>
+						<dd><a href="javascript:;" onclick="window.open('/common/board/noticeboardview_pop.asp?id=335', 'noticeboardview_pop', 'width=636, height=500, scrollbars=yes');return false;"><span class="subject">[필독]</span>저작권법 관련 내용입니다. 필독해주세요!</a></dd>
+					</dl>
+				</li>
+	
+			</ul>
+	
+			<p class="count">전체글<span class="number">2</span>건</p>
+			<div id="ajax_review">
+	  <ul class="boardList" totcnt="0" od="">
+	  
+		<li class="f_reply">
+			  <a href="http://"1"><img src="../../images/reply_ico.png" align="absbottom" ;=""> 게시물을 작성해주세요.</a>
+		</li>
+	  
+      </ul>
+      <!-- 페이징 : Start -->
+      
+	  <div class="hSpace30"><!-- 여백 30 --></div>
+      <!--//페이징 :End --></div>
+		</div>
+   
+   
+   
+   
+   
    <div id="cont_wrap" class="clfix">
       <div id="conts_section" class="my_fold">
          <!-- contents -->
@@ -232,4 +284,99 @@
       </div>
    </div>
 </div>
+<div class="WrapMain">
+
+		
+	
+	
+
+
+				
+				
+				
+	
+
+	
+	<div class="mainArea02">
+
+		
+		
+
+
+
+
+		
+
+		
+		<div class="tabReview">
+	<div id="tab3"></div>
+	
+	<div class="reviewWrap">
+
+		
+		
+
+		
+		
+		
+
+		
+		<div class="goodReview">
+			<div class="top">
+				
+				
+				<dl class="topSub">
+					<dt class="warning">상대방에 대한 심한 비방, 욕설을 포함한 글, 광고홍보성 글, 실명이 확인되지 않는 글들은 의 판단하에 임의로 삭제 가능합니다.</dt>
+				</dl>
+			</div>
+	
+			<ul class="boardNotice">
+	
+				<li>
+					<dl>
+						<dt></dt>
+						<dd><a href="javascript:;" onclick="window.open('/common/board/noticeboardview_pop.asp?id=489', 'noticeboardview_pop', 'width=636, height=500, scrollbars=yes');return false;"><span class="subject"></span>[NEW]게시판 운영방안 및 게시물 삭제 기준 안내</a></dd>
+					</dl>
+				</li>
+	
+				<li>
+					<dl>
+						<dt></dt>
+						<dd><a href="javascript:;" onclick="window.open('/common/board/noticeboardview_pop.asp?id=335', 'noticeboardview_pop', 'width=636, height=500, scrollbars=yes');return false;"><span class="subject">[필독]</span>저작권법 관련 내용입니다. 필독해주세요!</a></dd>
+					</dl>
+				</li>
+	
+			</ul>
+	
+			<p class="count">전체글<span class="number">2</span>건</p>
+			<div id="ajax_review">
+	  <ul class="boardList" totcnt="0" od="">
+	  
+		<li class="f_reply">
+			  <a href="http://"1"><img src="../../images/reply_ico.png" align="absbottom" ;=""> 게시물을 작성해주세요.</a>
+		</li>
+	  
+      </ul>
+      <!-- 페이징 : Start -->
+      
+	  <div class="hSpace30"><!-- 여백 30 --></div>
+      <!--//페이징 :End --></div>
+		</div>
+
+		
+		
+		
+		
+
+	
+	
+
+	
+	
+
+		
+
+	</div>
+</div>
+
 </body></html>
