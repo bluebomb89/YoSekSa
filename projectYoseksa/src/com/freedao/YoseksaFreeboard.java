@@ -1,15 +1,15 @@
-package com.noticedao;
+package com.freedao;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.common.YoseksaModel;
 
-public class YoseksaNotice implements YoseksaModel{
+public class YoseksaFreeboard implements YoseksaModel{
 
 	public String handlerRequest(HttpServletRequest req, HttpServletResponse res) throws Exception {
-		// TODO Auto-generated method stub
-		return "yoSeksa/function/main/mainhome.jsp";
+		req.setAttribute("jsp",	"../freeboard/list.jsp");
+		return "yoSeksa/function/main/main.jsp";
 	}
 
 }

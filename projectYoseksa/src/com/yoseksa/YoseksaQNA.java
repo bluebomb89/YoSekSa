@@ -1,15 +1,16 @@
-package com.noticedao;
+package com.yoseksa;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.common.YoseksaModel;
 
-public class YoseksaNotice implements YoseksaModel{
+public class YoseksaQNA implements YoseksaModel{
 
 	public String handlerRequest(HttpServletRequest req, HttpServletResponse res) throws Exception {
-		// TODO Auto-generated method stub
-		return "yoSeksa/function/main/mainhome.jsp";
+		req.setAttribute("jsp",	"../QnA/qna.jsp");
+		return "yoSeksa/function/main/main.jsp";
 	}
 
 }
+

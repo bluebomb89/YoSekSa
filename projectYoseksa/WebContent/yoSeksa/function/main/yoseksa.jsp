@@ -4,38 +4,34 @@
 <html>
 <head>
 <title>Flooring a Interior category Flat Bootstarp Responsive Website Template | Home :: w3layouts</title>
-<link href="../../css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
-<link href="../../css/component.css" rel="stylesheet" type="text/css"  />
+<link href="yoSeksa/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="yoSeksa/css/component.css" rel="stylesheet" type="text/css"  />
 <!-- jQuery (necessary JavaScript plugins) -->
 <!-- Custom Theme files -->
-<link href="../../css/style.css" type="text/css" rel="stylesheet" media="all">
-<link href="../../css/bootstrapTheme.css" rel="stylesheet">
-<link href="../../css/style1.css" type="text/css" rel="stylesheet" media="all">
-<link href="../../css/custom.css" rel="stylesheet">
-<link href="../../css/owl.carousel.css" rel="stylesheet">
-<link href="../../css/owl.theme.css" rel="stylesheet">
-<link href="../../css/index.css" rel="stylesheet">
-<!-- Custom Theme files -->
-<!--//theme-style-->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="keywords" content="Flooring Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- //footer -->
+<link href="yoSeksa/css/style.css" type="text/css" rel="stylesheet" media="all">
+<link href="yoSeksa/css/bootstrapTheme.css" rel="stylesheet">
+<link href="yoSeksa/css/style1.css" type="text/css" rel="stylesheet" media="all">
+<link href="yoSeksa/css/custom.css" rel="stylesheet">
+<link href="yoSeksa/css/owl.carousel.css" rel="stylesheet">
+<link href="yoSeksa/css/owl.theme.css" rel="stylesheet">
+<link href="yoSeksa/css/index.css" rel="stylesheet">
+<!-- script -->
 
-<script src="../../js/saved_resource"></script>
-<script src="../../js/jquery.min.js"></script>
-<script src="../../js/bootstrap.min.js"></script>
-<script src="../../js/modernizr.custom.js"></script>
-<script src="../../js/jquery-1.11.1.min.js"></script>
-<script src="../../js/responsiveslides.min.js"></script>
-<script src="../../js/jquery.cycle.all.js"></script>
-<script src="../../js/owl.carousel.js"></script>
-<script src="../../js/owl.carousel.min.js"></script>
+<script src="yoSeksa/js/saved_resource.js"></script>
+<script src="yoSeksa/js/jquery.min.js"></script>
+<script src="yoSeksa/js/mainbootstrap.js"></script>
+<script src="yoSeksa/js/modernizr.custom.js"></script>
+<script src="yoSeksa/js/mainbootstrap.js"></script>
+<script src="yoSeksa/js/jquery-1.11.1.min.js"></script>
+<script src="yoSeksa/js/responsiveslides.min.js"></script>
+<script src="yoSeksa/js/jquery.cycle.all.js"></script>
+<script src="yoSeksa/js/bootstrap.min.js"></script>
+<script src="yoSeksa/js/owl.carousel.js"></script>
+<script src="yoSeksa/js/owl.carousel.min.js"></script>
+
 <!--/animated-css-->
-<script src="../../js/move-top.js"></script>
-<script src="../../js/easing.js"></script>
-<script src="../../js/bootstrap.js"></script> 
+<script src="yoSeksa/js/move-top.js"></script>
+<script src="yoSeksa/js/easing.js"></script>
 <!--/script-->
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
@@ -117,8 +113,6 @@ $(document).ready(function() {
 </head>
 <body  class="cbp-spmenu-push">
 		<!--bottom-->
-		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
-		<script src="../../js/classie.js"></script>
 <!---->
 <!--  style.css안에 이미지 추가해서 div class이름에 넣어라. 이미지는 전체적으로 style.css안에. 
 	  
@@ -259,7 +253,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 <!-- services -->
 <!-- 여기에 공지사항 추가 -->
 <div id="services"  style="padding-top: 51px">
-<!-- <jsp:include page="${ntpage }"></jsp:include> -->
+	<jsp:include page="${ntpage }"></jsp:include>
 </div>
  <!-- testimonial -->
 <div class="testimonial">
@@ -283,7 +277,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 					 <p>03/2015</p>
 				 </div>
 				 <div class="event-grid_pic">
-					 <img src="../../images/pc.jpg" alt=""/>
+					 <img src="yoSeksa/images/pc.jpg" alt=""/>
 					 <h3><a href="#">Morbi pellentesque urna scelerisque justo rutrum.</a></h3>
 					 <p>Nullam placerat aliquet nisl id finibus. Nulla mollis mattis magna in hendrerit. Pellentesque nunc nisl, dapibus eget erat non,
 					 sagittis accumsan dolor.</p>
@@ -295,7 +289,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 					 <p>02/2015</p>
 				 </div>
 				 <div class="event-grid_pic">
-					 <img src="../../images/pc1.jpg" alt=""/>
+					 <img src="yoSeksa/images/pc1.jpg" alt=""/>
 					 <h3><a href="#">Morbi pellentesque urna scelerisque justo rutrum.</a></h3>
 					 <p>Nullam placerat aliquet nisl id finibus. Nulla mollis mattis magna in hendrerit. Pellentesque nunc nisl, dapibus eget erat non,
 					 sagittis accumsan dolor.</p>
@@ -307,7 +301,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 					 <p>04/2015</p>
 				 </div>
 				 <div class="event-grid_pic">
-					 <img src="../../images/pc2.jpg" alt=""/>
+					 <img src="yoSeksa/images/pc2.jpg" alt=""/>
 					 <h3><a href="#">Morbi pellentesque urna scelerisque justo rutrum.</a></h3>
 					 <p>Nullam placerat aliquet nisl id finibus. Nulla mollis mattis magna in hendrerit. Pellentesque nunc nisl, dapibus eget erat non,
 					 sagittis accumsan dolor.</p>

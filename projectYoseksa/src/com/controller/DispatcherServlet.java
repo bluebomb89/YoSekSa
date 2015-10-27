@@ -25,7 +25,7 @@ public class DispatcherServlet extends HttpServlet {
 			YoseksaModel model=wc.getBean(cmd);
 			String jsp=model.handlerRequest(request, response);
 			String temp=jsp.substring(jsp.lastIndexOf('.')+1);
-			if(temp.equals("do")){
+			if(temp.equals("sek")){
 				response.sendRedirect(jsp);
 			}else{
 				RequestDispatcher rd=request.getRequestDispatcher(jsp);

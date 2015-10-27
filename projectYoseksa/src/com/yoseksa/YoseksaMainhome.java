@@ -5,11 +5,13 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.common.YoseksaModel;
 
-public class YoseksaIndex implements YoseksaModel{
+public class YoseksaMainhome implements YoseksaModel{
 
 	public String handlerRequest(HttpServletRequest req, HttpServletResponse res) throws Exception {
-		// TODO Auto-generated method stub
+		req.setAttribute("jsp",	"../main/yoseksa.jsp");
+		req.setAttribute("ntpage",	"../notice/notice.jsp");
 		return "yoSeksa/function/main/main.jsp";
 	}
 
 }
+
