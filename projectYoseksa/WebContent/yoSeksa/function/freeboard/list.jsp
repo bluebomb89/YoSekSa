@@ -158,7 +158,7 @@
             </button>
             	
                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                 <h4 align="center" style="margin-top: 60px; font-size: 17px; color:#544D4D">글 작성</h4>
+                 <h4 align="center" style="margin-top: 60px; font-size: 17px; color:#000000">글 작성</h4>
                  <div class="modal-body" style="padding-bottom:0px;">
                        <textarea name="board_tx" class="form-control" placeholder="내용" style="height: 210px; width: 446px;margin-left: 80px; border:1px solid #CACACA;
                            background-color: rgb(255, 255, 255);"></textarea>
@@ -180,7 +180,7 @@
                      </div>
                      <div class="modal-footer" style="margin-bottom:20px; margin-right: 70px; padding-top:0px;" >
                        <button type="button" class="btn btn-primary" >등록</button>
-                       <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+                       <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color:rgba(255, 255, 255, 0);">취소</button>
                      </div>
                </div>   
 		<!-- 여기는 작업하지 마요 -->
