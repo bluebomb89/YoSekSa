@@ -45,7 +45,7 @@
 
 	  <div id="bld">
 	   <input type="radio" name="bld" value="">&nbsp;아침&nbsp;&nbsp;<span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span><br><br>
-	   <input type="radio" name="bld" value="Lunch" checked&nbsp;>점심&nbsp;&nbsp;<span class="glyphicon glyphicon-glass" aria-hidden="true"></span><br><br>
+	   <input type="radio" name="bld" value="Lunch" checked&nbsp;>&nbsp;점심&nbsp;&nbsp;<span class="glyphicon glyphicon-glass" aria-hidden="true"></span><br><br>
 	   <input type="radio" name="bld" value="Dinner">&nbsp;저녁&nbsp;&nbsp;<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
       </div>
       
