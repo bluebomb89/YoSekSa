@@ -120,7 +120,7 @@
 <link href="../../css/component.css" rel="stylesheet" type="text/css"  />
 <!-- jQuery (necessary JavaScript plugins) -->
 <!-- Custom Theme files -->
-<link href="../../css/style.css" type="text/css" rel="stylesheet" media="all">
+<!-- <link href="../../css/style.css" type="text/css" rel="stylesheet" media="all"> -->
 <link href="../../css/bootstrapTheme.css" rel="stylesheet">
 <link href="../../css/style1.css" type="text/css" rel="stylesheet" media="all">
 <link href="../../css/custom.css" rel="stylesheet">
@@ -196,8 +196,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- Custom Theme files -->
 <!-- //footer -->
 
-
-	<!--script-->
+<!--script------------------------------------------------------------------------------------------------------->
 	<div class="container"
 		style="margin-top: 60px; margin-left: 30px; padding-top: 40px;">
 		<div class="top_title"
@@ -232,10 +231,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>
 			</div>
 		</div>
+<!----------------------------------------------------------------------------------------------------------------------->
 
-		<div class="row" style="margin-bottom: 0px; margin-left: 0px;">
-
-		</div>
+<!-- 검색 창 -------------------------------------------------------------------------------------------- ------------------>
 		<div class="col-md-12" style="padding-top: 15px;">
 			<!-- <div class="row">
 				<div class="col-lg-4">
@@ -247,15 +245,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					/input-group
 				</div> -->
 			<!-- /.col-lg-6 -->
-
-
-
-
-
 		</div>
-		<!-- /.row -->
+<!---------------------------------------------------------------------------------------------------- ------------------>
 
-
+	<!-- /.row -->
 		<div class="col-md-12" style="margin-top: 20px;">
 			<div class="col-sm-3 col-md-3.5">
 				<div class="thumbnail" style="margin-bottom: 5px;">
@@ -486,6 +479,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>
 			</div>
 		</div>
+		
 		<nav align="center">
 			<ul class="pagination" style="margin-top: 80px;">
 				<li><a href="#" aria-label="Previous"> <span
