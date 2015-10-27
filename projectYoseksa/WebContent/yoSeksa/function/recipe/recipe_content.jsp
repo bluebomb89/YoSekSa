@@ -7,10 +7,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <title>고구마수프</title>
-<link rel="stylesheet" type="text/css" href="../../css/font.css">
-<link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="../../css/ez_recipe_20151022.css">
-
 <link href="../../css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="../../css/component.css" rel="stylesheet" type="text/css"  />
 <!-- jQuery (necessary JavaScript plugins) -->
@@ -22,6 +18,9 @@
 <link href="../../css/owl.carousel.css" rel="stylesheet">
 <link href="../../css/owl.theme.css" rel="stylesheet">
 <link href="../../css/index.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../../css/font.css">
+<link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/recipe_content.css">
 <!-- Custom Theme files -->
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -61,28 +60,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		});
 	});
 </script>
-
-<!-- script -->
-<script type="text/javascript">
-	$(document).ready(function() {
-		/* affix the navbar after scroll below header */
-		$('#nav').affix({
-			offset: {top: $('header').height()-$('#nav').height()}
-		});
-		
-		/* affix-top 에서 affix로 수정될대 이벤트 발생*/
-		$('#nav').on("affix.bs.affix",function(){
-			$("#startmain").text("haa!");
-		});
-		/* affix에서 affix-top으로 전환될때 이벤트 발생*/
-		$('#nav').on("affix-top.bs.affix",function(){
-			$("#startmain").text("Search");
-		});
-	});
-</script>
 </head>
 <body>
-<div class="container sub_bg" style="margin-top: 100px;">
+ <div class="blank_bottom2"></div>
+<div class="container sub_bg">
     <div class="recipe_view">
     <div class="view_pic"><img src="../recipe/zxcvvxzcvcxv_files/2e201b2ed039e2d25a4a5961d50283ed1_m.jpg"></div>
     <div class="view_info">
