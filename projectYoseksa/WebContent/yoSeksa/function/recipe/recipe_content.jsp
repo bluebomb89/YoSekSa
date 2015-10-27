@@ -6,32 +6,32 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <title>고구마수프</title>
-<link href="../../css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
-<link href="../../css/component.css" rel="stylesheet" type="text/css"  />
+<link href="yoSeksa/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="yoSeksa/css/component.css" rel="stylesheet" type="text/css"  />
 <!-- Custom Theme files -->
-<link href="../../css/style.css" type="text/css" rel="stylesheet" media="all">
-<link href="../../css/bootstrapTheme.css" rel="stylesheet">
-<link href="../../css/style1.css" type="text/css" rel="stylesheet" media="all">
-<link href="../../css/custom.css" rel="stylesheet">
-<link href="../../css/owl.carousel.css" rel="stylesheet">
-<link href="../../css/owl.theme.css" rel="stylesheet">
-<link href="../../css/index.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="../../css/font.css">
-<link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="../../css/recipe_content.css">
+<link href="yoSeksa/css/style.css" type="text/css" rel="stylesheet" media="all">
+<link href="yoSeksa/css/bootstrapTheme.css" rel="stylesheet">
+<link href="yoSeksa/css/style1.css" type="text/css" rel="stylesheet" media="all">
+<link href="yoSeksa/css/custom.css" rel="stylesheet">
+<link href="yoSeksa/css/owl.carousel.css" rel="stylesheet">
+<link href="yoSeksa/css/owl.theme.css" rel="stylesheet">
+<link href="yoSeksa/css/index.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="yoSeksa/css/font.css">
+<link rel="stylesheet" type="text/css" href="yoSeksa/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="yoSeksa/css/recipe_content.css">
 <!-- script -->
-<script src="../../js/saved_resource"></script>
-<script src="../../js/jquery.min.js"></script>
-<script src="../../js/bootstrap.min.js"></script>
-<script src="../../js/modernizr.custom.js"></script>
-<script src="../../js/jquery-1.11.1.min.js"></script>
-<script src="../../js/responsiveslides.min.js"></script>
-<script src="../../js/jquery.cycle.all.js"></script>
-<script src="../../js/owl.carousel.js"></script>
-<script src="../../js/owl.carousel.min.js"></script>
-<script src="../../js/move-top.js"></script>
-<script src="../../js/easing.js"></script>
-<script src="../../js/bootstrap.js"></script> 
+<script src="yoSeksa/js/saved_resource"></script>
+<script src="yoSeksa/js/jquery.min.js"></script>
+<script src="yoSeksa/js/bootstrap.min.js"></script>
+<script src="yoSeksa/js/modernizr.custom.js"></script>
+<script src="yoSeksa/js/jquery-1.11.1.min.js"></script>
+<script src="yoSeksa/js/responsiveslides.min.js"></script>
+<script src="yoSeksa/js/jquery.cycle.all.js"></script>
+<script src="yoSeksa/js/owl.carousel.js"></script>
+<script src="yoSeksa/js/owl.carousel.min.js"></script>
+<script src="yoSeksa/js/move-top.js"></script>
+<script src="yoSeksa/js/easing.js"></script>
+<script src="yoSeksa/js/bootstrap.js"></script> 
 <!--/script-->
 <script type="text/javascript">
 	$(document).ready(function() {

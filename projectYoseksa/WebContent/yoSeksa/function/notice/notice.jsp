@@ -5,7 +5,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title></title>
-<link href="../../css/notice.css" rel="stylesheet">
+<link href="yoSeksa/css/notice.css" rel="stylesheet">
+
 </head> 
 <style type="text/css">
 .showmenu{
@@ -225,8 +226,5 @@ $(document).ready(function() {
 			<!-- Modal -->
 
 	 </div>
-
-	 
-
 </body>
 </html>
