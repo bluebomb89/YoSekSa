@@ -80,10 +80,10 @@ $(document).ready(function() {
 	    owl.trigger('owl.stop');
 	  })
 	  $("#owl-demo").mouseout(function(){
-	  	owl.trigger('owl.play',1500);
+	  	owl.trigger('owl.play',3500);
 	  })
 	  $("#startmain").click(function(){
-		  	owl.trigger('owl.play',1500);
+		  	owl.trigger('owl.play',3500);
 		  })	 
 	});
 </script>
@@ -124,6 +124,17 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 </header>
 <!-- 서비스눌렀을때 검색화면이동 -->
 		<div id="section1" class="slider" style="margin-bottom: 14px;">
+				<form class="yoseksa-search"role="search">
+					<div class="input-group">
+						<span class="twitter-typeahead">
+							<input type="text" class="yoseksa-search-hint" autofocus="">
+							<input type="text" class="yoseksa-search-input" id="txtSearch" placeholder="Search 350,000+ Recipes" autofocus="">
+						</span>
+						<span class="input-group-btn">
+							<button class="btn btn-default btnstateless search-input-button" type="button" id="btnGo" data-loading-text="..."><i class="fa fa-search"></i></button>
+						</span>
+					</div>
+				</form>
 			<div class="callbacks_container" style="padding-left: 15px; padding-right: 15px;">
 			  <ul class="rslides" id="slider">
 				<div class="slid banner1">				  
@@ -168,13 +179,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 				</div>
 			</ul>
 		  </div>
-	  	<div align=left style="position: absolute;">
-	  		<a class="btn prev">Previous</a>
-	  	</div>
-	  	<div align=right>
-	  		<a class="btn next">Next</a>
-	  	</div>
-		<div id="owl-demo" class="owl-carousel owl-theme">
+	  	<div id="owl-demo" class="owl-carousel owl-theme">
 			<div class="item col-sm-3 col-md-3">
 				<div class="thumbnail">
 					<img src="http://images.bigoven.com/image/upload/t_recipe-256/crispy-chicken-sandwich-250c6c.jpg" alt="...">
