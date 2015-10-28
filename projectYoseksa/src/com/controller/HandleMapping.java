@@ -1,9 +1,8 @@
 package com.controller;
 import java.util.*;
-
-import jdk.internal.org.xml.sax.Attributes;
-import jdk.internal.org.xml.sax.SAXException;
-import jdk.internal.org.xml.sax.helpers.DefaultHandler;
+import org.xml.sax.Attributes;
+import org.xml.sax.SAXException;
+import org.xml.sax.helpers.DefaultHandler;
 public class HandleMapping extends org.xml.sax.helpers.DefaultHandler {
 	Map map=new HashMap();
 	@Override
