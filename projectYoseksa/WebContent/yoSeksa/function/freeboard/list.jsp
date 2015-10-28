@@ -142,10 +142,6 @@
 
 <body  class="cbp-spmenu-push">
       <!-- 민영이는 주석 전까지만 작업 하세요 -->
-           <button type="button" class="btn btn-primary btn-lg" style="margin-top: 70px; 
-             margin-left: 50px;"data-toggle="modal" data-target="#myModal">등록
-            </button> 
-               
                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
                  <h4 align="center" style="margin-top: 60px; font-size: 17px; color:#000000">글 작성</h4>
                  <div class="modal-body" style="padding-bottom:0px;">
@@ -154,14 +150,14 @@
                      <div class="write_pic2" style="width: 400px; margin-top: 5px;">
                         <input type="file" name="file" id="file_1"
                            style="display: none;" />
-                        <div class="complete_pic" id="previewId" style="width: 70px; height: 70px; 
+                        <div class="complete_pic" id="previewId" style="width: 80px; height: 80px; 
                         color: black; font-size: 9pt; margin-left: 80px;
                          margin-bottom: 10px; border: 1px solid #635555;">
                            <!-- <img src="../../images/photo-image.jpg" alt="파일첨부" width="70" height="70"
                               onclick="document.getElementById('file_1').click();"
                               style="cursor: pointer; margin-left:80px;"/> -->
                         </div>
-                         <input type="file" onchange="previewImage(this,'previewId')" style="margin-left: 80px; margin"> 
+                         <input type="file" onchange="previewImage(this,'previewId')" style="margin-left: 80px;"> 
     <!-- <div id="previewId"
         style="width: 70px; height: 70px; color: black; font-size: 9pt; border: 2px solid black; position: absolute; left: 300px; top: 300px;">
     </div> -->
@@ -202,11 +198,13 @@
                               <p class="count">전체글<span class="number">2</span>건</p>
                                  <div id="ajax_review">
                                     <ul class="boardList" totcnt="0" od="">
-                                         <li class="f_reply">
-                                            <a href="http://"1"><img src="../../images/reply_ico.png" align="absbottom" ;=""> 게시물을 작성해주세요.</a>
-                                       </li> 
+                                          <img src="../../images/reply_ico.png" align="absbottom" ;=""
+                                          style="margin-top: 13px; margin-left: 395px;">
+                                         <button type="button" class="btn btn-primary btn-lg" 
+                                         style="margin-top: 15px; padding-left: 0px;"
+                                         data-toggle="modal" data-target="#myModal">게시물을 등록해주세요
+                                  </button>
                                        </ul>
-                                          <div class="hSpace30"><!-- 여백 30 --></div>
                                     </div>
                      </div>
                   </div>
