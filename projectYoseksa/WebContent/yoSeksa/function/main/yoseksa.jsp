@@ -124,130 +124,6 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 
 </header>
 <!-- 서비스눌렀을때 검색화면이동 -->
-		<div id="section1" class="slider" style="margin-bottom: 14px;">
-				<form class="yoseksa-search"role="search">
-					<div class="input-group">
-						<span class="twitter-typeahead">
-							<input type="text" class="yoseksa-search-hint">
-							<input type="text" class="yoseksa-search-input" id="txtSearch" placeholder="Search 350,000+ Recipes">
-						</span>
-						<span class="input-group-btn">
-							<button class="btn btn-default btnstateless search-input-button" type="button" id="btnGo" data-loading-text="..."><i class="fa fa-search"></i></button>
-						</span>
-					</div>
-				</form>
-			<div class="callbacks_container" style="padding-left: 15px; padding-right: 15px;">
-			  <ul class="rslides" id="slider">
-				<div class="slid banner1">				  
-				  <div class="caption">
-					<!-- 
-					<h3>Donec ut turpis sit amet enim mattis commodo velit.</h3>
-					<p>FOURNIER Timber carefully selects from a wide range of quality hardwoods to customers exact requirements which minimises wastage.</p>
-					<a class="hvr-bounce-to-right btn-left" href="#">Click</a>	
-					<a class="hvr-bounce-to-left  btn-right" href="#">learn more</a>
-					 -->
-					</div>
-				</div>
-				<div class="slid banner2">			  
-					<div class="caption">
-						<!-- 
-						<h3>Donec ut turpis sit amet enim mattis commodo velit.</h3>
-						<p>FOURNIER Timber carefully selects from a wide range of quality hardwoods to customers exact requirements which minimises wastage.</p>
-						<a class="hvr-bounce-to-right btn-left" href="#">Click</a>	
-						<a class="hvr-bounce-to-left  btn-right" href="#">learn more</a>
-						 -->
-					</div>
-				</div>
-				<div class="slid banner3">				  
-				  <div class="caption">
-				    <!-- 
-					<h3>Donec ut turpis sit amet enim mattis commodo velit.</h3>
-					<p>FOURNIER Timber carefully selects from a wide range of quality hardwoods to customers exact requirements which minimises wastage.</p>
-					<a class="hvr-bounce-to-right btn-left" href="#">Click</a>	
-					<a class="hvr-bounce-to-left  btn-right" href="#">learn more</a>
-					 -->
-					</div>
-				</div>
-				<div class="slid banner4">				  
-				  <div class="caption">
-				    <!-- 
-					<h3>Donec ut turpis sit amet enim mattis commodo velit.</h3>
-					<p>FOURNIER Timber carefully selects from a wide range of quality hardwoods to customers exact requirements which minimises wastage.</p>
-					<a class="hvr-bounce-to-right btn-left" href="#">Click</a>	
-					<a class="hvr-bounce-to-left  btn-right" href="#">learn more</a>
-					 -->
-					</div>
-				</div>
-			</ul>
-		  </div>
-	  	<div id="owl-demo" class="owl-carousel owl-theme">
-			<div class="item col-sm-3 col-md-3">
-				<div class="thumbnail">
-					<img src="http://images.bigoven.com/image/upload/t_recipe-256/crispy-chicken-sandwich-250c6c.jpg" alt="...">
-					<div class="caption">
-						<h3>Categori 1</h3>
-					</div>
-				</div>
-			</div>
-			<div class="item col-sm-3 col-md-3">
-				<div class="thumbnail">
-					<img src="http://images.bigoven.com/image/upload/t_recipe-256/crispy-chicken-sandwich-250c6c.jpg" alt="...">
-					<div class="caption">
-						<h3>Categori 2</h3>
-					</div>
-				</div>
-			</div>
-			<div class="item col-sm-3 col-md-3">
-				<div class="thumbnail">
-					<img src="http://images.bigoven.com/image/upload/t_recipe-256/crispy-chicken-sandwich-250c6c.jpg" alt="...">
-					<div class="caption">
-						<h3>Categori 3</h3>
-					</div>
-				</div>
-			</div>
-			<div class="item col-sm-3 col-md-3">
-				<div class="thumbnail">
-					<img src="http://images.bigoven.com/image/upload/t_recipe-256/crispy-chicken-sandwich-250c6c.jpg" alt="...">
-					<div class="caption">
-						<h3>Categori 4</h3>
-					</div>
-				</div>
-			</div>
-			<div class="item col-sm-3 col-md-3">
-				<div class="thumbnail">
-					<img src="http://images.bigoven.com/image/upload/t_recipe-256/crispy-chicken-sandwich-250c6c.jpg" alt="...">
-					<div class="caption">
-						<h3>Categori 5</h3>
-					</div>
-				</div>
-			</div>
-			<div class="item col-sm-3 col-md-3">
-				<div class="thumbnail">
-					<img src="http://images.bigoven.com/image/upload/t_recipe-256/crispy-chicken-sandwich-250c6c.jpg" alt="...">
-					<div class="caption">
-						<h3>Categori 6</h3>
-					</div>
-				</div>
-			</div>
-			<div class="item col-sm-3 col-md-3">
-				<div class="thumbnail">
-					<img src="http://images.bigoven.com/image/upload/t_recipe-256/crispy-chicken-sandwich-250c6c.jpg" alt="...">
-					<div class="caption">
-						<h3>Categori 7</h3>
-					</div>
-				</div>
-			</div>
-			<div class="item col-sm-3 col-md-3">
-				<div class="thumbnail">
-					<img src="http://images.bigoven.com/image/upload/t_recipe-256/crispy-chicken-sandwich-250c6c.jpg" alt="...">
-					<div class="caption">
-						<h3>Categori 8</h3>
-					</div>
-				</div>
-				</div>	
-			</div>
-		</div>
-=======
       <div id="section1" class="slider" style="margin-bottom: 14px;">
             <form class="yoseksa-search"role="search">
                <div class="input-group">
@@ -371,7 +247,6 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
             </div>   
          </div>
       </div>
->>>>>>> refs/remotes/origin/master
 <!-- services -->
 <!-- 여기에 공지사항 추가 -->
 <div id="services"  style="padding-top: 51px">
