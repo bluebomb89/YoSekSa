@@ -7,42 +7,42 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <!-- css -->
-<link href="../../css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
-<link href="../../css/component.css" rel="stylesheet" type="text/css"  />
+<link href="yoSeksa/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="yoSeksa/css/component.css" rel="stylesheet" type="text/css"  />
 <!-- jQuery (necessary JavaScript plugins) -->
 <!-- Custom Theme files -->
-<link href="../../css/style.css" type="text/css" rel="stylesheet" media="all">
-<link href="../../css/bootstrapTheme.css" rel="stylesheet">
-<link href="../../css/style1.css" type="text/css" rel="stylesheet" media="all">
-<link href="../../css/custom.css" rel="stylesheet">
-<link href="../../css/owl.carousel.css" rel="stylesheet">
-<link href="../../css/owl.theme.css" rel="stylesheet">
-<link href="../../css/index.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="../../css/font.css">
-<link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="../../css/recipe_content.css">
-<link rel="stylesheet" href="../../css/list/b0zjmc9xwx.css" type="text/css">
-<link rel="stylesheet" href="../../css/list/kt3ych75bx.css" type="text/css">
+<link href="yoSeksa/css/style.css" type="text/css" rel="stylesheet" media="all">
+<link href="yoSeksa/css/bootstrapTheme.css" rel="stylesheet">
+<link href="yoSeksa/css/style1.css" type="text/css" rel="stylesheet" media="all">
+<link href="yoSeksa/css/custom.css" rel="stylesheet">
+<link href="yoSeksa/css/owl.carousel.css" rel="stylesheet">
+<link href="yoSeksa/css/owl.theme.css" rel="stylesheet">
+<link href="yoSeksa/css/index.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="yoSeksa/css/font.css">
+<link rel="stylesheet" type="text/css" href="yoSeksa/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="yoSeksa/css/recipe_content.css">
+<link rel="stylesheet" href="yoSeksa/css/list/b0zjmc9xwx.css" type="text/css">
+<link rel="stylesheet" href="yoSeksa/css/list/kt3ych75bx.css" type="text/css">
 <!-- 댓글 css 파일 네임 변경 -->
-<link rel="stylesheet" href="../../css/list/ktwzk0vhtx.css" type="text/css"> 
-<link rel="stylesheet" href="../../css/list/melonweb_album.css" type="text/css">
-<link href="../../css/listwrite.css" rel="stylesheet">
-<link rel="stylesheet" href="../../css/list/ggong.css" type="text/css">
+<link rel="stylesheet" href="yoSeksa/css/list/ktwzk0vhtx.css" type="text/css"> 
+<link rel="stylesheet" href="yoSeksa/css/list/melonweb_album.css" type="text/css">
+<link href="yoSeksa/css/listwrite.css" rel="stylesheet">
+<link rel="stylesheet" href="yoSeksa/css/list/ggong.css" type="text/css">
 
-<link rel="stylesheet" href="../../css/list/onepage_201401.css" type="text/css">
+<link rel="stylesheet" href="yoSeksa/css/list/onepage_201401.css" type="text/css">
 <!-- //footer -->
 
-<script src="../../js/saved_resource"></script>
-<script src="../../js/jquery.min.js"></script>
-<script src="../../js/modernizr.custom.js"></script>
-<script src="../../js/responsiveslides.min.js"></script>
-<script src="../../js/jquery.cycle.all.js"></script>
-<script src="../../js/owl.carousel.js"></script>
-<script src="../../js/owl.carousel.min.js"></script>
+<script src="yoSeksa/js/saved_resource"></script>
+<script src="yoSeksa/js/jquery.min.js"></script>
+<script src="yoSeksa/js/modernizr.custom.js"></script>
+<script src="yoSeksa/js/responsiveslides.min.js"></script>
+<script src="yoSeksa/js/jquery.cycle.all.js"></script>
+<script src="yoSeksa/js/owl.carousel.js"></script>
+<script src="yoSeksa/js/owl.carousel.min.js"></script>
 <!--/animated-css-->
-<script src="../../js/move-top.js"></script>
-<script src="../../js/easing.js"></script>
-<script src="../../js/jquery-ui.js"></script>
+<script src="yoSeksa/js/move-top.js"></script>
+<script src="yoSeksa/js/easing.js"></script>
+<script src="yoSeksa/js/jquery-ui.js"></script>
 <!--/script-->
 <script type="text/javascript">
    $(document).ready(function() {
@@ -153,7 +153,7 @@
                         <div class="complete_pic" id="previewId" style="width: 80px; height: 80px; 
                         color: black; font-size: 9pt; margin-left: 80px;
                          margin-bottom: 10px; border: 1px solid #635555;">
-                           <!-- <img src="../../images/photo-image.jpg" alt="파일첨부" width="70" height="70"
+                           <!-- <img src="yoSeksa/images/photo-image.jpg" alt="파일첨부" width="70" height="70"
                               onclick="document.getElementById('file_1').click();"
                               style="cursor: pointer; margin-left:80px;"/> -->
                         </div>
@@ -198,7 +198,7 @@
                               <p class="count">전체글<span class="number">2</span>건</p>
                                  <div id="ajax_review">
                                     <ul class="boardList" totcnt="0" od="">
-                                          <img src="../../images/reply_ico.png" align="absbottom" ;=""
+                                          <img src="yoSeksa/images/reply_ico.png" align="absbottom" ;=""
                                           style="margin-top: 13px; margin-left: 395px;">
                                          <button type="button" class="btn btn-primary btn-lg" 
                                          style="margin-top: 15px; padding-left: 0px;"
