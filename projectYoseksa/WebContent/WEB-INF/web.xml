@@ -9,9 +9,9 @@
       <!-- 영권 경로 -->
       <!-- <param-value>C:\Users\남영권\git\yoseksaProject\projectYoseksa\WebContent\WEB-INF\applicationContext.xml</param-value> -->
       <!-- 민영경로 -->
-      <!-- <param-value>C:\Users\sist\git\YoSekSaProject\projectYoseksa\WebContent\WEB-INF\applicationContext.xml</param-value> -->
+       <param-value>C:\Users\sist\git\YoSekSaProject\projectYoseksa\WebContent\WEB-INF\applicationContext.xml</param-value>
       <!-- 우식이형님 경로 -->
-      <param-value>C:\Users\sist-77\git\YoSekSaProject\projectYoseksa\WebContent\WEB-INF\applicationContext.xml</param-value>
+      <!-- <param-value>C:\Users\sist-77\git\YoSekSaProject\projectYoseksa\WebContent\WEB-INF\applicationContext.xml</param-value> -->
 	  <!-- 홍의 경로 -->
       <!-- <param-value>C:\Users\ssd\git\projectYoSekSa\projectYoseksa\WebContent\WEB-INF\applicationContext.xml</param-value>  -->
 
