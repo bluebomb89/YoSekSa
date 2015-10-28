@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.common.YoseksaModel;
 
 public class YoseksaRecipe implements YoseksaModel{
-
+	@Override
 	public String handlerRequest(HttpServletRequest req, HttpServletResponse res) throws Exception {
 		req.setAttribute("jsp",	"../recipe/gallery.jsp");
 		return "yoSeksa/function/main/main.jsp";
