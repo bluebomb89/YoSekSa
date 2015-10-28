@@ -180,28 +180,23 @@ ul.dropdown-menu {
   top: 0;
   }
 .banner1{
-	background:url(http://www.bigoven.com/assets/images/hero/december/brownie-dark.jpg) no-repeat 0px 0px;
-	background-size:cover;
+	background:url(http://www.bigoven.com/assets/images/hero/december/brownie-dark.jpg) no-repeat 50% 50%;
 	min-height:585px;
 }
 .banner2{
-	background:url(http://www.bigoven.com/assets/images/hero/december/shrimp-salad.jpg) no-repeat 0px 0px;
-	background-size:cover;
+	background:url(http://www.bigoven.com/assets/images/hero/december/shrimp-salad.jpg) no-repeat 50% 50%;
 	min-height:585px;
 }
 .banner3{
-	background:url(http://www.bigoven.com/assets/images/hero/december/salad.jpg) no-repeat 0px 0px;
-	background-size:cover;
+	background:url(http://www.bigoven.com/assets/images/hero/december/salad.jpg) no-repeat 70% 50%;
 	min-height:585px;
 }
 .banner4{
-	background:url(http://www.bigoven.com/assets/images/hero/december/crepes-fruit.jpg) no-repeat 0px 0px;
-	background-size:cover;
+	background:url(http://www.bigoven.com/assets/images/hero/december/crepes-fruit.jpg) no-repeat 50% 50%;
 	min-height:585px;
 }
 .bannersearch{
 	background:url(../images/steak.jpg) no-repeat 0px 0px;
-	background-size:100% 100%;
 	min-height:961px;
 }
 .rslides img {
@@ -212,7 +207,7 @@ ul.dropdown-menu {
   border: 0;
   }
 .caption{
-	width: 45%;
+	width: 100%;
 	position: absolute;
 }
 .caption h3{
