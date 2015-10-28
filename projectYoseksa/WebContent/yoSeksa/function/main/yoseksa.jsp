@@ -124,7 +124,6 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 
 </header>
 <!-- 서비스눌렀을때 검색화면이동 -->
-<<<<<<< HEAD
 		<div id="section1" class="slider" style="margin-bottom: 14px;">
 				<form class="yoseksa-search"role="search">
 					<div class="input-group">
