@@ -7,6 +7,7 @@
 <title></title>
 <link href="yoSeksa/css/notice.css" rel="stylesheet">
 
+
 </head> 
 <style type="text/css">
 .showmenu{
@@ -66,6 +67,42 @@ $(document).ready(function() {
 		 <div class="container">
 			<div class="service-info" id="serviceyo">
 				<h3>Notice</h3>
+				<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+					등록
+				</button>
+					 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					  <div class="modal-dialog">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					        <h4 class="modal-title" id="myModalLabel">공지 사항</h4>
+					      </div>
+					      <div class="modal-body">
+					        <!-- 데이터 입력 -->
+							<form id="postForm" name="post_frm" method=post action="notice_insert.jsp">
+								<!-- 게시판 번호 -->
+								<input type="hidden" name="board_number" value="3">
+								<!-- 공지사항 번호 -->
+								<input type="hidden" name="notice_number" value="">
+								<!-- 회원 번호 -->
+								<input type="hidden" name="notice_member" value="">
+								<!-- 제목 -->
+								<input type="text" placeholder="제목" name="notice_sub"><br>
+								<!-- 내용 -->
+								<textarea name="notice_cont" class="form-control" placeholder="내용" style="min-height:300px;width: 100%; margin-top: 20px;"></textarea>
+								<!-- 날짜 -->								
+								<input type="hidden" name="notice_" value="">
+								<!-- 등록일 -->
+								<input type="hidden" name="" value="">
+						    </form>
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+					        <button type="submit" class="btn btn-primary">등록</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>	
 			</div>
 			<div class="showmenu" id="menu1">
 				<div class="noticesub">제목</div>

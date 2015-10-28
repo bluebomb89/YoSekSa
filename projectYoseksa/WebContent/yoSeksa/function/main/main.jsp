@@ -8,6 +8,7 @@
 <link href="yoSeksa/css/component.css" rel="stylesheet" type="text/css"  />
 <!-- script -->
 
+
 </head>
 <body  class="cbp-spmenu-push">
 		<!--bottom-->
@@ -67,7 +68,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 -->
 
 <!-- 여기에 include 작성-->
-<!-- <jsp:include page="${jsp }"></jsp:include>. -->
+<jsp:include page="${jsp }"></jsp:include>
 <!--  메인인인인인이닌이니이 -->
 <script type="text/javascript">
 		$(document).ready(function() {
