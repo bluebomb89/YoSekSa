@@ -127,8 +127,8 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 				<form class="yoseksa-search"role="search">
 					<div class="input-group">
 						<span class="twitter-typeahead">
-							<input type="text" class="yoseksa-search-hint" autofocus="">
-							<input type="text" class="yoseksa-search-input" id="txtSearch" placeholder="Search 350,000+ Recipes" autofocus="">
+							<input type="text" class="yoseksa-search-hint">
+							<input type="text" class="yoseksa-search-input" id="txtSearch" placeholder="Search 350,000+ Recipes">
 						</span>
 						<span class="input-group-btn">
 							<button class="btn btn-default btnstateless search-input-button" type="button" id="btnGo" data-loading-text="..."><i class="fa fa-search"></i></button>
