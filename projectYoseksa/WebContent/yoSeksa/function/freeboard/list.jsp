@@ -26,10 +26,10 @@
 <!-- 댓글 css 파일 네임 변경 -->
 <link rel="stylesheet" href="../../css/list/ktwzk0vhtx.css" type="text/css"> 
 <link rel="stylesheet" href="../../css/list/melonweb_album.css" type="text/css">
-<link href="../../css/listwrite.css" rel="stylesheet">
 <link rel="stylesheet" href="../../css/list/ggong.css" type="text/css">
-
 <link rel="stylesheet" href="../../css/list/onepage_201401.css" type="text/css">
+<!-- script -->
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //footer -->
 
 <script src="../../js/saved_resource"></script>
@@ -45,39 +45,59 @@
 <script src="../../js/move-top.js"></script>
 <script src="../../js/easing.js"></script>
 <script src="../../js/bootstrap.js"></script> 
-<!--/script-->
-<script type="text/javascript">
-   $(document).ready(function() {
-      /* affix the navbar after scroll below header */
-      $('#nav').affix({
-         offset: {top: $('header').height()-$('#nav').height()}
-      });
-      
-      /* affix-top 에서 affix로 수정될대 이벤트 발생*/
-      $('#nav').on("affix.bs.affix",function(){
-         $("#startmain").text("haa!");
-      });
-      /* affix에서 affix-top으로 전환될때 이벤트 발생*/
-      $('#nav').on("affix-top.bs.affix",function(){
-         $("#startmain").text("Search");
-      });
-   });
-</script>
-<script type="text/javascript">
-			jQuery(document).ready(function($) {
-			    $('.slideshow').cycle({
-					fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
-				});
-			    
+		
+		<!-- 가운데 -->
+		
+	
+
+
+
+
+
+
+	
+	<script async="" src="./onepage.asp_files/analytics.js"></script><script language="javascript" src="./onepage.asp_files/jquery-latest.min.js"></script>
+	<script language="javascript" src="./onepage.asp_files/jquery.drm_slides-1.1.js"></script>
+	<script language="javascript" src="./onepage.asp_files/drm_disp_elem_110717.js"></script>
+	<script language="javascript" src="./onepage.asp_files/common_popup.js"></script>
+	<script language="javascript" src="./onepage.asp_files/open_popup.js"></script>
+	<script language="javascript" src="./onepage.asp_files/number.js"></script>
+	<script type="text/javascript" src="./onepage.asp_files/mp_restact_proc.js"></script>
+	<script language="javascript">
+	<!--
+		var g_is_nomovetop = false;
+
+		var g_max_scroll_y = 0;
+		$(document).ready(function() {
+			$(window).scroll(function() {
+				var n_scroll_top = $(window).scrollTop();
+				var n_top = ((n_scroll_top <= g_max_scroll_y) ? (n_scroll_top * -1) : (g_max_scroll_y * -1));
+				if (g_is_nomovetop) {
+					n_top = (n_scroll_top * -1);
+				}
+				$('#WrapTop').css({top:n_top});
 			});
-</script>
+
+			var n_prevent_height = 35;		//-- $('.navi').height();
+			g_max_scroll_y = ($('#WrapTop').height() - n_prevent_height - 10);
+			if (g_is_nomovetop) {
+				g_max_scroll_y += n_prevent_height;
+			}
+			init_menu_tab();
+
+			var fn_auto_menu = (function() {
+				var o_menu_idx = {'b':1, 'm':2, 'grv':3, 'loc':4};
+				fn_menu_tab_click(o_menu_idx[''], 0);
+			});
+			window.setTimeout(fn_auto_menu, 100);	// cus) interval
+
+			fn_mp_restact_ov('G101591', '');		//-- counter
+		});
+	//-->
+	</script>
 </head>
 
-<body  class="cbp-spmenu-push">
-		<!-- 민영이는 주석 전까지만 작업 하세요 -->
-
-
-		<!-- 우식이형님 작업 이밑에서만 하세요 -->
+	<center>
 		<div class="WrapMain">
 			<div class="mainArea02">
 				<div class="tabReview">
@@ -119,7 +139,13 @@
 					<div class="hSpace70"><!-- 여백 70 --></div>
 						<div class="hSpace30"><!-- 여백 30 --></div>
 			</div>
+	</center>
+	
+	
 		<!-- 게시판 -->
+
+	
+
 	<div id="cont_wrap" class="clfix">
 		<div id="conts_section" class="my_fold">
 			<!-- contents -->
@@ -155,4 +181,3 @@
 		</div>
 	</body>
 </html>
-	 	 
