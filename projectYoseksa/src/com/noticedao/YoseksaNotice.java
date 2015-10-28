@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.common.YoseksaModel;
 
 public class YoseksaNotice implements YoseksaModel{
-
+	@Override
 	public String handlerRequest(HttpServletRequest req, HttpServletResponse res) throws Exception {
 		// TODO Auto-generated method stub
 		return "yoSeksa/function/main/mainhome.jsp";

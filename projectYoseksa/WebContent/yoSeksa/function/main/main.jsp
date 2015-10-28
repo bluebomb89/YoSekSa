@@ -104,7 +104,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 				}
 			}
 </script>
-<a href="#to-top" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"> </span></a>
+<a href="#to-top" id="toTop" style="display: block;right: 10px;"><span id="toTopHover" style="opacity: 1;"> </span></a>
 <!-- 자바 스크립트 호출-->
 <!----> 
 <!-- Bootstrap core JavaScript
