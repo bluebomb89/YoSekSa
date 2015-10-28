@@ -16,22 +16,14 @@
 <link href="yoSeksa/css/owl.theme.css" rel="stylesheet">
 <link href="yoSeksa/css/index.css" rel="stylesheet">
 <!-- script -->
-
-<script src="yoSeksa/js/saved_resource.js"></script>
 <script src="yoSeksa/js/jquery.min.js"></script>
-<script src="yoSeksa/js/mainbootstrap.js"></script>
-<script src="yoSeksa/js/modernizr.custom.js"></script>
-<script src="yoSeksa/js/mainbootstrap.js"></script>
-<script src="yoSeksa/js/jquery-1.11.1.min.js"></script>
 <script src="yoSeksa/js/responsiveslides.min.js"></script>
 <script src="yoSeksa/js/jquery.cycle.all.js"></script>
-<script src="yoSeksa/js/bootstrap.min.js"></script>
 <script src="yoSeksa/js/owl.carousel.js"></script>
-<script src="yoSeksa/js/owl.carousel.min.js"></script>
-
 <!--/animated-css-->
 <script src="yoSeksa/js/move-top.js"></script>
 <script src="yoSeksa/js/easing.js"></script>
+<script src="yoSeksa/js/bootstrap.js"></script>
 <!--/script-->
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
@@ -54,7 +46,6 @@
 		$('#nav').affix({
 			offset: {top: $('header').height()-$('#nav').height()}
 		});
-		
 		/* affix-top 에서 affix로 수정될대 이벤트 발생*/
 		$('#nav').on("affix.bs.affix",function(){
 			$("#startmain").text("haa!");
