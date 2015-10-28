@@ -11,19 +11,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <head>
 <title>Flooring a Interior category Flat Bootstarp Responsive
 	Website Template | Home :: w3layouts</title>
-<link href="../../css/bootstrap.css" type="text/css" rel="stylesheet"
+<link href="yoSeksa/css/bootstrap.css" type="text/css" rel="stylesheet"
 	media="all">
-<link href="../../css/component.css" rel="stylesheet" type="text/css" />
+<link href="yoSeksa/css/component.css" rel="stylesheet" type="text/css" />
 <!-- jQuery (necessary JavaScript plugins) -->
 <!-- Custom Theme files -->
-<!-- <link href="../../css/style.css" type="text/css" rel="stylesheet" media="all"> -->
-<link href="../../css/style3.css" type="text/css" rel="stylesheet"
+<!-- <link href="yoSeksa/css/style.css" type="text/css" rel="stylesheet" media="all"> -->
+<link href="yoSeksa/css/style3.css" type="text/css" rel="stylesheet"
 	media="all">
-<link href="../../css/bootstrapTheme.css" rel="stylesheet">
-<link href="../../css/custom.css" rel="stylesheet">
-<link href="../../css/owl.carousel.css" rel="stylesheet">
-<link href="../../css/owl.theme.css" rel="stylesheet">
-<link href="../../css/recipe_regi.css" rel="stylesheet">
+<link href="yoSeksa/css/bootstrapTheme.css" rel="stylesheet">
+<link href="yoSeksa/css/custom.css" rel="stylesheet">
+<link href="yoSeksa/css/owl.carousel.css" rel="stylesheet">
+<link href="yoSeksa/css/owl.theme.css" rel="stylesheet">
+<link href="yoSeksa/css/recipe_regi.css" rel="stylesheet">
 <!-- Custom Theme files -->
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
