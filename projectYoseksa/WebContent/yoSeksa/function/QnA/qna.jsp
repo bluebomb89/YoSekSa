@@ -8,18 +8,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Flooring a Interior category Flat Bootstarp Responsive Website Template | Home :: w3layouts</title>
-<link href="../../css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
-<link href="../../css/component.css" rel="stylesheet" type="text/css"  />
+<link href="yoSeksa/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="yoSeksa/css/component.css" rel="stylesheet" type="text/css"  />
 <!-- jQuery (necessary JavaScript plugins) -->
 <!-- Custom Theme files -->
-<link href="../../css/style.css" type="text/css" rel="stylesheet" media="all">
-<link href="../../css/style1.css" type="text/css" rel="stylesheet" media="all">
-<link href="../../css/meal_table.css" type="text/css" rel="stylesheet" media="all">
-<link href="../../css/bootstrapTheme.css" rel="stylesheet">
-<link href="../../css/custom.css" rel="stylesheet">
-<link href="../../css/owl.carousel.css" rel="stylesheet">
-<link href="../../css/owl.theme.css" rel="stylesheet">
-<link href="../../css/qna.css" rel="stylesheet">
+<link href="yoSeksa/css/style.css" type="text/css" rel="stylesheet" media="all">
+<link href="yoSeksa/css/style1.css" type="text/css" rel="stylesheet" media="all">
+<link href="yoSeksa/css/meal_table.css" type="text/css" rel="stylesheet" media="all">
+<link href="yoSeksa/css/bootstrapTheme.css" rel="stylesheet">
+<link href="yoSeksa/css/custom.css" rel="stylesheet">
+<link href="yoSeksa/css/owl.carousel.css" rel="stylesheet">
+<link href="yoSeksa/css/owl.theme.css" rel="stylesheet">
+<link href="yoSeksa/css/qna.css" rel="stylesheet">
 <!-- Custom Theme files -->
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,19 +28,19 @@
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //footer -->
-<script type="text/javascript" src="../../js/saved_resource"></script>
-<script type="text/javascript" src="../../js/jquery.min.js"></script>
-<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
-<script src="../../js/modernizr.custom.js"></script>
-<script src="../../js/jquery-1.11.1.min.js"></script>
-<script src="../../js/responsiveslides.min.js"></script>
-<script type="text/javascript" src="../../js/jquery.cycle.all.js"></script>
-<script src="../../js/owl.carousel.js"></script>
-<script src="../../js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="yoSeksa/js/saved_resource"></script>
+<script type="text/javascript" src="yoSeksa/js/jquery.min.js"></script>
+<script type="text/javascript" src="yoSeksa/js/bootstrap.min.js"></script>
+<script src="yoSeksa/js/modernizr.custom.js"></script>
+<script src="yoSeksa/js/jquery-1.11.1.min.js"></script>
+<script src="yoSeksa/js/responsiveslides.min.js"></script>
+<script type="text/javascript" src="yoSeksa/js/jquery.cycle.all.js"></script>
+<script src="yoSeksa/js/owl.carousel.js"></script>
+<script src="yoSeksa/js/owl.carousel.min.js"></script>
 <!--/animated-css-->
-<script type="text/javascript" src="../../js/move-top.js"></script>
-<script type="text/javascript" src="../../js/easing.js"></script>
-<script src="../../js/bootstrap.js"></script>	  
+<script type="text/javascript" src="yoSeksa/js/move-top.js"></script>
+<script type="text/javascript" src="yoSeksa/js/easing.js"></script>
+<script src="yoSeksa/js/bootstrap.js"></script>	  
 
 
 
@@ -151,7 +151,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		window.onunload=saveswitchstate
 </script>
 </head>
-<body style="background-image:URL('../../images/qna_background.jpg')">
+<body style="background-image:URL('yoSeksa/images/qna_background.jpg')">
 
 
 
