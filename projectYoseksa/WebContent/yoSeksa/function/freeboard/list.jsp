@@ -155,9 +155,9 @@
 <body  class="cbp-spmenu-push">
 
 <!--bottom-->
-		    <button type="button" class="btn btn-primary btn-lg" style="margin-top: 70px;
+		     <button type="button" class="btn btn-primary btn-lg" style="margin-top: 70px; 
 		       margin-left: 50px;"data-toggle="modal" data-target="#myModal">등록
-            </button>
+            </button> 
             	
                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                  <h4 align="center" style="margin-top: 60px; font-size: 17px; color:#000000">글 작성</h4>
