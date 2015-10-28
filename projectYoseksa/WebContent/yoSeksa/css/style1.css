@@ -166,7 +166,7 @@ header {
 ul.callbacks_tabs.callbacks1_tabs {
     position: absolute;
     bottom: 400px;
-    z-index: 999;
+    z-index: 0;
     left: 45%;
 }
 .owl-pagination{
@@ -176,6 +176,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 	position: absolute;
     z-index: 5;
     width: 100%;
+    margin-top: 400px;
 }
 .yoseksa-search-input{
     font-size: 21px;
@@ -204,11 +205,39 @@ ul.callbacks_tabs.callbacks1_tabs {
 .twitter-typeahead{
 	position: relative;
 	display: inline-block;
+	width: 100%;
 }
 .input-group{
 	margin: 0 auto;
+	width: 40%;
 }
 .input-group-btn {
     white-space: nowrap;
     vertical-align: middle;
+    padding-bottom: 10px;
+}
+.search-input-button {
+	    font-size: 14px;
+    height: 46px;
+}
+.fa-search:before {
+    content: "\f002";
+}
+.fa {
+    display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.btn {
+    background-color: #f3f3f3;
+}
+.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group {
+    margin-left: -1px;
+    background-color: white;
+    background: url(https://d30y9cdsu7xlg0.cloudfront.net/png/15028-200.png) 50%,50%;
+    background-size: contain;
+    width: 150%;
 }

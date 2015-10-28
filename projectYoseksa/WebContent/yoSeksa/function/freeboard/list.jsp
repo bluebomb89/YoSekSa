@@ -198,12 +198,12 @@
                               <p class="count">전체글<span class="number">2</span>건</p>
                                  <div id="ajax_review">
                                     <ul class="boardList" totcnt="0" od="">
-                                   		 <img src="../../images/reply_ico.png" align="absbottom" ;=""
-                                   		 style="margin-top: 13px; margin-left: 395px;">
+                                          <img src="../../images/reply_ico.png" align="absbottom" ;=""
+                                          style="margin-top: 13px; margin-left: 395px;">
                                          <button type="button" class="btn btn-primary btn-lg" 
                                          style="margin-top: 15px; padding-left: 0px;"
                                          data-toggle="modal" data-target="#myModal">게시물을 등록해주세요
-            							 </button>
+                                  </button>
                                        </ul>
                                     </div>
                      </div>
