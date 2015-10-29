@@ -7,7 +7,6 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import java.util.*;
 import java.io.*;
 public class FreeBoardDAO {
-<<<<<<< HEAD
 	private static SqlSessionFactory ssf;
 	   static
 	   {
