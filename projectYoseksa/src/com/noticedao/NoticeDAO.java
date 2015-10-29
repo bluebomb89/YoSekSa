@@ -24,7 +24,7 @@ public class NoticeDAO {
 			session=ssf.openSession(true);
 			session.insert("noticeInsert",d);
 			//session.commit();
-			}catch(Exception ex){
+		}catch(Exception ex){
 				//session.rollback();
 				System.out.println(ex.getMessage());
 				}
