@@ -5,4 +5,74 @@
 		SELECT member_no,member_id,member_pw,nickname,email
 		FROM yoseksa_member
 	</select>
+	 <select id="boardListData" resultType="Board" parameterType="java.util.Map">
+    	SELECT no,subject,name, dbday , hit, num
+    	FROM (SELECT no,subject,name, TO_CHAR(regdate, 'YYYY-MM-dd') as dbday , hit, rownum as num
+    	FROM (SELECT no,subject,name, regdate , hit
+    	FROM replyBoard ORDER BY no DESC))
+    	WHERE num BETWEEN #{start} AND #{end}
+    </select>
+    <!-- 총페이지 -->
+    <select id="boardRowCount" resultType="int">
+    SELECT COUNT(*) FROM replyBoard
+    </select>
+    <!-- 데이터 추가 -->
+    <insert id="boardInsert" parameterType="Board">
+    	<!-- Sequence -->
+    	<selectKey keyProperty="no" resultType="int" order="BEFORE">
+    		SELECT NVL(MAX(no)+1,1) as no FROM replyBoard
+    	</selectKey>
+    	INSERT INTO replyBoard VALUES(
+    		#{no},#{name},#{subject},
+    		#{content},#{pwd},
+    		SYSDATE,0
+    	)	
+    </insert>
+    <sql id="where-no">
+    	WHERE no=#{no}
+    </sql>
+    <update id="boardHitIncrement" parameterType="int">
+    	UPDATE replyBoard SET
+    	hit=hit+1
+    	<include refid="where-no"/>
+    	<!-- ps.setInt(1,no) -->
+    </update>
+    <!-- 내용보기 데이터 출력 -->
+     <select id="boardContentData" resultType="Board" parameterType="int">
+     SELECT no,name,subject,content,regdate,hit
+     FROM replyBoard
+     <include refid="where-no"/>
+     </select>
+ 	 <select id="boardGetPwd" resultType="String" parameterType="int">
+ 	 	SELECT pwd FROM replyBoard
+ 	 	<include refid="where-no"/>
+ 	 </select>
+ 	 <update id="boardUpdate" parameterType="Board">
+ 	 	UPDATE replyBoard SET
+ 	 	name=#{name},subject=#{subject},
+ 	 	content=#{content},regdate=SYSDATE
+ 	 	<include refid="where-no"/>
+ 	 </update>
+ 	 <!--  Delete -->
+ 	 <!--  public void boardReplyDelete(int bno) -->
+ 	 <delete id="boardReplyDelete" parameterType="int">
+ 	 	DELETE FROM reply
+ 	 	WHERE bno=#{bno}
+ 	 </delete>
+ 	 	<delete id="boardDelete" parameterType="int">
+ 	 		DELETE FROM replyBoard
+ 	 		<include refid="where-no"/>
+ 	 	</delete>
+ 	 	<!-- 댓글	 -->
+ 	 	<select id="boardReplyCount" resultType="int"
+ 	 	parameterType="int">
+ 	 	SELECT COUNT(*) FROM reply
+ 	 	WHERE bno=#{bno}
+ 	 	</select>
+ 	 	<select id="replyListData" resultType="Reply" parameterType="int">
+ 	 		SELECT no,id,name,msg,TO_CHAR(regdate, 'YYYY-MM-DD HH24:MI:SS') as dbday,group_tab
+ 	 		FROM reply
+ 	 		WHERE bno=#{bno}
+ 	 		ORDER BY group_id DESC, group_step ASC
+ 	 	</select> 	
 </mapper>

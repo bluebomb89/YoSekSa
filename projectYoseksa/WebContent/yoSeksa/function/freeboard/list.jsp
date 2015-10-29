@@ -265,12 +265,13 @@
 				</div>
 	<div class="gotaquestion"><a class="anchorfix" id="questions"></a>
 		<li id="text-5" class="widget widget_text">
-		<h3>Get in Touch</h3>			
+		<h3 >Get in Touch</h3>
+					
 			<div class="textwidget">
-				<div class="question-phone">Seoul: +00 (010) 0000 0000 
-											sinchon: +00 (010) 0000 0000
+				<div style="position:"><img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/phone.png">&nbsp;&nbsp;Seoul: +00 (010) 0000 0000 
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sinchon: +00 (010) 0000 0000
 				</div>
-					<div class="question-mail"><a href="mailto:yo@sek.sa">yo@sek.sa</a> 
+					<div style="position:absolute;"><img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/bigemail.png"><a href="mailto:yo@sek.sa">&nbsp;&nbsp;yo@sek.sa</a> 
 					</div>
 			</div>
 		</li>
