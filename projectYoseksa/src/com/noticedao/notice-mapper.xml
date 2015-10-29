@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dao.notice-mapper">
-	<select id="empAllData" resultType="Emp">
-		SELECT empno,ename,job,hiredate,sal FROM emp
-	</select>
-	<!-- public int empRowCount() -->
-	<select id="empRowCount" resultType="int">
-		SELECT COUNT(*) FROM emp
-	</select>
-	<!-- public EmpDTO empFindData(int empno) -->
-	<select id="empFindData" resultType="Emp" parameterType="int">
-		SELECT empno,ename,job,hiredate,sal FROM emp WHERE empno=#{empno}
-		<!-- 
-			String sql=""
-			sql=sql.substring(0,sql.lastIndexOf('#')+1)
-			sql.replace('#','?');
-			ps.setInt(1,empno);
-		 -->
-	</select>
+	<!-- 우식 -->
+	<!-- ㅁㅁ -->
+	<!-- 영권 -->
+    <insert id="noticeInsert" parameterType="Notice">
+      <!-- Sequence -->
+      <selectKey keyProperty="notice_no" resultType="int" order="BEFORE">
+        SELECT NVL(MAX(notice_no)+1,1) as notice_no FROM yoseksa_notice
+      </selectKey>
+      INSERT INTO yoseksa_notice VALUES(#{notice_no},1,1,#{notice_sub},#{notice_content},SYSDATE,0)
+    </insert>
+	<!-- ㅁㅁ -->
+	<!-- 태진 -->
+	<!-- ㅁㅁ -->
+	<!-- 승현 -->
+	<!-- ㅁㅁ -->
+	<!-- 홍의 -->
+	<!-- ㅁㅁ -->
+	<!-- 민영 -->
+	<!-- ㅁㅁ -->
 </mapper>

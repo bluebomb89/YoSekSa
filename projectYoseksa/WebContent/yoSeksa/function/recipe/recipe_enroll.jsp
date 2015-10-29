@@ -131,10 +131,35 @@ $(function() {
         });
     });
 });
-
-
-
 </script>
+<!-- ------------------------ 이미지 셋 자바스크립트---시작------------------- -->
+<script type="text/javascript">
+
+window.onload = function(){
+	document.getElementById("q_main_file").onchange = function(){
+		readImg('q_main_file', 'mainPhotoHolder');
+	}
+}
+
+
+function readImg(inputId, outputId){
+	var file = document.getElementById(inputId).files[0];
+	
+	var reader = new FileReader();
+	reader.readAsDataURL(file);
+	
+	reader.onload = function(){
+		var output = document.getElementById(outputId);
+		output.src = reader.result;
+	} 
+	
+	reader.onerror = function(e){
+		alert("읽기 오류:" + e.target.error.code);
+		return;
+	}
+}
+</script>
+<!-- ------------------------ 이미지 셋 자바스크립트-----끝------------------- -->
 
 <div class="modal fade" id="divModalBlogForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="z-index:100001">
   <div class="modal-dialog" style="width:520px">

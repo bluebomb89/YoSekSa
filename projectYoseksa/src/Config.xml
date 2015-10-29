@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE configuration  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-config.dtd"> 
 <configuration>
+	<properties resource="com/yoseksa/db.properties"></properties>
 	<!-- DTO클래스 등록 -->
 	<typeAliases>
 		<typeAlias type="com.memberdao.MemberDTO" alias="Member"/>		<!-- 회원관리 -->
@@ -19,13 +20,13 @@
 	<!-- 환경설정(오라클) -->
 	<environments default="development">
 		<environment id="development">
-			<transactionManager type="JDBC"/>
-				<dataSource type="POOLED">
-					<property name="driver" value="oracle.jdbc.driver.OracleDriver"/>
-					<property name="url" value="jdbc:oracle:thin:@localhost:1523:ORCL"/>
-					<property name="username" value="scott"/>
-					<property name="password" value="tiger"/>
-				</dataSource>
+			<transactionManager type="JDBC"></transactionManager>
+			<dataSource type="POOLED">
+				<property name="driver" value="${driver}"/>
+				<property name="url" value="${url}"/>
+				<property name="username" value="${username}"/>
+				<property name="password" value="${password}"/>
+			</dataSource>
 		</environment>
 	</environments>
 	<!-- SQL문장 등록 -->

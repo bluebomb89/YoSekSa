@@ -1,25 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- startDocument(): 문서가 시작 -->
 <beans> <!-- startElement() -->
-	<!-- 메모리 할당 Class.forName(clsName) -->
-	<!-- startElement() 속성을 일고 endElement() -->
-	<bean id="main" class="com.yoseksa.YoseksaMain"></bean>
-	<!-- startElement() 속성을 일고 endElement() -->
-	<bean id="notice" class="com.noticedao.YoseksaNotice"></bean>
-	<!-- startElement() 속성을 일고 endElement() -->
-	<bean id="yoseksa" class="com.yoseksa.YoseksaMainhome"></bean>
-	<!-- startElement() 속성을 일고 endElement() -->
-	<bean id="freeboard" class="com.freedao.YoseksaFreeboard"></bean>
-	<!-- startElement() 속성을 일고 endElement() -->
-	<bean id="recipe_content" class="com.recipedao.YoseksaRecipeContent"></bean>
-	<!-- startElement() 속성을 일고 endElement() -->
-	<bean id="diary" class="com.diarydao.YoseksaDiary"></bean>
-	<!-- startElement() 속성을 일고 endElement() -->
-	<bean id="recipe" class="com.recipedao.YoseksaRecipe"></bean>
-	<!-- startElement() 속성을 일고 endElement() -->
-	<bean id="qna" class="com.yoseksa.YoseksaQNA"></bean>
-	<!-- startElement() 속성을 일고 endElement() -->
-	<bean id="join" class="com.memberdao.YoseksaMember"></bean>
-	<bean id="recipe_enroll" class="com.recipedao.YoseksaRecipeEnroll"></bean>
+   <!-- 메모리 할당 Class.forName(clsName) -->
+   <!-- startElement() 속성을 일고 endElement() -->
+   <bean id="main" class="com.yoseksa.YoseksaMain"></bean>
+   <!-- startElement() 속성을 일고 endElement() -->
+   <bean id="notice" class="com.noticedao.YoseksaNotice"></bean>
+   <!-- startElement() 속성을 일고 endElement() -->
+   <bean id="yoseksa" class="com.yoseksa.YoseksaMainhome"></bean>
+   <!-- startElement() 속성을 일고 endElement() -->
+   <bean id="freeboard" class="com.freedao.YoseksaFreeboard"></bean>
+   <!-- startElement() 속성을 일고 endElement() -->
+   <bean id="recipe_content" class="com.recipedao.YoseksaRecipeContent"></bean>
+   <!-- startElement() 속성을 일고 endElement() -->
+   <bean id="diary" class="com.diarydao.YoseksaDiary"></bean>
+   <!-- startElement() 속성을 일고 endElement() -->
+   <bean id="recipe" class="com.recipedao.YoseksaRecipe"></bean>
+   <!-- startElement() 속성을 일고 endElement() -->
+   <bean id="qna" class="com.yoseksa.YoseksaQNA"></bean>
+   <!-- startElement() 속성을 일고 endElement() -->
+   <bean id="join" class="com.memberdao.YoseksaMember"></bean>
+   <bean id="recipe_enroll" class="com.recipedao.YoseksaRecipeEnroll"></bean>
+	<!-- 우식 -->
+	<!-- ㅁㅁ -->
+	<!-- 영권 -->
+	<!-- 공지사항 인서트 -->
+	<bean id="notice_insert" class="com.noticedao.NoticeInsertModel"></bean>
+	<!-- ㅁㅁ -->
+	<!-- 태진 -->
+   <!-- member 관련 -->
+   <bean id="member_insert" class="com.member.model.MemberInsertModel"/>
+   <bean id="member_insert_ok" class="com.member.model.MemberInsertOkModel"/>
+   <bean id="member_login" class="com.member.model.MemberLoginModel"/>
+      <bean id="member_logout" class="com.member.model.MemberLogoutModel"/>
+	<!-- ㅁㅁ -->
+	<!-- 승현 -->
+	<!-- ㅁㅁ -->
+	<!-- 홍의 -->
+	<!-- ㅁㅁ -->
+	<!-- 민영 -->
+	<!-- ㅁㅁ -->
+      
 </beans> <!-- endElement() -->
 <!-- endDocument() : 문서가 종료 -->
