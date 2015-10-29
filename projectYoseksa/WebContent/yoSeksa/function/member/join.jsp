@@ -187,7 +187,7 @@
 			return false;
 		{
 
-			document.getElementById("btn_submit").disabled = "disabled";
+			document.getElementById("btnSub").disabled = "disabled";
 
 			return true;
 		}

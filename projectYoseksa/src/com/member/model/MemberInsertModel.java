@@ -1,4 +1,4 @@
-package com.memebr.model;
+package com.member.model;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,7 +17,7 @@ public class MemberInsertModel implements YoseksaModel{
 		}catch(Exception ex){
 			System.out.println(ex.getMessage());
 		}
-		return "yoSeksa/function/main/main.jsp";
+		return "yoSeksa.sek";
 	}
 
 }

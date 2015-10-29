@@ -1,5 +1,6 @@
 package com.noticedao;
-
+import com.yoseksa.*;
+import com.memberdao.*;
 import java.util.Date;
 
 public class NoticeDTO {
@@ -8,6 +9,8 @@ public class NoticeDTO {
 	private String notice_content;
 	private Date notice_date;
 	private int notice_hit;
+	BoardmgrDTO board=new BoardmgrDTO();
+	MemberDTO member=new MemberDTO();
 	
 	public int getNotice_no() {
 		return notice_no;
@@ -21,11 +24,11 @@ public class NoticeDTO {
 	public void setNotice_sub(String notice_sub) {
 		this.notice_sub = notice_sub;
 	}
-	public String getNotive_content() {
+	public String getNotice_content() {
 		return notice_content;
 	}
-	public void setNotive_content(String notive_content) {
-		this.notice_content = notive_content;
+	public void setNotice_content(String notice_content) {
+		this.notice_content = notice_content;
 	}
 	public Date getNotice_date() {
 		return notice_date;

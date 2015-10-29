@@ -19,7 +19,6 @@
    <!-- startElement() 속성을 일고 endElement() -->
    <bean id="qna" class="com.yoseksa.YoseksaQNA"></bean>
    <!-- startElement() 속성을 일고 endElement() -->
-   <bean id="join" class="com.member.dao.YoseksaMember"></bean>
    <bean id="recipe_enroll" class="com.recipedao.YoseksaRecipeEnroll"></bean>
    <!-- 우식 -->
    <!-- ㅁㅁ -->
@@ -38,6 +37,27 @@
    <!-- ㅁㅁ -->
    <!-- 민영 -->
    <!-- ㅁㅁ -->
+   <bean id="join" class="com.memberdao.YoseksaMember"></bean>
+   <bean id="recipe_enroll" class="com.recipedao.YoseksaRecipeEnroll"></bean>
+	<!-- 우식 -->
+	<!-- ㅁㅁ -->
+	<!-- 영권 -->
+	<!-- 공지사항 인서트 -->
+	<bean id="notice_insert" class="com.noticedao.NoticeInsertModel"></bean>
+	<!-- ㅁㅁ -->
+	<!-- 태진 -->
+   <!-- member 관련 -->
+   <bean id="member_insert" class="com.member.model.MemberInsertModel"/>
+   <bean id="member_insert_ok" class="com.member.model.MemberInsertOkModel"/>
+   <bean id="member_login" class="com.member.model.MemberLoginModel"/>
+      <bean id="member_logout" class="com.member.model.MemberLogoutModel"/>
+	<!-- ㅁㅁ -->
+	<!-- 승현 -->
+	<!-- ㅁㅁ -->
+	<!-- 홍의 -->
+	<!-- ㅁㅁ -->
+	<!-- 민영 -->
+	<!-- ㅁㅁ -->
       
 </beans> <!-- endElement() -->
 <!-- endDocument() : 문서가 종료 -->
