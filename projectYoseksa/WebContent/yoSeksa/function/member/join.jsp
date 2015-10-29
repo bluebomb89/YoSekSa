@@ -203,6 +203,21 @@
 $(function(){
 	//$('#username').val("admin");
 	$('#btnSub').click(function(){
+		var reg_nickname=$('#nickname').val();
+
+		$('#nameSpan').text("");
+		
+		var reg_member_id=$('#member_id').val();
+
+		$('#subSpan').text("");
+		
+		var reg_email=$('#email').val();
+
+		$('#contSpan').text("");
+		
+		var reg_member_pw=$('#member_pw').val();
+
+		$('#pwdSpan').text("");
 		$('#regform').submit();
 	});
 	$('#btnCancel').click(function(){
@@ -238,7 +253,7 @@ $(function(){
 									</th>
 									<td>
 										<span class="frm_info">영문자, 숫자, _ 만 입력 가능. 최소 6자이상 입력하세요.</span>
-											<input type="text" name="member_id" value="" id="member_id" required="" class="frm_input required "	minlength="6" maxlength="20">
+											<input type="text" name="member_id" value="" id="reg_member_id" required="" class="frm_input required "	minlength="6" maxlength="20">
 										<span id="msg_member_id"></span>
 									</td>
 								</tr>
@@ -249,7 +264,7 @@ $(function(){
 										</label>
 									</th>
 									<td>
-										<input type="password" name="member_pw" id="member_pw" required="" class="frm_input required" minlength="6" maxlength="20">
+										<input type="password" name="member_pw" id="reg_member_pw" required="" class="frm_input required" minlength="6" maxlength="20">
 									</td>
 								</tr>
 								<tr>
@@ -277,8 +292,8 @@ $(function(){
 											<strong class="sound_only">필수</strong>
 										</label>
 									</th>
-									<td><input type="hidden" name="member_nick_default" value="">
-										<input type="text" name="nickname" value="" id="nickname" required="" class="frm_input required nospace" size="10"maxlength="20">
+									<td>
+										<input type="text" name="nickname" value="" id="reg_nickname" required="" class="frm_input required nospace" size="10"maxlength="20">
 										<span id="msg_member_nick"></span>
 									</td>
 								</tr>
@@ -290,8 +305,7 @@ $(function(){
 										</label>
 									</th>
 									<td>
-										<input type="hidden" name="old_email" value="">
-										<input type="text" name="email" value="" id="email" required="" class="frm_input email required" size="70" maxlength="100">
+										<input type="text" name="email" value="" id="reg_email" required="" class="frm_input email required" size="70" maxlength="100">
 									</td>
 								</tr>
 							</tbody>

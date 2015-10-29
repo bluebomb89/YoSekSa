@@ -12,6 +12,7 @@ public class MemberInsertOkModel implements YoseksaModel{
 	public String handlerRequest(HttpServletRequest req, HttpServletResponse res) throws Exception {
 		// TODO Auto-generated method stub
 		req.setCharacterEncoding("EUC-KR");
+		try{
 		String member_id=req.getParameter("member_id");
 		String nickname=req.getParameter("nickname");
 		String email=req.getParameter("email");
@@ -25,6 +26,10 @@ public class MemberInsertOkModel implements YoseksaModel{
 		
 		// DB¿¬µ¿
 		MemberDAO.memberInsert(d);
+		}catch(Exception ex){
+			System.out.println(ex.getMessage());
+		}
+		
 		return "main.sek";
 	}
 
