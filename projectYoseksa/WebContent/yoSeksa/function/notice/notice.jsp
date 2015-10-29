@@ -60,7 +60,20 @@ $(document).ready(function() {
 		});
 	$('#myModal').on('shown.bs.modal', function () {
 		  $('#myInput').focus()
-		})
+		});
+	$('#notice-write').click(function(){
+		('#noticeForm').submit();
+	});
+});
+</script>
+<script type="text/javascript">
+var i=0;
+$(function(){
+	$('#notice-write').click(function(){
+		var sub=$('notice_suv').val();
+		var cont=$('notice_cont').val();
+		$('#noticeForm').submit();
+	});
 });
 </script>
 <body>
@@ -79,7 +92,9 @@ $(document).ready(function() {
 					      </div>
 					      <div class="modal-body">
 					        <!-- 데이터 입력 -->
-							<form id="postForm" name="post_frm" method=post action="notice_insert.jsp">
+							<form id="noticeForm" name="notice_frm" method="post" action="notice_insert.sek">
+								<!-- 페이지 -->
+								<input type="hidden" name="notice_page" value="">
 								<!-- 게시판 번호 -->
 								<input type="hidden" name="board_number" value="3">
 								<!-- 공지사항 번호 -->
@@ -87,9 +102,9 @@ $(document).ready(function() {
 								<!-- 회원 번호 -->
 								<input type="hidden" name="notice_member" value="">
 								<!-- 제목 -->
-								<input type="text" placeholder="제목" name="notice_sub"><br>
+								<input type="text" placeholder="제목" id="notice_sub" name="notice_sub"><br>
 								<!-- 내용 -->
-								<textarea name="notice_cont" class="form-control" placeholder="내용" style="min-height:300px;width: 100%; margin-top: 20px;"></textarea>
+								<textarea name="notice_cont" id="novice_cont" class="form-control" placeholder="내용" style="min-height:300px;width: 100%; margin-top: 20px;"></textarea>
 								<!-- 날짜 -->								
 								<input type="hidden" name="notice_" value="">
 								<!-- 등록일 -->
@@ -98,11 +113,11 @@ $(document).ready(function() {
 					      </div>
 					      <div class="modal-footer">
 					        <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
-					        <button type="submit" class="btn btn-primary">등록</button>
+					        <a id="notice-write"><button type="button" class="btn btn-primary" data-dismiss="modal">등록</button></a>
 					      </div>
 					    </div>
 					  </div>
-					</div>	
+					</div>
 			</div>
 			<div class="showmenu" id="menu1">
 				<div class="noticesub">제목</div>
