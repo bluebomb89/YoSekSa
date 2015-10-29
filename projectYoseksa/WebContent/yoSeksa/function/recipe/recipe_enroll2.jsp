@@ -131,9 +131,113 @@ $(function() {
         });
     });
 });
+var _blogIsSubmit = false;
+function doChangePortal(portal) {
+    var header = '';
+    var tail = '';
+    if (portal == 'Naver') {
+        header = 'http://blog.naver.com/';
+        tail = '';
+    } else if (portal == 'Daum') {
+        header = 'http://blog.daum.net/';
+        tail = '';
+    } else if (portal == 'Tistory') {
+        header = 'http://';
+        tail = '.tistory.com';
+    }
+    $("#txtBlogHeader").text(header);
+    $("#txtBlogTail").text(tail);
+}
 
+function doBlogSelect() {
+     var select_type = $(':radio[name="q_blog_select_type"]:checked').val();
+     if (select_type == 'url') {
+        var q_link = $("#q_blogurl").val();
+        if ($.trim(q_link) == '') {
+            alert('URL을 입력해 주세요.');
+            $("#q_blogurl").focus();
+            return;
+        } else {
+            setBlogContents(q_link);
+        }
+     } else {
+        getBlogContentsList();
+     }
+}
+function getBlogContentsList(page,added_params) {
+    if (page == 0) return;
+    if (!page) {
+        page = 1;
+    }
+    if ($("#q_blogid").val() == '') {
+        alert("블로그 주소를 입력해 주세요.");
+        return;
+    }
+    //var blog_url = $("#txtBlogHeader").text() + $("#q_blogid").val() + $("#txtBlogTail");
 
+    if (_blogIsSubmit) {
+        alert("처리중 입니다. 잠시만 기다리세요.");
+        return;
+    }
 
+    if (page > parseInt($("#q_page").val(),10)) {
+        $("#btnBlogNext").html('<span class="fa fa-spinner fa-spin" style="width:'+$("#btnBlogNext").width()+'px"></span>');
+    } else if (page < parseInt($("#q_page").val(),10)) {
+        $("#btnBlogPrev").html('<span class="fa fa-spinner fa-spin" style="width:'+$("#btnBlogPrev").width()+'px"></span>');
+    }
+
+    $("#q_page").val(page);
+    _blogIsSubmit = true;
+    var params = 'q_mode=get_blog_contents_list&q_portal='+$("[name=q_portal]:checked").val()+'&q_blogid='+$("#q_blogid").val()+'&q_scal='+$("#q_scal").val()+'&q_page='+page;
+    if (added_params) {
+        if (added_params.substring(0,1) != '&') params += '&';
+        params += added_params;
+    }
+
+    $.ajax({
+        type: "POST",
+        cache: false,
+        url: "/common/ajx_common.html",
+        data: params,
+        success: function(html) {
+            $("#divBlogContentsList").html(html);
+            $("[id^=spanBlogContentsTitle_]").ellipsis();
+            $('#divModalBlogContentsList').modal('show');
+            _blogIsSubmit = false;
+            return html;
+        },
+        error: function () {
+            alert('예기치 못한 오류로 인해 실패했습니다.');
+            _blogIsSubmit = false;
+        }
+    });
+}
+function setBlogContents(q_link) {
+    if (typeof q_link == 'undefined' || q_link == '') {
+        q_link = $("#listBlog [id^=q_link_]:checked").val();
+
+        if (!q_link) {
+            alert('블로그 컨텐츠를 선택하세요.');
+            return;
+        }
+        $("#btnSetBlogContents").html('<span class="fa fa-spinner fa-spin" style="width:' + $("#btnSetBlogContents").width() + 'px"></span>');
+        document.location.href = '/inbox/insert.html?ref_blog_url=' + encodeURIComponent(q_link);
+    } else {
+        $("#btnSetBlogContents").html('<span class="fa fa-spinner fa-spin" style="width:' + $("#btnSetBlogContents").width() + 'px"></span>');
+        document.location.href = '/inbox/insert.html?ref_blog_url=' + encodeURIComponent(q_link);
+        //alert('블로그 주소를 읽을 수 없습니다.');
+    }
+}
+function doChangeBlogSelectType(select_type) {
+    if (select_type == 'url') {
+        $("#top_blog_select_id").hide();
+        $("#top_blog_select_url").show();
+    } else {
+        $("#top_blog_select_url").hide();
+        $("#top_blog_select_id").show();
+    }
+
+}
 </script>
 
 <div class="modal fade" id="divModalBlogForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="z-index:100001">
@@ -242,8 +346,175 @@ var _RESOURCE_SAMPLE = [{"nm":"\ub3fc\uc9c0\uace0\uae30","amt":"300g"},{"nm":"\u
 var _SPICE_SAMPLE = [{"nm":"\ucc38\uae30\ub984","amt":"1T"},{"nm":"\uc18c\uae08","amt":"2t"},{"nm":"\uace0\ucd94\uac00\ub8e8","amt":"2T"}];
 var _STEP_SAMPLE = ["\uc18c\uace0\uae30\ub294 \uae30\ub984\uae30\ub97c \ub5bc\uc5b4\ub0b4\uace0 \uc801\ub2f9\ud55c \ud06c\uae30\ub85c \uc370\uc5b4\uc8fc\uc138\uc694.","\uc900\ube44\ub41c \uc591\ub150\uc73c\ub85c \uba3c\uc800 \uace0\uae30\ub97c \uc870\ubb3c\uc870\ubb3c \uc7ac\uc6cc \ub461\ub2c8\ub2e4.","\uadf8 \uc0ac\uc774 \uc591\ud30c\uc640 \ubc84\uc12f, \ub300\ud30c\ub3c4 \uc370\uc5b4\uc11c \uc900\ube44\ud558\uc138\uc694.","\uace0\uae30\uac00 \ubc18\ucbe4 \uc775\uc5b4\uac08 \ub54c \uc591\ud30c\ub97c \ud568\uaed8 \ubcf6\uc544\uc694."];
 var _MAIN_PHOTO_SIZE = {"input":{"width":250,"height":250},"import":{"width":250,"height":250},"edit":{"width":170,"height":170}};
+function handlePhotoFiles(e){
+    var file_gubun = '';
+    var str_num = '';
+    if (/step/.test(e.target.id)) {
+        file_gubun = 'step';
+        str_num = e.target.id.replace('q_step_file_', '');
+    } else if (/work/.test(e.target.id)) {
+        file_gubun = 'work';
+        str_num = e.target.id.replace('q_work_file_', '');
+    } else if (/main/.test(e.target.id)) {
+        file_gubun = 'main';
+    } else if (/contents/.test(e.target.id)) {
+		file_gubun = 'contents';
+	}
+    
+    var reader = new FileReader;
+    reader.onload = function(event){
+        var img = new Image();
+        img.src = reader.result;
+        img.onload = function(){
+        
+            //iphone에서 찍은 사진(고용량)을 canvas에서 리사이징할 경우이미지가 틀어지는 현상이 있음
+            var finalFile = reader.result;
+            
+            if (file_gubun == 'main') {
+                $('#divMainPhotoBox').html('<div class="text-center" style="margin:50px 0 0 0"><span class="fa fa-spinner fa-spin fa-2x"></span></div>');
+            } else if (file_gubun == 'step') {
+                $('#divStepPhotoBox_' + str_num).html('<div class="text-center" style="margin:50px 0 0 0"><span class="fa fa-spinner fa-spin fa-2x"></span></div>');
+            } else if (file_gubun == 'work') {
+                $('#divWorkPhotoBox_' + str_num).html('<div class="text-center" style="margin:50px 0 0 0"><span class="fa fa-spinner fa-spin fa-2x"></span></div>');
+            }
+            $.ajax({
+                beforeSend: function(xhr){
+                    xhr.setRequestHeader('Content-Type', 'canvas/upload');
+                },
+                type: "POST",
+                url: "/common/upload_photo.html?file_gubun=" + file_gubun + "&id=" + str_num,
+                data: "canvasData=" + finalFile,
+                dataType: "json",
+                cache: "false",
+                processData: false,
+                success: function(json){
+                    if (json['result'] == "SUCCESS") {
+                        switch (json['file_gubun']) {
+                            case 'step':
+                                setStepPhoto('1', json['url'], '', json['id']);
+                                break;
+                            case 'main':
+                                setMainPhoto('1', json['url'], '');
+                                break;
+                            case 'work':
+                                setWorkPhoto('1', json['url'], '', json['id']);
+                                break;
+							case 'contents':
+                                setContentsPhoto('1', json);
+                                break;
+                        }
+                        
+                    }
+                    else {
+                        alert("처리에 실패하였습니다.");
+                    }
+                },
+                error: function(){
+                    alert('오류가 발생하였습니다.');
+                }
+                
+            });
+        }
+    }
+    reader.readAsDataURL(e.target.files[0]);
+}
 
+function setMainPhoto(is_temp, url, org_url){
+    $("#main_photo").val(url);
+	var w = _MAIN_PHOTO_SIZE[$("#cok_reg_type").val()]['width'];
+	var h = _MAIN_PHOTO_SIZE[$("#cok_reg_type").val()]['height']
+    if (is_temp != '') {
+        $("#new_main_photo").val('1');
+        $("#divMainPhotoBox").html('<div id="divMainPhotoHolder" style="position:relative;width:'+w+'px;height:'+h+'px"><img id="upload_main_image" onclick="browseMainFile()" src="/common/ajx_common.html?q_mode=get_image&axis=fixed&max_w='+w+'&max_h='+h+'&is_temp=' + is_temp + '&q_url=' + encodeURIComponent(url) + '" border="0" style="cursor:pointer;width:'+w+'px;height:'+h+'px;"><a id="btnDelMainPhoto" href="javascript:delMainPhoto()" class="pic_del" style="display: none;"></a></div>');
+    }
+    else {
+        $("#divMainPhotoBox").html('<div id="divMainPhotoHolder" style="position:relative;width:'+w+'px;height:'+h+'px"><img id="upload_main_image" onclick="browseMainFile()" src="/common/ajx_common.html?q_mode=get_image&axis=fixed&max_w='+w+'&max_h='+h+'&is_temp=' + is_temp + '&q_url=' + encodeURIComponent(url) + '" border="0" style="cursor:pointer;width:'+w+'px;height:'+h+'px;"><a id="btnDelMainPhoto" href="javascript:delMainPhoto()" class="pic_del" style="display: none;"></a></div>');
+    }
+    /*
+    $("#btnDelMainPhoto").css({
+        'left': $("#divMainPhotoUpload").position().left + $("#divMainPhotoUpload").width() - $("#btnDelMainPhoto").width()
+    });
+    */
+    $("#divMainPhotoHolder").mouseover(function(){
+        $("#divMainPhotoBox").attr('is_over', '1');
+        $("#btnDelMainPhoto").show();
+    }).mouseout(function(){
+        $("#divMainPhotoBox").attr('is_over', '0');
+        setTimeout(function(){
+            if ($("#divMainPhotoBox").attr('is_over') == '0') {
+                $("#btnDelMainPhoto").hide();
+            }
+        }, 200);
+    });
+}
 
+function setStepPhoto(is_temp, url, org_url, str_num){
+    $("#step_photo_" + str_num).val(url);
+    if (is_temp != '') {
+        $("#new_step_photo_" + str_num).val('1');
+        $("#divStepPhotoBox_" + str_num).html('<div id="divStepPhotoHolder_' + str_num + '" style="position:relative;"><img id="upload_step_image_' + str_num + '" onclick="browseStepFile(' + str_num + ')" src="/common/ajx_common.html?q_mode=get_image&axis=fixed&max_w=160&max_h=160&is_temp=' + is_temp + '&q_url=' + encodeURIComponent(url) + '" border="0" style="cursor:pointer;width:160px;height:160px;"><a id="btnDelStepPhoto_' + str_num + '" class="pic_del" href="javascript:delStepPhoto(' + str_num + ')" style="display: none;"></a></div>');
+    }
+    else {
+        $("#divStepPhotoBox_" + str_num).html('<div id="divStepPhotoHolder_' + str_num + '" style="position:relative;"><img id="upload_step_image_' + str_num + '" onclick="browseStepFile(' + str_num + ')" src="/common/ajx_common.html?q_mode=get_image&axis=fixed&max_w=160&max_h=160&is_temp=' + is_temp + '&q_url=' + encodeURIComponent(url) + '" border="0" style="cursor:pointer;width:160px;height:160px;"><a id="btnDelStepPhoto_' + str_num + '" class="pic_del" href="javascript:delStepPhoto(' + str_num + ')" style="display: none;"></a></div>');
+    }
+    $("#divStepPhotoHolder_" + str_num).mouseover(function(){
+        $("#divStepPhotoBox_" + str_num).attr('is_over', '1');
+        $("#btnDelStepPhoto_" + str_num).show();
+    }).mouseout(function(){
+        $("#divStepPhotoBox_" + str_num).attr('is_over', '0');
+        setTimeout(function(){
+            //$("#divStepPhotoBox_"+str_num).attr('is_over','0');
+            if ($("#divStepPhotoBox_" + str_num).attr('is_over') == '0') {
+                $("#btnDelStepPhoto_" + str_num).hide();
+            }
+        }, 200);
+    });
+}
+
+function setWorkPhoto(is_temp, url, org_url, str_num){
+    $("#work_photo_" + str_num).val(url);
+    if (is_temp != '') {
+        $("#new_work_photo_" + str_num).val('1');
+        $("#divWorkPhotoBox_" + str_num).html('<div id="divWorkPhotoHolder_' + str_num + '"><img id="upload_work_image_' + str_num + '" onclick="browseWorkFile(' + str_num + ')" src="/common/ajx_common.html?q_mode=get_image&axis=fixed&max_w=140&max_h=140&is_temp=' + is_temp + '&q_url=' + encodeURIComponent(url) + '" border="0" style="cursor:pointer;width:140px;height:140px;"><a id="btnDelWorkPhoto_' + str_num + '" class="pic_del" href="javascript:delWorkPhoto(' + str_num + ')" style="display: none;"></a></div>');
+    } else {        
+        $("#divWorkPhotoBox_" + str_num).html('<div id="divWorkPhotoHolder_' + str_num + '"><img id="upload_work_image_' + str_num + '" onclick="browseWorkFile(' + str_num + ')" src="/common/ajx_common.html?q_mode=get_image&axis=fixed&max_w=140&max_h=140&is_temp=' + is_temp + '&q_url=' + encodeURIComponent(url) + '" border="0" style="cursor:pointer;width:140px;height:140px;"><a id="btnDelWorkPhoto_' + str_num + '" class="pic_del" href="javascript:delWorkPhoto(' + str_num + ')" style="display: none;"></a></div>');
+    }
+    
+    $("#divWorkPhotoHolder_" + str_num).mouseover(function(){
+        $("#divWorkPhotoBox_" + str_num).attr('is_over', '1');
+        $("#btnDelWorkPhoto_" + str_num).show();
+    }).mouseout(function(){
+        $("#divWorkPhotoBox_" + str_num).attr('is_over', '0');
+        setTimeout(function(){
+            //$("#divWorkPhotoBox_"+str_num).attr('is_over','0');
+            if ($("#divWorkPhotoBox_" + str_num).attr('is_over') == '0') {
+                $("#btnDelWorkPhoto_" + str_num).hide();
+            }
+        }, 200);
+    });
+}
+
+function setContentsPhoto(is_temp, json) {
+	var imgSrc = '<div><img src="' + json['url'] + '" /></div>';
+    oEditors.getById["boa_tx_content"].exec("PASTE_HTML", [imgSrc]);
+	
+	var base_width = 460;
+	var url = json['url'];
+	var w = json['width'];
+	var h = json['height'];
+    
+    if (w > 200 && h > 200) {
+		_BLOG_IMAGE_LIST.push({'url':url,'width':w,'height':h,'is_temp':is_temp});
+		if (!$("#divBlogImageList").find('li[org_url="'+url+'"]').length) {
+			var idx = $("#divBlogImageList").find('li').length;
+			if (!idx) idx = 0;
+			idx++;
+			str = '<li><img id="imgBlog_'+(idx)+'" src="/common/ajx_common.html?q_mode=get_image&axis=fixed&max_w=83&max_h=83&is_temp='+is_temp+'&q_url='+encodeURIComponent(url)+'" org_src="'+url+'" org_width="'+w+'" org_height="'+h+'"></li>';
+            $(str).appendTo('#divBlogImageList');
+		}
+		initDragDrop();
+    }
+}
 
 
 
@@ -460,19 +731,19 @@ function addStep(prev_step, init_json){
         });
 	}
 	
-    bindEvent(document.getElementById("q_step_file_" + step), 'change');
+    bindEvent(document.getElementById("q_step_file_" + step), 'change', handlePhotoFiles);
     
     remakeStepNumber();
 }
 
-function bindEvent(el, eventName){
+function bindEvent(el, eventName, eventHandler){
 	
     if (el.addEventListener) {
-        el.addEventListener(eventName, false);
+        el.addEventListener(eventName, eventHandler, false);
     }
     else 
         if (el.attachEvent) {
-            el.attachEvent(eventName);
+            el.attachEvent(eventName, eventHandler);
         }
       
 }
@@ -525,6 +796,34 @@ function adjustText(id) {
     }
     $('#'+id).val(arr_str.join(' '));
 }
+function delMainPhoto(){
+    //alert(step);
+    $("#main_photo").val('');
+    $("#new_main_photo_").val('');
+    $("#del_main_photo_").val('1');
+	if ($("#cok_reg_type").val() == 'edit') {
+		$("#divMainPhotoBox").html('<img id="mainPhotoHolder" onclick="browseMainFile()" src="http://recipe1.ezmember.co.kr/img/pic_none.gif" style="width: 170px; height: 170px; cursor:pointer">');
+	} else {
+		$("#divMainPhotoBox").html('<img id="mainPhotoHolder" onclick="browseMainFile()" src="http://recipe1.ezmember.co.kr/img/pic_none4.gif" style="width: 250px; height: 250px; cursor:pointer">');
+	}
+}
+
+function delStepPhoto(step){
+    //alert(step);
+    $("#step_photo_" + step).val('');
+    $("#new_step_photo_" + step).val('');
+    $("#del_step_photo_" + step).val('1');
+    //$("#divStepArea [id=divStepPhotoBox_"+step+"]").html('<img id="stepPhotoHolder_'+step+'" onclick="browseStepFile('+step+')" data-src="holder.js/160x160/size:40/text:+" src="data:image/png;base64," alt="No Image" style="width: 160px; height: 160px; cursor:pointer">');
+    $("#divStepArea [id=divStepPhotoBox_" + step + "]").html('<img id="stepPhotoHolder_' + step + '" onclick="browseStepFile(' + step + ')" src="http://recipe1.ezmember.co.kr/img/pic_none2.gif" alt="No Image" style="width: 160px; height: 160px; cursor:pointer">');
+}
+
+function delWorkPhoto(step){
+    $("#work_photo_" + step).val('');
+    $("#new_work_photo_" + step).val('');
+    $("#del_work_photo_" + step).val('1');
+    $("#divWorkArea [id=divWorkPhotoBox_" + step + "]").html('<img id="workPhotoHolder_' + step + '" onclick="browseWorkFile(' + step + ')" src="http://recipe1.ezmember.co.kr/img/pic_none3.gif" alt="No Image" style="width: 140px; height: 140px; cursor:pointer">');
+}   
+
 </script>
 <form name="insFrm" id="insFrm" method="post">
 <input type="hidden" name="q_mode" id="q_mode" value="save">
@@ -549,9 +848,9 @@ ul.tagit input[type="text"] {
 
 <script>
 $(document).ready(function() {
-    bindEvent(document.getElementById("q_main_file"), 'change');
+    bindEvent(document.getElementById("q_main_file"), 'change', handlePhotoFiles);
     for (var i=1; i<=4; i++) {
-        bindEvent(document.getElementById("q_work_file_"+i), 'change');
+        bindEvent(document.getElementById("q_work_file_"+i), 'change', handlePhotoFiles);
     }
 
     addResource();
