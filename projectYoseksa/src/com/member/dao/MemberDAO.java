@@ -1,32 +1,63 @@
 package com.member.dao;
+
 import java.io.Reader;
+
 import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-import com.member.dao.MemberDTO;
-
-import java.util.*;
+import com.board.dao.ReplyBoardDTO;
 
 public class MemberDAO {
 	private static SqlSessionFactory ssf;
-	static
-	{
-		try
-		{
-			Reader reader=Resources.getResourceAsReader("Config.xml");
-			ssf=new SqlSessionFactoryBuilder().build(reader);
-		}catch(Exception ex)
-		{
+
+	static {
+		try {
+			Reader reader = Resources.getResourceAsReader("Config.xml");
+			ssf = new SqlSessionFactoryBuilder().build(reader);
+		} catch (Exception ex) {
 			System.out.println(ex.getMessage());
 		}
 	}
-	public List<MemberDTO> memberAllData()
+	public static int memberIdCount(String id)
 	{
-		return ssf.openSession().selectList("memberAllData");
+		int count=0;
+		SqlSession session=ssf.openSession();
+		count=session.selectOne("memberIdCount",id);
+		session.close();
+		return count;
 	}
-	public void memberInsert(MemberDTO dto){
-		ssf.openSession(true).insert("memberInsert",dto); //true 값을 주면 자동으로 commit;(auto commit)
-		// true를 주지 않는다면 ssf.openSession().commit();
+	/*
+	 * 
+	 */
+	public static MemberDTO memberGetInfo(String id)
+	{
+		MemberDTO d=new MemberDTO();
+		SqlSession session=ssf.openSession();
+		d=session.selectOne("memberGetInfo",id);
+		session.close();
+		return d;
+	}
+
+	public static void memberInsert(MemberDTO d) 
+	{
+		SqlSession session = null;
+		try 
+		{
+			session = ssf.openSession(true);
+			session.insert("memberInsert", d);
+			// session.commit();
+		} 
+		catch (Exception ex) 
+		{
+			// session.rollback();
+			System.out.println(ex.getMessage());
+		} 
+		finally 
+		{
+			if (session != null)
+				session.close();
+		}
 	}
 }

@@ -125,17 +125,12 @@
 			pager : true,
 		});
 	});
-	
-	$(function() {
-		$("#reg_zip_find").css("display", "inline-block");
-
-	});
 
 	// submit 최종 폼체크
 	function regform_submit(f) {
 		// 회원아이디 검사
 		if (f.w.value == "") {
-			var msg = reg_member_id_check();
+			var msg = member_id_check();
 			if (msg) {
 				alert(msg);
 				f.member_id.select();
@@ -165,34 +160,25 @@
 			}
 		}
 
-		// 이름 검사
-		if (f.w.value == "") {
-			if (f.mb_name.value.length < 1) {
-				alert("이름을 입력하십시오.");
-				f.mb_name.focus();
-				return false;
-			}
-
-		}
 
 		// 닉네임 검사
 		if ((f.w.value == "")
-				|| (f.w.value == "u" && f.member_nick.defaultValue != f.member_nick.value)) {
-			var msg = reg_member_nick_check();
+				|| (f.w.value == "u" && f.nickname.defaultValue != f.nickname.value)) {
+			var msg = nickname_check();
 			if (msg) {
 				alert(msg);
-				f.reg_member_nick.select();
+				f.nickname.select();
 				return false;
 			}
 		}
 
 		// E-mail 검사
 		if ((f.w.value == "")
-				|| (f.w.value == "u" && f.member_email.defaultValue != f.member_email.value)) {
-			var msg = reg_member_email_check();
+				|| (f.w.value == "u" && f.email.defaultValue != f.email.value)) {
+			var msg = email_check();
 			if (msg) {
 				alert(msg);
-				f.reg_member_email.select();
+				f.email.select();
 				return false;
 			}
 		}
@@ -205,7 +191,24 @@
 
 			return true;
 		}
+		
+		
 	}
+	
+</script>
+
+<script type="text/javascript">
+// window.onload=function(){}
+// $(document).ready(function(){})
+$(function(){
+	//$('#username').val("admin");
+	$('#btnSub').click(function(){
+		$('#regform').submit();
+	});
+	$('#btnCancel').click(function(){
+		history.back();
+	});
+});
 </script>
 <!--script-->
 
@@ -223,7 +226,7 @@
 
 				<script src="http://www.webnoriter.com/~imsi/store/js/jquery.register_form.js"></script>
 				
-				<form id="regform" name="regform">
+				<form id="regform" name="regform" method=post action="member_insert_ok.sek">
 					<div class="tbl_frm01 tbl_wrap">
 						<table>
 							<tbody>
@@ -235,7 +238,7 @@
 									</th>
 									<td>
 										<span class="frm_info">영문자, 숫자, _ 만 입력 가능. 최소 6자이상 입력하세요.</span>
-											<input type="text" name="member_id" value="" id="reg_member_id" required="" class="frm_input required "	minlength="6" maxlength="20">
+											<input type="text" name="member_id" value="" id="member_id" required="" class="frm_input required "	minlength="6" maxlength="20">
 										<span id="msg_member_id"></span>
 									</td>
 								</tr>
@@ -246,7 +249,7 @@
 										</label>
 									</th>
 									<td>
-										<input type="password" name="member_pw" id="reg_member_pw" required="" class="frm_input required" minlength="6" maxlength="20">
+										<input type="password" name="member_pw" id="member_pw" required="" class="frm_input required" minlength="6" maxlength="20">
 									</td>
 								</tr>
 								<tr>
@@ -275,7 +278,7 @@
 										</label>
 									</th>
 									<td><input type="hidden" name="member_nick_default" value="">
-										<input type="text" name="member_nick" value="" id="reg_member_nick" required="" class="frm_input required nospace" size="10"maxlength="20">
+										<input type="text" name="nickname" value="" id="nickname" required="" class="frm_input required nospace" size="10"maxlength="20">
 										<span id="msg_member_nick"></span>
 									</td>
 								</tr>
@@ -288,7 +291,7 @@
 									</th>
 									<td>
 										<input type="hidden" name="old_email" value="">
-										<input type="text" name="member_email" value="" id="reg_member_email" required="" class="frm_input email required" size="70" maxlength="100">
+										<input type="text" name="email" value="" id="email" required="" class="frm_input email required" size="70" maxlength="100">
 									</td>
 								</tr>
 							</tbody>
@@ -296,9 +299,9 @@
 					</div>
 					<!-- 등록/취소 버튼 -->
 					<div class="btn_confirm">
-						<input type="submit" value="회원가입" id="btn_submit"
+						<input type="submit" value="회원가입" id="btnSub"
 							class="btn_submit" accesskey="s"> <a
-							href="http://www.webnoriter.com/~imsi/store" class="btn_cancel">취소</a>
+							href="http://www.webnoriter.com/~imsi/store" class="btnCancel">취소</a>
 					</div>
 				</form>
 			</div>

@@ -11,8 +11,8 @@ public class MemberInsertModel implements YoseksaModel{
 	public String handlerRequest(HttpServletRequest req, HttpServletResponse res) throws Exception {
 		// TODO Auto-generated method stub
 		req.setAttribute("title", "회원가입");
-		req.setAttribute("member_insert", "../function/member/join.jsp");
-		return "main/main.jsp";
+		req.setAttribute("jsp", "../yoSeksa/function/member/join.jsp");
+		return "yoSeksa/function/main/main.jsp";
 	}
 
 }

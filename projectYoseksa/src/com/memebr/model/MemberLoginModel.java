@@ -12,32 +12,32 @@ public class MemberLoginModel  implements YoseksaModel {
 	@Override
 	public String handlerRequest(HttpServletRequest req, HttpServletResponse res) throws Exception {
 		// TODO Auto-generated method stub
-		String id=req.getParameter("id");
-		String pwd=req.getParameter("pwd");
+		String member_id=req.getParameter("member_id");
+		String member_pw=req.getParameter("member_pw");
 		String result="";
-		int count=MemberDAO.memberIdCount(id);
+		int count=MemberDAO.memberIdCount(member_id);
 		if(count==0)
 		{
 			result="NOID";
 		}
 		else
 		{
-			MemberDTO d=MemberDAO.memberGetInfo(id);
-			if(pwd.equals(d.getPwd()))
+			MemberDTO d=MemberDAO.memberGetInfo(member_id);
+			if(member_pw.equals(d.getMember_pw()))
 			{
 				result="OK";
 				HttpSession session=req.getSession();
-				session.setAttribute("id", id);
+				session.setAttribute("member_id", member_id);
 				// ${sessionScope.id} => session.getAttribute("id")
-				session.setAttribute("name", d.getName());
-				session.setAttribute("admin", d.getAdmin());
+				session.setAttribute("nickname", d.getNickname());
+				//session.setAttribute("admin", d.getAdmin());
 			}
 			else
 			{
 				result="NOPWD";
 			}
 		}
-		return "member/login.jsp";
+		return "yoseksa/function/member/login.jsp";
 	}
 
 }
