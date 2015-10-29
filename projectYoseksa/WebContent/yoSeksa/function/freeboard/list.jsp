@@ -65,6 +65,27 @@
       });
    });
 </script>
+
+<script type="text/javascript">
+$(function(){
+	$('#username').focus();
+	//$('#username').val("admin");
+	$('#btnSub').click(function(){
+		var cont=$('#usercontent').val();
+		if(cont=="")
+		{
+			$('#contSpan').text("내용은 반드시 입력해야 합니다!!");
+			$('#userscontent').focus();
+			return;
+		}
+		$('#contSpan').text("");
+	});
+	$('#btnCancel').click(function(){
+		history.back();
+	});
+});
+</script>
+
 <script type="text/javascript"> // 이미지 삽입해주는 스크립트
        function previewImage(targetObj, previewId) {
 
@@ -149,7 +170,7 @@
                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: block; margin: 0 auto;" >
                  <h4 align="center" style="margin-top: 60px; font-size: 17px; color:#000000">글 작성</h4>
                  <div class="modal-body" style="padding-bottom:0px;">
-                       <textarea name="board_tx" class="form-control" placeholder="내용" style="height: 210px; width: 446px;margin-left: 80px; border:1px solid #CACACA;
+                       <textarea name="board_tx" id="usercontent" class="form-control" placeholder="내용" style="height: 210px; width: 446px;margin-left: 80px; border:1px solid #CACACA;
                            background-color: rgb(255, 255, 255);"></textarea>
                      <div class="write_pic2" style="width: 400px; margin-top: 5px;">
                         <input type="file" name="file" id="file_1"
@@ -168,8 +189,8 @@
                      </div>
                      </div>
                      <div class="modal-footer" style="margin-bottom:20px; margin-right: 70px; padding-top:0px;" >
-                       <button type="button" class="btn btn-primary" >등록</button>
-                       <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color:rgba(255, 255, 255, 0);">취소</button>
+                       <button type="button" class="btn btn-primary" id="btnSub" >등록</button>
+                       <button type="button" class="btn btn-default" id="btnCancel" data-dismiss="modal" style="background-color:rgba(255, 255, 255, 0);">취소</button>
                      </div>
                </div>   
 

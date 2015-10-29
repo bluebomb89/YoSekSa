@@ -5,8 +5,6 @@ import java.util.Date;
 
 public class NoticeDTO {
 	private int notice_no;
-	private int board_no;
-	private int member_no;
 	private String notice_sub;
 	private String notice_content;
 	private Date notice_date;
@@ -19,18 +17,6 @@ public class NoticeDTO {
 	}
 	public void setNotice_no(int notice_no) {
 		this.notice_no = notice_no;
-	}
-	public int getBoard_no() {
-		return board_no;
-	}
-	public void setBoard_no(int board_no) {
-		this.board_no = board_no;
-	}
-	public int getMember_no() {
-		return member_no;
-	}
-	public void setMember_no(int member_no) {
-		this.member_no = member_no;
 	}
 	public String getNotice_sub() {
 		return notice_sub;
