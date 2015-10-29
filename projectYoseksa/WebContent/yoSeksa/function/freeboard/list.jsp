@@ -26,13 +26,12 @@
 <!-- 댓글 css 파일 네임 변경 -->
 <link rel="stylesheet" href="yoSeksa/css/list/ktwzk0vhtx.css" type="text/css"> 
 <link rel="stylesheet" href="yoSeksa/css/list/melonweb_album.css" type="text/css">
-<link href="yoSeksa/css/listwrite.css" rel="stylesheet">
-<link rel="stylesheet" href="yoSeksa/css/list/ggong.css" type="text/css">
-<<<<<<< HEAD
-=======
 <link rel="stylesheet" href="yoSeksa/css/list/main.min.css?ver=9dbd7d094ab56a14e3b2a984b20ea357">
 <link rel="stylesheet" href="yoSeksa/css/list//app.css?ver=4.0.8">
->>>>>>> refs/heads/master
+<link href="yoSeksa/css/listwrite.css" rel="stylesheet">
+<link rel="stylesheet" href="yoSeksa/css/list/ggong.css" type="text/css">
+
+
 
 <link rel="stylesheet" href="yoSeksa/css/list/onepage_201401.css" type="text/css">
 <!-- //footer -->
@@ -147,7 +146,7 @@
 
 <body  class="cbp-spmenu-push">
       <!-- 민영이는 주석 전까지만 작업 하세요 -->
-                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: block; margin: 0 auto;" >
                  <h4 align="center" style="margin-top: 60px; font-size: 17px; color:#000000">글 작성</h4>
                  <div class="modal-body" style="padding-bottom:0px;">
                        <textarea name="board_tx" class="form-control" placeholder="내용" style="height: 210px; width: 446px;margin-left: 80px; border:1px solid #CACACA;
