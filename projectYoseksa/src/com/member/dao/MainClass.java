@@ -1,4 +1,4 @@
-package com.memberdao;
+package com.member.dao;
 
 import java.util.*;
 

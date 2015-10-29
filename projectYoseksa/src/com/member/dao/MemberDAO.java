@@ -1,10 +1,11 @@
-package com.memberdao;
+package com.member.dao;
 import java.io.Reader;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-import com.memberdao.MemberDTO;
+import com.member.dao.MemberDTO;
+
 import java.util.*;
 
 public class MemberDAO {
