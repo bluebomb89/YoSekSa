@@ -160,9 +160,9 @@ $(function(){
 				</div>
 			</div>
 			<div class="showmenu" id="menu5">
-				<div class="noticesub"> 제목</div>
-				<div class="noticehire"> 작성일 </div>
-				<div class="noticeday"> 조회수</div>
+				<div class="noticesub"> 제목 ${dto.sub }</div>
+				<div class="noticehire"> 작성일 ${dto.date }</div>
+				<div class="noticeday"> 조회수${dto.hit }</div>
 				<div id="menu5-cont" style="display: none;">
 					<pre>
 						내용이 길어
