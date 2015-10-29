@@ -3,8 +3,7 @@ package com.memebr.model;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.member.dao.MemberDAO;
-import com.member.dao.MemberDTO;
+import com.member.dao.*;
 import com.common.YoseksaModel;
 
 public class MemberInsertOkModel implements YoseksaModel{
@@ -26,7 +25,7 @@ public class MemberInsertOkModel implements YoseksaModel{
 		
 		// DB¿¬µ¿
 		MemberDAO.memberInsert(d);
-		return "main.do";
+		return "main.sek";
 	}
 
 }

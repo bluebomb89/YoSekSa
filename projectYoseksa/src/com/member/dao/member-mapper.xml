@@ -6,17 +6,17 @@
 		<selectKey keyProperty="member_no" resultType="int" order="BEFORE">
 			SELECT NVL(MAX(member_no)+1,1) ad member_no FROM yoseksa_member
 		</selectKey>
-		INSERT INTO yoseksa_member(member_no,member_id,member_pw,nickname,email,member_pic) 
-		VALUES(#{member_no},#{member_id},#{member_pw},#{nickname},#{email},#{member_pic})
+		INSERT INTO yoseksa_member(member_no,member_id,member_pw,nickname,email) 
+		VALUES(#{member_no},#{member_id},#{member_pw},#{nickname},#{email})
 	</insert>
 	
 	<select id="memberIdCount" resultType="int" parameterType="String">
-		SELECT COUNT(*) FROM member
-		WHERE id=#{id}
+		SELECT COUNT(*) FROM yoseksa_member
+		WHERE member_id=#{id}
 	</select>
 	
 	<select id="memberGetInfo" resultType="Member" parameterType="String">
-		SELECT pwd,name,admin FROM member
+		SELECT member_pw,nickname FROM yoseksa_member
 		WHERE id=#{id}
 	</select>
 </mapper>

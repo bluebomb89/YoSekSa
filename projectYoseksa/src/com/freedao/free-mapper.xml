@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dao.free-mapper">
-	<select id="memberAllData" resultType="Member">
-		SELECT member_no,member_id,member_pw,nickname,email
-		FROM yoseksa_member
-	</select>
 	<!-- 우식 -->
 	<!-- ㅁㅁ -->
 	<!-- 영권 -->

@@ -19,7 +19,7 @@
    <!-- startElement() 속성을 일고 endElement() -->
    <bean id="qna" class="com.yoseksa.YoseksaQNA"></bean>
    <!-- startElement() 속성을 일고 endElement() -->
-   <bean id="join" class="com.memberdao.YoseksaMember"></bean>
+   <bean id="join" class="com.member.dao.YoseksaMember"></bean>
    <bean id="recipe_enroll" class="com.recipedao.YoseksaRecipeEnroll"></bean>
    <!-- 우식 -->
    <!-- ㅁㅁ -->

@@ -7,7 +7,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-import com.board.dao.ReplyBoardDTO;
+import com.member.dao.MemberDTO;
 
 public class MemberDAO {
 	private static SqlSessionFactory ssf;
