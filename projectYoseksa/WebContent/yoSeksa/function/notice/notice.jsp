@@ -61,17 +61,13 @@ $(document).ready(function() {
 	$('#myModal').on('shown.bs.modal', function () {
 		  $('#myInput').focus()
 		});
-	$('#notice-write').click(function(){
-		('#noticeForm').submit();
-	});
 });
 </script>
 <script type="text/javascript">
-var i=0;
 $(function(){
 	$('#notice-write').click(function(){
-		var sub=$('notice_suv').val();
-		var cont=$('notice_cont').val();
+		var notice_sub=$('notice_sub').val();
+		var notice_content=$('notice_content').val();
 		$('#noticeForm').submit();
 	});
 });
@@ -95,25 +91,21 @@ $(function(){
 							<form id="noticeForm" name="notice_frm" method="post" action="notice_insert.sek">
 								<!-- 페이지 -->
 								<input type="hidden" name="notice_page" value="">
-								<!-- 게시판 번호 -->
-								<input type="hidden" name="board_number" value="3">
 								<!-- 공지사항 번호 -->
-								<input type="hidden" name="notice_number" value="">
-								<!-- 회원 번호 -->
-								<input type="hidden" name="notice_member" value="">
+								<input type="hidden" name="notice_no" value="">
+<!-- 								게시판 번호
+								<input type="hidden" name="board_no" value="3">
+								회원 번호
+								<input type="hidden" name="member_no" value="3"> -->
 								<!-- 제목 -->
 								<input type="text" placeholder="제목" id="notice_sub" name="notice_sub"><br>
 								<!-- 내용 -->
-								<textarea name="notice_cont" id="novice_cont" class="form-control" placeholder="내용" style="min-height:300px;width: 100%; margin-top: 20px;"></textarea>
-								<!-- 날짜 -->								
-								<input type="hidden" name="notice_" value="">
-								<!-- 등록일 -->
-								<input type="hidden" name="" value="">
+								<textarea name="notice_content" id="notice_content" class="form-control" placeholder="내용" style="min-height:300px;width: 100%; margin-top: 20px;"></textarea>
 						    </form>
 					      </div>
 					      <div class="modal-footer">
 					        <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
-					        <a id="notice-write"><button type="button" class="btn btn-primary" data-dismiss="modal">등록</button></a>
+					        <a id="notice-write" href="#" style="z-index: 1000">등록</a>
 					      </div>
 					    </div>
 					  </div>
