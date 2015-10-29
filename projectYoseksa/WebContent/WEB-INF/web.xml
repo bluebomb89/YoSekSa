@@ -18,7 +18,6 @@
      <!-- <param-value>C:\Users\sist\git\YoSekSaProject\projectYoseksa\WebContent\WEB-INF\applicationContext.xml</param-value> -->
      <!-- 승현경로  -->
      <param-value>C:\Users\sist\git\YoSekSaProject\projectYoseksa\WebContent\WEB-INF\applicationContext.xml</param-value>
-     
     </init-param>
   </servlet>
   <servlet-mapping>
