@@ -1,6 +1,6 @@
 package com.noticedao;
 import com.yoseksa.*;
-import com.memberdao.*;
+import com.member.dao.MemberDTO;
 import java.util.Date;
 
 public class NoticeDTO {

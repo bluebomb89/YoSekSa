@@ -90,9 +90,9 @@ $(function(){
 					        <!-- 데이터 입력 -->
 							<form id="noticeForm" name="notice_frm" method="post" action="notice_insert.sek">
 								<!-- 페이지 -->
-								<input type="hidden" name="notice_page" value="">
+								<!-- <input type="hidden" name="notice_page" value=""> -->
 								<!-- 공지사항 번호 -->
-								<input type="hidden" name="notice_no" value="">
+								<!-- <input type="hidden" name="notice_no" value=""> -->
 <!-- 								게시판 번호
 								<input type="hidden" name="board_no" value="3">
 								회원 번호
