@@ -7,6 +7,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import java.util.*;
 import java.io.*;
 public class FreeBoardDAO {
+<<<<<<< HEAD
 	private static SqlSessionFactory ssf;
 	   static
 	   {
@@ -41,4 +42,16 @@ public class FreeBoardDAO {
 		   return list;
 		   //return ssf.openSession().selectList("boardListData",map);
 	   }
+//	<!-- ¿ì½Ä -->
+//	<!-- ¤±¤± -->
+//	<!-- ¿µ±Ç -->
+//	<!-- ¤±¤± -->
+//	<!-- ÅÂÁø -->
+//	<!-- ¤±¤± -->
+//	<!-- ½ÂÇö -->
+//	<!-- ¤±¤± -->
+//	<!-- È«ÀÇ -->
+//	<!-- ¤±¤± -->
+//	<!-- ¹Î¿µ -->
+//	<!-- ¤±¤± -->
 }
