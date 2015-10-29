@@ -157,7 +157,7 @@ header {
     padding: 9px;
     position: relative;
     color: #333;
-    z-index: 5000;
+    z-index: 0;
 }
 .cbp-spmenu-push{
 	position: absolute;

@@ -1,7 +1,16 @@
 package com.freedao;
 
 public class FreeBoardDAO {
-	public static void main(String[] args){
-		System.out.println("메인지우고 DAO 코딩");
-	}
+//	<!-- 우식 -->
+//	<!-- ㅁㅁ -->
+//	<!-- 영권 -->
+//	<!-- ㅁㅁ -->
+//	<!-- 태진 -->
+//	<!-- ㅁㅁ -->
+//	<!-- 승현 -->
+//	<!-- ㅁㅁ -->
+//	<!-- 홍의 -->
+//	<!-- ㅁㅁ -->
+//	<!-- 민영 -->
+//	<!-- ㅁㅁ -->
 }

@@ -145,7 +145,7 @@ function addRecipeOnTable()
 </script>
 
 </head>
-<body style="background-image: url('../../images/calendar_background.jpg')">
+<body>
 
 <table border='0' width='100%' height="10%" celpadding='0' cellspacing='0'>
   <tr>

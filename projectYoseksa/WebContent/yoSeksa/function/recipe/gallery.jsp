@@ -224,7 +224,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
 					</button>
 
-					<a href="../recipe/recipe_enroll.jsp"><button type="button"
+					<a href="recipe_enroll.sek"><button type="button"
 							class="btn btn-default" onclick="" style="margin-right: 6px;">
 							<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
 						</button></a>

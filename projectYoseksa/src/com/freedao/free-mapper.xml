@@ -5,4 +5,16 @@
 		SELECT member_no,member_id,member_pw,nickname,email
 		FROM yoseksa_member
 	</select>
+	<!-- 우식 -->
+	<!-- ㅁㅁ -->
+	<!-- 영권 -->
+	<!-- ㅁㅁ -->
+	<!-- 태진 -->
+	<!-- ㅁㅁ -->
+	<!-- 승현 -->
+	<!-- ㅁㅁ -->
+	<!-- 홍의 -->
+	<!-- ㅁㅁ -->
+	<!-- 민영 -->
+	<!-- ㅁㅁ -->
 </mapper>
