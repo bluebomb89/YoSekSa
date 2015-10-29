@@ -28,6 +28,8 @@
 <link rel="stylesheet" href="yoSeksa/css/list/melonweb_album.css" type="text/css">
 <link href="yoSeksa/css/listwrite.css" rel="stylesheet">
 <link rel="stylesheet" href="yoSeksa/css/list/ggong.css" type="text/css">
+<link rel="stylesheet" href="yoSeksa/css/list/main.min.css?ver=9dbd7d094ab56a14e3b2a984b20ea357">
+<link rel="stylesheet" href="yoSeksa/css/list//app.css?ver=4.0.8">
 
 <link rel="stylesheet" href="yoSeksa/css/list/onepage_201401.css" type="text/css">
 <!-- //footer -->
@@ -233,7 +235,8 @@
                   <span class="none">작성자</span>
                   <span class="thumb_wrap">
                   <a class="thumb d_cmtpgn_user" data-member-key="24703597" style="cursor:pointer;text-decoration:none;">
-                  <img onerror="this.src=&#39;http://image.melon.co.kr//resource/image/cmt/web/common/noArtist02_54.jpg&#39;" src="./asdasdasd_files/noArtist03_54.jpg" width="54" height="54" alt="">
+                  <img onerror="this.src=&#39;http://image.melon.co.kr//resource/image/cmt/web/common/noArtist02_54.jpg&#39;" src="./asdasdasd_files/noArtist03_54.
+" width="54" height="54" alt="">
                   <span class="thumb_frame"></span>
                   </a></span>
                   <a class="thumb d_cmtpgn_user" data-member-key="24703597" style="cursor:pointer;text-decoration:none;">
@@ -247,6 +250,51 @@
             </div>
          </div>
       </div>
-   </body>
+   	  <!-- 푸터 -->
+   	  <!-- <html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en" prefix="og: http://ogp.me/ns#"><body class="home page page-template page-template-template-home-php">&#65279; -->  
+ 
+  <div class="footer-color-wrap">
+	<footer class="content-info container" role="contentinfo">
+  		<div class="row">
+    		<div class="col-lg-12">
+				<div class="howmuch"> 
+					<li id="text-4" class="widget widget_text">
+					<h3>About Us</h3>			
+					<div class="textwidget">Yosek<em>Yosek</em>Yosek<br>Yosek</div>
+					</li>
+				</div>
+	<div class="gotaquestion"><a class="anchorfix" id="questions"></a>
+		<li id="text-5" class="widget widget_text">
+		<h3>Get in Touch</h3>			
+			<div class="textwidget">
+				<div class="question-phone">Seoul: +00 (010) 0000 0000 
+											sinchon: +00 (010) 0000 0000
+				</div>
+					<div class="question-mail"><a href="mailto:yo@sek.sa">yo@sek.sa</a> 
+					</div>
+			</div>
+		</li>
+	</div>
+ 		<div class="social-links">
+			<!--<a target="_blank" href="http://www.facebook.com/InfinVision"><img width="29" height="60" alt="facebook" src=" http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/f-social-facebook.png" ></a>
+			<a target="_blank" href="http://twitter.com/infinvision"><img width="29" height="60" alt="twitter" src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/f-social-twitter.png"></a>
+			<a target="_blank" href="http://www.linkedin.com/company/infinvision"><img width="29" height="60" alt="linkedin" src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/f-social-linkedin.png"></a>
+			<a target="_blank" href="https://plus.google.com/+Infinvision"><img width="29" height="60" alt="googleplus" src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/f-social-google.png"></a>-->
+		</div> 
+			</div>
+  		</div>
+  </footer>
+  </div>
+		<div class="blacky-back" style="padding-bottom: 350px;">
+				<div class="f-menu">
+				<ul id="menu-primary-navigation-1" class="menu"><li class="active menu-home"><a href="/">Home</a></li><li class="menu-divider">/</li>
+				<li class="menu-projects"><a href="/projects/">Projects</a></li><li class="menu-divider">/</li>
+				<li class="menu-workshops-briefings"><a href="#">Workshops &amp; Briefings</a></li><li class="menu-divider">/</li>
+				<li class="menu-about"><a href="/about/">About</a></li><li class="menu-divider">/</li>
+				<li class="menu-ideas"><a href="/blog/">Ideas</a></li><li class="menu-divider">/</li>
+				
+		</ul></div>
+			<div class="f-copy">© Copyright 2014 InfinVision Ltd. All rights reserved.</div>
+		</div>
+	</body>
 </html>
-        
