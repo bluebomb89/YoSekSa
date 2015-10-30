@@ -10,7 +10,7 @@
    <bean id="yoseksa" class="com.yoseksa.YoseksaMainhome"></bean>
    <!-- startElement() 속성을 일고 endElement() -->
    <bean id="freeboard" class="com.freedao.YoseksaFreeboard"></bean>
-   <bean id="yo_member" class="com.member.dao.YoseksaMember"></bean>
+ 
    <!-- startElement() 속성을 일고 endElement() -->
    <bean id="recipe_content" class="com.recipedao.YoseksaRecipeContent"></bean>
    <!-- startElement() 속성을 일고 endElement() -->
@@ -27,6 +27,7 @@
    <!-- ㅁㅁ -->
    <!-- 태진 -->
    <!-- member 관련 -->
+   <bean id="join" class="com.member.dao.YoseksaMember"></bean>
    <bean id="member_insert" class="com.member.model.MemberInsertModel"/>
    <bean id="member_insert_ok" class="com.member.model.MemberInsertOkModel"/>
    <bean id="member_login" class="com.member.model.MemberLoginModel"/>
@@ -38,7 +39,6 @@
    <!-- ㅁㅁ -->
    <!-- 민영 -->
    <!-- ㅁㅁ -->
-   <bean id="join" class="com.memberdao.YoseksaMember"></bean>
    <bean id="recipe_enroll" class="com.recipedao.YoseksaRecipeEnroll"></bean>
 	<!-- 우식 -->
 	<!-- ㅁㅁ -->
