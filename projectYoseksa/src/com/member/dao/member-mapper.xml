@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.member.dao.member-mapper">
+	
+	<insert id="memberInsert" parameterType="Yo_Member">
+		<selectKey keyProperty="member_no" resultType="int" order="BEFORE">
+			SELECT NVL(MAX(member_no)+1,1) ad member_no FROM yoseksa_member
+		</selectKey>
+		INSERT INTO yoseksa_member(member_no,member_id,member_pw,nickname,email) 
+		VALUES(#{member_no},#{member_id},#{member_pw},#{nickname},#{email})
+	</insert>
+	
+	<select id="memberIdCount" resultType="int" parameterType="String">
+		SELECT COUNT(*) FROM yoseksa_member
+		WHERE member_id=#{id}
+	</select>
+	
+	<select id="memberGetInfo" resultType="Yo_Member" parameterType="String">
+		SELECT member_pw,nickname FROM yoseksa_member
+		WHERE id=#{id}
+	</select>
+</mapper>

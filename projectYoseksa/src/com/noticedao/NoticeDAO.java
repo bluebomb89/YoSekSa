@@ -19,28 +19,44 @@ public class NoticeDAO {
 			System.out.println(ex.getMessage());
 		}
 	}
-	public static List<NoticeDTO> noticeListData()
-	{
+//	홍의 작성
+	   // 데이터 가지고 오기 
+	public static List<NoticeDTO> noticeListData(Map map){
 		List<NoticeDTO> list=new ArrayList<NoticeDTO>();
 		SqlSession session=null;
-		try
-		{
+		try{
 			session=ssf.openSession();
-			list=session.selectList("NoticeDTO");
-		}catch(Exception ex)
-		{
+			list=session.selectList("noticeListData",map);
+		}catch(Exception ex){
 			System.out.println(ex.getMessage());
-		}
-		finally
-		{
+		}finally{
 			if(session!=null)
 				session.close();
 		}
 		return list;
-		//return ssf.openSession().selectList("boardListData",map);
-	}
-	
-	/*public List<NoticeDTO> empAllData(){
+		   //return ssf.openSession().selectList("boardListData",map);
+	   }
+	public static void noticeInsert(NoticeDTO d)
+	{
+		SqlSession session=null;
+		try{
+			session=ssf.openSession(true);
+			session.insert("noticeInsert",d);
+			//session.commit();
+		}catch(Exception ex){
+				//session.rollback();
+				System.out.println(ex.getMessage());
+				}
+		finally
+		{
+			if(session!=null)
+				session.close();
+			}
+		}
+	public List<NoticeDTO> empAllData(){
 		return ssf.openSession().selectList("empAllData");
-	}*/
+	}
+//	영권 작성
+	
+
 }

@@ -8,6 +8,7 @@ import com.common.YoseksaModel;
 public class YoseksaMainhome implements YoseksaModel{
 	@Override
 	public String handlerRequest(HttpServletRequest req, HttpServletResponse res) throws Exception {
+//		공지사항 내용보기 출력
 		req.setAttribute("jsp",	"../main/yoseksa.jsp");
 		req.setAttribute("ntpage",	"../notice/notice.jsp");
 		return "yoSeksa/function/main/main.jsp";

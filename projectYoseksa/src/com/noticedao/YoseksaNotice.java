@@ -27,7 +27,7 @@ public class YoseksaNotice implements YoseksaModel{
 		Map map=new HashMap();
 		map.put("start", start); // #{start} get("start")
 		map.put("end", end);
-		List<NoticeDTO> list=NoticeDAO.noticeListData();
+		List<NoticeDTO> list=NoticeDAO.noticeListData(map);
 /*		for(NoticeDTO d:list)
 		{
 			d.setReplyCount(ReplyBoardDAO.boardReplyCount(d.getNo()));

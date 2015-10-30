@@ -1,10 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.dao.free-mapper">
-	<select id="memberAllData" resultType="Member">
-		SELECT member_no,member_id,member_pw,nickname,email
-		FROM yoseksa_member
-	</select>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+ <mapper namespace="com.board.dao.free-mapper">
+
+    <select id="boardListData" resultType="Freeboard" parameterType="java.util.Map">
+      SELECT free_no,nickname,free_content, dbday , hit, num
+      FROM (SELECT free_no,nickname, free_content TO_CHAR(regdate,'YYYY-MM-DD') as dbday , hit, rownum as num
+      FROM (SELECT free_no,nickname, free_content regdate , hit 
+      FROM yoseksa_freeboard ORDER BY no DESC)) 
+      WHERE num BETWEEN #{start} AND #{end}
+    </select>
+    <!-- 총페이지 구하기 -->
+    <select id="boardRowCount" resultType="int">
+      SELECT COUNT(*) FROM yoseksa_freeboard
+    </select>
+    <!--  데이터 추가 -->
+    <insert id="boardInsert" parameterType="Freeboard">
+      <!-- Sequence -->
+      <selectKey keyProperty="no" resultType="int" order="BEFORE">
+        SELECT NVL(MAX(no)+1,1) as no FROM yoseksa_freeboard
+      </selectKey>
+      INSERT INTO yoseksa_freeboard VALUES(
+        #{free_no},#{nickname},#{free_content},
+        SYSDATE,0
+      )
+    </insert>
+ </mapper>
+
 	<!-- 우식 -->
 	<!-- ㅁㅁ -->
 	<!-- 영권 -->
@@ -17,4 +39,3 @@
 	<!-- ㅁㅁ -->
 	<!-- 민영 -->
 	<!-- ㅁㅁ -->
-</mapper>

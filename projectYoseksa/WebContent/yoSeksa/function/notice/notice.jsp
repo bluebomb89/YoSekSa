@@ -1,7 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<<<<<<< HEAD
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+=======
+<!DOCTYPE html>
+>>>>>>> refs/heads/master
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -62,17 +66,13 @@ $(document).ready(function() {
 	$('#myModal').on('shown.bs.modal', function () {
 		  $('#myInput').focus()
 		});
-	$('#notice-write').click(function(){
-		('#noticeForm').submit();
-	});
 });
 </script>
 <script type="text/javascript">
-var i=0;
 $(function(){
 	$('#notice-write').click(function(){
-		var sub=$('notice_suv').val();
-		var cont=$('notice_cont').val();
+		var notice_sub=$('notice_sub').val();
+		var notice_content=$('notice_content').val();
 		$('#noticeForm').submit();
 	});
 });
@@ -95,26 +95,22 @@ $(function(){
 					        <!-- 데이터 입력 -->
 							<form id="noticeForm" name="notice_frm" method="post" action="notice_insert.sek">
 								<!-- 페이지 -->
-								<input type="hidden" name="notice_page" value="">
-								<!-- 게시판 번호 -->
-								<input type="hidden" name="board_number" value="3">
+								<!-- <input type="hidden" name="notice_page" value=""> -->
 								<!-- 공지사항 번호 -->
-								<input type="hidden" name="notice_number" value="">
-								<!-- 회원 번호 -->
-								<input type="hidden" name="notice_member" value="">
+								<!-- <input type="hidden" name="notice_no" value=""> -->
+<!-- 								게시판 번호
+								<input type="hidden" name="board_no" value="3">
+								회원 번호
+								<input type="hidden" name="member_no" value="3"> -->
 								<!-- 제목 -->
 								<input type="text" placeholder="제목" id="notice_sub" name="notice_sub"><br>
 								<!-- 내용 -->
-								<textarea name="notice_cont" id="novice_cont" class="form-control" placeholder="내용" style="min-height:300px;width: 100%; margin-top: 20px;"></textarea>
-								<!-- 날짜 -->								
-								<input type="hidden" name="notice_" value="">
-								<!-- 등록일 -->
-								<input type="hidden" name="" value="">
+								<textarea name="notice_content" id="notice_content" class="form-control" placeholder="내용" style="min-height:300px;width: 100%; margin-top: 20px;"></textarea>
 						    </form>
 					      </div>
 					      <div class="modal-footer">
 					        <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
-					        <a id="notice-write"><button type="button" class="btn btn-primary" data-dismiss="modal">등록</button></a>
+					        <a id="notice-write" href="#" style="z-index: 1000">등록</a>
 					      </div>
 					    </div>
 					  </div>
@@ -132,11 +128,10 @@ $(function(){
 						</pre>
 				</div>
 			</div>
-			<c:forEach var="dto" items="${list }" step="1">
-				
-			
+			<c:forEach var="dto" items="list">
 			<div class="showmenu" id="menu2">
 				<div class="noticesub">${dto.notice_sub }</div>
+				<div class="noticesub"> 제목${dto.notice_sub }</div>
 				<div class="noticehire"> 작성일 </div>
 				<div class="noticeday"> 조회수</div>
 				<div id="menu2-cont" style="display: none;">
@@ -173,9 +168,9 @@ $(function(){
 				</div>
 			</div>
 			<div class="showmenu" id="menu5">
-				<div class="noticesub"> 제목</div>
-				<div class="noticehire"> 작성일 </div>
-				<div class="noticeday"> 조회수</div>
+				<div class="noticesub"> 제목 ${dto.sub }</div>
+				<div class="noticehire"> 작성일 ${dto.date }</div>
+				<div class="noticeday"> 조회수${dto.hit }</div>
 				<div id="menu5-cont" style="display: none;">
 					<pre>
 						내용이 길어
