@@ -24,7 +24,7 @@ public class NoticeDAO {
 			session=ssf.openSession(true);
 			session.insert("noticeInsert",d);
 			//session.commit();
-			}catch(Exception ex){
+		}catch(Exception ex){
 				//session.rollback();
 				System.out.println(ex.getMessage());
 				}
@@ -37,4 +37,21 @@ public class NoticeDAO {
 	public List<NoticeDTO> empAllData(){
 		return ssf.openSession().selectList("empAllData");
 	}
+	
+	   // 데이터 가지고 오기 
+	public static List<NoticeDTO> noticeListData(Map map){
+		List<NoticeDTO> list=new ArrayList<NoticeDTO>();
+		SqlSession session=null;
+		try{
+			session=ssf.openSession();
+			list=session.selectList("boardListData",map);
+		}catch(Exception ex){
+			System.out.println(ex.getMessage());
+		}finally{
+			if(session!=null)
+				session.close();
+		}
+		return list;
+		   //return ssf.openSession().selectList("boardListData",map);
+	   }
 }

@@ -172,6 +172,8 @@ $(function(){
                  <div class="modal-body" style="padding-bottom:0px;">
                        <textarea name="board_tx" id="usercontent" class="form-control" placeholder="내용" style="height: 210px; width: 446px;margin-left: 80px; border:1px solid #CACACA;
                            background-color: rgb(255, 255, 255);"></textarea>
+                           <br>
+                           <span id="nameSpan" style="color:red;text-align: center"></span>
                      <div class="write_pic2" style="width: 400px; margin-top: 5px;">
                         <input type="file" name="file" id="file_1"
                            style="display: none;" />

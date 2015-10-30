@@ -11,6 +11,13 @@
       </selectKey>
       INSERT INTO yoseksa_notice VALUES(#{notice_no},1,1,#{notice_sub},#{notice_content},SYSDATE,0)
     </insert>
+    <select id="noticeListData" resultType="Notice" parameterType="java.util.Map">
+      SELECT notice_no,notice_sub,name, dbday , hit, num
+      FROM (SELECT no,subject,name, TO_CHAR(regdate,'YYYY-MM-DD') as dbday , hit, rownum as num
+      FROM (SELECT no,subject,name, regdate , hit 
+      FROM replyBoard ORDER BY no DESC)) 
+      WHERE num BETWEEN #{start} AND #{end}
+    </select>
 	<!-- ㅁㅁ -->
 	<!-- 태진 -->
 	<!-- ㅁㅁ -->
