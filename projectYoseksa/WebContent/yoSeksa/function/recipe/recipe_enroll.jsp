@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
     
 <!DOCTYPE html>
-<!-- saved from url=(0044)http://www.10000recipe.com/inbox/insert.html -->
 <html lang="ko" xmlns="http://www.w3.org/1999/xhtml" class=""><!--[endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -921,12 +920,12 @@ $(function() {
     <div class="cont_box pad_l_60">
       <div class="mag_b_25">
         <p class="cont_tit4">재료</p>
-        <ul id="divResourceArea" class="ui-sortable"><li id="liResource_1"><a href="http://www.10000recipe.com/inbox/insert.html#" class="btn-lineup ui-sortable-handle" data-original-title="" title=""></a><input type="text" name="cok_resource_nm[]" id="cok_resource_nm_1" class="form-control" style="width:300px;" placeholder="예) 돼지고기"><input type="text" name="cok_resource_amt[]" id="cok_resource_amt_1" class="form-control" style="width:300px;" placeholder="예) 300g"><a id="btnResourceDel_1" href="javascript:delResource(1)" class="btn-del" style=""></a></li><li id="liResource_2"><a href="http://www.10000recipe.com/inbox/insert.html#" class="btn-lineup" data-original-title="" title=""></a><input type="text" name="cok_resource_nm[]" id="cok_resource_nm_2" class="form-control" style="width:300px;" placeholder="예) 양배추"><input type="text" name="cok_resource_amt[]" id="cok_resource_amt_2" class="form-control" style="width:300px;" placeholder="예) 1/2개"><a id="btnResourceDel_2" href="javascript:delResource(2)" class="btn-del" style="display: none;"></a></li><li id="liResource_3"><a href="http://www.10000recipe.com/inbox/insert.html#" class="btn-lineup" data-original-title="" title=""></a><input type="text" name="cok_resource_nm[]" id="cok_resource_nm_3" class="form-control" style="width:300px;" placeholder="예) 찹쌀"><input type="text" name="cok_resource_amt[]" id="cok_resource_amt_3" class="form-control" style="width:300px;" placeholder="예) 2컵"><a id="btnResourceDel_3" href="javascript:delResource(3)" class="btn-del" style="display:none"></a></li></ul>
+        <ul id="divResourceArea" class="ui-sortable"><li id="liResource_1"><a href="#" class="btn-lineup ui-sortable-handle" data-original-title="" title=""></a><input type="text" name="cok_resource_nm[]" id="cok_resource_nm_1" class="form-control" style="width:300px;" placeholder="예) 돼지고기"><input type="text" name="cok_resource_amt[]" id="cok_resource_amt_1" class="form-control" style="width:300px;" placeholder="예) 300g"><a id="btnResourceDel_1" href="javascript:delResource(1)" class="btn-del" style=""></a></li><li id="liResource_2"><a href="#" class="btn-lineup" data-original-title="" title=""></a><input type="text" name="cok_resource_nm[]" id="cok_resource_nm_2" class="form-control" style="width:300px;" placeholder="예) 양배추"><input type="text" name="cok_resource_amt[]" id="cok_resource_amt_2" class="form-control" style="width:300px;" placeholder="예) 1/2개"><a id="btnResourceDel_2" href="javascript:delResource(2)" class="btn-del" style="display: none;"></a></li><li id="liResource_3"><a href="#" class="btn-lineup" data-original-title="" title=""></a><input type="text" name="cok_resource_nm[]" id="cok_resource_nm_3" class="form-control" style="width:300px;" placeholder="예) 찹쌀"><input type="text" name="cok_resource_amt[]" id="cok_resource_amt_3" class="form-control" style="width:300px;" placeholder="예) 2컵"><a id="btnResourceDel_3" href="javascript:delResource(3)" class="btn-del" style="display:none"></a></li></ul>
         <div class="btn_add" style="padding:0 0 20px 160px; width:800px;"><button type="button" onclick="addResource()" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span>재료추가</button></div>
       </div>
       <div>
         <p class="cont_tit4">양념</p>
-        <ul id="divSpiceArea" class="ui-sortable"><li id="liSpice_1"><a href="http://www.10000recipe.com/inbox/insert.html#" class="btn-lineup ui-sortable-handle" data-original-title="" title=""></a><input type="text" name="cok_spice_nm[]" id="cok_spice_nm_1" class="form-control" style="width:300px;" placeholder="예) 참기름"><input type="text" name="cok_spice_amt[]" id="cok_spice_amt_1" class="form-control" style="width:300px;" placeholder="예) 1T"><a id="btnSpiceDel_1" href="javascript:delSpice(1)" class="btn-del" style="display: none;"></a></li><li id="liSpice_2"><a href="http://www.10000recipe.com/inbox/insert.html#" class="btn-lineup" data-original-title="" title=""></a><input type="text" name="cok_spice_nm[]" id="cok_spice_nm_2" class="form-control" style="width:300px;" placeholder="예) 소금"><input type="text" name="cok_spice_amt[]" id="cok_spice_amt_2" class="form-control" style="width:300px;" placeholder="예) 2t"><a id="btnSpiceDel_2" href="javascript:delSpice(2)" class="btn-del" style="display:none"></a></li><li id="liSpice_3"><a href="http://www.10000recipe.com/inbox/insert.html#" class="btn-lineup" data-original-title="" title=""></a><input type="text" name="cok_spice_nm[]" id="cok_spice_nm_3" class="form-control" style="width:300px;" placeholder="예) 고추가루"><input type="text" name="cok_spice_amt[]" id="cok_spice_amt_3" class="form-control" style="width:300px;" placeholder="예) 2T"><a id="btnSpiceDel_3" href="javascript:delSpice(3)" class="btn-del" style="display: none;"></a></li></ul>
+        <ul id="divSpiceArea" class="ui-sortable"><li id="liSpice_1"><a href="#" class="btn-lineup ui-sortable-handle" data-original-title="" title=""></a><input type="text" name="cok_spice_nm[]" id="cok_spice_nm_1" class="form-control" style="width:300px;" placeholder="예) 참기름"><input type="text" name="cok_spice_amt[]" id="cok_spice_amt_1" class="form-control" style="width:300px;" placeholder="예) 1T"><a id="btnSpiceDel_1" href="javascript:delSpice(1)" class="btn-del" style="display: none;"></a></li><li id="liSpice_2"><a href="#" class="btn-lineup" data-original-title="" title=""></a><input type="text" name="cok_spice_nm[]" id="cok_spice_nm_2" class="form-control" style="width:300px;" placeholder="예) 소금"><input type="text" name="cok_spice_amt[]" id="cok_spice_amt_2" class="form-control" style="width:300px;" placeholder="예) 2t"><a id="btnSpiceDel_2" href="javascript:delSpice(2)" class="btn-del" style="display:none"></a></li><li id="liSpice_3"><a href="#" class="btn-lineup" data-original-title="" title=""></a><input type="text" name="cok_spice_nm[]" id="cok_spice_nm_3" class="form-control" style="width:300px;" placeholder="예) 고추가루"><input type="text" name="cok_spice_amt[]" id="cok_spice_amt_3" class="form-control" style="width:300px;" placeholder="예) 2T"><a id="btnSpiceDel_3" href="javascript:delSpice(3)" class="btn-del" style="display: none;"></a></li></ul>
         <div class="btn_add" style="padding:0 0 20px 160px; width:800px;"><button type="button" onclick="addSpice()" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span>양념추가</button></div>
       </div>
     </div><!--/cont_box-->
@@ -995,7 +994,7 @@ $(function() {
             <input type="hidden" name="del_work_photo[]" id="del_work_photo_1" value="">
             <div style="position:absolute;left:-3000px"><input type="file" name="q_work_file_1" id="q_work_file_1" file_gubun="work" accept="jpeg,png,gif" style="display:;width:0px;height:0px;font-size:0px;" text=""></div>
             <div id="divWorkPhotoBox_1" is_over="0">
-                <a href="http://www.10000recipe.com/inbox/insert.html#" class="pic_del" style="display:none"></a>
+                <a href="#" class="pic_del" style="display:none"></a>
                 <img id="workPhotoHolder_1" onclick="browseWorkFile(1)" src="yoSeksa/css/recipe_enroll/pic_none3.gif" alt="No Image" style="width: 140px; height: 140px; cursor:pointer">
             </div>
         </div>
@@ -1005,7 +1004,7 @@ $(function() {
             <input type="hidden" name="del_work_photo[]" id="del_work_photo_2" value="">
             <div style="position:absolute;left:-3000px"><input type="file" name="q_work_file_2" id="q_work_file_2" file_gubun="work" accept="jpeg,png,gif" style="display:;width:0px;height:0px;font-size:0px;" text=""></div>
             <div id="divWorkPhotoBox_2" is_over="0">
-                <a href="http://www.10000recipe.com/inbox/insert.html#" class="pic_del" style="display:none"></a>
+                <a href="#" class="pic_del" style="display:none"></a>
                 <img id="workPhotoHolder_2" onclick="browseWorkFile(2)" src="yoSeksa/css/recipe_enroll/pic_none3.gif" alt="No Image" style="width: 140px; height: 140px; cursor:pointer">
             </div>
         </div>
@@ -1015,7 +1014,7 @@ $(function() {
             <input type="hidden" name="del_work_photo[]" id="del_work_photo_3" value="">
             <div style="position:absolute;left:-3000px"><input type="file" name="q_work_file_3" id="q_work_file_3" file_gubun="work" accept="jpeg,png,gif" style="display:;width:0px;height:0px;font-size:0px;" text=""></div>
             <div id="divWorkPhotoBox_3" is_over="0">
-                <a href="http://www.10000recipe.com/inbox/insert.html#" class="pic_del" style="display:none"></a>
+                <a href="#" class="pic_del" style="display:none"></a>
                 <img id="workPhotoHolder_3" onclick="browseWorkFile(3)" src="yoSeksa/css/recipe_enroll/pic_none3.gif" alt="No Image" style="width: 140px; height: 140px; cursor:pointer">
             </div>
         </div>
@@ -1025,7 +1024,7 @@ $(function() {
             <input type="hidden" name="del_work_photo[]" id="del_work_photo_4" value="">
             <div style="position:absolute;left:-3000px"><input type="file" name="q_work_file_4" id="q_work_file_4" file_gubun="work" accept="jpeg,png,gif" style="display:;width:0px;height:0px;font-size:0px;" text=""></div>
             <div id="divWorkPhotoBox_4" is_over="0">
-                <a href="http://www.10000recipe.com/inbox/insert.html#" class="pic_del" style="display:none"></a>
+                <a href="#" class="pic_del" style="display:none"></a>
                 <img id="workPhotoHolder_4" onclick="browseWorkFile(4)" src="yoSeksa/css/recipe_enroll/pic_none3.gif" alt="No Image" style="width: 140px; height: 140px; cursor:pointer">
             </div>
         </div>
@@ -1084,7 +1083,7 @@ $(function() {
                 <div class="guide_tit"><img src="yoSeksa/css/recipe_enroll/guide_tt.gif"></div>
                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                     <div class="panel panel-default">
-                        <a data-toggle="collapse" data-parent="#accordion" href="http://www.10000recipe.com/inbox/insert.html#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             <div class="panel-heading" role="tab" id="headingOne">
                                 <span class="guide_icon"><img src="yoSeksa/css/recipe_enroll/icon_guide_01.gif"></span>직접등록하기<i class="btn_arrow"><img src="yoSeksa/css/recipe_enroll/icon_arrow1_down.png"></i>
                             </div>
@@ -1102,7 +1101,7 @@ $(function() {
                     <!--/panel panel-default -->
 					                    <!--/panel panel-default -->
                     <div class="panel panel-default">
-                        <a data-toggle="collapse" data-parent="#accordion" href="http://www.10000recipe.com/inbox/insert.html#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
                             <div class="panel-heading" role="tab" id="headingThree">
                                 <span class="guide_icon"><img src="yoSeksa/css/recipe_enroll/icon_guide_03.gif"></span>전문 레시피로 바꾸기<i class="btn_arrow"><img src="yoSeksa/css/recipe_enroll/icon_arrow1_down.png"></i>
                             </div>
