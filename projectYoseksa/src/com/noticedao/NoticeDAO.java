@@ -19,15 +19,15 @@ public class NoticeDAO {
 			System.out.println(ex.getMessage());
 		}
 	}
-<<<<<<< HEAD
+
 	public static List<NoticeDTO> noticeListData()
 	{
 		List<NoticeDTO> list=new ArrayList<NoticeDTO>();
 		SqlSession session=null;
 		try
 		{
-			session=ssf.openSession();
-			list=session.selectList("NoticeDTO");
+			session=ssf.openSession(true);
+			list=session.selectList("noticeListData");
 		}catch(Exception ex)
 		{
 			System.out.println(ex.getMessage());
@@ -39,7 +39,7 @@ public class NoticeDAO {
 		}
 		return list;
 		//return ssf.openSession().selectList("boardListData",map);
-=======
+	}
 	public static void noticeInsert(NoticeDTO d)
 	{
 		SqlSession session=null;
@@ -59,7 +59,6 @@ public class NoticeDAO {
 		}
 	public List<NoticeDTO> empAllData(){
 		return ssf.openSession().selectList("empAllData");
->>>>>>> refs/remotes/origin/master
 	}
 	
 	/*public List<NoticeDTO> empAllData(){

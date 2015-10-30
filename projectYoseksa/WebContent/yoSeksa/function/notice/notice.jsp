@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -123,8 +124,9 @@ $(function(){
 						</pre>
 				</div>
 			</div>
+			<c:forEach var="dto" items="list">
 			<div class="showmenu" id="menu2">
-				<div class="noticesub"> 제목</div>
+				<div class="noticesub"> 제목${dto.notice_sub }</div>
 				<div class="noticehire"> 작성일 </div>
 				<div class="noticeday"> 조회수</div>
 				<div id="menu2-cont" style="display: none;">
@@ -135,6 +137,7 @@ $(function(){
 					</pre>
 				</div>
 			</div>
+			</c:forEach>
 			<div class="showmenu" id="menu3">
 				<div class="noticesub"> 제목</div>
 				<div class="noticehire"> 작성일 </div>

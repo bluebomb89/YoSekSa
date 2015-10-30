@@ -17,7 +17,7 @@
 	<!-- 승현 -->
 	<!-- ㅁㅁ -->
 	<!-- 홍의 -->
-		<select id="noticeListData" resultType="Notice">
+	<select id="noticeListData" resultType="Notice">
       SELECT notice_sub,notice_date,notice_hit,notice_content
       FROM yoseksa_notice
     </select>
