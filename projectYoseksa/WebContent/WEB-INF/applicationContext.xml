@@ -10,6 +10,7 @@
    <bean id="yoseksa" class="com.yoseksa.YoseksaMainhome"></bean>
    <!-- startElement() 속성을 일고 endElement() -->
    <bean id="freeboard" class="com.freedao.YoseksaFreeboard"></bean>
+   <bean id="yo_member" class="com.member.dao.YoseksaMember"></bean>
    <!-- startElement() 속성을 일고 endElement() -->
    <bean id="recipe_content" class="com.recipedao.YoseksaRecipeContent"></bean>
    <!-- startElement() 속성을 일고 endElement() -->
@@ -29,7 +30,7 @@
    <bean id="member_insert" class="com.member.model.MemberInsertModel"/>
    <bean id="member_insert_ok" class="com.member.model.MemberInsertOkModel"/>
    <bean id="member_login" class="com.member.model.MemberLoginModel"/>
-      <bean id="member_logout" class="com.member.model.MemberLogoutModel"/>
+   <bean id="member_logout" class="com.member.model.MemberLogoutModel"/>
    <!-- ㅁㅁ -->
    <!-- 승현 -->
    <!-- ㅁㅁ -->
@@ -47,10 +48,6 @@
 	<!-- ㅁㅁ -->
 	<!-- 태진 -->
    <!-- member 관련 -->
-   <bean id="member_insert" class="com.member.model.MemberInsertModel"/>
-   <bean id="member_insert_ok" class="com.member.model.MemberInsertOkModel"/>
-   <bean id="member_login" class="com.member.model.MemberLoginModel"/>
-      <bean id="member_logout" class="com.member.model.MemberLogoutModel"/>
 	<!-- ㅁㅁ -->
 	<!-- 승현 -->
 	<!-- ㅁㅁ -->
