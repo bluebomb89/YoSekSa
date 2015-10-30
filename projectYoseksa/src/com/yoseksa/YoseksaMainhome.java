@@ -32,6 +32,7 @@ public class YoseksaMainhome implements YoseksaModel{
 //		공지사항 내용보기 출력
 		req.setAttribute("jsp",	"../main/yoseksa.jsp");
 		req.setAttribute("ntpage",	"../notice/notice.jsp");
+		req.setAttribute("mangae",	"../main/mangae.jsp");
 		return "yoSeksa/function/main/main.jsp";
 	}
 

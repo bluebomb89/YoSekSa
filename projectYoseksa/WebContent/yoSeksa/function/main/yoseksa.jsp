@@ -150,10 +150,10 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어주면 된다.
                   </span>
                </div>
             </form>
-            <form id="mangae" class="mangae-search" method="post" action="recipe_content.sek" >
+            <form id="mangae" class="mangae-search" method="post" action="recipe_search.sek" >
                <div class="input-group">
                   <span class="twitter-typeahead">
-                     <input type="text" class="yoseksa-search-input" id="txtSearch" placeholder="만개의 레시피 검색">
+                     <input type="text" name="mangae-search" class="yoseksa-search-input" id="txtSearch" placeholder="만개의 레시피 검색">
                   </span>
                   <div class="input-group-btn">
 	                  <a class="scroll" href="#mangae-view" id="recipe-search"><button class="btn btn-default btnstateless search-input-button" type="button" id="btnMangae" data-loading-text="..." style="background-color: white;"></button></a>
@@ -274,14 +274,11 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어주면 된다.
 <!-- services -->
 <!-- 여기에 공지사항 추가 -->
 <div id="services"  style="padding-top: 51px">
-   <jsp:include page="${ntpage }"></jsp:include>
+	<jsp:include page="${ntpage }"></jsp:include>
 </div>
  <!-- testimonial -->
 <div class="testimonial" id="mangae-view">
-      <!-- container -->
-   <div class="service-info">
-      <h3>what is it?</h3>
-   </div>     
+	<jsp:include page="${mangae }"></jsp:include>	
 </div>
 
 <!-- projects -->

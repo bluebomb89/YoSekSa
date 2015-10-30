@@ -24,6 +24,7 @@
    <!-- 우식 -->
    <!-- ㅁㅁ -->
    <!-- 영권 -->
+   <bean id="recipe_search" class="com.mangae.recipesearch"></bean>
    <!-- ㅁㅁ -->
    <!-- 태진 -->
    <!-- member 관련 -->

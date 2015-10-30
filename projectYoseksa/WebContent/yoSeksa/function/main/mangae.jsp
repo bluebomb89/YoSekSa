@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<!-- container -->
+   <div class="service-info">
+      <h3>what is it?</h3>
+   </div>
 </body>
 </html>
