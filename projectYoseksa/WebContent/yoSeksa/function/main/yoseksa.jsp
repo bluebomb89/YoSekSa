@@ -18,14 +18,28 @@
 <link href="yoSeksa/css/index.css" rel="stylesheet">
 <!-- script -->
 <script src="yoSeksa/js/jquery.min.js"></script>
-<script src="yoSeksa/js/responsiveslides.min.js"></script>
 <script src="yoSeksa/js/jquery.cycle.all.js"></script>
+
 <script src="yoSeksa/js/owl.carousel.js"></script>
 <!--/animated-css-->
+<script src="yoSeksa/js/bootstrap.js"></script>
 <script src="yoSeksa/js/move-top.js"></script>
 <script src="yoSeksa/js/easing.js"></script>
-<script src="yoSeksa/js/bootstrap.js"></script>
+<script src="yoSeksa/js/responsiveslides.min.js"></script>
+
+
+
 <!--/script-->
+<script type="text/javascript">
+var i=0;
+$(function(){
+	$('#mangae-view').hide();
+	$('#recipe-search').click(function(){
+		$('#mangae-view').show();
+		$('#mangae').submit();
+	});
+});
+</script>
 <script type="text/javascript">
    jQuery(document).ready(function($) {
       $(".scroll").click(function(event){      
@@ -128,12 +142,21 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
             <form class="yoseksa-search"role="search">
                <div class="input-group">
                   <span class="twitter-typeahead">
-                     <input type="text" class="yoseksa-search-hint">
                      <input type="text" class="yoseksa-search-input" id="txtSearch" placeholder="Search 350,000+ Recipes">
                   </span>
                   <span class="input-group-btn">
                      <button class="btn btn-default btnstateless search-input-button" type="button" id="btnGo" data-loading-text="..." style="background-color: white;"></button>
                   </span>
+               </div>
+            </form>
+            <form id="mangae" class="mangae-search" method="post" action="recipe_content.sek" >
+               <div class="input-group">
+                  <span class="twitter-typeahead">
+                     <input type="text" class="yoseksa-search-input" id="txtSearch" placeholder="만개의 레시피 검색">
+                  </span>
+                  <div class="input-group-btn">
+	                  <a class="scroll" href="#mangae-view" id="recipe-search"><button class="btn btn-default btnstateless search-input-button" type="button" id="btnMangae" data-loading-text="..." style="background-color: white;"></button></a>
+                  </div>
                </div>
             </form>
          <div class="callbacks_container" style="padding-left: 15px; padding-right: 15px;">
@@ -253,13 +276,12 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
    <jsp:include page="${ntpage }"></jsp:include>
 </div>
  <!-- testimonial -->
-<div class="testimonial">
+<div class="testimonial" id="mangae-view">
       <!-- container -->
    <div class="service-info">
       <h3>what is it?</h3>
-   </div>
-      
- </div>
+   </div>     
+</div>
 
 <!-- projects -->
 <div class="projects">

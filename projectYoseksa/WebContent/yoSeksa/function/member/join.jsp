@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8" import="com.memberdao.*"%>
+	pageEncoding="UTF-8" import="com.member.dao.*"%>
 	
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<jsp:useBean id="dao" class="com.memberdao.MemberDAO"/>
+<jsp:useBean id="dao" class="com.member.dao.MemberDAO"/>
 
 <!DOCTYPE HTML>
 <html>
@@ -125,17 +125,12 @@
 			pager : true,
 		});
 	});
-	
-	$(function() {
-		$("#reg_zip_find").css("display", "inline-block");
-
-	});
 
 	// submit 최종 폼체크
 	function regform_submit(f) {
 		// 회원아이디 검사
 		if (f.w.value == "") {
-			var msg = reg_member_id_check();
+			var msg = member_id_check();
 			if (msg) {
 				alert(msg);
 				f.member_id.select();
@@ -165,34 +160,25 @@
 			}
 		}
 
-		// 이름 검사
-		if (f.w.value == "") {
-			if (f.mb_name.value.length < 1) {
-				alert("이름을 입력하십시오.");
-				f.mb_name.focus();
-				return false;
-			}
-
-		}
 
 		// 닉네임 검사
 		if ((f.w.value == "")
-				|| (f.w.value == "u" && f.member_nick.defaultValue != f.member_nick.value)) {
-			var msg = reg_member_nick_check();
+				|| (f.w.value == "u" && f.nickname.defaultValue != f.nickname.value)) {
+			var msg = nickname_check();
 			if (msg) {
 				alert(msg);
-				f.reg_member_nick.select();
+				f.nickname.select();
 				return false;
 			}
 		}
 
 		// E-mail 검사
 		if ((f.w.value == "")
-				|| (f.w.value == "u" && f.member_email.defaultValue != f.member_email.value)) {
-			var msg = reg_member_email_check();
+				|| (f.w.value == "u" && f.email.defaultValue != f.email.value)) {
+			var msg = email_check();
 			if (msg) {
 				alert(msg);
-				f.reg_member_email.select();
+				f.email.select();
 				return false;
 			}
 		}
@@ -201,11 +187,43 @@
 			return false;
 		{
 
-			document.getElementById("btn_submit").disabled = "disabled";
+			document.getElementById("btnSub").disabled = "disabled";
 
 			return true;
 		}
+		
+		
 	}
+	
+</script>
+
+<script type="text/javascript">
+// window.onload=function(){}
+// $(document).ready(function(){})
+$(function(){
+	//$('#username').val("admin");
+	$('#btnSub').click(function(){
+		var reg_nickname=$('#nickname').val();
+
+		$('#nameSpan').text("");
+		
+		var reg_member_id=$('#member_id').val();
+
+		$('#subSpan').text("");
+		
+		var reg_email=$('#email').val();
+
+		$('#contSpan').text("");
+		
+		var reg_member_pw=$('#member_pw').val();
+
+		$('#pwdSpan').text("");
+		$('#regform').submit();
+	});
+	$('#btnCancel').click(function(){
+		history.back();
+	});
+});
 </script>
 <!--script-->
 
@@ -223,7 +241,7 @@
 
 				<script src="http://www.webnoriter.com/~imsi/store/js/jquery.register_form.js"></script>
 				
-				<form id="regform" name="regform">
+				<form id="regform" name="regform" method=post action="member_insert_ok.sek">
 					<div class="tbl_frm01 tbl_wrap">
 						<table>
 							<tbody>
@@ -274,8 +292,8 @@
 											<strong class="sound_only">필수</strong>
 										</label>
 									</th>
-									<td><input type="hidden" name="member_nick_default" value="">
-										<input type="text" name="member_nick" value="" id="reg_member_nick" required="" class="frm_input required nospace" size="10"maxlength="20">
+									<td>
+										<input type="text" name="nickname" value="" id="reg_nickname" required="" class="frm_input required nospace" size="10"maxlength="20">
 										<span id="msg_member_nick"></span>
 									</td>
 								</tr>
@@ -287,8 +305,7 @@
 										</label>
 									</th>
 									<td>
-										<input type="hidden" name="old_email" value="">
-										<input type="text" name="member_email" value="" id="reg_member_email" required="" class="frm_input email required" size="70" maxlength="100">
+										<input type="text" name="email" value="" id="reg_email" required="" class="frm_input email required" size="70" maxlength="100">
 									</td>
 								</tr>
 							</tbody>
@@ -296,9 +313,9 @@
 					</div>
 					<!-- 등록/취소 버튼 -->
 					<div class="btn_confirm">
-						<input type="submit" value="회원가입" id="btn_submit"
+						<input type="submit" value="회원가입" id="btnSub"
 							class="btn_submit" accesskey="s"> <a
-							href="http://www.webnoriter.com/~imsi/store" class="btn_cancel">취소</a>
+							href="http://www.webnoriter.com/~imsi/store" class="btnCancel">취소</a>
 					</div>
 				</form>
 			</div>
