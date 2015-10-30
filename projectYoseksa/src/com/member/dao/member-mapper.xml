@@ -4,10 +4,9 @@
 	
 	<insert id="memberInsert" parameterType="Yo_Member">
 		<selectKey keyProperty="member_no" resultType="int" order="BEFORE">
-			SELECT NVL(MAX(member_no)+1,1) ad member_no FROM yoseksa_member
+			SELECT NVL(MAX(member_no)+1,1) as member_no FROM yoseksa_member
 		</selectKey>
-		INSERT INTO yoseksa_member(member_no,member_id,member_pw,nickname,email) 
-		VALUES(#{member_no},#{member_id},#{member_pw},#{nickname},#{email})
+		INSERT INTO yoseksa_member VALUES(#{member_no},#{member_id},#{member_pw},#{nickname},#{email})
 	</insert>
 	
 	<select id="memberIdCount" resultType="int" parameterType="String">

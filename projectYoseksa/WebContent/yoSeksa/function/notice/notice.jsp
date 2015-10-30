@@ -112,19 +112,19 @@ $(function(){
 					  </div>
 					</div>
 			</div>
-			<div class="showmenu" id="menu1">
-				<div class="noticesub">제목</div>
-				<div class="noticehire"> 작성일 </div>
-				<div class="noticeday"> 조회수</div>
-				<div id="menu1-cont" style="display: none;">
-						<pre>
-							내용이 길어
-							내용이 엄청긴데?
-							이러면 어떻게 출력되?
-						</pre>
+			 <c:forEach var="ndto" items="${notice_list }">
+				<div class="showmenu" id="menu${ndto.notice_no }">
+					<div class="noticesub">제목 ${ndto.notice_sub }</div>
+					<div class="noticehire"> 작성일 ${ndto.notice_dbday }</div>
+					<div class="noticeday"> 조회수 ${ndto.notice_hit }</div>
+					<div id="menu1-cont" style="display: none;">
+							<pre>
+								${ndto.notice_content }
+							</pre>
+					</div>
 				</div>
-			</div>
-			<c:forEach var="dto" items="list">
+			</c:forEach>
+<%-- 			<c:forEach var="dto" items="list">
 			<div class="showmenu" id="menu2">
 				<div class="noticesub"> 제목${dto.notice_sub }</div>
 				<div class="noticehire"> 작성일 </div>
@@ -137,7 +137,7 @@ $(function(){
 					</pre>
 				</div>
 			</div>
-			</c:forEach>
+			</c:forEach> --%>
 			<div class="showmenu" id="menu3">
 				<div class="noticesub"> 제목</div>
 				<div class="noticehire"> 작성일 </div>
