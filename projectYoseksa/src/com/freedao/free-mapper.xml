@@ -3,7 +3,7 @@
 
  <mapper namespace="com.board.dao.free-mapper">
 
-    <select id="boardListData" resultType="Board" parameterType="java.util.Map">
+    <select id="boardListData" resultType="Freeboard" parameterType="java.util.Map">
       SELECT free_no,nickname,free_content, dbday , hit, num
       FROM (SELECT free_no,nickname, free_content TO_CHAR(regdate,'YYYY-MM-DD') as dbday , hit, rownum as num
       FROM (SELECT free_no,nickname, free_content regdate , hit 
@@ -15,7 +15,7 @@
       SELECT COUNT(*) FROM yoseksa_freeboard
     </select>
     <!--  데이터 추가 -->
-    <insert id="boardInsert" parameterType="Board">
+    <insert id="boardInsert" parameterType="Freeboard">
       <!-- Sequence -->
       <selectKey keyProperty="no" resultType="int" order="BEFORE">
         SELECT NVL(MAX(no)+1,1) as no FROM yoseksa_freeboard

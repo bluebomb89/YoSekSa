@@ -7,6 +7,8 @@ import org.apache.ibatis.*;
 import org.apache.ibatis.io.*;
 import org.apache.ibatis.session.*;
 
+import com.noticedao.NoticeDTO;
+
 public class NoticeDAO {
 	private static SqlSessionFactory ssf;
 	static{
@@ -17,6 +19,23 @@ public class NoticeDAO {
 			System.out.println(ex.getMessage());
 		}
 	}
+//	홍의 작성
+	   // 데이터 가지고 오기 
+	public static List<NoticeDTO> noticeListData(Map map){
+		List<NoticeDTO> list=new ArrayList<NoticeDTO>();
+		SqlSession session=null;
+		try{
+			session=ssf.openSession();
+			list=session.selectList("noticeListData",map);
+		}catch(Exception ex){
+			System.out.println(ex.getMessage());
+		}finally{
+			if(session!=null)
+				session.close();
+		}
+		return list;
+		   //return ssf.openSession().selectList("boardListData",map);
+	   }
 	public static void noticeInsert(NoticeDTO d)
 	{
 		SqlSession session=null;
@@ -37,4 +56,7 @@ public class NoticeDAO {
 	public List<NoticeDTO> empAllData(){
 		return ssf.openSession().selectList("empAllData");
 	}
+//	영권 작성
+	
+
 }
