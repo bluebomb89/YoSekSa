@@ -66,7 +66,7 @@ public class NoticeDAO {
 		   try
 		   {
 			   session=ssf.openSession();
-			   int count=session.selectOne("boardRowCount");
+			   int count=session.selectOne("noticeRowCount");
 			   total=(int)(Math.ceil(count/10.0));
 		   }catch(Exception ex)
 		   {

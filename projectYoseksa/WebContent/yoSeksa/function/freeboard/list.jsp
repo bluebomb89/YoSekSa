@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 
 <!DOCTYPE html>
 <!-- saved from url=(0053)http://www.melon.com/album/detail.htm?albumId=2646527 -->

@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
     
 <!DOCTYPE html>
 <!-- saved from url=(0044)http://www.10000recipe.com/inbox/insert.html -->

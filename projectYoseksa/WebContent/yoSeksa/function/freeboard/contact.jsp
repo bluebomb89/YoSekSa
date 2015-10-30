@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!--A Design by W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
@@ -62,11 +62,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			offset: {top: $('header').height()-$('#nav').height()}
 		});
 		
-		/* affix-top 에서 affix로 수정될대 이벤트 발생*/
+		/* affix-top ���� affix�� �����ɴ� �̺�Ʈ �߻�*/
 		$('#nav').on("affix.bs.affix",function(){
 			$("#startmain").text("haa!");
 		});
-		/* affix에서 affix-top으로 전환될때 이벤트 발생*/
+		/* affix���� affix-top���� ��ȯ�ɶ� �̺�Ʈ �߻�*/
 		$('#nav').on("affix-top.bs.affix",function(){
 			$("#startmain").text("Search");
 		});
@@ -94,7 +94,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 <!---->
-<!--  style.css안에 이미지 추가해서 div class이름에 넣어라. 이미지는 전체적으로 style.css안에. 
+<!--  style.css�ȿ� �̹��� �߰��ؼ� div class�̸��� �־��. �̹����� ��ü������ style.css�ȿ�. 
 	  
 .bannersearch{
 	background:url(../images/bannersearch.jpg) no-repeat 0px 0px;
@@ -102,13 +102,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	min-height:895px;
 }
 
-css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어주면 된다.
+css�ȿ� �̹��� �̷������� �߰��ϰ� div�ȿ� Ŭ������ �־��ָ� �ȴ�.
 -->
 
 	 
 <!---->
 	<button type="button" class="btn btn-primary btn-lg"
-		data-toggle="modal" data-target="#myModal">등록</button>
+		data-toggle="modal" data-target="#myModal">���</button>
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
 		aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
@@ -124,23 +124,23 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 					<div id="post_wrapper">
 						<form id="postForm" name="post_frm" method=post
 							action="postfind_result.jsp">
-							<textarea name="board_tx" class="form-control" placeholder="내용"
+							<textarea name="board_tx" class="form-control" placeholder="����"
 								style="height: 400px; width: 400px; margin-top: 20px;"></textarea>
 							<div class="write_pic2" style="width: 400px; margin-top: 40px;">
 								<input type="file" name="file" id="file_1"
 									style="display: none;" />
 								<div class="complete_pic">
 									<img src="http://recipe1.ezmember.co.kr/img/pic_none3.gif"
-										alt="파일첨부" width="140" height="120"
+										alt="����÷��" width="140" height="120"
 										onclick="document.getElementById('file_1').click();"
 										style="cursor: pointer;" />
 								</div>
 							</div>
 							<div class="write_btn" style="margin-top: 40px;">
-								<button type="submit" id="submit_btn" class="btn-lg btn-primary">등록</button>
+								<button type="submit" id="submit_btn" class="btn-lg btn-primary">���</button>
 								<button type="button" class="btn-lg btn-default"
 									data-dismiss="modal"
-									onClick="location.href='/talk/list.html?bid=5'">취소</button>
+									onClick="location.href='/talk/list.html?bid=5'">���</button>
 							</div>
 
 						</form>

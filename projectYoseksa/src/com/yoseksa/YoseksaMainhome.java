@@ -23,8 +23,7 @@ public class YoseksaMainhome implements YoseksaModel{
 	    Map map=new HashMap();
 	    map.put("start", start); // #{start} get("start")
 	    map.put("end", end);
-	    List<NoticeDTO> list=
-	    		NoticeDAO.noticeListData(map);
+	    List<NoticeDTO> list=NoticeDAO.noticeListData(map);
 	    int totalpage=NoticeDAO.noticeTotalPage();
 	    req.setAttribute("notice_today", new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
 	    req.setAttribute("notice_list", list);
