@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE configuration  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-config.dtd"> 
 <configuration>
-	<properties resource="com/yoseksa/db.properties"></properties>
+	<properties resource="db.properties"></properties>
 	<!-- DTO클래스 등록 -->
 	<typeAliases>
 		<typeAlias type="com.member.dao.MemberDTO" alias="Yo_Member"/>	<!-- 회원관리 -->

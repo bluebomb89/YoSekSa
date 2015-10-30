@@ -1,8 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE HTML>
 <html>
 <head>
+<meta charset="UTF-8">
 <title>Flooring a Interior category Flat Bootstarp Responsive Website Template | Home :: w3layouts</title>
 <link href="yoSeksa/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="yoSeksa/css/component.css" rel="stylesheet" type="text/css"  />
@@ -61,11 +62,11 @@ $(function(){
       $('#nav').affix({
          offset: {top: $('header').height()-$('#nav').height()}
       });
-      /* affix-top ì—ì„œ affixë¡œ ìˆ˜ì •ë ëŒ€ ì´ë²¤íŠ¸ ë°œìƒ*/
+      /* affix-top ¿¡¼­ affix·Î ¼öÁ¤µÉ´ë ÀÌº¥Æ® ¹ß»ı*/
       $('#nav').on("affix.bs.affix",function(){
          $("#startmain").text("haa!");
       });
-      /* affixì—ì„œ affix-topìœ¼ë¡œ ì „í™˜ë ë•Œ ì´ë²¤íŠ¸ ë°œìƒ*/
+      /* affix¿¡¼­ affix-topÀ¸·Î ÀüÈ¯µÉ¶§ ÀÌº¥Æ® ¹ß»ı*/
       $('#nav').on("affix-top.bs.affix",function(){
          $("#startmain").text("Search");
       });
@@ -120,7 +121,7 @@ $(document).ready(function() {
 <body  class="cbp-spmenu-push">
       <!--bottom-->
 <!---->
-<!--  style.cssì•ˆì— ì´ë¯¸ì§€ ì¶”ê°€í•´ì„œ div classì´ë¦„ì— ë„£ì–´ë¼. ì´ë¯¸ì§€ëŠ” ì „ì²´ì ìœ¼ë¡œ style.cssì•ˆì—. 
+<!--  style.css¾È¿¡ ÀÌ¹ÌÁö Ãß°¡ÇØ¼­ div classÀÌ¸§¿¡ ³Ö¾î¶ó. ÀÌ¹ÌÁö´Â ÀüÃ¼ÀûÀ¸·Î style.css¾È¿¡. 
      
 .bannersearch{
    background:url(../images/bannersearch.jpg) no-repeat 0px 0px;
@@ -128,16 +129,16 @@ $(document).ready(function() {
    min-height:895px;
 }
 
-cssì•ˆì— ì´ë¯¸ì§€ ì´ëŸ°ì‹ìœ¼ë¡œ ì¶”ê°€í•˜ê³  divì•ˆì— í´ë˜ìŠ¤ëª… ë„£ì–´ì£¼ë©´ ëœë‹¤.
+css¾È¿¡ ÀÌ¹ÌÁö ÀÌ·±½ÄÀ¸·Î Ãß°¡ÇÏ°í div¾È¿¡ Å¬·¡½º¸í ³Ö¾îÁÖ¸é µÈ´Ù.
 -->
-<!-- ë©”ì¸í™”ë©´ -->
+<!-- ¸ŞÀÎÈ­¸é -->
 <header class="masthead">
 <div class="theTron animated panel-section dark">
   <div id="kb-bg" class="activated-KB"></div>
   <h1 class="">Well Come <span>To</span> Yoseksa</div>
 
 </header>
-<!-- ì„œë¹„ìŠ¤ëˆŒë €ì„ë•Œ ê²€ìƒ‰í™”ë©´ì´ë™ -->
+<!-- ¼­ºñ½º´­·¶À»¶§ °Ë»öÈ­¸éÀÌµ¿ -->
       <div id="section1" class="slider" style="margin-bottom: 14px;">
             <form class="yoseksa-search"role="search">
                <div class="input-group">
@@ -152,7 +153,7 @@ cssì•ˆì— ì´ë¯¸ì§€ ì´ëŸ°ì‹ìœ¼ë¡œ ì¶”ê°€í•˜ê³  divì•ˆì— í´ë˜ìŠ¤ëª… ë„£ì–´ì£
             <form id="mangae" class="mangae-search" method="post" action="recipe_content.sek" >
                <div class="input-group">
                   <span class="twitter-typeahead">
-                     <input type="text" class="yoseksa-search-input" id="txtSearch" placeholder="ë§Œê°œì˜ ë ˆì‹œí”¼ ê²€ìƒ‰">
+                     <input type="text" class="yoseksa-search-input" id="txtSearch" placeholder="¸¸°³ÀÇ ·¹½ÃÇÇ °Ë»ö">
                   </span>
                   <div class="input-group-btn">
 	                  <a class="scroll" href="#mangae-view" id="recipe-search"><button class="btn btn-default btnstateless search-input-button" type="button" id="btnMangae" data-loading-text="..." style="background-color: white;"></button></a>
@@ -271,7 +272,7 @@ cssì•ˆì— ì´ë¯¸ì§€ ì´ëŸ°ì‹ìœ¼ë¡œ ì¶”ê°€í•˜ê³  divì•ˆì— í´ë˜ìŠ¤ëª… ë„£ì–´ì£
          </div>
       </div>
 <!-- services -->
-<!-- ì—¬ê¸°ì— ê³µì§€ì‚¬í•­ ì¶”ê°€ -->
+<!-- ¿©±â¿¡ °øÁö»çÇ× Ãß°¡ -->
 <div id="services"  style="padding-top: 51px">
    <jsp:include page="${ntpage }"></jsp:include>
 </div>
