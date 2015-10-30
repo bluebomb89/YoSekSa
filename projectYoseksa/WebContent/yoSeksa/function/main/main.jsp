@@ -1,6 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -8,7 +8,7 @@
 <title></title>
 <link href="yoSeksa/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="yoSeksa/css/component.css" rel="stylesheet" type="text/css"  />
-<!-- 로그인 관련 script -->
+<!-- 濡�洹몄�� 愿��� script -->
 <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 <script type="text/javascript">
 $(function(){
@@ -42,9 +42,9 @@ $(function(){
 		   </section>
 			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
 			<h3>Menu</h3>
-			<!-- 왼쪽상단에 있는 버튼을 클릭했을때 나오는 링크or속성값을 지정하는곳 -->
+			<!-- �쇱そ���⑥�� ���� 踰��쇱�� �대┃������ ���ㅻ�� 留���or���깃��� 吏�������怨� -->
 			<p>
-			<!-- 임시 로그인 폼 -->
+			<!-- ���� 濡�洹몄�� �� -->
 			<c:if test="${sessionScope.member_id==null }">
 				<form method="post" action="member_login.sek" id="login_frm">
 					ID:<input type=text name=member_id id=member_id size=10>
@@ -55,13 +55,15 @@ $(function(){
 				</form>
 			</c:if>
 			<c:if test="${sessionScope.member_id!=null }">
-				   ${sessionScope.nickname } 님이 로그인중입니다
+				   ${sessionScope.nickname } 님이 로그인 하셨습니다.
 				<form method="post" action="member_logout.sek" id="logout_frm">
 					<input type=button value="로그아웃" id="logout_Btn">
 				</form>
 			</c:if>
 			
 		  	</nav>
+			<!-- 왼쪽상단에 있는 버튼을 클릭했을때 나오는 링크or속성값을 지정하는곳 -->
+		  </nav>
 		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
  		<script src="yoSeksa/js/classie.js"></script>
 <!-- 타이틀 메뉴바 -->

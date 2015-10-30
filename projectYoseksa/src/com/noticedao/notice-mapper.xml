@@ -12,11 +12,11 @@
       INSERT INTO yoseksa_notice VALUES(#{notice_no},1,1,#{notice_sub},#{notice_content},SYSDATE,0)
     </insert>
     <select id="noticeListData" resultType="Notice" parameterType="java.util.Map">
-		SELECT notice_no,notice_sub,notice_content, dbday , notice_hit, num
-		FROM (SELECT notice_no,notice_sub,notice_content,TO_CHAR(notice_date,'YYYY-MM-DD') as dbday , notice_hit, rownum as num
+		SELECT notice_no,notice_sub,notice_content, notice_dbday , notice_hit, num
+		FROM (SELECT notice_no,notice_sub,notice_content,TO_CHAR(notice_date,'YYYY-MM-DD') as notice_dbday , notice_hit, rownum as num
 		FROM (SELECT notice_no,notice_sub,notice_content,notice_date , notice_hit 
 		FROM yoseksa_notice ORDER BY notice_no DESC)) 
-		<!-- WHERE num BETWEEN #{start} AND #{end} -->
+		WHERE num BETWEEN #{start} AND #{end}
     </select>
         <!-- 총페이지 구하기 -->
     <select id="noticeRowCount" resultType="int">
