@@ -20,22 +20,7 @@ public class NoticeDAO {
 		}
 	}
 //	홍의 작성
-	   // 데이터 가지고 오기 
-	public static List<NoticeDTO> noticeListData(Map map){
-		List<NoticeDTO> list=new ArrayList<NoticeDTO>();
-		SqlSession session=null;
-		try{
-			session=ssf.openSession();
-			list=session.selectList("noticeListData",map);
-		}catch(Exception ex){
-			System.out.println(ex.getMessage());
-		}finally{
-			if(session!=null)
-				session.close();
-		}
-		return list;
-		   //return ssf.openSession().selectList("boardListData",map);
-	   }
+
 	public static void noticeInsert(NoticeDTO d)
 	{
 		SqlSession session=null;
@@ -57,6 +42,42 @@ public class NoticeDAO {
 		return ssf.openSession().selectList("empAllData");
 	}
 //	영권 작성
-	
+	   // 데이터 가지고 오기 
+		public static List<NoticeDTO> noticeListData(Map map){
+		List<NoticeDTO> list=new ArrayList<NoticeDTO>();
+		SqlSession session=null;
+		try{
+			session=ssf.openSession();
+			list=session.selectList("noticeListData",map);
+		}catch(Exception ex){
+			System.out.println(ex.getMessage());
+		}finally{
+			if(session!=null)
+				session.close();
+		}
+		return list;
+		   //return ssf.openSession().selectList("boardListData",map);
+	   }
+	   // 총페이지
+	   public static int noticeTotalPage()
+	   {
+		   int total=0;
+		   SqlSession session=null;
+		   try
+		   {
+			   session=ssf.openSession();
+			   int count=session.selectOne("boardRowCount");
+			   total=(int)(Math.ceil(count/10.0));
+		   }catch(Exception ex)
+		   {
+			   System.out.println(ex.getMessage());
+		   }
+		   finally
+		   {
+			   if(session!=null)
+				   session.close();
+		   }
+		   return total;
+	   }
 
 }
