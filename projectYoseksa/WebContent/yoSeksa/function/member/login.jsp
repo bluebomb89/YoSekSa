@@ -8,6 +8,12 @@
 			history.back();
 		</script>
 	</c:when>
+		<c:when test="${result==null }">
+		<script>
+			alert("null가 존재하지 않습니다.");
+			history.back();
+		</script>
+	</c:when>
 	<c:when test="${result=='NOPWD' }">
 		<script>
 			alert("비밀번호가 틀립니다");
@@ -15,6 +21,6 @@
 		</script>
 	</c:when>
 	<c:otherwise>
-		<c:redirect url="main.do"/>
+		<c:redirect url="yoseksa.sek"/>
 	</c:otherwise>
 </c:choose>

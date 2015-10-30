@@ -13,7 +13,7 @@ public class MemberLogoutModel implements YoseksaModel {
 		// TODO Auto-generated method stub
 		HttpSession session=req.getSession();
 		session.invalidate();
-		return "main.do";
+		return "yoseksa.sek";
 	}
 
 }

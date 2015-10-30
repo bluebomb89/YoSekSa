@@ -1,15 +1,40 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE HTML>
 <html>
 <head>
+<meta charset="UTF-8">
 <title></title>
 <link href="yoSeksa/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="yoSeksa/css/component.css" rel="stylesheet" type="text/css"  />
+<!-- 로그인 관련 script -->
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#login_Btn').click(function(){
+		var member_id=$('#member_id').val();
+		if(member_id=="")
+		{
+			$('#member_id').focus();
+			return;
+		}
+		var member_pw=$('#member_pw').val();
+		if(member_pw=="")
+		{
+			$('#member_pw').focus();
+			return;
+		}
+		$('#login_frm').submit();
+	});
+    $('#logout_Btn').click(function(){
+		$('#logout_frm').submit();
+	});
+});
+</script>
 <!-- script -->
-
-
 </head>
+
 <body  class="cbp-spmenu-push">
 		<!--bottom-->
 		  <section class="button">
@@ -18,7 +43,25 @@
 			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
 			<h3>Menu</h3>
 			<!-- 왼쪽상단에 있는 버튼을 클릭했을때 나오는 링크or속성값을 지정하는곳 -->
-		  </nav>
+			<p>
+			<!-- 임시 로그인 폼 -->
+			<c:if test="${sessionScope.member_id==null }">
+				<form method="post" action="member_login.sek" id="login_frm">
+					ID:<input type=text name=member_id id=member_id size=10>
+					&nbsp;
+					PW:<input type=password name=member_pw id=member_pw size=10>
+					&nbsp;
+					<input type=button value="로그인" id="login_Btn">
+				</form>
+			</c:if>
+			<c:if test="${sessionScope.member_id!=null }">
+				   ${sessionScope.nickname } 님이 로그인중입니다
+				<form method="post" action="member_logout.sek" id="logout_frm">
+					<input type=button value="로그아웃" id="logout_Btn">
+				</form>
+			</c:if>
+			
+		  	</nav>
 		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
  		<script src="yoSeksa/js/classie.js"></script>
 <!-- 타이틀 메뉴바 -->
