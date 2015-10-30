@@ -135,12 +135,40 @@ $(function() {
 <!-- ------------------------ 이미지 셋 자바스크립트---시작------------------- -->
 <script type="text/javascript">
 
-window.onload = function(){
+ window.onload = function(){
 	document.getElementById("q_main_file").onchange = function(){
 		readImg('q_main_file', 'mainPhotoHolder');
+	}	
+	
+	////////////////////////////////////////////////////////////////
+	
+	
+	document.getElementById("q_step_file_1").onchange = function(){
+		readImg('q_step_file_1', 'stepPhotoHolder_1');
+	}	
+	////////////////////////////////////////////////////////////////
+	
+	document.getElementById("q_work_file_1").onchange = function(){
+		readImg('q_work_file_1', 'workPhotoHolder_1');
+	}
+	document.getElementById("q_work_file_2").onchange = function(){
+		readImg('q_work_file_2', 'workPhotoHolder_2');
+	}
+	document.getElementById("q_work_file_3").onchange = function(){
+		readImg('q_work_file_3', 'workPhotoHolder_3');
+	}
+	document.getElementById("q_work_file_4").onchange = function(){
+		readImg('q_work_file_4', 'workPhotoHolder_4');
+	}
+} 
+
+function setStepImage(step)
+{
+	
+	document.getElementById("q_step_file_"+step).onchange = function(){
+	readImg('q_step_file_'+step, 'stepPhotoHolder_'+step);
 	}
 }
-
 
 function readImg(inputId, outputId){
 	var file = document.getElementById(inputId).files[0];
@@ -940,7 +968,7 @@ $(function() {
                 <input type="hidden" name="del_step_photo[]" id="del_step_photo_STEP" value="">
                 <div style="position:absolute;left:-3000px"><input type="file" name="q_step_file_STEP" id="q_step_file_STEP" file_gubun="step" accept="jpeg,png,gif" style="display:;width:0px;height:0px;font-size:0px;" text=""></div>
                 <div id="divStepPhotoBox_STEP" is_over="0">
-                    <img id="stepPhotoHolder_STEP" onclick="browseStepFile(__STEP)" src="yoSeksa/css/recipe_enroll/pic_none2.gif" width="160" height="160" style="cursor:pointer">
+                    <img id="stepPhotoHolder_STEP" onclick="browseStepFile(__STEP);setStepImage(__STEP)" src="yoSeksa/css/recipe_enroll/pic_none2.gif" width="160" height="160" style="cursor:pointer">
                 </div>
             </div>
             <div id="divStepText_STEP" style="display:inline-block">
