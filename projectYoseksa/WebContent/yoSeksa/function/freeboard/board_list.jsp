@@ -15,7 +15,9 @@
     <table border=0 width=600>
      <tr>
       <td align=left>
-       <a href="board_insert.do"><img src="image/write.gif"></a>
+       <a href="board_insert.do">
+       <button type="button" class="btn btn-primary btn-lg" style="margin-top: 15px; padding-left: 0px;" data-toggle="modal" data-target="#myModal">게시물을 등록해주세요
+                                  </button>
       </td>
      </tr>
     </table>

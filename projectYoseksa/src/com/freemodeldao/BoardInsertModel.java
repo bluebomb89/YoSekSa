@@ -11,8 +11,8 @@ public class BoardInsertModel implements YoseksaModel{
 	public String handlerRequest(HttpServletRequest req, HttpServletResponse res) throws Exception {
 		// TODO Auto-generated method stub
 		req.setAttribute("title", "±Û¾²±â");
-		req.setAttribute("jsp", "../board/board_insert.jsp");
-		return "main/main.jsp";
+		req.setAttribute("jsp", "../function/freeboard/board_insert.jsp");
+		return "yoSeksa/function/main/mainhome.jsp";
 	}
 
 }

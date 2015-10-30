@@ -17,7 +17,7 @@ public class BoardUpdateModel implements YoseksaModel{
 		req.setAttribute("page", strPage);
 		req.setAttribute("dto", d);
 		req.setAttribute("title", "수정하기");
-		req.setAttribute("jsp", "../board/board_update.jsp");
+		req.setAttribute("jsp", "../yoSeksa/function/freeboard/board_update.jsp");
 		return "main/main.jsp";
 	}
 

@@ -34,7 +34,7 @@ public class BoardListModel implements YoseksaModel{
 	    req.setAttribute("curpage", curpage);
 	    req.setAttribute("totalpage", totalpage);
 		req.setAttribute("title", "자유 게시판");
-		req.setAttribute("jsp", "../board/board_list.jsp");
+		req.setAttribute("jsp", "../yoSeksa/function/freeboard/board_list.jsp");
 		return "main/main.jsp";
 	}
 

@@ -34,7 +34,8 @@ public class BoardDeleteModel implements YoseksaModel {
 		}
 		req.setAttribute("bCheck", bCheck);
 		req.setAttribute("page", page);
-		return "board/delete.jsp";
+		return "yoSeksa/function/delete.jsp";
 	}
 
 }
+

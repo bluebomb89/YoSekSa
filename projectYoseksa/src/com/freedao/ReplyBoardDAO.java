@@ -220,6 +220,12 @@ public class ReplyBoardDAO {
 	   session.close();
 	   return list;
    }
+   public static void replyNewInsert(ReplyDTO d)
+   {
+	   SqlSession session=ssf.openSession(true);
+	   session.insert("replyNewInsert",d);
+	   session.close();
+   }
    
 }
 

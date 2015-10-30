@@ -48,7 +48,28 @@ $(function(){
 			$('#reply').hide();
 			$('#replyShow').text("´ñ±Ûº¸±â");
 			j=0;
+			// text() val() html() attr()
+			/*
+			   text() : <a>aaaaa</a>
+			   text('bbbb') <a>bbbb</a>
+			   
+			   val() : <input> <textarea> <select>
+			   $('a').html() : <a><b><c></c></b></a>
+			         ==> innerHTML
+			   attr('src')
+			*/
 		}
+	});
+	$('#replyBtn').click(function(){
+		var msg=$('#rmsg').val();
+		if(msg=="")
+		{
+			alert("´ñ±Û ³»¿ëÀ» ÀÔ·ÂÇÏ¼¼¿ä");
+			$('#rmsg').focus();
+			return;
+		}
+		$('#re_new_frm').submit();
+		// action¼öÇà
 	});
 });
 </script>
@@ -78,7 +99,7 @@ $(function(){
         <td colspan="3" class="tdleft">${dto.subject }</td>
       </tr>
       <tr>
-        <td colspan="4" class="tdleft" valign="top" height="200">
+        <td colspan="4" class="tdleft" valign="top" height="80">
          <pre>${dto.content }</pre>
         </td>
       </tr>
@@ -111,7 +132,7 @@ $(function(){
         </tr>
       </table>
      <div id="reply" style="width:600px">
-     <table border=0 width=600>
+     <table id="table_content">
       <c:forEach var="rDto" items="${rlist }">
        <tr>
          <td align=left>
@@ -138,12 +159,28 @@ $(function(){
           </c:if>
          </td>
        </tr>
+        <tr style="display:none">
+       <td colspan="2">
+        <span style="float: left;display: block;">
+        <form method=post action="reply_new_insert.do" id="re_re_frm${rDto.no }">
+         <textarea rows="1" cols="60" name="rmsg" id="rmsg" style="vertical-align: middle;"></textarea>
+         <input type=hidden name=bno value="${ dto.no}">
+         <input type=hidden name=page value="${page }">
+         <input type=button value="´ñ±Û" id="replyBtn" style="height:45px">
+        </form>
+        </span>
+       </td>
+      </tr>
       </c:forEach>
       <tr>
        <td colspan="2">
         <span style="float: left;display: block;">
-        <textarea rows="1" cols="60" name="rmsg" id="rmsg" style="vertical-align: middle;"></textarea>
-        <input type=button value="´ñ±Û" id="replyBtn" style="height:45px">
+        <form method=post action="reply_new_insert.do" id="re_new_frm">
+         <textarea rows="1" cols="60" name="rmsg" id="rmsg" style="vertical-align: middle;"></textarea>
+         <input type=hidden name=bno value="${ dto.no}">
+         <input type=hidden name=page value="${page }">
+         <input type=button value="´ñ±Û" id="replyBtn" style="height:45px">
+        </form>
         </span>
        </td>
       </tr>

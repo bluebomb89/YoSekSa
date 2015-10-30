@@ -41,7 +41,7 @@ public class BoardUpdateOkModel implements YoseksaModel{
 		req.setAttribute("bCheck", bCheck);
 		req.setAttribute("no", strNo);
 		req.setAttribute("page", strPage);
-		return "board/board_update_ok.jsp";
+		return "yoSeksa/function/freeboard/board_update_ok.jsp";
 	}
 
 }

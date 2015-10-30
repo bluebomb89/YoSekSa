@@ -22,8 +22,8 @@ public class BoardContentModel implements YoseksaModel {
 		req.setAttribute("page", strPage);
 		req.setAttribute("dto", d);
 		req.setAttribute("title", "내용보기");
-		req.setAttribute("jsp", "../board/board_content.jsp");
-		return "main/main.jsp";
+		req.setAttribute("jsp", "../yoSeksa/function/freeboard/board_content.jsp");
+		return "yoSeksa/main/main.jsp";
 	}
 
 }
