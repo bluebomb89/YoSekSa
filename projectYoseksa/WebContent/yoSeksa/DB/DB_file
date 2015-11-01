@@ -183,7 +183,7 @@ CREATE table yoseksa_notice(
 	notice_no NUMBER,
 	board_no NUMBER DEFAULT 3,
 	member_no NUMBER,
-	notice_sub VARCHAR2(20) CONSTRAINT yn_nn_sub NOT NULL,
+	notice_sub VARCHAR2(200) CONSTRAINT yn_nn_sub NOT NULL,
 	notice_content CLOB CONSTRAINT yn_nn_cont NOT NULL,
 	notice_date DATE DEFAULT SYSDATE,
 	notice_hit NUMBER DEFAULT 0,

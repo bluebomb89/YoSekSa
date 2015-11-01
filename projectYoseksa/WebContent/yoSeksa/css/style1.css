@@ -67,7 +67,7 @@ header {
 #nav.affix {
    position: fixed;
    top: 0;
-   z-index:1000;
+   z-index:9999;
    -webkit-transition: all .6s ease-in-out;
 }
 #nav.affix .navbar-default .navbar-nav > li > a {
@@ -259,4 +259,29 @@ ul.callbacks_tabs.callbacks1_tabs {
     background: url(https://d30y9cdsu7xlg0.cloudfront.net/png/15028-200.png) 50%,50%;
     background-size: contain;
     width: 150%;
+}
+#mangae{
+	position: absolute;
+	margin: 0 auto;
+}
+.mangae{
+	width: 20%;
+    min-height: 363px;
+}
+.recipe-search{
+	min-height: 363px;
+}
+.recipe-search h5{
+    text-align: center;
+    font-family: 'LobsterTwo-Regular';
+    color: #F43C60;
+    font-size: 16px;
+    margin: 0;
+}
+#mangae-recipe{
+	padding-top: 2px;
+    min-height: 956px;
+}
+.recipe_btn{
+	margin: 0 auto;
 }
