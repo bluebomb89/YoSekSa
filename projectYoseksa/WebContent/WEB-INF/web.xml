@@ -6,8 +6,10 @@
     <servlet-class>com.controller.DispatcherServlet</servlet-class>
     <init-param>
       <param-name>xmlPath</param-name>
+      <!-- 영권 집 경로 -->
+      <param-value>C:\Users\Administrator\git\YoSekSa\projectYoseksa\WebContent\WEB-INF\applicationContext.xml</param-value>
       <!-- 영권 경로 -->
-      <param-value>C:\Users\남영권\git\yoseksaProject\projectYoseksa\WebContent\WEB-INF\applicationContext.xml</param-value>
+      <!-- <param-value>C:\Users\남영권\git\yoseksaProject\projectYoseksa\WebContent\WEB-INF\applicationContext.xml</param-value> -->
       <!-- 민영경로 -->
        <!-- <param-value>C:\Users\sist\git\YoSekSaProject\projectYoseksa\WebContent\WEB-INF\applicationContext.xml</param-value> --> 
       <!-- 우식이형님 경로 -->

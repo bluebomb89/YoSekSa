@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -27,20 +28,7 @@
 <script src="yoSeksa/js/move-top.js"></script>
 <script src="yoSeksa/js/easing.js"></script>
 <script src="yoSeksa/js/responsiveslides.min.js"></script>
-
-
-
 <!--/script-->
-<script type="text/javascript">
-var i=0;
-$(function(){
-	$('#mangae-view').hide();
-	$('#recipe-search').click(function(){
-		$('#mangae-view').show();
-		$('#mangae').submit();
-	});
-});
-</script>
 <script type="text/javascript">
    jQuery(document).ready(function($) {
       $(".scroll").click(function(event){      
@@ -57,7 +45,7 @@ $(function(){
       });
 </script>
 <script type="text/javascript">
-   $(document).ready(function() {
+   $(document).ready(function() {	  
       /* affix the navbar after scroll below header */
       $('#nav').affix({
          offset: {top: $('header').height()-$('#nav').height()}
@@ -70,6 +58,8 @@ $(function(){
       $('#nav').on("affix-top.bs.affix",function(){
          $("#startmain").text("Search");
       });
+  	/* 시작시 ajax시작 */
+  	idcheck1();
    });
 </script>
 <script>
@@ -78,7 +68,7 @@ $(document).ready(function() {
      var owl = $("#owl-demo");
     
      owl.owlCarousel({
-         items : 4, //10 items above 1000px browser width
+         items : 5, //10 items above 1000px browser width
          itemsDesktop : [1000,5], //5 items between 1000px and 901px
          itemsDesktopSmall : [900,3], // betweem 900px and 601px
          itemsTablet: [600,2], //2 items between 600 and 0
@@ -116,7 +106,68 @@ $(document).ready(function() {
 </script>
 
 <!--script-->
-
+<!-- ajax 코딩 -->
+<script type="text/javascript">
+var httpRequest=null;
+function createHttpRequest(){
+	if(window.ActiveXObject){ //IE 6.0 이상
+		return new ActiveXObject("Msxml2.XMLHTTP");
+		//Microsoft.XMLHTTP 6.0이하일때
+	}else if(window.XMLHttpRequest){ // 크롬 , ff
+		return new XMLHttpRequest();
+	}else{ // 호환이 안될때
+		return null; //지원하지 않는 브라우저
+	}
+}
+function sendMessage(method,param,url,callback){
+	// 서버 연결 DWR,DOJO
+	httpRequest=createHttpRequest();
+	httpRequest.open(method,url+param,true);
+	// true: 비동기 false:동기
+	httpRequest.onreadystatechange=callback;
+	httpRequest.send(null);
+}
+function idcheck_result(){
+	if(httpRequest.readyState==4){
+		if(httpRequest.status==200){
+			var res=httpRequest.responseText;
+			$('#mangae-view').html(res);
+			// 보여주면서 div에 값저장
+			//alert(res);
+		}		
+	}
+}
+function idcheck1(){
+	var param=$('#mangae-search').val();
+	var mspage=$('#btn1').text();
+	param="?mangae-search="+param+"&mspage="+mspage;
+	sendMessage('GET', param, "recipe_search.sek", idcheck_result);
+}
+function idcheck2(){
+	var param=$('#mangae-search').val();
+	var mspage=$('#btn2').text();
+	param="?mangae-search="+param+"&mspage="+mspage;
+	sendMessage('GET', param, "recipe_search.sek", idcheck_result);
+}
+function idcheck3(){
+	var param=$('#mangae-search').val();
+	var mspage=$('#btn3').text();
+	param="?mangae-search="+param+"&mspage="+mspage;
+	sendMessage('GET', param, "recipe_search.sek", idcheck_result);
+}
+function idcheck4(){
+	var param=$('#mangae-search').val();
+	var mspage=$('#btn4').text();
+	param="?mangae-search="+param+"&mspage="+mspage;
+	sendMessage('GET', param, "recipe_search.sek", idcheck_result);
+}
+function idcheck5(){
+	var param=$('#mangae-search').val();
+	var mspage=$('#btn5').text();
+	param="?mangae-search="+param+"&mspage="+mspage;
+	sendMessage('GET', param, "recipe_search.sek", idcheck_result);
+}
+</script>
 </head>
 <body  class="cbp-spmenu-push">
       <!--bottom-->
@@ -150,56 +201,34 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어주면 된다.
                   </span>
                </div>
             </form>
-            <form id="mangae" class="mangae-search" method="post" action="recipe_search.sek" >
+              <div id="mangae" class="mangae-search">
                <div class="input-group">
                   <span class="twitter-typeahead">
-                     <input type="text" name="mangae-search" class="yoseksa-search-input" id="txtSearch" placeholder="만개의 레시피 검색">
+                     <input type="text" name="mangae-search" class="yoseksa-search-input" id="mangae-search" placeholder="만개의 레시피 검색">
                   </span>
                   <div class="input-group-btn">
-	                  <a class="scroll" href="#mangae-view" id="recipe-search"><button class="btn btn-default btnstateless search-input-button" type="button" id="btnMangae" data-loading-text="..." style="background-color: white;"></button></a>
+              		<a class="scroll" href="#mangae-show" id="recipe-search"  onclick="idcheck1()">
+              			<button class="btn btn-default btnstateless search-input-button" type="button" id="btnMangae" style="background-color: white;"></button>
+              		</a>
                   </div>
                </div>
-            </form>
+            </div>
          <div class="callbacks_container" style="padding-left: 15px; padding-right: 15px;">
            <ul class="rslides" id="slider">
             <div class="slid banner1">              
               <div class="caption">
-               <!-- 
-               <h3>Donec ut turpis sit amet enim mattis commodo velit.</h3>
-               <p>FOURNIER Timber carefully selects from a wide range of quality hardwoods to customers exact requirements which minimises wastage.</p>
-               <a class="hvr-bounce-to-right btn-left" href="#">Click</a>   
-               <a class="hvr-bounce-to-left  btn-right" href="#">learn more</a>
-                -->
                </div>
             </div>
             <div class="slid banner2">           
                <div class="caption">
-                  <!-- 
-                  <h3>Donec ut turpis sit amet enim mattis commodo velit.</h3>
-                  <p>FOURNIER Timber carefully selects from a wide range of quality hardwoods to customers exact requirements which minimises wastage.</p>
-                  <a class="hvr-bounce-to-right btn-left" href="#">Click</a>   
-                  <a class="hvr-bounce-to-left  btn-right" href="#">learn more</a>
-                   -->
                </div>
             </div>
             <div class="slid banner3">              
               <div class="caption">
-                <!-- 
-               <h3>Donec ut turpis sit amet enim mattis commodo velit.</h3>
-               <p>FOURNIER Timber carefully selects from a wide range of quality hardwoods to customers exact requirements which minimises wastage.</p>
-               <a class="hvr-bounce-to-right btn-left" href="#">Click</a>   
-               <a class="hvr-bounce-to-left  btn-right" href="#">learn more</a>
-                -->
                </div>
             </div>
             <div class="slid banner4">              
               <div class="caption">
-                <!-- 
-               <h3>Donec ut turpis sit amet enim mattis commodo velit.</h3>
-               <p>FOURNIER Timber carefully selects from a wide range of quality hardwoods to customers exact requirements which minimises wastage.</p>
-               <a class="hvr-bounce-to-right btn-left" href="#">Click</a>   
-               <a class="hvr-bounce-to-left  btn-right" href="#">learn more</a>
-                -->
                </div>
             </div>
          </ul>
@@ -277,10 +306,11 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어주면 된다.
 	<jsp:include page="${ntpage }"></jsp:include>
 </div>
  <!-- testimonial -->
-<div class="testimonial" id="mangae-view">
-	<jsp:include page="${mangae }"></jsp:include>	
+<div id="mangae-show" style="padding-top: 2px;">
+	<div class="testimonial" id="mangae-view">
+		<%-- <jsp:include page="${mangae }"></jsp:include> --%>
+	</div>
 </div>
-
 <!-- projects -->
 <div class="projects">
     <div class="container">

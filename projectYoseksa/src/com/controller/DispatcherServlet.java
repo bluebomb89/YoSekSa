@@ -20,6 +20,7 @@ public class DispatcherServlet extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try{
 			String cmd=request.getRequestURI();
+			System.out.println("디스패쳐서블릿 실행");
 			// /MainProject/main.do
 			cmd=cmd.substring(request.getContextPath().length()+1, cmd.lastIndexOf('.'));
 			YoseksaModel model=wc.getBean(cmd);
