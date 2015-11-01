@@ -10,7 +10,6 @@
    <bean id="yoseksa" class="com.yoseksa.YoseksaMainhome"></bean>
    <!-- startElement() 속성을 일고 endElement() -->
    <bean id="freeboard" class="com.freedao.YoseksaFreeboard"></bean>
- 
    <!-- startElement() 속성을 일고 endElement() -->
    <bean id="recipe_content" class="com.recipedao.YoseksaRecipeContent"></bean>
    <!-- startElement() 속성을 일고 endElement() -->
@@ -24,6 +23,8 @@
    <!-- 우식 -->
    <!-- ㅁㅁ -->
    <!-- 영권 -->
+   <bean id="recipe_search" class="com.mangae.recipesearch"></bean>
+   <bean id="recipeview" class="com.mangae.recipeview"></bean>
    <!-- ㅁㅁ -->
    <!-- 태진 -->
    <!-- member 관련 -->

@@ -110,26 +110,25 @@ $(function(){
 					  </div>
 					</div>
 			</div>
+			<%-- 
 			 <c:forEach var="ndto" items="${notice_list }">
 				<div class="showmenu" id="menu${ndto.notice_no }">
 					<div class="noticesub">力格 ${ndto.notice_sub }</div>
 					<div class="noticehire"> 累己老 ${ndto.notice_dbday }</div>
 					<div class="noticeday"> 炼雀荐 ${ndto.notice_hit }</div>
 					<div id="menu${ndto.notice_no }-cont" style="display: none;">
-							<pre>
-								${ndto.notice_content }
-							</pre>
+							<pre>${ndto.notice_content }</pre>
 					</div>
 				</div>
 			</c:forEach>
-			    </table>
-<div>
-        <a href="board_list.do?page=${curpage>1?curpage-1:curpage }"><img src="image/prev_icon.gif"></a>
-        &nbsp;
-        <a href="board_list.do?page=${curpage<totalpage?curpage+1:curpage }"><img src="image/next_icon.gif"></a>
-        &nbsp;&nbsp;
-        ${notice_curpage } page / ${notice_totalpage } pages
-    </div>
+			<div>
+		        <a href="board_list.do?page=${curpage>1?curpage-1:curpage }"><img src="image/prev_icon.gif"></a>
+		        &nbsp;
+		        <a href="board_list.do?page=${curpage<totalpage?curpage+1:curpage }"><img src="image/next_icon.gif"></a>
+		        &nbsp;&nbsp;
+		        ${notice_curpage } page / ${notice_totalpage } pages
+		    </div>
+		     --%>
 			<!-- Modal -->
 
 	 </div>
