@@ -7,6 +7,23 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%
+
+	request.setCharacterEncoding("UTF-8");
+	String keyword=request.getParameter("keyword");
+	String bld=request.getParameter("bld");
+	String date=request.getParameter("date");		
+		/* out.println("<font color=white>팝업검색 야호</font>"); */
+%>
+
+<font color=white>
+
+keyword : <%=keyword %><br>
+bld : <%=bld %><br>
+date : <%=date %>
+
+
+</font>
 
 </body>
 </html>
