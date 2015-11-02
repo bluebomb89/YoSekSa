@@ -112,8 +112,7 @@ public class MainView {
 			        	}
 	            	} //System.out.println("����� ��="+elements.size());
 	            }
-//	        System.out.println("짝수? 홀수?"+nconfirm);
-			System.out.println("�����Ǽ�ġ �޼ҵ� ��");
+	        System.out.println("짝수? 홀수?"+nconfirm);
 			req.setAttribute("imglist", imglist);
 			req.setAttribute("titlelist", titlelist);
 			req.setAttribute("linklist", linklist);

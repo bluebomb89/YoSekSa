@@ -6,19 +6,18 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
-//RUNTIME, SOURCE, CLASS(ì»´íŒŒì¼í›„ ì œê±°)
+// RUNTIME, SOURCE, CLASS(ÄÄÆÄÀÏÈÄ Á¦°Å)
 @Target(ElementType.TYPE)
 /*
- * TYPE : class êµ¬ë¶„
- * PARAMETER : ë§¤ê°œë³€ìˆ˜ êµ¬ë¶„
- * FIELD : ë©¤ë²„ë³€ìˆ˜ êµ¬ë¶„
- * METHOD : ë©”ì†Œë“œ êµ¬ë¶„ 
+ * TYPE : class ±¸ºĞ
+ * PARAMETER : ¸Å°³º¯¼ö ±¸ºĞ
+ * FIELD : ¸â¹öº¯¼ö ±¸ºĞ
+ * METHOD : ¸Ş¼Òµå ±¸ºĞ 
  */
 public @interface Controller {
 
 	public String value();
 }
-
 
 
 
