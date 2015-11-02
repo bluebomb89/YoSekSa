@@ -28,6 +28,9 @@ public class NoticeInsertModel implements YoseksaModel{
 		d.setNotice_content(notice_content);
 		// DB¿¬µ¿
 		NoticeDAO.noticeInsert(d);
+//		여기까지 DB 인서트
+		
+//		여기서부터 노티스DB 다시 호출
 		/*return "yoseksa.sek";*/
 		String strPage=req.getParameter("page");
 	    if(strPage==null)
