@@ -11,6 +11,7 @@ public class MemberInsertModel implements YoseksaModel{
 	public String handlerRequest(HttpServletRequest req, HttpServletResponse res) throws Exception {
 		// TODO Auto-generated method stub
 		try{
+		req.setCharacterEncoding("EUC-KR");
 		req.setAttribute("title", "회원가입");
 		req.setAttribute("jsp", "../yoSeksa/function/member/join.jsp");
 		
