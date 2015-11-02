@@ -9,6 +9,13 @@ public class NoticeDTO {
 	private String notice_content;
 	private Date notice_date;
 	private int notice_hit;
+	private String notice_dbday;
+	public String getNotice_dbday() {
+		return notice_dbday;
+	}
+	public void setNotice_dbday(String notice_dbday) {
+		this.notice_dbday = notice_dbday;
+	}
 	BoardmgrDTO board=new BoardmgrDTO();
 	MemberDTO member=new MemberDTO();
 	

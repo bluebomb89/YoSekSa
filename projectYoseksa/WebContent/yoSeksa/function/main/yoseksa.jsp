@@ -1,8 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE HTML>
 <html>
 <head>
+<meta charset="UTF-8">
 <title>Flooring a Interior category Flat Bootstarp Responsive Website Template | Home :: w3layouts</title>
 <link href="yoSeksa/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="yoSeksa/css/component.css" rel="stylesheet" type="text/css"  />
@@ -26,20 +28,7 @@
 <script src="yoSeksa/js/move-top.js"></script>
 <script src="yoSeksa/js/easing.js"></script>
 <script src="yoSeksa/js/responsiveslides.min.js"></script>
-
-
-
 <!--/script-->
-<script type="text/javascript">
-var i=0;
-$(function(){
-	$('#mangae-view').hide();
-	$('#recipe-search').click(function(){
-		$('#mangae-view').show();
-		$('#mangae').submit();
-	});
-});
-</script>
 <script type="text/javascript">
    jQuery(document).ready(function($) {
       $(".scroll").click(function(event){      
@@ -56,19 +45,21 @@ $(function(){
       });
 </script>
 <script type="text/javascript">
-   $(document).ready(function() {
+   $(document).ready(function() {	  
       /* affix the navbar after scroll below header */
       $('#nav').affix({
          offset: {top: $('header').height()-$('#nav').height()}
       });
-      /* affix-top ì—ì„œ affixë¡œ ìˆ˜ì •ë ëŒ€ ì´ë²¤íŠ¸ ë°œìƒ*/
+      /* affix-top ¿¡¼­ affix·Î ¼öÁ¤µÉ´ë ÀÌº¥Æ® ¹ß»ı*/
       $('#nav').on("affix.bs.affix",function(){
          $("#startmain").text("haa!");
       });
-      /* affixì—ì„œ affix-topìœ¼ë¡œ ì „í™˜ë ë•Œ ì´ë²¤íŠ¸ ë°œìƒ*/
+      /* affix¿¡¼­ affix-topÀ¸·Î ÀüÈ¯µÉ¶§ ÀÌº¥Æ® ¹ß»ı*/
       $('#nav').on("affix-top.bs.affix",function(){
          $("#startmain").text("Search");
       });
+  	/* ½ÃÀÛ½Ã ajax½ÃÀÛ */
+  	idcheck1();
    });
 </script>
 <script>
@@ -77,7 +68,7 @@ $(document).ready(function() {
      var owl = $("#owl-demo");
     
      owl.owlCarousel({
-         items : 4, //10 items above 1000px browser width
+         items : 5, //10 items above 1000px browser width
          itemsDesktop : [1000,5], //5 items between 1000px and 901px
          itemsDesktopSmall : [900,3], // betweem 900px and 601px
          itemsTablet: [600,2], //2 items between 600 and 0
@@ -115,12 +106,73 @@ $(document).ready(function() {
 </script>
 
 <!--script-->
-
+<!-- ajax ÄÚµù -->
+<script type="text/javascript">
+var httpRequest=null;
+function createHttpRequest(){
+	if(window.ActiveXObject){ //IE 6.0 ÀÌ»ó
+		return new ActiveXObject("Msxml2.XMLHTTP");
+		//Microsoft.XMLHTTP 6.0ÀÌÇÏÀÏ¶§
+	}else if(window.XMLHttpRequest){ // Å©·Ò , ff
+		return new XMLHttpRequest();
+	}else{ // È£È¯ÀÌ ¾ÈµÉ¶§
+		return null; //Áö¿øÇÏÁö ¾Ê´Â ºê¶ó¿ìÀú
+	}
+}
+function sendMessage(method,param,url,callback){
+	// ¼­¹ö ¿¬°á DWR,DOJO
+	httpRequest=createHttpRequest();
+	httpRequest.open(method,url+param,true);
+	// true: ºñµ¿±â false:µ¿±â
+	httpRequest.onreadystatechange=callback;
+	httpRequest.send(null);
+}
+function idcheck_result(){
+	if(httpRequest.readyState==4){
+		if(httpRequest.status==200){
+			var res=httpRequest.responseText;
+			$('#mangae-view').html(res);
+			// º¸¿©ÁÖ¸é¼­ div¿¡ °ªÀúÀå
+			//alert(res);
+		}		
+	}
+}
+function idcheck1(){
+	var param=$('#mangae-search').val();
+	var mspage=$('#btn1').text();
+	param="?mangae-search="+param+"&mspage="+mspage;
+	sendMessage('GET', param, "recipe_search.sek", idcheck_result);
+}
+function idcheck2(){
+	var param=$('#mangae-search').val();
+	var mspage=$('#btn2').text();
+	param="?mangae-search="+param+"&mspage="+mspage;
+	sendMessage('GET', param, "recipe_search.sek", idcheck_result);
+}
+function idcheck3(){
+	var param=$('#mangae-search').val();
+	var mspage=$('#btn3').text();
+	param="?mangae-search="+param+"&mspage="+mspage;
+	sendMessage('GET', param, "recipe_search.sek", idcheck_result);
+}
+function idcheck4(){
+	var param=$('#mangae-search').val();
+	var mspage=$('#btn4').text();
+	param="?mangae-search="+param+"&mspage="+mspage;
+	sendMessage('GET', param, "recipe_search.sek", idcheck_result);
+}
+function idcheck5(){
+	var param=$('#mangae-search').val();
+	var mspage=$('#btn5').text();
+	param="?mangae-search="+param+"&mspage="+mspage;
+	sendMessage('GET', param, "recipe_search.sek", idcheck_result);
+}
+</script>
 </head>
 <body  class="cbp-spmenu-push">
       <!--bottom-->
 <!---->
-<!--  style.cssì•ˆì— ì´ë¯¸ì§€ ì¶”ê°€í•´ì„œ div classì´ë¦„ì— ë„£ì–´ë¼. ì´ë¯¸ì§€ëŠ” ì „ì²´ì ìœ¼ë¡œ style.cssì•ˆì—. 
+<!--  style.css¾È¿¡ ÀÌ¹ÌÁö Ãß°¡ÇØ¼­ div classÀÌ¸§¿¡ ³Ö¾î¶ó. ÀÌ¹ÌÁö´Â ÀüÃ¼ÀûÀ¸·Î style.css¾È¿¡. 
      
 .bannersearch{
    background:url(../images/bannersearch.jpg) no-repeat 0px 0px;
@@ -128,16 +180,16 @@ $(document).ready(function() {
    min-height:895px;
 }
 
-cssì•ˆì— ì´ë¯¸ì§€ ì´ëŸ°ì‹ìœ¼ë¡œ ì¶”ê°€í•˜ê³  divì•ˆì— í´ë˜ìŠ¤ëª… ë„£ì–´ì£¼ë©´ ëœë‹¤.
+css¾È¿¡ ÀÌ¹ÌÁö ÀÌ·±½ÄÀ¸·Î Ãß°¡ÇÏ°í div¾È¿¡ Å¬·¡½º¸í ³Ö¾îÁÖ¸é µÈ´Ù.
 -->
-<!-- ë©”ì¸í™”ë©´ -->
+<!-- ¸ŞÀÎÈ­¸é -->
 <header class="masthead">
 <div class="theTron animated panel-section dark">
   <div id="kb-bg" class="activated-KB"></div>
   <h1 class="">Well Come <span>To</span> Yoseksa</div>
 
 </header>
-<!-- ì„œë¹„ìŠ¤ëˆŒë €ì„ë•Œ ê²€ìƒ‰í™”ë©´ì´ë™ -->
+<!-- ¼­ºñ½º´­·¶À»¶§ °Ë»öÈ­¸éÀÌµ¿ -->
       <div id="section1" class="slider" style="margin-bottom: 14px;">
             <form class="yoseksa-search"role="search">
                <div class="input-group">
@@ -149,56 +201,34 @@ cssì•ˆì— ì´ë¯¸ì§€ ì´ëŸ°ì‹ìœ¼ë¡œ ì¶”ê°€í•˜ê³  divì•ˆì— í´ë˜ìŠ¤ëª… ë„£ì–´ì£
                   </span>
                </div>
             </form>
-            <form id="mangae" class="mangae-search" method="post" action="recipe_content.sek" >
+              <div id="mangae" class="mangae-search">
                <div class="input-group">
                   <span class="twitter-typeahead">
-                     <input type="text" class="yoseksa-search-input" id="txtSearch" placeholder="ë§Œê°œì˜ ë ˆì‹œí”¼ ê²€ìƒ‰">
+                     <input type="text" name="mangae-search" class="yoseksa-search-input" id="mangae-search" placeholder="¸¸°³ÀÇ ·¹½ÃÇÇ °Ë»ö">
                   </span>
                   <div class="input-group-btn">
-	                  <a class="scroll" href="#mangae-view" id="recipe-search"><button class="btn btn-default btnstateless search-input-button" type="button" id="btnMangae" data-loading-text="..." style="background-color: white;"></button></a>
+              		<a class="scroll" href="#mangae-show" id="recipe-search"  onclick="idcheck1()">
+              			<button class="btn btn-default btnstateless search-input-button" type="button" id="btnMangae" style="background-color: white;"></button>
+              		</a>
                   </div>
                </div>
-            </form>
+            </div>
          <div class="callbacks_container" style="padding-left: 15px; padding-right: 15px;">
            <ul class="rslides" id="slider">
             <div class="slid banner1">              
               <div class="caption">
-               <!-- 
-               <h3>Donec ut turpis sit amet enim mattis commodo velit.</h3>
-               <p>FOURNIER Timber carefully selects from a wide range of quality hardwoods to customers exact requirements which minimises wastage.</p>
-               <a class="hvr-bounce-to-right btn-left" href="#">Click</a>   
-               <a class="hvr-bounce-to-left  btn-right" href="#">learn more</a>
-                -->
                </div>
             </div>
             <div class="slid banner2">           
                <div class="caption">
-                  <!-- 
-                  <h3>Donec ut turpis sit amet enim mattis commodo velit.</h3>
-                  <p>FOURNIER Timber carefully selects from a wide range of quality hardwoods to customers exact requirements which minimises wastage.</p>
-                  <a class="hvr-bounce-to-right btn-left" href="#">Click</a>   
-                  <a class="hvr-bounce-to-left  btn-right" href="#">learn more</a>
-                   -->
                </div>
             </div>
             <div class="slid banner3">              
               <div class="caption">
-                <!-- 
-               <h3>Donec ut turpis sit amet enim mattis commodo velit.</h3>
-               <p>FOURNIER Timber carefully selects from a wide range of quality hardwoods to customers exact requirements which minimises wastage.</p>
-               <a class="hvr-bounce-to-right btn-left" href="#">Click</a>   
-               <a class="hvr-bounce-to-left  btn-right" href="#">learn more</a>
-                -->
                </div>
             </div>
             <div class="slid banner4">              
               <div class="caption">
-                <!-- 
-               <h3>Donec ut turpis sit amet enim mattis commodo velit.</h3>
-               <p>FOURNIER Timber carefully selects from a wide range of quality hardwoods to customers exact requirements which minimises wastage.</p>
-               <a class="hvr-bounce-to-right btn-left" href="#">Click</a>   
-               <a class="hvr-bounce-to-left  btn-right" href="#">learn more</a>
-                -->
                </div>
             </div>
          </ul>
@@ -271,18 +301,16 @@ cssì•ˆì— ì´ë¯¸ì§€ ì´ëŸ°ì‹ìœ¼ë¡œ ì¶”ê°€í•˜ê³  divì•ˆì— í´ë˜ìŠ¤ëª… ë„£ì–´ì£
          </div>
       </div>
 <!-- services -->
-<!-- ì—¬ê¸°ì— ê³µì§€ì‚¬í•­ ì¶”ê°€ -->
+<!-- ¿©±â¿¡ °øÁö»çÇ× Ãß°¡ -->
 <div id="services"  style="padding-top: 51px">
-   <jsp:include page="${ntpage }"></jsp:include>
+	<jsp:include page="${ntpage }"></jsp:include>
 </div>
  <!-- testimonial -->
-<div class="testimonial" id="mangae-view">
-      <!-- container -->
-   <div class="service-info">
-      <h3>what is it?</h3>
-   </div>     
+<div id="mangae-show" style="padding-top: 2px;">
+	<div class="testimonial" id="mangae-view">
+		<%-- <jsp:include page="${mangae }"></jsp:include> --%>
+	</div>
 </div>
-
 <!-- projects -->
 <div class="projects">
     <div class="container">

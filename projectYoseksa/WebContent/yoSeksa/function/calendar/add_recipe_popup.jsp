@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -17,7 +17,7 @@
 <div id="addRecipeOnTable">	
 	<center>
 		<div id="h2_title">
-			<h2>ìš”ë¦¬ë¥¼ ì¶”ê°€í•˜ì„¸ìš”!</h2>
+			<h2>¿ä¸®¸¦ Ãß°¡ÇÏ¼¼¿ä!</h2>
 		</div>
 	</center>
 	
@@ -33,7 +33,7 @@
 	<br>
 
       <div id="food_date">
-       <label>ë‚ ì§œ</label>
+       <label>³¯Â¥</label>
        <input type="date" name="date" class="form_input_recipe">
       </div>
       
@@ -52,17 +52,17 @@
       
 
 	  <div id="bld">
-	   <input type="radio" name="bld" value="">&nbsp;ì•„ì¹¨&nbsp;&nbsp;<span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span><br><br>
-	   <input type="radio" name="bld" value="Lunch" checked>&nbsp;ì ì‹¬&nbsp;&nbsp;<span class="glyphicon glyphicon-glass" aria-hidden="true"></span><br><br>
-	   <input type="radio" name="bld" value="Dinner">&nbsp;ì €ë…&nbsp;&nbsp;<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+	   <input type="radio" name="bld" value="">&nbsp;¾ÆÄ§&nbsp;&nbsp;<span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span><br><br>
+	   <input type="radio" name="bld" value="Lunch" checked>&nbsp;Á¡½É&nbsp;&nbsp;<span class="glyphicon glyphicon-glass" aria-hidden="true"></span><br><br>
+	   <input type="radio" name="bld" value="Dinner">&nbsp;Àú³á&nbsp;&nbsp;<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
       </div>
       
 
        
        <div id="food_search">
-       	<label>ìš”ë¦¬ëª…</label>
+       	<label>¿ä¸®¸í</label>
       	<input type="text" name="recipe" class="form_input_recipe"><br>
-        <input type="submit" value="ê²€ìƒ‰" class="form_input_recipe">
+        <input type="submit" value="°Ë»ö" class="form_input_recipe">
        </div>
         
         
