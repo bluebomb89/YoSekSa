@@ -62,7 +62,6 @@ $(function(){
          
            </nav>
          <!-- 왼쪽상단에 있는 버튼을 클릭했을때 나오는 링크or속성값을 지정하는곳 -->
-        </nav>
       <!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
        <script src="yoSeksa/js/classie.js"></script>
 <!-- 타이틀 메뉴바 -->
@@ -91,7 +90,6 @@ $(function(){
                            <li><a href="join.sek">회원가입</a></li>           
                         </ul>
                      </li>
-                     <li><a href="main.jsp?no=5">자게글쓰기</a></li>
                   </ul>         
                </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
