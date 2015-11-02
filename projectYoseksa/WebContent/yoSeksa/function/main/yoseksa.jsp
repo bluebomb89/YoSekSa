@@ -168,6 +168,7 @@ function idcheck5(){
 	sendMessage('GET', param, "recipe_search.sek", idcheck_result);
 }
 function notice_Insert(){
+	$('body').removeClass('modal-open');
 	var notice_sub=$('#notice_sub').val();
 	var notice_content=$('#notice_content').val();
 	var param="?notice_sub="+notice_sub+"&notice_content="+notice_content;
