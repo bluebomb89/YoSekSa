@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE HTML>
 <html>
@@ -51,15 +51,15 @@
       $('#nav').affix({
          offset: {top: $('header').height()-$('#nav').height()}
       });
-      /* affix-top ¿¡¼­ affix·Î ¼öÁ¤µÉ´ë ÀÌº¥Æ® ¹ß»ı*/
+      /* affix-top ì—ì„œ affixë¡œ ìˆ˜ì •ë ëŒ€ ì´ë²¤íŠ¸ ë°œìƒ*/
       $('#nav').on("affix.bs.affix",function(){
          $("#startmain").text("haa!");
       });
-      /* affix¿¡¼­ affix-topÀ¸·Î ÀüÈ¯µÉ¶§ ÀÌº¥Æ® ¹ß»ı*/
+      /* affixì—ì„œ affix-topìœ¼ë¡œ ì „í™˜ë ë•Œ ì´ë²¤íŠ¸ ë°œìƒ*/
       $('#nav').on("affix-top.bs.affix",function(){
          $("#startmain").text("Search");
       });
-  	/* ½ÃÀÛ½Ã ajax½ÃÀÛ */
+  	/* ì‹œì‘ì‹œ ajaxì‹œì‘ */
  idcheck1(); 
    });
 </script>
@@ -107,24 +107,24 @@ $(document).ready(function() {
 </script>
 
 <!--script-->
-<!-- ajax ÄÚµù -->
+<!-- ajax ì½”ë”© -->
 <script type="text/javascript">
 var httpRequest=null;
 function createHttpRequest(){
-	if(window.ActiveXObject){ //IE 6.0 ÀÌ»ó
+	if(window.ActiveXObject){ //IE 6.0 ì´ìƒ
 		return new ActiveXObject("Msxml2.XMLHTTP");
-		//Microsoft.XMLHTTP 6.0ÀÌÇÏÀÏ¶§
-	}else if(window.XMLHttpRequest){ // Å©·Ò , ff
+		//Microsoft.XMLHTTP 6.0ì´í•˜ì¼ë•Œ
+	}else if(window.XMLHttpRequest){ // í¬ë¡¬ , ff
 		return new XMLHttpRequest();
-	}else{ // È£È¯ÀÌ ¾ÈµÉ¶§
-		return null; //Áö¿øÇÏÁö ¾Ê´Â ºê¶ó¿ìÀú
+	}else{ // í˜¸í™˜ì´ ì•ˆë ë•Œ
+		return null; //ì§€ì›í•˜ì§€ ì•ŠëŠ” ë¸Œë¼ìš°ì €
 	}
 }
 function sendMessage(method,param,url,callback){
-	// ¼­¹ö ¿¬°á DWR,DOJO
+	// ì„œë²„ ì—°ê²° DWR,DOJO
 	httpRequest=createHttpRequest();
 	httpRequest.open(method,url+param,true);
-	// true: ºñµ¿±â false:µ¿±â
+	// true: ë¹„ë™ê¸° false:ë™ê¸°
 	httpRequest.onreadystatechange=callback;
 	httpRequest.send(null);
 }
@@ -133,7 +133,7 @@ function idcheck_result(){
 		if(httpRequest.status==200){
 			var res=httpRequest.responseText;
 			$('#mangae-view').html(res);
-			// º¸¿©ÁÖ¸é¼­ div¿¡ °ªÀúÀå
+			// ë³´ì—¬ì£¼ë©´ì„œ divì— ê°’ì €ì¥
 			//alert(res);
 		}		
 	}
@@ -180,7 +180,7 @@ function notice_result(){
 		if(httpRequest.status==200){
 			var res=httpRequest.responseText;
 			$('#services').html(res);
-			// º¸¿©ÁÖ¸é¼­ div¿¡ °ªÀúÀå
+			// ë³´ì—¬ì£¼ë©´ì„œ divì— ê°’ì €ì¥
 		}		
 	}
 }
@@ -189,7 +189,7 @@ function notice_result(){
 <body  class="cbp-spmenu-push">
       <!--bottom-->
 <!---->
-<!--  style.css¾È¿¡ ÀÌ¹ÌÁö Ãß°¡ÇØ¼­ div classÀÌ¸§¿¡ ³Ö¾î¶ó. ÀÌ¹ÌÁö´Â ÀüÃ¼ÀûÀ¸·Î style.css¾È¿¡. 
+<!--  style.cssì•ˆì— ì´ë¯¸ì§€ ì¶”ê°€í•´ì„œ div classì´ë¦„ì— ë„£ì–´ë¼. ì´ë¯¸ì§€ëŠ” ì „ì²´ì ìœ¼ë¡œ style.cssì•ˆì—. 
      
 .bannersearch{
    background:url(../images/bannersearch.jpg) no-repeat 0px 0px;
@@ -197,16 +197,16 @@ function notice_result(){
    min-height:895px;
 }
 
-css¾È¿¡ ÀÌ¹ÌÁö ÀÌ·±½ÄÀ¸·Î Ãß°¡ÇÏ°í div¾È¿¡ Å¬·¡½º¸í ³Ö¾îÁÖ¸é µÈ´Ù.
+cssì•ˆì— ì´ë¯¸ì§€ ì´ëŸ°ì‹ìœ¼ë¡œ ì¶”ê°€í•˜ê³  divì•ˆì— í´ë˜ìŠ¤ëª… ë„£ì–´ì£¼ë©´ ëœë‹¤.
 -->
-<!-- ¸ŞÀÎÈ­¸é -->
+<!-- ë©”ì¸í™”ë©´ -->
 <header class="masthead">
 <div class="theTron animated panel-section dark">
   <div id="kb-bg" class="activated-KB"></div>
   <h1 class="">Well Come <span>To</span> Yoseksa</div>
 
 </header>
-<!-- ¼­ºñ½º´­·¶À»¶§ °Ë»öÈ­¸éÀÌµ¿ -->
+<!-- ì„œë¹„ìŠ¤ëˆŒë €ì„ë•Œ ê²€ìƒ‰í™”ë©´ì´ë™ -->
       <div id="section1" class="slider" style="margin-bottom: 14px;">
             <form class="yoseksa-search"role="search">
                <div class="input-group">
@@ -221,7 +221,7 @@ css¾È¿¡ ÀÌ¹ÌÁö ÀÌ·±½ÄÀ¸·Î Ãß°¡ÇÏ°í div¾È¿¡ Å¬·¡½º¸í ³Ö¾îÁÖ¸é µÈ´Ù.
               <div id="mangae" class="mangae-search">
                <div class="input-group">
                   <span class="twitter-typeahead">
-                     <input type="text" name="mangae-search" class="yoseksa-search-input" id="mangae-search" placeholder="¸¸°³ÀÇ ·¹½ÃÇÇ °Ë»ö">
+                     <input type="text" name="mangae-search" class="yoseksa-search-input" id="mangae-search" placeholder="ë§Œê°œì˜ ë ˆì‹œí”¼ ê²€ìƒ‰">
                   </span>
                   <div class="input-group-btn">
               		<a class="scroll" href="#mangae-show" id="recipe-search"  onclick="idcheck1()">
@@ -318,7 +318,7 @@ css¾È¿¡ ÀÌ¹ÌÁö ÀÌ·±½ÄÀ¸·Î Ãß°¡ÇÏ°í div¾È¿¡ Å¬·¡½º¸í ³Ö¾îÁÖ¸é µÈ´Ù.
          </div>
       </div>
 <!-- services -->
-<!-- ¿©±â¿¡ °øÁö»çÇ× Ãß°¡ -->
+<!-- ì—¬ê¸°ì— ê³µì§€ì‚¬í•­ ì¶”ê°€ -->
 <div id="services"  style="padding-top: 51px">
 	<jsp:include page="${ntpage }"></jsp:include>
 </div>

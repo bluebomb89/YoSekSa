@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
     
 <!DOCTYPE html>
 <html lang="ko" xmlns="http://www.w3.org/1999/xhtml" class=""><!--[endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -6,9 +7,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="-1">
-<meta name="description" content="·¹½ÃÇÇ">
+<meta name="description" content="ë ˆì‹œí”¼">
 <meta name="keywords" content="">
-<title>¸¸°³ÀÇ ·¹½ÃÇÇ</title>
+<title>ë§Œê°œì˜ ë ˆì‹œí”¼</title>
 
 <link rel="stylesheet" type="text/css" href="yoSeksa/css/recipe_enroll/bootstrap_20150918.css">
 <link rel="stylesheet" type="text/css" href="yoSeksa/css/recipe_enroll/font.css">
@@ -104,7 +105,7 @@ $(function() {
         el = $(this);
         var params = 'q_mode=get_blog_contents_list&q_portal='+$("[name=q_portal]:checked").val()+'&q_blogid='+$("#q_blogid").val();
         $.get("/common/ajx_common.html?"+params, function(html) {
-            $("#btnBlogContentsList").html('Á¶È¸');
+            $("#btnBlogContentsList").html('ì¡°íšŒ');
             $("#divBlogContentsList").html(html);
         });
     });
@@ -130,7 +131,7 @@ $(function() {
     });
 });
 </script>
-<!-- ------------------------ ÀÌ¹ÌÁö ¼Â ÀÚ¹Ù½ºÅ©¸³Æ®---½ÃÀÛ------------------- -->
+<!-- ------------------------ ì´ë¯¸ì§€ ì…‹ ìë°”ìŠ¤í¬ë¦½íŠ¸---ì‹œì‘------------------- -->
 <script type="text/javascript">
 
  window.onload = function(){
@@ -180,53 +181,53 @@ function readImg(inputId, outputId){
 	} 
 	
 	reader.onerror = function(e){
-		alert("ÀĞ±â ¿À·ù:" + e.target.error.code);
+		alert("ì½ê¸° ì˜¤ë¥˜:" + e.target.error.code);
 		return;
 	}
 }
 </script>
-<!-- ------------------------ ÀÌ¹ÌÁö ¼Â ÀÚ¹Ù½ºÅ©¸³Æ®-----³¡------------------- -->
+<!-- ------------------------ ì´ë¯¸ì§€ ì…‹ ìë°”ìŠ¤í¬ë¦½íŠ¸-----ë------------------- -->
 
 <div class="modal fade" id="divModalBlogForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="z-index:100001">
   <div class="modal-dialog" style="width:520px">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">¡¿</span></button>
-        <h4 class="modal-title" id="gridSystemModalLabel">ºí·Î±× Ã£±â</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Ã—</span></button>
+        <h4 class="modal-title" id="gridSystemModalLabel">ë¸”ë¡œê·¸ ì°¾ê¸°</h4>
       </div>
       <div class="modal-body">
         <dl class="blog_select">
-          <dt>1. ·¹½ÃÇÇ°¡ ÀÖ´Â ºí·Î±×¸¦ ¼±ÅÃÇØ ÁÖ¼¼¿ä.</dt>
+          <dt>1. ë ˆì‹œí”¼ê°€ ìˆëŠ” ë¸”ë¡œê·¸ë¥¼ ì„ íƒí•´ ì£¼ì„¸ìš”.</dt>
           <dd>
-            <span class="blog_t1"><label class="radio-inline"><input type="radio" name="q_portal" value="Naver" id="q_portal_Naver" onclick="doChangePortal(this.value)" aria-label="" checked="checked">³×ÀÌ¹ö</label></span>
-            <span class="blog_t2"><label class="radio-inline"><input type="radio" name="q_portal" value="Daum" id="q_portal_Daum" onclick="doChangePortal(this.value)" aria-label="">´ÙÀ½</label></span>
-            <span class="blog_t3"><label class="radio-inline"><input type="radio" name="q_portal" value="Tistory" id="q_portal_Tistory" onclick="doChangePortal(this.value)" aria-label="">Æ¼½ºÅä¸®</label></span>
+            <span class="blog_t1"><label class="radio-inline"><input type="radio" name="q_portal" value="Naver" id="q_portal_Naver" onclick="doChangePortal(this.value)" aria-label="" checked="checked">ë„¤ì´ë²„</label></span>
+            <span class="blog_t2"><label class="radio-inline"><input type="radio" name="q_portal" value="Daum" id="q_portal_Daum" onclick="doChangePortal(this.value)" aria-label="">ë‹¤ìŒ</label></span>
+            <span class="blog_t3"><label class="radio-inline"><input type="radio" name="q_portal" value="Tistory" id="q_portal_Tistory" onclick="doChangePortal(this.value)" aria-label="">í‹°ìŠ¤í† ë¦¬</label></span>
           </dd>
         </dl>
         <dl class="blog_select">
-          <dt>2. ±ÛÀ» °¡Á®¿Ã ¹æ½ÄÀ» ¼±ÅÃÇØ ÁÖ¼¼¿ä.</dt>
+          <dt>2. ê¸€ì„ ê°€ì ¸ì˜¬ ë°©ì‹ì„ ì„ íƒí•´ ì£¼ì„¸ìš”.</dt>
           <dd>
-            <div style="padding-bottom:7px"><span style="color:#666;"><label class="radio-inline"><input type="radio" name="q_blog_select_type" value="id" id="q_blog_select_type_id" onclick="doChangeBlogSelectType(this.value)" aria-label="">ºí·Î±× ID¸¦ ÀÔ·ÂÇÏ¿© ±Û ¼±ÅÃÇÏ±â</label></span></div>
-            <div><span style="color:#666"><label class="radio-inline"><input type="radio" name="q_blog_select_type" value="url" id="q_blog_select_type_url" onclick="doChangeBlogSelectType(this.value)" aria-label="">ºí·Î±× ±Û URLÀ» ÀÔ·ÂÇÏ¿© ³»¿ë °¡Á®¿À±â</label></span></div>
+            <div style="padding-bottom:7px"><span style="color:#666;"><label class="radio-inline"><input type="radio" name="q_blog_select_type" value="id" id="q_blog_select_type_id" onclick="doChangeBlogSelectType(this.value)" aria-label="">ë¸”ë¡œê·¸ IDë¥¼ ì…ë ¥í•˜ì—¬ ê¸€ ì„ íƒí•˜ê¸°</label></span></div>
+            <div><span style="color:#666"><label class="radio-inline"><input type="radio" name="q_blog_select_type" value="url" id="q_blog_select_type_url" onclick="doChangeBlogSelectType(this.value)" aria-label="">ë¸”ë¡œê·¸ ê¸€ URLì„ ì…ë ¥í•˜ì—¬ ë‚´ìš© ê°€ì ¸ì˜¤ê¸°</label></span></div>
           </dd>
         </dl>
         <dl id="top_blog_select_id" class="blog_select" style="display:none">
-          <dt>3. ºí·Î±× ID¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä.</dt>
+          <dt>3. ë¸”ë¡œê·¸ IDë¥¼ ì…ë ¥í•´ ì£¼ì„¸ìš”.</dt>
           <dd><span id="txtBlogHeader">http://blog.naver.com/</span> <input type="text" name="q_blogid" id="q_blogid" value="" class="form-control" placeholder="" style="width:200px">
               <span id="txtBlogTail"></span>
           </dd>
         </dl>
         <dl id="top_blog_select_url" class="blog_select" style="display:none">
-          <dt>3. ºí·Î±× ±Û URLÀ» ÀÔ·ÂÇØ ÁÖ¼¼¿ä.</dt>
+          <dt>3. ë¸”ë¡œê·¸ ê¸€ URLì„ ì…ë ¥í•´ ì£¼ì„¸ìš”.</dt>
           <dd>
             <input type="text" name="q_blogurl" id="q_blogurl" value="" class="form-control" placeholder="" style="width:400px">
-            <div><span>(ºí·Î±× ±Û URLÀº ³×ÀÌ¹ö/´ÙÀ½/Æ¼½ºÅä¸® ¸¸ °¡´ÉÇÕ´Ï´Ù)</span></div>
+            <div><span>(ë¸”ë¡œê·¸ ê¸€ URLì€ ë„¤ì´ë²„/ë‹¤ìŒ/í‹°ìŠ¤í† ë¦¬ ë§Œ ê°€ëŠ¥í•©ë‹ˆë‹¤)</span></div>
           </dd>
         </dl>
             </div>
       <div class="modal-footer">
-        <button type="button" id="btnBlogContentsList" onclick="doBlogSelect()" class="btn-lg btn-primary" rel="popover_blog">Á¶È¸</button>
-        <button type="button" class="btn-lg btn-default" data-dismiss="modal">Ãë¼Ò</button>
+        <button type="button" id="btnBlogContentsList" onclick="doBlogSelect()" class="btn-lg btn-primary" rel="popover_blog">ì¡°íšŒ</button>
+        <button type="button" class="btn-lg btn-default" data-dismiss="modal">ì·¨ì†Œ</button>
         <input type="hidden" name="q_page" id="q_page" value="1">
         <input type="hidden" name="q_scal" id="q_scal" value="10">
       </div>
@@ -239,8 +240,8 @@ function readImg(inputId, outputId){
   <div class="modal-dialog" style="width:520px">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">¡¿</span></button>
-        <h4 class="modal-title" id="gridSystemModalLabel">±ÛÀ» ¼±ÅÃÇÏ¼¼¿ä</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Ã—</span></button>
+        <h4 class="modal-title" id="gridSystemModalLabel">ê¸€ì„ ì„ íƒí•˜ì„¸ìš”</h4>
       </div>
       <div class="modal-body" id="divBlogContentsList">
 
@@ -256,21 +257,21 @@ function readImg(inputId, outputId){
   <div class="modal-dialog" style="width:820px">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">¡¿</span></button>
-        <h4 class="modal-title" id="gridSystemModalLabel">ºê¶ó¿ìÀú ¾÷µ¥ÀÌÆ® ¾È³»</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Ã—</span></button>
+        <h4 class="modal-title" id="gridSystemModalLabel">ë¸Œë¼ìš°ì € ì—…ë°ì´íŠ¸ ì•ˆë‚´</h4>
       </div>
       <div class="modal-body">
         <!--
-            <h3>Internet Explorer 10 ÀÌÇÏ ¹öÀüÀ» »ç¿ëÁßÀÌ½Ã±º¿ä!</h3>
+            <h3>Internet Explorer 10 ì´í•˜ ë²„ì „ì„ ì‚¬ìš©ì¤‘ì´ì‹œêµ°ìš”!</h3>
             <p></p>
-            <h4 style="color:#de4830">·¹½ÃÇÇ µî·ÏÀº,</h4>
-            <h4 style="color:#de4830">IE 11ÀÌ»ó ¶Ç´Â Å©·Ò(Chrome) ºê¶ó¿ìÀú »ç¿ëÀÌ ÇÊ¼öÀÔ´Ï´Ù.</h4>
+            <h4 style="color:#de4830">ë ˆì‹œí”¼ ë“±ë¡ì€,</h4>
+            <h4 style="color:#de4830">IE 11ì´ìƒ ë˜ëŠ” í¬ë¡¬(Chrome) ë¸Œë¼ìš°ì € ì‚¬ìš©ì´ í•„ìˆ˜ì…ë‹ˆë‹¤.</h4>
         -->
             <div style="width:800px; height:560px; background:#fff; text-align:center;">
               <div sthyle="padding-top:5px;"><img src="yoSeksa/css/recipe_enroll/update_icon.gif"></div>
-              <div style="font-size:30px; font-weight:bold; color:#444; padding-top:25px;">ºê¶ó¿ìÀú¸¦ ÃÖ½Å¹öÀüÀ¸·Î ¾÷±×·¹ÀÌµå ÇØÁÖ¼¼¿ä!</div>
-              <div style="font-size:18px; color:#777; padding-top:25px;">·¹½ÃÇÇ µî·ÏÀ» À§ÇØ¼­´Â Áö±İ »ç¿ëÇÏ°í ÀÖ´Â<br>ºê¶ó¿ìÀú ¹öÀüÀ» ¾÷±×·¹ÀÌµå ÇÏ°Å³ª ´Ù¸¥ À¥ ºê¶ó¿ìÀú¸¦ »ç¿ëÇØ¾ß µË´Ï´Ù.</div>
-              <div style="font-size:18px; color:#777; padding-top:25px;">¾Æ·¡ÀÇ ºê¶ó¿ìÀú »çÁøÀ» Å¬¸¯ÇÏ¿© ¾÷±×·¹ÀÌµå ÇÏ¼¼¿ä.</div>
+              <div style="font-size:30px; font-weight:bold; color:#444; padding-top:25px;">ë¸Œë¼ìš°ì €ë¥¼ ìµœì‹ ë²„ì „ìœ¼ë¡œ ì—…ê·¸ë ˆì´ë“œ í•´ì£¼ì„¸ìš”!</div>
+              <div style="font-size:18px; color:#777; padding-top:25px;">ë ˆì‹œí”¼ ë“±ë¡ì„ ìœ„í•´ì„œëŠ” ì§€ê¸ˆ ì‚¬ìš©í•˜ê³  ìˆëŠ”<br>ë¸Œë¼ìš°ì € ë²„ì „ì„ ì—…ê·¸ë ˆì´ë“œ í•˜ê±°ë‚˜ ë‹¤ë¥¸ ì›¹ ë¸Œë¼ìš°ì €ë¥¼ ì‚¬ìš©í•´ì•¼ ë©ë‹ˆë‹¤.</div>
+              <div style="font-size:18px; color:#777; padding-top:25px;">ì•„ë˜ì˜ ë¸Œë¼ìš°ì € ì‚¬ì§„ì„ í´ë¦­í•˜ì—¬ ì—…ê·¸ë ˆì´ë“œ í•˜ì„¸ìš”.</div>
               <div style="padding-top:30px;">
                 <a href="https://www.google.com/chrome/" target="_blank" style="margin:0 4px;"><img src="yoSeksa/css/recipe_enroll/update_b_03.gif" alt="chrome" style="border:none;"></a>
                 <a href="http://windows.microsoft.com/ko-kr/internet-explorer/download-ie" target="_blank" style="margin:0 4px;"><img src="yoSeksa/css/recipe_enroll/update_b_02.gif" alt="IE" style="border:none;"></a>
@@ -359,12 +360,12 @@ function addResource(prev_step, init_json){
     if (typeof init_json !== 'undefined' && init_json !== null && init_json['nm']) {
         $("#divResourceArea [id=cok_resource_nm_" + step + "]").val(init_json['nm']);
     } else {
-		$("#divResourceArea [id=cok_resource_nm_" + step + "]").attr('placeholder','¿¹) '+_RESOURCE_SAMPLE[(step-1)%_RESOURCE_SAMPLE.length]['nm']);
+		$("#divResourceArea [id=cok_resource_nm_" + step + "]").attr('placeholder','ì˜ˆ) '+_RESOURCE_SAMPLE[(step-1)%_RESOURCE_SAMPLE.length]['nm']);
 	}
     if (typeof init_json !== 'undefined' && init_json !== null && init_json['amt']) {
         $("#divResourceArea [id=cok_resource_amt_" + step + "]").val(init_json['amt']);
     } else {
-		$("#divResourceArea [id=cok_resource_amt_" + step + "]").attr('placeholder','¿¹) '+_RESOURCE_SAMPLE[(step-1)%_RESOURCE_SAMPLE.length]['amt']);
+		$("#divResourceArea [id=cok_resource_amt_" + step + "]").attr('placeholder','ì˜ˆ) '+_RESOURCE_SAMPLE[(step-1)%_RESOURCE_SAMPLE.length]['amt']);
 	}
     
     $("#divResourceArea [id=liResource_" + step + "]").mouseover(function(){
@@ -410,12 +411,12 @@ function addSpice(prev_step, init_json){
     if (typeof init_json !== 'undefined' && init_json !== null && init_json['nm']) {
         $("#divSpiceArea [id=cok_spice_nm_" + step + "]").val(init_json['nm']);
     } else {
-        $("#divSpiceArea [id=cok_spice_nm_" + step + "]").attr('placeholder','¿¹) '+_SPICE_SAMPLE[(step-1)%_SPICE_SAMPLE.length]['nm']);
+        $("#divSpiceArea [id=cok_spice_nm_" + step + "]").attr('placeholder','ì˜ˆ) '+_SPICE_SAMPLE[(step-1)%_SPICE_SAMPLE.length]['nm']);
     }
     if (typeof init_json !== 'undefined' && init_json !== null && init_json['amt']) {
         $("#divSpiceArea [id=cok_spice_amt_" + step + "]").val(init_json['amt']);
     } else {
-        $("#divSpiceArea [id=cok_spice_amt_" + step + "]").attr('placeholder','¿¹) '+_SPICE_SAMPLE[(step-1)%_SPICE_SAMPLE.length]['amt']);
+        $("#divSpiceArea [id=cok_spice_amt_" + step + "]").attr('placeholder','ì˜ˆ) '+_SPICE_SAMPLE[(step-1)%_SPICE_SAMPLE.length]['amt']);
     }
     
     $("#divSpiceArea [id=liSpice_" + step + "]").mouseover(function(){
@@ -459,7 +460,7 @@ function addStep(prev_step, init_json){
     if (typeof init_json !== 'undefined' && init_json !== null && init_json['text']) {
         $("#divStepArea [id=step_text_" + step + "]").val(init_json['text']);
     } else {
-		$("#divStepArea [id=step_text_" + step + "]").attr('placeholder','¿¹) '+_STEP_SAMPLE[(step-1)%_STEP_SAMPLE.length]);
+		$("#divStepArea [id=step_text_" + step + "]").attr('placeholder','ì˜ˆ) '+_STEP_SAMPLE[(step-1)%_STEP_SAMPLE.length]);
 	}
     if (typeof init_json !== 'undefined' && init_json !== null && init_json['step_no']) {
         $("#divStepArea [id=step_no_" + step + "]").val(init_json['step_no']);
@@ -496,7 +497,7 @@ function addStep(prev_step, init_json){
 	$("#divStepArea [id=divStepNum_" + step + "]").tooltip({
         'placement': 'top',
         'container': $('.recipe_regi'),
-        'title': 'µå·¡±×ÇÏ¸é ¼ø¼­¸¦ º¯°æÇÒ ¼ö ÀÖ½À´Ï´Ù.'
+        'title': 'ë“œë˜ê·¸í•˜ë©´ ìˆœì„œë¥¼ ë³€ê²½í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.'
     });
 	
 	if ($("#cok_reg_type").val() == 'edit') {
@@ -540,7 +541,7 @@ function browseContentsFile() {
     if (editor) {
         $("#q_contents_file").click();
     } else {
-        alert('±Û¾²±â ÆûÀÌ ÁØºñµÇÁö ¾Ê¾Ò½À´Ï´Ù. ´Ù½Ã ½ÃµµÇØ ÁÖ¼¼¿ä.');
+        alert('ê¸€ì“°ê¸° í¼ì´ ì¤€ë¹„ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì‹œë„í•´ ì£¼ì„¸ìš”.');
     }
 }
 
@@ -616,7 +617,7 @@ addStep();
     $(".btn-lineup").tooltip({
         'placement': 'top',
         'container': $('.recipe_regi'),
-        'title': 'µå·¡±×ÇÏ¸é ¼ø¼­¸¦ º¯°æÇÒ ¼ö ÀÖ½À´Ï´Ù.'
+        'title': 'ë“œë˜ê·¸í•˜ë©´ ìˆœì„œë¥¼ ë³€ê²½í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.'
     });
 });
 var isSubmit = false;
@@ -624,7 +625,7 @@ function doSubmit(q_mode)
 {
 	/*
     if (isSubmit) {
-        alert("Ã³¸®Áß ÀÔ´Ï´Ù. Àá½Ã¸¸ ±â´Ù¸®¼¼¿ä.");
+        alert("ì²˜ë¦¬ì¤‘ ì…ë‹ˆë‹¤. ì ì‹œë§Œ ê¸°ë‹¤ë¦¬ì„¸ìš”.");
         return;
     }
     */
@@ -635,7 +636,7 @@ function doSubmit(q_mode)
         return isSubmit = false;
     }
     if (q_mode == 'save') {
-        if (confirm("ÀúÀåÇÏ½Ã°Ú½À´Ï±î?")) {
+        if (confirm("ì €ì¥í•˜ì‹œê² ìŠµë‹ˆê¹Œ?")) {
             isSubmit = true;
             $("#insFrm").submit();
         }
@@ -643,7 +644,7 @@ function doSubmit(q_mode)
             isSubmit = false;
         }
     } else if (q_mode == 'save_preview') {
-        if (confirm("¹Ì¸®º¸±â¸¦ ÇÏ·Á¸é ÀúÀåÇÏ¼Å¾ß ÇÕ´Ï´Ù. ÀúÀåÇÏ½Ã°Ú½À´Ï±î?")) {
+        if (confirm("ë¯¸ë¦¬ë³´ê¸°ë¥¼ í•˜ë ¤ë©´ ì €ì¥í•˜ì…”ì•¼ í•©ë‹ˆë‹¤. ì €ì¥í•˜ì‹œê² ìŠµë‹ˆê¹Œ?")) {
             isSubmit = true;
             $("#insFrm").submit();
         }
@@ -651,7 +652,7 @@ function doSubmit(q_mode)
             isSubmit = false;
         }
     } else if (q_mode == 'save_public') {
-				var msg = '·¹½ÃÇÇ °ø°³ ÈÄ, ¸®½ºÆ® ¹× °Ë»ö¿¡ ³ëÃâµÇ´Â µ¥´Â ÇÏ·ç Á¤µµÀÇ ½Ã°£ÀÌ ¼Ò¿äµË´Ï´Ù.\n\n·¹½ÃÇÇ¸¦ °ø°³ÇÏ½Ã°Ú½À´Ï±î?';
+				var msg = 'ë ˆì‹œí”¼ ê³µê°œ í›„, ë¦¬ìŠ¤íŠ¸ ë° ê²€ìƒ‰ì— ë…¸ì¶œë˜ëŠ” ë°ëŠ” í•˜ë£¨ ì •ë„ì˜ ì‹œê°„ì´ ì†Œìš”ë©ë‹ˆë‹¤.\n\në ˆì‹œí”¼ë¥¼ ê³µê°œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?';
 		 
         if (confirm(msg)) {
             isSubmit = true;
@@ -669,55 +670,55 @@ function doSubmit(q_mode)
 }
 function validateRecipeForm(q_mode) {
     if ($.trim($("#cok_title").val()) == '') {
-        alert('·¹½ÃÇÇ Á¦¸ñÀ» ÀÔ·ÂÇØ ÁÖ¼¼¿ä.');
+        alert('ë ˆì‹œí”¼ ì œëª©ì„ ì…ë ¥í•´ ì£¼ì„¸ìš”.');
         $("#cok_title").focus();
         return isSubmit = false;
     }
 
     if (q_mode != 'save') {
         if ($("#main_photo").val() == '') {
-            alert('´ëÇ¥»çÁøÀ» ¼±ÅÃÇØ ÁÖ¼¼¿ä.');
+            alert('ëŒ€í‘œì‚¬ì§„ì„ ì„ íƒí•´ ì£¼ì„¸ìš”.');
             return isSubmit = false;
         }
         if ($.trim($("#cok_intro").val()) == '') {
-            alert('¿ä¸®¼Ò°³ ³»¿ëÀ» ÀÔ·ÂÇØ ÁÖ¼¼¿ä.');
+            alert('ìš”ë¦¬ì†Œê°œ ë‚´ìš©ì„ ì…ë ¥í•´ ì£¼ì„¸ìš”.');
             $("#cok_intro").focus();
             return isSubmit = false;
         }
         if ($("#cok_sq_category_1").val() == '') {
-            alert('¹æ¹ıº° Ä«Å×°í¸®¸¦ ¼±ÅÃÇØ ÁÖ¼¼¿ä.');
+            alert('ë°©ë²•ë³„ ì¹´í…Œê³ ë¦¬ë¥¼ ì„ íƒí•´ ì£¼ì„¸ìš”.');
             $("#cok_sq_category_1").focus();
             return isSubmit = false;
         }
         if ($("#cok_sq_category_2").val() == '') {
-            alert('»óÈ²º° Ä«Å×°í¸®¸¦ ¼±ÅÃÇØ ÁÖ¼¼¿ä.');
+            alert('ìƒí™©ë³„ ì¹´í…Œê³ ë¦¬ë¥¼ ì„ íƒí•´ ì£¼ì„¸ìš”.');
             $("#cok_sq_category_2").focus();
             return isSubmit = false;
         }
         if ($("#cok_sq_category_3").val() == '') {
-            alert('Àç·áº° Ä«Å×°í¸®¸¦ ¼±ÅÃÇØ ÁÖ¼¼¿ä.');
+            alert('ì¬ë£Œë³„ ì¹´í…Œê³ ë¦¬ë¥¼ ì„ íƒí•´ ì£¼ì„¸ìš”.');
             $("#cok_sq_category_3").focus();
             return isSubmit = false;
         }
         if ($("#cok_sq_category_4").val() == '') {
-            alert('Á¾·ùº° Ä«Å×°í¸®¸¦ ¼±ÅÃÇØ ÁÖ¼¼¿ä.');
+            alert('ì¢…ë¥˜ë³„ ì¹´í…Œê³ ë¦¬ë¥¼ ì„ íƒí•´ ì£¼ì„¸ìš”.');
             $("#cok_sq_category_4").focus();
             $("#btnAllCategory").trigger('click');
 
             return isSubmit = false;
         }
         if ($("#cok_portion").val() == '') {
-            alert('¿ä¸®ÀÎ¿ø ¼±ÅÃÇØ ÁÖ¼¼¿ä.');
+            alert('ìš”ë¦¬ì¸ì› ì„ íƒí•´ ì£¼ì„¸ìš”.');
             $("#cok_portion").focus();
             return isSubmit = false;
         }
         if ($("#cok_time").val() == '') {
-            alert('¿ä¸®½Ã°£À» ¼±ÅÃÇØ ÁÖ¼¼¿ä.');
+            alert('ìš”ë¦¬ì‹œê°„ì„ ì„ íƒí•´ ì£¼ì„¸ìš”.');
             $("#cok_time").focus();
             return isSubmit = false;
         }
         if ($("#cok_degree").val() == '') {
-            alert('³­ÀÌµµ¸¦ ¼±ÅÃÇØ ÁÖ¼¼¿ä.');
+            alert('ë‚œì´ë„ë¥¼ ì„ íƒí•´ ì£¼ì„¸ìš”.');
             $("#cok_degree").focus();
             return isSubmit = false;
         }
@@ -729,7 +730,7 @@ function validateRecipeForm(q_mode) {
             }
         });
         if (resource_cnt < 1) {
-            alert('¿ä¸®Àç·á´Â ÃÖ¼Ò 1°³ ÀÌ»óÀÌ¾î¾ß ÇÕ´Ï´Ù.');
+            alert('ìš”ë¦¬ì¬ë£ŒëŠ” ìµœì†Œ 1ê°œ ì´ìƒì´ì–´ì•¼ í•©ë‹ˆë‹¤.');
             $("#divResourceArea > li:last-child").find('input')[0].focus();
             return isSubmit = false;
         }
@@ -739,12 +740,12 @@ function validateRecipeForm(q_mode) {
         $("#divStepArea [id^=divStepItem_]").each(function(i) {
             var step = $(this).prop('id').replace('divStepItem_','');
             if ($("#step_photo_"+step).val() != '' && $.trim($("#step_text_" + step).val()) == '') {
-                alert("³»¿ëÀ» ÀÔ·ÂÇÏ¼¼¿ä.");
+                alert("ë‚´ìš©ì„ ì…ë ¥í•˜ì„¸ìš”.");
                 $("#step_text_" + step).focus();
                 invalid_step = step;
                 return false;
             } else if ($("#step_photo_"+step).val() == '' && $.trim($("#step_text_" + step).val()) != '') {
-                alert("»çÁøÀ» ¼±ÅÃÇÏ¼¼¿ä.");
+                alert("ì‚¬ì§„ì„ ì„ íƒí•˜ì„¸ìš”.");
                 $("#step_text_" + step).focus();
                 invalid_step = step;
                 return false;
@@ -756,7 +757,7 @@ function validateRecipeForm(q_mode) {
             return isSubmit = false;
         }
         if (step_cnt < 3) {
-            alert('¿ä¸®¼ø¼­´Â ÃÖ¼Ò 3°³ ÀÌ»óÀÌ¾î¾ß ÇÕ´Ï´Ù.');
+            alert('ìš”ë¦¬ìˆœì„œëŠ” ìµœì†Œ 3ê°œ ì´ìƒì´ì–´ì•¼ í•©ë‹ˆë‹¤.');
             $("#divStepArea textarea").last().focus();
             return isSubmit = false;
         }
@@ -765,7 +766,7 @@ function validateRecipeForm(q_mode) {
     return true;
 }
 function doDelete() {
-    if (confirm("·¹½ÃÇÇ¸¦ »èÁ¦ÇÏ½Ã°Ú½À´Ï±î?")) {
+    if (confirm("ë ˆì‹œí”¼ë¥¼ ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?")) {
         isSubmit = true;
         $("#insFrm [name=q_mode]").val('delete');
         $("#insFrm").submit();
@@ -807,7 +808,7 @@ $(function() {
 
 <div class="container recipe_regi" style="margin-top: 100px">
     <div class="regi_center">
-    <div class="regi_title">·¹½ÃÇÇ µî·Ï<a href="javascript:void(0)" id="btnRecipeInsertGuide"><img src="yoSeksa/css/recipe_enroll/btn_guide.gif" alt="·¹½ÃÇÇµî·Ï¾È³»"></a></div>
+    <div class="regi_title">ë ˆì‹œí”¼ ë“±ë¡<a href="javascript:void(0)" id="btnRecipeInsertGuide"><img src="yoSeksa/css/recipe_enroll/btn_guide.gif" alt="ë ˆì‹œí”¼ë“±ë¡ì•ˆë‚´"></a></div>
     <div class="cont_box pad_l_60">
       <div id="divMainPhotoUpload" class="cont_pic2">
         <input type="hidden" name="main_photo" id="main_photo" value="">
@@ -817,120 +818,120 @@ $(function() {
             <img id="mainPhotoHolder" onclick="browseMainFile()" src="yoSeksa/css/recipe_enroll/pic_none4.gif" style="width: 250px; height: 250px; cursor:pointer">
         </div>
       </div>
-      <div class="cont_line"><p class="cont_tit4">·¹½ÃÇÇ Á¦¸ñ</p><input type="text" name="cok_title" id="cok_title" value="" class="form-control" placeholder="¿¹) ¼Ò°í±â ¹Ì¿ª±¹ ²úÀÌ±â" style="width:610px; "></div>
-      <div class="cont_line pad_b_25"><p class="cont_tit4">¿ä¸®¼Ò°³</p><textarea name="cok_intro" id="cok_intro" class="form-control step_cont" placeholder="ÀÌ ·¹½ÃÇÇÀÇ Åº»ı¹è°æÀ» Àû¾îÁÖ¼¼¿ä. ¿¹) ³²ÆíÀÇ »ıÀÏÀ» ¸Â¾Æ ¼Ò°í±â ¹Ì¿ª±¹À» ²ú¿©ºÃ¾î¿ä. ¾î¸Ó´Ï·ÎºÎÅÍ ¹è¿î ¹Ì¿ª±¹ ·¹½ÃÇÇ¸¦ ³²ÆíÀÇ ÀÔ¸À¿¡ ¸Â°Ô °í¾ÈÇß½À´Ï´Ù." style="height:100px; width:610px; resize:none;"></textarea></div>
-      <div class="cont_line"><p class="cont_tit4">Ä«Å×°í¸®</p>
-        <select name="cok_sq_category_4" id="cok_sq_category_4" text="Á¾·ùº°">
-<option value="">Á¾·ùº°</option><option value="63">¹Ø¹İÂù</option>
-<option value="56">¸ŞÀÎ¹İÂù</option>
-<option value="54">±¹/ÅÁ</option>
-<option value="55">Âî°³</option>
-<option value="60">°£½Ä/µğÀúÆ®</option>
-<option value="53">¸é/¸¸µÎ</option>
-<option value="52">¹ä/Á×/¶±</option>
-<option value="61">Ç»Àü</option>
-<option value="57">±èÄ¡/Á£°¥/Àå·ù</option>
-<option value="58">¾ç³ä/¼Ò½º/Àë</option>
-<option value="65">¾ç½Ä</option>
-<option value="64">»ø·¯µå/½ºÇÁ</option>
-<option value="66">º£ÀÌÅ·</option>
-<option value="59">Â÷/À½·á/¼ú</option>
-<option value="62">±âÅ¸</option>
+      <div class="cont_line"><p class="cont_tit4">ë ˆì‹œí”¼ ì œëª©</p><input type="text" name="cok_title" id="cok_title" value="" class="form-control" placeholder="ì˜ˆ) ì†Œê³ ê¸° ë¯¸ì—­êµ­ ë“ì´ê¸°" style="width:610px; "></div>
+      <div class="cont_line pad_b_25"><p class="cont_tit4">ìš”ë¦¬ì†Œê°œ</p><textarea name="cok_intro" id="cok_intro" class="form-control step_cont" placeholder="ì´ ë ˆì‹œí”¼ì˜ íƒ„ìƒë°°ê²½ì„ ì ì–´ì£¼ì„¸ìš”. ì˜ˆ) ë‚¨í¸ì˜ ìƒì¼ì„ ë§ì•„ ì†Œê³ ê¸° ë¯¸ì—­êµ­ì„ ë“ì—¬ë´¤ì–´ìš”. ì–´ë¨¸ë‹ˆë¡œë¶€í„° ë°°ìš´ ë¯¸ì—­êµ­ ë ˆì‹œí”¼ë¥¼ ë‚¨í¸ì˜ ì…ë§›ì— ë§ê²Œ ê³ ì•ˆí–ˆìŠµë‹ˆë‹¤." style="height:100px; width:610px; resize:none;"></textarea></div>
+      <div class="cont_line"><p class="cont_tit4">ì¹´í…Œê³ ë¦¬</p>
+        <select name="cok_sq_category_4" id="cok_sq_category_4" text="ì¢…ë¥˜ë³„">
+<option value="">ì¢…ë¥˜ë³„</option><option value="63">ë°‘ë°˜ì°¬</option>
+<option value="56">ë©”ì¸ë°˜ì°¬</option>
+<option value="54">êµ­/íƒ•</option>
+<option value="55">ì°Œê°œ</option>
+<option value="60">ê°„ì‹/ë””ì €íŠ¸</option>
+<option value="53">ë©´/ë§Œë‘</option>
+<option value="52">ë°¥/ì£½/ë–¡</option>
+<option value="61">í“¨ì „</option>
+<option value="57">ê¹€ì¹˜/ì “ê°ˆ/ì¥ë¥˜</option>
+<option value="58">ì–‘ë…/ì†ŒìŠ¤/ì¼</option>
+<option value="65">ì–‘ì‹</option>
+<option value="64">ìƒëŸ¬ë“œ/ìŠ¤í”„</option>
+<option value="66">ë² ì´í‚¹</option>
+<option value="59">ì°¨/ìŒë£Œ/ìˆ </option>
+<option value="62">ê¸°íƒ€</option>
 </select>
-        <select name="cok_sq_category_2" id="cok_sq_category_2" text="»óÈ²º°">
-<option value="">»óÈ²º°</option><option value="12">ÀÏ»ó</option>
-<option value="18">ÃÊ½ºÇÇµå</option>
-<option value="13">¼Õ´ÔÁ¢´ë</option>
-<option value="19">¼ú¾ÈÁÖ</option>
-<option value="21">´ÙÀÌ¾îÆ®Äî</option>
-<option value="15">³ªµéÀÌ</option>
-<option value="43">¿µ¾ç½Ä</option>
-<option value="17">°£½Ä</option>
-<option value="45">¾ß½Ä</option>
-<option value="20">Çªµå½ºÅ¸ÀÏ¸µ</option>
-<option value="46">ÇØÀå</option>
-<option value="44">¸íÀı</option>
-<option value="14">ÀÌÀ¯½Ä</option>
-<option value="22">±âÅ¸</option>
+        <select name="cok_sq_category_2" id="cok_sq_category_2" text="ìƒí™©ë³„">
+<option value="">ìƒí™©ë³„</option><option value="12">ì¼ìƒ</option>
+<option value="18">ì´ˆìŠ¤í”¼ë“œ</option>
+<option value="13">ì†ë‹˜ì ‘ëŒ€</option>
+<option value="19">ìˆ ì•ˆì£¼</option>
+<option value="21">ë‹¤ì´ì–´íŠ¸ì¿¡</option>
+<option value="15">ë‚˜ë“¤ì´</option>
+<option value="43">ì˜ì–‘ì‹</option>
+<option value="17">ê°„ì‹</option>
+<option value="45">ì•¼ì‹</option>
+<option value="20">í‘¸ë“œìŠ¤íƒ€ì¼ë§</option>
+<option value="46">í•´ì¥</option>
+<option value="44">ëª…ì ˆ</option>
+<option value="14">ì´ìœ ì‹</option>
+<option value="22">ê¸°íƒ€</option>
 </select>
-        <select name="cok_sq_category_1" id="cok_sq_category_1" text="¹æ¹ıº°">
-<option value="">¹æ¹ıº°</option><option value="6">ººÀ½</option>
-<option value="1">²úÀÌ±â</option>
-<option value="7">ºÎÄ§</option>
-<option value="36">Á¶¸²</option>
-<option value="41">¹«Ä§</option>
-<option value="42">ºñºö</option>
-<option value="8">Âò</option>
-<option value="35">±¸ÀÌ</option>
-<option value="10">ÀıÀÌ±â</option>
-<option value="9">Æ¢±è</option>
-<option value="38">»î±â</option>
-<option value="67">±Á±â</option>
-<option value="39">µ¥Ä¡±â</option>
-<option value="37">È¸</option>
-<option value="11">±âÅ¸</option>
+        <select name="cok_sq_category_1" id="cok_sq_category_1" text="ë°©ë²•ë³„">
+<option value="">ë°©ë²•ë³„</option><option value="6">ë³¶ìŒ</option>
+<option value="1">ë“ì´ê¸°</option>
+<option value="7">ë¶€ì¹¨</option>
+<option value="36">ì¡°ë¦¼</option>
+<option value="41">ë¬´ì¹¨</option>
+<option value="42">ë¹„ë¹”</option>
+<option value="8">ì°œ</option>
+<option value="35">êµ¬ì´</option>
+<option value="10">ì ˆì´ê¸°</option>
+<option value="9">íŠ€ê¹€</option>
+<option value="38">ì‚¶ê¸°</option>
+<option value="67">êµ½ê¸°</option>
+<option value="39">ë°ì¹˜ê¸°</option>
+<option value="37">íšŒ</option>
+<option value="11">ê¸°íƒ€</option>
 </select>
-        <select name="cok_sq_category_3" id="cok_sq_category_3" text="Àç·áº°">
-<option value="">Àç·áº°</option><option value="23">À°·ù</option>
-<option value="28">Ã¤¼Ò·ù</option>
-<option value="24">ÇØ¹°·ù</option>
-<option value="50">´Ş°¿/À¯Á¦Ç°</option>
-<option value="33">°¡°ø½ÄÇ°·ù</option>
-<option value="47">¸é·ù/¶±·ù</option>
-<option value="32">»§·ù</option>
-<option value="25">°Ç¾î¹°·ù</option>
-<option value="31">¹ö¼¸·ù</option>
-<option value="48">°úÀÏ·ù</option>
-<option value="27">Äá/°ß°ú·ù</option>
-<option value="26">°î·ù</option>
-<option value="34">±âÅ¸</option>
+        <select name="cok_sq_category_3" id="cok_sq_category_3" text="ì¬ë£Œë³„">
+<option value="">ì¬ë£Œë³„</option><option value="23">ìœ¡ë¥˜</option>
+<option value="28">ì±„ì†Œë¥˜</option>
+<option value="24">í•´ë¬¼ë¥˜</option>
+<option value="50">ë‹¬ê±€/ìœ ì œí’ˆ</option>
+<option value="33">ê°€ê³µì‹í’ˆë¥˜</option>
+<option value="47">ë©´ë¥˜/ë–¡ë¥˜</option>
+<option value="32">ë¹µë¥˜</option>
+<option value="25">ê±´ì–´ë¬¼ë¥˜</option>
+<option value="31">ë²„ì„¯ë¥˜</option>
+<option value="48">ê³¼ì¼ë¥˜</option>
+<option value="27">ì½©/ê²¬ê³¼ë¥˜</option>
+<option value="26">ê³¡ë¥˜</option>
+<option value="34">ê¸°íƒ€</option>
 </select>
       </div>
-      <div class="cont_line"><p class="cont_tit4">¿ä¸®Á¤º¸</p>
-      ÀÎ¿ø
-        <select name="cok_portion" id="cok_portion" text="ÀÎ¿ø">
-<option value="">ÀÎ¿ø</option><option value="1">1ÀÎºĞ</option>
-<option value="2">2ÀÎºĞ</option>
-<option value="3">3ÀÎºĞ</option>
-<option value="4">4ÀÎºĞ</option>
-<option value="5">5ÀÎºĞ</option>
-<option value="6">6ÀÎºĞÀÌ»ó</option>
+      <div class="cont_line"><p class="cont_tit4">ìš”ë¦¬ì •ë³´</p>
+      ì¸ì›
+        <select name="cok_portion" id="cok_portion" text="ì¸ì›">
+<option value="">ì¸ì›</option><option value="1">1ì¸ë¶„</option>
+<option value="2">2ì¸ë¶„</option>
+<option value="3">3ì¸ë¶„</option>
+<option value="4">4ì¸ë¶„</option>
+<option value="5">5ì¸ë¶„</option>
+<option value="6">6ì¸ë¶„ì´ìƒ</option>
 </select>
-      <span class="pad_l_30">½Ã°£ </span>
-        <select name="cok_time" id="cok_time" text="¿ä¸®½Ã°£">
-<option value="">½Ã°£</option><option value="5">5ºĞÀÌ³»</option>
-<option value="10">10ºĞÀÌ³»</option>
-<option value="15">15ºĞÀÌ³»</option>
-<option value="30">30ºĞÀÌ³»</option>
-<option value="60">60ºĞÀÌ³»</option>
-<option value="90">90ºĞÀÌ³»</option>
-<option value="120">2½Ã°£ÀÌ³»</option>
-<option value="999">2½Ã°£ÀÌ»ó</option>
+      <span class="pad_l_30">ì‹œê°„ </span>
+        <select name="cok_time" id="cok_time" text="ìš”ë¦¬ì‹œê°„">
+<option value="">ì‹œê°„</option><option value="5">5ë¶„ì´ë‚´</option>
+<option value="10">10ë¶„ì´ë‚´</option>
+<option value="15">15ë¶„ì´ë‚´</option>
+<option value="30">30ë¶„ì´ë‚´</option>
+<option value="60">60ë¶„ì´ë‚´</option>
+<option value="90">90ë¶„ì´ë‚´</option>
+<option value="120">2ì‹œê°„ì´ë‚´</option>
+<option value="999">2ì‹œê°„ì´ìƒ</option>
 </select>
-      <span class="pad_l_30">³­ÀÌµµ </span>
-        <select name="cok_degree" id="cok_degree" text="³­ÀÌµµ">
-<option value="">³­ÀÌµµ</option><option value="1">¾Æ¹«³ª</option>
-<option value="2">ÃÊ±Ş</option>
-<option value="3">Áß±Ş</option>
-<option value="4">°í±Ş</option>
-<option value="5">½ÅÀÇ°æÁö</option>
+      <span class="pad_l_30">ë‚œì´ë„ </span>
+        <select name="cok_degree" id="cok_degree" text="ë‚œì´ë„">
+<option value="">ë‚œì´ë„</option><option value="1">ì•„ë¬´ë‚˜</option>
+<option value="2">ì´ˆê¸‰</option>
+<option value="3">ì¤‘ê¸‰</option>
+<option value="4">ê³ ê¸‰</option>
+<option value="5">ì‹ ì˜ê²½ì§€</option>
 </select>
       </div>
     </div><!--/cont_box-->
     <div class="cont_box pad_l_60">
       <div class="mag_b_25">
-        <p class="cont_tit4">Àç·á</p>
-        <ul id="divResourceArea" class="ui-sortable"><li id="liResource_1"><a href="#" class="btn-lineup ui-sortable-handle" data-original-title="" title=""></a><input type="text" name="cok_resource_nm[]" id="cok_resource_nm_1" class="form-control" style="width:300px;" placeholder="¿¹) µÅÁö°í±â"><input type="text" name="cok_resource_amt[]" id="cok_resource_amt_1" class="form-control" style="width:300px;" placeholder="¿¹) 300g"><a id="btnResourceDel_1" href="javascript:delResource(1)" class="btn-del" style=""></a></li><li id="liResource_2"><a href="#" class="btn-lineup" data-original-title="" title=""></a><input type="text" name="cok_resource_nm[]" id="cok_resource_nm_2" class="form-control" style="width:300px;" placeholder="¿¹) ¾ç¹èÃß"><input type="text" name="cok_resource_amt[]" id="cok_resource_amt_2" class="form-control" style="width:300px;" placeholder="¿¹) 1/2°³"><a id="btnResourceDel_2" href="javascript:delResource(2)" class="btn-del" style="display: none;"></a></li><li id="liResource_3"><a href="#" class="btn-lineup" data-original-title="" title=""></a><input type="text" name="cok_resource_nm[]" id="cok_resource_nm_3" class="form-control" style="width:300px;" placeholder="¿¹) Âı½Ò"><input type="text" name="cok_resource_amt[]" id="cok_resource_amt_3" class="form-control" style="width:300px;" placeholder="¿¹) 2ÄÅ"><a id="btnResourceDel_3" href="javascript:delResource(3)" class="btn-del" style="display:none"></a></li></ul>
-        <div class="btn_add" style="padding:0 0 20px 160px; width:800px;"><button type="button" onclick="addResource()" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span>Àç·áÃß°¡</button></div>
+        <p class="cont_tit4">ì¬ë£Œ</p>
+        <ul id="divResourceArea" class="ui-sortable"><li id="liResource_1"><a href="#" class="btn-lineup ui-sortable-handle" data-original-title="" title=""></a><input type="text" name="cok_resource_nm[]" id="cok_resource_nm_1" class="form-control" style="width:300px;" placeholder="ì˜ˆ) ë¼ì§€ê³ ê¸°"><input type="text" name="cok_resource_amt[]" id="cok_resource_amt_1" class="form-control" style="width:300px;" placeholder="ì˜ˆ) 300g"><a id="btnResourceDel_1" href="javascript:delResource(1)" class="btn-del" style=""></a></li><li id="liResource_2"><a href="#" class="btn-lineup" data-original-title="" title=""></a><input type="text" name="cok_resource_nm[]" id="cok_resource_nm_2" class="form-control" style="width:300px;" placeholder="ì˜ˆ) ì–‘ë°°ì¶”"><input type="text" name="cok_resource_amt[]" id="cok_resource_amt_2" class="form-control" style="width:300px;" placeholder="ì˜ˆ) 1/2ê°œ"><a id="btnResourceDel_2" href="javascript:delResource(2)" class="btn-del" style="display: none;"></a></li><li id="liResource_3"><a href="#" class="btn-lineup" data-original-title="" title=""></a><input type="text" name="cok_resource_nm[]" id="cok_resource_nm_3" class="form-control" style="width:300px;" placeholder="ì˜ˆ) ì°¹ìŒ€"><input type="text" name="cok_resource_amt[]" id="cok_resource_amt_3" class="form-control" style="width:300px;" placeholder="ì˜ˆ) 2ì»µ"><a id="btnResourceDel_3" href="javascript:delResource(3)" class="btn-del" style="display:none"></a></li></ul>
+        <div class="btn_add" style="padding:0 0 20px 160px; width:800px;"><button type="button" onclick="addResource()" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span>ì¬ë£Œì¶”ê°€</button></div>
       </div>
       <div>
-        <p class="cont_tit4">¾ç³ä</p>
-        <ul id="divSpiceArea" class="ui-sortable"><li id="liSpice_1"><a href="#" class="btn-lineup ui-sortable-handle" data-original-title="" title=""></a><input type="text" name="cok_spice_nm[]" id="cok_spice_nm_1" class="form-control" style="width:300px;" placeholder="¿¹) Âü±â¸§"><input type="text" name="cok_spice_amt[]" id="cok_spice_amt_1" class="form-control" style="width:300px;" placeholder="¿¹) 1T"><a id="btnSpiceDel_1" href="javascript:delSpice(1)" class="btn-del" style="display: none;"></a></li><li id="liSpice_2"><a href="#" class="btn-lineup" data-original-title="" title=""></a><input type="text" name="cok_spice_nm[]" id="cok_spice_nm_2" class="form-control" style="width:300px;" placeholder="¿¹) ¼Ò±İ"><input type="text" name="cok_spice_amt[]" id="cok_spice_amt_2" class="form-control" style="width:300px;" placeholder="¿¹) 2t"><a id="btnSpiceDel_2" href="javascript:delSpice(2)" class="btn-del" style="display:none"></a></li><li id="liSpice_3"><a href="#" class="btn-lineup" data-original-title="" title=""></a><input type="text" name="cok_spice_nm[]" id="cok_spice_nm_3" class="form-control" style="width:300px;" placeholder="¿¹) °íÃß°¡·ç"><input type="text" name="cok_spice_amt[]" id="cok_spice_amt_3" class="form-control" style="width:300px;" placeholder="¿¹) 2T"><a id="btnSpiceDel_3" href="javascript:delSpice(3)" class="btn-del" style="display: none;"></a></li></ul>
-        <div class="btn_add" style="padding:0 0 20px 160px; width:800px;"><button type="button" onclick="addSpice()" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span>¾ç³äÃß°¡</button></div>
+        <p class="cont_tit4">ì–‘ë…</p>
+        <ul id="divSpiceArea" class="ui-sortable"><li id="liSpice_1"><a href="#" class="btn-lineup ui-sortable-handle" data-original-title="" title=""></a><input type="text" name="cok_spice_nm[]" id="cok_spice_nm_1" class="form-control" style="width:300px;" placeholder="ì˜ˆ) ì°¸ê¸°ë¦„"><input type="text" name="cok_spice_amt[]" id="cok_spice_amt_1" class="form-control" style="width:300px;" placeholder="ì˜ˆ) 1T"><a id="btnSpiceDel_1" href="javascript:delSpice(1)" class="btn-del" style="display: none;"></a></li><li id="liSpice_2"><a href="#" class="btn-lineup" data-original-title="" title=""></a><input type="text" name="cok_spice_nm[]" id="cok_spice_nm_2" class="form-control" style="width:300px;" placeholder="ì˜ˆ) ì†Œê¸ˆ"><input type="text" name="cok_spice_amt[]" id="cok_spice_amt_2" class="form-control" style="width:300px;" placeholder="ì˜ˆ) 2t"><a id="btnSpiceDel_2" href="javascript:delSpice(2)" class="btn-del" style="display:none"></a></li><li id="liSpice_3"><a href="#" class="btn-lineup" data-original-title="" title=""></a><input type="text" name="cok_spice_nm[]" id="cok_spice_nm_3" class="form-control" style="width:300px;" placeholder="ì˜ˆ) ê³ ì¶”ê°€ë£¨"><input type="text" name="cok_spice_amt[]" id="cok_spice_amt_3" class="form-control" style="width:300px;" placeholder="ì˜ˆ) 2T"><a id="btnSpiceDel_3" href="javascript:delSpice(3)" class="btn-del" style="display: none;"></a></li></ul>
+        <div class="btn_add" style="padding:0 0 20px 160px; width:800px;"><button type="button" onclick="addSpice()" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span>ì–‘ë…ì¶”ê°€</button></div>
       </div>
     </div><!--/cont_box-->
     <div class="cont_box pad_l_60">
-      <p class="cont_tit3">¿ä¸®¼ø¼­</p>
+      <p class="cont_tit3">ìš”ë¦¬ìˆœì„œ</p>
       <div id="divStepArea" class="ui-sortable"><div id="divStepItem_1" class="step">
             <p id="divStepNum_1" class="cont_tit2_1 ui-sortable-handle" style="cursor:pointer" data-original-title="" title="">Step1</p>
             <div id="divStepUpload_1" style="display:inline-block">
@@ -944,12 +945,12 @@ $(function() {
                 </div>
             </div>
             <div id="divStepText_1" style="display:inline-block">
-                <textarea name="step_text[]" id="step_text_1" class="form-control step_cont" placeholder="¿¹) ¼Ò°í±â´Â ±â¸§±â¸¦ ¶¼¾î³»°í Àû´çÇÑ Å©±â·Î ½ä¾îÁÖ¼¼¿ä." style="height:160px; width:430px; resize:none;"></textarea>
+                <textarea name="step_text[]" id="step_text_1" class="form-control step_cont" placeholder="ì˜ˆ) ì†Œê³ ê¸°ëŠ” ê¸°ë¦„ê¸°ë¥¼ ë–¼ì–´ë‚´ê³  ì ë‹¹í•œ í¬ê¸°ë¡œ ì°ì–´ì£¼ì„¸ìš”." style="height:160px; width:430px; resize:none;"></textarea>
             </div>
             <div id="divStepBtn_1" class="step_btn" style="display:none">
                 <a href="javascript:void(0)"><span class="glyphicon glyphicon-chevron-up moveUp"></span></a>
                 <a href="javascript:void(0)"><span class="glyphicon glyphicon-chevron-down moveDown"></span></a>
-                <a href="javascript:adjustStep(1)"><b>¸ÂÃã</b></a>
+                <a href="javascript:adjustStep(1)"><b>ë§ì¶¤</b></a>
                 <a href="javascript:addStep(1)"><span class="glyphicon glyphicon-plus"></span></a>
                 <a href="javascript:delStep(1)"><span class="glyphicon glyphicon-remove"></span></a>
 
@@ -975,7 +976,7 @@ $(function() {
             <div id="divStepBtn_STEP" class="step_btn" style="display:none">
                 <a href="javascript:void(0)"><span class="glyphicon glyphicon-chevron-up moveUp"></span></a>
                 <a href="javascript:void(0)"><span class="glyphicon glyphicon-chevron-down moveDown"></span></a>
-                <a href="javascript:adjustStep(__STEP)"><b>¸ÂÃã</b></a>
+                <a href="javascript:adjustStep(__STEP)"><b>ë§ì¶¤</b></a>
                 <a href="javascript:addStep(__STEP)"><span class="glyphicon glyphicon-plus"></span></a>
                 <a href="javascript:delStep(__STEP)"><span class="glyphicon glyphicon-remove"></span></a>
 
@@ -983,10 +984,10 @@ $(function() {
           </div>
       </div><!--/step template-->
 
-      <div class="btn_add mag_b_25" style="padding:0 0 20px 180px; width:820px;"><button type="button" onclick="addStep()" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span>¼ø¼­Ãß°¡</button></div>
+      <div class="btn_add mag_b_25" style="padding:0 0 20px 180px; width:820px;"><button type="button" onclick="addStep()" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span>ìˆœì„œì¶”ê°€</button></div>
 
 
-      <p class="cont_tit4">¿ä¸®¿Ï¼º»çÁø</p>
+      <p class="cont_tit4">ìš”ë¦¬ì™„ì„±ì‚¬ì§„</p>
       <div id="divWorkArea" style="display:inline-block">
                 <div id="divWorkUpload_1" class="complete_pic">
             <input type="hidden" name="work_photo[]" id="work_photo_1" value="">
@@ -1031,16 +1032,16 @@ $(function() {
               </div>
     </div><!--/cont_box-->
     <div class="cont_box pad_l_60">
-    <p class="cont_tit4">¿ä¸®ÆÁ</p>
-    <textarea name="cok_tip" id="cok_tip" class="form-control step_cont" placeholder="¿¹) °í±â¿ä¸®¿¡´Â ¼Ò±İº¸´Ù ¼³ÅÁÀ» ¸ÕÀú ³Ö¾î¾ß ´Ü¸ÀÀÌ °Ñµ¹Áö ¾Ê°í À°ÁúÀÌ ºÎµå·¯¿ö¿ä." style="height:120px; width:620px; resize:none;"></textarea>
+    <p class="cont_tit4">ìš”ë¦¬íŒ</p>
+    <textarea name="cok_tip" id="cok_tip" class="form-control step_cont" placeholder="ì˜ˆ) ê³ ê¸°ìš”ë¦¬ì—ëŠ” ì†Œê¸ˆë³´ë‹¤ ì„¤íƒ•ì„ ë¨¼ì € ë„£ì–´ì•¼ ë‹¨ë§›ì´ ê²‰ëŒì§€ ì•Šê³  ìœ¡ì§ˆì´ ë¶€ë“œëŸ¬ì›Œìš”." style="height:120px; width:620px; resize:none;"></textarea>
     </div><!--/cont_box-->
 
 
   </div><!--/regi_center-->
   <div class="regi_btm">
-    <button type="button" onclick="doSubmit(&#39;save&#39;)" class="btn-lg btn-primary">ÀúÀå</button>
-		<button type="button" onclick="doSubmit(&#39;save_public&#39;)" class="btn-lg btn-warning">°ø°³ÇÏ±â</button>
-	    <button type="button" onclick="history.back();" class="btn-lg btn-default">Ãë¼Ò</button>
+    <button type="button" onclick="doSubmit(&#39;save&#39;)" class="btn-lg btn-primary">ì €ì¥</button>
+		<button type="button" onclick="doSubmit(&#39;save_public&#39;)" class="btn-lg btn-warning">ê³µê°œí•˜ê¸°</button>
+	    <button type="button" onclick="history.back();" class="btn-lg btn-default">ì·¨ì†Œ</button>
       </div>
 </div><!-- /container --></form>
 
@@ -1065,7 +1066,7 @@ $(function() {
         });
 		
         $('#btnRecipeInsertQnA').click(function() {
-            if (confirm('¹®ÀÇÇÏ±â ÆäÀÌÁö·Î ÀÌµ¿µÇ¸ç\nÀúÀåÇÏÁö ¾ÊÀº ±ÛÀº »ç¶óÁı´Ï´Ù.\n\nÀÌ ÆäÀÌÁö¿¡¼­ ³ª°¡½Ã°Ú½À´Ï±î?')) {
+            if (confirm('ë¬¸ì˜í•˜ê¸° í˜ì´ì§€ë¡œ ì´ë™ë˜ë©°\nì €ì¥í•˜ì§€ ì•Šì€ ê¸€ì€ ì‚¬ë¼ì§‘ë‹ˆë‹¤.\n\nì´ í˜ì´ì§€ì—ì„œ ë‚˜ê°€ì‹œê² ìŠµë‹ˆê¹Œ?')) {
                 location.href='/customer/insert.html?bid=3';
             }   
         });
@@ -1076,8 +1077,8 @@ $(function() {
     <div class="modal-dialog" style="width:1000px">
         <div class="modal-content new_folder">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><img src="yoSeksa/css/recipe_enroll/btn_close.gif" alt="´İ±â"></span></button>
-                <h4 class="modal-title text-left">·¹½ÃÇÇ µî·Ï¹æ¹ı</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><img src="yoSeksa/css/recipe_enroll/btn_close.gif" alt="ë‹«ê¸°"></span></button>
+                <h4 class="modal-title text-left">ë ˆì‹œí”¼ ë“±ë¡ë°©ë²•</h4>
             </div>
             <div class="modal-body" style="padding:0;">
                 <div class="guide_tit"><img src="yoSeksa/css/recipe_enroll/guide_tt.gif"></div>
@@ -1085,7 +1086,7 @@ $(function() {
                     <div class="panel panel-default">
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             <div class="panel-heading" role="tab" id="headingOne">
-                                <span class="guide_icon"><img src="yoSeksa/css/recipe_enroll/icon_guide_01.gif"></span>Á÷Á¢µî·ÏÇÏ±â<i class="btn_arrow"><img src="yoSeksa/css/recipe_enroll/icon_arrow1_down.png"></i>
+                                <span class="guide_icon"><img src="yoSeksa/css/recipe_enroll/icon_guide_01.gif"></span>ì§ì ‘ë“±ë¡í•˜ê¸°<i class="btn_arrow"><img src="yoSeksa/css/recipe_enroll/icon_arrow1_down.png"></i>
                             </div>
                         </a>
                         <div id="collapseOne" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="headingOne">
@@ -1103,7 +1104,7 @@ $(function() {
                     <div class="panel panel-default">
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
                             <div class="panel-heading" role="tab" id="headingThree">
-                                <span class="guide_icon"><img src="yoSeksa/css/recipe_enroll/icon_guide_03.gif"></span>Àü¹® ·¹½ÃÇÇ·Î ¹Ù²Ù±â<i class="btn_arrow"><img src="yoSeksa/css/recipe_enroll/icon_arrow1_down.png"></i>
+                                <span class="guide_icon"><img src="yoSeksa/css/recipe_enroll/icon_guide_03.gif"></span>ì „ë¬¸ ë ˆì‹œí”¼ë¡œ ë°”ê¾¸ê¸°<i class="btn_arrow"><img src="yoSeksa/css/recipe_enroll/icon_arrow1_down.png"></i>
                             </div>
                         </a>
                         <div id="collapseThree" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="headingThree">
@@ -1119,8 +1120,8 @@ $(function() {
                     <!--/panel panel-default -->
                 </div>
                 <!--/panel-group -->
-                <div class="talk_guide"><span>¿øÇÏ½Ã´Â ´äº¯À» Ã£Áö ¸øÇÏ¼Ì´Ù¸é, Q&amp;A¿¡ ¹®ÀÇÇÏ¿©ÁÖ¼¼¿ä. </span>
-                    <button class="btn btn-default" type="button" id="btnRecipeInsertQnA">¹®ÀÇÇÏ±â</button>
+                <div class="talk_guide"><span>ì›í•˜ì‹œëŠ” ë‹µë³€ì„ ì°¾ì§€ ëª»í•˜ì…¨ë‹¤ë©´, Q&amp;Aì— ë¬¸ì˜í•˜ì—¬ì£¼ì„¸ìš”. </span>
+                    <button class="btn btn-default" type="button" id="btnRecipeInsertQnA">ë¬¸ì˜í•˜ê¸°</button>
                 </div>
             </div>
         </div>

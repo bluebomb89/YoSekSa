@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR" import="com.member.dao.*"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 	
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
@@ -14,7 +14,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<title>È¸¿ø °¡ÀÔ</title>
+<title>íšŒì› ê°€ìž…</title>
 
 <link rel="stylesheet" href="http://www.webnoriter.com/~imsi/store/css/default_shop.css">
 <link rel="stylesheet" href="http://www.webnoriter.com/~imsi/store/skin/shop/basic/style.css">
@@ -89,12 +89,12 @@
 
 <body style="cursor: default;">
 
-	<!-- Áß´Ü -->
+	<!-- ì¤‘ë‹¨ -->
 	<div id="wrapper">
 		<div id="container">
-			<div id="wrapper_title">³» Á¤º¸</div>
+			<div id="wrapper_title">ë‚´ ì •ë³´</div>
 
-			<!-- È¸¿øÁ¤º¸ ÀÔ·Â/¼öÁ¤ ½ÃÀÛ { -->
+			<!-- íšŒì›ì •ë³´ ìž…ë ¥/ìˆ˜ì • ì‹œìž‘ { -->
 			<div class="event-grid_pic">
 
 				<script
@@ -104,29 +104,29 @@
 					<tr>
 						<td align="center">
 							<a href="#"> 
-							<!--·¹½ÃÇÇ --> 
+							<!--ë ˆì‹œí”¼ --> 
 								<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/51422-200.png" width="150" height="150">
-								<br><b>³»°¡¾´·¹½ÃÇÇ</b>
+								<br><b>ë‚´ê°€ì“´ë ˆì‹œí”¼</b>
 							</a>
 						</td>
 						<td align="center">
 							<a href="#">
-							<!--´ÙÀÌ¾î¸® --> 
+							<!--ë‹¤ì´ì–´ë¦¬ --> 
 								<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/136494-200.png" width="150" height="150">
-								<br><b>´ÙÀÌ¾î¸®</b>
+								<br><b>ë‹¤ì´ì–´ë¦¬</b>
 							</a>
 						</td>
 						<td align="center">
 							<a href="#">
-							<!-- ½ºÅ©·¦ --> 
+							<!-- ìŠ¤í¬ëž© --> 
 								<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/109234-200.png" width="150" height="150">
-								<br><b>½ºÅ©·¦</b>
+								<br><b>ìŠ¤í¬ëž©</b>
 							</a>
 						</td>
 					</tr>
 				</table>
 				</div>
-				<!-- ³¡ -->
+				<!-- ë -->
 			</div>
 		</div>
 	</div>

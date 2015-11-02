@@ -1,22 +1,22 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:choose>
 	<c:when test="${result=='NOID' }">
 		<script>
-			alert("¾ÆÀÌµð°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+			alert("ì•„ì´ë””ê°€ ì¡´ìž¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 			history.back();
 		</script>
 	</c:when>
 		<c:when test="${result==null }">
 		<script>
-			alert("null°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+			alert("nullê°€ ì¡´ìž¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 			history.back();
 		</script>
 	</c:when>
 	<c:when test="${result=='NOPWD' }">
 		<script>
-			alert("ºñ¹Ð¹øÈ£°¡ Æ²¸³´Ï´Ù");
+			alert("ë¹„ë°€ë²ˆí˜¸ê°€ í‹€ë¦½ë‹ˆë‹¤");
 			history.back();
 		</script>
 	</c:when>

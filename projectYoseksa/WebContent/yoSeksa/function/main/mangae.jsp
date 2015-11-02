@@ -1,12 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <script>
 function btnUp(){
-	/* > ¹öÆ° Å¬¸¯½Ã ÀÚµ¿¹øÈ£ Áõ°¡ */
+	/* > ë²„íŠ¼ í´ë¦­ì‹œ ìë™ë²ˆí˜¸ ì¦ê°€ */
 	for(var i=1; i<6; i++){
 		var btn=$('#btn'+i).text();
 		var b=parseInt(btn);
@@ -15,7 +15,7 @@ function btnUp(){
 	}
 }
 function btnDown(){
-	/* > ¹öÆ° Å¬¸¯½Ã ÀÚµ¿¹øÈ£ °¨¼Ò */
+	/* > ë²„íŠ¼ í´ë¦­ì‹œ ìë™ë²ˆí˜¸ ê°ì†Œ */
 	if($('#btn1').text()!=1){
 		for(var i=1; i<6; i++){
 			var btn=$('#btn'+i).text();
@@ -37,7 +37,7 @@ function btnDown(){
 			<h3>Recipe Search</h3>
 		</div>
 		<div class="recipe-search">
-			<%-- ${imglist } ¸®½ºÆ® ¹è¿­¿¡ÀÖ´Â 0¹øÂ°ºÎÅÍ 9¹ø±îÁö. º¯¼ö 2°³³ÖÀ¸·Á¸é statusÁà¼­ index = ·çÇÁ ¹øÈ£ --%>
+			<%-- ${imglist } ë¦¬ìŠ¤íŠ¸ ë°°ì—´ì—ìˆëŠ” 0ë²ˆì§¸ë¶€í„° 9ë²ˆê¹Œì§€. ë³€ìˆ˜ 2ê°œë„£ìœ¼ë ¤ë©´ statusì¤˜ì„œ index = ë£¨í”„ ë²ˆí˜¸ --%>
 			<c:if test="${nconfirm==0 }">
 				<c:forEach begin="0" var="img" items="${imglist }" end="9"  varStatus="status" >
 				<a id="link" href="recipeview.sek?link=${linklist[status.index] }&img=${img}&title=${titlelist[status.index]}">
@@ -66,16 +66,16 @@ function btnDown(){
 				</a>
 				</c:forEach>
 			</c:if>
-	    <!-- ¹öÆ° -->
+	    <!-- ë²„íŠ¼ -->
 	    <div class="recipe_btn_group" style="margin: 0 auto;">
 			<div class="recipe_btn" role="group" aria-label="First group">
-				<button type="button" class="btn btn-default" onclick="btnDown()">£¼</button>
+				<button type="button" class="btn btn-default" onclick="btnDown()">ï¼œ</button>
 				<button type="button" class="btn btn-default" id="btn1" onclick="idcheck1()">${mspage }</button>
 				<button type="button" class="btn btn-default" id="btn2" onclick="idcheck2()">${mspage+1 }</button>
 				<button type="button" class="btn btn-default" id="btn3" onclick="idcheck3()">${mspage+2}</button>
 				<button type="button" class="btn btn-default" id="btn4" onclick="idcheck4()">${mspage+3 }</button>
 				<button type="button" class="btn btn-default" id="btn5" onclick="idcheck5()">${mspage+4 }</button>
-				<button type="button" class="btn btn-default" onclick="btnUp()">£¾</button>
+				<button type="button" class="btn btn-default" onclick="btnUp()">ï¼</button>
 			</div>
 		</div>
 	</div>
