@@ -1,4 +1,4 @@
-package com.freedao;
+package com.freeboard;
 import java.util.*;
 public class ReplyBoardDTO {
     private int no;

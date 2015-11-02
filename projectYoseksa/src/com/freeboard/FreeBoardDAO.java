@@ -1,4 +1,4 @@
-package com.freedao;
+package com.freeboard;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
