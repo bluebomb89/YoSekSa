@@ -105,8 +105,8 @@ $(function(){
 						    </form>
 					      </div>
 					      <div class="modal-footer">
-					        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="notice_Insert()">취소</button>
-					        <a id="notice-write" href="#" style="z-index: 1000" onclick="notice_Insert()">등록</a>
+					        <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+					        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="notice_Insert()">등록</button>
 					      </div>
 					    </div>
 					  </div>

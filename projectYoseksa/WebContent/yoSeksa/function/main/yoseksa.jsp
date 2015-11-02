@@ -179,7 +179,6 @@ function notice_result(){
 		if(httpRequest.status==200){
 			var res=httpRequest.responseText;
 			$('#services').html(res);
-			alert(res);
 			// 보여주면서 div에 값저장
 		}		
 	}
