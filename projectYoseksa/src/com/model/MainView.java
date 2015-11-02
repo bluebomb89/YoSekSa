@@ -24,7 +24,7 @@ import com.noticedao.NoticeDTO;
 @Controller("main")
 public class MainView {
 	@RequestMapping("yoseksa.sek")
-	public String mainview(HttpServletRequest req) throws UnsupportedEncodingException{
+	public String mainview(HttpServletRequest req) throws IOException{
 		String strPage=req.getParameter("page");
 	    if(strPage==null)
 	    	strPage="1";
@@ -156,4 +156,5 @@ public class MainView {
 		req.setAttribute("searchview", searchview);
 		return "yoSeksa/function/main/main.jsp";		
 	}
+	
 }
