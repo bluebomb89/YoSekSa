@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="EUC-KR"?>
 <!DOCTYPE mapper    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.member.dao.member-mapper">
 	
@@ -11,11 +11,11 @@
 	
 	<select id="memberIdCount" resultType="int" parameterType="String">
 		SELECT COUNT(*) FROM yoseksa_member
-		WHERE member_id=#{id}
+		WHERE member_id=#{member_id}
 	</select>
 	
 	<select id="memberGetInfo" resultType="Yo_Member" parameterType="String">
 		SELECT member_pw,nickname FROM yoseksa_member
-		WHERE id=#{id}
+		WHERE member_id=#{member_id}
 	</select>
 </mapper>

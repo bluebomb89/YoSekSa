@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE HTML>
@@ -7,10 +8,33 @@
 <title></title>
 <link href="yoSeksa/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="yoSeksa/css/component.css" rel="stylesheet" type="text/css"  />
+<!-- æ¿¡ï¿½æ´¹ëª„ï¿½ï¿½ æ„¿ï¿½ï¿½ï¿½ script -->
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#login_Btn').click(function(){
+		var member_id=$('#member_id').val();
+		if(member_id=="")
+		{
+			$('#member_id').focus();
+			return;
+		}
+		var member_pw=$('#member_pw').val();
+		if(member_pw=="")
+		{
+			$('#member_pw').focus();
+			return;
+		}
+		$('#login_frm').submit();
+	});
+    $('#logout_Btn').click(function(){
+		$('#logout_frm').submit();
+	});
+});
+</script>
 <!-- script -->
-
-
 </head>
+
 <body  class="cbp-spmenu-push">
 		<!--bottom-->
 		  <section class="button">
@@ -18,11 +42,31 @@
 		   </section>
 			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
 			<h3>Menu</h3>
-			<!-- ¿ŞÂÊ»ó´Ü¿¡ ÀÖ´Â ¹öÆ°À» Å¬¸¯ÇßÀ»¶§ ³ª¿À´Â ¸µÅ©or¼Ó¼º°ªÀ» ÁöÁ¤ÇÏ´Â°÷ -->
+			<!-- ï¿½ì‡±ãï¿½ï¿½ï¿½â‘¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ è¸°ï¿½ï¿½ì‡±ï¿½ï¿½ ï¿½ëŒ€â”ƒï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ã…»ï¿½ï¿½ ï§ï¿½ï¿½ï¿½orï¿½ï¿½ï¿½ê¹ƒï¿½ï¿½ï¿½ ï§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ€¨ï¿½ -->
+			<p>
+			<!-- ï¿½ï¿½ï¿½ï¿½ æ¿¡ï¿½æ´¹ëª„ï¿½ï¿½ ï¿½ï¿½ -->
+			<c:if test="${sessionScope.member_id==null }">
+				<form method="post" action="member_login.sek" id="login_frm">
+					ID:<input type=text name=member_id id=member_id size=10>
+					&nbsp;
+					PW:<input type=password name=member_pw id=member_pw size=10>
+					&nbsp;
+					<input type=button value="ë¡œê·¸ì¸" id="login_Btn">
+				</form>
+			</c:if>
+			<c:if test="${sessionScope.member_id!=null }">
+				   ${sessionScope.nickname } ë‹˜ì´ ë¡œê·¸ì¸ í•˜ì…¨ìŠµë‹ˆë‹¤.
+				<form method="post" action="member_logout.sek" id="logout_frm">
+					<input type=button value="ë¡œê·¸ì•„ì›ƒ" id="logout_Btn">
+				</form>
+			</c:if>
+			
+		  	</nav>
+			<!-- ì™¼ìª½ìƒë‹¨ì— ìˆëŠ” ë²„íŠ¼ì„ í´ë¦­í–ˆì„ë•Œ ë‚˜ì˜¤ëŠ” ë§í¬orì†ì„±ê°’ì„ ì§€ì •í•˜ëŠ”ê³³ -->
 		  </nav>
 		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
  		<script src="yoSeksa/js/classie.js"></script>
-<!-- Å¸ÀÌÆ² ¸Ş´º¹Ù -->
+<!-- íƒ€ì´í‹€ ë©”ë‰´ë°” -->
 <div class="navbar navbar-inverse navbar-static-top affix-top" id="nav">
 		<div class="container">
 			<nav class="navbar navbar-default">
@@ -31,24 +75,24 @@
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav navbar-right">
 							<li class="active"><a href="yoseksa.sek">Home</a></li>
-							<li><a class="scroll" id=startmain href="#section1">°Ë»ö¸ŞÀÎ</a></li>
-							<li><a class="scroll" href="#services">°øÁö</a></li>
-							<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ÀÚÀ¯°Ô½ÃÆÇ<span class="caret"></span></a>
+							<li><a class="scroll" id=startmain href="#section1">ê²€ìƒ‰ë©”ì¸</a></li>
+							<li><a class="scroll" href="#services">ê³µì§€</a></li>
+							<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ììœ ê²Œì‹œíŒ<span class="caret"></span></a>
 								<ul class="dropdown-menu">
 									<li><a href="freeboard.sek">about1</a></li>
 									<li><a href="freeboard.sek">about2</a></li>
-									<li><a href="recipe_content.sek">·¹½ÃÇÇ ³»¿ëº¸±â</a></li>           
+									<li><a href="recipe_content.sek">ë ˆì‹œí”¼ ë‚´ìš©ë³´ê¸°</a></li>           
 								</ul>
 							</li>
-							<li><a href="diary.sek">Ä¶¸°´õ</a></li>
+							<li><a href="diary.sek">ìº˜ë¦°ë”</a></li>
 							<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
 								<ul class="dropdown-menu">
 									<li><a href="recipe.sek">gallery1</a></li>
 									<li><a href="qna.sek">Q&A</a></li>
-									<li><a href="join.sek">È¸¿ø°¡ÀÔ</a></li>           
+									<li><a href="join.sek">íšŒì›ê°€ì…</a></li>           
 								</ul>
 							</li>
-							<li><a href="main.jsp?no=5">ÀÚ°Ô±Û¾²±â</a></li>
+							<li><a href="main.jsp?no=5">ìê²Œê¸€ì“°ê¸°</a></li>
 						</ul>         
 					</div><!-- /.navbar-collapse -->
 				</div><!-- /.container-fluid -->
@@ -57,7 +101,7 @@
 	</div>
 
 <!---->
-<!--  style.css¾È¿¡ ÀÌ¹ÌÁö Ãß°¡ÇØ¼­ div classÀÌ¸§¿¡ ³Ö¾î¶ó. ÀÌ¹ÌÁö´Â ÀüÃ¼ÀûÀ¸·Î style.css¾È¿¡. 
+<!--  style.cssì•ˆì— ì´ë¯¸ì§€ ì¶”ê°€í•´ì„œ div classì´ë¦„ì— ë„£ì–´ë¼. ì´ë¯¸ì§€ëŠ” ì „ì²´ì ìœ¼ë¡œ style.cssì•ˆì—. 
 	  
 .bannersearch{
 	background:url(../images/bannersearch.jpg) no-repeat 0px 0px;
@@ -65,12 +109,12 @@
 	min-height:895px;
 }
 
-css¾È¿¡ ÀÌ¹ÌÁö ÀÌ·±½ÄÀ¸·Î Ãß°¡ÇÏ°í div¾È¿¡ Å¬·¡½º¸í ³Ö¾îÁÖ¸é µÈ´Ù.
+cssì•ˆì— ì´ë¯¸ì§€ ì´ëŸ°ì‹ìœ¼ë¡œ ì¶”ê°€í•˜ê³  divì•ˆì— í´ë˜ìŠ¤ëª… ë„£ì–´ì£¼ë©´ ëœë‹¤.
 -->
 
-<!-- ¿©±â¿¡ include ÀÛ¼º-->
+<!-- ì—¬ê¸°ì— include ì‘ì„±-->
 <jsp:include page="${jsp }"></jsp:include>
-<!--  ¸ŞÀÎÀÎÀÎÀÎÀÎÀÌ´ÑÀÌ´ÏÀÌ -->
+<!--  ë©”ì¸ì¸ì¸ì¸ì¸ì´ë‹Œì´ë‹ˆì´ -->
 <script type="text/javascript">
 		$(document).ready(function() {
 				/*
@@ -107,7 +151,7 @@ css¾È¿¡ ÀÌ¹ÌÁö ÀÌ·±½ÄÀ¸·Î Ãß°¡ÇÏ°í div¾È¿¡ Å¬·¡½º¸í ³Ö¾îÁÖ¸é µÈ´Ù.
 			}
 </script>
 <a href="#to-top" id="toTop" style="display: block;right: 10px;"><span id="toTopHover" style="opacity: 1;"> </span></a>
-<!-- ÀÚ¹Ù ½ºÅ©¸³Æ® È£Ãâ-->
+<!-- ìë°” ìŠ¤í¬ë¦½íŠ¸ í˜¸ì¶œ-->
 <!----> 
 <!-- Bootstrap core JavaScript
     ================================================== -->
