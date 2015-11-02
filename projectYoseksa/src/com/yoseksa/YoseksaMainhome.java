@@ -28,12 +28,13 @@ public class YoseksaMainhome implements YoseksaModel{
 	    req.setAttribute("notice_today", new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
 	    req.setAttribute("notice_list", list);
 	    req.setAttribute("notice_curpage", curpage);
+	    
 	    req.setAttribute("notice_totalpage", totalpage);
-//		°øÁö»çÇ× ³»¿ëº¸±â Ãâ·Â
+//		ê³µì§€ì‚¬í•­ ë‚´ìš©ë³´ê¸° ì¶œë ¥
 		req.setAttribute("jsp",	"../main/yoseksa.jsp");
 		req.setAttribute("ntpage",	"../notice/notice.jsp");
+		req.setAttribute("mangae",	"../main/mangae.jsp");
 		return "yoSeksa/function/main/main.jsp";
 	}
 
 }
-

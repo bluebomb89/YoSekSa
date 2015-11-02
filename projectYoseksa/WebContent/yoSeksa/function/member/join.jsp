@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8" import="com.member.dao.*"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+	pageEncoding="EUC-KR" import="com.member.dao.*"%>
 	
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
@@ -14,7 +14,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<title>회원 가입</title>
+<title>ȸ�� ����</title>
 
 <link rel="stylesheet" href="http://www.webnoriter.com/~imsi/store/css/default_shop.css">
 <link rel="stylesheet" href="http://www.webnoriter.com/~imsi/store/skin/shop/basic/style.css">
@@ -126,9 +126,9 @@
 		});
 	});
 
-	// submit 최종 폼체크
+	// submit ���� ��üũ
 	function regform_submit(f) {
-		// 회원아이디 검사
+		// ȸ�����̵� �˻�
 		if (f.w.value == "") {
 			var msg = member_id_check();
 			if (msg) {
@@ -140,28 +140,28 @@
 
 		if (f.w.value == "") {
 			if (f.member_pw.value.length < 6) {
-				alert("비밀번호를 3글자 이상 입력하십시오.");
+				alert("��й�ȣ�� 3���� �̻� �Է��Ͻʽÿ�.");
 				f.member_pw.focus();
 				return false;
 			}
 		}
 
 		if (f.member_pw.value != f.member_pw_re.value) {
-			alert("비밀번호가 같지 않습니다.");
+			alert("��й�ȣ�� ���� �ʽ��ϴ�.");
 			f.member_pw_re.focus();
 			return false;
 		}
 
 		if (f.member_pw.value.length > 0) {
 			if (f.member_pw_re.value.length < 6) {
-				alert("비밀번호를 3글자 이상 입력하십시오.");
+				alert("��й�ȣ�� 3���� �̻� �Է��Ͻʽÿ�.");
 				f.member_pw_re.focus();
 				return false;
 			}
 		}
 
 
-		// 닉네임 검사
+		// �г��� �˻�
 		if ((f.w.value == "")
 				|| (f.w.value == "u" && f.nickname.defaultValue != f.nickname.value)) {
 			var msg = nickname_check();
@@ -172,7 +172,7 @@
 			}
 		}
 
-		// E-mail 검사
+		// E-mail �˻�
 		if ((f.w.value == "")
 				|| (f.w.value == "u" && f.email.defaultValue != f.email.value)) {
 			var msg = email_check();
@@ -231,12 +231,12 @@ $(function(){
 
 <body style="cursor: default;">
 
-	<!-- 중단 -->
+	<!-- �ߴ� -->
 	<div id="wrapper">
 		<div id="container">
-			<div id="wrapper_title">회원 가입</div>
+			<div id="wrapper_title">ȸ�� ����</div>
 
-			<!-- 회원정보 입력/수정 시작 { -->
+			<!-- ȸ������ �Է�/���� ���� { -->
 			<div class="mbskin">
 
 				<script src="http://www.webnoriter.com/~imsi/store/js/jquery.register_form.js"></script>
@@ -247,20 +247,20 @@ $(function(){
 							<tbody>
 								<tr>
 									<th scope="row">
-										<label for="reg_member_id">아이디
-											<strong	class="sound_only">필수</strong>
+										<label for="reg_member_id">���̵�
+											<strong	class="sound_only">�ʼ�</strong>
 										</label>
 									</th>
 									<td>
-										<span class="frm_info">영문자, 숫자, _ 만 입력 가능. 최소 6자이상 입력하세요.</span>
+										<span class="frm_info">������, ����, _ �� �Է� ����. �ּ� 6���̻� �Է��ϼ���.</span>
 											<input type="text" name="member_id" value="" id="reg_member_id" required="" class="frm_input required "	minlength="6" maxlength="20">
 										<span id="msg_member_id"></span>
 									</td>
 								</tr>
 								<tr>
 									<th scope="row">
-										<label for="reg_member_pw">비밀번호
-											<strong class="sound_only">필수</strong>
+										<label for="reg_member_pw">��й�ȣ
+											<strong class="sound_only">�ʼ�</strong>
 										</label>
 									</th>
 									<td>
@@ -269,8 +269,8 @@ $(function(){
 								</tr>
 								<tr>
 									<th scope="row">
-										<label for="reg_member_pw_re">비밀번호 확인
-											<strong class="sound_only">필수</strong>
+										<label for="reg_member_pw_re">��й�ȣ Ȯ��
+											<strong class="sound_only">�ʼ�</strong>
 										</label>
 									</th>
 									<td>
@@ -283,13 +283,13 @@ $(function(){
 
 					<div class="tbl_frm01 tbl_wrap">
 						<table>
-							<caption>개인정보 입력</caption>
+							<caption>�������� �Է�</caption>
 							<tbody>
 
 								<tr>
 									<th scope="row">
-										<label for="reg_member_nick">닉네임
-											<strong class="sound_only">필수</strong>
+										<label for="reg_member_nick">�г���
+											<strong class="sound_only">�ʼ�</strong>
 										</label>
 									</th>
 									<td>
@@ -301,7 +301,7 @@ $(function(){
 								<tr>
 									<th scope="row">
 										<label for="reg_member_email">E-mail
-											<strong class="sound_only">필수</strong>
+											<strong class="sound_only">�ʼ�</strong>
 										</label>
 									</th>
 									<td>
@@ -311,18 +311,18 @@ $(function(){
 							</tbody>
 						</table>
 					</div>
-					<!-- 등록/취소 버튼 -->
+					<!-- ���/��� ��ư -->
 					<div class="btn_confirm">
-						<input type="submit" value="회원가입" id="btnSub"
+						<input type="submit" value="ȸ������" id="btnSub"
 							class="btn_submit" accesskey="s"> <a
-							href="http://www.webnoriter.com/~imsi/store" class="btnCancel">취소</a>
+							href="http://www.webnoriter.com/~imsi/store" class="btnCancel">���</a>
 					</div>
 				</form>
 			</div>
-			<!-- } 회원정보 입력/수정 끝 -->
+			<!-- } ȸ������ �Է�/���� �� -->
 		</div>
 
-		<!-- 하단 시작 { -->
+		<!-- �ϴ� ���� { -->
 	</div>
 
 	<script src="../../js/bootstrap.js"></script>

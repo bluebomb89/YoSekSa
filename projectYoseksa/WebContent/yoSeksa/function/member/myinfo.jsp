@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8" import="com.member.dao.*"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+	pageEncoding="EUC-KR" import="com.member.dao.*"%>
 	
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
@@ -14,7 +14,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<title>íšŒì› ê°€ìž…</title>
+<title>È¸¿ø °¡ÀÔ</title>
 
 <link rel="stylesheet" href="http://www.webnoriter.com/~imsi/store/css/default_shop.css">
 <link rel="stylesheet" href="http://www.webnoriter.com/~imsi/store/skin/shop/basic/style.css">
@@ -89,12 +89,12 @@
 
 <body style="cursor: default;">
 
-	<!-- ì¤‘ë‹¨ -->
+	<!-- Áß´Ü -->
 	<div id="wrapper">
 		<div id="container">
-			<div id="wrapper_title">ë‚´ ì •ë³´</div>
+			<div id="wrapper_title">³» Á¤º¸</div>
 
-			<!-- íšŒì›ì •ë³´ ìž…ë ¥/ìˆ˜ì • ì‹œìž‘ { -->
+			<!-- È¸¿øÁ¤º¸ ÀÔ·Â/¼öÁ¤ ½ÃÀÛ { -->
 			<div class="event-grid_pic">
 
 				<script
@@ -104,29 +104,29 @@
 					<tr>
 						<td align="center">
 							<a href="#"> 
-							<!--ë ˆì‹œí”¼ --> 
+							<!--·¹½ÃÇÇ --> 
 								<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/51422-200.png" width="150" height="150">
-								<br><b>ë‚´ê°€ì“´ë ˆì‹œí”¼</b>
+								<br><b>³»°¡¾´·¹½ÃÇÇ</b>
 							</a>
 						</td>
 						<td align="center">
 							<a href="#">
-							<!--ë‹¤ì´ì–´ë¦¬ --> 
+							<!--´ÙÀÌ¾î¸® --> 
 								<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/136494-200.png" width="150" height="150">
-								<br><b>ë‹¤ì´ì–´ë¦¬</b>
+								<br><b>´ÙÀÌ¾î¸®</b>
 							</a>
 						</td>
 						<td align="center">
 							<a href="#">
-							<!-- ìŠ¤í¬ëž© --> 
+							<!-- ½ºÅ©·¦ --> 
 								<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/109234-200.png" width="150" height="150">
-								<br><b>ìŠ¤í¬ëž©</b>
+								<br><b>½ºÅ©·¦</b>
 							</a>
 						</td>
 					</tr>
 				</table>
 				</div>
-				<!-- ë -->
+				<!-- ³¡ -->
 			</div>
 		</div>
 	</div>
