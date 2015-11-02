@@ -45,7 +45,7 @@ function btnDown(){
 	   				<div class="thumbnail">
 						<img src="${img}">
 						<div class="caption">
-							<h5>${titlelist[status.index]}</h3>
+							<h5>${titlelist[status.index]}</h5>
 		               </div>
 					</div>
 				</div>
@@ -59,7 +59,7 @@ function btnDown(){
 	   				<div class="thumbnail">
 						<img src="${img}">
 						<div class="caption">
-							<h5>${titlelist[status.index]}</h3>
+							<h5>${titlelist[status.index]}</h5>
 		               </div>
 					</div>
 				</div>
@@ -78,6 +78,7 @@ function btnDown(){
 				<button type="button" class="btn btn-default" onclick="btnUp()">£¾</button>
 			</div>
 		</div>
+	</div>
 </div>
 </body>
 </html>
