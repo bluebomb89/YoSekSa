@@ -80,34 +80,20 @@ public class MainView {
         	nconfirm=0;
 
         }
-        System.out.println(mspage);
-    	
         String mangaesearch =  URLEncoder.encode(searchname, "UTF-8");
-        System.out.println("1");
 		document = Jsoup.connect("http://www.10000recipe.com/recipe/list.html?q="+mangaesearch+"&order=weight&page="+page).get();
-		System.out.println("2");
         if (null!=document) {
-        	System.out.println("3");
         	// a태그의 클래스가 thumbnail인 모든값을 가져옵니다.
         	elements = document.select("a.thumbnail");
-        	System.out.println(elements);
         	elementsimg = document.select("a.thumbnail > img[src$=.jpg]");
-	        	System.out.println("elementsimg: "+elementsimg);
         	elementstitle = document.select("a.thumbnail > div > h4");	        	
-	        	System.out.println("elementstitle: "+elementstitle);
-	        	System.out.println("사이즈"+elements.size());
             for (int i = 0; i < elements.size(); i++) {
             	if(i<=elements.size()-1){
             		try{
-            			System.out.println("i="+i);
 		            	a++;
 		            	String mangaeimg=elementsimg.get(i).attr("src");
 		            	String mangaetitle=elementstitle.get(i).text();
 		            	String mangaelink="http://www.10000recipe.com"+ elements.get(i).attr("href");
-
-		            	System.out.println("mangaeimg="+mangaeimg);
-		            	System.out.println("mangaelise="+titlelist);
-		            	System.out.println("mangaelink="+mangaelink);
 //			                System.out.println("------------------------------------------");
 //			                System.out.println("출력 번호 :" + a);
 //			                System.out.println("검색어 : " + elementstitle.get(i).text());
