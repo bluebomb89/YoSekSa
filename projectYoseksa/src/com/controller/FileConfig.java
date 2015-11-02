@@ -5,7 +5,18 @@ public class FileConfig {
 	public List<String> getJavaFile(String pack){
 		List<String> list=new ArrayList<String>();
 		try{
-			String path="C:\\webDev\\webStudy\\15.11.02 MVCProject2\\src\\";
+			//영권 패스
+			String path="C:\\Users\\남영권\\git\\yoseksaProject\\projectYoseksa\\src\\";
+			//우식 패스
+//			String path="C:\\Users\\남영권\\git\\yoseksaProject\\projectYoseksa\\src";
+			//태진 패스
+//			String path="C:\\Users\\남영권\\git\\yoseksaProject\\projectYoseksa\\src";
+			//민영 패스
+//			String path="C:\\Users\\남영권\\git\\yoseksaProject\\projectYoseksa\\src";
+			//승형 패스
+//			String path="C:\\Users\\남영권\\git\\yoseksaProject\\projectYoseksa\\src";
+			//홍의 패스
+//			String path="C:\\Users\\남영권\\git\\yoseksaProject\\projectYoseksa\\src";
 			String temp=pack.replace('.', '\\');
 			File dir=new File(path+temp);
 			File[] files=dir.listFiles();
