@@ -5,8 +5,7 @@
 	<!-- DTO클래스 등록 -->
 	<typeAliases>
 		<typeAlias type="com.member.dao.MemberDTO" alias="Yo_Member"/>	<!-- 회원관리 -->
-		<typeAlias type="com.free.dao.FreeBoardDTO" alias="Freeboard"/>	<!-- 자유게시판 -->
-		<typeAlias type="com.yoseksa.ReplyDTO" alias="Reply"/>
+		<typeAlias type="com.freedao.FreeBoardDTO" alias="Freeboard"/>	<!-- 자유게시판 -->
 		<typeAlias type="com.recipedao.RecipeDTO" alias="Recipe"/>		<!-- 나만의레시피 -->
 		<typeAlias type="com.recipedao.HowDTO" alias="How"/>			<!-- 나만의레시피 - 방법별 -->
 		<typeAlias type="com.recipedao.JaeryoDTO" alias="Jaeryo"/>		<!-- 나만의레시피 - 재료별 -->
@@ -33,7 +32,7 @@
 	<!-- SQL문장 등록 -->
 	<mappers>
 		<mapper resource="com/member/dao/member-mapper.xml"/>			<!-- 회원관리 -->
-		<mapper resource="com/free/dao/free-mapper.xml"/>				<!-- 자유게시판 -->
+		<mapper resource="com/freedao/free-mapper.xml"/>				<!-- 자유게시판 -->
 		<mapper resource="com/recipedao/recipe-mapper.xml"/>			<!-- 나만의레시피 -->
 		<mapper resource="com/diarydao/diary-mapper.xml"/>				<!-- 달력 -->
 		<mapper resource="com/scrapdao/scrap-mapper.xml"/>				<!-- 스크랩 -->

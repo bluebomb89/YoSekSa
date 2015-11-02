@@ -1,4 +1,4 @@
-package com.freeboard;
+package com.freedao;
 import java.util.*;
 
 public class FreeBoardDTO {

@@ -1,4 +1,4 @@
-package com.freeboard;
+package com.freedao;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
