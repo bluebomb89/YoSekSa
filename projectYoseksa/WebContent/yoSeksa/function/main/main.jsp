@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -7,107 +8,150 @@
 <title></title>
 <link href="yoSeksa/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="yoSeksa/css/component.css" rel="stylesheet" type="text/css"  />
+<!-- Êø°ÔøΩÊ¥πÎ™ÑÔøΩÔøΩ ÊÑøÔøΩÔøΩÔøΩ script -->
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+   $('#login_Btn').click(function(){
+      var member_id=$('#member_id').val();
+      if(member_id=="")
+      {
+         $('#member_id').focus();
+         return;
+      }
+      var member_pw=$('#member_pw').val();
+      if(member_pw=="")
+      {
+         $('#member_pw').focus();
+         return;
+      }
+      $('#login_frm').submit();
+   });
+    $('#logout_Btn').click(function(){
+      $('#logout_frm').submit();
+   });
+});
+</script>
 <!-- script -->
-
-
 </head>
+
 <body  class="cbp-spmenu-push">
-		<!--bottom-->
-		  <section class="button">
-					<button id="showLeftPush"><img src="yoSeksa/images/menu-icon.png" alt=""></button>
-		   </section>
-			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
-			<h3>Menu</h3>
-			<!-- øﬁ¬ ªÛ¥‹ø° ¿÷¥¬ πˆ∆∞¿ª ≈¨∏Ø«ﬂ¿ª∂ß ≥™ø¿¥¬ ∏µ≈©orº”º∫∞™¿ª ¡ˆ¡§«œ¥¬∞˜ -->
-		  </nav>
-		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
- 		<script src="yoSeksa/js/classie.js"></script>
-<!-- ≈∏¿Ã∆≤ ∏ﬁ¥∫πŸ -->
+      <!--bottom-->
+        <section class="button">
+               <button id="showLeftPush"><img src="yoSeksa/images/menu-icon.png" alt=""></button>
+         </section>
+         <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+         <h3>Menu</h3>
+         <!-- ÔøΩÏá±„ÅùÔøΩÔøΩÔøΩ‚ë•ÔøΩÔøΩ ÔøΩÔøΩÔøΩÔøΩ Ë∏∞ÔøΩÔøΩÏá±ÔøΩÔøΩ ÔøΩÎåÄ‚îÉÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ ÔøΩÔøΩÔøΩ„ÖªÔøΩÔøΩ ÔßçÔøΩÔøΩÔøΩorÔøΩÔøΩÔøΩÍπÉÔøΩÔøΩÔøΩ ÔßûÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÊÄ®ÔøΩ -->
+         <p>
+         <!-- ÔøΩÔøΩÔøΩÔøΩ Êø°ÔøΩÊ¥πÎ™ÑÔøΩÔøΩ ÔøΩÔøΩ -->
+         <c:if test="${sessionScope.member_id==null }">
+            <form method="post" action="member_login.sek" id="login_frm">
+               ID:<input type=text name=member_id id=member_id size=10>
+               &nbsp;
+               PW:<input type=password name=member_pw id=member_pw size=10>
+               &nbsp;
+               <input type=button value="Î°úÍ∑∏Ïù∏" id="login_Btn">
+            </form>
+         </c:if>
+         <c:if test="${sessionScope.member_id!=null }">
+               ${sessionScope.nickname } ÎãòÏù¥ Î°úÍ∑∏Ïù∏ ÌïòÏÖ®ÏäµÎãàÎã§.
+            <form method="post" action="member_logout.sek" id="logout_frm">
+               <input type=button value="Î°úÍ∑∏ÏïÑÏõÉ" id="logout_Btn">
+            </form>
+         </c:if>
+         
+           </nav>
+         <!-- ÏôºÏ™ΩÏÉÅÎã®Ïóê ÏûàÎäî Î≤ÑÌäºÏùÑ ÌÅ¥Î¶≠ÌñàÏùÑÎïå ÎÇòÏò§Îäî ÎßÅÌÅ¨orÏÜçÏÑ±Í∞íÏùÑ ÏßÄÏ†ïÌïòÎäîÍ≥≥ -->
+        </nav>
+      <!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
+       <script src="yoSeksa/js/classie.js"></script>
+<!-- ÌÉÄÏù¥ÌãÄ Î©îÎâ¥Î∞î -->
 <div class="navbar navbar-inverse navbar-static-top affix-top" id="nav">
-		<div class="container">
-			<nav class="navbar navbar-default">
-				<div class="container-fluid">
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-						<ul class="nav navbar-nav navbar-right">
-							<li class="active"><a href="yoseksa.sek">Home</a></li>
-							<li><a class="scroll" id=startmain href="#section1">∞Àªˆ∏ﬁ¿Œ</a></li>
-							<li><a class="scroll" href="#services">∞¯¡ˆ</a></li>
-							<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">¿⁄¿Ø∞‘Ω√∆«<span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li><a href="freeboard.sek">about1</a></li>
-									<li><a href="freeboard.sek">about2</a></li>
-									<li><a href="recipe_content.sek">∑πΩ√«« ≥ªøÎ∫∏±‚</a></li>           
-								</ul>
-							</li>
-							<li><a href="diary.sek">ƒ∂∏∞¥ı</a></li>
-							<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li><a href="recipe.sek">gallery1</a></li>
-									<li><a href="qna.sek">Q&A</a></li>
-									<li><a href="join.sek">»∏ø¯∞°¿‘</a></li>           
-								</ul>
-							</li>
-							<li><a href="main.jsp?no=5">¿⁄∞‘±€æ≤±‚</a></li>
-						</ul>         
-					</div><!-- /.navbar-collapse -->
-				</div><!-- /.container-fluid -->
-			</nav>	
-		</div>
-	</div>
+      <div class="container">
+         <nav class="navbar navbar-default">
+            <div class="container-fluid">
+               <!-- Collect the nav links, forms, and other content for toggling -->
+               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav navbar-right">
+                     <li class="active"><a href="yoseksa.sek">Home</a></li>
+                     <li><a class="scroll" id=startmain href="#section1">Í≤ÄÏÉâÎ©îÏù∏</a></li>
+                     <li><a class="scroll" href="#services">Í≥µÏßÄ</a></li>
+                     <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ÏûêÏú†Í≤åÏãúÌåê<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                           <li><a href="freeboard.sek">about1</a></li>
+                           <li><a href="freeboard.sek">about2</a></li>
+                           <li><a href="recipe_content.sek">Î†àÏãúÌîº ÎÇ¥Ïö©Î≥¥Í∏∞</a></li>           
+                        </ul>
+                     </li>
+                     <li><a href="diary.sek">Ï∫òÎ¶∞Îçî</a></li>
+                     <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                           <li><a href="recipe.sek">gallery1</a></li>
+                           <li><a href="qna.sek">Q&A</a></li>
+                           <li><a href="join.sek">ÌöåÏõêÍ∞ÄÏûÖ</a></li>           
+                        </ul>
+                     </li>
+                     <li><a href="main.jsp?no=5">ÏûêÍ≤åÍ∏ÄÏì∞Í∏∞</a></li>
+                  </ul>         
+               </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+         </nav>   
+      </div>
+   </div>
 
 <!---->
-<!--  style.cssæ»ø° ¿ÃπÃ¡ˆ √ﬂ∞°«ÿº≠ div class¿Ã∏ßø° ≥÷æÓ∂Û. ¿ÃπÃ¡ˆ¥¬ ¿¸√º¿˚¿∏∑Œ style.cssæ»ø°. 
-	  
+<!--  style.cssÏïàÏóê Ïù¥ÎØ∏ÏßÄ Ï∂îÍ∞ÄÌï¥ÏÑú div classÏù¥Î¶ÑÏóê ÎÑ£Ïñ¥Îùº. Ïù¥ÎØ∏ÏßÄÎäî Ï†ÑÏ≤¥Ï†ÅÏúºÎ°ú style.cssÏïàÏóê. 
+     
 .bannersearch{
-	background:url(../images/bannersearch.jpg) no-repeat 0px 0px;
-	background-size:100% 100%;
-	min-height:895px;
+   background:url(../images/bannersearch.jpg) no-repeat 0px 0px;
+   background-size:100% 100%;
+   min-height:895px;
 }
 
-cssæ»ø° ¿ÃπÃ¡ˆ ¿Ã∑±Ωƒ¿∏∑Œ √ﬂ∞°«œ∞Ì divæ»ø° ≈¨∑°Ω∫∏Ì ≥÷æÓ¡÷∏È µ»¥Ÿ.
+cssÏïàÏóê Ïù¥ÎØ∏ÏßÄ Ïù¥Îü∞ÏãùÏúºÎ°ú Ï∂îÍ∞ÄÌïòÍ≥† divÏïàÏóê ÌÅ¥ÎûòÏä§Î™Ö ÎÑ£Ïñ¥Ï£ºÎ©¥ ÎêúÎã§.
 -->
 
-<!-- ø©±‚ø° include ¿€º∫-->
+<!-- Ïó¨Í∏∞Ïóê include ÏûëÏÑ±-->
 <jsp:include page="${jsp }"></jsp:include>
-<!--  ∏ﬁ¿Œ¿Œ¿Œ¿Œ¿Œ¿Ã¥—¿Ã¥œ¿Ã -->
+<!--  Î©îÏù∏Ïù∏Ïù∏Ïù∏Ïù∏Ïù¥ÎãåÏù¥ÎãàÏù¥ -->
 <script type="text/javascript">
-		$(document).ready(function() {
-				/*
-				var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-				};
-				*/
-		$().UItoTop({ easingType: 'easeOutQuart' });
+      $(document).ready(function() {
+            /*
+            var defaults = {
+            containerID: 'toTop', // fading element id
+            containerHoverID: 'toTopHover', // fading element hover id
+            scrollSpeed: 1200,
+            easingType: 'linear' 
+            };
+            */
+      $().UItoTop({ easingType: 'easeOutQuart' });
 });
 </script>
 <script>
-			var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
-				showLeftPush = document.getElementById( 'showLeftPush' ),
-				showRightPush = document.getElementById( 'showRightPush' ),
-				body = document.body;
+         var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+            showLeftPush = document.getElementById( 'showLeftPush' ),
+            showRightPush = document.getElementById( 'showRightPush' ),
+            body = document.body;
 
-			showLeftPush.onclick = function() {
-				classie.toggle( this, 'active' );
-				classie.toggle( body, 'cbp-spmenu-push-toright' );
-				classie.toggle( menuLeft, 'cbp-spmenu-open' );
-				disableOther( 'showLeftPush' );
-			};
+         showLeftPush.onclick = function() {
+            classie.toggle( this, 'active' );
+            classie.toggle( body, 'cbp-spmenu-push-toright' );
+            classie.toggle( menuLeft, 'cbp-spmenu-open' );
+            disableOther( 'showLeftPush' );
+         };
 
-			function disableOther( button ) {
-				if( button !== 'showLeftPush' ) {
-					classie.toggle( showLeftPush, 'disabled' );
-				}
-				if( button !== 'showRightPush' ) {
-					classie.toggle( showRightPush, 'disabled' );
-				}
-			}
+         function disableOther( button ) {
+            if( button !== 'showLeftPush' ) {
+               classie.toggle( showLeftPush, 'disabled' );
+            }
+            if( button !== 'showRightPush' ) {
+               classie.toggle( showRightPush, 'disabled' );
+            }
+         }
 </script>
 <a href="#to-top" id="toTop" style="display: block;right: 10px;"><span id="toTopHover" style="opacity: 1;"> </span></a>
-<!-- ¿⁄πŸ Ω∫≈©∏≥∆Æ »£√‚-->
+<!-- ÏûêÎ∞î Ïä§ÌÅ¨Î¶ΩÌä∏ Ìò∏Ï∂ú-->
 <!----> 
 <!-- Bootstrap core JavaScript
     ================================================== -->

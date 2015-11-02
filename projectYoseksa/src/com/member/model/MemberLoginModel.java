@@ -16,9 +16,11 @@ public class MemberLoginModel  implements YoseksaModel {
 		String member_pw=req.getParameter("member_pw");
 		String result="";
 		int count=MemberDAO.memberIdCount(member_id);
+		try{
 		if(count==0)
 		{
 			result="NOID";
+			req.setAttribute("result", result);
 		}
 		else
 		{
@@ -31,13 +33,18 @@ public class MemberLoginModel  implements YoseksaModel {
 				// ${sessionScope.id} => session.getAttribute("id")
 				session.setAttribute("nickname", d.getNickname());
 				//session.setAttribute("admin", d.getAdmin());
+				req.setAttribute("result", result);
 			}
 			else
 			{
 				result="NOPWD";
+				req.setAttribute("result", result);
 			}
 		}
-		return "yoseksa/function/member/login.jsp";
+		}catch(Exception ex){
+			ex.printStackTrace();
+		}
+		return "yoSeksa/function/member/login.jsp";
 	}
 
 }

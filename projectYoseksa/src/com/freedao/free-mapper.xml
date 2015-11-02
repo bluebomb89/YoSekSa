@@ -4,9 +4,9 @@
  <mapper namespace="com.board.dao.free-mapper">
 
     <select id="boardListData" resultType="Freeboard" parameterType="java.util.Map">
-      SELECT free_no,nickname,free_content, dbday , hit, num
-      FROM (SELECT free_no,nickname, free_content TO_CHAR(regdate,'YYYY-MM-DD') as dbday , hit, rownum as num
-      FROM (SELECT free_no,nickname, free_content regdate , hit 
+      SELECT free_no,nickname,free_content, dbday
+      FROM (SELECT free_no,nickname, free_content TO_CHAR(free_date,'YYYY-MM-DD') as dbday
+      FROM (SELECT free_no,nickname, free_content free_date 
       FROM yoseksa_freeboard ORDER BY no DESC)) 
       WHERE num BETWEEN #{start} AND #{end}
     </select>
@@ -27,15 +27,15 @@
     </insert>
  </mapper>
 
-	<!-- 우식 -->
-	<!-- ㅁㅁ -->
-	<!-- 영권 -->
-	<!-- ㅁㅁ -->
-	<!-- 태진 -->
-	<!-- ㅁㅁ -->
-	<!-- 승현 -->
-	<!-- ㅁㅁ -->
-	<!-- 홍의 -->
-	<!-- ㅁㅁ -->
-	<!-- 민영 -->
-	<!-- ㅁㅁ -->
+   <!-- 우식 -->
+   <!-- ㅁㅁ -->
+   <!-- 영권 -->
+   <!-- ㅁㅁ -->
+   <!-- 태진 -->
+   <!-- ㅁㅁ -->
+   <!-- 승현 -->
+   <!-- ㅁㅁ -->
+   <!-- 홍의 -->
+   <!-- ㅁㅁ -->
+   <!-- 민영 -->
+   <!-- ㅁㅁ -->

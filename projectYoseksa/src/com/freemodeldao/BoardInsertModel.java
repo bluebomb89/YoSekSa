@@ -1,19 +1,18 @@
-package com.member.model;
+package com.freemodeldao;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import com.common.YoseksaModel;
 
-public class MemberLogoutModel implements YoseksaModel {
+public class BoardInsertModel implements YoseksaModel{
 
 	@Override
 	public String handlerRequest(HttpServletRequest req, HttpServletResponse res) throws Exception {
 		// TODO Auto-generated method stub
-		HttpSession session=req.getSession();
-		session.invalidate();
-		return "yoseksa.sek";
+		req.setAttribute("title", "±Û¾²±â");
+		req.setAttribute("jsp", "../function/freeboard/board_insert.jsp");
+		return "yoSeksa/function/main/mainhome.jsp";
 	}
 
 }
