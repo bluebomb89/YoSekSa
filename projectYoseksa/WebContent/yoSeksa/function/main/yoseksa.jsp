@@ -19,7 +19,8 @@
 <link href="yoSeksa/css/owl.theme.css" rel="stylesheet">
 <link href="yoSeksa/css/index.css" rel="stylesheet">
 <!-- script -->
-<script src="yoSeksa/js/jquery.min.js"></script>
+
+<script src="yoSeksa/js/jquery-2.1.4.min.js"></script>
 <script src="yoSeksa/js/jquery.cycle.all.js"></script>
 
 <script src="yoSeksa/js/owl.carousel.js"></script>

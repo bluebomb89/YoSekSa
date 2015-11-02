@@ -45,6 +45,14 @@ padding-bottom: 5px;
 width: 80%;
 margin: 0 auto;
 }
+body.modal-open {
+  overflow: inherit;
+  padding-right: 0 !important;
+}
+body.cbp-spmenu-push{
+  overflow: inherit;
+  padding-right: 0 !important;
+}
 </style>
 <script type="text/javascript">
 $(document).ready(function() {
