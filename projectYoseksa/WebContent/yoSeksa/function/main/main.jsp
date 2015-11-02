@@ -8,7 +8,7 @@
 <title></title>
 <link href="yoSeksa/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="yoSeksa/css/component.css" rel="stylesheet" type="text/css"  />
-<!-- 濡�洹몄�� 愿��� script -->
+<!-- script -->
 <script type="text/javascript">
 $(function(){
    $('#login_Btn').click(function(){

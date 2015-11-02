@@ -20,25 +20,19 @@
 <link rel="stylesheet" type="text/css" href="yoSeksa/css/font.css">
 <link rel="stylesheet" type="text/css" href="yoSeksa/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="yoSeksa/css/recipe_content.css">
+<style type="text/css">
+#nav.affix-top {
+	padding-top:6px;
+}
+
+</style>
+<script type="text/javascript">
+	$('#nav').removeClass('affix-top').addClass('affix');
+</script>
+
 <!-- script -->
 <!--/script-->
-<script type="text/javascript">
-	$(document).ready(function() {
-		/* affix the navbar after scroll below header */
-		$('#nav').affix({
-			offset: {top: $('header').height()-$('#nav').height()}
-		});
-		
-		/* affix-top 에서 affix로 수정될대 이벤트 발생*/
-		$('#nav').on("affix.bs.affix",function(){
-			$("#startmain").text("haa!");
-		});
-		/* affix에서 affix-top으로 전환될때 이벤트 발생*/
-		$('#nav').on("affix-top.bs.affix",function(){
-			$("#startmain").text("Search");
-		});
-	});
-</script>
+
 </head>
 <body>
  <div class="blank_bottom2"></div>

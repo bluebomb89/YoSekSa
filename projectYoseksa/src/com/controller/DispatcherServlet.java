@@ -1,36 +1,50 @@
 package com.controller;
+
 import java.io.*;
+import java.lang.reflect.Method;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import com.common.YoseksaModel;
+import java.util.*;
 
-// Controller
 public class DispatcherServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private WebApplicationContext wc;
+
+	private List<String> clsList=new ArrayList<String>();
+		
+	
 	public void init(ServletConfig config) throws ServletException {
-		String path=config.getInitParameter("xmlPath");
-		wc=new WebApplicationContext(path);
+		FileConfig fc=new FileConfig();
+		clsList=fc.getJavaFile("com.model");
 	}
 
+	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try{
 			String cmd=request.getRequestURI();
-			System.out.println("디스패쳐 서블릿 실행");
-			// /MainProject/main.do
-			cmd=cmd.substring(request.getContextPath().length()+1, cmd.lastIndexOf('.'));
-			YoseksaModel model=wc.getBean(cmd);
-			String jsp=model.handlerRequest(request, response);
-			String temp=jsp.substring(jsp.lastIndexOf('.')+1);
-			if(temp.equals("sek")){
-				response.sendRedirect(jsp);
-			}else{
-				RequestDispatcher rd=request.getRequestDispatcher(jsp);
-				rd.forward(request, response);		
+			cmd=cmd.substring(request.getContextPath().length()+1);
+			// main.do
+			for(String clsName:clsList){
+				Class cls=Class.forName(clsName);
+				if(cls.isAnnotationPresent(Controller.class)==false){
+					continue;
+				}
+				Object obj=cls.newInstance();
+				Method[] methods=cls.getDeclaredMethods();
+				for(Method m:methods){
+					RequestMapping rm=m.getAnnotation(RequestMapping.class);
+					if(rm.value().equals(cmd)){
+						String jsp=(String)m.invoke(obj, request);
+						RequestDispatcher rd=request.getRequestDispatcher(jsp);
+						rd.forward(request, response);
+						return;
+					}
+				}
 			}
 		}catch(Exception ex){
 			System.out.println(ex.getMessage());
