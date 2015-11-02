@@ -110,7 +110,7 @@ $(function(){
 					  </div>
 					</div>
 			</div>
-			<%-- 
+			
 			 <c:forEach var="ndto" items="${notice_list }">
 				<div class="showmenu" id="menu${ndto.notice_no }">
 					<div class="noticesub">Á¦¸ñ ${ndto.notice_sub }</div>
@@ -128,7 +128,7 @@ $(function(){
 		        &nbsp;&nbsp;
 		        ${notice_curpage } page / ${notice_totalpage } pages
 		    </div>
-		     --%>
+		    
 			<!-- Modal -->
 
 	 </div>

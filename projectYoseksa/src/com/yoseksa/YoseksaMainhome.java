@@ -23,14 +23,14 @@ public class YoseksaMainhome implements YoseksaModel{
 	    Map map=new HashMap();
 	    map.put("start", start); // #{start} get("start")
 	    map.put("end", end);
-//	    List<NoticeDTO> list=NoticeDAO.noticeListData(map); ÁÖ¼®
-//	    int totalpage=NoticeDAO.noticeTotalPage(); ÁÖ¼®
+	    List<NoticeDTO> list=NoticeDAO.noticeListData(map);
+	    int totalpage=NoticeDAO.noticeTotalPage();
 	    req.setAttribute("notice_today", new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
-//	    req.setAttribute("notice_list", list); ÁÖ¼®
+	    req.setAttribute("notice_list", list);
 	    req.setAttribute("notice_curpage", curpage);
 	    
-//	    req.setAttribute("notice_totalpage", totalpage); ÁÖ¼®
-//		°øÁö»çÇ× ³»¿ëº¸±â Ãâ·Â
+	    req.setAttribute("notice_totalpage", totalpage);
+//		ê³µì§€ì‚¬í•­ ë‚´ìš©ë³´ê¸° ì¶œë ¥
 		req.setAttribute("jsp",	"../main/yoseksa.jsp");
 		req.setAttribute("ntpage",	"../notice/notice.jsp");
 		req.setAttribute("mangae",	"../main/mangae.jsp");
@@ -38,4 +38,3 @@ public class YoseksaMainhome implements YoseksaModel{
 	}
 
 }
-
