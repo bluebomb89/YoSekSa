@@ -1,5 +1,7 @@
 package com.yoseksa;
 
+import java.util.Date;
+
 public class ReplyDTO {
 	private int reply_no;
 	private int board_no;
@@ -11,6 +13,22 @@ public class ReplyDTO {
 	private int group_tab;
 	private int root;
 	private int depth;
+	private String dbday;
+	private Date reply_date;
+		
+	
+	public Date getReply_date() {
+		return reply_date;
+	}
+	public void setReply_date(Date reply_date) {
+		this.reply_date = reply_date;
+	}
+	public String getDbday() {
+		return dbday;
+	}
+	public void setDbday(String dbday) {
+		this.dbday = dbday;
+	}
 	public int getReply_no() {
 		return reply_no;
 	}
