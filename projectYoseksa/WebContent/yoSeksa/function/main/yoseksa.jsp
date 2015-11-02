@@ -59,7 +59,7 @@
          $("#startmain").text("Search");
       });
   	/* 시작시 ajax시작 */
-  	idcheck1();
+ idcheck1(); 
    });
 </script>
 <script>
@@ -169,9 +169,7 @@ function idcheck5(){
 }
 function notice_Insert(){
 	var notice_sub=$('#notice_sub').val();
-	alert(notice_sub);
 	var notice_content=$('#notice_content').val();
-	alert(notice_content);
 	var param="?notice_sub="+notice_sub+"&notice_content="+notice_content;
 	sendMessage('GET', param, "notice_insert.sek", notice_result);
 }
@@ -179,9 +177,9 @@ function notice_result(){
 	if(httpRequest.readyState==4){
 		if(httpRequest.status==200){
 			var res=httpRequest.responseText;
-			$('#services').text(res);
-			// 보여주면서 div에 값저장
+			$('#services').html(res);
 			alert(res);
+			// 보여주면서 div에 값저장
 		}		
 	}
 }

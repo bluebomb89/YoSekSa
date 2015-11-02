@@ -62,15 +62,17 @@ $(document).ready(function() {
 		});
 });
 </script>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 $(function(){
 	$('#notice-write').click(function(){
 		var notice_sub=$('notice_sub').val();
 		var notice_content=$('notice_content').val();
 		$('#noticeForm').submit();
+		document.getElementById("sevices").focus();
 	});
+	
 });
-</script>
+</script> -->
 <body>
 		 <div class="container">
 			<div class="service-info" id="serviceyo">
@@ -103,8 +105,8 @@ $(function(){
 						    </form>
 					      </div>
 					      <div class="modal-footer">
-					        <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
-					        <a id="notice-write" href="#" style="z-index: 1000">등록</a>
+					        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="notice_Insert()">취소</button>
+					        <a id="notice-write" href="#" style="z-index: 1000" onclick="notice_Insert()">등록</a>
 					      </div>
 					    </div>
 					  </div>
