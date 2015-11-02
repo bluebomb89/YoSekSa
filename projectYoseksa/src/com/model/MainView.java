@@ -49,6 +49,7 @@ public class MainView {
 	@RequestMapping("recipe_search.sek")
 	public String recipe_search(HttpServletRequest req) throws IOException{
 		req.setCharacterEncoding("EUC-KR");
+		System.out.println("sss");
 		Elements elements;
 		Elements elementsimg;
 		Elements elementstitle;
@@ -57,20 +58,24 @@ public class MainView {
 		List<String> linklist=new ArrayList<String>();
 		int a=0;
 	    	int page=0;
-	    	// �˻��� ������ searchname�� �˻����� �Է��Ѵ�.
 	    	String searchname = req.getParameter("mangae-search");
-	    	// ���������� �޾ƿ´�
 	    	String mspage=req.getParameter("mspage").trim();
+	    	System.out.println("서치네임"+searchname);
+	    	
 	    	int nconfirm;
-	    	// page�ڿ� ���ڰ� �Խ��� �ѹ�. 
 	        Document document;
 	        if(mspage==null){
 	        	mspage="1";
 	        }else if(mspage==""){
 	        	mspage="1";
 	        }
-	        // ���������� 20���� ����Ÿ. �츮���� 10���� �����ϱ�. 2�γ��� �������� 0�̾ƴϸ� ���� 1���������ָ� �ȴ�
-	        // mspage�� ��ư���� �ѱ�� ���� ����� page�� �׳� �����ֱ��.
+	        if(searchname==null){
+	        	System.out.println("널?");
+	        	searchname="";
+	        } else if(searchname==""){
+	        	searchname="";
+	        }
+	        System.out.println("mspag="+mspage);
 	        if(Integer.parseInt(mspage)%2==0){
 	        	page=(Integer.parseInt(mspage)/2);
 	        	nconfirm=1;
@@ -84,7 +89,6 @@ public class MainView {
 	        String mangaesearch =  URLEncoder.encode(searchname, "UTF-8");
 			document = Jsoup.connect("http://www.10000recipe.com/recipe/list.html?q="+mangaesearch+"&order=weight&page="+page).get();
 	        if (null!=document) {
-	        	// a�±��� Ŭ������ thumbnail�� ��簪�� �����ɴϴ�.
 	        	elements = document.select("a.thumbnail");
 	        	elementsimg = document.select("a.thumbnail > img[src$=.jpg]");
 //	        	System.out.println("elementsimg: "+elementsimg);

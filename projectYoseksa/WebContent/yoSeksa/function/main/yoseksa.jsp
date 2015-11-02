@@ -141,6 +141,8 @@ function idcheck_result(){
 function idcheck1(){
 	var param=$('#mangae-search').val();
 	var mspage=$('#btn1').text();
+	alert(param);
+	alert(mspage);
 	param="?mangae-search="+param+"&mspage="+mspage;
 	sendMessage('GET', param, "recipe_search.sek", idcheck_result);
 }
