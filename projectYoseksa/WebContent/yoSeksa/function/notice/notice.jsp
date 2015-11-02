@@ -65,9 +65,6 @@ $(document).ready(function() {
 		var a= id+"-cont";
 		$('#'+a).slideToggle("fast");
 		});
-	$('#myModal').on('shown.bs.modal', function () {
-		  $('#myInput').focus()
-		});
 });
 </script>
 <!-- <script type="text/javascript">

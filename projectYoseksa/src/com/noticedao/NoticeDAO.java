@@ -19,7 +19,7 @@ public class NoticeDAO {
 			System.out.println(ex.getMessage());
 		}
 	}
-//	È«ÀÇ ÀÛ¼º
+//	È«ï¿½ï¿½ ï¿½Û¼ï¿½
 
 	public static void noticeInsert(NoticeDTO d)
 	{
@@ -41,8 +41,8 @@ public class NoticeDAO {
 	public List<NoticeDTO> empAllData(){
 		return ssf.openSession().selectList("empAllData");
 	}
-//	¿µ±Ç ÀÛ¼º
-	   // µ¥ÀÌÅÍ °¡Áö°í ¿À±â 
+//	ï¿½ï¿½ï¿½ï¿½ ï¿½Û¼ï¿½
+	   // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 	
 		public static List<NoticeDTO> noticeListData(Map map){
 		List<NoticeDTO> list=new ArrayList<NoticeDTO>();
 		SqlSession session=null;
@@ -58,7 +58,7 @@ public class NoticeDAO {
 		return list;
 		   //return ssf.openSession().selectList("boardListData",map);
 	   }
-	   // ÃÑÆäÀÌÁö
+	   // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	   public static int noticeTotalPage()
 	   {
 		   int total=0;
