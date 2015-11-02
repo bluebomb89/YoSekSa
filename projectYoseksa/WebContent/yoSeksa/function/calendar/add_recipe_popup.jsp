@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -19,18 +19,18 @@ $(function(){
 		bld=$("input[name='bld']:checked").val();
 		keyword=$('#keyword').val();
 		if(keyword==""){
-			alert("Å°¿öµå¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä")
+			alert("í‚¤ì›Œë“œë¥¼ ì…ë ¥í•˜ì„¸ìš”");
 			$('#keyword').focus();
 			return;
 		}
 		else{
 			$('#schResult').attr("src", "../../function/calendar/add_recipe_popup_search_result.jsp?keyword="+keyword+"&bld="+bld+"&date="+date);
+			return;
 		}
 	});//searchBtn.click-end
 });
 
-</script>
-       
+</script>  
        
        
 
@@ -38,28 +38,23 @@ $(function(){
 <body style="background-color: rgba( 255, 255, 255, 0 );">
 
 
-
-
 <div id="addRecipeOnTable">	
 	<center>
 		<div id="h2_title">
-			<h2>¿ä¸®¸¦ Ãß°¡ÇÏ¼¼¿ä!</h2>
+			<h2>ìš”ë¦¬ë¥¼ ì¶”ê°€í•˜ì„¸ìš”!</h2>
 		</div>
 	</center>
 	
 	<div id="icon_title">
 		<span class="glyphicon glyphicon-plus" aria-hidden="true">
-	</div>
-	
-	
+	</div>	
 
 	<hr id="title_underline">
-	
-	
+		
 	<br>
 
       <div id="food_date">
-       <label>³¯Â¥</label>
+       <label>ë‚ ì§œ</label>
        <input type="date" id="date" name="date" class="form_input_recipe">
       </div>
       
@@ -79,17 +74,16 @@ $(function(){
 	
 	<form name="search">
 	  <div id="bld">
-	   <input type="radio" id="breakfast" name="bld" value="Breakfast">&nbsp;¾ÆÄ§&nbsp;&nbsp;<span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span><br><br>
-	   <input type="radio" id="lunch" name="bld" value="Lunch" checked>&nbsp;Á¡½É&nbsp;&nbsp;<span class="glyphicon glyphicon-glass" aria-hidden="true"></span><br><br>
-	   <input type="radio" id="dinner" name="bld" value="Dinner">&nbsp;Àú³á&nbsp;&nbsp;<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+	   <input type="radio" name="bld" value="Breakfast">&nbsp;ì•„ì¹¨&nbsp;&nbsp;<span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span><br><br>
+	   <input type="radio" name="bld" value="Lunch" checked>&nbsp;ì ì‹¬&nbsp;&nbsp;<span class="glyphicon glyphicon-glass" aria-hidden="true"></span><br><br>
+	   <input type="radio" name="bld" value="Dinner">&nbsp;ì €ë…&nbsp;&nbsp;<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
       </div>
       
-
-       
+      
        <div id="food_search">
-       	<label>¿ä¸®¸í</label>       	
-      	<input type="text" name="keyword" id="keyword" class="form_input_recipe"><br>
-        <input type="button" value="°Ë»ö" id="searchBtn" class="form_input_recipe">
+       	<label>ìš”ë¦¬ëª…</label>
+      	<input type="text" id="keyword" name="keyword" class="form_input_recipe"><br>
+        <input type="button" id="searchBtn" value="ê²€ìƒ‰" class="form_input_recipe">
        </div>
        </form>       
         

@@ -28,9 +28,8 @@ public class YoseksaMainhome implements YoseksaModel{
 	    req.setAttribute("notice_today", new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
 	    req.setAttribute("notice_list", list);
 	    req.setAttribute("notice_curpage", curpage);
-	    
 	    req.setAttribute("notice_totalpage", totalpage);
-//		공지사항 내용보기 출력
+	    
 		req.setAttribute("jsp",	"../main/yoseksa.jsp");
 		req.setAttribute("ntpage",	"../notice/notice.jsp");
 		req.setAttribute("mangae",	"../main/mangae.jsp");

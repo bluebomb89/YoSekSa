@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
@@ -45,6 +45,14 @@ padding-bottom: 5px;
 width: 80%;
 margin: 0 auto;
 }
+body.modal-open {
+  overflow: inherit;
+  padding-right: 0 !important;
+}
+body.cbp-spmenu-push{
+  overflow: inherit;
+  padding-right: 0 !important;
+}
 </style>
 <script type="text/javascript">
 $(document).ready(function() {
@@ -62,49 +70,51 @@ $(document).ready(function() {
 		});
 });
 </script>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 $(function(){
 	$('#notice-write').click(function(){
 		var notice_sub=$('notice_sub').val();
 		var notice_content=$('notice_content').val();
 		$('#noticeForm').submit();
+		document.getElementById("sevices").focus();
 	});
+	
 });
-</script>
+</script> -->
 <body>
 		 <div class="container">
 			<div class="service-info" id="serviceyo">
 				<h3>Notice</h3>
 				<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-					µî·Ï
+					ë“±ë¡
 				</button>
 					 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 					  <div class="modal-dialog">
 					    <div class="modal-content">
 					      <div class="modal-header">
 					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					        <h4 class="modal-title" id="myModalLabel">°øÁö »çÇ×</h4>
+					        <h4 class="modal-title" id="myModalLabel">ê³µì§€ ì‚¬í•­</h4>
 					      </div>
 					      <div class="modal-body">
-					        <!-- µ¥ÀÌÅÍ ÀÔ·Â -->
+					        <!-- ë°ì´í„° ì…ë ¥ -->
 							<form id="noticeForm" name="notice_frm" method="post" action="notice_insert.sek">
-								<!-- ÆäÀÌÁö -->
+								<!-- í˜ì´ì§€ -->
 								<!-- <input type="hidden" name="notice_page" value=""> -->
-								<!-- °øÁö»çÇ× ¹øÈ£ -->
+								<!-- ê³µì§€ì‚¬í•­ ë²ˆí˜¸ -->
 								<!-- <input type="hidden" name="notice_no" value=""> -->
-<!-- 								°Ô½ÃÆÇ ¹øÈ£
+<!-- 								ê²Œì‹œíŒ ë²ˆí˜¸
 								<input type="hidden" name="board_no" value="3">
-								È¸¿ø ¹øÈ£
+								íšŒì› ë²ˆí˜¸
 								<input type="hidden" name="member_no" value="3"> -->
-								<!-- Á¦¸ñ -->
-								<input type="text" placeholder="Á¦¸ñ" id="notice_sub" name="notice_sub"><br>
-								<!-- ³»¿ë -->
-								<textarea name="notice_content" id="notice_content" class="form-control" placeholder="³»¿ë" style="min-height:300px;width: 100%; margin-top: 20px;"></textarea>
+								<!-- ì œëª© -->
+								<input type="text" placeholder="ì œëª©" id="notice_sub" name="notice_sub"><br>
+								<!-- ë‚´ìš© -->
+								<textarea name="notice_content" id="notice_content" class="form-control" placeholder="ë‚´ìš©" style="min-height:300px;width: 100%; margin-top: 20px;"></textarea>
 						    </form>
 					      </div>
 					      <div class="modal-footer">
-					        <button type="button" class="btn btn-default" data-dismiss="modal">Ãë¼Ò</button>
-					        <a id="notice-write" href="#" style="z-index: 1000">µî·Ï</a>
+					        <button type="button" class="btn btn-default" data-dismiss="modal">ì·¨ì†Œ</button>
+					        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="notice_Insert()">ë“±ë¡</button>
 					      </div>
 					    </div>
 					  </div>
@@ -113,9 +123,9 @@ $(function(){
 			
 			 <c:forEach var="ndto" items="${notice_list }">
 				<div class="showmenu" id="menu${ndto.notice_no }">
-					<div class="noticesub">Á¦¸ñ ${ndto.notice_sub }</div>
-					<div class="noticehire"> ÀÛ¼ºÀÏ ${ndto.notice_dbday }</div>
-					<div class="noticeday"> Á¶È¸¼ö ${ndto.notice_hit }</div>
+					<div class="noticesub">ì œëª© ${ndto.notice_sub }</div>
+					<div class="noticehire"> ì‘ì„±ì¼ ${ndto.notice_dbday }</div>
+					<div class="noticeday"> ì¡°íšŒìˆ˜ ${ndto.notice_hit }</div>
 					<div id="menu${ndto.notice_no }-cont" style="display: none;">
 							<pre>${ndto.notice_content }</pre>
 					</div>

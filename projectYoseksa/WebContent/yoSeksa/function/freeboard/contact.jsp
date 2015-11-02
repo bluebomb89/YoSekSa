@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!--A Design by W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
@@ -62,11 +62,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			offset: {top: $('header').height()-$('#nav').height()}
 		});
 		
-		/* affix-top ø°º≠ affix∑Œ ºˆ¡§µ…¥Î ¿Ã∫•∆Æ πﬂª˝*/
+		/* affix-top ÏóêÏÑú affixÎ°ú ÏàòÏ†ïÎê†ÎåÄ Ïù¥Î≤§Ìä∏ Î∞úÏÉù*/
 		$('#nav').on("affix.bs.affix",function(){
 			$("#startmain").text("haa!");
 		});
-		/* affixø°º≠ affix-top¿∏∑Œ ¿¸»Øµ…∂ß ¿Ã∫•∆Æ πﬂª˝*/
+		/* affixÏóêÏÑú affix-topÏúºÎ°ú Ï†ÑÌôòÎê†Îïå Ïù¥Î≤§Ìä∏ Î∞úÏÉù*/
 		$('#nav').on("affix-top.bs.affix",function(){
 			$("#startmain").text("Search");
 		});
@@ -94,7 +94,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 <!---->
-<!--  style.cssæ»ø° ¿ÃπÃ¡ˆ √ﬂ∞°«ÿº≠ div class¿Ã∏ßø° ≥÷æÓ∂Û. ¿ÃπÃ¡ˆ¥¬ ¿¸√º¿˚¿∏∑Œ style.cssæ»ø°. 
+<!--  style.cssÏïàÏóê Ïù¥ÎØ∏ÏßÄ Ï∂îÍ∞ÄÌï¥ÏÑú div classÏù¥Î¶ÑÏóê ÎÑ£Ïñ¥Îùº. Ïù¥ÎØ∏ÏßÄÎäî Ï†ÑÏ≤¥Ï†ÅÏúºÎ°ú style.cssÏïàÏóê. 
 	  
 .bannersearch{
 	background:url(../images/bannersearch.jpg) no-repeat 0px 0px;
@@ -102,13 +102,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	min-height:895px;
 }
 
-cssæ»ø° ¿ÃπÃ¡ˆ ¿Ã∑±Ωƒ¿∏∑Œ √ﬂ∞°«œ∞Ì divæ»ø° ≈¨∑°Ω∫∏Ì ≥÷æÓ¡÷∏È µ»¥Ÿ.
+cssÏïàÏóê Ïù¥ÎØ∏ÏßÄ Ïù¥Îü∞ÏãùÏúºÎ°ú Ï∂îÍ∞ÄÌïòÍ≥† divÏïàÏóê ÌÅ¥ÎûòÏä§Î™Ö ÎÑ£Ïñ¥Ï£ºÎ©¥ ÎêúÎã§.
 -->
 
 	 
 <!---->
 	<button type="button" class="btn btn-primary btn-lg"
-		data-toggle="modal" data-target="#myModal">µÓ∑œ</button>
+		data-toggle="modal" data-target="#myModal">Îì±Î°ù</button>
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
 		aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
@@ -124,23 +124,23 @@ cssæ»ø° ¿ÃπÃ¡ˆ ¿Ã∑±Ωƒ¿∏∑Œ √ﬂ∞°«œ∞Ì divæ»ø° ≈¨∑°Ω∫∏Ì ≥÷æÓ¡÷∏È µ»¥Ÿ.
 					<div id="post_wrapper">
 						<form id="postForm" name="post_frm" method=post
 							action="postfind_result.jsp">
-							<textarea name="board_tx" class="form-control" placeholder="≥ªøÎ"
+							<textarea name="board_tx" class="form-control" placeholder="ÎÇ¥Ïö©"
 								style="height: 400px; width: 400px; margin-top: 20px;"></textarea>
 							<div class="write_pic2" style="width: 400px; margin-top: 40px;">
 								<input type="file" name="file" id="file_1"
 									style="display: none;" />
 								<div class="complete_pic">
 									<img src="http://recipe1.ezmember.co.kr/img/pic_none3.gif"
-										alt="∆ƒ¿œ√∑∫Œ" width="140" height="120"
+										alt="ÌååÏùºÏ≤®Î∂Ä" width="140" height="120"
 										onclick="document.getElementById('file_1').click();"
 										style="cursor: pointer;" />
 								</div>
 							</div>
 							<div class="write_btn" style="margin-top: 40px;">
-								<button type="submit" id="submit_btn" class="btn-lg btn-primary">µÓ∑œ</button>
+								<button type="submit" id="submit_btn" class="btn-lg btn-primary">Îì±Î°ù</button>
 								<button type="button" class="btn-lg btn-default"
 									data-dismiss="modal"
-									onClick="location.href='/talk/list.html?bid=5'">√Îº“</button>
+									onClick="location.href='/talk/list.html?bid=5'">Ï∑®ÏÜå</button>
 							</div>
 
 						</form>
