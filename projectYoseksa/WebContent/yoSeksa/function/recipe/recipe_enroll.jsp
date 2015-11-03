@@ -491,7 +491,7 @@ function adjustText(id) {
     $('#'+id).val(arr_str.join(' '));
 }
 </script>
-<form name="insFrm" id="insFrm" method="post" action="recipe_insert.sek">
+<form name="insFrm" id="insFrm" method="post" action="recipe_insert.sek" enctype="multipart/form-data">
 <link rel="stylesheet" type="text/css" href="yoSeksa/css/recipe_enroll/jquery.tagit.css"><style>
 .note-editor .note-dropzone { opacity: 0 !important; }
 ul.tagit {

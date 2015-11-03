@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServletRequest;
 
 import com.controller.Controller;
 import com.controller.RequestMapping;
+import com.oreilly.servlet.MultipartRequest;
+import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 @Controller("recipe")
 public class Recipe {
@@ -43,12 +45,18 @@ public class Recipe {
 	}
 	@RequestMapping("recipe_insert.sek")
 	public String recipe_insert(HttpServletRequest req) throws IOException{
-		String recipe_sub=req.getParameter("cok_title");
-		String kind_no=req.getParameter("cok_sq_category_4");
-		String situ_no=req.getParameter("cok_sq_category_2");
-		String how_no=req.getParameter("cok_sq_category_1");
-		String jaeryo_no=req.getParameter("cok_sq_category_3");
-		String recipe_img=req.getParameter("메인화면 이미지");
+		String path="c:\\download";
+		String enctype="EUC-KR";
+		int size=1024*1024*500;
+		MultipartRequest mr=new MultipartRequest(req,path,size,enctype,new DefaultFileRenamePolicy());
+		String recipe_sub=mr.getParameter("cok_title");
+		String kind_no=mr.getParameter("cok_sq_category_4");
+		String situ_no=mr.getParameter("cok_sq_category_2");
+		String how_no=mr.getParameter("cok_sq_category_1");
+		String jaeryo_no=mr.getParameter("cok_sq_category_3");
+		String recipe_img=mr.getParameter("메인화면 이미지");
+		System.out.println(recipe_img);
+		System.out.println(recipe_sub);
 		RecipeDTO d=new RecipeDTO();
 		int recipe_no=RecipeDAO.sequnece();
 		d.setRecipe_no(recipe_no);
@@ -68,12 +76,12 @@ public class Recipe {
 		boolean count=true;
 		int no=1;
 		while(count){
-			String material_content=req.getParameter("cok_resource_nm_"+no);
+			String material_content=mr.getParameter("cok_resource_nm_"+no);
 			if(material_content==null){
 				count=false;
 				break;
 			}
-			String material_gramgram=req.getParameter("cok_resource_amt_"+no);
+			String material_gramgram=mr.getParameter("cok_resource_amt_"+no);
 			jd.setMaterial_content(material_content);
 			jd.setMaterial_gram(material_gramgram);
 			jd.setRecipe_no(recipe_no);
@@ -86,12 +94,12 @@ public class Recipe {
 		boolean scount=true;
 		int sno=1;
 		while(scount){
-			String source_content=req.getParameter("cok_spice_nm_"+sno);
+			String source_content=mr.getParameter("cok_spice_nm_"+sno);
 			if(source_content==null){
 				scount=false;
 				break;
 			}
-			String source_gram=req.getParameter("cok_spice_amt_"+sno);
+			String source_gram=mr.getParameter("cok_spice_amt_"+sno);
 			sc.setSource_content(source_content);
 			sc.setSource_gram(source_gram);
 			sc.setRecipe_no(recipe_no);
