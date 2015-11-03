@@ -1,6 +1,7 @@
 package com.model;
 import com.recipedao.*;
 import java.io.IOException;
+import java.util.*;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -14,11 +15,27 @@ public class Recipe {
 		req.setAttribute("jsp",	"../recipe/recipe_content.jsp");
 		return "yoSeksa/function/main/main.jsp";
 	}
-	@RequestMapping("recipe.sek")
-	public String recipe(HttpServletRequest req) throws IOException{
-		req.setAttribute("jsp",	"../recipe/gallery.jsp");
-		return "yoSeksa/function/main/main.jsp";
-	}
+	   @RequestMapping("recipe.sek")
+	   public String recipe(HttpServletRequest req) throws IOException{
+	      String strPage=req.getParameter("page");
+	       if(strPage==null)
+	          strPage="1";
+	       int curpage=Integer.parseInt(strPage);
+	       int rowSize=12;
+	       int start=(curpage*rowSize)-(rowSize-1);
+	       int end=curpage*rowSize;
+	       Map map=new HashMap();
+	       map.put("start", start); // #{start} get("start")
+	       map.put("end", end);
+	       List<RecipeDTO> list=
+	             RecipeDAO.recipeListData(map);
+	       int totalpage=RecipeDAO.recipeTotalPage();
+	       req.setAttribute("list", list);
+	       req.setAttribute("curpage", curpage);
+	       req.setAttribute("totalpage", totalpage);
+	      req.setAttribute("jsp",   "../recipe/gallery.jsp");
+	      return "yoSeksa/function/main/main.jsp";
+	   }
 	@RequestMapping("recipe_enroll.sek")
 	public String recipe_enroll(HttpServletRequest req) throws IOException{
 		req.setAttribute("jsp", "../recipe/recipe_enroll.jsp");
@@ -33,15 +50,56 @@ public class Recipe {
 		String jaeryo_no=req.getParameter("cok_sq_category_3");
 		String recipe_img=req.getParameter("메인화면 이미지");
 		RecipeDTO d=new RecipeDTO();
+		int recipe_no=RecipeDAO.sequnece();
+		d.setRecipe_no(recipe_no);
 		d.setRecipe_sub(recipe_sub);
 		d.setKind_no(Integer.parseInt(kind_no));
 		d.setSitu_no(Integer.parseInt(situ_no));
 		d.setHow_no(Integer.parseInt(how_no));
 		d.setJaeryo_no(Integer.parseInt(jaeryo_no));
+		d.setMember_no(5);
 		d.setRecipe_img("메인화면 이미지");
 		d.setBoard_no(2);
 		// db연동
+		// 레시피 인서트
 		RecipeDAO.recipeInsert(d);
+		// 재료 인서트
+		MaterialDTO jd=new MaterialDTO();
+		boolean count=true;
+		int no=1;
+		while(count){
+			String material_content=req.getParameter("cok_resource_nm_"+no);
+			if(material_content==null){
+				count=false;
+				break;
+			}
+			String material_gramgram=req.getParameter("cok_resource_amt_"+no);
+			jd.setMaterial_content(material_content);
+			jd.setMaterial_gram(material_gramgram);
+			jd.setRecipe_no(recipe_no);
+			// DB연동
+			RecipeDAO.materialInsert(jd);
+			no++;
+		}	
+		// 양념 인서트
+		SourceDTO sc=new SourceDTO();
+		boolean scount=true;
+		int sno=1;
+		while(scount){
+			String source_content=req.getParameter("cok_spice_nm_"+sno);
+			if(source_content==null){
+				scount=false;
+				break;
+			}
+			String source_gram=req.getParameter("cok_spice_amt_"+sno);
+			sc.setSource_content(source_content);
+			sc.setSource_gram(source_gram);
+			sc.setRecipe_no(recipe_no);
+			// DB연동
+			RecipeDAO.soueceInsert(sc);
+			sno++;
+		}
+		// 요리순서 인서트
 		req.setAttribute("jsp",	"../recipe/gallery.jsp");
 		return "yoSeksa/function/main/main.jsp";
 	}
