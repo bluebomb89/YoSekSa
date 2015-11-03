@@ -1,4 +1,4 @@
-package com.member.dao;
+package com.memberdao;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
