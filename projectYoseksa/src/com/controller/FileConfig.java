@@ -6,6 +6,17 @@ public class FileConfig {
 		List<String> list=new ArrayList<String>();
 		try{
 			String path="C:\\Users\\sist\\git\\YoSekSa\\projectYoseksa\\src\\";
+			// �슦�떇 寃쎈줈
+//			String path="C:\\Users\\�궓�쁺沅�\\git\\yoseksaProject\\projectYoseksa\\src\\";
+			// 誘쇱쁺 寃쎈줈
+//			String path="C:\\Users\\�궓�쁺沅�\\git\\yoseksaProject\\projectYoseksa\\src\\";
+			// �솉�쓽 寃쎈줈
+//			String path="C:\\Users\\�궓�쁺沅�\\git\\yoseksaProject\\projectYoseksa\\src\\";
+			// �듅�쁽 寃쎈줈
+//			String path="C:\\Users\\�궓�쁺沅�\\git\\yoseksaProject\\projectYoseksa\\src\\";
+			// �깭吏� 寃쎈줈
+//			String path="C:\\Users\\�궓�쁺沅�\\git\\yoseksaProject\\projectYoseksa\\src\\";
+
 			String temp=pack.replace('.', '\\');
 			File dir=new File(path+temp);
 			File[] files=dir.listFiles();

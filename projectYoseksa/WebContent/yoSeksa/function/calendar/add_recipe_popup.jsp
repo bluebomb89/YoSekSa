@@ -1,5 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="java.text.DecimalFormat" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%
+	int year=Integer.parseInt(request.getParameter("year"));
+	int month=Integer.parseInt(request.getParameter("month"));
+	int day=Integer.parseInt(request.getParameter("day"));
+	
+	DecimalFormat df=new DecimalFormat("00");
+%>
+
+<c:set var="year" value="<%=year %>"/>
+<c:set var="month" value="<%=df.format(month) %>"/>
+<c:set var="day" value="<%=df.format(day) %>"/>
+
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -41,7 +57,7 @@ $(function(){
 <div id="addRecipeOnTable">	
 	<center>
 		<div id="h2_title">
-			<h2>요리를 추가하세요!</h2>
+			<h2>요리를 추가하세요!${year }-${month }-${day }</h2>
 		</div>
 	</center>
 	
@@ -55,7 +71,7 @@ $(function(){
 
       <div id="food_date">
        <label>날짜</label>
-       <input type="date" id="date" name="date" class="form_input_recipe">
+       <input type="date" id="date" name="date" class="form_input_recipe" value="${year }-${month }-${day }">
       </div>
       
 <!--       <div id="icon_morning">
@@ -97,23 +113,6 @@ $(function(){
         
         
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
