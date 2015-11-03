@@ -1,6 +1,6 @@
 <%@page session="true" import="java.util.*" %>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%
 // Global Vars
 int action = 0;  // incoming request for moving calendar up(1) down(0) for month
@@ -132,10 +132,10 @@ Calendar cal = Calendar.getInstance();
 Shadowbox.init({
 	players:["iframe"]
 });
-function addRecipeOnTable()
+function addRecipeOnTable(year,month,day)
 {
 	Shadowbox.open({
-		content:'add_recipe_popup.jsp',
+		content:'add_recipe_popup.jsp?year='+year+'&month='+month+'&day='+day,
 		player:'iframe',
 		title:'ADD NEW RECIPE',
 		width:800,
@@ -149,9 +149,9 @@ function addRecipeOnTable()
 
 <table border='0' width='100%' height="10%" celpadding='0' cellspacing='0'>
   <tr>
-   <td width='33%' align='right' valign='middle'><a href="../../function/calendar/calendar.jsp?month=<%=currMonth%>&year=<%=currYear%>&action=0"><font size="4">¢¸</font></a></td>
+   <td width='33%' align='right' valign='middle'><a href="../../function/calendar/calendar.jsp?month=<%=currMonth%>&year=<%=currYear%>&action=0"><font size="4">â—€</font></a></td>
    <td width='33%' align='center' valign='middle'><b><font size="4" color="white"><%=getDateName (cal.get(cal.MONTH)) + " " + cal.get(cal.YEAR)%></font></b></td>
-   <td width='33%' align='left' valign='middle'><a href="../../function/calendar/calendar.jsp?month=<%=currMonth%>&year=<%=currYear%>&action=1"><font size="4">¢º</font></a></td>
+   <td width='33%' align='left' valign='middle'><a href="../../function/calendar/calendar.jsp?month=<%=currMonth%>&year=<%=currYear%>&action=1"><font size="4">â–¶</font></a></td>
   </tr>
 </table>
 <table border="0" width="100%" height="90%" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" cellspacing="0">
@@ -217,7 +217,7 @@ function addRecipeOnTable()
                      bgStyle="background-color: rgba( 255, 255, 255, 0 );color:#FFFFFF";
                   }
 %> 
-      <td style="<%=bgStyle %>" align="left" valign="top">&nbsp;<a href="#" onclick="addRecipeOnTable()"><%=dispDay%></a><br>
+      <td style="<%=bgStyle %>" align="left" valign="top">&nbsp;<a href="#" onclick="addRecipeOnTable(<%=currYear %>,<%=currMonth+1 %>,<%=dispDay %>)"><%=dispDay%></a><br>
       </td>
 <%
                count += 1;

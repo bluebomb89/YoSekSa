@@ -24,20 +24,20 @@ public class recipesearch implements YoseksaModel{
 		List<String> linklist=new ArrayList<String>();
 		int a=0;
 	    	int page=0;
-	    	// °Ë»öÀ» ´©¸£¸é searchname¿¡ °Ë»ö°ªÀ» ÀÔ·ÂÇÑ´Ù.
+	    	// ï¿½Ë»ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ searchnameï¿½ï¿½ ï¿½Ë»ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ñ´ï¿½.
 	    	String searchname = req.getParameter("mangae-search");
-	    	// ÆäÀÌÁö°ªÀ» ¹Ş¾Æ¿Â´Ù
+	    	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ş¾Æ¿Â´ï¿½
 	    	String mspage=req.getParameter("mspage").trim();
 	    	int nconfirm;
-	    	// pageµÚ¿¡ ¼ıÀÚ°¡ °Ô½ÃÆÇ ³Ñ¹ö. 
+	    	// pageï¿½Ú¿ï¿½ ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½Ô½ï¿½ï¿½ï¿½ ï¿½Ñ¹ï¿½. 
 	        Document document;
 	        if(mspage==null){
 	        	mspage="1";
 	        }else if(mspage==""){
 	        	mspage="1";
 	        }
-	        // ÇÑÆäÀÌÁö¿¡ 20°³ÀÇ µ¥ÀÌÅ¸. ¿ì¸®¿¡°Õ 10°³¾¿ º¸³»´Ï±î. 2·Î³ª´« ³ª¸ÓÁö°¡ 0ÀÌ¾Æ´Ï¸é ¸òÀ» 1Áõ°¡½ÃÄÑÁÖ¸é µÈ´Ù
-	        // mspage´Â ¹öÆ°°ªÀ» ³Ñ±â±â À§ÇØ ¸¸µé°í page´Â ±×³É º¸¿©ÁÖ±â·Î.
+	        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 20ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Å¸. ï¿½ì¸®ï¿½ï¿½ï¿½ï¿½ 10ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½. 2ï¿½Î³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0ï¿½Ì¾Æ´Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ ï¿½È´ï¿½
+	        // mspageï¿½ï¿½ ï¿½ï¿½Æ°ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ±ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ pageï¿½ï¿½ ï¿½×³ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½ï¿½.
 	        if(Integer.parseInt(mspage)%2==0){
 	        	page=(Integer.parseInt(mspage)/2);
 	        	nconfirm=1;
@@ -51,7 +51,7 @@ public class recipesearch implements YoseksaModel{
 	        String mangaesearch =  URLEncoder.encode(searchname, "UTF-8");
 			document = Jsoup.connect("http://www.10000recipe.com/recipe/list.html?q="+mangaesearch+"&order=weight&page="+page).get();
 	        if (null!=document) {
-	        	// aÅÂ±×ÀÇ Å¬·¡½º°¡ thumbnailÀÎ ¸ğµç°ªÀ» °¡Á®¿É´Ï´Ù.
+	        	// aï¿½Â±ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ thumbnailï¿½ï¿½ ï¿½ï¿½ç°ªï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½É´Ï´ï¿½.
 	        	elements = document.select("a.thumbnail");
 	        	elementsimg = document.select("a.thumbnail > img[src$=.jpg]");
 //	        	System.out.println("elementsimg: "+elementsimg);
@@ -64,23 +64,23 @@ public class recipesearch implements YoseksaModel{
 			            	String mangaetitle=elementstitle.get(i).text();
 			            	String mangaelink="http://www.10000recipe.com"+ elements.get(i).attr("href");
 //			                System.out.println("------------------------------------------");
-//			                System.out.println("Ãâ·Â ¹øÈ£ :" + a);
-//			                System.out.println("°Ë»ö¾î : " + elementstitle.get(i).text());
-//			                System.out.println("Á¦¸ñ : " + mangaetitle);
-//			                System.out.println("¸µÅ© URL : " +"http://www.10000recipe.com"+ elements.get(i).attr("href"));
-//			                System.out.println("¸µÅ© URL : " + mangaelink);
-//			                System.out.println("ÀÌ¹ÌÁö src : " + mangaeimg);
+//			                System.out.println("ï¿½ï¿½ï¿½ ï¿½ï¿½È£ :" + a);
+//			                System.out.println("ï¿½Ë»ï¿½ï¿½ï¿½ : " + elementstitle.get(i).text());
+//			                System.out.println("ï¿½ï¿½ï¿½ï¿½ : " + mangaetitle);
+//			                System.out.println("ï¿½ï¿½Å© URL : " +"http://www.10000recipe.com"+ elements.get(i).attr("href"));
+//			                System.out.println("ï¿½ï¿½Å© URL : " + mangaelink);
+//			                System.out.println("ï¿½Ì¹ï¿½ï¿½ï¿½ src : " + mangaeimg);
 //			                System.out.println("------------------------------------------");
-			                // Å¬¸¯ÇÏ¸é ¸µÅ©URL ³»¿ëÅÂ±×¸¦ ÀĞ¾î¼­ ³ª¿¡°Ô·Î!
+			                // Å¬ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½Å©URL ï¿½ï¿½ï¿½ï¿½ï¿½Â±×¸ï¿½ ï¿½Ğ¾î¼­ ï¿½ï¿½ï¿½ï¿½ï¿½Ô·ï¿½!
 			            	imglist.add(mangaeimg);
 			            	titlelist.add(mangaetitle);
 			            	linklist.add(mangaelink);
 			            	
 			        	}
-	            	} //System.out.println("ÀúÀåµÈ °ª="+elements.size());
+	            	} //System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½="+elements.size());
 	            }
-//	        System.out.println("Â¦¼ö? È¦¼ö?"+nconfirm);
-			System.out.println("·¹½ÃÇÇ¼­Ä¡ ¸Ş¼Òµå ³¡");
+//	        System.out.println("ì§ìˆ˜? í™€ìˆ˜?"+nconfirm);
+	        System.out.println("ì§ìˆ˜? í™€ìˆ˜?"+nconfirm);
 			req.setAttribute("imglist", imglist);
 			req.setAttribute("titlelist", titlelist);
 			req.setAttribute("linklist", linklist);

@@ -6,3 +6,4 @@ public interface YoseksaModel {
 	public String handlerRequest(HttpServletRequest req,HttpServletResponse res)
 			throws Exception;
 }
+

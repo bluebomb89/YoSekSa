@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
@@ -45,6 +45,14 @@ padding-bottom: 5px;
 width: 80%;
 margin: 0 auto;
 }
+body.modal-open {
+  overflow: inherit;
+  padding-right: 0 !important;
+}
+body.cbp-spmenu-push{
+  overflow: inherit;
+  padding-right: 0 !important;
+}
 </style>
 <script type="text/javascript">
 $(document).ready(function() {
@@ -57,64 +65,64 @@ $(document).ready(function() {
       var a= id+"-cont";
       $('#'+a).slideToggle("fast");
       });
-   $('#myModal').on('shown.bs.modal', function () {
-        $('#myInput').focus()
-      });
 });
 </script>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 $(function(){
    $('#notice-write').click(function(){
       var notice_sub=$('notice_sub').val();
       var notice_content=$('notice_content').val();
       $('#noticeForm').submit();
+      document.getElementById("sevices").focus();
    });
+   
 });
-</script>
+</script> -->
 <body>
        <div class="container">
          <div class="service-info" id="serviceyo">
             <h3>Notice</h3>
             <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-               µÓ∑œ
+               Îì±Î°ù
             </button>
                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                  <div class="modal-dialog">
                    <div class="modal-content">
                      <div class="modal-header">
                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                       <h4 class="modal-title" id="myModalLabel">∞¯¡ˆ ªÁ«◊</h4>
+                       <h4 class="modal-title" id="myModalLabel">Í≥µÏßÄ ÏÇ¨Ìï≠</h4>
                      </div>
                      <div class="modal-body">
-                       <!-- µ•¿Ã≈Õ ¿‘∑¬ -->
+                       <!-- Îç∞Ïù¥ÌÑ∞ ÏûÖÎ†• -->
                      <form id="noticeForm" name="notice_frm" method="post" action="notice_insert.sek">
-                        <!-- ∆‰¿Ã¡ˆ -->
+                        <!-- ÌéòÏù¥ÏßÄ -->
                         <!-- <input type="hidden" name="notice_page" value=""> -->
-                        <!-- ∞¯¡ˆªÁ«◊ π¯»£ -->
+                        <!-- Í≥µÏßÄÏÇ¨Ìï≠ Î≤àÌò∏ -->
                         <!-- <input type="hidden" name="notice_no" value=""> -->
-<!--                         ∞‘Ω√∆« π¯»£
+<!--                         Í≤åÏãúÌåê Î≤àÌò∏
                         <input type="hidden" name="board_no" value="3">
-                        »∏ø¯ π¯»£
+                        ÌöåÏõê Î≤àÌò∏
                         <input type="hidden" name="member_no" value="3"> -->
-                        <!-- ¡¶∏Ò -->
-                        <input type="text" placeholder="¡¶∏Ò" id="notice_sub" name="notice_sub"><br>
-                        <!-- ≥ªøÎ -->
-                        <textarea name="notice_content" id="notice_content" class="form-control" placeholder="≥ªøÎ" style="min-height:300px;width: 100%; margin-top: 20px;"></textarea>
+                        <!-- Ï†úÎ™© -->
+                        <input type="text" placeholder="Ï†úÎ™©" id="notice_sub" name="notice_sub"><br>
+                        <!-- ÎÇ¥Ïö© -->
+                        <textarea name="notice_content" id="notice_content" class="form-control" placeholder="ÎÇ¥Ïö©" style="min-height:300px;width: 100%; margin-top: 20px;"></textarea>
                       </form>
                      </div>
                      <div class="modal-footer">
-                       <button type="button" class="btn btn-default" data-dismiss="modal">√Îº“</button>
-                       <a id="notice-write" href="#" style="z-index: 1000">µÓ∑œ</a>
+                       <button type="button" class="btn btn-default" data-dismiss="modal">Ï∑®ÏÜå</button>
+                       <button type="button" class="btn btn-default" data-dismiss="modal" onclick="notice_Insert()">Îì±Î°ù</button>
                      </div>
                    </div>
                  </div>
                </div>
          </div>
+         
           <c:forEach var="ndto" items="${notice_list }">
             <div class="showmenu" id="menu${ndto.notice_no }">
-               <div class="noticesub">¡¶∏Ò ${ndto.notice_sub }</div>
-               <div class="noticehire"> ¿€º∫¿œ ${ndto.notice_dbday }</div>
-               <div class="noticeday"> ¡∂»∏ºˆ ${ndto.notice_hit }</div>
+               <div class="noticesub">Ï†úÎ™© ${ndto.notice_sub }</div>
+               <div class="noticehire"> ÏûëÏÑ±Ïùº ${ndto.notice_dbday }</div>
+               <div class="noticeday"> Ï°∞ÌöåÏàò ${ndto.notice_hit }</div>
                <div id="menu${ndto.notice_no }-cont" style="display: none;">
                      <pre>${ndto.notice_content }</pre>
                </div>

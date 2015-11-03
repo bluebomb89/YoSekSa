@@ -1,6 +1,6 @@
 package com.controller;
 import java.io.File;
-// ModelÅ¬·¡½º¸¦ ¸ğ¾Æ¼­ °ü¸® (Container)
+// ModelÅ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ¼ï¿½ ï¿½ï¿½ï¿½ï¿½ (Container)
 import java.util.*;
 
 import javax.xml.parsers.SAXParser;
@@ -21,7 +21,7 @@ public class WebApplicationContext {
 			System.out.println(ex.getMessage());
 		}
 	}
-	// ¿äÃ» Å¬·¡½º Àü¼Û
+	// Modelí´ë˜ìŠ¤ë¥¼ ëª¨ì•„ì„œ ê´€ë¦¬ (Container)
 	public YoseksaModel getBean(String id){
 		return (YoseksaModel)clsMap.get(id);
 	}

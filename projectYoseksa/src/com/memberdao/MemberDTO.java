@@ -1,4 +1,4 @@
-package com.member.dao;
+package com.memberdao;
 
 public class MemberDTO {
 	

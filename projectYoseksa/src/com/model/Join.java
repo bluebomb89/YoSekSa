@@ -1,16 +1,21 @@
-package com.member.model;
+package com.model;
+
+import java.io.IOException;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.common.YoseksaModel;
-import com.member.dao.*;
+import com.controller.Controller;
+import com.controller.RequestMapping;
+import com.memberdao.MemberDAO;
+import com.memberdao.MemberDTO;
 
-public class MemberLoginModel  implements YoseksaModel {
+import jdk.nashorn.internal.ir.annotations.Reference;
 
-	@Override
-	public String handlerRequest(HttpServletRequest req, HttpServletResponse res) throws Exception {
+@Controller("join")
+public class Join {
+	@RequestMapping("member_login.sek")
+	public String member_login(HttpServletRequest req) throws IOException{
 		// TODO Auto-generated method stub
 		String member_id=req.getParameter("member_id");
 		String member_pw=req.getParameter("member_pw");
@@ -46,5 +51,29 @@ public class MemberLoginModel  implements YoseksaModel {
 		}
 		return "yoSeksa/function/member/login.jsp";
 	}
-
+	@RequestMapping("member_logout.sek")
+	public String member_logout(HttpServletRequest req) throws IOException{
+		HttpSession session=req.getSession();
+		session.invalidate();
+		return "yoseksa.sek";
+	}
+	@RequestMapping("join.sek")
+	public String join(HttpServletRequest req) throws IOException{
+		req.setAttribute("jsp",	"../member/join.jsp");
+		return "yoSeksa/function/main/main.jsp";
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

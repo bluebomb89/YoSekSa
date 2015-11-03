@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%
 	request.setCharacterEncoding("EUC-KR");
 %>
@@ -44,12 +44,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 
-<!-- -------------------------------------------Áú¹® Å¬¸¯½Ã ´äº¯------------------------------------ -->
+<!-- -------------------------------------------ì§ˆë¬¸ í´ë¦­ì‹œ ë‹µë³€------------------------------------ -->
 
 <script type="text/javascript">
 
 /***********************************************
-* Contractible Headers script- Â© Dynamic Drive (www.dynamicdrive.com)
+* Contractible Headers script- ì§¤ Dynamic Drive (www.dynamicdrive.com)
 * This notice must stay intact for legal use. Last updated Oct 21st, 2003.
 * Visit http://www.dynamicdrive.com/ for full source code
 ***********************************************/
@@ -156,7 +156,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 <div id="qna_title">
-<span>Q&A¸¦ ÅëÇØ¼­ ±Ã±İÁõÀ» ÇØ°áÇÏ¼¼¿ä.</span>
+<span>Q&Aë¥¼ í†µí•´ì„œ ê¶ê¸ˆì¦ì„ í•´ê²°í•˜ì„¸ìš”.</span>
 </div>
 
 <div id="icon_zoom">
@@ -164,63 +164,63 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 
 <div id="qna_label1">
-<div class="alert alert-info" role="alert">¿©·¯ºĞµéÀÌ ÀÚÁÖ¹¯´Â Áú¹®!</div>
+<div class="alert alert-info" role="alert">ì—¬ëŸ¬ë¶„ë“¤ì´ ìì£¼ë¬»ëŠ” ì§ˆë¬¸!</div>
 </div>
 
 
 
 <div id="qna_div">
-	<h5 onClick="expandcontent('sc1')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;¿ä¼½»ç´Â ¾î¶²°÷ÀÎ°¡¿ä?</span></h5>
+	<h5 onClick="expandcontent('sc1')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;ìš”ì„¹ì‚¬ëŠ” ì–´ë–¤ê³³ì¸ê°€ìš”?</span></h5>
 	<div id="sc1" class="switchcontent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<span>
-	¿ä¼½»ç</span>
+	ìš”ì„¹ì‚¬</span>
 	</div>
 	
-	<h5 onClick="expandcontent('sc2')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;¾ÆÀÌµğ¸¦ º¯°æ ÇÒ ¼ö ÀÖ³ª¿ä?</span></h5>
+	<h5 onClick="expandcontent('sc2')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;ì•„ì´ë””ë¥¼ ë³€ê²½ í•  ìˆ˜ ìˆë‚˜ìš”?</span></h5>
 	<div id="sc2" class="switchcontent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<span>
-	¾ÆÀÌµğ´Â º¯°æÀÌ ºÒ°¡´É ÇÕ´Ï´Ù.
+	ì•„ì´ë””ëŠ” ë³€ê²½ì´ ë¶ˆê°€ëŠ¥ í•©ë‹ˆë‹¤.
 	</span>
 	</div>
 	
-	<h5 onClick="expandcontent('sc3')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;È¸¿øÀÌ ¾Æ´Ò °æ¿ì ¼­ºñ½º¸¦ ÀÌ¿ë ÇÒ ¼ö ¾ø³ª¿ä?</span></h5>
+	<h5 onClick="expandcontent('sc3')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;íšŒì›ì´ ì•„ë‹ ê²½ìš° ì„œë¹„ìŠ¤ë¥¼ ì´ìš© í•  ìˆ˜ ì—†ë‚˜ìš”?</span></h5>
 	<div id="sc3" class="switchcontent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<span>
-	¿ä¼½»çÀÇ ¿Àµç ¼­ºñ½º´Â È¸¿øÀ» ±â¹İÀ¸·Î Á¦°øµÇ°í ÀÖ½À´Ï´Ù.
+	ìš”ì„¹ì‚¬ì˜ ì˜¤ë“  ì„œë¹„ìŠ¤ëŠ” íšŒì›ì„ ê¸°ë°˜ìœ¼ë¡œ ì œê³µë˜ê³  ìˆìŠµë‹ˆë‹¤.
 	</span>
 	</div>
 	
-	<h5 onClick="expandcontent('sc4')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;°Ë»öÀº ¾î¶»°Ô ÇÏ³ª¿ä?</span></h5>
+	<h5 onClick="expandcontent('sc4')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;ê²€ìƒ‰ì€ ì–´ë–»ê²Œ í•˜ë‚˜ìš”?</span></h5>
 	<div id="sc4" class="switchcontent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<span>
-	°Ë»öÇÏ¼¼¿ä
+	ê²€ìƒ‰í•˜ì„¸ìš”
 	</span>
 	</div>
 	
-	<h5 onClick="expandcontent('sc5')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;·¹½ÃÇÇ Ãß°¡´Â ¾îµğ¼­ ÇÏ³ª¿ä?</span></h5>
+	<h5 onClick="expandcontent('sc5')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;ë ˆì‹œí”¼ ì¶”ê°€ëŠ” ì–´ë””ì„œ í•˜ë‚˜ìš”?</span></h5>
 	<div id="sc5" class="switchcontent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<span>
-	Ãß°¡ÇÏ¼¼¿ä
+	ì¶”ê°€í•˜ì„¸ìš”
 	</span>
 	</div>
 	
-	<h5 onClick="expandcontent('sc6')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;È¸¿ø Á¤º¸¸¦ ¹Ù²Ü¼ö ÀÖ³ª¿ä?</span></h5>
+	<h5 onClick="expandcontent('sc6')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;íšŒì› ì •ë³´ë¥¼ ë°”ê¿€ìˆ˜ ìˆë‚˜ìš”?</span></h5>
 	<div id="sc6" class="switchcontent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<span>
-	³×
+	ë„¤
 	</span>
 	</div>
 	
-	<h5 onClick="expandcontent('sc7')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;¿©±â´Â?</span></h5>
+	<h5 onClick="expandcontent('sc7')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;ì—¬ê¸°ëŠ”?</span></h5>
 	<div id="sc7" class="switchcontent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<span>
-	¿ä¼½»ç
+	ìš”ì„¹ì‚¬
 	</span>
 	</div>
 </div>
 
 <div id="qna_label2">
-<div class="alert alert-success" role="alert">1:1¹®ÀÇ</div>
+<div class="alert alert-success" role="alert">1:1ë¬¸ì˜</div>
 </div>
 
 <div id="email_form_div">
@@ -239,7 +239,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 
-<!-- -------------------------------------------Áú¹® Å¬¸¯½Ã ´äº¯ ³¡------------------------------------ -->
+<!-- -------------------------------------------ì§ˆë¬¸ í´ë¦­ì‹œ ë‹µë³€ ë------------------------------------ -->
 
 </body>
 </html>

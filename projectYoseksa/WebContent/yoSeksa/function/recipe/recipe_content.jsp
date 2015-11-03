@@ -1,10 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<title>°í±¸¸¶¼öÇÁ</title>
+<title>ê³ êµ¬ë§ˆìˆ˜í”„</title>
 <link href="yoSeksa/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="yoSeksa/css/component.css" rel="stylesheet" type="text/css"  />
 <!-- Custom Theme files -->
@@ -39,11 +40,11 @@
 			offset: {top: $('header').height()-$('#nav').height()}
 		});
 		
-		/* affix-top ¿¡¼­ affix·Î ¼öÁ¤µÉ´ë ÀÌº¥Æ® ¹ß»ý*/
+		/* affix-top ì—ì„œ affixë¡œ ìˆ˜ì •ë ëŒ€ ì´ë²¤íŠ¸ ë°œìƒ*/
 		$('#nav').on("affix.bs.affix",function(){
 			$("#startmain").text("haa!");
 		});
-		/* affix¿¡¼­ affix-topÀ¸·Î ÀüÈ¯µÉ¶§ ÀÌº¥Æ® ¹ß»ý*/
+		/* affixì—ì„œ affix-topìœ¼ë¡œ ì „í™˜ë ë•Œ ì´ë²¤íŠ¸ ë°œìƒ*/
 		$('#nav').on("affix-top.bs.affix",function(){
 			$("#startmain").text("Search");
 		});
@@ -57,11 +58,11 @@
     <div class="view_pic"><img src="../recipe/zxcvvxzcvcxv_files/2e201b2ed039e2d25a4a5961d50283ed1_m.jpg"></div>
     <div class="view_info">
       
-      <div class="info_title">»ø·¯µå/½ºÇÁ ¡¤ ÀÏ»ó ¡¤ ²úÀÌ±â ¡¤ Ã¤¼Ò·ù      <p>°í±¸¸¶¼öÇÁ</p></div>
+      <div class="info_title">ìƒëŸ¬ë“œ/ìŠ¤í”„ Â· ì¼ìƒ Â· ë“ì´ê¸° Â· ì±„ì†Œë¥˜      <p>ê³ êµ¬ë§ˆìˆ˜í”„</p></div>
       <div class="info_cont">
-        <span class="info_cont_1">ºÐ·®(ÀÎºÐ) : 2ÀÎºÐ</span>        <span class="info_cont_2">Á¶¸®½Ã°£ : 15ºÐ ÀÌ³»</span>        <span class="info_cont_3">³­ÀÌµµ : ÃÊ±Þ</span>      </div>
+        <span class="info_cont_1">ë¶„ëŸ‰(ì¸ë¶„) : 2ì¸ë¶„</span>        <span class="info_cont_2">ì¡°ë¦¬ì‹œê°„ : 15ë¶„ ì´ë‚´</span>        <span class="info_cont_3">ë‚œì´ë„ : ì´ˆê¸‰</span>      </div>
       <div class="info_share">
-          <p class="info_share_in">µî·ÏÀÏ : 15.10.22<span>/</span>Á¶È¸¼ö : 1,235<span>/</span>½ºÅ©·¦ : 46<span>/</span>ÁÁ¾Æ¿ä : 6</p>
+          <p class="info_share_in">ë“±ë¡ì¼ : 15.10.22<span>/</span>ì¡°íšŒìˆ˜ : 1,235<span>/</span>ìŠ¤í¬ëž© : 46<span>/</span>ì¢‹ì•„ìš” : 6</p>
           
       </div>
       
@@ -71,23 +72,23 @@
     <div id="contents_area" class="col-xs-9">
     <div class="view_cont">
     	                <div class="cont_intro">
-            °Ü¿ïÀÌ µÇ¸é È£È£ ºÒ¸ç ±î¸Ô´Â °í±¸¸¶°¡ ÃÖ°íÀÇ °£½ÄÀÎµ¥¿ä! ¿À´ÃÀº ¿ìÀ¯¿Í ÇÔ²² ³Ö¾î ¸¸µå´Â °í±¸¸¶½ºÇÁ¸¦ ¼Ò°³ÇÒ°Ô¿ä. °í±¸¸¶½ºÇÁ´Â ºÎµå·´°í °í¼ÒÇÏ¿© ¾ÆÄ§½Ä»ç ´ë¿ëÀ¸·Î ÁÁÀ¸¸ç °£½ÄÀ¸·Î ¸Ô°í ³²Àº °í±¸¸¶¸¦ ÀÌ¿ëÇÒ ¼ö ÀÖ¾î¼­ ´õ¿í ÁÁ´ä´Ï´Ù. <br>
+            ê²¨ìš¸ì´ ë˜ë©´ í˜¸í˜¸ ë¶ˆë©° ê¹Œë¨¹ëŠ” ê³ êµ¬ë§ˆê°€ ìµœê³ ì˜ ê°„ì‹ì¸ë°ìš”! ì˜¤ëŠ˜ì€ ìš°ìœ ì™€ í•¨ê»˜ ë„£ì–´ ë§Œë“œëŠ” ê³ êµ¬ë§ˆìŠ¤í”„ë¥¼ ì†Œê°œí• ê²Œìš”. ê³ êµ¬ë§ˆìŠ¤í”„ëŠ” ë¶€ë“œëŸ½ê³  ê³ ì†Œí•˜ì—¬ ì•„ì¹¨ì‹ì‚¬ ëŒ€ìš©ìœ¼ë¡œ ì¢‹ìœ¼ë©° ê°„ì‹ìœ¼ë¡œ ë¨¹ê³  ë‚¨ì€ ê³ êµ¬ë§ˆë¥¼ ì´ìš©í•  ìˆ˜ ìžˆì–´ì„œ ë”ìš± ì¢‹ë‹µë‹ˆë‹¤. <br>
          </div>
               <div class="cont_ingre">
                 <dl>
-          <dt>[ÁÖÀç·á]</dt>
-          <dd>°í±¸¸¶ Áß°£ Å©±â 2°³, ¿ìÀ¯ 2ÄÅ, ¹° 1ÄÅ, ´ÙÁø ¾çÆÄ 2Å«¼ú</dd>
+          <dt>[ì£¼ìž¬ë£Œ]</dt>
+          <dd>ê³ êµ¬ë§ˆ ì¤‘ê°„ í¬ê¸° 2ê°œ, ìš°ìœ  2ì»µ, ë¬¼ 1ì»µ, ë‹¤ì§„ ì–‘íŒŒ 2í°ìˆ </dd>
         </dl>
                         <dl>
-          <dt>[¾ç³ä ¹× ¼Ò½ºÀç·á]</dt>
-          <dd>ÆÄ¸¶»êÄ¡Áî 2Å«¼ú, ¿Ã¸®ºêÀ¯ Àû´ç·®, ¼Ò±Ý ¾à°£</dd>
+          <dt>[ì–‘ë… ë° ì†ŒìŠ¤ìž¬ë£Œ]</dt>
+          <dd>íŒŒë§ˆì‚°ì¹˜ì¦ˆ 2í°ìˆ , ì˜¬ë¦¬ë¸Œìœ  ì ë‹¹ëŸ‰, ì†Œê¸ˆ ì•½ê°„</dd>
         </dl>
               </div>
     </div><!--/view_cont -->
     <div class="blank_bottom"></div>
-<div class="view_step"><div class="view_step_cont step1">°í±¸¸¶´Â »î¾Æ¼­ ²®ÁúÀ» ¹þ±ä ÈÄ ¿ìÀ¯¿Í ÇÔ²² ºí·»´õ¿¡ °ö°Ô °¥¾ÆÁÖ¼¼¿ä.<br><img src="../recipe/zxcvvxzcvcxv_files/5c20bf5aef1fa753a034d3fb7443ad081.jpg"></div><div class="view_step_cont"><img src="../recipe/zxcvvxzcvcxv_files/aba861433433bcbae312a95883267a961.jpg"></div>            <dl class="view_step_tip">
-        <dt><img src="../recipe/zxcvvxzcvcxv_files/tit_tip.gif" alt="ÆÁ-ÁÖÀÇ»çÇ×"></dt>
-        <dd> °í±¸¸¶Ä¨À» ¸¸µå¼Å¼­ °í¸íÀ¸·Î ¾ñ¾îÁÖ¼Åµµ ÁÁ¾Æ¿ä~ </dd>
+<div class="view_step"><div class="view_step_cont step1">ê³ êµ¬ë§ˆëŠ” ì‚¶ì•„ì„œ ê»ì§ˆì„ ë²—ê¸´ í›„ ìš°ìœ ì™€ í•¨ê»˜ ë¸”ë Œë”ì— ê³±ê²Œ ê°ˆì•„ì£¼ì„¸ìš”.<br><img src="../recipe/zxcvvxzcvcxv_files/5c20bf5aef1fa753a034d3fb7443ad081.jpg"></div><div class="view_step_cont"><img src="../recipe/zxcvvxzcvcxv_files/aba861433433bcbae312a95883267a961.jpg"></div>            <dl class="view_step_tip">
+        <dt><img src="../recipe/zxcvvxzcvcxv_files/tit_tip.gif" alt="íŒ-ì£¼ì˜ì‚¬í•­"></dt>
+        <dd> ê³ êµ¬ë§ˆì¹©ì„ ë§Œë“œì…”ì„œ ê³ ëª…ìœ¼ë¡œ ì–¹ì–´ì£¼ì…”ë„ ì¢‹ì•„ìš”~ </dd>
       </dl>
             
 
@@ -97,11 +98,11 @@
 
 
     
-    <div class="blank_bottom"></div><!-- ¡Ùimportant¡Ù -->
+    <div class="blank_bottom"></div><!-- â˜†importantâ˜† -->
     <div class="view_reply">
-        <div class="reply_tit">ÀÇ°ß <span id="recipeCommentListCount">3</span></div>
-        <div id="recipeCommentList_1"><div class="media reply_list"><div class="media-left"><a href="http://www.10000recipe.com/profile/index.html?uid=28393124"><img class="media-object" src="../recipe/zxcvvxzcvcxv_files/63a6f87567ba070ea8de595e04851b011.jpg" data-holder-rendered="true"></a></div><div class="media-body"><h4 class="media-heading"><b class="info_name_f">²¨ºÀÀÌ</b>2015-10-24 01:49</h4>²ÀÄ¡Áî¸¦³Ö¾î¾ßÇÏ³ª¿ä</div></div><div class="media reply_list"><div class="media-left"><a href="http://www.10000recipe.com/profile/index.html?uid=bluecool2"><img class="media-object" src="../recipe/zxcvvxzcvcxv_files/489a92ef9ecf868e0f27db9bdafe8e201.71a41a100d6c04d04152a6458c52b736" data-holder-rendered="true"></a></div><div class="media-body"><h4 class="media-heading"><b class="info_name_f">¸¸°³ÀÇ¸ðÂî</b>2015-10-26 09:48</h4>Ä¡Áî°¡ ¾øÀ¸½Ã¸é »ý·«ÇÏ½Ã°í ¸¸µé¾î ÁÖ¼Åµµ µÅ¼¼¿ä~ ´Ù¸¸, Ä¡Áî¸¦ ³Ö¾î ½ºÇÁÀÇ °£À» ¸ÂÃçÁÖ°í °í¼ÒÇÑ ¸ÀÀ» ´õÇØÁØ´ä´Ï´Ù^^</div></div><div class="media reply_list"><div class="media-left"><a href="http://www.10000recipe.com/profile/index.html?uid=cartenoire00"><img class="media-object" src="../recipe/zxcvvxzcvcxv_files/d60b194ef7fb8af7199209aad0c2f6991.jpg" data-holder-rendered="true"></a></div><div class="media-body"><h4 class="media-heading"><b class="info_name_f">¸¸·¹ÀÇ»ý±ÖÅÊ±Ö</b>2015-10-26 09:48</h4> <br>
-²¨ºÀÀÌ´Ô Ä¡Áî¸¦ ³ÖÀ¸¸é ±íÀº Áö¹æ°ú Â¬Á¶¸§ÇÑ ¸ÀÀÇ Ç³¹Ì¸¦ ´À³¥ ¼ö ÀÖ¾î ³Ö¾îÁÖ´Âµ¥¿ä, ¾øÀ¸½Ã´Ù¸é ¼Ò±Ý°£À» °¡°¨ÇØ¼­ ´õ ³Ö¾îÁÖ½Ã¸é °£ÀÌ Àß ¸ÂÀ»°Å¿¹¿ä~ </div></div></div>
+        <div class="reply_tit">ì˜ê²¬ <span id="recipeCommentListCount">3</span></div>
+        <div id="recipeCommentList_1"><div class="media reply_list"><div class="media-left"><a href="http://www.10000recipe.com/profile/index.html?uid=28393124"><img class="media-object" src="../recipe/zxcvvxzcvcxv_files/63a6f87567ba070ea8de595e04851b011.jpg" data-holder-rendered="true"></a></div><div class="media-body"><h4 class="media-heading"><b class="info_name_f">êº¼ë´‰ì´</b>2015-10-24 01:49</h4>ê¼­ì¹˜ì¦ˆë¥¼ë„£ì–´ì•¼í•˜ë‚˜ìš”</div></div><div class="media reply_list"><div class="media-left"><a href="http://www.10000recipe.com/profile/index.html?uid=bluecool2"><img class="media-object" src="../recipe/zxcvvxzcvcxv_files/489a92ef9ecf868e0f27db9bdafe8e201.71a41a100d6c04d04152a6458c52b736" data-holder-rendered="true"></a></div><div class="media-body"><h4 class="media-heading"><b class="info_name_f">ë§Œê°œì˜ëª¨ì°Œ</b>2015-10-26 09:48</h4>ì¹˜ì¦ˆê°€ ì—†ìœ¼ì‹œë©´ ìƒëžµí•˜ì‹œê³  ë§Œë“¤ì–´ ì£¼ì…”ë„ ë¼ì„¸ìš”~ ë‹¤ë§Œ, ì¹˜ì¦ˆë¥¼ ë„£ì–´ ìŠ¤í”„ì˜ ê°„ì„ ë§žì¶°ì£¼ê³  ê³ ì†Œí•œ ë§›ì„ ë”í•´ì¤€ë‹µë‹ˆë‹¤^^</div></div><div class="media reply_list"><div class="media-left"><a href="http://www.10000recipe.com/profile/index.html?uid=cartenoire00"><img class="media-object" src="../recipe/zxcvvxzcvcxv_files/d60b194ef7fb8af7199209aad0c2f6991.jpg" data-holder-rendered="true"></a></div><div class="media-body"><h4 class="media-heading"><b class="info_name_f">ë§Œë ˆì˜ìƒê·¤íƒ±ê·¤</b>2015-10-26 09:48</h4> <br>
+êº¼ë´‰ì´ë‹˜ ì¹˜ì¦ˆë¥¼ ë„£ìœ¼ë©´ ê¹Šì€ ì§€ë°©ê³¼ ì§­ì¡°ë¦„í•œ ë§›ì˜ í’ë¯¸ë¥¼ ëŠë‚„ ìˆ˜ ìžˆì–´ ë„£ì–´ì£¼ëŠ”ë°ìš”, ì—†ìœ¼ì‹œë‹¤ë©´ ì†Œê¸ˆê°„ì„ ê°€ê°í•´ì„œ ë” ë„£ì–´ì£¼ì‹œë©´ ê°„ì´ ìž˜ ë§žì„ê±°ì˜ˆìš”~ </div></div></div>
 
       <div class="reply_write">
       <form id="insCmtFrm" method="post">
@@ -112,8 +113,8 @@
       <input type="hidden" name="frm[cok_reg_id]" value="wifetable">
         <div class="info_pic"><img class="media-object" src="../recipe/zxcvvxzcvcxv_files/pf_100_100.png" data-holder-rendered="true"></div>
         <div class="input-group">
-          <textarea id="cmtTextarea" onclick="EZ.ATLogin(); return false;" name="frm[cmt_tx_content]" class="form-control" placeholder="ÀÚ½Å¸¸ÀÇ ºñ¹ýÀÌ ÀÖÀ¸½Å°¡¿ä?" style="height:100px; width:100%; resize:none;"></textarea>
-          <span class="input-group-btn"><button class="btn btn-default" type="button" onclick="doCommentSubmit()" style="height:100px; width:100px;">µî·Ï</button></span>
+          <textarea id="cmtTextarea" onclick="EZ.ATLogin(); return false;" name="frm[cmt_tx_content]" class="form-control" placeholder="ìžì‹ ë§Œì˜ ë¹„ë²•ì´ ìžˆìœ¼ì‹ ê°€ìš”?" style="height:100px; width:100%; resize:none;"></textarea>
+          <span class="input-group-btn"><button class="btn btn-default" type="button" onclick="doCommentSubmit()" style="height:100px; width:100px;">ë“±ë¡</button></span>
         </div>
       </form>
       </div>
