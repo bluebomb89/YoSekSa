@@ -1,5 +1,7 @@
 package com.model;
 import com.recipedao.*;
+
+import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
@@ -45,8 +47,20 @@ public class Recipe {
 	}
 	@RequestMapping("recipe_insert.sek")
 	public String recipe_insert(HttpServletRequest req) throws IOException{
-		String path="c:\\download";
-		String enctype="EUC-KR";
+//		영권 contentimg경로
+		String path="C:\\Users\\남영권\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
+//		민영 contentimg경로
+//		String path="C:\\Users\\남영권\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
+//		승형 contentimg경로
+//		String path="C:\\Users\\남영권\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
+//		태진 contentimg경로
+//		String path="C:\\Users\\남영권\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
+//		우식 contentimg경로
+//		String path="C:\\Users\\남영권\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
+//		홍의 contentimg경로
+//		String path="C:\\Users\\남영권\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
+		
+		String enctype="UTF-8";
 		int size=1024*1024*500;
 		MultipartRequest mr=new MultipartRequest(req,path,size,enctype,new DefaultFileRenamePolicy());
 		String recipe_sub=mr.getParameter("cok_title");
@@ -54,20 +68,28 @@ public class Recipe {
 		String situ_no=mr.getParameter("cok_sq_category_2");
 		String how_no=mr.getParameter("cok_sq_category_1");
 		String jaeryo_no=mr.getParameter("cok_sq_category_3");
-		String recipe_img=mr.getParameter("메인화면 이미지");
+		String recipe_img=mr.getOriginalFileName("q_main_file");
 		System.out.println(recipe_img);
 		System.out.println(recipe_sub);
 		RecipeDTO d=new RecipeDTO();
 		int recipe_no=RecipeDAO.sequnece();
 		d.setRecipe_no(recipe_no);
+		d.setBoard_no(2);
 		d.setRecipe_sub(recipe_sub);
 		d.setKind_no(Integer.parseInt(kind_no));
 		d.setSitu_no(Integer.parseInt(situ_no));
 		d.setHow_no(Integer.parseInt(how_no));
 		d.setJaeryo_no(Integer.parseInt(jaeryo_no));
 		d.setMember_no(5);
-		d.setRecipe_img("메인화면 이미지");
-		d.setBoard_no(2);
+		if(recipe_img==null){
+			d.setRecipe_img("");
+			d.setRecipe_img_size(0);
+		} else {
+			d.setRecipe_img(recipe_img);
+			File f=new File(path+"\\"+recipe_img);
+			System.out.println("이미지경로 =" +f);
+			d.setRecipe_img_size((int)f.length());
+		}
 		// db연동
 		// 레시피 인서트
 		RecipeDAO.recipeInsert(d);

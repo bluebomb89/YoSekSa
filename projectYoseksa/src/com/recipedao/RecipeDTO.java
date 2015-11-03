@@ -16,6 +16,14 @@ public class RecipeDTO {
 	private String recipe_img;
 	private Date recipe_date;
 	private int hit;
+	private int recipe_img_size;
+	
+	public int getRecipe_img_size() {
+		return recipe_img_size;
+	}
+	public void setRecipe_img_size(int recipe_img_size) {
+		this.recipe_img_size = recipe_img_size;
+	}
 	public int getRecipe_no() {
 		return recipe_no;
 	}
