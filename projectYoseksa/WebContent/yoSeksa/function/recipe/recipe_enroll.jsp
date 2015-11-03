@@ -187,100 +187,7 @@ function readImg(inputId, outputId){
 }
 </script>
 <!-- ------------------------ 이미지 셋 자바스크립트-----끝------------------- -->
-
-<div class="modal fade" id="divModalBlogForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="z-index:100001">
-  <div class="modal-dialog" style="width:520px">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-        <h4 class="modal-title" id="gridSystemModalLabel">블로그 찾기</h4>
-      </div>
-      <div class="modal-body">
-        <dl class="blog_select">
-          <dt>1. 레시피가 있는 블로그를 선택해 주세요.</dt>
-          <dd>
-            <span class="blog_t1"><label class="radio-inline"><input type="radio" name="q_portal" value="Naver" id="q_portal_Naver" onclick="doChangePortal(this.value)" aria-label="" checked="checked">네이버</label></span>
-            <span class="blog_t2"><label class="radio-inline"><input type="radio" name="q_portal" value="Daum" id="q_portal_Daum" onclick="doChangePortal(this.value)" aria-label="">다음</label></span>
-            <span class="blog_t3"><label class="radio-inline"><input type="radio" name="q_portal" value="Tistory" id="q_portal_Tistory" onclick="doChangePortal(this.value)" aria-label="">티스토리</label></span>
-          </dd>
-        </dl>
-        <dl class="blog_select">
-          <dt>2. 글을 가져올 방식을 선택해 주세요.</dt>
-          <dd>
-            <div style="padding-bottom:7px"><span style="color:#666;"><label class="radio-inline"><input type="radio" name="q_blog_select_type" value="id" id="q_blog_select_type_id" onclick="doChangeBlogSelectType(this.value)" aria-label="">블로그 ID를 입력하여 글 선택하기</label></span></div>
-            <div><span style="color:#666"><label class="radio-inline"><input type="radio" name="q_blog_select_type" value="url" id="q_blog_select_type_url" onclick="doChangeBlogSelectType(this.value)" aria-label="">블로그 글 URL을 입력하여 내용 가져오기</label></span></div>
-          </dd>
-        </dl>
-        <dl id="top_blog_select_id" class="blog_select" style="display:none">
-          <dt>3. 블로그 ID를 입력해 주세요.</dt>
-          <dd><span id="txtBlogHeader">http://blog.naver.com/</span> <input type="text" name="q_blogid" id="q_blogid" value="" class="form-control" placeholder="" style="width:200px">
-              <span id="txtBlogTail"></span>
-          </dd>
-        </dl>
-        <dl id="top_blog_select_url" class="blog_select" style="display:none">
-          <dt>3. 블로그 글 URL을 입력해 주세요.</dt>
-          <dd>
-            <input type="text" name="q_blogurl" id="q_blogurl" value="" class="form-control" placeholder="" style="width:400px">
-            <div><span>(블로그 글 URL은 네이버/다음/티스토리 만 가능합니다)</span></div>
-          </dd>
-        </dl>
-            </div>
-      <div class="modal-footer">
-        <button type="button" id="btnBlogContentsList" onclick="doBlogSelect()" class="btn-lg btn-primary" rel="popover_blog">조회</button>
-        <button type="button" class="btn-lg btn-default" data-dismiss="modal">취소</button>
-        <input type="hidden" name="q_page" id="q_page" value="1">
-        <input type="hidden" name="q_scal" id="q_scal" value="10">
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-
-<div class="modal fade" id="divModalBlogContentsList" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="z-index:100002">
-  <div class="modal-dialog" style="width:520px">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-        <h4 class="modal-title" id="gridSystemModalLabel">글을 선택하세요</h4>
-      </div>
-      <div class="modal-body" id="divBlogContentsList">
-
-      </div>
-      <div class="modal-footer">
-
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-<div class="modal fade" id="divBrowserGuideModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="z-index:100001">
-  <div class="modal-dialog" style="width:820px">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-        <h4 class="modal-title" id="gridSystemModalLabel">브라우저 업데이트 안내</h4>
-      </div>
-      <div class="modal-body">
-        <!--
-            <h3>Internet Explorer 10 이하 버전을 사용중이시군요!</h3>
-            <p></p>
-            <h4 style="color:#de4830">레시피 등록은,</h4>
-            <h4 style="color:#de4830">IE 11이상 또는 크롬(Chrome) 브라우저 사용이 필수입니다.</h4>
-        -->
-            <div style="width:800px; height:560px; background:#fff; text-align:center;">
-              <div sthyle="padding-top:5px;"><img src="yoSeksa/css/recipe_enroll/update_icon.gif"></div>
-              <div style="font-size:30px; font-weight:bold; color:#444; padding-top:25px;">브라우저를 최신버전으로 업그레이드 해주세요!</div>
-              <div style="font-size:18px; color:#777; padding-top:25px;">레시피 등록을 위해서는 지금 사용하고 있는<br>브라우저 버전을 업그레이드 하거나 다른 웹 브라우저를 사용해야 됩니다.</div>
-              <div style="font-size:18px; color:#777; padding-top:25px;">아래의 브라우저 사진을 클릭하여 업그레이드 하세요.</div>
-              <div style="padding-top:30px;">
-                <a href="https://www.google.com/chrome/" target="_blank" style="margin:0 4px;"><img src="yoSeksa/css/recipe_enroll/update_b_03.gif" alt="chrome" style="border:none;"></a>
-                <a href="http://windows.microsoft.com/ko-kr/internet-explorer/download-ie" target="_blank" style="margin:0 4px;"><img src="yoSeksa/css/recipe_enroll/update_b_02.gif" alt="IE" style="border:none;"></a>
-              </div>
-            </div>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal --><link rel="stylesheet" type="text/css" href="yoSeksa/css/recipe_enroll/jquery-ui-1.11.4_201507011.css">
+<link rel="stylesheet" type="text/css" href="yoSeksa/css/recipe_enroll/jquery-ui-1.11.4_201507011.css">
 <style>
 .tagit {
     margin: 0 0 0 0 !important;
@@ -579,12 +486,6 @@ function adjustText(id) {
 }
 </script>
 <form name="insFrm" id="insFrm" method="post">
-<input type="hidden" name="q_mode" id="q_mode" value="save">
-<input type="hidden" name="cok_sq_board" id="cok_sq_board" value=""> <input type="hidden" name="newUploadFiles" value="">
-<input type="hidden" name="cok_reg_id" id="cok_reg_id" value="iqeeiqee">
-<input type="hidden" name="cok_reg_type" id="cok_reg_type" value="input">
-<input type="hidden" name="ref_blog_url" id="ref_blog_url" value="">
-<input type="hidden" name="goods_no" id="goods_no" value=""> 
 <link rel="stylesheet" type="text/css" href="yoSeksa/css/recipe_enroll/jquery.tagit.css"><style>
 .note-editor .note-dropzone { opacity: 0 !important; }
 ul.tagit {
@@ -808,18 +709,16 @@ $(function() {
 
 <div class="container recipe_regi" style="margin-top: 100px">
     <div class="regi_center">
-    <div class="regi_title">레시피 등록<a href="javascript:void(0)" id="btnRecipeInsertGuide"><img src="yoSeksa/css/recipe_enroll/btn_guide.gif" alt="레시피등록안내"></a></div>
     <div class="cont_box pad_l_60">
       <div id="divMainPhotoUpload" class="cont_pic2">
         <input type="hidden" name="main_photo" id="main_photo" value="">
         <input type="hidden" name="new_main_photo" id="new_main_photo" value="">
         <div style="position:absolute;left:-3000px"><input type="file" name="q_main_file" id="q_main_file" file_gubun="main" accept="jpeg,png,gif" style="display:;width:0px;height:0px;font-size:0px;" text=""></div>
         <div id="divMainPhotoBox" is_over="0">
-            <img id="mainPhotoHolder" onclick="browseMainFile()" src="yoSeksa/css/recipe_enroll/pic_none4.gif" style="width: 250px; height: 250px; cursor:pointer">
+            <img id="mainPhotoHolder" onclick="browseMainFile()" src="yoSeksa/css/recipe_enroll/pic_none4.gif" style="width: 250px; height: 160px; cursor:pointer">
         </div>
       </div>
       <div class="cont_line"><p class="cont_tit4">레시피 제목</p><input type="text" name="cok_title" id="cok_title" value="" class="form-control" placeholder="예) 소고기 미역국 끓이기" style="width:610px; "></div>
-      <div class="cont_line pad_b_25"><p class="cont_tit4">요리소개</p><textarea name="cok_intro" id="cok_intro" class="form-control step_cont" placeholder="이 레시피의 탄생배경을 적어주세요. 예) 남편의 생일을 맞아 소고기 미역국을 끓여봤어요. 어머니로부터 배운 미역국 레시피를 남편의 입맛에 맞게 고안했습니다." style="height:100px; width:610px; resize:none;"></textarea></div>
       <div class="cont_line"><p class="cont_tit4">카테고리</p>
         <select name="cok_sq_category_4" id="cok_sq_category_4" text="종류별">
 <option value="">종류별</option><option value="63">밑반찬</option>
@@ -887,35 +786,6 @@ $(function() {
 <option value="34">기타</option>
 </select>
       </div>
-      <div class="cont_line"><p class="cont_tit4">요리정보</p>
-      인원
-        <select name="cok_portion" id="cok_portion" text="인원">
-<option value="">인원</option><option value="1">1인분</option>
-<option value="2">2인분</option>
-<option value="3">3인분</option>
-<option value="4">4인분</option>
-<option value="5">5인분</option>
-<option value="6">6인분이상</option>
-</select>
-      <span class="pad_l_30">시간 </span>
-        <select name="cok_time" id="cok_time" text="요리시간">
-<option value="">시간</option><option value="5">5분이내</option>
-<option value="10">10분이내</option>
-<option value="15">15분이내</option>
-<option value="30">30분이내</option>
-<option value="60">60분이내</option>
-<option value="90">90분이내</option>
-<option value="120">2시간이내</option>
-<option value="999">2시간이상</option>
-</select>
-      <span class="pad_l_30">난이도 </span>
-        <select name="cok_degree" id="cok_degree" text="난이도">
-<option value="">난이도</option><option value="1">아무나</option>
-<option value="2">초급</option>
-<option value="3">중급</option>
-<option value="4">고급</option>
-<option value="5">신의경지</option>
-</select>
       </div>
     </div><!--/cont_box-->
     <div class="cont_box pad_l_60">
@@ -956,6 +826,8 @@ $(function() {
 
             </div>
           </div></div>
+          
+      <!-- 요리순서 -->
       <!-- step template -->
       <div id="divStepTemplate" style="display:none">
           <div id="divStepItem_STEP" class="step">
@@ -999,135 +871,15 @@ $(function() {
                 <img id="workPhotoHolder_1" onclick="browseWorkFile(1)" src="yoSeksa/css/recipe_enroll/pic_none3.gif" alt="No Image" style="width: 140px; height: 140px; cursor:pointer">
             </div>
         </div>
-                <div id="divWorkUpload_2" class="complete_pic">
-            <input type="hidden" name="work_photo[]" id="work_photo_2" value="">
-            <input type="hidden" name="new_work_photo[]" id="new_work_photo_2" value="">
-            <input type="hidden" name="del_work_photo[]" id="del_work_photo_2" value="">
-            <div style="position:absolute;left:-3000px"><input type="file" name="q_work_file_2" id="q_work_file_2" file_gubun="work" accept="jpeg,png,gif" style="display:;width:0px;height:0px;font-size:0px;" text=""></div>
-            <div id="divWorkPhotoBox_2" is_over="0">
-                <a href="#" class="pic_del" style="display:none"></a>
-                <img id="workPhotoHolder_2" onclick="browseWorkFile(2)" src="yoSeksa/css/recipe_enroll/pic_none3.gif" alt="No Image" style="width: 140px; height: 140px; cursor:pointer">
-            </div>
-        </div>
-                <div id="divWorkUpload_3" class="complete_pic">
-            <input type="hidden" name="work_photo[]" id="work_photo_3" value="">
-            <input type="hidden" name="new_work_photo[]" id="new_work_photo_3" value="">
-            <input type="hidden" name="del_work_photo[]" id="del_work_photo_3" value="">
-            <div style="position:absolute;left:-3000px"><input type="file" name="q_work_file_3" id="q_work_file_3" file_gubun="work" accept="jpeg,png,gif" style="display:;width:0px;height:0px;font-size:0px;" text=""></div>
-            <div id="divWorkPhotoBox_3" is_over="0">
-                <a href="#" class="pic_del" style="display:none"></a>
-                <img id="workPhotoHolder_3" onclick="browseWorkFile(3)" src="yoSeksa/css/recipe_enroll/pic_none3.gif" alt="No Image" style="width: 140px; height: 140px; cursor:pointer">
-            </div>
-        </div>
-                <div id="divWorkUpload_4" class="complete_pic">
-            <input type="hidden" name="work_photo[]" id="work_photo_4" value="">
-            <input type="hidden" name="new_work_photo[]" id="new_work_photo_4" value="">
-            <input type="hidden" name="del_work_photo[]" id="del_work_photo_4" value="">
-            <div style="position:absolute;left:-3000px"><input type="file" name="q_work_file_4" id="q_work_file_4" file_gubun="work" accept="jpeg,png,gif" style="display:;width:0px;height:0px;font-size:0px;" text=""></div>
-            <div id="divWorkPhotoBox_4" is_over="0">
-                <a href="#" class="pic_del" style="display:none"></a>
-                <img id="workPhotoHolder_4" onclick="browseWorkFile(4)" src="yoSeksa/css/recipe_enroll/pic_none3.gif" alt="No Image" style="width: 140px; height: 140px; cursor:pointer">
-            </div>
-        </div>
               </div>
     </div><!--/cont_box-->
-    <div class="cont_box pad_l_60">
-    <p class="cont_tit4">요리팁</p>
-    <textarea name="cok_tip" id="cok_tip" class="form-control step_cont" placeholder="예) 고기요리에는 소금보다 설탕을 먼저 넣어야 단맛이 겉돌지 않고 육질이 부드러워요." style="height:120px; width:620px; resize:none;"></textarea>
-    </div><!--/cont_box-->
-
 
   </div><!--/regi_center-->
   <div class="regi_btm">
     <button type="button" onclick="doSubmit(&#39;save&#39;)" class="btn-lg btn-primary">저장</button>
-		<button type="button" onclick="doSubmit(&#39;save_public&#39;)" class="btn-lg btn-warning">공개하기</button>
 	    <button type="button" onclick="history.back();" class="btn-lg btn-default">취소</button>
       </div>
 </div><!-- /container --></form>
-
-
-<script>
-    $(function() {
-        $('#btnRecipeInsertGuide').click(function() {
-            $('#recipeInsertGuideModal').modal('show');
-        });
-        $('#recipeInsertGuideModal').on('show.bs.modal',function() {
-			var objId = '';
-            switch ($("#cok_reg_type").val()) {
-                case 'input' : objId = 'headingOne'; break; 
-                case 'import' : objId = 'headingTwo'; break; 
-                case 'edit' : objId = 'headingThree'; break;
-			}
-			if (!$("#" + objId).collapse().hasClass('in')) {
-				setTimeout(function(){
-                    $("#" + objId).trigger('click');
-                }, 500);
-			}
-        });
-		
-        $('#btnRecipeInsertQnA').click(function() {
-            if (confirm('문의하기 페이지로 이동되며\n저장하지 않은 글은 사라집니다.\n\n이 페이지에서 나가시겠습니까?')) {
-                location.href='/customer/insert.html?bid=3';
-            }   
-        });
-
-    });
-</script>
-<div id="recipeInsertGuideModal" class="modal fade">
-    <div class="modal-dialog" style="width:1000px">
-        <div class="modal-content new_folder">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><img src="yoSeksa/css/recipe_enroll/btn_close.gif" alt="닫기"></span></button>
-                <h4 class="modal-title text-left">레시피 등록방법</h4>
-            </div>
-            <div class="modal-body" style="padding:0;">
-                <div class="guide_tit"><img src="yoSeksa/css/recipe_enroll/guide_tt.gif"></div>
-                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                    <div class="panel panel-default">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            <div class="panel-heading" role="tab" id="headingOne">
-                                <span class="guide_icon"><img src="yoSeksa/css/recipe_enroll/icon_guide_01.gif"></span>직접등록하기<i class="btn_arrow"><img src="yoSeksa/css/recipe_enroll/icon_arrow1_down.png"></i>
-                            </div>
-                        </a>
-                        <div id="collapseOne" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="panel-body" style="border-top:1px solid #e6e7e8;">
-                                <img src="yoSeksa/css/recipe_enroll/guide1_01.jpg">
-                                <br>
-                                <img src="yoSeksa/css/recipe_enroll/guide1_02.jpg">
-                                <br>
-                                <img src="yoSeksa/css/recipe_enroll/guide1_03.jpg">
-                            </div>
-                        </div>
-                    </div>
-                    <!--/panel panel-default -->
-					                    <!--/panel panel-default -->
-                    <div class="panel panel-default">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                            <div class="panel-heading" role="tab" id="headingThree">
-                                <span class="guide_icon"><img src="yoSeksa/css/recipe_enroll/icon_guide_03.gif"></span>전문 레시피로 바꾸기<i class="btn_arrow"><img src="yoSeksa/css/recipe_enroll/icon_arrow1_down.png"></i>
-                            </div>
-                        </a>
-                        <div id="collapseThree" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="headingThree">
-                            <div class="panel-body" style="border-top:1px solid #e6e7e8;">
-                                <img src="yoSeksa/css/recipe_enroll/guide3_01.jpg">
-                                <br>
-                                <img src="yoSeksa/css/recipe_enroll/guide3_02.jpg">
-                                <br>
-                                <img src="yoSeksa/css/recipe_enroll/guide3_03.jpg">
-                            </div>
-                        </div>
-                    </div>
-                    <!--/panel panel-default -->
-                </div>
-                <!--/panel-group -->
-                <div class="talk_guide"><span>원하시는 답변을 찾지 못하셨다면, Q&amp;A에 문의하여주세요. </span>
-                    <button class="btn btn-default" type="button" id="btnRecipeInsertQnA">문의하기</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div><input type="hidden" name="isRestrict" value="false">
-
 
 
 

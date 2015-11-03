@@ -19,5 +19,10 @@ public class Recipe {
 		req.setAttribute("jsp",	"../recipe/gallery.jsp");
 		return "yoSeksa/function/main/main.jsp";
 	}
+	@RequestMapping("recipe_enroll.sek")
+	public String recipe_enroll(HttpServletRequest req) throws IOException{
+		req.setAttribute("jsp", "../recipe/recipe_enroll.jsp");
+		return "yoSeksa/function/main/main.jsp";
+	}
 
 }
