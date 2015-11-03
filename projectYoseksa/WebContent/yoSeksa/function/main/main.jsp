@@ -8,12 +8,11 @@
 <title></title>
 <link href="yoSeksa/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="yoSeksa/css/component.css" rel="stylesheet" type="text/css"  />
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 <!-- script -->
 <script type="text/javascript">
 $(function(){
-	
    $('#login_Btn').click(function(){
-	   
       var member_id=$('#member_id').val();
       if(member_id=="")
       {
@@ -64,7 +63,7 @@ $(function(){
          </c:if>
          
            </nav>
-         <!-- 왼쪽상단에 있는 버튼을 클릭했을때 나오는 링크or속성값을 지정하는곳 -->
+      <!-- 왼쪽상단에 있는 버튼을 클릭했을때 나오는 링크or속성값을 지정하는곳 -->
       <!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
        <script src="yoSeksa/js/classie.js"></script>
 <!-- 타이틀 메뉴바 -->
