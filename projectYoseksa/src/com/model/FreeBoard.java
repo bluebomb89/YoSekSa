@@ -1,6 +1,7 @@
 package com.model;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import javax.servlet.http.HttpServletRequest;
@@ -82,9 +83,9 @@ public class FreeBoard {
 	   }
 	 
 	 @RequestMapping("freeboard_insert_ok.sek")
-	   public String board_insert(HttpServletRequest req)
+	   public String board_insert(HttpServletRequest req)throws IOException
 	   {
-		 	//req.setCharacterEncoding("EUC-KR");
+		 	req.setCharacterEncoding("EUC-KR");
 			String nickname=req.getParameter("nickname");
 			String free_content=req.getParameter("free_content");
 			String free_pw=req.getParameter("free_pw");
@@ -142,9 +143,9 @@ public class FreeBoard {
 	   }
 	 
 	 @RequestMapping("freeboard_update_ok.sek")
-	   public String freeboard_update_ok(HttpServletRequest req)
+	   public String freeboard_update_ok(HttpServletRequest req) throws IOException
 	   {
-		 	//req.setCharacterEncoding("EUC-KR");
+		 	req.setCharacterEncoding("EUC-KR");
 			String strPage=req.getParameter("page");
 			String strNo=req.getParameter("free_no");
 			String nickname=req.getParameter("nickname");
@@ -199,9 +200,9 @@ public class FreeBoard {
 	 
 	 
 	 @RequestMapping("reply_new_insert.sek")
-	   public String reply_new_insert(HttpServletRequest req)
+	   public String reply_new_insert(HttpServletRequest req)throws IOException
 	   {
-		 	//req.setCharacterEncoding("EUC-KR");
+		 	req.setCharacterEncoding("EUC-KR");
 			String reply_content=req.getParameter("req_reply_content");
 			String board_no=req.getParameter("board_no");
 			String page=req.getParameter("page");
@@ -219,9 +220,9 @@ public class FreeBoard {
 	   }
 	 
 	 @RequestMapping("reply_re_insert.sek")
-	   public String reply_re_insert(HttpServletRequest req)
+	   public String reply_re_insert(HttpServletRequest req)throws IOException
 	   {
-		 	//req.setCharacterEncoding("EUC-KR");
+		 	req.setCharacterEncoding("EUC-KR");
 			String reply_content=req.getParameter("req_reply_content");
 			String board_no=req.getParameter("board_no");
 			String page=req.getParameter("page");
@@ -250,9 +251,9 @@ public class FreeBoard {
 	   }
 	 
 	 @RequestMapping("reply_re_update.sek")
-	   public String reply_re_update(HttpServletRequest req)
+	   public String reply_re_update(HttpServletRequest req)throws IOException
 	   {
-		 	//req.setCharacterEncoding("EUC-KR");
+		 	req.setCharacterEncoding("EUC-KR");
 			String reply_content=req.getParameter("req_reply_content");
 			String board_no=req.getParameter("board_no");
 			String page=req.getParameter("page");
