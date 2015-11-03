@@ -50,4 +50,42 @@ public class Member {
 		
 		return "main.sek";
 	}
+	@RequestMapping("member_login.sek")
+	public String member_login(HttpServletRequest req) throws IOException{
+		
+		String member_id=req.getParameter("member_id");
+		String member_pw=req.getParameter("member_pw");
+		String result="";
+		int count=MemberDAO.memberIdCount(member_id);
+		if(count==0)
+		{
+			result="NOID";
+		}
+		else
+		{
+			MemberDTO d=MemberDAO.memberGetInfo(member_id);
+			if(member_pw.equals(d.getMember_pw()))
+			{
+				result="OK";
+				HttpSession session=req.getSession();
+				session.setAttribute("member_id", member_id);
+				// ${sessionScope.id} => session.getAttribute("id")
+				session.setAttribute("nickname", d.getNickname());
+			}
+			else
+			{
+				result="NOPWD";
+			}
+		}
+		req.setAttribute("result", result);
+		return "yoSeksa/function/member/login_ok.jsp";
+	}
+	
+	@RequestMapping("member_logout.sek")
+	public String member_logout(HttpServletRequest req) throws IOException{
+		
+		HttpSession session=req.getSession();
+		session.invalidate();
+		return "main.sek";
+	}
 }

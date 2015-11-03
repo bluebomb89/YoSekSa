@@ -11,7 +11,9 @@
 <!-- script -->
 <script type="text/javascript">
 $(function(){
+	
    $('#login_Btn').click(function(){
+	   
       var member_id=$('#member_id').val();
       if(member_id=="")
       {
@@ -26,6 +28,7 @@ $(function(){
       }
       $('#login_frm').submit();
    });
+   
     $('#logout_Btn').click(function(){
       $('#logout_frm').submit();
    });
@@ -46,9 +49,9 @@ $(function(){
          <!-- ���� 濡�洹몄�� �� -->
          <c:if test="${sessionScope.member_id==null }">
             <form method="post" action="member_login.sek" id="login_frm">
-               ID:<input type=text name=member_id id=member_id size=10>
+               ID:<input type=text name=member_id id="member_id" size=10>
                &nbsp;
-               PW:<input type=password name=member_pw id=member_pw size=10>
+               PW:<input type=password name=member_pw id="member_pw" size=10>
                &nbsp;
                <input type=button value="로그인" id="login_Btn">
             </form>

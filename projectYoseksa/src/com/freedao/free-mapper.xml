@@ -4,8 +4,8 @@
  <mapper namespace="com.free.dao.free-mapper">
 
     <select id="freeboardListData" resultType="Freeboard" parameterType="java.util.Map">
-      SELECT free_no,nickname,free_content, dbday
-      FROM (SELECT free_no,nickname,free_content TO_CHAR(free_date,'YYYY-MM-DD') as dbday
+      SELECT free_no,nickname,free_content,dbday,num
+      FROM (SELECT free_no,nickname,free_content TO_CHAR(free_date,'YYYY-MM-DD') as dbday,rownum as num
       FROM (SELECT free_no,nickname,free_content,free_date 
       FROM yoseksa_freeboard ORDER BY free_no DESC)) 
       WHERE num BETWEEN #{start} AND #{end}
