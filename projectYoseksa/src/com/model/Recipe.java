@@ -47,18 +47,18 @@ public class Recipe {
    }
    @RequestMapping("recipe_insert.sek")
    public String recipe_insert(HttpServletRequest req) throws IOException{
-//      ¿µ±Ç contentimg°æ·Î
-      String path="C:\\Users\\³²¿µ±Ç\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
-//      ¹Î¿µ contentimg°æ·Î
-//      String path="C:\\Users\\³²¿µ±Ç\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
-//      ½ÂÇü contentimg°æ·Î
-//      String path="C:\\Users\\³²¿µ±Ç\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
-//      ÅÂÁø contentimg°æ·Î
-//      String path="C:\\Users\\³²¿µ±Ç\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
-//      ¿ì½Ä contentimg°æ·Î
-//      String path="C:\\Users\\³²¿µ±Ç\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
-//      È«ÀÇ contentimg°æ·Î
-//      String path="C:\\Users\\³²¿µ±Ç\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
+//      ï¿½ï¿½ï¿½ï¿½ contentimgï¿½ï¿½ï¿½
+      String path="C:\\Users\\ë‚¨ì˜ê¶Œ\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
+//      ï¿½Î¿ï¿½ contentimgï¿½ï¿½ï¿½
+//      String path="C:\\Users\\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
+//      ï¿½ï¿½ï¿½ï¿½ contentimgï¿½ï¿½ï¿½
+//      String path="C:\\Users\\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
+//      ï¿½ï¿½ï¿½ï¿½ contentimgï¿½ï¿½ï¿½
+//      String path="C:\\Users\\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
+//      ï¿½ï¿½ï¿½ contentimgï¿½ï¿½ï¿½
+//      String path="C:\\Users\\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
+//      È«ï¿½ï¿½ contentimgï¿½ï¿½ï¿½
+//      String path="C:\\Users\\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
       
       String enctype="UTF-8";
       int size=1024*1024*500;
@@ -69,8 +69,6 @@ public class Recipe {
       String how_no=mr.getParameter("cok_sq_category_1");
       String jaeryo_no=mr.getParameter("cok_sq_category_3");
       String recipe_img=mr.getOriginalFileName("q_main_file");
-      System.out.println(recipe_img);
-      System.out.println(recipe_sub);
       RecipeDTO d=new RecipeDTO();
       int recipe_no=RecipeDAO.sequnece();
       d.setRecipe_no(recipe_no);
@@ -85,15 +83,16 @@ public class Recipe {
          d.setRecipe_img("");
          d.setRecipe_img_size(0);
       } else {
-         d.setRecipe_img(recipe_img);
+    	 String recipe_imgc=path+"\\"+recipe_img;
+         d.setRecipe_img(recipe_imgc);
          File f=new File(path+"\\"+recipe_img);
-         System.out.println("ÀÌ¹ÌÁö°æ·Î =" +f);
+         System.out.println("ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ =" +f);
          d.setRecipe_img_size((int)f.length());
       }
-      // db¿¬µ¿
-      // ·¹½ÃÇÇ ÀÎ¼­Æ®
+      // dbï¿½ï¿½ï¿½ï¿½
+      // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î¼ï¿½Æ®
       RecipeDAO.recipeInsert(d);
-      // Àç·á ÀÎ¼­Æ®
+      // ï¿½ï¿½ï¿½ ï¿½Î¼ï¿½Æ®
       MaterialDTO jd=new MaterialDTO();
       boolean count=true;
       int no=1;
@@ -107,11 +106,11 @@ public class Recipe {
          jd.setMaterial_content(material_content);
          jd.setMaterial_gram(material_gramgram);
          jd.setRecipe_no(recipe_no);
-         // DB¿¬µ¿
+         // DBï¿½ï¿½ï¿½ï¿½
          RecipeDAO.materialInsert(jd);
          no++;
       }   
-      // ¾ç³ä ÀÎ¼­Æ®
+      // ï¿½ï¿½ï¿½ ï¿½Î¼ï¿½Æ®
       SourceDTO sc=new SourceDTO();
       boolean scount=true;
       int sno=1;
@@ -125,11 +124,11 @@ public class Recipe {
          sc.setSource_content(source_content);
          sc.setSource_gram(source_gram);
          sc.setRecipe_no(recipe_no);
-         // DB¿¬µ¿
+         // DBï¿½ï¿½ï¿½ï¿½
          RecipeDAO.soueceInsert(sc);
          sno++;
       }
-      // ¿ä¸®¼ø¼­ ÀÎ¼­Æ®
+      // ï¿½ä¸®ï¿½ï¿½ï¿½ï¿½ ï¿½Î¼ï¿½Æ®
       req.setAttribute("jsp",   "../recipe/gallery.jsp");
       return "yoSeksa/function/main/main.jsp";
    }
