@@ -12,5 +12,17 @@
 	<!-- 홍의 -->
 	<!-- ㅁㅁ -->
 	<!-- 민영 -->
-	<!-- ㅁㅁ -->
+	<sql id="where-no">
+      WHERE recipe_no=#{recipe_no}
+    </sql>
+	<select id="recipeContentData" resultType="Recipe" parameterType="java.util.Map">
+	  SELECT recipe_no,recipe_img,recipe_sub,num
+      FROM (SELECT recipe_no,recipe_img,recipe_sub,rownum as num
+      FROM (SELECT recipe_no,recipe_img,recipe_sub 
+      FROM yoseksa_recipe ORDER BY recipe_no DESC)) 
+      WHERE num BETWEEN #{start} AND #{end}
+	</select>
+	 <select id="recipeRowCount" resultType="int">
+      SELECT COUNT(*) FROM replyBoard
+      </select>
 </mapper>

@@ -11,8 +11,14 @@ public class RecipeDTO {
 	private int material_no;
 	private int source_no;
 	private int member_no;
+	private int recipe_Count;
 	
-	private String recipe_sub;
+	public int getRecipe_Count() {
+		return recipe_Count;
+	}
+	public void setRecipe_Count(int recipe_Count) {
+		this.recipe_Count = recipe_Count;
+	}
 	public int getRecipe_no() {
 		return recipe_no;
 	}
@@ -105,6 +111,7 @@ public class RecipeDTO {
 	}
 	private String recipe_img;
 	private String recipe_content;
+	private String recipe_sub;
 	private String recipe_tip;
 	private Date recipe_date;
 	private int hit;
