@@ -1,7 +1,10 @@
 package com.recipedao;
 import java.util.*;
 
+import com.memberdao.MemberDTO;
+import com.recipedao.*;
 public class RecipeDTO {
+	public MemberDTO mdto=new MemberDTO();
 	private int recipe_no;
 	private int board_no;
 	private int  kind_no;

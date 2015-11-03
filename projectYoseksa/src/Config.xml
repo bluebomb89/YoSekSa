@@ -9,7 +9,6 @@
 		<typeAlias type="com.freedao.ReplyDTO" alias="Reply"/>			<!-- 댓글 -->
 		<typeAlias type="com.recipedao.RecipeDTO" alias="Recipe"/>		<!-- 나만의레시피 -->
 		<typeAlias type="com.recipedao.HowDTO" alias="How"/>			<!-- 나만의레시피 - 방법별 -->
-		<typeAlias type="com.recipedao.JaeryoDTO" alias="Jaeryo"/>		<!-- 나만의레시피 - 재료별 -->
 		<typeAlias type="com.recipedao.KindDTO" alias="Kind"/>			<!-- 나만의레시피 - 종류별 -->
 		<typeAlias type="com.recipedao.MaterialDTO" alias="Material"/>	<!-- 나만의레시피 - 재료 -->
 		<typeAlias type="com.recipedao.SituDTO" alias="Situ"/>			<!-- 나만의레시피 - 상황별 -->
