@@ -1,4 +1,3 @@
-
 drop table yoseksa_freeboard CASCADE CONSTRAINTS;
 drop table yoseksa_source CASCADE CONSTRAINTS;
 drop table yoseksa_material CASCADE CONSTRAINTS;
@@ -11,10 +10,9 @@ drop table yoseksa_myrecipe CASCADE CONSTRAINTS;
 drop table yoseksa_scrap CASCADE CONSTRAINTS;
 drop table yoseksa_recipe CASCADE CONSTRAINTS;
 drop table yoseksa_kind CASCADE CONSTRAINTS;
-drop table yoseksa_member CASCADE CONSTRAINTS;
 drop table yoseksa_boardmgr CASCADE CONSTRAINTS;
 drop table yoseksa_notice CASCADE CONSTRAINTS;
-
+drop table yoseksa_member CASCADE CONSTRAINTS;
 
 CREATE TABLE yoseksa_member(
    member_no NUMBER,
@@ -22,12 +20,11 @@ CREATE TABLE yoseksa_member(
    member_pw VARCHAR2(10) CONSTRAINT mem_pw_nn NOT NULL,
    nickname VARCHAR2(20) CONSTRAINT mem_nick_nn NOT NULL,
    email VARCHAR2(40) CONSTRAINT mem_email_nn NOT NULL,
-   member_pic VARCHAR2(200),
    CONSTRAINT mem_no_pk PRIMARY KEY(member_no)
 );
 
-INSERT INTO yoseksa_member (member_no, member_id, member_pw, nickname, email, member_pic)
-VALUES(1,'admin','admin1','어드민','admin@yoseksa.com','');
+
+INSERT INTO yoseksa_member VALUES(1,'admin','admin1','어드민','admin@yoseksa.com');
 
 
 -- 게시판 관리 테이블
@@ -115,9 +112,9 @@ INSERT INTO yoseksa_jaeryo (jaeryo_no,jaeryo_content) VALUES(8,'기타');
 
 --종류별 테이블
 CREATE TABLE yoseksa_kind(
-	kind_no NUMBER,
-	kind_content VARCHAR2(20),
-	CONSTRAINT yk_pk_kind_no PRIMARY KEY(kind_no)
+   kind_no NUMBER,
+   kind_content VARCHAR2(20),
+   CONSTRAINT yk_pk_kind_no PRIMARY KEY(kind_no)
 );
 INSERT INTO yoseksa_kind VALUES(1,'밑반찬');
 INSERT INTO yoseksa_kind VALUES(2,'메인반찬');
@@ -137,29 +134,29 @@ INSERT INTO yoseksa_kind VALUES(15,'기타');
 
 -- 나만의 레시피 테이블
 CREATE TABLE yoseksa_recipe(
-	recipe_no NUMBER,
-	kind_no NUMBER,
-	board_no NUMBER,
-	situ_no NUMBER,
-	how_no NUMBER,
-	jaeryo_no NUMBER,
-	material_no NUMBER,
-	source_no NUMBER,
-	member_no NUMBER,
-	recipe_sub VARCHAR2(20) CONSTRAINT yr_nn_recipe_sub NOT NULL,
+   recipe_no NUMBER,
+   kind_no NUMBER,
+   board_no NUMBER,
+   situ_no NUMBER,
+   how_no NUMBER,
+   jaeryo_no NUMBER,
+   material_no NUMBER,
+   source_no NUMBER,
+   member_no NUMBER,
+   recipe_sub VARCHAR2(20) CONSTRAINT yr_nn_recipe_sub NOT NULL,
 
-	recipe_tip VARCHAR2(200),
-	recipe_date DATE DEFAULT SYSDATE,
-	hit NUMBER DEFAULT 0,
-	CONSTRAINT yr_pk_recipe_no PRIMARY KEY(recipe_no),
-	CONSTRAINT yr_fk_kind_no FOREIGN KEY(kind_no) REFERENCES yoseksa_kind(kind_no),
-	CONSTRAINT yr_fk_board_no FOREIGN KEY(board_no) REFERENCES yoseksa_boardmgr(board_no),
-	CONSTRAINT yr_fk_situ_no FOREIGN KEY(situ_no) REFERENCES yoseksa_situ(situ_no),
-	CONSTRAINT yr_fk_how_no FOREIGN KEY(how_no) REFERENCES yoseksa_how(how_no),
-	CONSTRAINT yr_fk_jaeryo_no FOREIGN KEY(jaeryo_no) REFERENCES yoseksa_jaeryo(jaeryo_no),
-	CONSTRAINT yr_fk_material_no FOREIGN KEY(material_no) REFERENCES yoseksa_material(material_no),
-	CONSTRAINT yr_fk_source_no FOREIGN KEY(source_no) REFERENCES yoseksa_source(source_no),
-	CONSTRAINT yr_fk_member_no FOREIGN KEY(member_no) REFERENCES yoseksa_member(member_no)
+   recipe_tip VARCHAR2(200),
+   recipe_date DATE DEFAULT SYSDATE,
+   hit NUMBER DEFAULT 0,
+   CONSTRAINT yr_pk_recipe_no PRIMARY KEY(recipe_no),
+   CONSTRAINT yr_fk_kind_no FOREIGN KEY(kind_no) REFERENCES yoseksa_kind(kind_no),
+   CONSTRAINT yr_fk_board_no FOREIGN KEY(board_no) REFERENCES yoseksa_boardmgr(board_no),
+   CONSTRAINT yr_fk_situ_no FOREIGN KEY(situ_no) REFERENCES yoseksa_situ(situ_no),
+   CONSTRAINT yr_fk_how_no FOREIGN KEY(how_no) REFERENCES yoseksa_how(how_no),
+   CONSTRAINT yr_fk_jaeryo_no FOREIGN KEY(jaeryo_no) REFERENCES yoseksa_jaeryo(jaeryo_no),
+   CONSTRAINT yr_fk_material_no FOREIGN KEY(material_no) REFERENCES yoseksa_material(material_no),
+   CONSTRAINT yr_fk_source_no FOREIGN KEY(source_no) REFERENCES yoseksa_source(source_no),
+   CONSTRAINT yr_fk_member_no FOREIGN KEY(member_no) REFERENCES yoseksa_member(member_no)
 );
 */
 
@@ -168,8 +165,8 @@ CREATE TABLE yoseksa_freeboard(
    board_no NUMBER DEFAULT 1,
    free_no NUMBER NOT NULL,
    member_no NUMBER,
+   free_pw VARCHAR2(30) NOT NULL,
    nickname VARCHAR2(20) CONSTRAINT fb_nick_nn NOT NULL,
-   member_pic VARCHAR2(100),
    free_content CLOB CONSTRAINT fb_cont_nn NOT NULL,
    free_date DATE DEFAULT SYSDATE,
    CONSTRAINT freeboard_pk_no PRIMARY KEY(free_no),
@@ -177,19 +174,25 @@ CREATE TABLE yoseksa_freeboard(
    CONSTRAINT freeboard_fk_mno FOREIGN KEY(member_no) REFERENCES yoseksa_member(member_no)
 );
 
+INSERT INTO yoseksa_notice VALUES(1,1,1,'1234','닉네임','자게 내용입니다.',SYSDATE);
+INSERT INTO yoseksa_notice VALUES(1,2,1,'1234','닉네임','자게 내용입니다.',SYSDATE);
+INSERT INTO yoseksa_notice VALUES(1,3,1,'1234','닉네임','자게 내용입니다.',SYSDATE);
+INSERT INTO yoseksa_notice VALUES(1,4,1,'1234','닉네임','자게 내용입니다.',SYSDATE);
+INSERT INTO yoseksa_notice VALUES(1,5,1,'1234','닉네임','자게 내용입니다.',SYSDATE);
+
 
 --공지사항 테이블
 CREATE table yoseksa_notice(
-	notice_no NUMBER,
-	board_no NUMBER DEFAULT 3,
-	member_no NUMBER,
-	notice_sub VARCHAR2(200) CONSTRAINT yn_nn_sub NOT NULL,
-	notice_content CLOB CONSTRAINT yn_nn_cont NOT NULL,
-	notice_date DATE DEFAULT SYSDATE,
-	notice_hit NUMBER DEFAULT 0,
-	CONSTRAINT yn_pk_no PRIMARY KEY(notice_no),
-	CONSTRAINT yn_fk_board_no FOREIGN KEY(board_no) REFERENCES yoseksa_boardmgr(board_no),
-	CONSTRAINT yn_fk_member_no FOREIGN KEY(member_no) REFERENCES yoseksa_member(member_no)
+   notice_no NUMBER,
+   board_no NUMBER DEFAULT 3,
+   member_no NUMBER,
+   notice_sub VARCHAR2(20) CONSTRAINT yn_nn_sub NOT NULL,
+   notice_content CLOB CONSTRAINT yn_nn_cont NOT NULL,
+   notice_date DATE DEFAULT SYSDATE,
+   notice_hit NUMBER DEFAULT 0,
+   CONSTRAINT yn_pk_no PRIMARY KEY(notice_no),
+   CONSTRAINT yn_fk_board_no FOREIGN KEY(board_no) REFERENCES yoseksa_boardmgr(board_no),
+   CONSTRAINT yn_fk_member_no FOREIGN KEY(member_no) REFERENCES yoseksa_member(member_no)
 );
 
 INSERT INTO yoseksa_notice VALUES(1,3,1,'공지사항제목','공지사항 내용입니다.',SYSDATE,0);
@@ -197,68 +200,68 @@ INSERT INTO yoseksa_notice VALUES(2,3,1,'공지사항제목','공지사항 내용입니다.',SY
 INSERT INTO yoseksa_notice VALUES(3,3,1,'공지사항제목','공지사항 내용입니다.',SYSDATE,0);
 INSERT INTO yoseksa_notice VALUES(4,3,1,'공지사항제목','공지사항 내용입니다.',SYSDATE,0);
 INSERT INTO yoseksa_notice VALUES(5,3,1,'공지사항제목','공지사항 내용입니다.',SYSDATE,0);
-
+/*
 -- 달력 테이블
 CREATE table yoseksa_diary(
-	mgr_no NUMBER,
-	member_no NUMBER,
-	board_no NUMBER DEFAULT 4,
-	diary_date DATE DEFAULT SYSDATE,
-	diary_bld VARCHAR2(100) CONSTRAINT yd_nn_diary_bld NOT NULL,
-	CONSTRAINT yd_pk_mgr_no PRIMARY KEY(mgr_no),
-	CONSTRAINT yd_fk_member_no FOREIGN KEY(member_no) REFERENCES yoseksa_member(member_no),
-	CONSTRAINT yd_fk_board_no FOREIGN KEY(board_no) REFERENCES yoseksa_boardmgr(board_no)
+   mgr_no NUMBER,
+   member_no NUMBER,
+   board_no NUMBER DEFAULT 4,
+   diary_date DATE DEFAULT SYSDATE,
+   diary_bld VARCHAR2(100) CONSTRAINT yd_nn_diary_bld NOT NULL,
+   CONSTRAINT yd_pk_mgr_no PRIMARY KEY(mgr_no),
+   CONSTRAINT yd_fk_member_no FOREIGN KEY(member_no) REFERENCES yoseksa_member(member_no),
+   CONSTRAINT yd_fk_board_no FOREIGN KEY(board_no) REFERENCES yoseksa_boardmgr(board_no)
 );
 
-/*
+
 -- 내가작성한 레시피 테이블
 CREATE TABLE yoseksa_myrecipe(
-	member_no NUMBER,
-	board_no NUMBER DEFAULT 6,
-	recipe_no NUMBER,
-	kind_no NUMBER,
-	situ_no NUMBER,
-	how_no NUMBER,
-	jaeryo_no NUMBER,
-	material_no NUMBER,
-	source_no NUMBER,
-	CONSTRAINT ym_fk_member_no FOREIGN KEY(member_no) REFERENCES yoseksa_member(member_no),
-	CONSTRAINT ym_fk_board_no FOREIGN KEY(board_no) REFERENCES yoseksa_boardmgr(board_no),
-	CONSTRAINT ym_fk_recipe_no FOREIGN KEY(recipe_no) REFERENCES yoseksa_recipe(recipe_no),
-	CONSTRAINT ym_fk_kind_no FOREIGN KEY(kind_no) REFERENCES yoseksa_kind(kind_no),
-	CONSTRAINT ym_fk_situ_no FOREIGN KEY(situ_no) REFERENCES yoseksa_situ(situ_no),
-	CONSTRAINT ym_fk_how_no FOREIGN KEY(how_no) REFERENCES yoseksa_how(how_no),
-	CONSTRAINT ym_fk_jaeryo_no FOREIGN KEY(jaeryo_no) REFERENCES yoseksa_jaeryo(jaeryo_no),
-	CONSTRAINT ym_fk_material_no FOREIGN KEY(material_no) REFERENCES yoseksa_material(material_no),
-	CONSTRAINT ym_fk_source_no FOREIGN KEY(source_no) REFERENCES yoseksa_source(source_no));
+   member_no NUMBER,
+   board_no NUMBER DEFAULT 6,
+   recipe_no NUMBER,
+   kind_no NUMBER,
+   situ_no NUMBER,
+   how_no NUMBER,
+   jaeryo_no NUMBER,
+   material_no NUMBER,
+   source_no NUMBER,
+   CONSTRAINT ym_fk_member_no FOREIGN KEY(member_no) REFERENCES yoseksa_member(member_no),
+   CONSTRAINT ym_fk_board_no FOREIGN KEY(board_no) REFERENCES yoseksa_boardmgr(board_no),
+   CONSTRAINT ym_fk_recipe_no FOREIGN KEY(recipe_no) REFERENCES yoseksa_recipe(recipe_no),
+   CONSTRAINT ym_fk_kind_no FOREIGN KEY(kind_no) REFERENCES yoseksa_kind(kind_no),
+   CONSTRAINT ym_fk_situ_no FOREIGN KEY(situ_no) REFERENCES yoseksa_situ(situ_no),
+   CONSTRAINT ym_fk_how_no FOREIGN KEY(how_no) REFERENCES yoseksa_how(how_no),
+   CONSTRAINT ym_fk_jaeryo_no FOREIGN KEY(jaeryo_no) REFERENCES yoseksa_jaeryo(jaeryo_no),
+   CONSTRAINT ym_fk_material_no FOREIGN KEY(material_no) REFERENCES yoseksa_material(material_no),
+   CONSTRAINT ym_fk_source_no FOREIGN KEY(source_no) REFERENCES yoseksa_source(source_no));
 
 
 
 -- 스크랩한 목록 테이블
 CREATE table yoseksa_scrap(
-	scrap_no NUMBER,
-	board_no NUMBER DEFAULT 5,
-	member_no NUMBER,
-	recipe_no NUMBER,
-	kind_no NUMBER,
-	situ_no NUMBER,
-	how_no NUMBER,
-	jaeryo_no NUMBER,
-	material_no NUMBER,
-	source_no NUMBER,
-	CONSTRAINT ys_pk_scrap_no PRIMARY KEY(scrap_no),
-	CONSTRAINT ys_fk_board_no FOREIGN KEY(board_no) REFERENCES yoseksa_boardmgr(board_no),
-	CONSTRAINT ys_fk_member_no FOREIGN KEY(member_no) REFERENCES yoseksa_member(member_no),
-	CONSTRAINT ys_fk_recipe_no FOREIGN KEY(recipe_no) REFERENCES yoseksa_recipe(recipe_no),
-	CONSTRAINT ys_fk_kind_no FOREIGN KEY(kind_no ) REFERENCES yoseksa_kind(kind_no),
-	CONSTRAINT ys_fk_situ_no FOREIGN KEY(situ_no ) REFERENCES yoseksa_situ(situ_no),
-	CONSTRAINT ys_fk_how_no FOREIGN KEY(how_no) REFERENCES yoseksa_how(how_no),
-	CONSTRAINT ys_fk_jaeryo_no FOREIGN KEY(jaeryo_no) REFERENCES yoseksa_jaeryo(jaeryo_no),
-	CONSTRAINT ys_fk_material_no FOREIGN KEY(material_no) REFERENCES yoseksa_material(material_no),
-	CONSTRAINT ys_fk_source_no FOREIGN KEY(source_no) REFERENCES yoseksa_source(source_no)
+   scrap_no NUMBER,
+   board_no NUMBER DEFAULT 5,
+   member_no NUMBER,
+   recipe_no NUMBER,
+   kind_no NUMBER,
+   situ_no NUMBER,
+   how_no NUMBER,
+   jaeryo_no NUMBER,
+   material_no NUMBER,
+   source_no NUMBER,
+   CONSTRAINT ys_pk_scrap_no PRIMARY KEY(scrap_no),
+   CONSTRAINT ys_fk_board_no FOREIGN KEY(board_no) REFERENCES yoseksa_boardmgr(board_no),
+   CONSTRAINT ys_fk_member_no FOREIGN KEY(member_no) REFERENCES yoseksa_member(member_no),
+   CONSTRAINT ys_fk_recipe_no FOREIGN KEY(recipe_no) REFERENCES yoseksa_recipe(recipe_no),
+   CONSTRAINT ys_fk_kind_no FOREIGN KEY(kind_no ) REFERENCES yoseksa_kind(kind_no),
+   CONSTRAINT ys_fk_situ_no FOREIGN KEY(situ_no ) REFERENCES yoseksa_situ(situ_no),
+   CONSTRAINT ys_fk_how_no FOREIGN KEY(how_no) REFERENCES yoseksa_how(how_no),
+   CONSTRAINT ys_fk_jaeryo_no FOREIGN KEY(jaeryo_no) REFERENCES yoseksa_jaeryo(jaeryo_no),
+   CONSTRAINT ys_fk_material_no FOREIGN KEY(material_no) REFERENCES yoseksa_material(material_no),
+   CONSTRAINT ys_fk_source_no FOREIGN KEY(source_no) REFERENCES yoseksa_source(source_no)
 );
-*/
 
+*/
 -- 댓글 테이블
 CREATE TABLE yoseksa_reply(
   reply_no NUMBER,
@@ -266,6 +269,7 @@ CREATE TABLE yoseksa_reply(
   member_no NUMBER,
   reply_content VARCHAR2(2000),
   nickname VARCHAR2(20),
+  reply_date DATE DEFAULT SYSDATE,
   group_id NUMBER,
   group_step NUMBER,
   group_tab NUMBER,
@@ -275,6 +279,5 @@ CREATE TABLE yoseksa_reply(
   CONSTRAINT re_fk_bno FOREIGN KEY(board_no) REFERENCES yoseksa_boardmgr(board_no),
   CONSTRAINT re_fk_mno FOREIGN KEY(member_no) REFERENCES yoseksa_member(member_no)
 );
-
 
 COMMIT;
