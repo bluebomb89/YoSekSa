@@ -43,7 +43,7 @@
      <sql id="where-no">
       WHERE recipe_no=#{recipe_no}
     </sql>
-   <select id="recipeContentData" resultType="Recipe" parameterType="java.util.Map">
+   <select id="recipeListData" resultType="Recipe" parameterType="java.util.Map">
      SELECT recipe_no,recipe_img,recipe_sub,num
       FROM (SELECT recipe_no,recipe_img,recipe_sub,rownum as num
       FROM (SELECT recipe_no,recipe_img,recipe_sub 

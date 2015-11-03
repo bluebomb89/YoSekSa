@@ -276,18 +276,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 		
 		<nav align="center">
-			<ul class="pagination" style="margin-top: 80px;">
-				<li><a href="#" aria-label="Previous"> <span
-						aria-hidden="true">«</span>
-				</a></li>
-				<li><a href="#">1</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5</a></li>
-				<li><a href="#" aria-label="Next"> <span aria-hidden="true">»</span>
-				</a></li>
-			</ul>
+			<li class="pagination" style="margin-top: 80px;">
+				<a href="board_list.do?page=${curpage>1?curpage-1:curpage }"><img src="../images/prev_icon.gif"></a> &nbsp;
+       		    <a href="board_list.do?page=${curpage<totalpage?curpage+1:curpage }"><img src="../images/next_icon.gif"></a>&nbsp;&nbsp;
+     		    ${curpage } page / ${totalpage } pages
+			</li>
 		</nav>
 
 

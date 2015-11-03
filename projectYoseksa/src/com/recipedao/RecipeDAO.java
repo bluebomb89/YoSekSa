@@ -31,7 +31,7 @@ public class RecipeDAO {
           try
           {
              session=ssf.openSession();
-             list=session.selectList("recipeContentData",map);
+             list=session.selectList("recipeListData",map);
           }catch(Exception ex)
           {
              System.out.println(ex.getMessage());
