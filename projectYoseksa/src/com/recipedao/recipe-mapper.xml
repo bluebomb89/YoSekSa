@@ -4,6 +4,16 @@
 	<!-- 우식 -->
 	<!-- ㅁㅁ -->
 	<!-- 영권 -->
+	<insert id="recipeInsert" parameterType="Recipe">
+      <!-- Sequence -->
+      <selectKey keyProperty="recipe_no" resultType="int" order="BEFORE">
+        SELECT NVL(MAX(recipe_no)+1,1) as recipe_no FROM yoseksa_recipe
+      </selectKey>
+      INSERT INTO yoseksa_recipe VALUES(
+        #{recipe_no},#{board_no},#{kind_no},#{situ_no},#{how_no},#{jaeryo_no},4,
+        #{recipe_sub},#{recipe_img},
+        SYSDATE,0)
+    </insert>
 	<!-- ㅁㅁ -->
 	<!-- 태진 -->
 	<!-- ㅁㅁ -->
