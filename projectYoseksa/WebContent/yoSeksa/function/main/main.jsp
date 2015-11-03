@@ -80,7 +80,7 @@ $(function(){
                      <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">자유게시판<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                            <li><a href="freeboard.sek">about1</a></li>
-                           <li><a href="freeboard.sek">about2</a></li>
+                           <li><a href="freeboard_list.sek">about2</a></li>
                            <li><a href="recipe_content.sek">레시피 내용보기</a></li>           
                         </ul>
                      </li>

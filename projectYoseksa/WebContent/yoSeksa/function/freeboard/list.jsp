@@ -51,6 +51,7 @@
 <script src="yoSeksa/js/easing.js"></script>
 <script src="yoSeksa/js/jquery-ui.js"></script>
 <!--/script-->
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 <script type="text/javascript">
    $(document).ready(function() {
       /* affix the navbar after scroll below header */
@@ -71,17 +72,27 @@
 
 <script type="text/javascript">
 $(function(){
-	$('#username').focus();
-	//$('#username').val("admin");
+
 	$('#btnSub').click(function(){
 		var cont=$('#usercontent').val();
 		if(cont=="")
 		{
 			$('#contSpan').text("내용은 반드시 입력해야 합니다!!");
-			$('#userscontent').focus();
+			$('#usercontent').focus();
 			return;
 		}
 		$('#contSpan').text("");
+		
+		var pwd=$('#userpwd').val();
+		if(pwd=="")
+		{
+			$('#pwdSpan').text("비밀번호는 반드시 입력해야 합니다!!");
+			$('#userpwd').focus();
+			return;
+		}
+		$('#pwdSpan').text("");
+		
+		$('#writeForm').submit();
 	});
 	$('#btnCancel').click(function(){
 		history.back();
@@ -166,6 +177,7 @@ $(function(){
         }
     }
 </script>
+
 <!-- script end -->
 </head>
 
@@ -176,6 +188,7 @@ $(function(){
 		style="display: block; margin: 0 auto;">
 		<h4 align="center"
 			style="margin-top: 60px; font-size: 17px; color: #000000">글 작성</h4>
+		<form name="free_write_frm" id="freewriteForm" method=post action="board_insert_ok.sek">
 		<div class="modal-body" style="padding-bottom: 0px;">
 			<textarea name="board_tx" id="usercontent" class="form-control"
 				placeholder="내용"
@@ -184,24 +197,20 @@ $(function(){
 			<div class="write_pic2" style="width: 400px; margin-top: 5px;">
 			
 				<!-- 게시글 비밀번호 시작 -->
-				
-			
 				<p>
 					<label for="userpwd">비밀번호</label>
 					<input type=password id="userpwd" name="pwd">
 					<br>
 					<span id="pwdSpan" style="color:red; textalign: center"></span>
 				</p>			
-				
 				<!-- 게시글 비밀번호끝 -->
 			</div>
 		</div>
+		</form>
 		<div class="modal-footer"
 			style="margin-bottom: 20px; margin-right: 70px; padding-top: 0px;">
 			<button type="button" class="btn btn-primary" id="btnSub">등록</button>
-			<button type="button" class="btn btn-default" id="btnCancel"
-
-				style="background-color: rgba(255, 255, 255, 0);">취소</button>
+			<button type="button" class="btn btn-default" id="btnCancel" style="background-color: rgba(255, 255, 255, 0);">취소</button>
 		</div>
 	</div>
 
