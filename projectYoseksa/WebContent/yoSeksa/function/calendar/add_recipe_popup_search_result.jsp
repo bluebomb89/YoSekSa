@@ -5,10 +5,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+<script type="text/javascript">
+function ok()
+{
+	//페이지 이동하여 DB처리한다
+	location.replace("../../function/calendar/add_recipe_popup_search_result_ok.jsp");
+}
+</script>
 </head>
 <body>
 <%
-
 	request.setCharacterEncoding("UTF-8");
 	String keyword=request.getParameter("keyword");
 	String bld=request.getParameter("bld");
@@ -17,7 +24,7 @@
 
 <font color=white>
 
-keyword : <%=keyword %><br>
+keyword :<a href="#" onclick="ok()"> <%=keyword %></a><br>
 bld : <%=bld %><br>
 date : <%=date %>
 
