@@ -48,7 +48,7 @@ public class Recipe {
    @RequestMapping("recipe_insert.sek")
    public String recipe_insert(HttpServletRequest req) throws IOException{
 //      ���� contentimg���
-      String path="C:\\Users\\남영권\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
+      String path="C:\\javaDev\\jasb\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\work\\Catalina\\localhost\\projectYoseksa\\org\\apache\\jsp\\yoSeksa\\contentImg";
 //      �ο� contentimg���
 //      String path="C:\\Users\\������\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
 //      ���� contentimg���
@@ -83,8 +83,7 @@ public class Recipe {
          d.setRecipe_img("");
          d.setRecipe_img_size(0);
       } else {
-    	 String recipe_imgc=path+"\\"+recipe_img;
-         d.setRecipe_img(recipe_imgc);
+         d.setRecipe_img(recipe_img);
          File f=new File(path+"\\"+recipe_img);
          System.out.println("�̹������ =" +f);
          d.setRecipe_img_size((int)f.length());
