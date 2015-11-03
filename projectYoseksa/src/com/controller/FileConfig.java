@@ -7,6 +7,7 @@ public class FileConfig {
 		try{
 			/*String path="C:\\Users\\�궓�쁺沅�\\git\\yoseksaProject\\projectYoseksa\\src\\";*/
 			String path="C:\\Users\\sist\\git\\YoSekSa\\projectYoseksa\\src\\";
+
 			String temp=pack.replace('.', '\\');
 			File dir=new File(path+temp);
 			File[] files=dir.listFiles();
