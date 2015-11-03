@@ -13,6 +13,13 @@ import com.freedao.*;
 
 @Controller("freeboard")
 public class FreeBoard {
+	
+	@RequestMapping("freeboard.sek")
+	public String freeboard(HttpServletRequest req) throws IOException{
+		req.setAttribute("jsp", "../freeboard/list.jsp");
+		return "yoSeksa/function/main/main.jsp";
+	}
+	
 	@RequestMapping("freeboard_content.sek")
 	public String freeboard_content(HttpServletRequest req) throws IOException{
 		String rPage=req.getParameter("rPage");
@@ -47,7 +54,7 @@ public class FreeBoard {
 		req.setAttribute("page", strPage);
 		req.setAttribute("dto", d);
 		req.setAttribute("title", "제목");
-		req.setAttribute("jsp", "../yoSeksa/function/freeboard/freeboard_content.jsp");
+		req.setAttribute("jsp", "../freeboard/freeboard_content.jsp");
 		return "yoSeksa/function/main/main.jsp";
 	}
 	
@@ -71,14 +78,14 @@ public class FreeBoard {
 			}
 			req.setAttribute("bCheck", bCheck);
 			req.setAttribute("page", page);
-			return "yoSeksa/function/freeboard/delete.jsp";
+			return "yoSeksa/function/freeboard/freeboard_delete.jsp";
 	   }
 	 
 	 @RequestMapping("freeboard_insert.sek")
 	   public String freeboard_insert(HttpServletRequest req)
 	   {
 		 req.setAttribute("title", "글쓰기");
-			req.setAttribute("jsp", "../yoSeksa/function/freeboard/board_insert.jsp");
+			req.setAttribute("jsp", "../freeboard/insert.jsp");
 			return "yoSeksa/function/main/main.jsp";
 	   }
 	 
@@ -99,7 +106,7 @@ public class FreeBoard {
 			return "board_list.sek";
 	   }
 	 
-	 @RequestMapping("freeboard_list.sek")
+	 @RequestMapping("freeboard_insert.sek")
 	   public String freeboard_list(HttpServletRequest req)
 	   {
 		 String strPage=req.getParameter("page");
@@ -124,7 +131,7 @@ public class FreeBoard {
 		    req.setAttribute("curpage", curpage);
 		    req.setAttribute("totalpage", totalpage);
 			req.setAttribute("title", "게시판 목록");
-			req.setAttribute("jsp", "../board/board_list.jsp");
+			req.setAttribute("jsp", "../freeboard/list.jsp");
 			return "main/main.jsp";
 	   }
 	 
@@ -138,7 +145,7 @@ public class FreeBoard {
 			req.setAttribute("page", strPage);
 			req.setAttribute("dto", d);
 			req.setAttribute("title", "수정하기");
-			req.setAttribute("jsp", "../board/board_update.jsp");
+			req.setAttribute("jsp", "../freeboard/update.jsp");
 			return "main/main.jsp";
 	   }
 	 
