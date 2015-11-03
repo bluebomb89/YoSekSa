@@ -6,7 +6,7 @@ public class FileConfig {
 		List<String> list=new ArrayList<String>();
 		try{
 			// 영권 경로
-			String path="C:\\Users\\남영권\\git\\yoseksaProject\\projectYoseksa\\src\\";
+			/*String path="C:\\Users\\남영권\\git\\yoseksaProject\\projectYoseksa\\src\\";*/
 			// 우식 경로
 //			String path="C:\\Users\\남영권\\git\\yoseksaProject\\projectYoseksa\\src\\";
 			// 민영 경로
@@ -14,7 +14,7 @@ public class FileConfig {
 			// 홍의 경로
 //			String path="C:\\Users\\남영권\\git\\yoseksaProject\\projectYoseksa\\src\\";
 			// 승현 경로
-//			String path="C:\\Users\\남영권\\git\\yoseksaProject\\projectYoseksa\\src\\";
+			String path="C:\\Users\\sist\\git\\YoSekSa\\projectYoseksa\\src\\";
 			// 태진 경로
 //			String path="C:\\Users\\남영권\\git\\yoseksaProject\\projectYoseksa\\src\\";
 			String temp=pack.replace('.', '\\');
