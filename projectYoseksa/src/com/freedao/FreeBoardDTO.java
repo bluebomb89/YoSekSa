@@ -4,11 +4,35 @@ import java.util.*;
 public class FreeBoardDTO {
 	private int board_no;
 	private int free_no;
+	private String free_pw;
 	private int member_no;
 	private String nickname;
 	private String member_pic;
 	private String free_content;
 	private Date free_date;
+	private String dbday;
+	private int replyCount;
+
+	
+	
+	public String getFree_pw() {
+		return free_pw;
+	}
+	public void setFree_pw(String free_pw) {
+		this.free_pw = free_pw;
+	}
+	public int getReplyCount() {
+		return replyCount;
+	}
+	public void setReplyCount(int replyCount) {
+		this.replyCount = replyCount;
+	}
+	public String getDbday() {
+		return dbday;
+	}
+	public void setDbday(String dbday) {
+		this.dbday = dbday;
+	}
 	public int getBoard_no() {
 		return board_no;
 	}
