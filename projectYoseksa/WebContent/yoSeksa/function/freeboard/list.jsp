@@ -253,6 +253,7 @@ $(function(){
                   <ul class="list_sort fl_right d_cmtpgn_sort_option_wrapper" style="">
             </div>   
    <div class="list_cmt" id="d_cmtpgn_cmt_list_wrapper" style="">
+     
       <ul style="">
          <li data-cmt-id="49025346" data-cmt-owner="off" class="first_child">
             <div class="wrap_cmt_cntt d_cmtpgn_cmt_wrapper">
@@ -324,7 +325,7 @@ $(function(){
                   </div>            
                   </div>         
                   </div>      
-                  </div>      
+                 </div>      
                   <ul class="lower_cmt d_cmtpgn_adcmt_list" id="cmt_adcmt_49025346" style=""></ul>   
                   </li>
                   <li data-cmt-id="49024997" data-cmt-owner="off" class="">      
