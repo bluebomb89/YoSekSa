@@ -137,7 +137,8 @@ public class Recipe {
           String recipec_photo=mr.getOriginalFileName("q_step_file_"+cont);
           if(recipec_photo==null){
         	 nae=false;
-             break;
+        	 break;
+             
           }
           String recipec_cont=mr.getParameter("step_text_"+cont);
           rc.setRecipe_no(recipe_no);
@@ -145,7 +146,6 @@ public class Recipe {
           rc.setRecipec_cont(recipec_cont);
 //          DB연동
           RecipeDAO.recipeContentInsert(rc);
-          System.out.println("aaaaaaaaaa");
           cont++;
        }
 

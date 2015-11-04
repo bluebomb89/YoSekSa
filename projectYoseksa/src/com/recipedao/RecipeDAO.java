@@ -154,8 +154,9 @@ public class RecipeDAO {
 	         }
 	         finally
 	         {
-	           if(session!=null)
+	           if(session!=null){
 	              session.close();
+	           }
 	         }
 	      }
 }
