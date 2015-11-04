@@ -14,7 +14,6 @@ import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 @Controller("recipe")
 public class Recipe {
-<<<<<<< HEAD
 	 @RequestMapping("recipe_content.sek")
 	   public String recipe_content(HttpServletRequest req) throws IOException{
 		 String rPage=req.getParameter("rPage");
@@ -76,34 +75,6 @@ public class Recipe {
 	         req.setAttribute("jsp",   "../recipe/gallery.jsp");
 	         return "yoSeksa/function/main/main.jsp";
 	      }
-=======
-    @RequestMapping("recipe_content.sek")
-      public String recipe_content(HttpServletRequest req) throws IOException{
-         req.setAttribute("jsp",   "../recipe/recipe_content.jsp");
-         return "yoSeksa/function/main/main.jsp";
-      }
-    @RequestMapping("recipe.sek")
-    public String recipe(HttpServletRequest req) throws IOException{
-       String strPage=req.getParameter("page");
-        if(strPage==null)
-           strPage="1";
-        int curpage=Integer.parseInt(strPage);
-        int rowSize=12;
-        int start=(curpage*rowSize)-(rowSize-1);
-        int end=curpage*rowSize;
-        Map map=new HashMap();
-        map.put("start", start); // #{start} get("start")
-        map.put("end", end);
-        List<RecipeDTO> list=
-              RecipeDAO.recipeListData(map);
-        int totalpage=RecipeDAO.recipeTotalPage();
-        req.setAttribute("list", list);
-        req.setAttribute("curpage", curpage);
-        req.setAttribute("totalpage", totalpage);
-        req.setAttribute("jsp",   "../recipe/gallery.jsp");
-        return "yoSeksa/function/main/main.jsp";
-    }
->>>>>>> refs/remotes/origin/master
    @RequestMapping("recipe_enroll.sek")
    public String recipe_enroll(HttpServletRequest req) throws IOException{
       req.setAttribute("jsp", "../recipe/recipe_enroll.jsp");
@@ -200,8 +171,8 @@ public class Recipe {
       while(nae){
           String recipec_photo=mr.getOriginalFileName("q_step_file_"+cont);
           if(recipec_photo==null){
-            nae=false;
-            break;
+        	 nae=false;
+        	 break;
              
           }
           String recipec_cont=mr.getParameter("step_text_"+cont);
@@ -216,6 +187,7 @@ public class Recipe {
       return "yoSeksa/function/main/main.jsp";
    }
 }
+
 
 
 
