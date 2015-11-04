@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dao.recipe-mapper">
-	<!-- 우식 -->
-	<!-- ㅁㅁ -->
-	<!-- 영권 -->
-	<select id="sequence" resultType="int">
-		SELECT NVL(MAX(recipe_no)+1,1) as recipe_no FROM yoseksa_recipe
-	</select>
-	<insert id="recipeInsert" parameterType="Recipe">
+   <!-- 우식 -->
+   <!-- ㅁㅁ -->
+   <!-- 영권 -->
+   <select id="sequence" resultType="int">
+      SELECT NVL(MAX(recipe_no)+1,1) as recipe_no FROM yoseksa_recipe
+   </select>
+   <insert id="recipeInsert" parameterType="Recipe">
       <!-- Sequence -->
-      INSERT INTO yoseksa_recipe VALUES(
-        #{recipe_no},#{board_no},#{kind_no},#{situ_no},#{how_no},#{jaeryo_no},1,
-        #{recipe_sub},#{recipe_img},
-        SYSDATE,0)
-    </insert>
+      INSERT INTO yoseksa_recipe VALUES(#{recipe_no},#{board_no},#{kind_no},#{situ_no},#{how_no},#{jaeryo_no},
+      1,#{recipe_sub},#{recipe_img},SYSDATE,0,#{recipe_img_size})
+      </insert>
     <insert id="materialInsert" parameterType="Material">
       <!-- Sequence -->
       <selectKey keyProperty="material_no" resultType="int" order="BEFORE">
@@ -32,18 +30,18 @@
         #{recipe_no},#{source_no},#{source_content},#{source_gram}
       )
     </insert>
-	<!-- ㅁㅁ -->
-	<!-- 태진 -->
-	<!-- ㅁㅁ -->
-	<!-- 승현 -->
-	<!-- ㅁㅁ -->
-	<!-- 홍의 -->
-	<!-- ㅁㅁ -->
-	<!-- 민영 -->
-	  <sql id="where-no">
+   <!-- ㅁㅁ -->
+   <!-- 태진 -->
+   <!-- ㅁㅁ -->
+   <!-- 승현 -->
+   <!-- ㅁㅁ -->
+   <!-- 홍의 -->
+   <!-- ㅁㅁ -->
+   <!-- 민영 -->
+     <sql id="where-no">
       WHERE recipe_no=#{recipe_no}
     </sql>
-   <select id="recipeContentData" resultType="Recipe" parameterType="java.util.Map">
+   <select id="recipeListData" resultType="Recipe" parameterType="java.util.Map">
      SELECT recipe_no,recipe_img,recipe_sub,num
       FROM (SELECT recipe_no,recipe_img,recipe_sub,rownum as num
       FROM (SELECT recipe_no,recipe_img,recipe_sub 
@@ -53,5 +51,5 @@
     <select id="recipeRowCount" resultType="int">
       SELECT COUNT(*) FROM replyBoard
       </select>
-	<!-- ㅁㅁ -->
+   <!-- ㅁㅁ -->
 </mapper>

@@ -10,19 +10,19 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 public class RecipeDAO {
-	private static SqlSessionFactory ssf;
-	   static
-	   {
-		   try
-		   {
-			   Reader reader=Resources.getResourceAsReader("Config.xml");
-			   ssf=new SqlSessionFactoryBuilder().build(reader);
-		   }catch(Exception ex)
-		   {
-			   System.out.println(ex.getMessage());
-		   }
-	   }
-	   // Îç∞Ïù¥ÌÑ∞ Í∞ÄÏßÄÍ≥† Ïò§Í∏∞ 
+   private static SqlSessionFactory ssf;
+      static
+      {
+         try
+         {
+            Reader reader=Resources.getResourceAsReader("Config.xml");
+            ssf=new SqlSessionFactoryBuilder().build(reader);
+         }catch(Exception ex)
+         {
+            System.out.println(ex.getMessage());
+         }
+      }
+      // µ•¿Ã≈Õ ∞°¡ˆ∞Ì ø¿±‚ 
        public static List<RecipeDTO> recipeListData(Map map)
        {
           List<RecipeDTO> list=
@@ -31,7 +31,7 @@ public class RecipeDAO {
           try
           {
              session=ssf.openSession();
-             list=session.selectList("recipeContentData",map);
+             list=session.selectList("recipeListData",map);
           }catch(Exception ex)
           {
              System.out.println(ex.getMessage());
@@ -44,7 +44,7 @@ public class RecipeDAO {
           return list;
           //return ssf.openSession().selectList("boardListData",map);
        }
-       // Ï¥ùÌéòÏù¥ÏßÄ
+       // √—∆‰¿Ã¡ˆ
        public static int recipeTotalPage()
        {
           int total=0;
@@ -65,79 +65,79 @@ public class RecipeDAO {
           }
           return total;
        }
-	public static int sequnece(){
-		int sequence=0;
-		   SqlSession session=null;
-		   try
-		   {
-			   session=ssf.openSession();
-			   sequence=session.selectOne("sequence");
-		   }catch(Exception ex)
-		   {
-			   System.out.println(ex.getMessage());
-		   }
-		   finally
-		   {
-			   if(session!=null)
-				   session.close();
-		   }
-		   return sequence;
-	}
-	public static void recipeInsert(RecipeDTO d)
-	   {
-		   SqlSession session=null;
-		   try
-		   {
-			   session=ssf.openSession(true);
-			   session.insert("recipeInsert",d);
-			   //session.commit();
-		   }catch(Exception ex)
-		   {
-			   //session.rollback();
-			   System.out.println(ex.getMessage());
-		   }
-		   finally
-		   {
-			  if(session!=null)
-				  session.close();
-		   }
-	   }
-	public static void materialInsert(MaterialDTO d)
-	   {
-		   SqlSession session=null;
-		   try
-		   {
-			   session=ssf.openSession(true);
-			   session.insert("materialInsert",d);
-			   //session.commit();
-		   }catch(Exception ex)
-		   {
-			   //session.rollback();
-			   System.out.println(ex.getMessage());
-		   }
-		   finally
-		   {
-			  if(session!=null)
-				  session.close();
-		   }
-	   }
-	public static void soueceInsert(SourceDTO d)
-	   {
-		   SqlSession session=null;
-		   try
-		   {
-			   session=ssf.openSession(true);
-			   session.insert("soueceInsert",d);
-			   //session.commit();
-		   }catch(Exception ex)
-		   {
-			   //session.rollback();
-			   System.out.println(ex.getMessage());
-		   }
-		   finally
-		   {
-			  if(session!=null)
-				  session.close();
-		   }
-	   }
+   public static int sequnece(){
+      int sequence=0;
+         SqlSession session=null;
+         try
+         {
+            session=ssf.openSession();
+            sequence=session.selectOne("sequence");
+         }catch(Exception ex)
+         {
+            System.out.println(ex.getMessage());
+         }
+         finally
+         {
+            if(session!=null)
+               session.close();
+         }
+         return sequence;
+   }
+   public static void recipeInsert(RecipeDTO d)
+      {
+         SqlSession session=null;
+         try
+         {
+            session=ssf.openSession(true);
+            session.insert("recipeInsert",d);
+            //session.commit();
+         }catch(Exception ex)
+         {
+            //session.rollback();
+            System.out.println(ex.getMessage());
+         }
+         finally
+         {
+           if(session!=null)
+              session.close();
+         }
+      }
+   public static void materialInsert(MaterialDTO d)
+      {
+         SqlSession session=null;
+         try
+         {
+            session=ssf.openSession(true);
+            session.insert("materialInsert",d);
+            //session.commit();
+         }catch(Exception ex)
+         {
+            //session.rollback();
+            System.out.println(ex.getMessage());
+         }
+         finally
+         {
+           if(session!=null)
+              session.close();
+         }
+      }
+   public static void soueceInsert(SourceDTO d)
+      {
+         SqlSession session=null;
+         try
+         {
+            session=ssf.openSession(true);
+            session.insert("soueceInsert",d);
+            //session.commit();
+         }catch(Exception ex)
+         {
+            //session.rollback();
+            System.out.println(ex.getMessage());
+         }
+         finally
+         {
+           if(session!=null)
+              session.close();
+         }
+      }
 }
