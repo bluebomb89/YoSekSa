@@ -30,15 +30,34 @@
         #{recipe_no},#{source_no},#{source_content},#{source_gram}
       )
     </insert>
-          <insert id="recipeContentInsert" parameterType="Recipecontent">
+    <insert id="recipeContentInsert" parameterType="Recipecontent">
       <!-- Sequence -->
       <selectKey keyProperty="recipec_no" resultType="int" order="BEFORE">
-        SELECT NVL(MAX(recipec_no)+1,1) as recipec_no FROM yoseksa_recipe_content
+        SELECT NVL(MAX(recipec_no)+1,1) as recipec_no FROM yoseksa_recipec
       </selectKey>
-      INSERT INTO yoseksa_recipe_content VALUES(
+      INSERT INTO yoseksa_recipec VALUES(
         #{recipe_no},#{recipec_no},#{recipec_photo},#{recipec_cont}
       )
     </insert>
+    <update id="yoseksaHitIncrement" parameterType="int">
+      UPDATE yoseksa_recipe SET hit=hit+1 WHERE recipe_no=#{recipe_no}
+      <!-- ps.setInt(1,no) -->
+    </update>
+    <select id="yoseksaContentData" resultType="Recipe" parameterType="int">
+     SELECT recipe_no,recipe_sub,recipe_img,recipe_date,hit 
+     FROM yoseksa_recipe WHERE recipe_no=#{recipe_no}
+    </select>
+    <select id="materialData" resultType="Material" parameterType="int">
+      SELECT recipe_no,material_no,material_content,material_gram from yoseksa_material where recipe_no=#{recipe_no}
+      ORDER BY material_no DESC
+    </select>
+    <select id="sourceData" resultType="source" parameterType="int">
+      SELECT recipe_no,source_no,source_content,source_gram from yoseksa_source where recipe_no=#{recipe_no}
+      ORDER BY source_no DESC
+    </select>
+    <select id="contentData" resultType="Recipecontent" parameterType="int">
+      SELECT recipe_no,recipec_no,recipec_photo,recipec_cont from yoseksa_recipec where recipe_no=#{recipe_no}
+    </select>
    <!-- ㅁㅁ -->
    <!-- 태진 -->
    <!-- ㅁㅁ -->
@@ -58,7 +77,7 @@
       WHERE num BETWEEN #{start} AND #{end}
    </select>
     <select id="recipeRowCount" resultType="int">
-      SELECT COUNT(*) FROM replyBoard
+      SELECT COUNT(*) FROM yoseksa_recipe
       </select>
    <!-- ㅁㅁ -->
 </mapper>

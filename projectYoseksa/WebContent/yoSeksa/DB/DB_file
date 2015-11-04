@@ -13,7 +13,7 @@ drop table yoseksa_kind CASCADE CONSTRAINTS;
 drop table yoseksa_boardmgr CASCADE CONSTRAINTS;
 drop table yoseksa_notice CASCADE CONSTRAINTS;
 drop table yoseksa_member CASCADE CONSTRAINTS;
-drop table yoseksa_recipe_content CASCADE CONSTRAINTS;
+drop table yoseksa_recipec CASCADE CONSTRAINTS;
 
 CREATE TABLE yoseksa_member(
    member_no NUMBER,
@@ -141,7 +141,7 @@ CREATE TABLE yoseksa_recipe(
 );
 
 -- 요리순서 사진및 내용 저장
-CREATE TABLE yoseksa_recipe_content(
+CREATE TABLE yoseksa_recipec(
 	recipe_no NUMBER,
 	recipec_no NUMBER,
 	recipec_photo VARCHAR2(200) CONSTRAINT yrc_nn_recipec_photo NOT NULL,
