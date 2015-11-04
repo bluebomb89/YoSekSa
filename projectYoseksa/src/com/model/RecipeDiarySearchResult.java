@@ -1,5 +1,6 @@
 package com.model;
 
+import java.io.IOException;
 import java.util.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -10,20 +11,15 @@ import com.controller.Controller;
 import com.controller.RequestMapping;
 import com.diarydao.DiaryDAO;
 import com.recipedao.RecipeDTO;
-
 import com.recipedao.*;
-@Controller("diary")
-public class RecipeDiarySearchResult implements YoseksaModel{
-	@RequestMapping("diary_search.sek")
 
-	@Override
-	public String handlerRequest(HttpServletRequest req, HttpServletResponse res) throws Exception {
+@Controller("recipediary")
+public class RecipeDiarySearchResult {
+	 @RequestMapping("diary_search.sek")
+	   public String diary_search(HttpServletRequest req) throws IOException{
 		// TODO Auto-generated method stub
-		
 		String keyword=req.getParameter("keyword");		
-		
-		
-		
+		System.out.println(keyword);
 		String strPage=req.getParameter("page");
 		if(strPage==null)
 			strPage="1";
@@ -44,7 +40,7 @@ public class RecipeDiarySearchResult implements YoseksaModel{
 		
 		
 		
-		return "yoSeksa/function/calendar/add_recipe_popup_search_result.jsp";
+		return "yoSeksa/function/calendar/aaa.jsp";
 	}
 
 }

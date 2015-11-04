@@ -54,6 +54,9 @@ function diary_search_result(){
 	if(httpRequest.readyState==4){
 		if(httpRequest.status==200){
 			var res=httpRequest.responseText;
+			
+			alert("ajax 실행됨");
+			alert(res);
 			$('#search_div').html(res);
 			// 보여주면서 div에 값저장
 		}		
@@ -77,12 +80,11 @@ function diary_search_result(){
 
 
 <script type="text/javascript">	
-
 	var keyword=$('#keyword').val();	
 	alert(keyword);	
 	var param="?keyword="+keyword;
-	sendMessage('GET', param, "diary_search.sek", diary_search_result);
-	
+	alert(param);
+	sendMessage('GET', param, "bbb.sek", diary_search_result);
 </script>
 
 
@@ -96,18 +98,7 @@ date : <%=date %>
 <font color=white>
 
 <div id="search_div">
-	<table bgcolor="white" style="color:black">
-		<tr>
-			<td>recipe_no</td>
-			<td>요리명</td>
-		</tr>
-			<c:forEach var="rdto" items="${recipe_search_list }">
-		<tr>
-			<td>${rdto.recipe_no }</td>
-			<td>${rdto.recipe_sub }</td>
-		</tr>
-			</c:forEach>
-	</table>
+
 </div>
 
 

@@ -105,7 +105,7 @@ $(function(){
         
        <div id="food_search_result">
               
-       		<iframe name="food_search_result_iframe" id="schResult" src="" width="100%" height="100%" frameborder="no" scrolling="auto"></iframe>
+       		<iframe name="food_search_result_iframe" id="schResult" src="" width="100%" height="100%" frameborder="3" scrolling="yes"></iframe>
        
        </div> 
         
