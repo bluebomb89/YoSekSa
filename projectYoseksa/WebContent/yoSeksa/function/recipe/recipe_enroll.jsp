@@ -16,13 +16,13 @@
 <link rel="stylesheet" type="text/css" href="yoSeksa/css/recipe_enroll/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="yoSeksa/css/recipe_enroll/ez_recipe_20151022.css">
 <link href="yoSeksa/css/bootstrap.css" type="text/css" rel="stylesheet"
-	media="all">
+   media="all">
 <link href="yoSeksa/css/component.css" rel="stylesheet" type="text/css" />
 <!-- jQuery (necessary JavaScript plugins) -->
 <!-- Custom Theme files -->
 <!-- <link href="yoSeksa/css/style.css" type="text/css" rel="stylesheet" media="all"> -->
 <link href="yoSeksa/css/style3.css" type="text/css" rel="stylesheet"
-	media="all">
+   media="all">
 <link href="yoSeksa/css/bootstrapTheme.css" rel="stylesheet">
 <link href="yoSeksa/css/custom.css" rel="stylesheet">
 <link href="yoSeksa/css/owl.carousel.css" rel="stylesheet">

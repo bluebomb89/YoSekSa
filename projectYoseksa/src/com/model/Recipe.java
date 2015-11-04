@@ -16,6 +16,41 @@ import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 public class Recipe {
 	 @RequestMapping("recipe_content.sek")
 	   public String recipe_content(HttpServletRequest req) throws IOException{
+		 String rPage=req.getParameter("rPage");
+			int type=1;
+			if(rPage==null)
+			{
+				rPage="1";
+				type=0;
+			}
+			int rcurpage=Integer.parseInt(rPage);
+			String recipe_no=req.getParameter("rno");	
+			String strPage=req.getParameter("page");
+			RecipeDTO d=RecipeDAO.recipeContentData(
+					Integer.parseInt(recipe_no),type);
+			List<MaterialDTO> material=RecipeDAO.materialData(Integer.parseInt(recipe_no));
+			List<MaterialDTO> mlist=new ArrayList<MaterialDTO>();
+			for(int i=0;i<material.size();i++){
+				MaterialDTO mm=material.get(i);
+				mlist.add(mm);
+			}
+			List<SourceDTO> source=RecipeDAO.sourceData(Integer.parseInt(recipe_no));
+			List<SourceDTO> slist=new ArrayList<SourceDTO>();
+			for(int i=0;i<source.size();i++){
+				SourceDTO ss=source.get(i);
+				slist.add(ss);
+			}
+			List<RecipeContentDTO> content=RecipeDAO.contentData(Integer.parseInt(recipe_no));
+			List<RecipeContentDTO> clist=new ArrayList<RecipeContentDTO>();
+			for(int i=0;i<content.size();i++){
+				RecipeContentDTO cc=content.get(i);
+				clist.add(cc);
+			}
+			req.setAttribute("material", mlist);
+			req.setAttribute("source", slist);
+			req.setAttribute("content", clist);
+			req.setAttribute("dto", d);
+			req.setAttribute("title", "내용보기");
 	      req.setAttribute("jsp",   "../recipe/recipe_content.jsp");
 	      return "yoSeksa/function/main/main.jsp";
 	   }
@@ -148,8 +183,6 @@ public class Recipe {
           RecipeDAO.recipeContentInsert(rc);
           cont++;
        }
-
-
       req.setAttribute("jsp",   "../recipe/gallery.jsp");
       return "yoSeksa/function/main/main.jsp";
    }
