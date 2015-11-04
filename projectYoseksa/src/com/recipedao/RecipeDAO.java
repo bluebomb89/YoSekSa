@@ -22,7 +22,7 @@ public class RecipeDAO {
             System.out.println(ex.getMessage());
          }
       }
-      // µ¥ÀÌÅÍ °¡Áö°í ¿À±â 
+      // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 
        public static List<RecipeDTO> recipeListData(Map map)
        {
           List<RecipeDTO> list=
@@ -44,7 +44,7 @@ public class RecipeDAO {
           return list;
           //return ssf.openSession().selectList("boardListData",map);
        }
-       // ÃÑÆäÀÌÁö
+       // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
        public static int recipeTotalPage()
        {
           int total=0;
@@ -140,4 +140,31 @@ public class RecipeDAO {
               session.close();
          }
       }
+   public static void recipeContentInsert(RecipeContentDTO d){
+	         SqlSession session=null;
+	         try
+	         {
+	            session=ssf.openSession(true);
+	            session.insert("recipeContentInsert",d);
+	            //session.commit();
+	         }catch(Exception ex)
+	         {
+	            //session.rollback();
+	            System.out.println(ex.getMessage());
+	         }
+	         finally
+	         {
+	           if(session!=null)
+	              session.close();
+	         }
+	      }
 }
+
+
+
+
+
+
+
+
+

@@ -556,8 +556,21 @@ function doSubmit(q_mode)
 		$('#cok_spice_amt_'+k).attr("name","cok_spice_amt_"+k);
 		k++;
 	};
-	var v=$('#q_step_file_1').val();
-	alert(v);
+	// 내용 이미지&텍스트에리어 루프돌면서 파악
+	var cont=1;
+	var con=true;
+	while(con){
+		var v=$('#q_step_file_'+cont).val();
+		alert(v);
+		if(v==null || v==undefined){
+			con=false;
+			break;
+		}
+		$('#q_step_file_'+cont).attr("name","q_step_file_"+cont);
+		$('#step_text_'+cont).attr("name","step_text_"+cont);
+		
+		cont++;
+	};
 	/*
     if (isSubmit) {
         alert("처리중 입니다. 잠시만 기다리세요.");
