@@ -20,7 +20,7 @@ public class FreeBoard {
 		return "yoSeksa/function/main/main.jsp";
 	}
 	
-	 @RequestMapping("freeboard_insert.sek")
+	 @RequestMapping("freeboard_list.sek")
 	   public String freeboard_list(HttpServletRequest req)
 	   {
 		 String strPage=req.getParameter("page");

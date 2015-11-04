@@ -30,6 +30,15 @@
         #{recipe_no},#{source_no},#{source_content},#{source_gram}
       )
     </insert>
+    <insert id="recipeContentInsert" parameterType="Recipecontent">
+      <!-- Sequence -->
+      <selectKey keyProperty="recipec_no" resultType="int" order="BEFORE">
+        SELECT NVL(MAX(recipec_no)+1,1) as recipec_no FROM yoseksa_recipec
+      </selectKey>
+      INSERT INTO yoseksa_recipec VALUES(
+        #{recipe_no},#{recipec_no},#{recipec_photo},#{recipec_cont}
+      )
+    </insert>
    <!-- ㅁㅁ -->
    <!-- 태진 -->
    <!-- ㅁㅁ -->

@@ -19,27 +19,27 @@ public class Recipe {
          req.setAttribute("jsp",   "../recipe/recipe_content.jsp");
          return "yoSeksa/function/main/main.jsp";
       }
-         @RequestMapping("recipe.sek")
-         public String recipe(HttpServletRequest req) throws IOException{
-            String strPage=req.getParameter("page");
-             if(strPage==null)
-                strPage="1";
-             int curpage=Integer.parseInt(strPage);
-             int rowSize=12;
-             int start=(curpage*rowSize)-(rowSize-1);
-             int end=curpage*rowSize;
-             Map map=new HashMap();
-             map.put("start", start); // #{start} get("start")
-             map.put("end", end);
-             List<RecipeDTO> list=
-                   RecipeDAO.recipeListData(map);
-             int totalpage=RecipeDAO.recipeTotalPage();
-             req.setAttribute("list", list);
-             req.setAttribute("curpage", curpage);
-             req.setAttribute("totalpage", totalpage);
-             req.setAttribute("jsp",   "../recipe/gallery.jsp");
-             return "yoSeksa/function/main/main.jsp";
-         }
+    @RequestMapping("recipe.sek")
+    public String recipe(HttpServletRequest req) throws IOException{
+       String strPage=req.getParameter("page");
+        if(strPage==null)
+           strPage="1";
+        int curpage=Integer.parseInt(strPage);
+        int rowSize=12;
+        int start=(curpage*rowSize)-(rowSize-1);
+        int end=curpage*rowSize;
+        Map map=new HashMap();
+        map.put("start", start); // #{start} get("start")
+        map.put("end", end);
+        List<RecipeDTO> list=
+              RecipeDAO.recipeListData(map);
+        int totalpage=RecipeDAO.recipeTotalPage();
+        req.setAttribute("list", list);
+        req.setAttribute("curpage", curpage);
+        req.setAttribute("totalpage", totalpage);
+        req.setAttribute("jsp",   "../recipe/gallery.jsp");
+        return "yoSeksa/function/main/main.jsp";
+    }
    @RequestMapping("recipe_enroll.sek")
    public String recipe_enroll(HttpServletRequest req) throws IOException{
       req.setAttribute("jsp", "../recipe/recipe_enroll.jsp");
@@ -49,13 +49,13 @@ public class Recipe {
    public String recipe_insert(HttpServletRequest req) throws IOException{
       String enctype="UTF-8";
 //    영권경로
-//      String path="C:\\javaDev\\jasb\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\projectYoseksa\\yoSeksa\\contentImg";
+      String path="C:\\javaDev\\jasb\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\projectYoseksa\\yoSeksa\\contentImg";
 //      승현경로
 //      String path="C:\\Users\\������\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
 //      태진경로
 //      String path="C:\\Users\\������\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
 //      민영경로
-      String path="C:\\webDev\\homework\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\projectYoseksa\\yoSeksa\\contentImg";
+//      String path="C:\\Users\\������\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
 //      홍의경로
 //      String path="C:\\Users\\������\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
 //      우식경로
@@ -107,6 +107,7 @@ public class Recipe {
          jd.setRecipe_no(recipe_no);
          // DB����
          RecipeDAO.materialInsert(jd);
+         System.out.println("asdfsdfsdf");
          no++;
       }   
       // 양념 인서트
@@ -125,22 +126,26 @@ public class Recipe {
          sc.setRecipe_no(recipe_no);
          // DB����
          RecipeDAO.soueceInsert(sc);
+         System.out.println("bbbb");
          sno++;
       }
       // 내용 인서트
+      RecipeContentDTO rc=new RecipeContentDTO();
       boolean nae=true;
       int cont=1;
       while(nae){
-          String content_img=mr.getOriginalFileName("q_main_file_"+cont);
-          if(content_img==null){
+          String recipec_photo=mr.getOriginalFileName("q_step_file_"+cont);
+          if(recipec_photo==null){
             nae=false;
-             break;
+            break;
+             
           }
-          String content_cont=mr.getParameter("step_text_"+cont);
-          System.out.println(content_img);
-          System.out.println(content_cont);
+          String recipec_cont=mr.getParameter("step_text_"+cont);
+          rc.setRecipe_no(recipe_no);
+          rc.setRecipec_photo(recipec_photo);
+          rc.setRecipec_cont(recipec_cont);
 //          DB연동
-//          RecipeDAO.soueceInsert(sc);
+          RecipeDAO.recipeContentInsert(rc);
           cont++;
        }
 

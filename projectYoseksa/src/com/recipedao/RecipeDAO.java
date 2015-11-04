@@ -140,4 +140,32 @@ public class RecipeDAO {
               session.close();
          }
       }
+   public static void recipeContentInsert(RecipeContentDTO d){
+	         SqlSession session=null;
+	         try
+	         {
+	            session=ssf.openSession(true);
+	            session.insert("recipeContentInsert",d);
+	            //session.commit();
+	         }catch(Exception ex)
+	         {
+	            //session.rollback();
+	            System.out.println(ex.getMessage());
+	         }
+	         finally
+	         {
+	           if(session!=null){
+	              session.close();
+	           }
+	         }
+	      }
 }
+
+
+
+
+
+
+
+
+

@@ -13,6 +13,7 @@
 		<typeAlias type="com.recipedao.MaterialDTO" alias="Material"/>	<!-- 나만의레시피 - 재료 -->
 		<typeAlias type="com.recipedao.SituDTO" alias="Situ"/>			<!-- 나만의레시피 - 상황별 -->
 		<typeAlias type="com.recipedao.SourceDTO" alias="Source"/>		<!-- 나만의레시피 - 양념 -->
+		<typeAlias type="com.recipedao.RecipeContentDTO" alias="Recipecontent"/>		<!-- 나만의레시피 - 양념 -->
 		<typeAlias type="com.diarydao.DiaryDTO" alias="Diary"/>			<!-- 달력 -->
 		<typeAlias type="com.scrapdao.ScrapDTO" alias="Scrap"/>			<!-- 스크랩 -->
 		<typeAlias type="com.noticedao.NoticeDTO" alias="Notice"/>		<!-- 공지사항 -->

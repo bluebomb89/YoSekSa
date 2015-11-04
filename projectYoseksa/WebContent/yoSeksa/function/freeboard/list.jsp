@@ -40,7 +40,6 @@
 <!-- //footer -->
 
 <script src="yoSeksa/js/saved_resource"></script>
-<script src="yoSeksa/js/jquery.min.js"></script>
 <script src="yoSeksa/js/modernizr.custom.js"></script>
 <script src="yoSeksa/js/responsiveslides.min.js"></script>
 <script src="yoSeksa/js/jquery.cycle.all.js"></script>
@@ -51,7 +50,7 @@
 <script src="yoSeksa/js/easing.js"></script>
 <script src="yoSeksa/js/jquery-ui.js"></script>
 <!--/script-->
-<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+
 <script type="text/javascript">
    $(document).ready(function() {
       /* affix the navbar after scroll below header */
@@ -69,11 +68,12 @@
       });
    });
 </script>
-
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 <script type="text/javascript">
 $(function(){
 
 	$('#btnSub').click(function(){
+		
 		var cont=$('#usercontent').val();
 		if(cont=="")
 		{
