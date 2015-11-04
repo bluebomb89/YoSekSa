@@ -39,33 +39,51 @@
 			</style>
 		</head>
 		<body>
-				 <div class="c_text">
-					 </div>
+					<button type="button" class="btn btn-primary btn-lg"
+		data-toggle="modal" data-target="#myModal">등록</button>
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+				</div>
+				<div class="modal-body">
+					<div id="post_wrapper">
+						<form id="postForm" name="post_frm" method=post
+							action="postfind_result.jsp">
+							<textarea name="board_tx" class="form-control" placeholder="내용"
+								style="height: 400px; width: 400px; margin-top: 20px;"></textarea>
+							<div class="write_pic2" style="width: 400px; margin-top: 40px;">
+								<input type="file" name="file" id="file_1"
+									style="display: none;" />
+								<div class="complete_pic">
+									<img src="http://recipe1.ezmember.co.kr/img/pic_none3.gif"
+										alt="파일첨부" width="140" height="120"
+										onclick="document.getElementById('file_1').click();"
+										style="cursor: pointer;" />
+								</div>
+							</div>
+						
+						
+						</form>
+					</div>
+					<div class="clearfix" style="margin-top: 120px;"></div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
-
-				
-		<!-- 모달 
-			
-			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                 <div class="modal-dialog">
-                   <div class="modal-content">
-                     <div class="modal-header">
-                       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                       <h4 class="modal-title" id="myModalLabel">비밀 번호</h4>
-                     </div>
-            	<div class="modal-body">
-            		<form id="passwordeForm" name="password_frm" method="post" action="password.sek">
-            	
-            	   </form>
-                     </div>
-                     <div class="modal-footer">
-                       <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
-                       <button type="button" class="btn btn-default" data-dismiss="modal" onclick="password_Insert()">완료</button>
-                     </div>
-                   </div>
-                 </div>
                </div>
-             모달           -->
+                       
 			
 			<div class="container-s">
 				<div class="container container-fluid">
