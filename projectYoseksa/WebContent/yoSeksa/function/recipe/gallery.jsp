@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -251,12 +252,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 	<!-- /.row -->
 		<div class="col-md-12" style="margin-top: 20px;">
+			<c:forEach var='dto' items="${list}">
 			<div class="col-sm-3 col-md-3.5">
 				<div class="thumbnail" style="margin-bottom: 5px;">
-					<img src="yoSeksa/images/g1.jpg" alt="">
+					<img src="yoSeksa/contentImg/${dto.recipe_img }" alt="">
 					<div class="caption">
-						<h3>Thumbnail label</h3>
-						aaaaaaaaaaaaaaaaaaaaaaaa<br> bbbbbbbbbbbbbbbbbbbbbbbb<br>
+						<h3>${dto.recipe_sub }</h3>
 						<div align="center" style="margin-top: 10px;">
 							<a href="#" class="btn btn-primary" role="button"><span
 								class="glyphicon glyphicon-heart" aria-hidden="true"></span></a> <a
@@ -270,230 +271,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						style="margin-bottom: 10px;">
 				</div>
 			</div>
-			<div class="col-sm-3 col-md-3.5">
-				<div class="thumbnail" style="margin-bottom: 5px;">
-					<img src="yoSeksa/images/g1.jpg" alt="">
-					<div class="caption">
-						<h3>Thumbnail label</h3>
-						aaaaaaaaaaaaaaaaaaaaaaaa<br> bbbbbbbbbbbbbbbbbbbbbbbb<br>
-						<div align="center" style="margin-top: 10px;">
-							<a href="#" class="btn btn-primary" role="button"><span
-								class="glyphicon glyphicon-heart" aria-hidden="true"></span></a> <a
-								href="#" class="btn btn-default" role="button"><span
-								class="glyphicon glyphicon-calendar" aria-hidden="true"></span></a>
-						</div>
-					</div>
-				</div>
-				<div class="list_check" align="center">
-					<input type="checkbox" id="selRecipe_thumb_6836049" value="3770820"
-						style="margin-bottom: 10px;">
-				</div>
-			</div>
-			<div class="col-sm-3 col-md-3.5">
-				<div class="thumbnail" style="margin-bottom: 5px;">
-					<img src="yoSeksa/images/g1.jpg" alt="">
-					<div class="caption">
-						<h3>Thumbnail label</h3>
-						aaaaaaaaaaaaaaaaaaaaaaaa<br> bbbbbbbbbbbbbbbbbbbbbbbb<br>
-						<div align="center" style="margin-top: 10px;">
-							<a href="#" class="btn btn-primary" role="button"><span
-								class="glyphicon glyphicon-heart" aria-hidden="true"></span></a> <a
-								href="#" class="btn btn-default" role="button"><span
-								class="glyphicon glyphicon-calendar" aria-hidden="true"></span></a>
-						</div>
-					</div>
-				</div>
-				<div class="list_check" align="center">
-					<input type="checkbox" id="selRecipe_thumb_6836049" value="3770820"
-						style="margin-bottom: 10px;">
-				</div>
-			</div>
-			<div class="col-sm-3 col-md-3.5">
-				<div class="thumbnail" style="margin-bottom: 5px;">
-					<img src="yoSeksa/images/g1.jpg" alt="">
-					<div class="caption">
-						<h3>Thumbnail label</h3>
-						aaaaaaaaaaaaaaaaaaaaaaaa<br> bbbbbbbbbbbbbbbbbbbbbbbb<br>
-						<div align="center" style="margin-top: 10px;">
-							<a href="#" class="btn btn-primary" role="button"><span
-								class="glyphicon glyphicon-heart" aria-hidden="true"></span></a> <a
-								href="#" class="btn btn-default" role="button"><span
-								class="glyphicon glyphicon-calendar" aria-hidden="true"></span></a>
-						</div>
-					</div>
-				</div>
-				<div class="list_check" align="center">
-					<input type="checkbox" id="selRecipe_thumb_6836049" value="3770820"
-						style="margin-bottom: 10px;">
-				</div>
-			</div>
-			<div class="col-sm-3 col-md-3.5">
-				<div class="thumbnail" style="margin-bottom: 5px;">
-					<img src="yoSeksa/images/g1.jpg" alt="">
-					<div class="caption">
-						<h3>Thumbnail label</h3>
-						aaaaaaaaaaaaaaaaaaaaaaaa<br> bbbbbbbbbbbbbbbbbbbbbbbb<br>
-						<div align="center" style="margin-top: 10px;">
-							<a href="#" class="btn btn-primary" role="button"><span
-								class="glyphicon glyphicon-heart" aria-hidden="true"></span></a> <a
-								href="#" class="btn btn-default" role="button"><span
-								class="glyphicon glyphicon-calendar" aria-hidden="true"></span></a>
-						</div>
-					</div>
-				</div>
-				<div class="list_check" align="center">
-					<input type="checkbox" id="selRecipe_thumb_6836049" value="3770820"
-						style="margin-bottom: 10px;">
-				</div>
-			</div>
-			<div class="col-sm-3 col-md-3.5">
-				<div class="thumbnail" style="margin-bottom: 5px;">
-					<img src="yoSeksa/images/g1.jpg" alt="">
-					<div class="caption">
-						<h3>Thumbnail label</h3>
-						aaaaaaaaaaaaaaaaaaaaaaaa<br> bbbbbbbbbbbbbbbbbbbbbbbb<br>
-						<div align="center" style="margin-top: 10px;">
-							<a href="#" class="btn btn-primary" role="button"><span
-								class="glyphicon glyphicon-heart" aria-hidden="true"></span></a> <a
-								href="#" class="btn btn-default" role="button"><span
-								class="glyphicon glyphicon-calendar" aria-hidden="true"></span></a>
-						</div>
-					</div>
-				</div>
-				<div class="list_check" align="center">
-					<input type="checkbox" id="selRecipe_thumb_6836049" value="3770820"
-						style="margin-bottom: 10px;">
-				</div>
-			</div>
-			<div class="col-sm-3 col-md-3.5">
-				<div class="thumbnail" style="margin-bottom: 5px;">
-					<img src="yoSeksa/images/g1.jpg" alt="">
-					<div class="caption">
-						<h3>Thumbnail label</h3>
-						aaaaaaaaaaaaaaaaaaaaaaaa<br> bbbbbbbbbbbbbbbbbbbbbbbb<br>
-						<div align="center" style="margin-top: 10px;">
-							<a href="#" class="btn btn-primary" role="button"><span
-								class="glyphicon glyphicon-heart" aria-hidden="true"></span></a> <a
-								href="#" class="btn btn-default" role="button"><span
-								class="glyphicon glyphicon-calendar" aria-hidden="true"></span></a>
-						</div>
-					</div>
-				</div>
-				<div class="list_check" align="center">
-					<input type="checkbox" id="selRecipe_thumb_6836049" value="3770820"
-						style="margin-bottom: 10px;">
-				</div>
-			</div>
-			<div class="col-sm-3 col-md-3.5">
-				<div class="thumbnail" style="margin-bottom: 5px;">
-					<img src="yoSeksa/images/g1.jpg" alt="">
-					<div class="caption">
-						<h3>Thumbnail label</h3>
-						aaaaaaaaaaaaaaaaaaaaaaaa<br> bbbbbbbbbbbbbbbbbbbbbbbb<br>
-						<div align="center" style="margin-top: 10px;">
-							<a href="#" class="btn btn-primary" role="button"><span
-								class="glyphicon glyphicon-heart" aria-hidden="true"></span></a> <a
-								href="#" class="btn btn-default" role="button"><span
-								class="glyphicon glyphicon-calendar" aria-hidden="true"></span></a>
-						</div>
-					</div>
-				</div>
-				<div class="list_check" align="center">
-					<input type="checkbox" id="selRecipe_thumb_6836049" value="3770820"
-						style="margin-bottom: 10px;">
-				</div>
-			</div>
-			<div class="col-sm-3 col-md-3.5">
-				<div class="thumbnail" style="margin-bottom: 5px;">
-					<img src="yoSeksa/images/g1.jpg" alt="">
-					<div class="caption">
-						<h3>Thumbnail label</h3>
-						aaaaaaaaaaaaaaaaaaaaaaaa<br> bbbbbbbbbbbbbbbbbbbbbbbb<br>
-						<div align="center" style="margin-top: 10px;">
-							<a href="#" class="btn btn-primary" role="button"><span
-								class="glyphicon glyphicon-heart" aria-hidden="true"></span></a> <a
-								href="#" class="btn btn-default" role="button"><span
-								class="glyphicon glyphicon-calendar" aria-hidden="true"></span></a>
-						</div>
-					</div>
-				</div>
-				<div class="list_check" align="center">
-					<input type="checkbox" id="selRecipe_thumb_6836049" value="3770820"
-						style="margin-bottom: 10px;">
-				</div>
-			</div>
-			<div class="col-sm-3 col-md-3.5">
-				<div class="thumbnail" style="margin-bottom: 5px;">
-					<img src="yoSeksa/images/g1.jpg" alt="">
-					<div class="caption">
-						<h3>Thumbnail label</h3>
-						aaaaaaaaaaaaaaaaaaaaaaaa<br> bbbbbbbbbbbbbbbbbbbbbbbb<br>
-						<div align="center" style="margin-top: 10px;">
-							<a href="#" class="btn btn-primary" role="button"><span
-								class="glyphicon glyphicon-heart" aria-hidden="true"></span></a> <a
-								href="#" class="btn btn-default" role="button"><span
-								class="glyphicon glyphicon-calendar" aria-hidden="true"></span></a>
-						</div>
-					</div>
-				</div>
-				<div class="list_check" align="center">
-					<input type="checkbox" id="selRecipe_thumb_6836049" value="3770820"
-						style="margin-bottom: 10px;">
-				</div>
-			</div>
-			<div class="col-sm-3 col-md-3.5">
-				<div class="thumbnail" style="margin-bottom: 5px;">
-					<img src="yoSeksa/images/g1.jpg" alt="">
-					<div class="caption">
-						<h3>Thumbnail label</h3>
-						aaaaaaaaaaaaaaaaaaaaaaaa<br> bbbbbbbbbbbbbbbbbbbbbbbb<br>
-						<div align="center" style="margin-top: 10px;">
-							<a href="#" class="btn btn-primary" role="button"><span
-								class="glyphicon glyphicon-heart" aria-hidden="true"></span></a> <a
-								href="#" class="btn btn-default" role="button"><span
-								class="glyphicon glyphicon-calendar" aria-hidden="true"></span></a>
-						</div>
-					</div>
-				</div>
-				<div class="list_check" align="center">
-					<input type="checkbox" id="selRecipe_thumb_6836049" value="3770820"
-						style="margin-bottom: 10px;">
-				</div>
-			</div>
-			<div class="col-sm-3 col-md-3.5">
-				<div class="thumbnail" style="margin-bottom: 5px;">
-					<img src="yoSeksa/images/g1.jpg" alt="">
-					<div class="caption">
-						<h3>Thumbnail label</h3>
-						aaaaaaaaaaaaaaaaaaaaaaaa<br> bbbbbbbbbbbbbbbbbbbbbbbb<br>
-						<div align="center" style="margin-top: 10px;">
-							<a href="#" class="btn btn-primary" role="button"><span
-								class="glyphicon glyphicon-heart" aria-hidden="true"></span></a> <a
-								href="#" class="btn btn-default" role="button"><span
-								class="glyphicon glyphicon-calendar" aria-hidden="true"></span></a>
-						</div>
-					</div>
-				</div>
-				<div class="list_check" align="center">
-					<input type="checkbox" id="selRecipe_thumb_6836049" value="3770820"
-						style="margin-bottom: 10px;">
-				</div>
-			</div>
+			</c:forEach>
+			
 		</div>
 		
 		<nav align="center">
-			<ul class="pagination" style="margin-top: 80px;">
-				<li><a href="#" aria-label="Previous"> <span
-						aria-hidden="true">«</span>
-				</a></li>
-				<li><a href="#">1</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5</a></li>
-				<li><a href="#" aria-label="Next"> <span aria-hidden="true">»</span>
-				</a></li>
-			</ul>
+			<li class="pagination" style="margin-top: 80px;">
+				<a href="board_list.do?page=${curpage>1?curpage-1:curpage }"><img src="../images/prev_icon.gif"></a> &nbsp;
+       		    <a href="board_list.do?page=${curpage<totalpage?curpage+1:curpage }"><img src="../images/next_icon.gif"></a>&nbsp;&nbsp;
+     		    ${curpage } page / ${totalpage } pages
+			</li>
 		</nav>
 
 

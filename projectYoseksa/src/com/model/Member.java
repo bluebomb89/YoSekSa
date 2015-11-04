@@ -50,7 +50,6 @@ public class Member {
 		
 		return "main.sek";
 	}
-	
 	@RequestMapping("member_login.sek")
 	public String member_login(HttpServletRequest req) throws IOException{
 		
@@ -58,11 +57,9 @@ public class Member {
 		String member_pw=req.getParameter("member_pw");
 		String result="";
 		int count=MemberDAO.memberIdCount(member_id);
-		try{
 		if(count==0)
 		{
 			result="NOID";
-			req.setAttribute("result", result);
 		}
 		else
 		{
@@ -74,19 +71,14 @@ public class Member {
 				session.setAttribute("member_id", member_id);
 				// ${sessionScope.id} => session.getAttribute("id")
 				session.setAttribute("nickname", d.getNickname());
-				//session.setAttribute("admin", d.getAdmin());
-				req.setAttribute("result", result);
 			}
 			else
 			{
 				result="NOPWD";
-				req.setAttribute("result", result);
 			}
 		}
-		}catch(Exception ex){
-			ex.printStackTrace();
-		}
-		return "yoSeksa/function/member/login.jsp";
+		req.setAttribute("result", result);
+		return "yoSeksa/function/member/login_ok.jsp";
 	}
 	
 	@RequestMapping("member_logout.sek")
@@ -94,6 +86,6 @@ public class Member {
 		
 		HttpSession session=req.getSession();
 		session.invalidate();
-		return "yoseksa.sek";
+		return "main.sek";
 	}
 }

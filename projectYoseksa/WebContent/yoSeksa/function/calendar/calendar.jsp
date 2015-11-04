@@ -132,10 +132,10 @@ Calendar cal = Calendar.getInstance();
 Shadowbox.init({
 	players:["iframe"]
 });
-function addRecipeOnTable()
+function addRecipeOnTable(year,month,day)
 {
 	Shadowbox.open({
-		content:'add_recipe_popup.jsp',
+		content:'add_recipe_popup.jsp?year='+year+'&month='+month+'&day='+day,
 		player:'iframe',
 		title:'ADD NEW RECIPE',
 		width:800,
@@ -217,7 +217,7 @@ function addRecipeOnTable()
                      bgStyle="background-color: rgba( 255, 255, 255, 0 );color:#FFFFFF";
                   }
 %> 
-      <td style="<%=bgStyle %>" align="left" valign="top">&nbsp;<a href="#" onclick="addRecipeOnTable()"><%=dispDay%></a><br>
+      <td style="<%=bgStyle %>" align="left" valign="top">&nbsp;<a href="#" onclick="addRecipeOnTable(<%=currYear %>,<%=currMonth+1 %>,<%=dispDay %>)"><%=dispDay%></a><br>
       </td>
 <%
                count += 1;
