@@ -49,7 +49,7 @@
       WHERE num BETWEEN #{start} AND #{end}
    </select>
     <select id="recipeRowCount" resultType="int">
-      SELECT COUNT(*) FROM replyBoard
+      SELECT COUNT(*) FROM yoseksa_recipe
       </select>
    <!-- ㅁㅁ -->
 </mapper>
