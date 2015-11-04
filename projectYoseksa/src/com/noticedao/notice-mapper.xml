@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dao.notice-mapper">
-	<!-- 우식 -->
-	<!-- ㅁㅁ -->
-	<!-- 영권 -->
+   <!-- 우식 -->
+   <!-- ㅁㅁ -->
+   <!-- 영권 -->
     <insert id="noticeInsert" parameterType="Notice">
       <!-- Sequence -->
       <selectKey keyProperty="notice_no" resultType="int" order="BEFORE">
@@ -12,27 +12,27 @@
       INSERT INTO yoseksa_notice VALUES(#{notice_no},1,1,#{notice_sub},#{notice_content},SYSDATE,0)
     </insert>
     <select id="noticeListData" resultType="Notice" parameterType="java.util.Map">
-		SELECT notice_no,notice_sub,notice_content, notice_dbday , notice_hit, num
-		FROM (SELECT notice_no,notice_sub,notice_content,TO_CHAR(notice_date,'YYYY-MM-DD') as notice_dbday , notice_hit, rownum as num
-		FROM (SELECT notice_no,notice_sub,notice_content,notice_date , notice_hit 
-		FROM yoseksa_notice ORDER BY notice_no DESC)) 
-		WHERE num BETWEEN #{start} AND #{end}
+      SELECT notice_no,notice_sub,notice_content, notice_dbday , notice_hit, num
+      FROM (SELECT notice_no,notice_sub,notice_content,TO_CHAR(notice_date,'YYYY-MM-DD') as notice_dbday , notice_hit, rownum as num
+      FROM (SELECT notice_no,notice_sub,notice_content,notice_date , notice_hit 
+      FROM yoseksa_notice ORDER BY notice_no DESC)) 
+      WHERE num BETWEEN #{start} AND #{end}
     </select>
         <!-- 총페이지 구하기 -->
     <select id="noticeRowCount" resultType="int">
       SELECT COUNT(*) FROM yoseksa_notice
     </select>
-	<!-- ㅁㅁ -->
-	<!-- 태진 -->
-	<!-- ㅁㅁ -->
-	<!-- 승현 -->
-	<!-- ㅁㅁ -->
-	<!-- 홍의 -->
-<!-- 	<select id="noticeListData" resultType="Notice">
+   <!-- ㅁㅁ -->
+   <!-- 태진 -->
+   <!-- ㅁㅁ -->
+   <!-- 승현 -->
+   <!-- ㅁㅁ -->
+   <!-- 홍의 -->
+<!--    <select id="noticeListData" resultType="Notice">
       SELECT notice_sub,notice_date,notice_hit,notice_content
       FROM yoseksa_notice
     </select> -->
-	<!-- ㅁㅁ -->
-	<!-- 민영 -->
-	<!-- ㅁㅁ -->
+   <!-- ㅁㅁ -->
+   <!-- 민영 -->
+   <!-- ㅁㅁ -->
 </mapper>
