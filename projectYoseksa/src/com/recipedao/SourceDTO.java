@@ -1,9 +1,16 @@
 package com.recipedao;
 
 public class SourceDTO {
+	private int recipe_no;
 	private int source_no;
 	private String source_content;
 	private String source_gram;
+	public int getRecipe_no() {
+		return recipe_no;
+	}
+	public void setRecipe_no(int recipe_no) {
+		this.recipe_no = recipe_no;
+	}
 	public int getSource_no() {
 		return source_no;
 	}

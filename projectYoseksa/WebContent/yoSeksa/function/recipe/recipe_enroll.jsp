@@ -32,7 +32,13 @@
 <style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow-x:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
 .fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f8;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3a5795;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #2f477a;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f8;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
 .fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style></head>
-<body><script>
+<body>
+<script type="text/javascript">
+	$('#recipebtn').click(function(){
+		
+	});
+</script>
+<script>
 $(document).ready(function() {
     doRTKeyword();
 });
@@ -485,7 +491,7 @@ function adjustText(id) {
     $('#'+id).val(arr_str.join(' '));
 }
 </script>
-<form name="insFrm" id="insFrm" method="post">
+<form name="insFrm" id="insFrm" method="post" action="recipe_insert.sek" enctype="multipart/form-data">
 <link rel="stylesheet" type="text/css" href="yoSeksa/css/recipe_enroll/jquery.tagit.css"><style>
 .note-editor .note-dropzone { opacity: 0 !important; }
 ul.tagit {
@@ -524,6 +530,47 @@ addStep();
 var isSubmit = false;
 function doSubmit(q_mode)
 {
+	//재료 루프돌면서 숫자 파악
+ 	var i=1;
+	var c=true;
+	while(c){
+		var a=$('#cok_resource_nm_'+i).val();
+		if(a==null){
+			c=false;
+			break;
+		}
+		$('#cok_resource_nm_'+i).attr("name","cok_resource_nm_"+i);
+		$('#cok_resource_amt_'+i).attr("name","cok_resource_amt_"+i);
+		i++;
+	}; 
+	// 양념 루프돌면서 숫자 파악
+ 	var k=1;
+	var d=true;
+	while(d){
+		var b=$('#cok_spice_nm_'+k).val();
+		if(b==null){
+			d=false;
+			break;
+		}
+		$('#cok_spice_nm_'+k).attr("name","cok_spice_nm_"+k);
+		$('#cok_spice_amt_'+k).attr("name","cok_spice_amt_"+k);
+		k++;
+	};
+	// 내용 이미지&텍스트에리어 루프돌면서 파악
+	var cont=1;
+	var con=true;
+	while(con){
+		var v=$('#q_step_file_'+cont).val();
+		alert(v);
+		if(v==null || v==undefined){
+			con=false;
+			break;
+		}
+		$('#q_step_file_'+cont).attr("name","q_step_file_"+cont);
+		$('#step_text_'+cont).attr("name","step_text_"+cont);
+		
+		cont++;
+	};
 	/*
     if (isSubmit) {
         alert("처리중 입니다. 잠시만 기다리세요.");
@@ -711,8 +758,6 @@ $(function() {
     <div class="regi_center">
     <div class="cont_box pad_l_60">
       <div id="divMainPhotoUpload" class="cont_pic2">
-        <input type="hidden" name="main_photo" id="main_photo" value="">
-        <input type="hidden" name="new_main_photo" id="new_main_photo" value="">
         <div style="position:absolute;left:-3000px"><input type="file" name="q_main_file" id="q_main_file" file_gubun="main" accept="jpeg,png,gif" style="display:;width:0px;height:0px;font-size:0px;" text=""></div>
         <div id="divMainPhotoBox" is_over="0">
             <img id="mainPhotoHolder" onclick="browseMainFile()" src="yoSeksa/css/recipe_enroll/pic_none4.gif" style="width: 250px; height: 160px; cursor:pointer">
@@ -721,69 +766,56 @@ $(function() {
       <div class="cont_line"><p class="cont_tit4">레시피 제목</p><input type="text" name="cok_title" id="cok_title" value="" class="form-control" placeholder="예) 소고기 미역국 끓이기" style="width:610px; "></div>
       <div class="cont_line"><p class="cont_tit4">카테고리</p>
         <select name="cok_sq_category_4" id="cok_sq_category_4" text="종류별">
-<option value="">종류별</option><option value="63">밑반찬</option>
-<option value="56">메인반찬</option>
-<option value="54">국/탕</option>
-<option value="55">찌개</option>
-<option value="60">간식/디저트</option>
-<option value="53">면/만두</option>
-<option value="52">밥/죽/떡</option>
-<option value="61">퓨전</option>
-<option value="57">김치/젓갈/장류</option>
-<option value="58">양념/소스/잼</option>
-<option value="65">양식</option>
-<option value="64">샐러드/스프</option>
-<option value="66">베이킹</option>
-<option value="59">차/음료/술</option>
-<option value="62">기타</option>
+<option value="">종류별</option>
+<option value="1">밑반찬</option>
+<option value="2">메인반찬</option>
+<option value="3">국/탕</option>
+<option value="4">찌개</option>
+<option value="5">간식/디저트</option>
+<option value="6">면/만두</option>
+<option value="7">밥/죽/떡</option>
+<option value="8">퓨전</option>
+<option value="9">김치/젓갈/장류</option>
+<option value="10">양념/소스/잼</option>
+<option value="11">양식</option>
+<option value="12">샐러드/스프</option>
+<option value="13">베이킹</option>
+<option value="14">차/음료/술</option>
+<option value="15">기타</option>
 </select>
         <select name="cok_sq_category_2" id="cok_sq_category_2" text="상황별">
-<option value="">상황별</option><option value="12">일상</option>
-<option value="18">초스피드</option>
-<option value="13">손님접대</option>
-<option value="19">술안주</option>
-<option value="21">다이어트쿡</option>
-<option value="15">나들이</option>
-<option value="43">영양식</option>
-<option value="17">간식</option>
-<option value="45">야식</option>
-<option value="20">푸드스타일링</option>
-<option value="46">해장</option>
-<option value="44">명절</option>
-<option value="14">이유식</option>
-<option value="22">기타</option>
+<option value="">상황별</option>
+<option value="1">일상</option>
+<option value="2">초스피드</option>
+<option value="3">안주</option>
+<option value="4">손님접대</option>
+<option value="5">간식</option>
+<option value="6">야식</option>
+<option value="7">나들이</option>
+<option value="8">영양식</option>
+<option value="9">기타</option>
 </select>
-        <select name="cok_sq_category_1" id="cok_sq_category_1" text="방법별">
-<option value="">방법별</option><option value="6">볶음</option>
-<option value="1">끓이기</option>
-<option value="7">부침</option>
-<option value="36">조림</option>
-<option value="41">무침</option>
-<option value="42">비빔</option>
-<option value="8">찜</option>
-<option value="35">구이</option>
-<option value="10">절이기</option>
-<option value="9">튀김</option>
-<option value="38">삶기</option>
-<option value="67">굽기</option>
-<option value="39">데치기</option>
-<option value="37">회</option>
+<select name="cok_sq_category_1" id="cok_sq_category_1" text="방법별">
+<option value="">방법별</option>
+<option value="1">볶음</option>
+<option value="2">부침</option>
+<option value="3">조림</option>
+<option value="4">무침</option>
+<option value="5">찜</option>
+<option value="6">굽기</option>
+<option value="7">튀김</option>
+<option value="8">삶기</option>
 <option value="11">기타</option>
 </select>
-        <select name="cok_sq_category_3" id="cok_sq_category_3" text="재료별">
-<option value="">재료별</option><option value="23">육류</option>
-<option value="28">채소류</option>
-<option value="24">해물류</option>
-<option value="50">달걀/유제품</option>
-<option value="33">가공식품류</option>
-<option value="47">면류/떡류</option>
-<option value="32">빵류</option>
-<option value="25">건어물류</option>
-<option value="31">버섯류</option>
-<option value="48">과일류</option>
-<option value="27">콩/견과류</option>
-<option value="26">곡류</option>
-<option value="34">기타</option>
+<select name="cok_sq_category_3" id="cok_sq_category_3" text="재료별">
+<option value="">재료별</option>
+<option value="1">육류</option>
+<option value="2">채소류</option>
+<option value="3">해물류</option>
+<option value="4">가공식품류</option>
+<option value="5">면/빵류</option>
+<option value="7">과일류</option>
+<option value="8">기타</option>
 </select>
       </div>
       </div>
@@ -791,7 +823,14 @@ $(function() {
     <div class="cont_box pad_l_60">
       <div class="mag_b_25">
         <p class="cont_tit4">재료</p>
-        <ul id="divResourceArea" class="ui-sortable"><li id="liResource_1"><a href="#" class="btn-lineup ui-sortable-handle" data-original-title="" title=""></a><input type="text" name="cok_resource_nm[]" id="cok_resource_nm_1" class="form-control" style="width:300px;" placeholder="예) 돼지고기"><input type="text" name="cok_resource_amt[]" id="cok_resource_amt_1" class="form-control" style="width:300px;" placeholder="예) 300g"><a id="btnResourceDel_1" href="javascript:delResource(1)" class="btn-del" style=""></a></li><li id="liResource_2"><a href="#" class="btn-lineup" data-original-title="" title=""></a><input type="text" name="cok_resource_nm[]" id="cok_resource_nm_2" class="form-control" style="width:300px;" placeholder="예) 양배추"><input type="text" name="cok_resource_amt[]" id="cok_resource_amt_2" class="form-control" style="width:300px;" placeholder="예) 1/2개"><a id="btnResourceDel_2" href="javascript:delResource(2)" class="btn-del" style="display: none;"></a></li><li id="liResource_3"><a href="#" class="btn-lineup" data-original-title="" title=""></a><input type="text" name="cok_resource_nm[]" id="cok_resource_nm_3" class="form-control" style="width:300px;" placeholder="예) 찹쌀"><input type="text" name="cok_resource_amt[]" id="cok_resource_amt_3" class="form-control" style="width:300px;" placeholder="예) 2컵"><a id="btnResourceDel_3" href="javascript:delResource(3)" class="btn-del" style="display:none"></a></li></ul>
+        <ul id="divResourceArea" class="ui-sortable">
+        	<li id="liResource_1">
+        		<a href="#" class="btn-lineup ui-sortable-handle" data-original-title="" title=""></a>
+        		<input type="text" name="cok_resource_nm[]" id="cok_resource_nm_1" class="form-control" style="width:300px;" placeholder="예) 돼지고기">
+        		<input type="text" name="cok_resource_amt[]" id="cok_resource_amt_1" class="form-control" style="width:300px;" placeholder="예) 300g">
+        		<a id="btnResourceDel_1" href="javascript:delResource(1)" class="btn-del" style=""></a>
+        		</li><li id="liResource_2"><a href="#" class="btn-lineup" data-original-title="" title=""></a><input type="text" name="cok_resource_nm[]" id="cok_resource_nm_2" class="form-control" style="width:300px;" placeholder="예) 양배추"><input type="text" name="cok_resource_amt[]" id="cok_resource_amt_2" class="form-control" style="width:300px;" placeholder="예) 1/2개"><a id="btnResourceDel_2" href="javascript:delResource(2)" class="btn-del" style="display: none;"></a></li><li id="liResource_3"><a href="#" class="btn-lineup" data-original-title="" title=""></a><input type="text" name="cok_resource_nm[]" id="cok_resource_nm_3" class="form-control" style="width:300px;" placeholder="예) 찹쌀"><input type="text" name="cok_resource_amt[]" id="cok_resource_amt_3" class="form-control" style="width:300px;" placeholder="예) 2컵">
+        		<a id="btnResourceDel_3" href="javascript:delResource(3)" class="btn-del" style="display:none"></a></li></ul>
         <div class="btn_add" style="padding:0 0 20px 160px; width:800px;"><button type="button" onclick="addResource()" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span>재료추가</button></div>
       </div>
       <div>
@@ -857,29 +896,15 @@ $(function() {
       </div><!--/step template-->
 
       <div class="btn_add mag_b_25" style="padding:0 0 20px 180px; width:820px;"><button type="button" onclick="addStep()" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span>순서추가</button></div>
-
-
-      <p class="cont_tit4">요리완성사진</p>
-      <div id="divWorkArea" style="display:inline-block">
-                <div id="divWorkUpload_1" class="complete_pic">
-            <input type="hidden" name="work_photo[]" id="work_photo_1" value="">
-            <input type="hidden" name="new_work_photo[]" id="new_work_photo_1" value="">
-            <input type="hidden" name="del_work_photo[]" id="del_work_photo_1" value="">
-            <div style="position:absolute;left:-3000px"><input type="file" name="q_work_file_1" id="q_work_file_1" file_gubun="work" accept="jpeg,png,gif" style="display:;width:0px;height:0px;font-size:0px;" text=""></div>
-            <div id="divWorkPhotoBox_1" is_over="0">
-                <a href="#" class="pic_del" style="display:none"></a>
-                <img id="workPhotoHolder_1" onclick="browseWorkFile(1)" src="yoSeksa/css/recipe_enroll/pic_none3.gif" alt="No Image" style="width: 140px; height: 140px; cursor:pointer">
-            </div>
-        </div>
-              </div>
     </div><!--/cont_box-->
 
   </div><!--/regi_center-->
   <div class="regi_btm">
-    <button type="button" onclick="doSubmit(&#39;save&#39;)" class="btn-lg btn-primary">저장</button>
+    <button type="button" id="recipebtn" onclick="doSubmit(&#39;save&#39;)" class="btn-lg btn-primary">저장</button>
 	    <button type="button" onclick="history.back();" class="btn-lg btn-default">취소</button>
       </div>
-</div><!-- /container --></form>
+</div><!-- /container -->
+</form>
 
 
 

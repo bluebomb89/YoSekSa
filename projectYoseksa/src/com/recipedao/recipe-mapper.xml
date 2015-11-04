@@ -1,16 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dao.recipe-mapper">
-	<!-- 우식 -->
-	<!-- ㅁㅁ -->
-	<!-- 영권 -->
-	<!-- ㅁㅁ -->
-	<!-- 태진 -->
-	<!-- ㅁㅁ -->
-	<!-- 승현 -->
-	<!-- ㅁㅁ -->
-	<!-- 홍의 -->
-	<!-- ㅁㅁ -->
-	<!-- 민영 -->
-	<!-- ㅁㅁ -->
+   <!-- 우식 -->
+   <!-- ㅁㅁ -->
+   <!-- 영권 -->
+   <select id="sequence" resultType="int">
+      SELECT NVL(MAX(recipe_no)+1,1) as recipe_no FROM yoseksa_recipe
+   </select>
+   <insert id="recipeInsert" parameterType="Recipe">
+      <!-- Sequence -->
+      INSERT INTO yoseksa_recipe VALUES(#{recipe_no},#{board_no},#{kind_no},#{situ_no},#{how_no},#{jaeryo_no},
+      1,#{recipe_sub},#{recipe_img},SYSDATE,0,#{recipe_img_size})
+      </insert>
+    <insert id="materialInsert" parameterType="Material">
+      <!-- Sequence -->
+      <selectKey keyProperty="material_no" resultType="int" order="BEFORE">
+        SELECT NVL(MAX(material_no)+1,1) as material_no FROM yoseksa_material
+      </selectKey>
+      INSERT INTO yoseksa_material VALUES(
+        #{recipe_no},#{material_no},#{material_content},#{material_gram}
+      )
+    </insert>
+      <insert id="soueceInsert" parameterType="Source">
+      <!-- Sequence -->
+      <selectKey keyProperty="source_no" resultType="int" order="BEFORE">
+        SELECT NVL(MAX(source_no)+1,1) as source_no FROM yoseksa_source
+      </selectKey>
+      INSERT INTO yoseksa_source VALUES(
+        #{recipe_no},#{source_no},#{source_content},#{source_gram}
+      )
+    </insert>
+          <insert id="recipeContentInsert" parameterType="Recipecontent">
+      <!-- Sequence -->
+      <selectKey keyProperty="recipec_no" resultType="int" order="BEFORE">
+        SELECT NVL(MAX(recipec_no)+1,1) as recipec_no FROM yoseksa_recipe_content
+      </selectKey>
+      INSERT INTO yoseksa_recipe_content VALUES(
+        #{recipe_no},#{recipec_no},#{recipec_photo},#{recipec_cont}
+      )
+    </insert>
+   <!-- ㅁㅁ -->
+   <!-- 태진 -->
+   <!-- ㅁㅁ -->
+   <!-- 승현 -->
+   <!-- ㅁㅁ -->
+   <!-- 홍의 -->
+   <!-- ㅁㅁ -->
+   <!-- 민영 -->
+     <sql id="where-no">
+      WHERE recipe_no=#{recipe_no}
+    </sql>
+   <select id="recipeListData" resultType="Recipe" parameterType="java.util.Map">
+     SELECT recipe_no,recipe_img,recipe_sub,num
+      FROM (SELECT recipe_no,recipe_img,recipe_sub,rownum as num
+      FROM (SELECT recipe_no,recipe_img,recipe_sub 
+      FROM yoseksa_recipe ORDER BY recipe_no DESC)) 
+      WHERE num BETWEEN #{start} AND #{end}
+   </select>
+    <select id="recipeRowCount" resultType="int">
+      SELECT COUNT(*) FROM replyBoard
+      </select>
+   <!-- ㅁㅁ -->
 </mapper>

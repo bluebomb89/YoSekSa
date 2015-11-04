@@ -1,9 +1,16 @@
 package com.recipedao;
 
 public class MaterialDTO {
+	private int recipe_no;
 	private int material_no;
 	private String material_content;
 	private String material_gram;
+	public int getRecipe_no() {
+		return recipe_no;
+	}
+	public void setRecipe_no(int recipe_no) {
+		this.recipe_no = recipe_no;
+	}
 	public int getMaterial_no() {
 		return material_no;
 	}
@@ -22,5 +29,4 @@ public class MaterialDTO {
 	public void setMaterial_gram(String material_gram) {
 		this.material_gram = material_gram;
 	}
-	
 }

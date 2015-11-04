@@ -8,6 +8,7 @@
 <title></title>
 <link href="yoSeksa/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="yoSeksa/css/component.css" rel="stylesheet" type="text/css"  />
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 <!-- script -->
 <script type="text/javascript">
 $(function(){
@@ -26,6 +27,7 @@ $(function(){
       }
       $('#login_frm').submit();
    });
+   
     $('#logout_Btn').click(function(){
       $('#logout_frm').submit();
    });
@@ -46,9 +48,9 @@ $(function(){
          <!-- ���� 濡�洹몄�� �� -->
          <c:if test="${sessionScope.member_id==null }">
             <form method="post" action="member_login.sek" id="login_frm">
-               ID:<input type=text name=member_id id=member_id size=10>
+               ID:<input type=text name=member_id id="member_id" size=10>
                &nbsp;
-               PW:<input type=password name=member_pw id=member_pw size=10>
+               PW:<input type=password name=member_pw id="member_pw" size=10>
                &nbsp;
                <input type=button value="로그인" id="login_Btn">
             </form>
@@ -61,7 +63,7 @@ $(function(){
          </c:if>
          
            </nav>
-         <!-- 왼쪽상단에 있는 버튼을 클릭했을때 나오는 링크or속성값을 지정하는곳 -->
+      <!-- 왼쪽상단에 있는 버튼을 클릭했을때 나오는 링크or속성값을 지정하는곳 -->
       <!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
        <script src="yoSeksa/js/classie.js"></script>
 <!-- 타이틀 메뉴바 -->
@@ -78,7 +80,7 @@ $(function(){
                      <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">자유게시판<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                            <li><a href="freeboard.sek">about1</a></li>
-                           <li><a href="freeboard.sek">about2</a></li>
+                           <li><a href="freeboard_list.sek">about2</a></li>
                            <li><a href="recipe_content.sek">레시피 내용보기</a></li>           
                         </ul>
                      </li>
