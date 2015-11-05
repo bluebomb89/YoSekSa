@@ -64,6 +64,25 @@ public class FreeBoardDAO {
 	   }
 	   return total;
    }
+   public static int freeboardMAXno()
+   {
+	   int max=0;
+	   SqlSession session=null;
+	   try
+	   {
+		   session=ssf.openSession();
+		   max=session.selectOne("freeboardMAXno");
+	   }catch(Exception ex)
+	   {
+		   System.out.println(ex.getMessage());
+	   }
+	   finally
+	   {
+		   if(session!=null)
+			   session.close();
+	   }
+	   return max;
+   }
    public static void freeboardInsert(FreeBoardDTO d)
    {
 	   SqlSession session=null;

@@ -28,10 +28,14 @@
         SELECT NVL(MAX(free_no)+1,1) as free_no FROM yoseksa_freeboard
       </selectKey>
       INSERT INTO yoseksa_freeboard VALUES(
-        #{board_no}#{free_no},#{member_no},#{free_pw},#{nickname},#{free_content},SYSDATE
+        #{board_no},#{free_no},#{member_no},#{free_pw},#{nickname},#{free_content},SYSDATE
       )
     </insert>
-
+    
+	<select id="freeboardMAXno" resultType="int">
+		SELECT MAX(free_no) FROM yoseksa_freeboard
+	</select>
+	
     <!-- 내용보기 데이터 출력  -->
     <select id="freeContentData" resultType="Freeboard" parameterType="int">
      SELECT free_no,nickname,free_content,free_date 

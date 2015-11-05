@@ -70,26 +70,26 @@
 $(function(){
 
 	$('#btnSub').click(function(){
-		
-		var cont=$('#usercontent').val();
-		if(cont=="")
+
+		var free_content=$('#free_content').val();
+		if(free_content=="")
 		{
-			$('#contSpan').text("내용은 반드시 입력해야 합니다!!");
-			$('#usercontent').focus();
+			alert("내용은 반드시 입력해야 합니다!!");
+			$('#free_content').focus();
 			return;
 		}
-		$('#contSpan').text("");
+		$('#free_content').text("");
 		
-		var pwd=$('#userpwd').val();
-		if(pwd=="")
+		var free_pw=$('#free_pw').val();
+		if(free_pw=="")
 		{
-			$('#pwdSpan').text("비밀번호는 반드시 입력해야 합니다!!");
-			$('#userpwd').focus();
+			$('#free_pw').text("비밀번호는 반드시 입력해야 합니다!!");
+			$('#free_pw').focus();
 			return;
 		}
-		$('#pwdSpan').text("");
+		$('#free_pw').text("");
 		
-		$('#writeForm').submit();
+		$('#free_write_frm').submit();
 	});
 	$('#btnCancel').click(function(){
 		history.back();
@@ -180,30 +180,25 @@ $(function(){
 
 <body class="cbp-spmenu-push">
 	<!-- 민영이는 주석 전까지만 작업 하세요 -->
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
-		aria-labelledby="myModalLabel" aria-hidden="true"
-		style="display: block; margin: 0 auto;">
-		<h4 align="center"
-			style="margin-top: 60px; font-size: 17px; color: #000000">글 작성</h4>
-		<form name="free_write_frm" id="freewriteForm" method=post action="board_insert_ok.sek">
+	<form name="free_write_frm" id="free_write_frm" method=post action="freeboard_insert_ok.sek">
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: block; margin: 0 auto;">
+		<h4 align="center" style="margin-top: 60px; font-size: 17px; color: #000000">글 작성</h4>
 		<div class="modal-body" style="padding-bottom: 0px;">
-			<textarea name="board_tx" id="usercontent" class="form-control"
-				placeholder="내용"
-				style="height: 210px; width: 446px; margin-left: 80px; border: 1px solid #CACACA; background-color: rgb(255, 255, 255);"></textarea>
-			<br> <span id="nameSpan" style="color: red; text-align: center"></span>
+			<textarea name=board_tx id="free_content" class="form-control" placeholder="내용" style="height: 210px; width: 446px; margin-left: 80px; border: 1px solid #CACACA; background-color: rgb(255, 255, 255);"></textarea>
+			<br> 
 			<div class="write_pic2" style="width: 400px; margin-top: 5px;">
 			
 				<!-- 게시글 비밀번호 시작 -->
 				<p>
-					<label for="userpwd">비밀번호</label>
-					<input type=password id="userpwd" name="pwd">
+					<label for="free_pw">비밀번호</label>
+					<input type=password id="free_pw" name="pwd">
 					<br>
 					<span id="pwdSpan" style="color:red; textalign: center"></span>
 				</p>			
 				<!-- 게시글 비밀번호끝 -->
 			</div>
 		</div>
-		</form>
+	</form>
 		<div class="modal-footer"
 			style="margin-bottom: 20px; margin-right: 70px; padding-top: 0px;">
 			<button type="button" class="btn btn-primary" id="btnSub">등록</button>
@@ -212,7 +207,7 @@ $(function(){
 	</div>
 
 	<!-- 우식이형님 작업 이밑에서만 하세요 -->
-	<div class="WrapMain" style="top: 50px;">
+	<div class="WrapMain">
 		<div class="mainArea02">
 			<div class="tabReview">
 				<div class="reviewWrap">
@@ -243,25 +238,21 @@ $(function(){
 								</dl>
 							</li>
 						</ul>
-						
+						<p>
+						<button type="button" class="btn btn-primary btn-lg" style="margin-top: 15px; padding-left: 0px;" data-toggle="modal" data-target="#myModal">
+							게시물을 등록해주세요
+						</button>
 						<p class="count">
-							전체글<span class="number">2</span>건
+							전체글
+							<span class="number">${max_no }</span>건
 						</p>
 						
 					</div>
 				</div>
 			</div>
 		</div>
-		<div id="ajax_review">
-							<ul class="boardList" totcnt="0" od="">
-								<img src="yoSeksa/images/reply_ico.png" align="absbottom"
-                                          style="margin-top: 13px; margin-left: 395px;">
-								<button type="button" class="btn btn-primary btn-lg"
-									style="margin-top: 15px; padding-left: 0px;"
-									data-toggle="modal" data-target="#myModal">게시물을 등록해주세요
-								</button>
-							</ul>
-						</div>
+		
+		
 		<div class="hSpace70">
 			<!-- 여백 70 -->
 		</div>
@@ -269,6 +260,13 @@ $(function(){
 			<!-- 여백 30 -->
 		</div>
 		
+	</div>
+	
+	<div id="ajax_review">
+		<ul class="boardList" totcnt="0" od="">
+			<!-- <img src="yoSeksa/images/reply_ico.png" align="absbottom" style="margin-top: 13px; margin-left: 395px;"> -->
+			
+		</ul>
 	</div>
 	<!-- 게시판 -->
 	<c:forEach var="dto" items="${list }">
