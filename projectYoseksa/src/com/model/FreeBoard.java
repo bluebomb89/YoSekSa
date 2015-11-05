@@ -27,7 +27,7 @@ public class FreeBoard {
 		    if(strPage==null)
 		    	strPage="1";
 		    int curpage=Integer.parseInt(strPage);
-		    int rowSize=10;
+		    int rowSize=5;
 		    int start=(curpage*rowSize)-(rowSize-1);
 		    int end=curpage*rowSize;
 		    Map map=new HashMap();
@@ -46,7 +46,7 @@ public class FreeBoard {
 		    req.setAttribute("totalpage", totalpage);
 			req.setAttribute("title", "게시판 목록");
 			req.setAttribute("jsp", "../freeboard/list.jsp");
-			return "main/main.jsp";
+			return "yoSeksa/function/main/main.jsp";
 	   }
 	 
 	@RequestMapping("freeboard_content.sek")
@@ -132,7 +132,7 @@ public class FreeBoard {
 			d.setFree_pw(free_pw);
 			// DB
 			FreeBoardDAO.freeboardInsert(d);
-			return "board_list.sek";
+			return "freeboard_list.sek";
 	   }
 	 
 	

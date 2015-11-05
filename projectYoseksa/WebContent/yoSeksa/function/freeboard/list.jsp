@@ -33,9 +33,6 @@
 <link rel="stylesheet" href="yoSeksa/css/list//app.css?ver=4.0.8">
 <link href="yoSeksa/css/listwrite.css" rel="stylesheet">
 <link rel="stylesheet" href="yoSeksa/css/list/ggong.css" type="text/css">
-
-
-
 <link rel="stylesheet" href="yoSeksa/css/list/onepage_201401.css" type="text/css">
 <!-- //footer -->
 
@@ -215,7 +212,7 @@ $(function(){
 	</div>
 
 	<!-- 우식이형님 작업 이밑에서만 하세요 -->
-	<div class="WrapMain">
+	<div class="WrapMain" style="top: 50px;">
 		<div class="mainArea02">
 			<div class="tabReview">
 				<div class="reviewWrap">
@@ -246,10 +243,16 @@ $(function(){
 								</dl>
 							</li>
 						</ul>
+						
 						<p class="count">
 							전체글<span class="number">2</span>건
 						</p>
-						<div id="ajax_review">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="ajax_review">
 							<ul class="boardList" totcnt="0" od="">
 								<img src="yoSeksa/images/reply_ico.png" align="absbottom"
                                           style="margin-top: 13px; margin-left: 395px;">
@@ -259,59 +262,20 @@ $(function(){
 								</button>
 							</ul>
 						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 		<div class="hSpace70">
 			<!-- 여백 70 -->
 		</div>
 		<div class="hSpace30">
 			<!-- 여백 30 -->
 		</div>
+		
 	</div>
 	<!-- 게시판 -->
-	<%-- 
-        <tr id="listTd">
-          
-             dto.getNo()
-          
-          <td class="tdcenter">${dto.no }</td>
-          <td class="tdleft">
-            
-                if(dto.getGroup_tab()!=0)
-                {
-                   for(int i=0;i<dto.getGroup_tab();i++)
-                   {
-                   }
-                } 
-           
-            
-           
-            <a href="board_content.do?no=${dto.no }&page=${curpage}">${dto.subject }</a>
-            <c:if test="${dto.replyCount!=0 }">
-            	(${dto.replyCount })
-            </c:if>
-             
-            <c:if test="${today==dto.dbday }">
-              <sup><img src="image/icon_new.png"></sup>
-            </c:if>
-          </td>
-          <td class="tdcenter">${dto.name }</td>
-          <td class="tdcenter">${dto.dbday }</td>
-          <td class="tdcenter">${dto.hit }</td>
-        </tr>
-        <c:set var="count" value="${count-1 }"/>
-      --%>
-	<%-- <c:forEach var="dto" items="${list }"> --%>
-	<div id="cont_wrap" class="clfix">
-		<div id="conts_section" class="my_fold">
-			<!-- contents -->
-			<div id="conts" class="clfix ban">
+	<c:forEach var="dto" items="${list }">
 				<div id="section_rvew" class="section_rvew">
 					<div class="d_cmtpgn " id="d_cmtpgn">
 						<div class="list_cmt" id="d_cmtpgn_cmt_list_wrapper" style="">
-							<ul style="">
+							
 								<li class="first_child">
 									<div class="wrap_cmt_cntt d_cmtpgn_cmt_wrapper">
 										<div class="wrap_nicnmname d_cmtpgn_cmt_member_wrapper">
@@ -322,7 +286,7 @@ $(function(){
 											</span>
 											<div class="ellipsis" style="max-width: 102px;">
 												<a class="thumb d_cmtpgn_user" style="cursor: pointer; text-decoration: none;"> 
-													<span class="d_cmtpgn_member_nickname" title="dnqls0617">${dto.nickname }</span>
+													<span class="d_cmtpgn_member_nickname" title="닉네임">${dto.nickname }</span>
 												</a>
 											</div>
 										</div>
@@ -372,20 +336,41 @@ $(function(){
 										</div>
 									</div>
 								</li>
-							</ul>
 						</div>
 					</div>
 				</div>
-				<%-- </c:forEach> --%>
+				</c:forEach>
 				
 <!-- 페이지 나누는 부분 -->
 				<div class="paginate" id="d_cmtpgn_paginate_wrapper" style="">
-					<a class="btn_first disabled d_cmtpgn_navigator" title="맨 처음"><span>맨
-							처음</span></a> <a class="btn_pre disabled d_cmtpgn_navigator" title="이전"><span>이전</span></a>
-					<span class="page_num"><strong><span class="none">현재페이지</span>1</strong></span>
-					<a class="btn_next disabled d_cmtpgn_navigator" title="다음"><span>다음</span></a>
-					<a class="btn_last disabled d_cmtpgn_navigator" title="맨 끝"><span>맨
-							끝</span></a>
+				
+					<a href="freeboard_list.sek?page=1" class="btn_first disabled d_cmtpgn_navigator" title="맨 처음">
+						<span>첫 페이지</span>
+					</a>
+					
+					<a href="freeboard_list.sek?page=${curpage>1?curpage-1:curpage }" class="btn_pre disabled d_cmtpgn_navigator" title="이전">
+						<span>이전</span>
+					</a>
+					
+						<span class="page_num">
+							<strong>
+								<span class="none">현재페이지</span>${curpage }
+							</strong>
+						</span>
+						
+						<span class="page_num">
+							<strong>
+								<span class="none">마지막페이지</span>${totalpage }
+							</strong>
+						</span>
+						
+					<a href="freeboard_list.sek?page=${curpage<totalpage?curpage+1:curpage }" class="btn_next disabled d_cmtpgn_navigator" title="다음">
+						<span>다음</span>
+					</a>
+					
+					<a href="freeboard_list.sek?page=${totalpage }" class="btn_last disabled d_cmtpgn_navigator" title="맨 끝">
+						<span>끝 페이지</span>
+					</a>
 				</div>
 			</div>
 		</div>
