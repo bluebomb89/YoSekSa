@@ -33,6 +33,7 @@
 <script src="yoSeksa/js/move-top.js"></script>
 <script src="yoSeksa/js/easing.js"></script>
 <script src="yoSeksa/js/bootstrap.js"></script> 
+<script src="yoSeksa/js/ajax.js"></script> 
 <!--/script-->
 <script type="text/javascript">
 	$(document).ready(function() {
@@ -50,6 +51,16 @@
 			$("#startmain").text("Search");
 		});
 	});
+</script>
+<script type="text/javascript">
+$(function(){
+	$('#replyBtn').click(function(){
+		var reply=$('#recipeReply').val();
+		var param="reply="+reply;
+		sendMessage("GET", "recipe_reply.sek", param, callback);
+	});
+});
+
 </script>
 </head>
 <body>
@@ -116,8 +127,10 @@
       <input type="hidden" name="frm[cok_reg_id]" value="wifetable">
         <div class="info_pic"><img class="media-object" src="../recipe/zxcvvxzcvcxv_files/pf_100_100.png" data-holder-rendered="true"></div>
         <div class="input-group">
-          <textarea id="cmtTextarea" onclick="EZ.ATLogin(); return false;" name="frm[cmt_tx_content]" class="form-control" placeholder="자신만의 비법이 있으신가요?" style="height:100px; width:100%; resize:none;"></textarea>
-          <span class="input-group-btn"><button class="btn btn-default" type="button" onclick="doCommentSubmit()" style="height:100px; width:100px;">등록</button></span>
+          <textarea id="recipeReply" name="frm[cmt_tx_content]" class="form-control" placeholder="자신만의 비법이 있으신가요?" style="height:100px; width:100%; resize:none;"></textarea>
+          <span class="input-group-btn">
+          	<button id="replyBtn" class="btn btn-default" type="button" style="height:100px; width:100px;"></button>
+          </span>
         </div>
       </form>
       </div>
