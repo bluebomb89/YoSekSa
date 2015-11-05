@@ -50,8 +50,8 @@ public class Recipe {
 			req.setAttribute("source", slist);
 			req.setAttribute("content", clist);
 			req.setAttribute("dto", d);
-			req.setAttribute("title", "내용보기");
-	      req.setAttribute("jsp",   "../recipe/recipe_content.jsp");
+			req.setAttribute("reply", "../recipe/recipe_reply.jsp");
+			req.setAttribute("jsp",   "../recipe/recipe_content.jsp");
 	      return "yoSeksa/function/main/main.jsp";
 	   }
 	      @RequestMapping("recipe.sek")
@@ -84,13 +84,13 @@ public class Recipe {
    public String recipe_insert(HttpServletRequest req) throws IOException{
       String enctype="UTF-8";
 //    영권경로
-//      String path="C:\\javaDev\\jasb\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\projectYoseksa\\yoSeksa\\contentImg";
+      String path="C:\\javaDev\\jasb\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\projectYoseksa\\yoSeksa\\contentImg";
 //      승현경로
 //      String path="C:\\Users\\������\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
 //      태진경로
 //      String path="C:\\Users\\������\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
 //      민영경로
-      String path="C:\\webDev\\homework\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\projectYoseksa\\yoSeksa\\contentImg";
+//      String path="C:\\webDev\\homework\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\projectYoseksa\\yoSeksa\\contentImg";
 //      홍의경로
 //      String path="C:\\Users\\������\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
 //      우식경로
