@@ -26,11 +26,11 @@ public class NoticeInsertModel implements YoseksaModel{
 		NoticeDTO d=new NoticeDTO();
 		d.setNotice_sub(notice_sub);
 		d.setNotice_content(notice_content);
-		// DB¿¬µ¿
+		// DB쩔짭쨉쩔
 		NoticeDAO.noticeInsert(d);
-//		여기까지 DB 인서트
+//		�뿬湲곌퉴吏� DB �씤�꽌�듃
 		
-//		여기서부터 노티스DB 다시 호출
+//		�뿬湲곗꽌遺��꽣 �끂�떚�뒪DB �떎�떆 �샇異�
 		/*return "yoseksa.sek";*/
 		String strPage=req.getParameter("page");
 	    if(strPage==null)

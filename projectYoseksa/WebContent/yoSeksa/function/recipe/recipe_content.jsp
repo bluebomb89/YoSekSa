@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -55,15 +56,12 @@
  <div class="blank_bottom2"></div>
 <div class="container sub_bg">
     <div class="recipe_view">
-    <div class="view_pic"><img src="../recipe/zxcvvxzcvcxv_files/2e201b2ed039e2d25a4a5961d50283ed1_m.jpg"></div>
+    <div class="view_pic"><img src="yoSeksa/contentImg/${dto.recipe_img }"></div>
     <div class="view_info">
       
-      <div class="info_title">샐러드/스프 · 일상 · 끓이기 · 채소류      <p>고구마수프</p></div>
-      <div class="info_cont">
-        <span class="info_cont_1">분량(인분) : 2인분</span>        <span class="info_cont_2">조리시간 : 15분 이내</span>        <span class="info_cont_3">난이도 : 초급</span>      </div>
+      <div class="info_title">샐러드/스프 · 일상 · 끓이기 · 채소류      <p>${dto.recipe_sub }</p></div>
       <div class="info_share">
-          <p class="info_share_in">등록일 : 15.10.22<span>/</span>조회수 : 1,235<span>/</span>스크랩 : 46<span>/</span>좋아요 : 6</p>
-          
+          <p class="info_share_in">등록일 : ${dto.recipe_date }<span>/</span>조회수 : ${dto.hit }
       </div>
       
     </div>
@@ -71,25 +69,30 @@
   <div class="blank_bottom2"></div>
     <div id="contents_area" class="col-xs-9">
     <div class="view_cont">
-    	                <div class="cont_intro">
-            겨울이 되면 호호 불며 까먹는 고구마가 최고의 간식인데요! 오늘은 우유와 함께 넣어 만드는 고구마스프를 소개할게요. 고구마스프는 부드럽고 고소하여 아침식사 대용으로 좋으며 간식으로 먹고 남은 고구마를 이용할 수 있어서 더욱 좋답니다. <br>
-         </div>
               <div class="cont_ingre">
                 <dl>
           <dt>[주재료]</dt>
-          <dd>고구마 중간 크기 2개, 우유 2컵, 물 1컵, 다진 양파 2큰술</dd>
+          <c:forEach var='dto' items="${material}">
+          	<dd>${dto.material_content } ${dto.material_gram }</dd>
+		  </c:forEach>
+          
         </dl>
-                        <dl>
+        <dl>
           <dt>[양념 및 소스재료]</dt>
-          <dd>파마산치즈 2큰술, 올리브유 적당량, 소금 약간</dd>
+          <c:forEach var='sdto' items="${source}">
+          	<dd>${sdto.source_content } ${sdto.source_gram }</dd>
+		  </c:forEach>
         </dl>
               </div>
     </div><!--/view_cont -->
     <div class="blank_bottom"></div>
-<div class="view_step"><div class="view_step_cont step1">고구마는 삶아서 껍질을 벗긴 후 우유와 함께 블렌더에 곱게 갈아주세요.<br><img src="../recipe/zxcvvxzcvcxv_files/5c20bf5aef1fa753a034d3fb7443ad081.jpg"></div><div class="view_step_cont"><img src="../recipe/zxcvvxzcvcxv_files/aba861433433bcbae312a95883267a961.jpg"></div>            <dl class="view_step_tip">
-        <dt><img src="../recipe/zxcvvxzcvcxv_files/tit_tip.gif" alt="팁-주의사항"></dt>
-        <dd> 고구마칩을 만드셔서 고명으로 얹어주셔도 좋아요~ </dd>
-      </dl>
+<div class="view_step">
+	<c:forEach var='cdto' items="${content}">
+		<div class="view_step_cont step1">${cdto.recipec_cont }<br>
+			<img src="yoSeksa/contentImg/${cdto.recipec_photo }">
+		</div>
+	</c:forEach>
+
             
 
       

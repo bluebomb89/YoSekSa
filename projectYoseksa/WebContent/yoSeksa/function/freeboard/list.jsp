@@ -50,7 +50,9 @@
 <script src="yoSeksa/js/easing.js"></script>
 <script src="yoSeksa/js/jquery-ui.js"></script>
 <!--/script-->
-
+<style type="text/css">
+body.modal-open { overflow: inherit; padding-right: 0 !important; }
+</style>
 <script type="text/javascript">
    $(document).ready(function() {
       /* affix the navbar after scroll below header */
@@ -360,7 +362,8 @@ $(function(){
 														</button> 
 														
 <!-- 삭제하기 -->
-														<button type="button" title="글 삭제하기" class="btn_recm negative d_cmtpgn_cmt_non_recm_btn">
+														<button type="button" title="글 삭제하기" class="btn_recm negative d_cmtpgn_cmt_non_recm_btn" 
+																data-toggle="modal" data-target="#remove"">
 															<span class="odd_span"> 
 																<img style="width: 25px; margin-top: 3px;" align="absbottom" src="yoSeksa/images/board2.gif">
 															</span>

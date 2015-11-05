@@ -22,7 +22,7 @@ public class RecipeDAO {
             System.out.println(ex.getMessage());
          }
       }
-      // µ¥ÀÌÅÍ °¡Áö°í ¿À±â 
+      // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 
        public static List<RecipeDTO> recipeListData(Map map)
        {
           List<RecipeDTO> list=
@@ -44,7 +44,7 @@ public class RecipeDAO {
           return list;
           //return ssf.openSession().selectList("boardListData",map);
        }
-       // ÃÑÆäÀÌÁö
+       // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
        public static int recipeTotalPage()
        {
           int total=0;
@@ -140,4 +140,82 @@ public class RecipeDAO {
               session.close();
          }
       }
+   public static void recipeContentInsert(RecipeContentDTO d){
+	         SqlSession session=null;
+	         try
+	         {
+	            session=ssf.openSession(true);
+	            session.insert("recipeContentInsert",d);
+	            //session.commit();
+	         }catch(Exception ex)
+	         {
+	            //session.rollback();
+	            System.out.println(ex.getMessage());
+	         }
+	         finally
+	         {
+	           if(session!=null){
+	              session.close();
+	           }
+	         }
+	      }
+   public static RecipeDTO recipeContentData(int recipe_no,int type)
+   {
+	   SqlSession session=null;
+	   RecipeDTO d=new RecipeDTO();
+	   try
+	   {
+		   session=ssf.openSession(true);
+		   if(type==1)
+		   {
+		     session.update("yoseksaHitIncrement",recipe_no);
+		   }
+		   //session.commit();
+		   d=session.selectOne("yoseksaContentData", recipe_no);
+	   }catch(Exception ex)
+	   {
+		   //session.rollback();
+		   System.out.println(ex.getMessage());
+	   }
+	   finally
+	   {
+		  if(session!=null)
+			  session.close();
+	   }
+	   return d;
+   }
+   public static List<MaterialDTO> materialData(int recipe_no)
+   {
+	   SqlSession session=ssf.openSession();
+	   List<MaterialDTO> list=
+			   session.selectList("materialData",recipe_no);
+	   session.close();
+	   return list;
+   }
+   public static List<SourceDTO> sourceData(int recipe_no)
+   {
+	   SqlSession session=ssf.openSession();
+	   List<SourceDTO> list=
+	   session.selectList("sourceData",recipe_no);
+	   session.close();
+	   return list;
+   }
+   public static List<RecipeContentDTO> contentData(int recipe_no)
+   {
+	   SqlSession session=ssf.openSession();
+	   List<RecipeContentDTO> list=
+	   session.selectList("contentData",recipe_no);
+	   session.close();
+	   return list;
+   }
+
 }
+
+
+
+
+
+
+
+
+
