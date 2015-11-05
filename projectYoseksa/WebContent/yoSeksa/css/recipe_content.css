@@ -479,7 +479,7 @@ body {min-width: 1240px;}
 .reply_write { display:block; border-bottom:1px solid #e6e7e8; height:116px; margin-top:14px;}
 .reply_write .info_pic {width:50px; display:inline-block; padding:0;}
 .reply_write .info_pic img {width:50px; height:50px;  border-radius:50%;}
-.reply_write .input-group {width:730px; float:right;}
+.reply_write .input-group {width:730px; float:right; margin-right: 330px;}
 .reply_more {border-bottom:1px solid #e6e7e8; text-align:center;}
 .reply_more a {background:url(../../img/icon_arrow4.gif) right 11px no-repeat; color:#555; padding:5px 25px 15px 15px; font-size:15px; display:inline-block;}
 

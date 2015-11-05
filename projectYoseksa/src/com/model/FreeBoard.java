@@ -27,7 +27,7 @@ public class FreeBoard {
 		    if(strPage==null)
 		    	strPage="1";
 		    int curpage=Integer.parseInt(strPage);
-		    int rowSize=10;
+		    int rowSize=5;
 		    int start=(curpage*rowSize)-(rowSize-1);
 		    int end=curpage*rowSize;
 		    Map map=new HashMap();
@@ -35,18 +35,22 @@ public class FreeBoard {
 		    map.put("end", end);
 		    List<FreeBoardDTO> list=
 		    		FreeBoardDAO.freeboardListData(map);
+		    
 		    for(FreeBoardDTO d:list)
 		    {
 		    	d.setReplyCount(FreeBoardDAO.boardReplyCount(d.getFree_no()));
 		    }
 		    int totalpage=FreeBoardDAO.freeboardTotalPage();
+		    int max_no=FreeBoardDAO.freeboardMAXno();
+		   
+		    req.setAttribute("max_no", max_no);
 		    req.setAttribute("today", new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
 		    req.setAttribute("list", list);
 		    req.setAttribute("curpage", curpage);
 		    req.setAttribute("totalpage", totalpage);
 			req.setAttribute("title", "게시판 목록");
 			req.setAttribute("jsp", "../freeboard/list.jsp");
-			return "main/main.jsp";
+			return "yoSeksa/function/main/main.jsp";
 	   }
 	 
 	@RequestMapping("freeboard_content.sek")
@@ -113,9 +117,10 @@ public class FreeBoard {
 	 @RequestMapping("freeboard_insert.sek")
 	   public String freeboard_insert(HttpServletRequest req)
 	   {
-		 req.setAttribute("title", "글쓰기");
-			req.setAttribute("jsp", "../freeboard/insert.jsp");
-			return "yoSeksa/function/main/main.jsp";
+		 	System.out.println("인써트");
+		 	req.setAttribute("title", "글쓰기");
+		 	req.setAttribute("jsp", "../freeboard/list.jsp");
+		 	return "yoSeksa/function/main/main.jsp";
 	   }
 	 
 	 @RequestMapping("freeboard_insert_ok.sek")
@@ -125,17 +130,15 @@ public class FreeBoard {
 			String nickname=req.getParameter("nickname");
 			String free_content=req.getParameter("free_content");
 			String free_pw=req.getParameter("free_pw");
-			
+			System.out.println("인서트오케이");
 			FreeBoardDTO d=new FreeBoardDTO();
 			d.setNickname(nickname);
 			d.setFree_content(free_content);
 			d.setFree_pw(free_pw);
-			// DB¿¬µ¿
+			// DB
 			FreeBoardDAO.freeboardInsert(d);
-			return "board_list.sek";
+			return "freeboard_list.sek";
 	   }
-	 
-	
 	 
 	 @RequestMapping("freeboard_update.sek")
 	   public String freeboard_update(HttpServletRequest req)
