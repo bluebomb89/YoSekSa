@@ -16,13 +16,13 @@
 <link rel="stylesheet" type="text/css" href="yoSeksa/css/recipe_enroll/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="yoSeksa/css/recipe_enroll/ez_recipe_20151022.css">
 <link href="yoSeksa/css/bootstrap.css" type="text/css" rel="stylesheet"
-	media="all">
+   media="all">
 <link href="yoSeksa/css/component.css" rel="stylesheet" type="text/css" />
 <!-- jQuery (necessary JavaScript plugins) -->
 <!-- Custom Theme files -->
 <!-- <link href="yoSeksa/css/style.css" type="text/css" rel="stylesheet" media="all"> -->
 <link href="yoSeksa/css/style3.css" type="text/css" rel="stylesheet"
-	media="all">
+   media="all">
 <link href="yoSeksa/css/bootstrapTheme.css" rel="stylesheet">
 <link href="yoSeksa/css/custom.css" rel="stylesheet">
 <link href="yoSeksa/css/owl.carousel.css" rel="stylesheet">
@@ -556,8 +556,21 @@ function doSubmit(q_mode)
 		$('#cok_spice_amt_'+k).attr("name","cok_spice_amt_"+k);
 		k++;
 	};
-	var v=$('#q_step_file_1').val();
-	alert(v);
+	// 내용 이미지&텍스트에리어 루프돌면서 파악
+	var cont=1;
+	var con=true;
+	while(con){
+		var v=$('#q_step_file_'+cont).val();
+		alert(v);
+		if(v==null || v==undefined){
+			con=false;
+			break;
+		}
+		$('#q_step_file_'+cont).attr("name","q_step_file_"+cont);
+		$('#step_text_'+cont).attr("name","step_text_"+cont);
+		
+		cont++;
+	};
 	/*
     if (isSubmit) {
         alert("처리중 입니다. 잠시만 기다리세요.");

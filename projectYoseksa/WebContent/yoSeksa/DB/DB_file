@@ -13,6 +13,7 @@ drop table yoseksa_kind CASCADE CONSTRAINTS;
 drop table yoseksa_boardmgr CASCADE CONSTRAINTS;
 drop table yoseksa_notice CASCADE CONSTRAINTS;
 drop table yoseksa_member CASCADE CONSTRAINTS;
+drop table yoseksa_recipec CASCADE CONSTRAINTS;
 
 CREATE TABLE yoseksa_member(
    member_no NUMBER,
@@ -24,150 +25,152 @@ CREATE TABLE yoseksa_member(
 );
 
 
-INSERT INTO yoseksa_member VALUES(1,'admin','admin1','¾îµå¹Î','admin@yoseksa.com');
+INSERT INTO yoseksa_member VALUES(1,'admin','admin1','ì–´ë“œë¯¼','admin@yoseksa.com');
 
 
--- °Ô½ÃÆÇ °ü¸® Å×ÀÌºí
+-- ê²Œì‹œíŒ ê´€ë¦¬ í…Œì´ë¸”
 CREATE TABLE yoseksa_boardmgr(
   board_no NUMBER,
   board_name VARCHAR2(30),
   CONSTRAINT board_pk_no PRIMARY KEY(board_no)
 );
 
-INSERT INTO yoseksa_boardmgr (board_no,board_name) VALUES(1,'ÀÚÀ¯°Ô½ÃÆÇ');
-INSERT INTO yoseksa_boardmgr (board_no,board_name) VALUES(2,'³ª¸¸ÀÇ·¹½ÃÇÇ');
-INSERT INTO yoseksa_boardmgr (board_no,board_name) VALUES(3,'°øÁö»çÇ×');
-INSERT INTO yoseksa_boardmgr (board_no,board_name) VALUES(4,'½Ä´Ü°ü¸®');
-INSERT INTO yoseksa_boardmgr (board_no,board_name) VALUES(5,'½ºÅ©·¦');
-INSERT INTO yoseksa_boardmgr (board_no,board_name) VALUES(6,'ÀÛ¼º·¹½ÃÇÇ');
+INSERT INTO yoseksa_boardmgr (board_no,board_name) VALUES(1,'ììœ ê²Œì‹œíŒ');
+INSERT INTO yoseksa_boardmgr (board_no,board_name) VALUES(2,'ë‚˜ë§Œì˜ë ˆì‹œí”¼');
+INSERT INTO yoseksa_boardmgr (board_no,board_name) VALUES(3,'ê³µì§€ì‚¬í•­');
+INSERT INTO yoseksa_boardmgr (board_no,board_name) VALUES(4,'ì‹ë‹¨ê´€ë¦¬');
+INSERT INTO yoseksa_boardmgr (board_no,board_name) VALUES(5,'ìŠ¤í¬ë©');
+INSERT INTO yoseksa_boardmgr (board_no,board_name) VALUES(6,'ì‘ì„±ë ˆì‹œí”¼');
 
--- ¾ç³ä Å×ÀÌºí
-CREATE TABLE yoseksa_source(
-  source_no NUMBER,
-  source_content VARCHAR2(20),
-  source_gram VARCHAR2(10),
-  CONSTRAINT source_pk_no PRIMARY KEY(source_no)
-);
 
--- Àç·á Å×ÀÌºí
-CREATE TABLE yoseksa_material(
-  material_no NUMBER,
-  material_content VARCHAR2(100),
-  material_gram VARCHAR2(10),
-  CONSTRAINT mat_pk_no PRIMARY KEY(material_no)
-);
-
--- ¹æ¹ıº° Å×ÀÌºí
+-- ë°©ë²•ë³„ í…Œì´ë¸”
 CREATE TABLE yoseksa_how(
   how_no NUMBER,
   how_content VARCHAR2(50),
   CONSTRAINT how_pk_no PRIMARY KEY(how_no)
 );
 
-INSERT INTO yoseksa_how (how_no,how_content) VALUES(1,'ººÀ½');
-INSERT INTO yoseksa_how (how_no,how_content) VALUES(2,'ºÎÄ§');
-INSERT INTO yoseksa_how (how_no,how_content) VALUES(3,'Á¶¸²');
-INSERT INTO yoseksa_how (how_no,how_content) VALUES(4,'¹«Ä§');
-INSERT INTO yoseksa_how (how_no,how_content) VALUES(5,'Âò');
-INSERT INTO yoseksa_how (how_no,how_content) VALUES(6,'±Á±â');
-INSERT INTO yoseksa_how (how_no,how_content) VALUES(7,'Æ¢±è');
-INSERT INTO yoseksa_how (how_no,how_content) VALUES(8,'»î±â');
-INSERT INTO yoseksa_how (how_no,how_content) VALUES(9,'±âÅ¸');
+INSERT INTO yoseksa_how (how_no,how_content) VALUES(1,'ë³¶ìŒ');
+INSERT INTO yoseksa_how (how_no,how_content) VALUES(2,'ë¶€ì¹¨');
+INSERT INTO yoseksa_how (how_no,how_content) VALUES(3,'ì¡°ë¦¼');
+INSERT INTO yoseksa_how (how_no,how_content) VALUES(4,'ë¬´ì¹¨');
+INSERT INTO yoseksa_how (how_no,how_content) VALUES(5,'ì°œ');
+INSERT INTO yoseksa_how (how_no,how_content) VALUES(6,'êµ½ê¸°');
+INSERT INTO yoseksa_how (how_no,how_content) VALUES(7,'íŠ€ê¹€');
+INSERT INTO yoseksa_how (how_no,how_content) VALUES(8,'ì‚¶ê¸°');
+INSERT INTO yoseksa_how (how_no,how_content) VALUES(9,'ê¸°íƒ€');
 
--- »óÈ²º° Å×ÀÌºí
+-- ìƒí™©ë³„ í…Œì´ë¸”
 CREATE TABLE yoseksa_situ(
   situ_no NUMBER,
   situ_content VARCHAR2(50),
   CONSTRAINT situ_pk_no PRIMARY KEY(situ_no)
 );
 
-INSERT INTO yoseksa_situ (situ_no,situ_content) VALUES(1,'ÀÏ»ó');
-INSERT INTO yoseksa_situ (situ_no,situ_content) VALUES(2,'ÃÊ½ºÇÇµå');
-INSERT INTO yoseksa_situ (situ_no,situ_content) VALUES(3,'¾ÈÁÖ');
-INSERT INTO yoseksa_situ (situ_no,situ_content) VALUES(4,'¼Õ´ÔÁ¢´ë');
-INSERT INTO yoseksa_situ (situ_no,situ_content) VALUES(5,'°£½Ä');
-INSERT INTO yoseksa_situ (situ_no,situ_content) VALUES(6,'¾ß½Ä');
-INSERT INTO yoseksa_situ (situ_no,situ_content) VALUES(7,'³ªµéÀÌ');
-INSERT INTO yoseksa_situ (situ_no,situ_content) VALUES(8,'¿µ¾ç½Ä');
-INSERT INTO yoseksa_situ (situ_no,situ_content) VALUES(9,'±âÅ¸');
+INSERT INTO yoseksa_situ (situ_no,situ_content) VALUES(1,'ì¼ìƒ');
+INSERT INTO yoseksa_situ (situ_no,situ_content) VALUES(2,'ì´ˆìŠ¤í”¼ë“œ');
+INSERT INTO yoseksa_situ (situ_no,situ_content) VALUES(3,'ì•ˆì£¼');
+INSERT INTO yoseksa_situ (situ_no,situ_content) VALUES(4,'ì†ë‹˜ì ‘ëŒ€');
+INSERT INTO yoseksa_situ (situ_no,situ_content) VALUES(5,'ê°„ì‹');
+INSERT INTO yoseksa_situ (situ_no,situ_content) VALUES(6,'ì•¼ì‹');
+INSERT INTO yoseksa_situ (situ_no,situ_content) VALUES(7,'ë‚˜ë“¤ì´');
+INSERT INTO yoseksa_situ (situ_no,situ_content) VALUES(8,'ì˜ì–‘ì‹');
+INSERT INTO yoseksa_situ (situ_no,situ_content) VALUES(9,'ê¸°íƒ€');
 
 
--- Àç·áº° Å×ÀÌºí
+-- ì¬ë£Œë³„ í…Œì´ë¸”
 CREATE TABLE yoseksa_jaeryo(
   jaeryo_no NUMBER,
   jaeryo_content VARCHAR2(50),
   CONSTRAINT jaeryo_pk_no PRIMARY KEY(jaeryo_no)
 );
 
-INSERT INTO yoseksa_jaeryo (jaeryo_no,jaeryo_content) VALUES(1,'À°·ù');
-INSERT INTO yoseksa_jaeryo (jaeryo_no,jaeryo_content) VALUES(2,'Ã¤¼Ò·ù');
-INSERT INTO yoseksa_jaeryo (jaeryo_no,jaeryo_content) VALUES(3,'ÇØ¹°·ù');
-INSERT INTO yoseksa_jaeryo (jaeryo_no,jaeryo_content) VALUES(4,'°¡°ø½ÄÇ°·ù');
-INSERT INTO yoseksa_jaeryo (jaeryo_no,jaeryo_content) VALUES(5,'¸é/»§·ù');
-INSERT INTO yoseksa_jaeryo (jaeryo_no,jaeryo_content) VALUES(6,'°î·ù');
-INSERT INTO yoseksa_jaeryo (jaeryo_no,jaeryo_content) VALUES(7,'°úÀÏ·ù');
-INSERT INTO yoseksa_jaeryo (jaeryo_no,jaeryo_content) VALUES(8,'±âÅ¸');
+INSERT INTO yoseksa_jaeryo (jaeryo_no,jaeryo_content) VALUES(1,'ìœ¡ë¥˜');
+INSERT INTO yoseksa_jaeryo (jaeryo_no,jaeryo_content) VALUES(2,'ì±„ì†Œë¥˜');
+INSERT INTO yoseksa_jaeryo (jaeryo_no,jaeryo_content) VALUES(3,'í•´ë¬¼ë¥˜');
+INSERT INTO yoseksa_jaeryo (jaeryo_no,jaeryo_content) VALUES(4,'ê°€ê³µì‹í’ˆë¥˜');
+INSERT INTO yoseksa_jaeryo (jaeryo_no,jaeryo_content) VALUES(5,'ë©´/ë¹µë¥˜');
+INSERT INTO yoseksa_jaeryo (jaeryo_no,jaeryo_content) VALUES(6,'ê³¡ë¥˜');
+INSERT INTO yoseksa_jaeryo (jaeryo_no,jaeryo_content) VALUES(7,'ê³¼ì¼ë¥˜');
+INSERT INTO yoseksa_jaeryo (jaeryo_no,jaeryo_content) VALUES(8,'ê¸°íƒ€');
 
 
---Á¾·ùº° Å×ÀÌºí
+--ì¢…ë¥˜ë³„ í…Œì´ë¸”
 CREATE TABLE yoseksa_kind(
    kind_no NUMBER,
    kind_content VARCHAR2(20),
    CONSTRAINT yk_pk_kind_no PRIMARY KEY(kind_no)
 );
-INSERT INTO yoseksa_kind VALUES(1,'¹Ø¹İÂù');
-INSERT INTO yoseksa_kind VALUES(2,'¸ŞÀÎ¹İÂù');
-INSERT INTO yoseksa_kind VALUES(3,'±¹/ÅÁ');
-INSERT INTO yoseksa_kind VALUES(4,'Âî°³');
-INSERT INTO yoseksa_kind VALUES(5,'°£½Ä/µğÀúÆ®');
-INSERT INTO yoseksa_kind VALUES(6,'¸é/¸¸µÎ');
-INSERT INTO yoseksa_kind VALUES(7,'¹ä/Á×/¶±');
-INSERT INTO yoseksa_kind VALUES(8,'Ç»Àü');
-INSERT INTO yoseksa_kind VALUES(9,'±èÄ¡/Á£°¥/Àå·ù');
-INSERT INTO yoseksa_kind VALUES(10,'¾ç³ä/¼Ò½º/Àë');
-INSERT INTO yoseksa_kind VALUES(11,'¾ç½Ä');
-INSERT INTO yoseksa_kind VALUES(12,'»ø·¯µå/½ºÇÁ');
-INSERT INTO yoseksa_kind VALUES(13,'º£ÀÌÅ·');
-INSERT INTO yoseksa_kind VALUES(14,'Â÷/À½·á/¼ú');
-INSERT INTO yoseksa_kind VALUES(15,'±âÅ¸');
+INSERT INTO yoseksa_kind VALUES(1,'ë°‘ë°˜ì°¬');
+INSERT INTO yoseksa_kind VALUES(2,'ë©”ì¸ë°˜ì°¬');
+INSERT INTO yoseksa_kind VALUES(3,'êµ­/íƒ•');
+INSERT INTO yoseksa_kind VALUES(4,'ì°Œê°œ');
+INSERT INTO yoseksa_kind VALUES(5,'ê°„ì‹/ë””ì €íŠ¸');
+INSERT INTO yoseksa_kind VALUES(6,'ë©´/ë§Œë‘');
+INSERT INTO yoseksa_kind VALUES(7,'ë°¥/ì£½/ë–¡');
+INSERT INTO yoseksa_kind VALUES(8,'í“¨ì „');
+INSERT INTO yoseksa_kind VALUES(9,'ê¹€ì¹˜/ì “ê°ˆ/ì¥ë¥˜');
+INSERT INTO yoseksa_kind VALUES(10,'ì–‘ë…/ì†ŒìŠ¤/ì¼');
+INSERT INTO yoseksa_kind VALUES(11,'ì–‘ì‹');
+INSERT INTO yoseksa_kind VALUES(12,'ìƒëŸ¬ë“œ/ìŠ¤í”„');
+INSERT INTO yoseksa_kind VALUES(13,'ë² ì´í‚¹');
+INSERT INTO yoseksa_kind VALUES(14,'ì°¨/ìŒë£Œ/ìˆ ');
+INSERT INTO yoseksa_kind VALUES(15,'ê¸°íƒ€');
 
--- ³ª¸¸ÀÇ ·¹½ÃÇÇ Å×ÀÌºí
+-- ë‚˜ë§Œì˜ ë ˆì‹œí”¼ í…Œì´ë¸”
 CREATE TABLE yoseksa_recipe(
    recipe_no NUMBER,
-   kind_no NUMBER,
    board_no NUMBER,
+   kind_no NUMBER,
    situ_no NUMBER,
    how_no NUMBER,
    jaeryo_no NUMBER,
-   material_no NUMBER,
-   source_no NUMBER,
    member_no NUMBER,
-   recipe_sub VARCHAR2(20) CONSTRAINT yr_nn_recipe_sub NOT NULL,
-   recipe_mainphoto VARCHAR2(200) CONSTRAINT yr_nn_recipe_photo NOT NULL,
+   recipe_sub VARCHAR2(200) CONSTRAINT yr_nn_recipe_sub NOT NULL,
+   recipe_img VARCHAR2(2000) CONSTRAINT yr_nn_recipe_photo NOT NULL,
    recipe_date DATE DEFAULT SYSDATE,
    hit NUMBER DEFAULT 0,
+   recipe_img_size NUMBER,
    CONSTRAINT yr_pk_recipe_no PRIMARY KEY(recipe_no),
    CONSTRAINT yr_fk_kind_no FOREIGN KEY(kind_no) REFERENCES yoseksa_kind(kind_no),
    CONSTRAINT yr_fk_board_no FOREIGN KEY(board_no) REFERENCES yoseksa_boardmgr(board_no),
    CONSTRAINT yr_fk_situ_no FOREIGN KEY(situ_no) REFERENCES yoseksa_situ(situ_no),
    CONSTRAINT yr_fk_how_no FOREIGN KEY(how_no) REFERENCES yoseksa_how(how_no),
    CONSTRAINT yr_fk_jaeryo_no FOREIGN KEY(jaeryo_no) REFERENCES yoseksa_jaeryo(jaeryo_no),
-   CONSTRAINT yr_fk_material_no FOREIGN KEY(material_no) REFERENCES yoseksa_material(material_no),
-   CONSTRAINT yr_fk_source_no FOREIGN KEY(source_no) REFERENCES yoseksa_source(source_no),
    CONSTRAINT yr_fk_member_no FOREIGN KEY(member_no) REFERENCES yoseksa_member(member_no)
 );
 
--- ¿ä¸®¼ø¼­ »çÁø¹× ³»¿ë ÀúÀå
-CREATE TABLE yoseksa_recipe_content(
+-- ìš”ë¦¬ìˆœì„œ ì‚¬ì§„ë° ë‚´ìš© ì €ì¥
+CREATE TABLE yoseksa_recipec(
 	recipe_no NUMBER,
 	recipec_no NUMBER,
 	recipec_photo VARCHAR2(200) CONSTRAINT yrc_nn_recipec_photo NOT NULL,
 	recipec_cont CLOB CONSTRAINT yrc_nn_recipec_cont NOT NULL,
 	CONSTRAINT yrc_pk_recipec_no PRIMARY KEY(recipec_no),
-	CONSTRAINT yrc_fk_recipe_no FOREIGN KEY(recipe_no) REFERENCES yoseksa_recipe(recipe_no));
+	CONSTRAINT yrc_fk_recipe_no FOREIGN KEY(recipe_no) REFERENCES yoseksa_recipe(recipe_no)
+);
+-- ì–‘ë… í…Œì´ë¸”
+CREATE TABLE yoseksa_source(
+  recipe_no NUMBER,
+  source_no NUMBER,
+  source_content VARCHAR2(20),
+  source_gram VARCHAR2(10),
+  CONSTRAINT source_pk_no PRIMARY KEY(source_no),
+  CONSTRAINT sourcec_fk_recipe_no FOREIGN KEY(recipe_no) REFERENCES yoseksa_recipe(recipe_no)
+);
+
+-- ì¬ë£Œ í…Œì´ë¸”
+CREATE TABLE yoseksa_material(
+  recipe_no NUMBER,
+  material_no NUMBER,
+  material_content VARCHAR2(100),
+  material_gram VARCHAR2(10),
+  CONSTRAINT mat_pk_no PRIMARY KEY(material_no),
+  CONSTRAINT ma_fk_recipe_no FOREIGN KEY(recipe_no) REFERENCES yoseksa_recipe(recipe_no)
+);
 
 
--- ÀÚÀ¯°Ô½ÃÆÇ
+-- ììœ ê²Œì‹œíŒ
 CREATE TABLE yoseksa_freeboard(
    board_no NUMBER DEFAULT 1,
    free_no NUMBER NOT NULL,
@@ -181,14 +184,14 @@ CREATE TABLE yoseksa_freeboard(
    CONSTRAINT freeboard_fk_mno FOREIGN KEY(member_no) REFERENCES yoseksa_member(member_no)
 );
 
-INSERT INTO yoseksa_freeboard VALUES(1,1,1,'1234','´Ğ³×ÀÓ','ÀÚ°Ô ³»¿ëÀÔ´Ï´Ù.',SYSDATE);
-INSERT INTO yoseksa_freeboard VALUES(1,2,1,'1234','´Ğ³×ÀÓ','ÀÚ°Ô ³»¿ëÀÔ´Ï´Ù.',SYSDATE);
-INSERT INTO yoseksa_freeboard VALUES(1,3,1,'1234','´Ğ³×ÀÓ','ÀÚ°Ô ³»¿ëÀÔ´Ï´Ù.',SYSDATE);
-INSERT INTO yoseksa_freeboard VALUES(1,4,1,'1234','´Ğ³×ÀÓ','ÀÚ°Ô ³»¿ëÀÔ´Ï´Ù.',SYSDATE);
-INSERT INTO yoseksa_freeboard VALUES(1,5,1,'1234','´Ğ³×ÀÓ','ÀÚ°Ô ³»¿ëÀÔ´Ï´Ù.',SYSDATE);
+INSERT INTO yoseksa_freeboard VALUES(1,1,1,'1234','ë‹‰ë„¤ì„','ìê²Œ ë‚´ìš©ì…ë‹ˆë‹¤.',SYSDATE);
+INSERT INTO yoseksa_freeboard VALUES(1,2,1,'1234','ë‹‰ë„¤ì„','ìê²Œ ë‚´ìš©ì…ë‹ˆë‹¤.',SYSDATE);
+INSERT INTO yoseksa_freeboard VALUES(1,3,1,'1234','ë‹‰ë„¤ì„','ìê²Œ ë‚´ìš©ì…ë‹ˆë‹¤.',SYSDATE);
+INSERT INTO yoseksa_freeboard VALUES(1,4,1,'1234','ë‹‰ë„¤ì„','ìê²Œ ë‚´ìš©ì…ë‹ˆë‹¤.',SYSDATE);
+INSERT INTO yoseksa_freeboard VALUES(1,5,1,'1234','ë‹‰ë„¤ì„','ìê²Œ ë‚´ìš©ì…ë‹ˆë‹¤.',SYSDATE);
 
 
---°øÁö»çÇ× Å×ÀÌºí
+--ê³µì§€ì‚¬í•­ í…Œì´ë¸”
 CREATE table yoseksa_notice(
    notice_no NUMBER,
    board_no NUMBER DEFAULT 3,
@@ -202,13 +205,13 @@ CREATE table yoseksa_notice(
    CONSTRAINT yn_fk_member_no FOREIGN KEY(member_no) REFERENCES yoseksa_member(member_no)
 );
 
-INSERT INTO yoseksa_notice VALUES(1,3,1,'°øÁö»çÇ×Á¦¸ñ','°øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù.',SYSDATE,0);
-INSERT INTO yoseksa_notice VALUES(2,3,1,'°øÁö»çÇ×Á¦¸ñ','°øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù.',SYSDATE,0);
-INSERT INTO yoseksa_notice VALUES(3,3,1,'°øÁö»çÇ×Á¦¸ñ','°øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù.',SYSDATE,0);
-INSERT INTO yoseksa_notice VALUES(4,3,1,'°øÁö»çÇ×Á¦¸ñ','°øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù.',SYSDATE,0);
-INSERT INTO yoseksa_notice VALUES(5,3,1,'°øÁö»çÇ×Á¦¸ñ','°øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù.',SYSDATE,0);
+INSERT INTO yoseksa_notice VALUES(1,3,1,'ê³µì§€ì‚¬í•­ì œëª©','ê³µì§€ì‚¬í•­ ë‚´ìš©ì…ë‹ˆë‹¤.',SYSDATE,0);
+INSERT INTO yoseksa_notice VALUES(2,3,1,'ê³µì§€ì‚¬í•­ì œëª©','ê³µì§€ì‚¬í•­ ë‚´ìš©ì…ë‹ˆë‹¤.',SYSDATE,0);
+INSERT INTO yoseksa_notice VALUES(3,3,1,'ê³µì§€ì‚¬í•­ì œëª©','ê³µì§€ì‚¬í•­ ë‚´ìš©ì…ë‹ˆë‹¤.',SYSDATE,0);
+INSERT INTO yoseksa_notice VALUES(4,3,1,'ê³µì§€ì‚¬í•­ì œëª©','ê³µì§€ì‚¬í•­ ë‚´ìš©ì…ë‹ˆë‹¤.',SYSDATE,0);
+INSERT INTO yoseksa_notice VALUES(5,3,1,'ê³µì§€ì‚¬í•­ì œëª©','ê³µì§€ì‚¬í•­ ë‚´ìš©ì…ë‹ˆë‹¤.',SYSDATE,0);
 
--- ´Ş·Â Å×ÀÌºí
+-- ë‹¬ë ¥ í…Œì´ë¸”
 CREATE table yoseksa_diary(
    mgr_no NUMBER,
    member_no NUMBER,
@@ -221,7 +224,7 @@ CREATE table yoseksa_diary(
 );
 
 
--- ³»°¡ÀÛ¼ºÇÑ ·¹½ÃÇÇ Å×ÀÌºí
+-- ë‚´ê°€ì‘ì„±í•œ ë ˆì‹œí”¼ í…Œì´ë¸”
 CREATE TABLE yoseksa_myrecipe(
    member_no NUMBER,
    board_no NUMBER DEFAULT 6,
@@ -244,7 +247,7 @@ CREATE TABLE yoseksa_myrecipe(
 
 
 
--- ½ºÅ©·¦ÇÑ ¸ñ·Ï Å×ÀÌºí
+-- ìŠ¤í¬ë©í•œ ëª©ë¡ í…Œì´ë¸”
 CREATE table yoseksa_scrap(
    scrap_no NUMBER,
    board_no NUMBER DEFAULT 5,
@@ -269,7 +272,7 @@ CREATE table yoseksa_scrap(
 );
 
 
--- ´ñ±Û Å×ÀÌºí
+-- ëŒ“ê¸€ í…Œì´ë¸”
 CREATE TABLE yoseksa_reply(
   reply_no NUMBER,
   board_no NUMBER,
