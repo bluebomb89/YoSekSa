@@ -178,3 +178,10 @@ header {
     right: 0;
     top: 16px;
 }
+.thumbnail > img {
+  display: block;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 130px;
+}

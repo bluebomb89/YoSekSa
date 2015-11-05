@@ -60,6 +60,8 @@ $(document).ready(function() {
    $('.showmenu').mouseover(function() {
       id = $(this).attr('id');
       return(id);
+      var a= id+"-cont";
+      $('#'+a).slideToggle("fast");
       });
    $('.showmenu').click(function() {
       var a= id+"-cont";

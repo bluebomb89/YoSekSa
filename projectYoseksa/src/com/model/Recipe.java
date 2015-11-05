@@ -16,6 +16,41 @@ import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 public class Recipe {
 	 @RequestMapping("recipe_content.sek")
 	   public String recipe_content(HttpServletRequest req) throws IOException{
+		 String rPage=req.getParameter("rPage");
+			int type=1;
+			if(rPage==null)
+			{
+				rPage="1";
+				type=0;
+			}
+			int rcurpage=Integer.parseInt(rPage);
+			String recipe_no=req.getParameter("rno");	
+			String strPage=req.getParameter("page");
+			RecipeDTO d=RecipeDAO.recipeContentData(
+					Integer.parseInt(recipe_no),type);
+			List<MaterialDTO> material=RecipeDAO.materialData(Integer.parseInt(recipe_no));
+			List<MaterialDTO> mlist=new ArrayList<MaterialDTO>();
+			for(int i=0;i<material.size();i++){
+				MaterialDTO mm=material.get(i);
+				mlist.add(mm);
+			}
+			List<SourceDTO> source=RecipeDAO.sourceData(Integer.parseInt(recipe_no));
+			List<SourceDTO> slist=new ArrayList<SourceDTO>();
+			for(int i=0;i<source.size();i++){
+				SourceDTO ss=source.get(i);
+				slist.add(ss);
+			}
+			List<RecipeContentDTO> content=RecipeDAO.contentData(Integer.parseInt(recipe_no));
+			List<RecipeContentDTO> clist=new ArrayList<RecipeContentDTO>();
+			for(int i=0;i<content.size();i++){
+				RecipeContentDTO cc=content.get(i);
+				clist.add(cc);
+			}
+			req.setAttribute("material", mlist);
+			req.setAttribute("source", slist);
+			req.setAttribute("content", clist);
+			req.setAttribute("dto", d);
+			req.setAttribute("title", "ë‚´ìš©ë³´ê¸°");
 	      req.setAttribute("jsp",   "../recipe/recipe_content.jsp");
 	      return "yoSeksa/function/main/main.jsp";
 	   }
@@ -47,20 +82,20 @@ public class Recipe {
    }
    @RequestMapping("recipe_insert.sek")
    public String recipe_insert(HttpServletRequest req) throws IOException{
-//      ¿µ±Ç contentimg°æ·Î
-      String path="C:\\Users\\³²¿µ±Ç\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
-//      ¹Î¿µ contentimg°æ·Î
-//      String path="C:\\Users\\³²¿µ±Ç\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
-//      ½ÂÇü contentimg°æ·Î
-//      String path="C:\\Users\\³²¿µ±Ç\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
-//      ÅÂÁø contentimg°æ·Î
-//      String path="C:\\Users\\³²¿µ±Ç\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
-//      ¿ì½Ä contentimg°æ·Î
-//      String path="C:\\Users\\³²¿µ±Ç\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
-//      È«ÀÇ contentimg°æ·Î
-//      String path="C:\\Users\\³²¿µ±Ç\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
-      
       String enctype="UTF-8";
+//    ì˜ê¶Œê²½ë¡œ
+//      String path="C:\\javaDev\\jasb\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\projectYoseksa\\yoSeksa\\contentImg";
+//      ìŠ¹í˜„ê²½ë¡œ
+//      String path="C:\\Users\\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
+//      íƒœì§„ê²½ë¡œ
+//      String path="C:\\Users\\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
+//      ë¯¼ì˜ê²½ë¡œ
+//      String path="C:\\webDev\\homework\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\projectYoseksa\\yoSeksa\\contentImg";
+//      í™ì˜ê²½ë¡œ
+      String path="C:\\WebDev\\project\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\projectYoseksa\\yoSeksa\\contentImg";
+//      ìš°ì‹ê²½ë¡œ
+//      String path="C:\\javadev\\git\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\projectYoseksa\\yoSeksa\\contentImg";
+      
       int size=1024*1024*500;
       MultipartRequest mr=new MultipartRequest(req,path,size,enctype,new DefaultFileRenamePolicy());
       String recipe_sub=mr.getParameter("cok_title");
@@ -69,8 +104,6 @@ public class Recipe {
       String how_no=mr.getParameter("cok_sq_category_1");
       String jaeryo_no=mr.getParameter("cok_sq_category_3");
       String recipe_img=mr.getOriginalFileName("q_main_file");
-      System.out.println(recipe_img);
-      System.out.println(recipe_sub);
       RecipeDTO d=new RecipeDTO();
       int recipe_no=RecipeDAO.sequnece();
       d.setRecipe_no(recipe_no);
@@ -87,13 +120,13 @@ public class Recipe {
       } else {
          d.setRecipe_img(recipe_img);
          File f=new File(path+"\\"+recipe_img);
-         System.out.println("ÀÌ¹ÌÁö°æ·Î =" +f);
+         System.out.println("íŒŒì¼ê²½ë¡œ =" +f);
          d.setRecipe_img_size((int)f.length());
       }
-      // db¿¬µ¿
-      // ·¹½ÃÇÇ ÀÎ¼­Æ®
+//      DBì—°ë™
+      // ë ˆì‹œí”¼ ì¸ì„œíŠ¸
       RecipeDAO.recipeInsert(d);
-      // Àç·á ÀÎ¼­Æ®
+      // ìž¬ë£Œ ì¸ì„œíŠ¸
       MaterialDTO jd=new MaterialDTO();
       boolean count=true;
       int no=1;
@@ -107,11 +140,12 @@ public class Recipe {
          jd.setMaterial_content(material_content);
          jd.setMaterial_gram(material_gramgram);
          jd.setRecipe_no(recipe_no);
-         // DB¿¬µ¿
+         // DBï¿½ï¿½ï¿½ï¿½
          RecipeDAO.materialInsert(jd);
+         System.out.println("asdfsdfsdf");
          no++;
       }   
-      // ¾ç³ä ÀÎ¼­Æ®
+      // ì–‘ë… ì¸ì„œíŠ¸
       SourceDTO sc=new SourceDTO();
       boolean scount=true;
       int sno=1;
@@ -125,11 +159,30 @@ public class Recipe {
          sc.setSource_content(source_content);
          sc.setSource_gram(source_gram);
          sc.setRecipe_no(recipe_no);
-         // DB¿¬µ¿
+         // DBï¿½ï¿½ï¿½ï¿½
          RecipeDAO.soueceInsert(sc);
+         System.out.println("bbbb");
          sno++;
       }
-      // ¿ä¸®¼ø¼­ ÀÎ¼­Æ®
+      // ë‚´ìš© ì¸ì„œíŠ¸
+      RecipeContentDTO rc=new RecipeContentDTO();
+      boolean nae=true;
+      int cont=1;
+      while(nae){
+          String recipec_photo=mr.getOriginalFileName("q_step_file_"+cont);
+          if(recipec_photo==null){
+        	 nae=false;
+        	 break;
+             
+          }
+          String recipec_cont=mr.getParameter("step_text_"+cont);
+          rc.setRecipe_no(recipe_no);
+          rc.setRecipec_photo(recipec_photo);
+          rc.setRecipec_cont(recipec_cont);
+//          DBì—°ë™
+          RecipeDAO.recipeContentInsert(rc);
+          cont++;
+       }
       req.setAttribute("jsp",   "../recipe/gallery.jsp");
       return "yoSeksa/function/main/main.jsp";
    }
