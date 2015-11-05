@@ -8,115 +8,41 @@
 <title>Insert title here</title>
 <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 <script type="text/javascript">
-function ok()
+function ok(keyword)
 {
+	alert("야");
 	//페이지 이동하여 DB처리한다
-	location.replace("../../function/calendar/add_recipe_popup_search_result_ok.jsp");
+	/* location.replace("http://localhost:8080/projectYoseksa/diary_search_ok.sek?keyword="+keyword+"&bld="+bld+"&date="+date); */
 }
 </script>
-
-
-
-<!----------------------------------------------------------------------- ajax 코딩 -------------------------------------------------------------------->
-<script type="text/javascript">
-var httpRequest=null;
-function createHttpRequest(){
-	if(window.ActiveXObject){ //IE 6.0 이상
-		return new ActiveXObject("Msxml2.XMLHTTP");
-		//Microsoft.XMLHTTP 6.0이하일때
-	}else if(window.XMLHttpRequest){ // 크롬 , ff
-		return new XMLHttpRequest();
-	}else{ // 호환이 안될때
-		return null; //지원하지 않는 브라우저
-	}
-}
-function sendMessage(method,param,url,callback){
-	// 서버 연결 DWR,DOJO
-	httpRequest=createHttpRequest();
-	httpRequest.open(method,url+param,true);
-	// true: 비동기 false:동기
-	httpRequest.onreadystatechange=callback;
-	httpRequest.send(null);
-}
-
-
-/* function diary_search(){
-	
-	var keyword=$('#keyword').val();
-	
-	var param="?keyword="+keyword;
-	sendMessage('GET', param, "diary_search.sek", diary_search_result);
-} */
-
-
-
-function diary_search_result(){
-	if(httpRequest.readyState==4){
-		if(httpRequest.status==200){
-			var res=httpRequest.responseText;
-			
-			alert("ajax 실행됨");
-			alert(res);
-			$('#search_div').html(res);
-			// 보여주면서 div에 값저장
-		}		
-	}
-}
-</script>
- <!----------------------------------------------------------------------- ajax 코딩 -------------------------------------------------------------------->      
-     
-
-
-
+<!-- <script type="text/javascript">
+var xkeyword="";
+$(function(){
+	xkeyword=$('#keyword', parent.document).val();
+	alert(xkeyword);
+});
+</script> -->
 </head>
 <body>
-<%
-	request.setCharacterEncoding("UTF-8");
-	String keyword=request.getParameter("keyword");
-	String bld=request.getParameter("bld");
-	String date=request.getParameter("date");
-%>
-<input type="hidden" id="keyword" value="<%=keyword %>">
-
-
-<script type="text/javascript">	
-	var keyword=$('#keyword').val();	
-	alert(keyword);	
-	var param="?keyword="+keyword;
-	alert(param);
-	sendMessage('GET', param, "bbb.sek", diary_search_result);
-</script>
-
-
-
-
-
-keyword :<a href="#" onclick="ok()"> <%=keyword %></a><br>
-bld : <%=bld %><br>
-date : <%=date %>
-
 <font color=white>
-
-<div id="search_div">
-
-</div>
-
-
-
+	<div id="search_div">	
+	총페이지 : ${recipe_search_totalpage }<br>	
+	bld : ${bld }<br>
+	date : ${date }<br>
+			<table>
+				<tr>
+					<td>번호</td>
+					<td>제목</td>
+				</tr>
+				<c:forEach var="rs" items="${recipe_search_list }">
+				<tr>
+					<td>${rs.recipe_no }</td>
+					<td><a href="diary_search_ok.sek?reno=${rs.recipe_no }&resub=${rs.recipe_sub }&bld=${bld }&date=${date }">${rs.recipe_sub }</a></td>
+				</tr>
+				</c:forEach>
+			</table>			
+	</div>
 </font>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 </body>
