@@ -275,6 +275,7 @@ CREATE table yoseksa_scrap(
 -- 댓글 테이블
 CREATE TABLE yoseksa_reply(
   reply_no NUMBER,
+  recipe_no NUMBER,
   board_no NUMBER,
   member_no NUMBER,
   reply_content VARCHAR2(2000),
@@ -287,7 +288,8 @@ CREATE TABLE yoseksa_reply(
   depth NUMBER,
   CONSTRAINT re_pk_no PRIMARY KEY(reply_no),
   CONSTRAINT re_fk_bno FOREIGN KEY(board_no) REFERENCES yoseksa_boardmgr(board_no),
-  CONSTRAINT re_fk_mno FOREIGN KEY(member_no) REFERENCES yoseksa_member(member_no)
+  CONSTRAINT re_fk_mno FOREIGN KEY(member_no) REFERENCES yoseksa_member(member_no),
+  CONSTRAINT re_fk_rno FOREIGN KEY(recipe_no) REFERENCES yoseksa_recipe(recipe_no)
 );
 
 COMMIT;

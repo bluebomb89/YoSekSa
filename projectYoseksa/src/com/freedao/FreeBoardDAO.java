@@ -21,7 +21,7 @@ public class FreeBoardDAO {
 		   System.out.println(ex.getMessage());
 	   }
    }
-   // µ¥ÀÌÅÍ °¡Áö°í ¿À±â 
+   // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 
    public static List<FreeBoardDTO> freeboardListData(Map map)
    {
 	   List<FreeBoardDTO> list=
@@ -43,7 +43,7 @@ public class FreeBoardDAO {
 	   return list;
 	   //return ssf.openSession().selectList("boardListData",map);
    }
-   // ÃÑÆäÀÌÁö
+   // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
    public static int freeboardTotalPage()
    {
 	   int total=0;
@@ -52,7 +52,7 @@ public class FreeBoardDAO {
 	   {
 		   session=ssf.openSession();
 		   int count=session.selectOne("freeboardRowCount");
-		   total=(int)(Math.ceil(count/10.0));
+		   total=(int)(Math.ceil(count/5.0));
 	   }catch(Exception ex)
 	   {
 		   System.out.println(ex.getMessage());
@@ -63,6 +63,25 @@ public class FreeBoardDAO {
 			   session.close();
 	   }
 	   return total;
+   }
+   public static int freeboardMAXno()
+   {
+	   int max=0;
+	   SqlSession session=null;
+	   try
+	   {
+		   session=ssf.openSession();
+		   max=session.selectOne("freeboardMAXno");
+	   }catch(Exception ex)
+	   {
+		   System.out.println(ex.getMessage());
+	   }
+	   finally
+	   {
+		   if(session!=null)
+			   session.close();
+	   }
+	   return max;
    }
    public static void freeboardInsert(FreeBoardDTO d)
    {

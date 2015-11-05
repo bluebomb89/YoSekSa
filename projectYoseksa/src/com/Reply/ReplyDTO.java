@@ -1,9 +1,10 @@
-package com.freedao;
+package com.Reply;
 
 import java.util.Date;
 
 public class ReplyDTO {
 	private int reply_no;
+	private int recipe_no;
 	private int board_no;
 	private int member_no;
 	private String reply_content;
@@ -14,10 +15,14 @@ public class ReplyDTO {
 	private int root;
 	private int depth;
 	private String dbday;
-	private Date reply_date;
-		
-	
-	public Date getReply_date(){
+	private Date reply_date;	
+	public int getRecipe_no() {
+		return recipe_no;
+	}
+	public void setRecipe_no(int recipe_no) {
+		this.recipe_no = recipe_no;
+	}
+	public Date getReply_date() {
 		return reply_date;
 	}
 	public void setReply_date(Date reply_date) {
