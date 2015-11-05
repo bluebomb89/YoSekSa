@@ -13,7 +13,7 @@ public class FileConfig {
 //        홍의경로
 //         String path="C:\\Users\\ssd\\git\\yoseksaProject\\projectYoseksa\\src\\";
 //        승현경로
-         String path="C:\\Users\\sist\\git\\YoSekSa\\projectYoseksa\\src\\";
+//         String path="C:\\Users\\sist\\git\\YoSekSa\\projectYoseksa\\src\\";
 //         String path="C:\\Users\\sist\\git\\YoSekSa\\projectYoseksa\\src\\";
 //        태진경로
 //         String path="C:\\Users\\�궓�쁺沅�\\git\\yoseksaProject\\projectYoseksa\\src\\";
