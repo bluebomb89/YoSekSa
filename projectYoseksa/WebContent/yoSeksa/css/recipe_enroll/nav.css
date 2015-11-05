@@ -1,0 +1,42 @@
+@CHARSET "UTF-8";
+    <html>
+    <head>
+    <body>
+    
+    <!----------------- Top --------------------->
+    <!----------------- /Top --------------------->
+      <div style="padding-top:30px; padding-bottom:50px">
+      <!----------------- Contents --------------------->
+      <table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td style="padding-top:90px; padding-bottom:90px" align="center"><table width="350" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td><img src="http://image.29cm.co.kr/2011_fix/cscenter/txt_error.gif"></td>
+                  </tr>
+                  <tr>
+                    <td height="20"></td>
+                  </tr>
+                  <tr>
+                    <td><table width="350" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td style="padding-right:5px"><a href="javascript:history.back();" onFocus="blur()"><img src="http://image.29cm.co.kr/2011_fix/cscenter/error_btn01.gif" border="0"></a></td>
+                        <td style="padding-right:5px"><a href="/" onFocus="blur()"><img src="http://image.29cm.co.kr/2011_fix/cscenter/error_btn02.gif" border="0"></a></td>
+                        <td><a href="/cscenter/" onFocus="blur()"><img src="http://image.29cm.co.kr/2011_fix/cscenter/error_btn03.gif" border="0"></a></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                </table></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table>
+        </div>
+       <!----------------- /Contents --------------------->
+
+    <!----------------- Footer --------------------->
+    <!----------------- /Footer --------------------->
+
+    </body>
+    </html>
