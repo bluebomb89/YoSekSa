@@ -130,7 +130,7 @@ public class FreeBoard {
 			d.setNickname(nickname);
 			d.setFree_content(free_content);
 			d.setFree_pw(free_pw);
-			// DB¿¬µ¿
+			// DB
 			FreeBoardDAO.freeboardInsert(d);
 			return "board_list.sek";
 	   }
