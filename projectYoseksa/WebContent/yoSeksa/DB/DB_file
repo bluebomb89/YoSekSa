@@ -13,7 +13,7 @@ drop table yoseksa_kind CASCADE CONSTRAINTS;
 drop table yoseksa_boardmgr CASCADE CONSTRAINTS;
 drop table yoseksa_notice CASCADE CONSTRAINTS;
 drop table yoseksa_member CASCADE CONSTRAINTS;
-drop table yoseksa_recipe_content CASCADE CONSTRAINTS;
+drop table yoseksa_recipec CASCADE CONSTRAINTS;
 
 CREATE TABLE yoseksa_member(
    member_no NUMBER,

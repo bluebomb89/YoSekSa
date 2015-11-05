@@ -255,14 +255,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
          <c:forEach var='dto' items="${list}">
          <div class="col-sm-3 col-md-3.5">
             <div class="thumbnail" style="margin-bottom: 5px;">
-               <img src="yoSeksa/contentImg/${dto.recipe_img }" alt="">
+               <a href="recipe_content.sek?rno=${dto.recipe_no }"><img src="yoSeksa/contentImg/${dto.recipe_img }" alt=""></a>
                <div class="caption">
                   <h3>${dto.recipe_sub }</h3>
                   <div align="center" style="margin-top: 10px;">
-                     <a href="#" class="btn btn-primary" role="button"><span
-                        class="glyphicon glyphicon-heart" aria-hidden="true"></span></a> <a
-                        href="#" class="btn btn-default" role="button"><span
-                        class="glyphicon glyphicon-calendar" aria-hidden="true"></span></a>
+                     <a href="#" class="btn btn-primary" role="button">
+                     <span class="glyphicon glyphicon-heart" aria-hidden="true"></span></a>
+                     <a href="#" class="btn btn-default" role="button">
+                     <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></a>
                   </div>
                </div>
             </div>
