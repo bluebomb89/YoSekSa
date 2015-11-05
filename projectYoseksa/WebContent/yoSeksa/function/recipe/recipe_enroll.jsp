@@ -850,7 +850,7 @@ $(function() {
                 <input type="hidden" name="del_step_photo[]" id="del_step_photo_1" value="">
                 <div style="position:absolute;left:-3000px"><input type="file" name="q_step_file_1" id="q_step_file_1" file_gubun="step" accept="jpeg,png,gif" style="display:;width:0px;height:0px;font-size:0px;" text=""></div>
                 <div id="divStepPhotoBox_1" is_over="0">
-                    <img id="stepPhotoHolder_1" onclick="browseStepFile(1)" src="yoSeksa/css/recipe_enroll/pic_none2.gif" width="160" height="160" style="cursor:pointer">
+                    <img id="stepPhotoHolder_1" onclick="browseStepFile(1)" src="yoSeksa/css/recipe_enroll/pic_none2.gif" width="160" height="160" style="cursor:pointer; height: 162px;margin-bottom: 10px;">
                 </div>
             </div>
             <div id="divStepText_1" style="display:inline-block">
