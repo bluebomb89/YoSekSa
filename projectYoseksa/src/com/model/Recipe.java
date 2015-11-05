@@ -61,6 +61,7 @@ public class Recipe {
 	             strPage="1";
 	          int curpage=Integer.parseInt(strPage);
 	          int rowSize=12;
+	          int blockSize=5;
 	          int start=(curpage*rowSize)-(rowSize-1);
 	          int end=curpage*rowSize;
 	          Map map=new HashMap();
