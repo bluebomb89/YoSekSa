@@ -10,7 +10,6 @@
 <link href="yoSeksa/css/component.css" rel="stylesheet" type="text/css"  />
 <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 <!-- script -->
-<<<<<<< HEAD
 <script type="text/javascript">
 $(function(){
    $('#login_Btn').click(function(){
@@ -35,6 +34,10 @@ $(function(){
 });
 </script>
 <!-- script -->
+
+<!--로그인되면 c:if써서 비회원만 팝업뜨게 만들기  -->
+	
+<!-- 로그인되면 c:if써서 비회원만 팝업뜨게 만들기  -->
 
 <!-- 비회원 사용불가 팝업 -->
 <script>
@@ -64,8 +67,7 @@ $(function(){
 </script>
 <!-- 가입모달 끝 -->
 
-=======
->>>>>>> refs/remotes/origin/master
+
 </head>
 
 <body  class="cbp-spmenu-push">
@@ -89,7 +91,7 @@ $(function(){
 						</li>
 						
 						<li class="fun">
-						<a href="/mypage/heart/product.asp" title="즐겨찾는 음식"><img src="yoSeksa/images/fun.gif" onmouseover="this.src='yoSeksa/images/fun2.gif';" onmouseout="this.src='yoSeksa/images/fun.gif';" style=" width: 30px;" value="삭제하기" onclick="button_event();"></a>
+						<a href="yoSeksa/member/login.jsp" title="즐겨찾는 음식"><img src="yoSeksa/images/fun.gif" onmouseover="this.src='yoSeksa/images/fun2.gif';" onmouseout="this.src='yoSeksa/images/fun.gif';" style=" width: 30px;" value="삭제하기" onclick="button_event();"></a>
 						</li>
 								
 						<li class="cart">
