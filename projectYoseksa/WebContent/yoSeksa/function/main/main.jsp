@@ -34,6 +34,35 @@ $(function(){
 });
 </script>
 <!-- script -->
+
+<!-- 비회원 사용불가 팝업 -->
+<script>
+function button_event(){
+if (confirm("회원만 사용 가능한 기능입니다")== true)
+			{
+    			return "yoSeksa/member/login.jsp";
+			}
+
+else		
+			{   
+    		
+				return "yoSeksa.sek;"
+			}
+}
+//-->
+</script>
+ <!-- 팝업 끝 -->
+ 
+ <!-- 회원가입창 모달 -->
+ <script type="text/javascript">
+$(function(){
+	$("#popbutton").click(function(){
+		$('div.modal').modal({remote : 'layer.html'});
+	})
+})
+</script>
+<!-- 가입모달 끝 -->
+
 </head>
 
 <body  class="cbp-spmenu-push">
@@ -55,15 +84,18 @@ $(function(){
 						<li class="login">
 							<a href="http://localhost:8080/projectYoseksa/yoSeksa/member/login.jsp" title="로그인"><img src="yoSeksa/images/Login.gif" onmouseover="this.src='yoSeksa/images/Login2.gif';" onmouseout="this.src='yoSeksa/images/Login.gif';" style="width: 30px;"></a>
 						</li>
-							<li class="heart">
-								<a href="/mypage/heart/product.asp" title="즐겨찾는 음식"><img src="yoSeksa/images/fun.gif" onmouseover="this.src='yoSeksa/images/fun2.gif';" onmouseout="this.src='yoSeksa/images/fun.gif';" style=" width: 30px;"></a>
-							</li>
-								<li class="cart">
-									<a href="http://localhost:8080/projectYoseksa/diary.sek" title="일정 관리"><img src="yoSeksa/images/calen.gif" onmouseover="this.src='yoSeksa/images/calen2.gif';" onmouseout="this.src='yoSeksa/images/calen.gif';" style=" width: 30px;"></a>
-								</li>
-									<li class="cart">
-										<a href="http://localhost:8080/projectYoseksa/recipe.sek" title="레시피"><img src="yoSeksa/images/recipe.gif" onmouseover="this.src='yoSeksa/images/recipe2.gif';" onmouseout="this.src='yoSeksa/images/recipe.gif';" style="width: 30px;"></a>
-								</li>
+						
+						<li class="fun">
+						<a href="/mypage/heart/product.asp" title="즐겨찾는 음식"><img src="yoSeksa/images/fun.gif" onmouseover="this.src='yoSeksa/images/fun2.gif';" onmouseout="this.src='yoSeksa/images/fun.gif';" style=" width: 30px;" value="삭제하기" onclick="button_event();"></a>
+						</li>
+								
+						<li class="cart">
+						<a href="http://localhost:8080/projectYoseksa/diary.sek" title="일정 관리"><img src="yoSeksa/images/calen.gif" onmouseover="this.src='yoSeksa/images/calen2.gif';" onmouseout="this.src='yoSeksa/images/calen.gif';" style=" width: 30px;"></a>
+						</li>
+						
+						<li class="cart">
+						<a href="http://localhost:8080/projectYoseksa/recipe.sek" title="레시피"><img src="yoSeksa/images/recipe.gif" onmouseover="this.src='yoSeksa/images/recipe2.gif';" onmouseout="this.src='yoSeksa/images/recipe.gif';" style="width: 30px;"></a>
+						</li>
 				</ul>
 		</nav>
          <!-- <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left cbp-spmenu-open" id="cbp-spmenu-s1" style=" width: 200px;"> -->
