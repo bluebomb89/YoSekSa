@@ -13,7 +13,6 @@
    $(document).ready(function() {
       doChangeListType('thumb')
    });
-
    function doChangeListType(types) {
       if (curListType == types)
          return;
@@ -138,7 +137,7 @@
 		}
 		
 	}
-	
+
 </script>
 <link href="yoSeksa/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="yoSeksa/css/component.css" rel="stylesheet" type="text/css"  />
@@ -313,7 +312,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<c:forEach var="i" begin="1" end="${totalpage }">
 				<c:choose>
              	<c:when test="${curpage<=totalpage }">
-				<a href="recipe.sek?page=${i }"><button type="button" class="btn btn-default" id="btn1" >${i }</button></a>
+				<a href="recipe.sek?page=${i }"><button type="button" class="btn btn-default" id="btn1">${i }</button></a>
 				</c:when>
 				</c:choose>
 				</c:forEach>

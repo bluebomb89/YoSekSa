@@ -59,9 +59,31 @@ public class DiaryDAO {
 		}
 		return total;
 	}
-	
-	
-	
+///////////////////////////////////////////////////////		
+	//다이어리에 insert
+	public static void diaryInsert(DiaryDTO d)
+	{
+		SqlSession session=null;
+		try {
+			session=ssf.openSession(true);
+			System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+			System.out.println("getBoard_no : "+d.getBoard_no());
+			System.out.println("getDiary_bld : "+d.getDiary_bld());
+			System.out.println("getDiary_date : "+d.getDiary_date());
+			
+			
+			session.insert("diaryInsert",d);	
+			System.out.println("2");
+		} catch (Exception ex) {
+			// TODO: handle exception
+			System.out.println(ex.getMessage());
+		}
+		finally{
+			if(session!=null)
+				session.close();
+			System.out.println("Sdfsdfsdfsdfdsdfsdf");
+		}
+	}
 	
 	
 	
