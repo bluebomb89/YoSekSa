@@ -19,12 +19,12 @@
 	
 	<!-- 다이어리 등록 -->
 	
-	<insert id="diaryInsert" parameterType="Diary">
+<!-- 	<insert id="diaryInsert" parameterType="Diary">
 	    <selectKey keyProperty="diary_no" resultType="int" order="BEFORE">
 	        SELECT NVL(MAX(mgr_no)+1,1) as mgr_no FROM yoseksa_diary
 	    </selectKey>
 	    INSERT INTO yoseksa_diary VALUES(#{diary_no},1,'id',#{board_no},#{diary_date},${diary_bld})
-	</insert>
+	</insert> -->
 	
 	
 	

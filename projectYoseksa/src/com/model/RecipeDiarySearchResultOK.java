@@ -13,26 +13,7 @@ import com.recipedao.RecipeDTO;
 import java.util.*;
 
 @Controller("recipediary")
-public class RecipeDiarySearchResultOK {	
-	
-	
-	
-///////////////////////////////////////////////////date - > Date 형으로 변환	
-	public static Date stringToDate(String strDate)
-	{
-		Date to=null;
-		SimpleDateFormat transFormat=new SimpleDateFormat(strDate);
-		
-		try {
-			to=(Date)transFormat.parse(strDate);
-		} catch (Exception ex) {
-			// TODO: handle exception
-			System.out.println(ex.getMessage());
-		}
-		return to;
-	}
-///////////////////////////////////////////////////date - > Date 형으로 변환		
-	
+public class RecipeDiarySearchResultOK {
 	@RequestMapping("diary_search_ok.sek")
 	public String diary_search_ok(HttpServletRequest req) throws IOException{
 		
@@ -42,9 +23,7 @@ public class RecipeDiarySearchResultOK {
 		String reno=req.getParameter("reno");
 		String resub=req.getParameter("resub");
 		String strDate=req.getParameter("date");
-		String bld=req.getParameter("bld");
-
-		
+		String bld=req.getParameter("bld");		
 		
 		System.out.println("■■■■■■■■■■■■■■RecipeDiraySearchResultOK.java■■■■■■■■■■■■■■■");
 		System.out.println("result_ok recipe_no: "+ reno);
@@ -58,12 +37,9 @@ public class RecipeDiarySearchResultOK {
 		map.put("bld", bld);
 		
 		DiaryDTO d=new DiaryDTO();
-		d.setDiary_date(stringToDate(strDate));
+/*		d.setDiary_date(stringToDate(strDate));
 		d.setBoard_no(Integer.parseInt(reno));
-		d.setDiary_bld(bld);
-		
-
-		
+		d.setDiary_bld(bld);*/		
 		
 		
 		return "yoSeksa/function/calendar/add_recipe_popup_search_result_ok.jsp";
