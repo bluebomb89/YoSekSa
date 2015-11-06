@@ -28,9 +28,18 @@
 										</form>
 											<form name="frmJoin" method="post" action="/join/">
 												<input type="hidden" name="sRU" value="">
-											</form>
-												<div class="login-link">
-													<ul>
+													</form>
+														<form name="frmGO" method="post" action="https://www.29cm.co.kr/login/procGuestOrderLogin.asp" onsubmit="return false;">
+															<input type="hidden" name="sRU" value="order/CartList.asp">
+																<input type="hidden" name="sRP" value="">
+																	<div id="login-formC" class="login-box">
+																		<img src="../images/Warring.gif" style="width: 30px;">
+																			<p>비회원시 일정관리 및 나만의 레시피 혜택을 받으실 수 없습니다.</p>
+																				<button onclick="popNonmember()">비회원 둘러보기</button>
+																					</div>
+																						</form>
+																							<div class="login-link">
+																								<ul>
 														<li><a href="/login/forget.asp">아이디 찾기</a></li>
 															<li><a href="/login/forget.asp">비밀번호 찾기</a></li>
 																<li><a href="javascript:jsJoin();">회원가입</a></li>
