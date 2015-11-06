@@ -120,7 +120,7 @@ function reply_coment(){
     <!-- 댓글 히든 -->
     <input type="hidden" value=${dto.recipe_no } id="recipe_no">
     <div id="reply">
-    aaaa??????? ${rvdto.recipe_no }
+    
 		<jsp:include page="${reply }"></jsp:include>
 	</div>
 

@@ -4,7 +4,8 @@
 <!DOCTYPE html>
  <div class="view_reply">
         <div class="reply_tit">의견 <span id="recipeCommentListCount">3</span></div>
-        <c:forEach var="i" items="rdto">
+        ${rvdto[1].recipe_no }
+        <c:forEach var="i" items="${rvdto }">
 	        <div id="recipeCommentList_1">
 	        	<div class="media reply_list">
 	        		<!-- 회원 이미지 등록 -->
@@ -14,7 +15,7 @@
 	        		</div>
 	    		 	<div class="media-body">
 	        			<h4 class="media-heading">
-	       			<%-- <b class="info_name_f">${i.reply_nickname }</b>${i.reply_date }</h4>${i.reply_content } --%>
+	       			<b class="info_name_f">${i.reply_nickname }</b>${i.reply_date }</h4>${i.reply_content }
 	       			</div>
 	     		</div>
 	      	</div>
