@@ -147,7 +147,7 @@ CREATE TABLE yoseksa_recipec(
 	recipec_photo VARCHAR2(200) CONSTRAINT yrc_nn_recipec_photo NOT NULL,
 	recipec_cont CLOB CONSTRAINT yrc_nn_recipec_cont NOT NULL,
 	CONSTRAINT yrc_pk_recipec_no PRIMARY KEY(recipec_no),
-	CONSTRAINT yrc_fk_recipe_no FOREIGN KEY(recipe_no) REFERENCES yoseksa_recipe(recipe_no)
+	CONSTRAINT yrc_fk_recipec_no FOREIGN KEY(recipe_no) REFERENCES yoseksa_recipe(recipe_no)
 );
 -- 양념 테이블
 CREATE TABLE yoseksa_source(
@@ -274,11 +274,12 @@ CREATE table yoseksa_scrap(
 
 -- 댓글 테이블
 CREATE TABLE yoseksa_reply(
+  recipe_no NUMBER,
   reply_no NUMBER,
   board_no NUMBER,
   member_no NUMBER,
+  reply_nickname VARCHAR2(200),
   reply_content VARCHAR2(2000),
-  nickname VARCHAR2(20),
   reply_date DATE DEFAULT SYSDATE,
   group_id NUMBER,
   group_step NUMBER,
@@ -287,7 +288,8 @@ CREATE TABLE yoseksa_reply(
   depth NUMBER,
   CONSTRAINT re_pk_no PRIMARY KEY(reply_no),
   CONSTRAINT re_fk_bno FOREIGN KEY(board_no) REFERENCES yoseksa_boardmgr(board_no),
-  CONSTRAINT re_fk_mno FOREIGN KEY(member_no) REFERENCES yoseksa_member(member_no)
+  CONSTRAINT re_fk_mno FOREIGN KEY(member_no) REFERENCES yoseksa_member(member_no),
+  CONSTRAINT re_fk_rno FOREIGN KEY(recipe_no) REFERENCES yoseksa_recipe(recipe_no)
 );
 
 COMMIT;
