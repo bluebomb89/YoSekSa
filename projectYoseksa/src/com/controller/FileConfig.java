@@ -7,9 +7,9 @@ public class FileConfig {
       List<String> list=new ArrayList<String>();
       try{
 //       영권경로
-//        String path="C:\\Users\\남영권\\git\\yoseksaProject\\projectYoseksa\\src\\";
+//         String path="C:\\Users\\남영권\\git\\yoseksaProject\\projectYoseksa\\src\\";
 //       민영경로
-//         String path="C:\\Users\\sist\\git\\YoSekSa\\projectYoseksa\\src\\";
+         String path="C:\\Users\\sist\\git\\YoSekSa\\projectYoseksa\\src\\";
 //        홍의경로
 //        홍의경로
 //         String path="C:\\Users\\ssd\\git\\YoSekSa\\projectYoseksa\\src\\";

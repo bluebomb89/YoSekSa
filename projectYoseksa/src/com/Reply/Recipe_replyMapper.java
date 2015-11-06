@@ -15,4 +15,6 @@ public interface Recipe_replyMapper  {
 	public void replyNewInsert(ReplylDTO d);
 	@Select("SELECT * FROM yoseksa_reply where recipe_no=#{recipe_no} order by reply_no desc")
 	public List<ReplylDTO> replyView(int recipe_no);
+	@Select("SELECT count(*) from yoseksa_reply where recipe_no=#{recipe_no}")
+	public int replyTotal(int recipe_no);
 }
