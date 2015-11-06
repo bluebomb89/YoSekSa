@@ -86,7 +86,7 @@ $(function(){
 		var free_pw=$('#free_pw').val();
 		if(free_pw=="")
 		{
-			$('#free_pw').text("비밀번호는 반드시 입력해야 합니다!!");
+			alert("비밀번호는 반드시 입력해야 합니다!!");
 			$('#free_pw').focus();
 			return;
 		}
@@ -190,17 +190,16 @@ $(function(){
 			<textarea name=board_tx id="free_content" class="form-control" placeholder="내용" style="height: 210px; width: 446px; margin-left: 80px; border: 1px solid #CACACA; background-color: rgb(255, 255, 255);"></textarea>
 			<br> 
 			<div class="write_pic2" style="width: 400px; margin-top: 5px;">
-			
 				<!-- 게시글 비밀번호 시작 -->
 				<p>
 					<label for="free_pw">비밀번호</label>
 					<input type=password id="free_pw" name="pwd">
 					<br>
-					<span id="pwdSpan" style="color:red; textalign: center"></span>
 				</p>			
 				<!-- 게시글 비밀번호끝 -->
 			</div>
 		</div>
+	</div>
 	</form>
 		<div class="modal-footer"
 			style="margin-bottom: 20px; margin-right: 70px; padding-top: 0px;">
@@ -320,7 +319,7 @@ $(function(){
 													<span class="wrap_btn_recm d_cmtpgn_recm_box">
 														<button type="button" title="글 수정" class="btn_recm positive d_cmtpgn_cmt_recm_btn">
 															<span class="odd_span"> 
-																<img src="yoSeksa/images/board1.gif" align="absbottom" style="width: 27px;">
+																<a href=""><img src="yoSeksa/images/board1.gif" align="absbottom" style="width: 27px;"></a>
 															</span>
 														</button> 
 														
@@ -328,7 +327,7 @@ $(function(){
 														<button type="button" title="글 삭제하기" class="btn_recm negative d_cmtpgn_cmt_non_recm_btn" 
 																data-toggle="modal" data-target="#remove"">
 															<span class="odd_span"> 
-																<img style="width: 25px; margin-top: 3px;" align="absbottom" src="yoSeksa/images/board2.gif">
+																<a href=""><img style="width: 25px; margin-top: 3px;" align="absbottom" src="yoSeksa/images/board2.gif"> </a>
 															</span>
 														</button>
 													</span>

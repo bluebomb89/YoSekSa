@@ -53,9 +53,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="yoSeksa/js/easing.js"></script>
 <script src="yoSeksa/js/bootstrap.js"></script>
 
-
-<script src="https://code.jquery.com/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <!-- 플러그인 참조 -->
 <!-- <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js"></script>
 <script src="http://cdn.ckeditor.com/4.4.7/standard/ckeditor.js"></script> -->
@@ -285,7 +282,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="container">
 
       <form class="form-horizontal" method="post" action="yoSeksa/function/QnA/SendMail.jsp">
-        <fieldset>
+        <fieldset style="margin-left: 500px; margin-top: 550px;">
           <div class="form-group">
             <label class="control-label col-sm-2" for="sender">보내는주소 <font color='red'>*</font></label>
             <div class="col-sm-10">
@@ -310,12 +307,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           <div class="form-group">
             <label class="control-label col-sm-2" for="content">내용입력</label>
             <div class="col-sm-10">
-              <textarea name="content" id="content" class="ckeditor"></textarea>
+              <textarea name="content" id="content" class="ckeditor" style="width:320px; height:150px;"></textarea>
             </div>
           </div>
 
           <!-- 버튼영역­ -->
-          <div class="form-actions text-right">
+          <div class="form-actions text-right" style="margin-right: 140px; margin-top: 0px; padding-top: 0px; padding-bottom: 0px;
+margin-bottom: 0px;">
             <input type="submit" class="btn btn-primary" value="메일보내기" />
             <input type="reset" class="btn" value="다시작성" />
           </div>
