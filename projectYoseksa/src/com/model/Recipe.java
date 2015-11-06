@@ -7,6 +7,8 @@ import java.util.*;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.Reply.ReplyDAO;
+import com.Reply.ReplylDTO;
 import com.controller.Controller;
 import com.controller.RequestMapping;
 import com.oreilly.servlet.MultipartRequest;
@@ -14,6 +16,7 @@ import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 @Controller("recipe")
 public class Recipe {
+	 ReplyDAO rdao=ReplyDAO.newInstance();
 	 @RequestMapping("recipe_content.sek")
 	   public String recipe_content(HttpServletRequest req) throws IOException{
 		 String rPage=req.getParameter("rPage");
@@ -46,9 +49,19 @@ public class Recipe {
 				RecipeContentDTO cc=content.get(i);
 				clist.add(cc);
 			}
+			// 댓글 내용 보기
+			List<ReplylDTO> rview=rdao.replyView(Integer.parseInt(recipe_no));
+			for(int i=0; i<rview.size(); i++){
+				System.out.println("i = "+i);
+				System.out.println(rview.get(i).getReply_no());
+				System.out.println(rview.get(i).getReply_nickname());
+				System.out.println(rview.get(i).getReply_date());
+				System.out.println(rview.get(i).getReply_content());
+			}
+			req.setAttribute("rvdto", rview);
 			req.setAttribute("material", mlist);
 			req.setAttribute("source", slist);
-			req.setAttribute("content", clist);
+			req.setAttribute("content", content);
 			req.setAttribute("dto", d);
 			req.setAttribute("reply", "../recipe/recipe_reply.jsp");
 			req.setAttribute("jsp",   "../recipe/recipe_content.jsp");
