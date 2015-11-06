@@ -10,30 +10,6 @@
 <link href="yoSeksa/css/component.css" rel="stylesheet" type="text/css"  />
 <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 <!-- script -->
-<script type="text/javascript">
-$(function(){
-   $('#login_Btn').click(function(){
-      var member_id=$('#member_id').val();
-      if(member_id=="")
-      {
-         $('#member_id').focus();
-         return;
-      }
-      var member_pw=$('#member_pw').val();
-      if(member_pw=="")
-      {
-         $('#member_pw').focus();
-         return;
-      }
-      $('#login_frm').submit();
-   });
-   
-    $('#logout_Btn').click(function(){
-      $('#logout_frm').submit();
-   });
-});
-</script>
-<!-- script -->
 </head>
 
 <body  class="cbp-spmenu-push">
@@ -51,9 +27,9 @@ $(function(){
 				<ul class="nav">
 					
 								<!-- <img src="yoSeksa/images/Login.gif" style=" width: 30px;"> -->
-							
+							<!-- http://localhost:8080/projectYoseksa/yoSeksa/function/member/login.jsp -->
 						<li class="login">
-							<a href="http://localhost:8080/projectYoseksa/yoSeksa/member/login.jsp" title="로그인"><img src="yoSeksa/images/Login.gif" onmouseover="this.src='yoSeksa/images/Login2.gif';" onmouseout="this.src='yoSeksa/images/Login.gif';" style="width: 30px;"></a>
+							<a href="yoSeksa/function/member/login.jsp" title="로그인"><img src="yoSeksa/images/Login.gif" onmouseover="this.src='yoSeksa/images/Login2.gif';" onmouseout="this.src='yoSeksa/images/Login.gif';" style="width: 30px;"></a>
 						</li>
 							<li class="heart">
 								<a href="/mypage/heart/product.asp" title="즐겨찾는 음식"><img src="yoSeksa/images/fun.gif" onmouseover="this.src='yoSeksa/images/fun2.gif';" onmouseout="this.src='yoSeksa/images/fun.gif';" style=" width: 30px;"></a>
@@ -72,27 +48,7 @@ $(function(){
          
          <!-- �쇱そ���⑥�� ���� 踰��쇱�� �대┃������ ���ㅻ�� 留���or���깃��� 吏�������怨� -->
          <p>
-         <!-- ���� 濡�洹몄�� �� -->
-         <c:if test="${sessionScope.member_id==null }">
-            
-            <!-- 꽁 -->
-            <!-- <form method="post" action="member_login.sek" id="login_frm">
-               ID:<input type=text name=member_id id="member_id" size=10>
-               &nbsp;
-               PW:<input type=password name=member_pw id="member_pw" size=10>
-               &nbsp;
-               <input type=button value="로그인" id="login_Btn">
-            </form> --> 
-            <!-- 꽁 -->
-            
-         </c:if>
-         <c:if test="${sessionScope.member_id!=null }">
-               ${sessionScope.nickname } 님이 로그인 하셨습니다.
-            <form method="post" action="member_logout.sek" id="logout_frm">
-               <input type=button value="로그아웃" id="logout_Btn">
-            </form>
-         </c:if>
-         
+
            </nav>
       <!-- 왼쪽상단에 있는 버튼을 클릭했을때 나오는 링크or속성값을 지정하는곳 -->
       <!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->

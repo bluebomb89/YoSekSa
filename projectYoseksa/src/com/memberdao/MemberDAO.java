@@ -20,22 +20,22 @@ public class MemberDAO {
 			System.out.println(ex.getMessage());
 		}
 	}
-	public static int memberIdCount(String id)
+	public static int memberIdCount(String member_id)
 	{
 		int count=0;
 		SqlSession session=ssf.openSession();
-		count=session.selectOne("memberIdCount",id);
+		count=session.selectOne("memberIdCount",member_id);
 		session.close();
 		return count;
 	}
 	/*
 	 * 
 	 */
-	public static MemberDTO memberGetInfo(String id)
+	public static MemberDTO memberGetInfo(String member_id)
 	{
 		MemberDTO d=new MemberDTO();
 		SqlSession session=ssf.openSession();
-		d=session.selectOne("memberGetInfo",id);
+		d=session.selectOne("memberGetInfo",member_id);
 		session.close();
 		return d;
 	}
