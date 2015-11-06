@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.diarydao.diary-mapper">
-
 	<select id="searchListData" resultType="Recipe" parameterType="java.util.Map">
 		SELECT recipe_no,recipe_sub,rownum
 		FROM (SELECT recipe_no,recipe_sub,rownum as num
@@ -9,36 +8,16 @@
 		FROM yoseksa_recipe ORDER BY recipe_sub ASC))
 		WHERE recipe_sub LIKE '%'||#{keyword}||'%'
 		AND rownum BETWEEN #{start} AND #{end}
-	</select>
-	
+	</select>	
 	<!-- 총페이지 구하기 -->
 	<select id="searchRowCount" resultType="int" parameterType="java.util.Map">
 		SELECT COUNT(*) FROM yoseksa_recipe WHERE recipe_sub LIKE '%'||#{keyword}||'%'
 	</select>
-	
-	
 	<!-- 다이어리 등록 -->
-	
 	<insert id="diaryInsert" parameterType="Diary">
-	    <selectKey keyProperty="diary_no" resultType="int" order="BEFORE">
+	    <selectKey keyProperty="mgr_no" resultType="int" order="BEFORE">
 	        SELECT NVL(MAX(mgr_no)+1,1) as mgr_no FROM yoseksa_diary
 	    </selectKey>
-	    INSERT INTO yoseksa_diary VALUES(#{diary_no},1,'id',#{board_no},#{diary_date},${diary_bld})
+	    INSERT INTO yoseksa_diary VALUES(#{mgr_no},1,'id',#{board_no},SYSDATE,#{diary_bld})
 	</insert>
-	
-	
-	
-	
-	<!-- 우식 -->
-	<!-- ㅁㅁ -->
-	<!-- 영권 -->
-	<!-- ㅁㅁ -->
-	<!-- 태진 -->
-	<!-- ㅁㅁ -->
-	<!-- 승현 -->
-	<!-- ㅁㅁ -->
-	<!-- 홍의 -->
-	<!-- ㅁㅁ -->
-	<!-- 민영 -->
-	<!-- ㅁㅁ -->
 </mapper>
