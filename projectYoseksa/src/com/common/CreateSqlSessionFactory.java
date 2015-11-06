@@ -1,4 +1,4 @@
-package com.Reply;
+package com.common;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -13,7 +13,7 @@ public class CreateSqlSessionFactory {
 			Reader reader=Resources.getResourceAsReader("Config.xml");
 			ssf=new SqlSessionFactoryBuilder().build(reader);
 			reader.close();
-			Class[] mappers={Recipe_replyMapper.class};
+			Class[] mappers={com.Reply.Recipe_replyMapper.class};
 			for(Class m:mappers){
 				ssf.getConfiguration().addMapper(m);
 			}
