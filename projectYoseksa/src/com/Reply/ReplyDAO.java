@@ -22,9 +22,17 @@ public class ReplyDAO {
 	}
 	//댓글 입력
 	public void replyNewInsert(ReplylDTO d){
-		session=ssf.openSession(true);
-		mapper=(Recipe_replyMapper)session.getMapper(Recipe_replyMapper.class);
-		mapper.replyNewInsert(d);
+		try{
+			session=ssf.openSession(true);
+			mapper=(Recipe_replyMapper)session.getMapper(Recipe_replyMapper.class);
+			mapper.replyNewInsert(d);
+		}catch(Exception ex){
+			System.out.println(ex.getMessage());
+		}finally {
+		   if(session!=null)
+			   session.close();
+		}
+
 	}
 	// 댓글 목록 출력
 	public List<ReplylDTO> replyView(int recipe_no){
@@ -36,9 +44,24 @@ public class ReplyDAO {
 		}catch(Exception ex){
 			System.out.println(ex.getMessage());
 		}finally{
-			
+		   if(session!=null)
+			   session.close();
 		}
 		return list;
+	}
+	public int replyTotal(int recipe_no){
+		int rtotal=0;
+		try{
+			session=ssf.openSession();
+			mapper=(Recipe_replyMapper)session.getMapper(Recipe_replyMapper.class);
+			rtotal=mapper.replyTotal(recipe_no);
+		}catch(Exception ex){
+			System.out.println(ex.getMessage());
+		}finally{
+		   if(session!=null)
+			   session.close();
+		}
+		return rtotal;
 	}
 }
 
