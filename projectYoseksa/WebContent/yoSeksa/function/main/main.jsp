@@ -10,6 +10,7 @@
 <link href="yoSeksa/css/component.css" rel="stylesheet" type="text/css"  />
 <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 <!-- script -->
+<<<<<<< HEAD
 <script type="text/javascript">
 $(function(){
    $('#login_Btn').click(function(){
@@ -34,6 +35,37 @@ $(function(){
 });
 </script>
 <!-- script -->
+
+<!-- 비회원 사용불가 팝업 -->
+<script>
+function button_event(){
+if (confirm("회원만 사용 가능한 기능입니다")== true)
+			{
+    			return "yoSeksa/member/login.jsp";
+			}
+
+else		
+			{   
+    		
+				return "yoSeksa.sek;"
+			}
+}
+//-->
+</script>
+ <!-- 팝업 끝 -->
+ 
+ <!-- 회원가입창 모달 -->
+ <script type="text/javascript">
+$(function(){
+	$("#popbutton").click(function(){
+		$('div.modal').modal({remote : 'layer.html'});
+	})
+})
+</script>
+<!-- 가입모달 끝 -->
+
+=======
+>>>>>>> refs/remotes/origin/master
 </head>
 
 <body  class="cbp-spmenu-push">
@@ -41,27 +73,41 @@ $(function(){
         <section class="button">
                <button id="showLeftPush"><img src="yoSeksa/images/menu-icon.png" alt=""></button>
          </section>
+         
+         <!-- 꽁 -->
          <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
-         <h3>Menu</h3>
+       	   <h3>menu</h3>
+       	  <nav id="side-nav" style=" margin-top: 240px;">
+			<div class="search-wrap">
+			</div>
+				<ul class="nav">
+					
+								<!-- <img src="yoSeksa/images/Login.gif" style=" width: 30px;"> -->
+							<!-- http://localhost:8080/projectYoseksa/yoSeksa/function/member/login.jsp -->
+						<li class="login">
+							<a href="yoSeksa/function/member/login.jsp" title="로그인"><img src="yoSeksa/images/Login.gif" onmouseover="this.src='yoSeksa/images/Login2.gif';" onmouseout="this.src='yoSeksa/images/Login.gif';" style="width: 30px;"></a>
+						</li>
+						
+						<li class="fun">
+						<a href="/mypage/heart/product.asp" title="즐겨찾는 음식"><img src="yoSeksa/images/fun.gif" onmouseover="this.src='yoSeksa/images/fun2.gif';" onmouseout="this.src='yoSeksa/images/fun.gif';" style=" width: 30px;" value="삭제하기" onclick="button_event();"></a>
+						</li>
+								
+						<li class="cart">
+						<a href="http://localhost:8080/projectYoseksa/diary.sek" title="일정 관리"><img src="yoSeksa/images/calen.gif" onmouseover="this.src='yoSeksa/images/calen2.gif';" onmouseout="this.src='yoSeksa/images/calen.gif';" style=" width: 30px;"></a>
+						</li>
+						
+						<li class="cart">
+						<a href="http://localhost:8080/projectYoseksa/recipe.sek" title="레시피"><img src="yoSeksa/images/recipe.gif" onmouseover="this.src='yoSeksa/images/recipe2.gif';" onmouseout="this.src='yoSeksa/images/recipe.gif';" style="width: 30px;"></a>
+						</li>
+				</ul>
+		</nav>
+         <!-- <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left cbp-spmenu-open" id="cbp-spmenu-s1" style=" width: 200px;"> -->
+         <!-- 꽁 -->
+         
+         
          <!-- �쇱そ���⑥�� ���� 踰��쇱�� �대┃������ ���ㅻ�� 留���or���깃��� 吏�������怨� -->
          <p>
-         <!-- ���� 濡�洹몄�� �� -->
-         <c:if test="${sessionScope.member_id==null }">
-            <form method="post" action="member_login.sek" id="login_frm">
-               ID:<input type=text name=member_id id="member_id" size=10>
-               &nbsp;
-               PW:<input type=password name=member_pw id="member_pw" size=10>
-               &nbsp;
-               <input type=button value="로그인" id="login_Btn">
-            </form>
-         </c:if>
-         <c:if test="${sessionScope.member_id!=null }">
-               ${sessionScope.nickname } 님이 로그인 하셨습니다.
-            <form method="post" action="member_logout.sek" id="logout_frm">
-               <input type=button value="로그아웃" id="logout_Btn">
-            </form>
-         </c:if>
-         
+
            </nav>
       <!-- 왼쪽상단에 있는 버튼을 클릭했을때 나오는 링크or속성값을 지정하는곳 -->
       <!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->

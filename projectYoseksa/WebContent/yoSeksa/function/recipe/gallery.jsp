@@ -13,7 +13,6 @@
    $(document).ready(function() {
       doChangeListType('thumb')
    });
-
    function doChangeListType(types) {
       if (curListType == types)
          return;
@@ -117,6 +116,28 @@
          });
       }
    }
+   function btnUp(){
+		/* > 버튼 클릭시 자동번호 증가 */
+		for(var i=1; i<6; i++){
+			var btn=$('#btn'+i).text();
+			var b=parseInt(btn);
+			b=b+1
+			$('#btn'+i).text(b);
+		}
+	}
+	function btnDown(){
+		/* > 버튼 클릭시 자동번호 감소 */
+		if($('#btn1').text()!=1){
+			for(var i=1; i<6; i++){
+				var btn=$('#btn'+i).text();
+				var b=parseInt(btn);
+				b=b-1
+				$('#btn'+i).text(b);
+			}	
+		}
+		
+	}
+
 </script>
 <link href="yoSeksa/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="yoSeksa/css/component.css" rel="stylesheet" type="text/css"  />
@@ -255,7 +276,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
          <c:forEach var='dto' items="${list}">
          <div class="col-sm-3 col-md-3.5">
             <div class="thumbnail" style="margin-bottom: 5px;">
-               <a href="recipe_content.sek?rno=${dto.recipe_no }"><img src="yoSeksa/contentImg/${dto.recipe_img }" alt=""></a>
+               <a href="recipe_content.sek?rno=${dto.recipe_no }"><img src="yoSeksa/contentImg/${dto.recipe_img }" alt="" style="height: 130px;"></a>
                <div class="caption">
                   <h3>${dto.recipe_sub }</h3>
                   <div align="center" style="margin-top: 10px;">
@@ -277,13 +298,30 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       
       <nav align="center">
          <li class="pagination" style="margin-top: 80px;">
-            <a href="recipe.sek?page=${curpage>1?curpage-1:curpage }"><img src="../images/prev_icon.gif"></a> &nbsp;
-                 <a href="recipe.sek?page=${curpage<totalpage?curpage+1:curpage }"><img src="../images/next_icon.gif"></a>&nbsp;&nbsp;
+            <a href="recipe.sek?page=${curpage>1?curpage-1:curpage }"><img src="images/prev_icon.gif"></a> &nbsp;
+                 <a href="recipe.sek?page=${curpage<totalpage?curpage+1:curpage }"><img src="images/next_icon.gif"></a>&nbsp;&nbsp;
                ${curpage } page / ${totalpage } pages
          </li>
       </nav>
+      
+      <div class="recipe_btn_group" style="margin: 0 auto;" align="center">
+			<div class="recipe_btn" role="group" aria-label="First group">
+				<a href="recipe.sek?page=${curpage>1?curpage-1:curpage }">
+				<button type="button" class="btn btn-default" onclick="btnDown()">＜</button>
+				</a>
+				<c:forEach var="i" begin="1" end="${totalpage }">
+				<c:choose>
+             	<c:when test="${curpage<=totalpage }">
+				<a href="recipe.sek?page=${i }"><button type="button" class="btn btn-default" id="btn1">${i }</button></a>
+				</c:when>
+				</c:choose>
+				</c:forEach>
+				<a href="recipe.sek?page=${curpage<totalpage?curpage+1:curpage }">
+				<button type="button" class="btn btn-default" onclick="btnUp()">＞</button>
+				</a>
+			</div>
+		</div>
 
 
-   </div>
 </body>
 </html>

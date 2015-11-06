@@ -7,6 +7,8 @@ import java.util.*;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.Reply.ReplyDAO;
+import com.Reply.ReplylDTO;
 import com.controller.Controller;
 import com.controller.RequestMapping;
 import com.oreilly.servlet.MultipartRequest;
@@ -14,9 +16,10 @@ import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 @Controller("recipe")
 public class Recipe {
+	 ReplyDAO rdao=ReplyDAO.newInstance();
 	 @RequestMapping("recipe_content.sek")
 	   public String recipe_content(HttpServletRequest req) throws IOException{
-		 String rPage=req.getParameter("rPage");
+		 String rPage=req.getParameter("rpage");
 			int type=1;
 			if(rPage==null)
 			{
@@ -25,7 +28,6 @@ public class Recipe {
 			}
 			int rcurpage=Integer.parseInt(rPage);
 			String recipe_no=req.getParameter("rno");	
-			String strPage=req.getParameter("page");
 			RecipeDTO d=RecipeDAO.recipeContentData(
 					Integer.parseInt(recipe_no),type);
 			List<MaterialDTO> material=RecipeDAO.materialData(Integer.parseInt(recipe_no));
@@ -46,12 +48,31 @@ public class Recipe {
 				RecipeContentDTO cc=content.get(i);
 				clist.add(cc);
 			}
+			// 댓글 내용 보기
+			List<ReplylDTO> rview=rdao.replyView(Integer.parseInt(recipe_no));
+			List<ReplylDTO> temp=new ArrayList<ReplylDTO>();
+			int j=0;
+			int pagecnt=(rcurpage*5)-5;
+			for(int i=0;i<rview.size();i++)
+			{
+				if(j<5 && i>=pagecnt)
+				{
+					ReplylDTO dd=rview.get(i);
+					temp.add(dd);
+					j++;
+				}
+			}
+			// 댓글 총페이지 구하기
+			int rtotal=rdao.replyTotal(Integer.parseInt(recipe_no));
+			req.setAttribute("rtotal", rtotal);
+			req.setAttribute("rcurpage", rcurpage);
+			req.setAttribute("rvdto", temp);
 			req.setAttribute("material", mlist);
 			req.setAttribute("source", slist);
-			req.setAttribute("content", clist);
+			req.setAttribute("content", content);
 			req.setAttribute("dto", d);
-			req.setAttribute("title", "내용보기");
-	      req.setAttribute("jsp",   "../recipe/recipe_content.jsp");
+			req.setAttribute("reply", "../recipe/recipe_reply.jsp");
+			req.setAttribute("jsp",   "../recipe/recipe_content.jsp");
 	      return "yoSeksa/function/main/main.jsp";
 	   }
 	      @RequestMapping("recipe.sek")
@@ -61,6 +82,7 @@ public class Recipe {
 	             strPage="1";
 	          int curpage=Integer.parseInt(strPage);
 	          int rowSize=12;
+	          int blockSize=5;
 	          int start=(curpage*rowSize)-(rowSize-1);
 	          int end=curpage*rowSize;
 	          Map map=new HashMap();
@@ -90,9 +112,9 @@ public class Recipe {
 //      태진경로
 //      String path="C:\\Users\\������\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
 //      민영경로
-//      String path="C:\\webDev\\homework\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\projectYoseksa\\yoSeksa\\contentImg";
+      String path="C:\\webDev\\homework\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\projectYoseksa\\yoSeksa\\contentImg";
 //      홍의경로
-      String path="C:\\WebDev\\project\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\projectYoseksa\\yoSeksa\\contentImg";
+//      String path="C:\\WebDev\\project\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\projectYoseksa\\yoSeksa\\contentImg";
 //      우식경로
 //      String path="C:\\javadev\\git\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\projectYoseksa\\yoSeksa\\contentImg";
       
@@ -186,6 +208,7 @@ public class Recipe {
       req.setAttribute("jsp",   "../recipe/gallery.jsp");
       return "yoSeksa/function/main/main.jsp";
    }
+   
 }
 
 

@@ -17,7 +17,7 @@ public class Member {
 	public String member_insert(HttpServletRequest req) throws IOException{
 		try{
 			req.setCharacterEncoding("EUC-KR");
-			req.setAttribute("title", "È¸¿ø°¡ÀÔ");
+			req.setAttribute("title", "íšŒì›ê°€ì…");
 			req.setAttribute("jsp", "../yoSeksa/function/member/join.jsp");
 			
 			}catch(Exception ex){
@@ -42,7 +42,7 @@ public class Member {
 		d.setEmail(email);
 		d.setMember_pw(member_pw);
 		
-		// DB¿¬µ¿
+		// DBï¿½ï¿½ï¿½ï¿½
 		MemberDAO.memberInsert(d);
 		}catch(Exception ex){
 			System.out.println(ex.getMessage());
@@ -50,13 +50,17 @@ public class Member {
 		
 		return "main.sek";
 	}
-	@RequestMapping("member_login.sek")
+	
+	@RequestMapping("yoSeksa/function/member/member_login.sek")
 	public String member_login(HttpServletRequest req) throws IOException{
-		
+		System.out.println("aaaaaa");
 		String member_id=req.getParameter("member_id");
 		String member_pw=req.getParameter("member_pw");
 		String result="";
+		System.out.println("ì•„ì´ë””ê°¯ìˆ˜");
+		//ì•„ë˜ë¶€í„° nullê°’
 		int count=MemberDAO.memberIdCount(member_id);
+
 		if(count==0)
 		{
 			result="NOID";
@@ -78,7 +82,9 @@ public class Member {
 			}
 		}
 		req.setAttribute("result", result);
-		return "yoSeksa/function/member/login_ok.jsp";
+		
+		return "main.sek";
+		//return "../member/login_ok.jsp";
 	}
 	
 	@RequestMapping("member_logout.sek")
