@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -90,7 +91,7 @@ function reply_view(){
       
       <div class="info_title">샐러드/스프 · 일상 · 끓이기 · 채소류      <p>${dto.recipe_sub }</p></div>
       <div class="info_share">
-          <p class="info_share_in">등록일 : ${dto.recipe_date }<span>/</span>조회수 : ${dto.hit }
+          <p class="info_share_in">등록일 : <fmt:formatDate value="${dto.recipe_date }" pattern="yyyy년 MM월 dd일"/><span>/</span>조회수 : ${dto.hit }
       </div>
       
     </div>

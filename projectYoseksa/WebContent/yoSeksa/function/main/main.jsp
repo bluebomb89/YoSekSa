@@ -8,6 +8,8 @@
 <title></title>
 <link href="yoSeksa/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="yoSeksa/css/component.css" rel="stylesheet" type="text/css"  />
+<link rel="stylesheet" href="yoSeksa/css/list/onepage_201401.css" type="text/css">
+<link rel="stylesheet" href="yoSeksa/css/list//app.css?ver=4.0.8">
 <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 <!-- script -->
 <script type="text/javascript">
@@ -186,6 +188,72 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <div class="footer-color-wrap">
+		<footer class="content-info container" role="contentinfo"
+			style="left: 120px;">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="howmuch">
+						<li id="text-4" class="widget widget_text">
+							<h3>About Us</h3> <img
+							src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/separator.png"
+							align="bottom"
+							style="margin-bottom: 20px; margin-left: 140px;">
+							<div class="textwidget">
+								Yosek<em>Yosek</em>Yosek<br>Yosek
+							</div>
+						</li>
+					</div>
+					<div class="gotaquestion">
+						<a class="anchorfix" id="questions"></a>
+						<li id="text-5" class="widget widget_text">
+							<h3>Get in Touch</h3> 
+							<img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/separator.png" align="bottom" style="margin-bottom: 20px; margin-left: 140px;">
+							<div class="textwidget">
+								<div style="position: absolute;">
+									<img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/phone.png">
+									<div>
+										<div>Seoul: +00 (010) 0000 0000</div>
+
+										<div>Sinchon:+00 (010) 0000 0000</div>
+									</div>
+								</div>
+								<img
+									src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/bigemail.png"
+									style="margin-bottom: 100px; margin-top: 100px;"> <a
+									href="mailto:yo@sek.sa" style="margin-left: 5px;">Yo@sek.sa</a>
+							</div>
+						</li>
+					</div>					
+				</div>
+				<div class="social-links">
+					<!--<a target="_blank" href="http://www.facebook.com/InfinVision"><img width="29" height="60" alt="facebook" src=" http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/f-social-facebook.png" ></a>
+			<a target="_blank" href="http://twitter.com/infinvision"><img width="29" height="60" alt="twitter" src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/f-social-twitter.png"></a>
+			<a target="_blank" href="http://www.linkedin.com/company/infinvision"><img width="29" height="60" alt="linkedin" src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/f-social-linkedin.png"></a>
+			<a target="_blank" href="https://plus.google.com/+Infinvision"><img width="29" height="60" alt="googleplus" src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/f-social-google.png"></a>-->
+				</div>
+			</div>
+	</footer>
+	</div>
+	<div class="blacky-back" style="padding-bottom: 350px;">
+		<div class="f-menu">
+			<ul id="menu-primary-navigation-1" class="menu">
+				<li class="active menu-home"><a href="/">Home</a></li>
+				<li class="menu-divider">/</li>
+				<li class="menu-projects"><a href="/projects/">Projects</a></li>
+				<li class="menu-divider">/</li>
+				<li class="menu-workshops-briefings"><a href="#">Workshops
+						&amp; Briefings</a></li>
+				<li class="menu-divider">/</li>
+				<li class="menu-about"><a href="/about/">About</a></li>
+				<li class="menu-divider">/</li>
+				<li class="menu-ideas"><a href="/blog/">Ideas</a></li>
+				<li class="menu-divider">/</li>
+
+			</ul>
+		</div>
+		<div class="f-copy">© Copyright 2014 InfinVision Ltd. All rights reserved.</div>
+	</div>
 
 </body>
 </html>
