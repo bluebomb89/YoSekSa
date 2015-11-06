@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page trimDirectiveWhitespaces="true" %>
 <%
 	request.setCharacterEncoding("EUC-KR");
 %>
@@ -19,13 +20,23 @@
 <link href="yoSeksa/css/custom.css" rel="stylesheet">
 <link href="yoSeksa/css/owl.carousel.css" rel="stylesheet">
 <link href="yoSeksa/css/owl.theme.css" rel="stylesheet">
+
+    
+    
 <link href="yoSeksa/css/qna.css" rel="stylesheet">
+
 <!-- Custom Theme files -->
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Flooring Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //footer -->
 <script type="text/javascript" src="yoSeksa/js/saved_resource"></script>
@@ -40,11 +51,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--/animated-css-->
 <script type="text/javascript" src="yoSeksa/js/move-top.js"></script>
 <script type="text/javascript" src="yoSeksa/js/easing.js"></script>
-<script src="yoSeksa/js/bootstrap.js"></script>	  
+<script src="yoSeksa/js/bootstrap.js"></script>
+
+<!-- 플러그인 참조 -->
+<!-- <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js"></script>
+<script src="http://cdn.ckeditor.com/4.4.7/standard/ckeditor.js"></script> -->
 
 
 
 <!-- -------------------------------------------질문 클릭시 답변------------------------------------ -->
+
+<style type="text/css">
+      @media (min-width: 980px) {
+        body {
+          padding-top: 60px;
+          padding-bottom: 40px;
+        }
+      }
+    </style>
+
 
 <script type="text/javascript">
 
@@ -149,6 +174,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	
 	if (enablepersist=="on" && document.getElementById)
 		window.onunload=saveswitchstate
+		
+		$(function() {
+	        // submit 될 때, 유효성 검사 기능 수행
+	        $("#join_form").validate({
+	          // 유효성 검사 규칙
+	          rules : {
+	            sender : "required",
+	            receiver : "required",
+	            subject : "required",
+	            content : "required"
+	          },
+	          // 사용자에게 보여질 메시지
+	          messages : {
+	            sender : "보내는 분의 메일 주소를 입력하세요.",
+	            receiver : "받는 분의 메일 주소를 입력하세요.",
+	            subject : "제목을 입력하세요.",
+	            content : "내용을 입력하세요."
+	          }
+	        });
+	      });
 </script>
 </head>
 <body style="background-image:URL('yoSeksa/images/qna_background.jpg')">
@@ -223,7 +268,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="alert alert-success" role="alert">1:1문의</div>
 </div>
 
-<div id="email_form_div">
+<!-- <div id="email_form_div">
 	<div id="email_form">
 		<input type="text" class="form-control" placeholder="email">
 	</div>
@@ -233,7 +278,50 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div id="button_form">
 		<button type="button" class="btn btn-success">Success</button>
 	</div>
-</div>
+</div> -->
+<div class="container">
+
+      <form class="form-horizontal" method="post" action="yoSeksa/function/QnA/SendMail.jsp">
+        <fieldset style="margin-left: 500px; margin-top: 550px;">
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="sender">보내는주소 <font color='red'>*</font></label>
+            <div class="col-sm-10">
+              <input type="text" name="sender" id="sender" class="form-control" value="iqee9932@naver.com" readonly="readonly"/>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="receiver">받는주소 <font color='red'>*</font></label>
+            <div class="col-sm-10">
+              <input type="text" name="receiver" id="receiver" class="form-control" placeholder="받는 분의 이메일 주소를 입력하세요." />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="subject">메일제목<font color='red'>*</font></label>
+            <div class="col-sm-10">
+              <input type="text" name="subject" id="subject" class="form-control" placeholder="이메일의 제목을 입력하세요." />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="content">내용입력</label>
+            <div class="col-sm-10">
+              <textarea name="content" id="content" class="ckeditor" style="width:320px; height:150px;"></textarea>
+            </div>
+          </div>
+
+          <!-- 버튼영역­ -->
+          <div class="form-actions text-right" style="margin-right: 140px; margin-top: 0px; padding-top: 0px; padding-bottom: 0px;
+margin-bottom: 0px;">
+            <input type="submit" class="btn btn-primary" value="메일보내기" />
+            <input type="reset" class="btn" value="다시작성" />
+          </div>
+
+        </fieldset>
+      </form>
+
+    </div>
 
 <br><br><br>
 

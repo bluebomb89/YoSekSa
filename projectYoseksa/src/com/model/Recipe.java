@@ -19,7 +19,7 @@ public class Recipe {
 	 ReplyDAO rdao=ReplyDAO.newInstance();
 	 @RequestMapping("recipe_content.sek")
 	   public String recipe_content(HttpServletRequest req) throws IOException{
-		 String rPage=req.getParameter("rPage");
+		 String rPage=req.getParameter("rpage");
 			int type=1;
 			if(rPage==null)
 			{
@@ -28,7 +28,6 @@ public class Recipe {
 			}
 			int rcurpage=Integer.parseInt(rPage);
 			String recipe_no=req.getParameter("rno");	
-			String strPage=req.getParameter("page");
 			RecipeDTO d=RecipeDAO.recipeContentData(
 					Integer.parseInt(recipe_no),type);
 			List<MaterialDTO> material=RecipeDAO.materialData(Integer.parseInt(recipe_no));
@@ -51,14 +50,23 @@ public class Recipe {
 			}
 			// 댓글 내용 보기
 			List<ReplylDTO> rview=rdao.replyView(Integer.parseInt(recipe_no));
-			for(int i=0; i<rview.size(); i++){
-				System.out.println("i = "+i);
-				System.out.println(rview.get(i).getReply_no());
-				System.out.println(rview.get(i).getReply_nickname());
-				System.out.println(rview.get(i).getReply_date());
-				System.out.println(rview.get(i).getReply_content());
+			List<ReplylDTO> temp=new ArrayList<ReplylDTO>();
+			int j=0;
+			int pagecnt=(rcurpage*5)-5;
+			for(int i=0;i<rview.size();i++)
+			{
+				if(j<5 && i>=pagecnt)
+				{
+					ReplylDTO dd=rview.get(i);
+					temp.add(dd);
+					j++;
+				}
 			}
-			req.setAttribute("rvdto", rview);
+			// 댓글 총페이지 구하기
+			int rtotal=rdao.replyTotal(Integer.parseInt(recipe_no));
+			req.setAttribute("rtotal", rtotal);
+			req.setAttribute("rcurpage", rcurpage);
+			req.setAttribute("rvdto", temp);
 			req.setAttribute("material", mlist);
 			req.setAttribute("source", slist);
 			req.setAttribute("content", content);
@@ -98,13 +106,13 @@ public class Recipe {
    public String recipe_insert(HttpServletRequest req) throws IOException{
       String enctype="UTF-8";
 //    영권경로
-      String path="C:\\javaDev\\jasb\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\projectYoseksa\\yoSeksa\\contentImg";
+//      String path="C:\\javaDev\\jasb\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\projectYoseksa\\yoSeksa\\contentImg";
 //      승현경로
 //      String path="C:\\Users\\������\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
 //      태진경로
 //      String path="C:\\Users\\������\\git\\yoseksaProject\\projectYoseksa\\WebContent\\yoSeksa\\contentImg";
 //      민영경로
-//      String path="C:\\webDev\\homework\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\projectYoseksa\\yoSeksa\\contentImg";
+      String path="C:\\webDev\\homework\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\projectYoseksa\\yoSeksa\\contentImg";
 //      홍의경로
 //      String path="C:\\WebDev\\project\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\projectYoseksa\\yoSeksa\\contentImg";
 //      우식경로
@@ -200,6 +208,7 @@ public class Recipe {
       req.setAttribute("jsp",   "../recipe/gallery.jsp");
       return "yoSeksa/function/main/main.jsp";
    }
+   
 }
 
 
