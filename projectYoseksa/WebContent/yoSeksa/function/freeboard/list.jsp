@@ -319,7 +319,7 @@ $(function(){
 													<span class="wrap_btn_recm d_cmtpgn_recm_box">
 														<button type="button" title="글 수정" class="btn_recm positive d_cmtpgn_cmt_recm_btn">
 															<span class="odd_span"> 
-																<img src="yoSeksa/images/board1.gif" align="absbottom" style="width: 27px;">
+																<a href=""><img src="yoSeksa/images/board1.gif" align="absbottom" style="width: 27px;"></a>
 															</span>
 														</button> 
 														
@@ -327,7 +327,7 @@ $(function(){
 														<button type="button" title="글 삭제하기" class="btn_recm negative d_cmtpgn_cmt_non_recm_btn" 
 																data-toggle="modal" data-target="#remove"">
 															<span class="odd_span"> 
-																<img style="width: 25px; margin-top: 3px;" align="absbottom" src="yoSeksa/images/board2.gif">
+																<a href=""><img style="width: 25px; margin-top: 3px;" align="absbottom" src="yoSeksa/images/board2.gif"> </a>
 															</span>
 														</button>
 													</span>
