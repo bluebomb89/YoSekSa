@@ -15,7 +15,6 @@ public class Reply {
 	ReplyDAO rdao=ReplyDAO.newInstance();
 	@RequestMapping("recipe_reply.sek")
 	public String recipe_reply(HttpServletRequest req){
-		System.out.println("aaaaaaaaaaaa");
 		ReplyDAO dao=ReplyDAO.newInstance();
 		ReplylDTO d=new ReplylDTO();
 		String recipe_no=req.getParameter("recipe_no");
