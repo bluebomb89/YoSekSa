@@ -8,8 +8,11 @@
 <title></title>
 <link href="yoSeksa/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="yoSeksa/css/component.css" rel="stylesheet" type="text/css"  />
+<link rel="stylesheet" href="yoSeksa/css/list/onepage_201401.css" type="text/css">
+<link rel="stylesheet" href="yoSeksa/css/list//app.css?ver=4.0.8">
 <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 <!-- script -->
+<<<<<<< HEAD
 <script type="text/javascript">
 $(function(){
    $('#login_Btn').click(function(){
@@ -34,6 +37,37 @@ $(function(){
 });
 </script>
 <!-- script -->
+
+<!-- 비회원 사용불가 팝업 -->
+<script>
+function button_event(){
+if (confirm("회원만 사용 가능한 기능입니다")== true)
+			{
+    			return "yoSeksa/member/login.jsp";
+			}
+
+else		
+			{   
+    		
+				return "yoSeksa.sek;"
+			}
+}
+//-->
+</script>
+ <!-- 팝업 끝 -->
+ 
+ <!-- 회원가입창 모달 -->
+ <script type="text/javascript">
+$(function(){
+	$("#popbutton").click(function(){
+		$('div.modal').modal({remote : 'layer.html'});
+	})
+})
+</script>
+<!-- 가입모달 끝 -->
+
+=======
+>>>>>>> refs/remotes/origin/master
 </head>
 
 <body  class="cbp-spmenu-push">
@@ -51,19 +85,22 @@ $(function(){
 				<ul class="nav">
 					
 								<!-- <img src="yoSeksa/images/Login.gif" style=" width: 30px;"> -->
-							
+							<!-- http://localhost:8080/projectYoseksa/yoSeksa/function/member/login.jsp -->
 						<li class="login">
-							<a href="http://localhost:8080/projectYoseksa/yoSeksa/member/login.jsp" title="로그인"><img src="yoSeksa/images/Login.gif" onmouseover="this.src='yoSeksa/images/Login2.gif';" onmouseout="this.src='yoSeksa/images/Login.gif';" style="width: 30px;"></a>
+							<a href="yoSeksa/function/member/login.jsp" title="로그인"><img src="yoSeksa/images/Login.gif" onmouseover="this.src='yoSeksa/images/Login2.gif';" onmouseout="this.src='yoSeksa/images/Login.gif';" style="width: 30px;"></a>
 						</li>
-							<li class="heart">
-								<a href="/mypage/heart/product.asp" title="즐겨찾는 음식"><img src="yoSeksa/images/fun.gif" onmouseover="this.src='yoSeksa/images/fun2.gif';" onmouseout="this.src='yoSeksa/images/fun.gif';" style=" width: 30px;"></a>
-							</li>
-								<li class="cart">
-									<a href="http://localhost:8080/projectYoseksa/diary.sek" title="일정 관리"><img src="yoSeksa/images/calen.gif" onmouseover="this.src='yoSeksa/images/calen2.gif';" onmouseout="this.src='yoSeksa/images/calen.gif';" style=" width: 30px;"></a>
-								</li>
-									<li class="cart">
-										<a href="http://localhost:8080/projectYoseksa/recipe.sek" title="레시피"><img src="yoSeksa/images/recipe.gif" onmouseover="this.src='yoSeksa/images/recipe2.gif';" onmouseout="this.src='yoSeksa/images/recipe.gif';" style="width: 30px;"></a>
-								</li>
+						
+						<li class="fun">
+						<a href="/mypage/heart/product.asp" title="즐겨찾는 음식"><img src="yoSeksa/images/fun.gif" onmouseover="this.src='yoSeksa/images/fun2.gif';" onmouseout="this.src='yoSeksa/images/fun.gif';" style=" width: 30px;" value="삭제하기" onclick="button_event();"></a>
+						</li>
+								
+						<li class="cart">
+						<a href="http://localhost:8080/projectYoseksa/diary.sek" title="일정 관리"><img src="yoSeksa/images/calen.gif" onmouseover="this.src='yoSeksa/images/calen2.gif';" onmouseout="this.src='yoSeksa/images/calen.gif';" style=" width: 30px;"></a>
+						</li>
+						
+						<li class="cart">
+						<a href="http://localhost:8080/projectYoseksa/recipe.sek" title="레시피"><img src="yoSeksa/images/recipe.gif" onmouseover="this.src='yoSeksa/images/recipe2.gif';" onmouseout="this.src='yoSeksa/images/recipe.gif';" style="width: 30px;"></a>
+						</li>
 				</ul>
 		</nav>
          <!-- <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left cbp-spmenu-open" id="cbp-spmenu-s1" style=" width: 200px;"> -->
@@ -72,27 +109,7 @@ $(function(){
          
          <!-- �쇱そ���⑥�� ���� 踰��쇱�� �대┃������ ���ㅻ�� 留���or���깃��� 吏�������怨� -->
          <p>
-         <!-- ���� 濡�洹몄�� �� -->
-         <c:if test="${sessionScope.member_id==null }">
-            
-            <!-- 꽁 -->
-            <!-- <form method="post" action="member_login.sek" id="login_frm">
-               ID:<input type=text name=member_id id="member_id" size=10>
-               &nbsp;
-               PW:<input type=password name=member_pw id="member_pw" size=10>
-               &nbsp;
-               <input type=button value="로그인" id="login_Btn">
-            </form> --> 
-            <!-- 꽁 -->
-            
-         </c:if>
-         <c:if test="${sessionScope.member_id!=null }">
-               ${sessionScope.nickname } 님이 로그인 하셨습니다.
-            <form method="post" action="member_logout.sek" id="logout_frm">
-               <input type=button value="로그아웃" id="logout_Btn">
-            </form>
-         </c:if>
-         
+
            </nav>
       <!-- 왼쪽상단에 있는 버튼을 클릭했을때 나오는 링크or속성값을 지정하는곳 -->
       <!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
@@ -186,6 +203,72 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <div class="footer-color-wrap">
+		<footer class="content-info container" role="contentinfo"
+			style="left: 120px;">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="howmuch">
+						<li id="text-4" class="widget widget_text">
+							<h3>About Us</h3> <img
+							src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/separator.png"
+							align="bottom"
+							style="margin-bottom: 20px; margin-left: 140px;">
+							<div class="textwidget">
+								Yosek<em>Yosek</em>Yosek<br>Yosek
+							</div>
+						</li>
+					</div>
+					<div class="gotaquestion">
+						<a class="anchorfix" id="questions"></a>
+						<li id="text-5" class="widget widget_text">
+							<h3>Get in Touch</h3> 
+							<img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/separator.png" align="bottom" style="margin-bottom: 20px; margin-left: 140px;">
+							<div class="textwidget">
+								<div style="position: absolute;">
+									<img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/phone.png">
+									<div>
+										<div>Seoul: +00 (010) 0000 0000</div>
+
+										<div>Sinchon:+00 (010) 0000 0000</div>
+									</div>
+								</div>
+								<img
+									src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/bigemail.png"
+									style="margin-bottom: 100px; margin-top: 100px;"> <a
+									href="mailto:yo@sek.sa" style="margin-left: 5px;">Yo@sek.sa</a>
+							</div>
+						</li>
+					</div>					
+				</div>
+				<div class="social-links">
+					<!--<a target="_blank" href="http://www.facebook.com/InfinVision"><img width="29" height="60" alt="facebook" src=" http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/f-social-facebook.png" ></a>
+			<a target="_blank" href="http://twitter.com/infinvision"><img width="29" height="60" alt="twitter" src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/f-social-twitter.png"></a>
+			<a target="_blank" href="http://www.linkedin.com/company/infinvision"><img width="29" height="60" alt="linkedin" src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/f-social-linkedin.png"></a>
+			<a target="_blank" href="https://plus.google.com/+Infinvision"><img width="29" height="60" alt="googleplus" src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/f-social-google.png"></a>-->
+				</div>
+			</div>
+	</footer>
+	</div>
+	<div class="blacky-back" style="padding-bottom: 350px;">
+		<div class="f-menu">
+			<ul id="menu-primary-navigation-1" class="menu">
+				<li class="active menu-home"><a href="/">Home</a></li>
+				<li class="menu-divider">/</li>
+				<li class="menu-projects"><a href="/projects/">Projects</a></li>
+				<li class="menu-divider">/</li>
+				<li class="menu-workshops-briefings"><a href="#">Workshops
+						&amp; Briefings</a></li>
+				<li class="menu-divider">/</li>
+				<li class="menu-about"><a href="/about/">About</a></li>
+				<li class="menu-divider">/</li>
+				<li class="menu-ideas"><a href="/blog/">Ideas</a></li>
+				<li class="menu-divider">/</li>
+
+			</ul>
+		</div>
+		<div class="f-copy">© Copyright 2014 InfinVision Ltd. All rights reserved.</div>
+	</div>
 
 </body>
 </html>

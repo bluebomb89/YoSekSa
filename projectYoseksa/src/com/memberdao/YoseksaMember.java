@@ -8,7 +8,7 @@ import com.common.YoseksaModel;
 public class YoseksaMember implements YoseksaModel{
 	@Override
 	public String handlerRequest(HttpServletRequest req, HttpServletResponse res) throws Exception {
-		req.setAttribute("jsp",	"../member/join.jsp");
+		req.setAttribute("jsp",	"../yoSeksa/function/member/join.jsp");
 		return "yoSeksa/function/main/main.jsp";
 	}
 }
