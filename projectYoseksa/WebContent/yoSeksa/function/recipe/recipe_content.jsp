@@ -53,15 +53,14 @@
 	});
 </script>
 <script type="text/javascript">
-$(function(){
-	$('#replyBtn').click(function(){
-		var reply_content=$('#recipeReply').val();
-		var recipe_no=$('#recipe_no').val();
-		var param="reply_content="+reply_content+"&recipe_no="+recipe_no;
-		alert(param);
-		sendMessage("GET", "recipe_reply.sek", param, reply_coment);
-	});
-});
+function replyBtn(){
+	alert("asdad");
+	var reply_content=$('#recipeReply').val();
+	var recipe_no=$('#recipe_no').val();
+	var param="reply_content="+reply_content+"&recipe_no="+recipe_no;
+	alert(param);
+	sendMessage("GET", "recipe_reply.sek", param, reply_coment);
+}
 function reply_coment(){
 	if(httpRequest.readyState==4){
 		if(httpRequest.status==200){
@@ -114,16 +113,14 @@ function reply_coment(){
 			<img src="yoSeksa/contentImg/${cdto.recipec_photo }">
 		</div>
 	</c:forEach>
-
-            
-
-      
+     
     </div><!--/view_step -->
     <div class="blank_bottom"></div>    
     <div class="blank_bottom"></div><!-- ☆important☆ -->
     <!-- 댓글 히든 -->
     <input type="hidden" value=${dto.recipe_no } id="recipe_no">
     <div id="reply">
+    
 		<jsp:include page="${reply }"></jsp:include>
 	</div>
 

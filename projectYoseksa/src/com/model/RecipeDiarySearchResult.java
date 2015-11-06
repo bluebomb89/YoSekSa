@@ -1,5 +1,6 @@
 package com.model;
 
+import java.io.IOException;
 import java.util.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -10,19 +11,22 @@ import com.controller.Controller;
 import com.controller.RequestMapping;
 import com.diarydao.DiaryDAO;
 import com.recipedao.RecipeDTO;
-
 import com.recipedao.*;
-@Controller("diary")
-public class RecipeDiarySearchResult implements YoseksaModel{
-	@RequestMapping("diary_search.sek")
 
-	@Override
-	public String handlerRequest(HttpServletRequest req, HttpServletResponse res) throws Exception {
+@Controller("recipediary")
+public class RecipeDiarySearchResult {
+	 @RequestMapping("diary_search.sek")
+	   public String diary_search(HttpServletRequest req) throws IOException{
 		// TODO Auto-generated method stub
+		 
+		String keyword=req.getParameter("keyword");
+		String date=req.getParameter("date");
+		String bld=req.getParameter("bld");
 		
-		String keyword=req.getParameter("keyword");		
-		
-		
+		System.out.println("■■■■■■■■■■■■■■RecipeDiraySearchResult.java■■■■■■■■■■■■■■■");
+		System.out.println("keyword : "+keyword);
+		System.out.println("date : "+date);
+		System.out.println("bld : "+bld);
 		
 		String strPage=req.getParameter("page");
 		if(strPage==null)
@@ -36,11 +40,25 @@ public class RecipeDiarySearchResult implements YoseksaModel{
 		map.put("keyword", keyword);
 		map.put("start", start);
 		map.put("end", end);
+		System.out.println("start : "+start);
+		System.out.println("end : "+end);
 		List<RecipeDTO> list=DiaryDAO.searchListData(map);
-		int totalpage=DiaryDAO.searchTotalPage(map);		
+		int totalpage=DiaryDAO.searchTotalPage(map);
+		System.out.println("================================");
+		
+		for(RecipeDTO d:list)
+		{
+			System.out.println("sub : "+d.getRecipe_sub());
+			System.out.println("no : "+d.getRecipe_no());
+		}
+		
+		System.out.println("totalpage : "+totalpage);
+		System.out.println("★★★★★★★★★★★★★★★★★★★★★★★★★★★★★");
 		
 		req.setAttribute("recipe_search_list", list);
 		req.setAttribute("recipe_search_totalpage", totalpage);
+		req.setAttribute("date", date);
+		req.setAttribute("bld", bld);
 		
 		
 		
