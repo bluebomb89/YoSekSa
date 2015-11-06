@@ -36,7 +36,8 @@ $(function(){
 	        		</div>
 	    		 	<div class="media-body">
 	        			<h4 class="media-heading">
-	       			<b class="info_name_f">${i.reply_nickname }</b><fmt:formatDate value="${i.reply_date}" pattern="yyyy년 MM월 dd일"/></h4>${i.reply_content }
+	       			<b class="info_name_f">${i.reply_nickname }</b><fmt:formatDate value="${i.reply_date}" pattern="yyyy년 MM월 dd일"/></h4>
+	       			${i.reply_content } <input type="button" value="댓글">
 	       			</div>
 	     		</div>
 	      	</div>
