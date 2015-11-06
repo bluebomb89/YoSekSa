@@ -23,8 +23,8 @@ public class diary {
 		List<DiaryDTO> dlist=DiaryDAO.diaryListData();		
 		req.setAttribute("dlist", dlist);
 		
-		/*return "yoSeksa/function/main/main.jsp";*/
-		return "yoSeksa/function/calendar/calendar.jsp";
+		return "yoSeksa/function/main/main.jsp";
+		/*return "yoSeksa/function/calendar/calendar.jsp";*/
 		
 	}
 	 @RequestMapping("diary_search.sek")
