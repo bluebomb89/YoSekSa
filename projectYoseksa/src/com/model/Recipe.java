@@ -208,6 +208,7 @@ public class Recipe {
       req.setAttribute("jsp",   "../recipe/gallery.jsp");
       return "yoSeksa/function/main/main.jsp";
    }
+   
 }
 
 

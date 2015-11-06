@@ -4,18 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
 import com.Reply.ReplyDAO;
 import com.Reply.ReplylDTO;
 import com.controller.Controller;
 import com.controller.RequestMapping;
 
-@Controller("reply")
+@Controller("Reply")
 public class Reply {
 	ReplyDAO rdao=ReplyDAO.newInstance();
 	@RequestMapping("recipe_reply.sek")
 	public String recipe_reply(HttpServletRequest req){
+		System.out.println("aaaaaaaaaaaa");
 		ReplyDAO dao=ReplyDAO.newInstance();
 		ReplylDTO d=new ReplylDTO();
 		String recipe_no=req.getParameter("recipe_no");
