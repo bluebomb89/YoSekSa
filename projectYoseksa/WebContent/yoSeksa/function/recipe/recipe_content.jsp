@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,12 +54,11 @@
 	});
 </script>
 <script type="text/javascript">
+//레시피 인서트
 function replyBtn(){
-	alert("asdad");
 	var reply_content=$('#recipeReply').val();
 	var recipe_no=$('#recipe_no').val();
 	var param="reply_content="+reply_content+"&recipe_no="+recipe_no;
-	alert(param);
 	sendMessage("GET", "recipe_reply.sek", param, reply_coment);
 }
 function reply_coment(){
@@ -70,7 +70,16 @@ function reply_coment(){
 		}		
 	}
 }
-
+// 레시피 버튼 뷰
+function reply_view(){
+	if(httpRequest.readyState==4){
+		if(httpRequest.status==200){
+			var res=httpRequest.responseText;
+			$('#reply').html(res);
+			// 보여주면서 div에 값저장
+		}		
+	}
+}
 </script>
 </head>
 <body>
@@ -82,7 +91,7 @@ function reply_coment(){
       
       <div class="info_title">샐러드/스프 · 일상 · 끓이기 · 채소류      <p>${dto.recipe_sub }</p></div>
       <div class="info_share">
-          <p class="info_share_in">등록일 : ${dto.recipe_date }<span>/</span>조회수 : ${dto.hit }
+          <p class="info_share_in">등록일 : <fmt:formatDate value="${dto.recipe_date }" pattern="yyyy년 MM월 dd일"/><span>/</span>조회수 : ${dto.hit }
       </div>
       
     </div>

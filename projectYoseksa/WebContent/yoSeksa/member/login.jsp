@@ -40,8 +40,8 @@
 																						</form>
 																							<div class="login-link">
 																								<ul>
-														<li><a href="/login/forget.asp">아이디 찾기</a></li>
-															<li><a href="/login/forget.asp">비밀번호 찾기</a></li>
+														<li><a href="http://localhost:8080/projectYoseksa/yoSeksa/member/find_id.jsp">아이디 / 비밀번호 찾기</a></li>
+															
 																<li><a href="javascript:jsJoin();">회원가입</a></li>
 													</ul>
 												</div>

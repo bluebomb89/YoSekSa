@@ -1,8 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-<html lang="ko" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head>
-	<meta charset="UTF-8">
-	<link href="../css/style99.css" type="text/css" rel="stylesheet" media="all">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="../css/style99.css" type="text/css" rel="stylesheet" media="all">
 	<script type="text/javascript" async="" src="http://www.google-analytics.com/plugins/ga/inpage_linkid.js" id="undefined"></script><script type="text/javascript" async="" src="http://stats.g.doubleclick.net/dc.js"></script><script src="/dist/js/vendor/jquery-1.11.0.min.js"></script>
 	<script src="/javascript/modernizr-2.6.2.min.js"></script>
 	<script src="/lib/js/jsGeneralFunction.js"></script>
@@ -15,17 +20,33 @@
 						<script type="text/javascript" src="https://secure.nuguya.com/nuguya/nice.nuguya.oivs.crypto.js"></script>
 						<script type="text/javascript" src="https://secure.nuguya.com/nuguya/nice.nuguya.oivs.msg.js"></script>
 						<script type="text/javascript" src="https://secure.nuguya.com/nuguya/nice.nuguya.oivs.util.js"></script>
-						
-						
-						<div class="container-s">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#popbutton").click(function(){
+		$('div.modal').modal({remote : 'layer.html'});
+	})
+})
+</script>
+</head>
+<body>
+<button class="btn btn-default" id="popbutton">ëª¨ë‹¬ì¶œë ¥ë²„íŠ¼</button><br/>
+<div class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    	<div class="container-s">
+							<div class="container-s">
 							<div class="container container-fluid">
 								<div id="accountM-wrapper">
 									<div class="accountM-boxes" style=" height: 260px; ">
-										<h2 class="h2">¾ÆÀÌµð Ã£±â</h2>
-											<p>ÁÖ¹Î¹øÈ£·Î ¾ÆÀÌµð Ã£±â´Â °³ÀÎÁ¤º¸º¸È£ Â÷¿ø¿¡¼­ ´õ ÀÌ»ó Áö¿øÇÏÁö ¾Ê½À´Ï´Ù.</p>
+										<h2 class="h2">ì•„ì´ë”” ì°¾ê¸°</h2>
+											<p>ì£¼ë¯¼ë²ˆí˜¸ë¡œ ì•„ì´ë”” ì°¾ê¸°ëŠ” ê°œì¸ì •ë³´ë³´í˜¸ ì°¨ì›ì—ì„œ ë” ì´ìƒ ì§€ì›í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.</p>
 												<div class="box floatL" style=" margin-top: 23px;">
 													<div class="head">
-														<label for="fEmail"><input name="accountID" type="radio" class="radioShow" value="0" checked="checked" onclick="$('#accountID-fPhone').hide();$('#accountID-fEmail').show();">ÀÌ¸ÞÀÏ</label>
+														<label for="fEmail"><input name="accountID" type="radio" class="radioShow" value="0" checked="checked" onclick="$('#accountID-fPhone').hide();$('#accountID-fEmail').show();">ì´ë©”ì¼</label>
 													
       												</div>
 														<div id="accountID-fEmail" class="accountM-box1">
@@ -35,11 +56,11 @@
             														<table>
 																		<tbody>
 																			<tr>
-																				<th><label for="fEmailName">¼º¸í</label></th>
+																				<th><label for="fEmailName">ì„±ëª…</label></th>
 																				<td><input type="text" value="" name="sUN" maxlength="30"></td>
 																			</tr>
 																				<tr>
-																					<th><label for="fEmailMail-1">ÀÌ¸ÞÀÏ</label></th>
+																					<th><label for="fEmailMail-1">ì´ë©”ì¼</label></th>
 																						<td>
 																							<input type="text" value="" name="sEmail" class="text_email" maxlength="50">
 																						</td>
@@ -55,11 +76,11 @@
 														</div>
 													</div>
 														<div class="accountM-boxes" "="" style="top: 30px;">
-															<h2 class="h2">ºñ¹Ð¹øÈ£ Ã£±â</h2>
-																<p>ÁÖ¹Î¹øÈ£·Î ºñ¹Ð¹øÈ£ Ã£±â´Â °³ÀÎÁ¤º¸º¸È£ Â÷¿ø¿¡¼­ ´õ ÀÌ»ó Áö¿øÇÏÁö ¾Ê½À´Ï´Ù.<br>ÀÓ½Ã ºñ¹Ð¹øÈ£°¡ ¹ß¼ÛµË´Ï´Ù. ·Î±×ÀÎ ÈÄ ¸¶ÀÌÆäÀÌÁö &gt; °³ÀÎÁ¤º¸¼öÁ¤¿¡¼­ ºñ¹Ð¹øÈ£¸¦ º¯°æÇØ ÁÖ¼¼¿ä.</p>
+															<h2 class="h2">ë¹„ë°€ë²ˆí˜¸ ì°¾ê¸°</h2>
+																<p>ì£¼ë¯¼ë²ˆí˜¸ë¡œ ë¹„ë°€ë²ˆí˜¸ ì°¾ê¸°ëŠ” ê°œì¸ì •ë³´ë³´í˜¸ ì°¨ì›ì—ì„œ ë” ì´ìƒ ì§€ì›í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.<br>ìž„ì‹œ ë¹„ë°€ë²ˆí˜¸ê°€ ë°œì†¡ë©ë‹ˆë‹¤. ë¡œê·¸ì¸ í›„ ë§ˆì´íŽ˜ì´ì§€ &gt; ê°œì¸ì •ë³´ìˆ˜ì •ì—ì„œ ë¹„ë°€ë²ˆí˜¸ë¥¼ ë³€ê²½í•´ ì£¼ì„¸ìš”.</p>
 																	<div class="box floatL" style="height: 322px;">
 																		<div class="head">
-																			<label for="fEmail"><input name="accountPW" type="radio" class="radioShow" value="0" checked="checked" onclick="$('#accountPW-fPhone').hide();$('#accountPW-fEmail').show();">ÀÌ¸ÞÀÏ</label>
+																			<label for="fEmail"><input name="accountPW" type="radio" class="radioShow" value="0" checked="checked" onclick="$('#accountPW-fPhone').hide();$('#accountPW-fEmail').show();">ì´ë©”ì¼</label>
 																		
 																		</div>
 																			<div id="accountPW-fEmail" class="accountM-box1">
@@ -70,15 +91,15 @@
 																				            <table>
 																								<tbody>
 																									<tr>
-																										<th><label for="fPWID">¾ÆÀÌµð</label></th>
+																										<th><label for="fPWID">ì•„ì´ë””</label></th>
 																											<td><input type="text" maxlength="16" id="sEUID" name="UserID" onkeypress="if (event.keyCode==13) frmEPWemail.sEUN.focus();"></td>
 																									</tr>
 																										<tr>
-																											<th><label for="fPWName">¼º¸í</label></th>
+																											<th><label for="fPWName">ì„±ëª…</label></th>
 																												<td><input type="text" maxlength="20" id="sEUN" name="sUN" onkeypress="if (event.keyCode==13) frmEPWemail.sESN1.focus();"></td>
 																										</tr>
 																											<tr>
-																												<th><label for="fPWMail-1">ÀÌ¸ÞÀÏ</label></th>
+																												<th><label for="fPWMail-1">ì´ë©”ì¼</label></th>
 																													<td>
 																														<input type="text" maxlength="50" id="sEmail" name="sEmail">
 																													</td>
@@ -95,11 +116,33 @@
 														</div>
 									</div>
 							</div>
-					</div>
-						<script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
-						<script src="/dist/js/29cm.min.js?v=20150930"></script><script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.0.6/jquery.mousewheel.min.js"></script>
-						<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script><img height="1" width="1" border="0" alt="" src="https://www.googleadservices.com/pagead/conversion/955143405/?random=1446688757894&amp;cv=8&amp;fst=1446688757894&amp;num=1&amp;fmt=3&amp;value=0&amp;label=zDpaCPO65AMQ7am5xwM&amp;bg=ffffff&amp;hl=en&amp;guid=ON&amp;u_h=1024&amp;u_w=1280&amp;u_ah=1024&amp;u_aw=1280&amp;u_cd=24&amp;u_his=5&amp;u_tz=540&amp;u_java=true&amp;u_nplug=5&amp;u_nmime=7&amp;frm=0&amp;url=http%3A//www.29cm.co.kr/login/forget.asp&amp;ref=http%3A//www.29cm.co.kr/login/%3FsLT%3DG">
-							<!-- °øÅë Àû¿ë ½ºÅ©¸³Æ® , ¸ðµç ÆäÀÌÁö¿¡ ³ëÃâµÇµµ·Ï ¼³Ä¡. ´Ü ÀüÈ¯ÆäÀÌÁö ¼³Á¤°ªº¸´Ù Ç×»ó ÇÏ´Ü¿¡ À§Ä¡ÇØ¾ßÇÔ --> 
-								<script type="text/javascript" src="http://wcs.naver.net/wcslog.js"> </script> 
-						</body>
-					</html>
+					</div>					</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+<!-- ë‚´ìš©ìž¥ì„± -->
+	
+<!-- header -->
+<div class="modal-header">
+	<!-- ë‹«ê¸°(x) ë²„íŠ¼ -->
+  <button type="button" class="close" data-dismiss="modal">Ã—</button>
+  <!-- header title -->
+  <h4 class="modal-title">Header</h4>
+</div>
+<!-- body -->
+<div class="modal-body">
+  	Body 
+</div>
+<!-- Footer -->
+<div class="modal-footer">
+	Footer
+  <button type="button" class="btn btn-default" data-dismiss="modal">ë‹«ê¸°</button>
+</div>
+
+
+
+
+		

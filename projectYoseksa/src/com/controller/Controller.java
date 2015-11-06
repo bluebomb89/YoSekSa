@@ -1,4 +1,4 @@
-package com.controller;
+	package com.controller;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -6,13 +6,13 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
-// RUNTIME, SOURCE, CLASS(ÄÄÆÄÀÏÈÄ Á¦°Å)
+// RUNTIME, SOURCE, CLASS(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)
 @Target(ElementType.TYPE)
 /*
- * TYPE : class ±¸ºÐ
- * PARAMETER : ¸Å°³º¯¼ö ±¸ºÐ
- * FIELD : ¸â¹öº¯¼ö ±¸ºÐ
- * METHOD : ¸Þ¼Òµå ±¸ºÐ 
+ * TYPE : class ï¿½ï¿½ï¿½ï¿½
+ * PARAMETER : ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+ * FIELD : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+ * METHOD : ï¿½Þ¼Òµï¿½ ï¿½ï¿½ï¿½ï¿½ 
  */
 public @interface Controller {
 

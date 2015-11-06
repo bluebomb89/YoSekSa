@@ -53,9 +53,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="yoSeksa/js/easing.js"></script>
 <script src="yoSeksa/js/bootstrap.js"></script>
 
-
-<script src="https://code.jquery.com/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <!-- 플러그인 참조 -->
 <!-- <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js"></script>
 <script src="http://cdn.ckeditor.com/4.4.7/standard/ckeditor.js"></script> -->
@@ -199,10 +196,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	      });
 </script>
 </head>
-<body style="background-image:URL('yoSeksa/images/qna_background.jpg')">
+<body class="body" style="background-image:URL('yoSeksa/images/qna_background.jpg'); height: inherit; overflow: hidden;">
 
 
-
+<div class="container">
 <div id="qna_title">
 <span>Q&A를 통해서 궁금증을 해결하세요.</span>
 </div>
@@ -265,27 +262,58 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	요섹사
 	</span>
 	</div>
+	<h5 onClick="expandcontent('sc8')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;E-mail보내기</span></h5>
+	<div id="sc8" class="switchcontent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<form class="form-horizontal" method="post" action="yoSeksa/function/QnA/SendMail.jsp">
+        <fieldset>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="sender" style="width: 110px;">받는주소 <font color='red'>*</font></label>
+            <div class="col-sm-10">
+              <input type="text" name="sender" id="sender" class="form-control" value="iqee9932@naver.com" readonly="readonly"/>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="receiver" style="width: 110px;">보낼주소 <font color='red'>*</font></label>
+            <div class="col-sm-10">
+              <input type="text" name="receiver" id="receiver" class="form-control" placeholder="받는 분의 이메일 주소를 입력하세요." />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="subject" style="width: 110px;">메일제목<font color='red'> *</font></label>
+            <div class="col-sm-10">
+              <input type="text" name="subject" id="subject" class="form-control" placeholder="이메일의 제목을 입력하세요." />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="content" style="width: 110px;">내용입력<font color='red'> *</font></label>
+            <div class="col-sm-10">
+              <textarea name="content" id="content" class="ckeditor" style="width:320px; height:150px;"></textarea>
+            </div>
+          </div>
+          <div class="form-actions text-right" style="margin-right: 140px; margin-top: 0px; padding-top: 0px; padding-bottom: 0px; margin-bottom: 0px;">
+            <input type="submit" class="btn btn-primary" value="메일보내기" />
+            <input type="reset" class="btn" value="다시작성" />
+          </div>
+
+        </fieldset>
+      </form>
+	</div>
+</div>
 </div>
 
-<div id="qna_label2">
-<div class="alert alert-success" role="alert">1:1문의</div>
-</div>
+<br><br><br>
 
-<!-- <div id="email_form_div">
-	<div id="email_form">
-		<input type="text" class="form-control" placeholder="email">
-	</div>
-	<div id="contenet_form">
-		<textarea class="form-control" rows="5" col="4" placeholder="content"></textarea>
-	</div>
-	<div id="button_form">
-		<button type="button" class="btn btn-success">Success</button>
-	</div>
-</div> -->
-<div class="container">
+<!-- <div id="qna_label2">
+<div class="alert alert-info" role="alert"><h5 onClick="expandcontent('email1')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">여러분들이 자주 묻는 질문</span>&nbsp;</span></h5></div>
+	
+	<div id="email1" class="switchcontent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<div class="container">
 
       <form class="form-horizontal" method="post" action="yoSeksa/function/QnA/SendMail.jsp">
-        <fieldset>
+        <fieldset style="margin-left: 500px; margin-top: 550px;">
           <div class="form-group">
             <label class="control-label col-sm-2" for="sender">보내는주소 <font color='red'>*</font></label>
             <div class="col-sm-10">
@@ -310,12 +338,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           <div class="form-group">
             <label class="control-label col-sm-2" for="content">내용입력</label>
             <div class="col-sm-10">
-              <textarea name="content" id="content" class="ckeditor"></textarea>
+              <textarea name="content" id="content" class="ckeditor" style="width:320px; height:150px;"></textarea>
             </div>
           </div>
 
-          <!-- 버튼영역­ -->
-          <div class="form-actions text-right">
+          버튼영역­
+          <div class="form-actions text-right" style="margin-right: 140px; margin-top: 0px; padding-top: 0px; padding-bottom: 0px;
+margin-bottom: 0px;">
             <input type="submit" class="btn btn-primary" value="메일보내기" />
             <input type="reset" class="btn" value="다시작성" />
           </div>
@@ -326,6 +355,65 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
 
 <br><br><br>
+</div>
+</div> -->
+
+<!-- <div id="email_form_div">
+	<div id="email_form">
+		<input type="text" class="form-control" placeholder="email">
+	</div>
+	<div id="contenet_form">
+		<textarea class="form-control" rows="5" col="4" placeholder="content"></textarea>
+	</div>
+	<div id="button_form">
+		<button type="button" class="btn btn-success">Success</button>
+	</div>
+</div> -->
+<!-- <div class="container">
+
+      <form class="form-horizontal" method="post" action="yoSeksa/function/QnA/SendMail.jsp">
+        <fieldset style="margin-left: 500px; margin-top: 550px;">
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="sender">보내는주소 <font color='red'>*</font></label>
+            <div class="col-sm-10">
+              <input type="text" name="sender" id="sender" class="form-control" value="iqee9932@naver.com" readonly="readonly"/>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="receiver">받는주소 <font color='red'>*</font></label>
+            <div class="col-sm-10">
+              <input type="text" name="receiver" id="receiver" class="form-control" placeholder="받는 분의 이메일 주소를 입력하세요." />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="subject">메일제목<font color='red'>*</font></label>
+            <div class="col-sm-10">
+              <input type="text" name="subject" id="subject" class="form-control" placeholder="이메일의 제목을 입력하세요." />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="content">내용입력</label>
+            <div class="col-sm-10">
+              <textarea name="content" id="content" class="ckeditor" style="width:320px; height:150px;"></textarea>
+            </div>
+          </div>
+
+          버튼영역­
+          <div class="form-actions text-right" style="margin-right: 140px; margin-top: 0px; padding-top: 0px; padding-bottom: 0px;
+margin-bottom: 0px;">
+            <input type="submit" class="btn btn-primary" value="메일보내기" />
+            <input type="reset" class="btn" value="다시작성" />
+          </div>
+
+        </fieldset>
+      </form>
+
+    </div>
+
+<br><br><br> -->
 
 
 
