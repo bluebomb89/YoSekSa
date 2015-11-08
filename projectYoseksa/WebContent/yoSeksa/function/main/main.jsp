@@ -63,10 +63,6 @@ $(function(){
 	})
 })
 </script>
-<!-- 가입모달 끝 -->
-
-=======
->>>>>>> refs/remotes/origin/master
 </head>
 
 <body  class="cbp-spmenu-push">
