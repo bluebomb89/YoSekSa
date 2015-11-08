@@ -329,7 +329,10 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 	</div>
 </div>
 <!-- projects -->
-
+<!-- footer -->
 <!---->
+
+
+
 </body>
 </html>
