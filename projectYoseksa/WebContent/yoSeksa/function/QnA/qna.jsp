@@ -79,6 +79,37 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 * Visit http://www.dynamicdrive.com/ for full source code
 ***********************************************/
 
+function LayerBody_onresize() {
+
+    //LayerLeft 의 height 를 변경된 LayerBody의 height의 값을 대입
+
+   document.getElementById("LayerLeft").style.height = document.getElementById("LayerBody").style.height;
+
+    //LayerRight 의 height 를 변경된 LayerBody의 height의 값을 대입
+
+   document.getElementById("LayerRight").style.height = document.getElementById("LayerBody").style.height;
+
+   //LayerBottom의 top 을 LayerBody의 (top + height)을 대입하여 LayerBody의
+
+   //끝부분에 위치하게 한다.
+
+
+  document.getElementById("LayerBottom").style.top = document.getElementById("LayerBody").offsetTop + document.getElementById("LayerBody").offsetHeight;
+
+
+
+}
+
+
+
+function window_onload() {  //테스트를 위해 window객체의 onload 이벤트에서 LayerBody의 height를 1000px로 변경 하였다.
+
+ document.getElementById("LayerBody").style.height = "0px";
+
+}
+
+
+
    var enablepersist="on" //Enable saving state of content structure using session cookies? (on/off)
    var collapseprevious="yes" //Collapse previously open content when opening present? (yes/no)
    
@@ -196,8 +227,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
          });
 </script>
 </head>
-<body style="background-image:URL('yoSeksa/images/qna_background.jpg')">
+<body onload="return window_onload()" style="background-image:URL('yoSeksa/images/qna_background.jpg')">
 
+<div id="LayerLeft" class=Layer style="width:133px; height:55px; z-index:1"></div>
+
+<div id="LayerBody" class=Layer style="width:301px; height:55px; z-index:2; left: 145px; top: 15px;" onresize="return LayerBody_onresize()"></div>
+
+<div id="LayerRight" class=Layer style="width:188px; height:55px; z-index:3; left: 448px;"></div>
+
+<div id="LayerBottom" class=Layer style="width:629px; height:105px; z-index:4; left: 9px; top: 341px;"></div>
 
 
 <div id="qna_title">
@@ -264,40 +302,41 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    </div>
    <h5 onClick="expandcontent('sc8')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;E-mail보내기</span></h5>
    <div id="sc8" class="switchcontent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+   <form class="form-horizontal" method="post" action="yoSeksa/function/QnA/SendMail.jsp">
+        <fieldset style="margin-left: 0px; margin-top: 0px;">
 	      <div class="form-group">
-            <label class="control-label col-sm-2" for="sender">보내는주소 <font color='red'>*</font></label>
+            <label class="control-label col-sm-2" for="sender" style=" width: 130px;">관리자주소 <font color='red'>*</font></label>
             <div class="col-sm-10">
               <input type="text" name="sender" id="sender" class="form-control" value="iqee9932@naver.com" readonly="readonly"/>
             </div>
           </div>
 
           <div class="form-group">
-            <label class="control-label col-sm-2" for="receiver">받는주소 <font color='red'>*</font></label>
+            <label class="control-label col-sm-2" for="receiver" style=" width: 130px;">보내는주소 <font color='red'>*</font></label>
             <div class="col-sm-10">
               <input type="text" name="receiver" id="receiver" class="form-control" placeholder="받는 분의 이메일 주소를 입력하세요." />
             </div>
           </div>
 
           <div class="form-group">
-            <label class="control-label col-sm-2" for="subject">메일제목<font color='red'>*</font></label>
+            <label class="control-label col-sm-2" for="subject" style=" width: 130px;">메일제목<font color='red'> *</font></label>
             <div class="col-sm-10">
               <input type="text" name="subject" id="subject" class="form-control" placeholder="이메일의 제목을 입력하세요." />
             </div>
           </div>
 
           <div class="form-group">
-            <label class="control-label col-sm-2" for="content">내용입력</label>
+            <label class="control-label col-sm-2" for="content" style=" width: 130px;">내용입력<font color='red'> *</font></label>
             <div class="col-sm-10">
               <textarea name="content" id="content" class="ckeditor" style="width:320px; height:150px;"></textarea>
             </div>
           </div>
-
-          버튼영역­
-          <div class="form-actions text-right" style="margin-right: 140px; margin-top: 0px; padding-top: 0px; padding-bottom: 0px;
-margin-bottom: 0px;">
+          <div class="form-actions text-right" style="margin-right: 140px; margin-top: 0px; padding-top: 0px; padding-bottom: 0px; margin-bottom: 0px; width: 130px;">
             <input type="submit" class="btn btn-primary" value="메일보내기" />
             <input type="reset" class="btn" value="다시작성" />
           </div>
+          </fieldset>
+      </form>
    </div>
 </div>
 
