@@ -57,24 +57,20 @@ public class Member {
 		String member_id=req.getParameter("member_id");
 		String member_pw=req.getParameter("member_pw");
 		String result="";
-		System.out.println("아이디갯수");
 		//아래부터 null값
-		System.out.println("멤버 아이디" + member_id);
 		int count=MemberDAO.memberIdCount(member_id);
-		System.out.println("1");
 		if(count==0)
 		{
 			result="NOID";
-			System.out.println("2");
 		}
 		else
 		{
-			System.out.println("3");
 			MemberDTO d=MemberDAO.memberGetInfo(member_id);
 			if(member_pw.equals(d.getMember_pw()))
 			{
 				result="OK";
 				HttpSession session=req.getSession();
+				session.setAttribute("member_no", d.getMember_no());
 				session.setAttribute("member_id", member_id);
 				// ${sessionScope.id} => session.getAttribute("id")
 				session.setAttribute("nickname", d.getNickname());
