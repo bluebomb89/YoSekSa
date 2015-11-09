@@ -127,9 +127,12 @@ public class FreeBoard {
 	   public String board_insert(HttpServletRequest req)throws IOException
 	   {
 		 	req.setCharacterEncoding("EUC-KR");
-			String nickname=req.getParameter("nickname");
-			String free_content=req.getParameter("free_content");
+			//String nickname=req.getParameter("nickname");
+			String nickname="yoseki";
+		 	String free_content=req.getParameter("free_content");
 			String free_pw=req.getParameter("free_pw");
+			System.out.println("pw:"+free_pw);
+			System.out.println("content:"+free_content);
 			System.out.println("인서트오케이");
 			FreeBoardDTO d=new FreeBoardDTO();
 			d.setNickname(nickname);

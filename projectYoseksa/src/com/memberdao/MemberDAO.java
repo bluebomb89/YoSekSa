@@ -23,8 +23,11 @@ public class MemberDAO {
 	public static int memberIdCount(String member_id)
 	{
 		int count=0;
+		System.out.println("a");
 		SqlSession session=ssf.openSession();
+		System.out.println("b");
 		count=session.selectOne("memberIdCount",member_id);
+		System.out.println("c");
 		session.close();
 		return count;
 	}
