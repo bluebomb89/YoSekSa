@@ -6,11 +6,14 @@
 <head>
 <meta charset="UTF-8">
 <title></title>
+
 <link href="yoSeksa/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="yoSeksa/css/component.css" rel="stylesheet" type="text/css"  />
 <link rel="stylesheet" href="yoSeksa/css/list/onepage_201401.css" type="text/css">
-<link rel="stylesheet" href="yoSeksa/css/list//app.css?ver=4.0.8">
-<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+<link rel="stylesheet" href="yoSeksa/css/list/app.css?ver=4.0.8">
+<link href="yoSeksa/css/list/loginform.css" type="text/css" rel="stylesheet" media="all">
+
+
 <!-- script -->
 <script type="text/javascript">
 $(function(){
@@ -48,7 +51,7 @@ if (confirm("회원만 사용 가능한 기능입니다")== true)
 else		
 			{   
     		
-				return "yoSeksa.sek;"
+				return "yoSeksa/main/main.jsp";
 			}
 }
 //-->
@@ -74,21 +77,31 @@ $(function(){
                <button id="showLeftPush"><img src="yoSeksa/images/menu-icon.png" alt=""></button>
          </section>
          
+   
+         
+         
          <!-- 꽁 -->
+         
+        
+
          <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
        	   <h3>menu</h3>
        	  <nav id="side-nav" style=" margin-top: 240px;">
 			<div class="search-wrap">
 			</div>
 				<ul class="nav">
+				
+
+				
 					
 								<!-- <img src="yoSeksa/images/Login.gif" style=" width: 30px;"> -->
 							<!-- http://localhost:8080/projectYoseksa/yoSeksa/function/member/login.jsp -->
 						<li class="login">
 							<a href="yoSeksa/function/member/login.jsp" title="로그인"><img src="yoSeksa/images/Login.gif" onmouseover="this.src='yoSeksa/images/Login2.gif';" onmouseout="this.src='yoSeksa/images/Login.gif';" style="width: 30px;"></a>
 						</li>
-						
-						<li class="fun">
+		
+						 						
+												<li class="fun">
 						<a href="/mypage/heart/product.asp" title="즐겨찾는 음식"><img src="yoSeksa/images/fun.gif" onmouseover="this.src='yoSeksa/images/fun2.gif';" onmouseout="this.src='yoSeksa/images/fun.gif';" style=" width: 30px;" value="삭제하기" onclick="button_event();"></a>
 						</li>
 								
@@ -221,20 +234,22 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 						<a class="anchorfix" id="questions"></a>
 						<li id="text-5" class="widget widget_text">
 							<h3>Get in Touch</h3> 
-							<img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/separator.png" align="bottom" style="margin-bottom: 20px; margin-left: 140px;">
+							<img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/separator.png" align="bottom" style="margin-bottom: 20px; margin-left: 120px;">
 							<div class="textwidget">
-								<div style="position: absolute;">
+								
+								<div>
 									<img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/phone.png">
-									<div>
-										<div>Seoul: +00 (010) 0000 0000</div>
+									
+									
+											&nbsp;Seoul: +00 (010) 0000 0000
 
-										<div>Sinchon:+00 (010) 0000 0000</div>
-									</div>
+											<div style="margin-left: 45px;">Sinchon:+00 (010) 0000 0000</div>
+								</div>	
+								
+								<div style="margin-top: 3px;">
+								<img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/bigemail.png"> 
+									<a href="mailto:yo@sek.sa" style="margin-left: 3px;">Yo@sek.sa</a>
 								</div>
-								<img
-									src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/bigemail.png"
-									style="margin-bottom: 100px; margin-top: 100px;"> <a
-									href="mailto:yo@sek.sa" style="margin-left: 5px;">Yo@sek.sa</a>
 							</div>
 						</li>
 					</div>					
@@ -248,7 +263,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 			</div>
 	</footer>
 	</div>
-	<div class="blacky-back" style="padding-bottom: 350px;">
+	<div class="blacky-back" style="padding-bottom: 130px;">
 		<div class="f-menu">
 			<ul id="menu-primary-navigation-1" class="menu">
 				<li class="active menu-home"><a href="/">Home</a></li>

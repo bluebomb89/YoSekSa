@@ -69,9 +69,9 @@ $(function(){
 							<form name="frmMem" id="login_frm" method="post" action="member_login.sek">
 								<div id="login-formA" class="login-box">
 									<label for="">아이디</label>
-										<input type="text" name="sUID" id="member_id" maxlength="16">
+										<input type="text" name="member_id" id="member_id" maxlength="16">
 									<label for="">비밀번호</label>
-										<input type="password" name="sUPW" id="member_pw" maxlength="32">
+										<input type="password" name="member_pw" id="member_pw" maxlength="32">
 										<input type="button" class="btn-typeB3" id="login_Btn" value="Login" style="font-size: 9pt;">
 								</div>
 							</form>
@@ -84,15 +84,14 @@ $(function(){
 								<input type="hidden" name="sRU" value="order/CartList.asp">
 								<input type="hidden" name="sRP" value="">
 									<div id="login-formC" class="login-box">
-										<img src="../../images/Warring.gif" style="width: 30px;">
+										<img src="yoSeksa/images/Warring.gif" style="width: 30px;">
 											<p>비회원시 일정관리 및 나만의 레시피 혜택을 받으실 수 없습니다.</p>
 												<button onclick="popNonmember()">비회원 둘러보기</button>
 									</div>
 							</form>
 							<div class="login-link">
 								<ul>
-									<li><a href="/login/forget.asp">아이디 찾기</a></li>
-									<li><a href="/login/forget.asp">비밀번호 찾기</a></li>
+									<li><a href="/login/forget.asp">아이디 / 비밀번호 찾기</a></li>
 									<li><a href="javascript:jsJoin();">회원가입</a></li>
 								</ul>
 							</div>

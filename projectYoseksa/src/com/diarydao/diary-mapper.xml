@@ -18,6 +18,9 @@
 	    <selectKey keyProperty="mgr_no" resultType="int" order="BEFORE">
 	        SELECT NVL(MAX(mgr_no)+1,1) as mgr_no FROM yoseksa_diary
 	    </selectKey>
-	    INSERT INTO yoseksa_diary VALUES(#{mgr_no},1,'id',#{board_no},SYSDATE,#{diary_bld})
+	    INSERT INTO yoseksa_diary VALUES(#{mgr_no},#{recipe_no},#{member_no},#{board_no},#{diary_date},SYSDATE,#{diary_bld})
 	</insert>
+	<select id="diaryListData" resultType="Diary">
+	    SELECT mgr_no,recipe_no,member_no,board_no,diary_date,diary_regdate,diary_bld FROM yoseksa_diary
+	</select>
 </mapper>

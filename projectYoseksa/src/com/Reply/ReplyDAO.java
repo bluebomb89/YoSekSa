@@ -63,7 +63,76 @@ public class ReplyDAO {
 		}
 		return rtotal;
 	}
+	// 댓글에 댓글
+	public ReplylDTO replyParentInfo(int reply_no){
+		ReplylDTO d=new ReplylDTO();
+		try{
+			session=ssf.openSession();
+			mapper=(Recipe_replyMapper)session.getMapper(Recipe_replyMapper.class);
+			d=mapper.replyParentInfo(reply_no);
+			
+		}catch(Exception ex){
+			System.out.println(ex.getMessage());
+		}finally{
+		   if(session!=null)
+			   session.close();
+		}
+		return d;
+	}
+	public void replyStepIncrement(ReplylDTO d){
+		try{
+			session=ssf.openSession(true);
+			mapper=(Recipe_replyMapper)session.getMapper(Recipe_replyMapper.class);
+			mapper.replyStepIncrement(d);
+		}catch(Exception ex){
+			System.out.println(ex.getMessage());
+		}finally{
+		   if(session!=null)
+			   session.close();
+		}
+	}
+	public void replyReInsert(ReplylDTO d){
+		try{
+			session=ssf.openSession(true);
+			mapper=(Recipe_replyMapper)session.getMapper(Recipe_replyMapper.class);
+			mapper.replyReInsert(d);
+		}catch(Exception ex){
+			System.out.println(ex.getMessage());
+		}finally{
+		   if(session!=null)
+			   session.close();
+		}
+	}
+	public void replyDepthIncrement(int recipe_no){
+		try{
+			session=ssf.openSession(true);
+			mapper=(Recipe_replyMapper)session.getMapper(Recipe_replyMapper.class);
+			mapper.replyDepthIncrement(recipe_no);
+		}catch(Exception ex){
+			System.out.println(ex.getMessage());
+		}finally{
+		   if(session!=null)
+			   session.close();
+		}
+	}
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
