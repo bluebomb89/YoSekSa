@@ -206,7 +206,7 @@ public class Recipe {
           cont++;
        }
       req.setAttribute("jsp",   "../recipe/gallery.jsp");
-      return "yoSeksa/function/main/main.jsp";
+      return "yoSeksa/function/recipe/recipe_insertOK.jsp";
    }
    
 }

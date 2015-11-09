@@ -42,6 +42,7 @@ public class MainView {
 	    req.setAttribute("notice_curpage", curpage);
 	    req.setAttribute("notice_totalpage", totalpage);
 	    
+	    req.setAttribute("login", "../../member/login.jsp");
 		req.setAttribute("jsp",	"../main/yoseksa.jsp");
 		req.setAttribute("ntpage",	"../notice/notice.jsp");
 		req.setAttribute("mangae",	"../main/mangae.jsp");

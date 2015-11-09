@@ -84,7 +84,7 @@ $(function(){
 								<input type="hidden" name="sRU" value="order/CartList.asp">
 								<input type="hidden" name="sRP" value="">
 									<div id="login-formC" class="login-box">
-										<img src="../../images/Warring.gif" style="width: 30px;">
+										<img src="yoSeksa/images/Warring.gif" style="width: 30px;">
 											<p>비회원시 일정관리 및 나만의 레시피 혜택을 받으실 수 없습니다.</p>
 												<button onclick="popNonmember()">비회원 둘러보기</button>
 									</div>

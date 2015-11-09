@@ -165,8 +165,7 @@ $(function() {
 	document.getElementById("q_work_file_4").onchange = function(){
 		readImg('q_work_file_4', 'workPhotoHolder_4');
 	}
-} 
-
+ }
 function setStepImage(step)
 {
 	
@@ -492,7 +491,8 @@ function adjustText(id) {
 }
 </script>
 <form name="insFrm" id="insFrm" method="post" action="recipe_insert.sek" enctype="multipart/form-data">
-<link rel="stylesheet" type="text/css" href="yoSeksa/css/recipe_enroll/jquery.tagit.css"><style>
+<link rel="stylesheet" type="text/css" href="yoSeksa/css/recipe_enroll/jquery.tagit.css">
+<style type="text/css">
 .note-editor .note-dropzone { opacity: 0 !important; }
 ul.tagit {
     width : 620px;

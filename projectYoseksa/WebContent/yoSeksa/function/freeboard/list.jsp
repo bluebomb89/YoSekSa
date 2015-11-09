@@ -29,13 +29,14 @@
 <!-- 댓글 css 파일 네임 변경 -->
 <link rel="stylesheet" href="yoSeksa/css/list/ktwzk0vhtx.css" type="text/css">
 <link rel="stylesheet" href="yoSeksa/css/list/melonweb_album.css" type="text/css">
-<link rel="stylesheet" href="yoSeksa/css/list/main.min.css?ver=9dbd7d094ab56a14e3b2a984b20ea357">
-<link rel="stylesheet" href="yoSeksa/css/list//app.css?ver=4.0.8">
+
+
 <link href="yoSeksa/css/listwrite.css" rel="stylesheet">
 <link rel="stylesheet" href="yoSeksa/css/list/ggong.css" type="text/css">
-<link rel="stylesheet" href="yoSeksa/css/list/onepage_201401.css" type="text/css">
-<!-- //footer -->
 
+
+<link rel="stylesheet" href="yoSeksa/css/list/main.min.css?ver=9dbd7d094ab56a14e3b2a984b20ea357">
+<!-- //footer -->
 <script src="yoSeksa/js/saved_resource"></script>
 <script src="yoSeksa/js/modernizr.custom.js"></script>
 <script src="yoSeksa/js/responsiveslides.min.js"></script>
@@ -402,14 +403,11 @@ $(function(){
 					<div class="gotaquestion">
 						<a class="anchorfix" id="questions"></a>
 						<li id="text-5" class="widget widget_text">
-							<h3>Get in Touch</h3> <img
-							src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/separator.png"
-							align="absbottom"
-							;="" style="margin-bottom: 20px; margin-left: 140px;">
+							<h3>Get in Touch</h3> 
+							<img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/separator.png" align="bottom" style="margin-bottom: 20px; margin-left: 140px;">
 							<div class="textwidget">
 								<div style="position: absolute;">
-									<img
-										src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/phone.png">
+									<img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/phone.png">
 									<div>
 										<div>Seoul: +00 (010) 0000 0000</div>
 
@@ -421,8 +419,8 @@ $(function(){
 									style="margin-bottom: 100px; margin-top: 100px;"> <a
 									href="mailto:yo@sek.sa" style="margin-left: 5px;">Yo@sek.sa</a>
 							</div>
-					</div>
-					</li>
+						</li>
+					</div>					
 				</div>
 				<div class="social-links">
 					<!--<a target="_blank" href="http://www.facebook.com/InfinVision"><img width="29" height="60" alt="facebook" src=" http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/f-social-facebook.png" ></a>
@@ -431,7 +429,6 @@ $(function(){
 			<a target="_blank" href="https://plus.google.com/+Infinvision"><img width="29" height="60" alt="googleplus" src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/f-social-google.png"></a>-->
 				</div>
 			</div>
-	</div>
 	</footer>
 	</div>
 	<div class="blacky-back" style="padding-bottom: 350px;">
@@ -451,8 +448,7 @@ $(function(){
 
 			</ul>
 		</div>
-		<div class="f-copy">© Copyright 2014 InfinVision Ltd. All rights
-			reserved.</div>
+		<div class="f-copy">© Copyright 2014 InfinVision Ltd. All rights reserved.</div>
 	</div>
 </body>
 </html>

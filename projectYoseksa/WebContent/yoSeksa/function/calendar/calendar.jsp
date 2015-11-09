@@ -1,6 +1,7 @@
 <%@page session="true" import="java.util.*" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
 // Global Vars
 int action = 0;  // incoming request for moving calendar up(1) down(0) for month
@@ -218,6 +219,23 @@ function addRecipeOnTable(year,month,day)
                   }
 %> 
       <td style="<%=bgStyle %>" align="left" valign="top">&nbsp;<a href="#" onclick="addRecipeOnTable(<%=currYear %>,<%=currMonth+1 %>,<%=dispDay %>)"><%=dispDay%></a><br>
+      
+
+
+	<c:forEach var="dlist" items="${dlist }">
+	
+		
+<%-- 		<c:if test="${dlist. }">
+		
+		</c:if> --%>
+		
+		${dlist.diary_bld }
+		${dlist.diary_regdate }
+	
+	</c:forEach>
+	
+
+
       </td>
 <%
                count += 1;
