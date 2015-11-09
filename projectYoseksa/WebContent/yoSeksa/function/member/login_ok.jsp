@@ -21,6 +21,6 @@
 		</script>
 	</c:when>
 	<c:otherwise>
-		<c:redirect url="yoseksa.sek"/>
+		<c:redirect url="../../../yoseksa.sek"/>
 	</c:otherwise>
 </c:choose>
