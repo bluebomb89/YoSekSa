@@ -92,11 +92,11 @@ function btnDown(){
 				<c:forEach begin="0" var="img" items="${imglist }" end="9"  varStatus="status" >
 				<a id="link" href="recipeview.sek?link=${linklist[status.index] }&img=${img}&title=${titlelist[status.index]}">
 				<div class="item col-sm-3 col-md-3 mangae" >
-	   				<div class="thumbnail" style=" width: 232px; height: 262px; padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;">
+	   				<div class="thumbnail" style=" width: 232px; height: 280px; padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;">
 						
 						<img src="${img}" " style="height: 200px;width: 250px;" class="thumbna">
 						<div class="caption">
-							<h5>${titlelist[status.index]}</h5>
+							<strong>${titlelist[status.index]}</strong>
 		               </div>
 					</div>
 				</div>
@@ -107,10 +107,10 @@ function btnDown(){
 				<c:forEach begin="10" var="img" items="${imglist }" end="19"  varStatus="status" >
 				<a id="link" href="recipeview.sek?link=${linklist[status.index] }&img=${img}&title=${titlelist[status.index]}">
 				<div class="item col-sm-3 col-md-3 mangae">
-	   				<div class="thumbnail" style=" width: 232px; height: 262px; padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;">
+	   				<div class="thumbnail" style=" width: 232px; height: 280px; padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;">
 						<img src="${img}" " style="height: 200px;width: 250px;" class="thumbna">
 						<div class="caption">
-							<h5>${titlelist[status.index]}</h5>
+							<strong>${titlelist[status.index]}</strong>
 		               </div>
 					</div>
 				</div>

@@ -2697,7 +2697,7 @@ button.close {
   vertical-align: middle;
   cursor: pointer;
   background-color: #f3f3f3;
-  color: #3fbf79;
+  color: #000000
   *background-color: #f3f3f3;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
 
