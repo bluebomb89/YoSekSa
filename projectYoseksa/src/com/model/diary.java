@@ -18,13 +18,23 @@ import com.recipedao.RecipeDTO;
 public class diary {
 	@RequestMapping("diary.sek")
 	public String freeboard(HttpServletRequest req) throws IOException{
+		
+		
+		String currYear=req.getParameter("currYear");
+		String currMonth=req.getParameter("currMonth");		
+		String action=req.getParameter("action");
+
+		
+		req.setAttribute("year", currYear);
+		req.setAttribute("month", currMonth);
+		req.setAttribute("action", action);
+		
 		req.setAttribute("jsp",	"../calendar/calendar.jsp");
 				
 		List<DiaryDTO> dlist=DiaryDAO.diaryListData();		
 		req.setAttribute("dlist", dlist);
 		
 		return "yoSeksa/function/main/main.jsp";
-		/*return "yoSeksa/function/calendar/calendar.jsp";*/
 		
 	}
 	 @RequestMapping("diary_search.sek")
