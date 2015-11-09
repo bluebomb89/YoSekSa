@@ -16,7 +16,7 @@ public class Member {
 	@RequestMapping("member_insert.sek")
 	public String member_insert(HttpServletRequest req) throws IOException{
 		try{
-			req.setCharacterEncoding("EUC-KR");
+			req.setCharacterEncoding("UTF-8");
 			req.setAttribute("title", "회원가입");
 			req.setAttribute("jsp", "../yoSeksa/function/member/join.jsp");
 			
@@ -29,7 +29,7 @@ public class Member {
 	@RequestMapping("member_insert_ok.sek")
 	public String member_insert_ok(HttpServletRequest req) throws IOException{
 		
-		req.setCharacterEncoding("EUC-KR");
+		req.setCharacterEncoding("UTF-8");
 		try{
 		String member_id=req.getParameter("member_id");
 		String nickname=req.getParameter("nickname");
@@ -48,7 +48,7 @@ public class Member {
 			System.out.println(ex.getMessage());
 		}
 		
-		return "main.sek";
+		return "yoseksa.sek";
 	}
 	
 	@RequestMapping("yoSeksa/function/member/member_login.sek")
@@ -96,5 +96,10 @@ public class Member {
 		HttpSession session=req.getSession();
 		session.invalidate();
 		return "main.sek";
+	}
+	@RequestMapping("join.sek")
+	public String join(HttpServletRequest req) throws IOException{
+		req.setAttribute("jsp",	"../member/join.jsp");
+		return "yoSeksa/function/main/main.jsp";
 	}
 }
