@@ -10,8 +10,8 @@
 <link href="yoSeksa/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="yoSeksa/css/component.css" rel="stylesheet" type="text/css"  />
 <link rel="stylesheet" href="yoSeksa/css/list/onepage_201401.css" type="text/css">
-<link rel="stylesheet" href="yoSeksa/css/list/app.css?ver=4.0.8">
-<link href="yoSeksa/css/list/loginform.css" type="text/css" rel="stylesheet" media="all">
+<link rel="stylesheet" href="yoSeksa/css/list//app.css?ver=4.0.8">
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 
 
 <!-- script -->
