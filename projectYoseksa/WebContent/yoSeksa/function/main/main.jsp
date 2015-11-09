@@ -51,7 +51,7 @@ if (confirm("회원만 사용 가능한 기능입니다")== true)
 else		
 			{   
     		
-				return "yoSeksa.sek;"
+				return "yoSeksa/main/main.jsp";
 			}
 }
 //-->
@@ -67,6 +67,7 @@ $(function(){
 })
 </script>
 <!-- 가입모달 끝 -->
+
 
 </head>
 
@@ -240,20 +241,22 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 						<a class="anchorfix" id="questions"></a>
 						<li id="text-5" class="widget widget_text">
 							<h3>Get in Touch</h3> 
-							<img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/separator.png" align="bottom" style="margin-bottom: 20px; margin-left: 140px;">
+							<img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/separator.png" align="bottom" style="margin-bottom: 20px; margin-left: 120px;">
 							<div class="textwidget">
-								<div style="position: absolute;">
+								
+								<div>
 									<img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/phone.png">
-									<div>
-										<div>Seoul: +00 (010) 0000 0000</div>
+									
+									
+											&nbsp;Seoul: +00 (010) 0000 0000
 
-										<div>Sinchon:+00 (010) 0000 0000</div>
-									</div>
+											<div style="margin-left: 45px;">Sinchon:+00 (010) 0000 0000</div>
+								</div>	
+								
+								<div style="margin-top: 3px;">
+								<img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/bigemail.png"> 
+									<a href="mailto:yo@sek.sa" style="margin-left: 3px;">Yo@sek.sa</a>
 								</div>
-								<img
-									src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/bigemail.png"
-									style="margin-bottom: 100px; margin-top: 100px;"> <a
-									href="mailto:yo@sek.sa" style="margin-left: 5px;">Yo@sek.sa</a>
 							</div>
 						</li>
 					</div>					
@@ -267,7 +270,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 			</div>
 	</footer>
 	</div>
-	<div class="blacky-back" style="padding-bottom: 350px;">
+	<div class="blacky-back" style="padding-bottom: 130px;">
 		<div class="f-menu">
 			<ul id="menu-primary-navigation-1" class="menu">
 				<li class="active menu-home"><a href="/">Home</a></li>
