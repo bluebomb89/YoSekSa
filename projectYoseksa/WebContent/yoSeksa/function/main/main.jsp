@@ -8,7 +8,9 @@
 <title></title>
 <link href="yoSeksa/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="yoSeksa/css/component.css" rel="stylesheet" type="text/css"  />
-<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+<link rel="stylesheet" href="yoSeksa/css/list/onepage_201401.css" type="text/css">
+<link rel="stylesheet" href="yoSeksa/css/list/app.css?ver=4.0.8">
+<link href="yoSeksa/css/list/loginform.css" type="text/css" rel="stylesheet" media="all">
 <!-- script -->
 <script type="text/javascript">
 $(function(){
@@ -84,7 +86,50 @@ $(function(){
 						<li class="login">
 							<a href="yoSeksa/function/member/login.jsp" title="로그인"><img src="yoSeksa/images/Login.gif" onmouseover="this.src='yoSeksa/images/Login2.gif';" onmouseout="this.src='yoSeksa/images/Login.gif';" style="width: 30px;"></a>
 						</li>
+						<!-- 클릭 모달 -->
+						<!-- Large modal -->
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
 						
+						<div class="loginmodal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+						  <div class="modal-dialog modal-lg">
+						  						<div id="login-wrapper">
+						<h1>LOGIN</h1>
+						<!-- 로그인 -->
+							<form name="frmMem" id="login_frm" method="post" action="member_login.sek">
+								<div id="login-formA" class="login-box">
+									<label for="">아이디</label>
+										<input type="text" name="sUID" id="member_id" maxlength="16">
+									<label for="">비밀번호</label>
+										<input type="password" name="sUPW" id="member_pw" maxlength="32">
+										<input type="button" class="btn-typeB3" id="login_Btn" value="Login" style="font-size: 9pt;">
+								</div>
+							</form>
+							
+							<form name="frmJoin" method="post" action="/join/">
+								<input type="hidden" name="sRU" value="">
+							</form>
+							
+							<form name="frmGO" method="post" action="https://www.29cm.co.kr/login/procGuestOrderLogin.asp" onsubmit="return false;">
+								<input type="hidden" name="sRU" value="order/CartList.asp">
+								<input type="hidden" name="sRP" value="">
+									<div id="login-formC" class="login-box">
+										<img src="yoSeksa/images/Warring.gif" style="width: 30px;">
+											<p>비회원시 일정관리 및 나만의 레시피 혜택을 받으실 수 없습니다.</p>
+												<button onclick="popNonmember()">비회원 둘러보기</button>
+									</div>
+							</form>
+							<div class="login-link">
+								<ul>
+									<li><a href="/login/forget.asp">아이디 찾기</a></li>
+									<li><a href="/login/forget.asp">비밀번호 찾기</a></li>
+									<li><a href="javascript:jsJoin();">회원가입</a></li>
+								</ul>
+							</div>
+					</div>
+						  </div>
+
+						</div>
+						<!--  -->
 						<li class="fun">
 						<a href="/mypage/heart/product.asp" title="즐겨찾는 음식"><img src="yoSeksa/images/fun.gif" onmouseover="this.src='yoSeksa/images/fun2.gif';" onmouseout="this.src='yoSeksa/images/fun.gif';" style=" width: 30px;" value="삭제하기" onclick="button_event();"></a>
 						</li>
@@ -198,6 +243,72 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <div class="footer-color-wrap">
+		<footer class="content-info container" role="contentinfo"
+			style="left: 120px;">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="howmuch">
+						<li id="text-4" class="widget widget_text">
+							<h3>About Us</h3> <img
+							src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/separator.png"
+							align="bottom"
+							style="margin-bottom: 20px; margin-left: 140px;">
+							<div class="textwidget">
+								Yosek<em>Yosek</em>Yosek<br>Yosek
+							</div>
+						</li>
+					</div>
+					<div class="gotaquestion">
+						<a class="anchorfix" id="questions"></a>
+						<li id="text-5" class="widget widget_text">
+							<h3>Get in Touch</h3> 
+							<img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/separator.png" align="bottom" style="margin-bottom: 20px; margin-left: 140px;">
+							<div class="textwidget">
+								<div style="position: absolute;">
+									<img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/phone.png">
+									<div>
+										<div>Seoul: +00 (010) 0000 0000</div>
+
+										<div>Sinchon:+00 (010) 0000 0000</div>
+									</div>
+								</div>
+								<img
+									src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/bigemail.png"
+									style="margin-bottom: 100px; margin-top: 100px;"> <a
+									href="mailto:yo@sek.sa" style="margin-left: 5px;">Yo@sek.sa</a>
+							</div>
+						</li>
+					</div>					
+				</div>
+				<div class="social-links">
+					<!--<a target="_blank" href="http://www.facebook.com/InfinVision"><img width="29" height="60" alt="facebook" src=" http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/f-social-facebook.png" ></a>
+			<a target="_blank" href="http://twitter.com/infinvision"><img width="29" height="60" alt="twitter" src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/f-social-twitter.png"></a>
+			<a target="_blank" href="http://www.linkedin.com/company/infinvision"><img width="29" height="60" alt="linkedin" src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/f-social-linkedin.png"></a>
+			<a target="_blank" href="https://plus.google.com/+Infinvision"><img width="29" height="60" alt="googleplus" src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/f-social-google.png"></a>-->
+				</div>
+			</div>
+	</footer>
+	</div>
+	<div class="blacky-back" style="padding-bottom: 350px;">
+		<div class="f-menu">
+			<ul id="menu-primary-navigation-1" class="menu">
+				<li class="active menu-home"><a href="/">Home</a></li>
+				<li class="menu-divider">/</li>
+				<li class="menu-projects"><a href="/projects/">Projects</a></li>
+				<li class="menu-divider">/</li>
+				<li class="menu-workshops-briefings"><a href="#">Workshops
+						&amp; Briefings</a></li>
+				<li class="menu-divider">/</li>
+				<li class="menu-about"><a href="/about/">About</a></li>
+				<li class="menu-divider">/</li>
+				<li class="menu-ideas"><a href="/blog/">Ideas</a></li>
+				<li class="menu-divider">/</li>
+
+			</ul>
+		</div>
+		<div class="f-copy">© Copyright 2014 InfinVision Ltd. All rights reserved.</div>
+	</div>
 
 </body>
 </html>

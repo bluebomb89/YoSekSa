@@ -74,6 +74,7 @@ span.glyphicon.glyphicon-search{
 	top: 250px;
 }
 .form-group .col-sm-10{
+	margin-right: 50px;
 	width: 350px;
 }
 
@@ -83,6 +84,9 @@ span.glyphicon.glyphicon-search{
     margin-bottom: 22px;
     background-color: rgba(245, 245, 245, 0);
     border-top: 1px solid rgba(229, 229, 229, 0);
+}
+.body{
+	    height: inherit;
 }
 
 
