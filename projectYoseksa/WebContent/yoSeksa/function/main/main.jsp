@@ -6,11 +6,14 @@
 <head>
 <meta charset="UTF-8">
 <title></title>
+
 <link href="yoSeksa/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="yoSeksa/css/component.css" rel="stylesheet" type="text/css"  />
 <link rel="stylesheet" href="yoSeksa/css/list/onepage_201401.css" type="text/css">
 <link rel="stylesheet" href="yoSeksa/css/list/app.css?ver=4.0.8">
 <link href="yoSeksa/css/list/loginform.css" type="text/css" rel="stylesheet" media="all">
+
+
 <!-- script -->
 <script type="text/javascript">
 $(function(){
@@ -48,7 +51,7 @@ if (confirm("회원만 사용 가능한 기능입니다")== true)
 else		
 			{   
     		
-				return "yoSeksa.sek;"
+				return "yoSeksa/main/main.jsp";
 			}
 }
 //-->
@@ -65,6 +68,7 @@ $(function(){
 </script>
 <!-- 가입모달 끝 -->
 
+
 </head>
 
 <body  class="cbp-spmenu-push">
@@ -73,64 +77,31 @@ $(function(){
                <button id="showLeftPush"><img src="yoSeksa/images/menu-icon.png" alt=""></button>
          </section>
          
+   
+         
+         
          <!-- 꽁 -->
+         
+        
+
          <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
        	   <h3>menu</h3>
        	  <nav id="side-nav" style=" margin-top: 240px;">
 			<div class="search-wrap">
 			</div>
 				<ul class="nav">
+				
+
+				
 					
 								<!-- <img src="yoSeksa/images/Login.gif" style=" width: 30px;"> -->
 							<!-- http://localhost:8080/projectYoseksa/yoSeksa/function/member/login.jsp -->
 						<li class="login">
 							<a href="yoSeksa/function/member/login.jsp" title="로그인"><img src="yoSeksa/images/Login.gif" onmouseover="this.src='yoSeksa/images/Login2.gif';" onmouseout="this.src='yoSeksa/images/Login.gif';" style="width: 30px;"></a>
 						</li>
-						<!-- 클릭 모달 -->
-						<!-- Large modal -->
-						<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
-						
-						<div class="loginmodal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-						  <div class="modal-dialog modal-lg">
-						  						<div id="login-wrapper">
-						<h1>LOGIN</h1>
-						<!-- 로그인 -->
-							<form name="frmMem" id="login_frm" method="post" action="member_login.sek">
-								<div id="login-formA" class="login-box">
-									<label for="">아이디</label>
-										<input type="text" name="sUID" id="member_id" maxlength="16">
-									<label for="">비밀번호</label>
-										<input type="password" name="sUPW" id="member_pw" maxlength="32">
-										<input type="button" class="btn-typeB3" id="login_Btn" value="Login" style="font-size: 9pt;">
-								</div>
-							</form>
-							
-							<form name="frmJoin" method="post" action="/join/">
-								<input type="hidden" name="sRU" value="">
-							</form>
-							
-							<form name="frmGO" method="post" action="https://www.29cm.co.kr/login/procGuestOrderLogin.asp" onsubmit="return false;">
-								<input type="hidden" name="sRU" value="order/CartList.asp">
-								<input type="hidden" name="sRP" value="">
-									<div id="login-formC" class="login-box">
-										<img src="yoSeksa/images/Warring.gif" style="width: 30px;">
-											<p>비회원시 일정관리 및 나만의 레시피 혜택을 받으실 수 없습니다.</p>
-												<button onclick="popNonmember()">비회원 둘러보기</button>
-									</div>
-							</form>
-							<div class="login-link">
-								<ul>
-									<li><a href="/login/forget.asp">아이디 찾기</a></li>
-									<li><a href="/login/forget.asp">비밀번호 찾기</a></li>
-									<li><a href="javascript:jsJoin();">회원가입</a></li>
-								</ul>
-							</div>
-					</div>
-						  </div>
-
-						</div>
-						<!--  -->
-						<li class="fun">
+		
+						 						
+												<li class="fun">
 						<a href="/mypage/heart/product.asp" title="즐겨찾는 음식"><img src="yoSeksa/images/fun.gif" onmouseover="this.src='yoSeksa/images/fun2.gif';" onmouseout="this.src='yoSeksa/images/fun.gif';" style=" width: 30px;" value="삭제하기" onclick="button_event();"></a>
 						</li>
 								
@@ -263,20 +234,22 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 						<a class="anchorfix" id="questions"></a>
 						<li id="text-5" class="widget widget_text">
 							<h3>Get in Touch</h3> 
-							<img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/separator.png" align="bottom" style="margin-bottom: 20px; margin-left: 140px;">
+							<img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/separator.png" align="bottom" style="margin-bottom: 20px; margin-left: 120px;">
 							<div class="textwidget">
-								<div style="position: absolute;">
+								
+								<div>
 									<img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/phone.png">
-									<div>
-										<div>Seoul: +00 (010) 0000 0000</div>
+									
+									
+											&nbsp;Seoul: +00 (010) 0000 0000
 
-										<div>Sinchon:+00 (010) 0000 0000</div>
-									</div>
+											<div style="margin-left: 45px;">Sinchon:+00 (010) 0000 0000</div>
+								</div>	
+								
+								<div style="margin-top: 3px;">
+								<img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/bigemail.png"> 
+									<a href="mailto:yo@sek.sa" style="margin-left: 3px;">Yo@sek.sa</a>
 								</div>
-								<img
-									src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/bigemail.png"
-									style="margin-bottom: 100px; margin-top: 100px;"> <a
-									href="mailto:yo@sek.sa" style="margin-left: 5px;">Yo@sek.sa</a>
 							</div>
 						</li>
 					</div>					
@@ -290,7 +263,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 			</div>
 	</footer>
 	</div>
-	<div class="blacky-back" style="padding-bottom: 350px;">
+	<div class="blacky-back" style="padding-bottom: 130px;">
 		<div class="f-menu">
 			<ul id="menu-primary-navigation-1" class="menu">
 				<li class="active menu-home"><a href="/">Home</a></li>

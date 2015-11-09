@@ -59,14 +59,17 @@ public class Member {
 		String result="";
 		System.out.println("아이디갯수");
 		//아래부터 null값
+		System.out.println("멤버 아이디" + member_id);
 		int count=MemberDAO.memberIdCount(member_id);
-
+		System.out.println("1");
 		if(count==0)
 		{
 			result="NOID";
+			System.out.println("2");
 		}
 		else
 		{
+			System.out.println("3");
 			MemberDTO d=MemberDAO.memberGetInfo(member_id);
 			if(member_pw.equals(d.getMember_pw()))
 			{
@@ -83,8 +86,8 @@ public class Member {
 		}
 		req.setAttribute("result", result);
 		
-		return "main.sek";
-		//return "../member/login_ok.jsp";
+		//return "main.sek";
+		return "../member/login_ok.jsp";
 	}
 	
 	@RequestMapping("member_logout.sek")
