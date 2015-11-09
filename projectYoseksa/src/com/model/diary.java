@@ -18,7 +18,7 @@ import com.recipedao.RecipeDTO;
 public class diary {
 	@RequestMapping("diary.sek")
 	public String freeboard(HttpServletRequest req) throws IOException{
-		req.setAttribute("jsp",	"../calendar/cal_iframe.html");
+		req.setAttribute("jsp",	"../calendar/calendar.jsp");
 				
 		List<DiaryDTO> dlist=DiaryDAO.diaryListData();		
 		req.setAttribute("dlist", dlist);

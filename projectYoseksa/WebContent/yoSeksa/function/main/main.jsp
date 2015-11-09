@@ -6,11 +6,14 @@
 <head>
 <meta charset="UTF-8">
 <title></title>
+
 <link href="yoSeksa/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="yoSeksa/css/component.css" rel="stylesheet" type="text/css"  />
 <link rel="stylesheet" href="yoSeksa/css/list/onepage_201401.css" type="text/css">
 <link rel="stylesheet" href="yoSeksa/css/list/app.css?ver=4.0.8">
 <link href="yoSeksa/css/list/loginform.css" type="text/css" rel="stylesheet" media="all">
+
+
 <!-- script -->
 <script type="text/javascript">
 $(function(){
@@ -73,64 +76,31 @@ $(function(){
                <button id="showLeftPush"><img src="yoSeksa/images/menu-icon.png" alt=""></button>
          </section>
          
+   
+         
+         
          <!-- 꽁 -->
+         
+        
+
          <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
        	   <h3>menu</h3>
        	  <nav id="side-nav" style=" margin-top: 240px;">
 			<div class="search-wrap">
 			</div>
 				<ul class="nav">
+				
+
+				
 					
 								<!-- <img src="yoSeksa/images/Login.gif" style=" width: 30px;"> -->
 							<!-- http://localhost:8080/projectYoseksa/yoSeksa/function/member/login.jsp -->
 						<li class="login">
 							<a href="yoSeksa/function/member/login.jsp" title="로그인"><img src="yoSeksa/images/Login.gif" onmouseover="this.src='yoSeksa/images/Login2.gif';" onmouseout="this.src='yoSeksa/images/Login.gif';" style="width: 30px;"></a>
 						</li>
-						<!-- 클릭 모달 -->
-						<!-- Large modal -->
-						<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
-						
-						<div class="loginmodal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-						  <div class="modal-dialog modal-lg">
-						  						<div id="login-wrapper">
-						<h1>LOGIN</h1>
-						<!-- 로그인 -->
-							<form name="frmMem" id="login_frm" method="post" action="member_login.sek">
-								<div id="login-formA" class="login-box">
-									<label for="">아이디</label>
-										<input type="text" name="sUID" id="member_id" maxlength="16">
-									<label for="">비밀번호</label>
-										<input type="password" name="sUPW" id="member_pw" maxlength="32">
-										<input type="button" class="btn-typeB3" id="login_Btn" value="Login" style="font-size: 9pt;">
-								</div>
-							</form>
-							
-							<form name="frmJoin" method="post" action="/join/">
-								<input type="hidden" name="sRU" value="">
-							</form>
-							
-							<form name="frmGO" method="post" action="https://www.29cm.co.kr/login/procGuestOrderLogin.asp" onsubmit="return false;">
-								<input type="hidden" name="sRU" value="order/CartList.asp">
-								<input type="hidden" name="sRP" value="">
-									<div id="login-formC" class="login-box">
-										<img src="yoSeksa/images/Warring.gif" style="width: 30px;">
-											<p>비회원시 일정관리 및 나만의 레시피 혜택을 받으실 수 없습니다.</p>
-												<button onclick="popNonmember()">비회원 둘러보기</button>
-									</div>
-							</form>
-							<div class="login-link">
-								<ul>
-									<li><a href="/login/forget.asp">아이디 찾기</a></li>
-									<li><a href="/login/forget.asp">비밀번호 찾기</a></li>
-									<li><a href="javascript:jsJoin();">회원가입</a></li>
-								</ul>
-							</div>
-					</div>
-						  </div>
-
-						</div>
-						<!--  -->
-						<li class="fun">
+		
+						 						
+												<li class="fun">
 						<a href="/mypage/heart/product.asp" title="즐겨찾는 음식"><img src="yoSeksa/images/fun.gif" onmouseover="this.src='yoSeksa/images/fun2.gif';" onmouseout="this.src='yoSeksa/images/fun.gif';" style=" width: 30px;" value="삭제하기" onclick="button_event();"></a>
 						</li>
 								
