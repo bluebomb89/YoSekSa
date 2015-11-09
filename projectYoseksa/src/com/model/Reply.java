@@ -86,7 +86,35 @@ public class Reply {
 		req.setAttribute("rvdto", temp);
 		req.setAttribute("rcurpage", rcurpage);
 		return "yoSeksa/function/recipe/recipe_reply.jsp";
-
 	}
-
+	@RequestMapping("reply_view.sek")
+	public String reply_re(HttpServletRequest req){
+		
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

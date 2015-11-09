@@ -3,6 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
+<script src="yoSeksa/js/jquery.min.js"></script>
 <script type="text/javascript">
 $(function(){
 	$('.btn-n').click(function(){
@@ -12,8 +13,14 @@ $(function(){
 		var param="recipe_no="+recipe_no+"&rpage="+rpage;
 		sendMessage("GET", "reply_view.sek", param, reply_view);
 	});
-	$('#reply_rv').hiden();
+	$('#re').click(function(){
+		alert("댓글 클릭");
+	});
 });
+function reply_reBtn(){
+	var recipe_no=$('#recipe_no').val();
+	sendMessage("GET", "recipe_reply.sek", param, reply_coment);
+}
 </script>
  <div class="view_reply">
         <div class="reply_tit">의견 <span id="recipeCommentListCount">${rtotal }</span></div>
@@ -39,16 +46,25 @@ $(function(){
 	        			<h4 class="media-heading">
 	       			<b class="info_name_f">${i.reply_nickname }</b><fmt:formatDate value="${i.reply_date}" pattern="yyyy년 MM월 dd일"/></h4>
 	       			${i.reply_content } &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="댓글">
-	       			<div id="reply_rv">
-		       			<div class="media-left">
-		        			<img class="media-object" src="../recipe/zxcvvxzcvcxv_files/63a6f87567ba070ea8de595e04851b011.jpg" data-holder-rendered="true">
-		        		</div>
-		    		 	<div class="media-body">
-		        			<h4 class="media-heading">
-		       			<b class="info_name_f">댓글 닉네임</b><%-- <fmt:formatDate value="${i.reply_date}" pattern="yyyy년 MM월 dd일"/> --%>댓글 날짜</h4>
-		       			댓글내용 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="댓글">
+	       			<!-- 댓글에 댓글 -->
+					<form id="reply_re" method="post">
+		       			<div id="reply_rv">
+	 				        <div class="input-group">
+					          <textarea id="recipeReply" name="frm[cmt_tx_content]" class="form-control" placeholder="자신만의 비법이 있으신가요?" style="height:100px; width:100%; resize:none;"></textarea>
+					          <span class="input-group-btn">
+					          	<button onclick="reply_reBtn()" id="replyBtna" class="btn btn-default" type="button" style="height:100px; width:100px;"></button>
+					          </span>
+					        </div>
+			       			<div class="media-left">
+			        			<img class="media-object" src="../recipe/zxcvvxzcvcxv_files/63a6f87567ba070ea8de595e04851b011.jpg" data-holder-rendered="true">
+			        		</div>
+			    		 	<div class="media-body">
+			        			<h4 class="media-heading">
+			       			<b class="info_name_f">댓글 닉네임</b><%-- <fmt:formatDate value="${i.reply_date}" pattern="yyyy년 MM월 dd일"/> --%>댓글 날짜</h4>
+			       			댓글내용 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="re" type="button" value="댓글">
+			       			</div>
 		       			</div>
-	       			</div>
+					</form>
 	       			</div>
 	     		</div>
 	      	</div>
