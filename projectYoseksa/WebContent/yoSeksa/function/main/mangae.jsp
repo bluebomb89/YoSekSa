@@ -4,6 +4,39 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<!-- 마우스 오버 이미지 확대 -->
+
+<script type="text/javascript">
+            $(document).ready(function() {
+                  
+                var xOffset = 10;
+                var yOffset = 30;
+ 
+                $(document).on("mouseover",".thumbna",function(e){ //마우스 오버시
+                     
+                    $("body").append("<p id='preview'><img src='"+ $(this).attr("src") +"' width='400px' /></p>"); //보여줄 이미지를 선언                       
+                    $("#preview")
+                        .css("top",(e.pageY - xOffset) + "px")
+                        .css("left",(e.pageX + yOffset) + "px")
+                        .fadeIn("fast"); //미리보기 화면 설정 셋팅
+                });
+                 
+                $(document).on("mousemove",".thumbna",function(e){ //마우스 이동시
+                    $("#preview")
+                        .css("top",(e.pageY - xOffset) + "px")
+                        .css("left",(e.pageX + yOffset) + "px");
+                });
+                 
+                $(document).on("mouseout",".thumbna",function(){ //마우스 아웃시
+                    $("#preview").remove();
+                });
+                  
+            });
+        </script>
+
+<!-- 이미지 확대 끝 -->
+
 <script>
 function btnUp(){
 	/* > 버튼 클릭시 자동번호 증가 */
@@ -28,6 +61,23 @@ function btnDown(){
 }
 </script>
 
+<!-- 마우스오버 스타일 -->
+
+<style>
+	       /* 미리보기 스타일 셋팅 */
+            #preview{
+                z-index: 9999;
+                position:absolute;
+                border:0px solid #ccc;
+                background:#333;
+                padding:1px;
+                display:none;
+                color:#fff;
+            }
+</style>
+
+<!-- 마우스오버 스타일 -->
+
 </head>
 
 <body>
@@ -41,11 +91,12 @@ function btnDown(){
 			<c:if test="${nconfirm==0 }">
 				<c:forEach begin="0" var="img" items="${imglist }" end="9"  varStatus="status" >
 				<a id="link" href="recipeview.sek?link=${linklist[status.index] }&img=${img}&title=${titlelist[status.index]}">
-				<div class="item col-sm-3 col-md-3 mangae">
-	   				<div class="thumbnail">
-						<img src="${img}">
+				<div class="item col-sm-3 col-md-3 mangae" >
+	   				<div class="thumbnail" style=" width: 232px; height: 280px; padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;">
+						
+						<img src="${img}" " style="height: 200px;width: 250px;" class="thumbna">
 						<div class="caption">
-							<h5>${titlelist[status.index]}</h5>
+							<strong>${titlelist[status.index]}</strong>
 		               </div>
 					</div>
 				</div>
@@ -56,18 +107,20 @@ function btnDown(){
 				<c:forEach begin="10" var="img" items="${imglist }" end="19"  varStatus="status" >
 				<a id="link" href="recipeview.sek?link=${linklist[status.index] }&img=${img}&title=${titlelist[status.index]}">
 				<div class="item col-sm-3 col-md-3 mangae">
-	   				<div class="thumbnail">
-						<img src="${img}">
+	   				<div class="thumbnail" style=" width: 232px; height: 280px; padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;">
+						<img src="${img}" " style="height: 200px;width: 250px;" class="thumbna">
 						<div class="caption">
-							<h5>${titlelist[status.index]}</h5>
+							<strong>${titlelist[status.index]}</strong>
 		               </div>
 					</div>
 				</div>
 				</a>
 				</c:forEach>
 			</c:if>
-	    <!-- 버튼 -->
-	    <div class="recipe_btn_group" style="margin: 0 auto;">
+	</div>
+</div>
+		    <!-- 버튼 -->
+	    <div class="recipe_btn_group" align="center" >
 			<div class="recipe_btn" role="group" aria-label="First group">
 				<button type="button" class="btn btn-default" onclick="btnDown()">＜</button>
 				<button type="button" class="btn btn-default" id="btn1" onclick="idcheck1()">${mspage }</button>
@@ -78,7 +131,5 @@ function btnDown(){
 				<button type="button" class="btn btn-default" onclick="btnUp()">＞</button>
 			</div>
 		</div>
-	</div>
-</div>
 </body>
 </html>

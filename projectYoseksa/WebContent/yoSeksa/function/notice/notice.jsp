@@ -130,7 +130,7 @@ $(function(){
                </div>
             </div>
          </c:forEach>
-         <div>
+         <div style=" margin-top: 30px;margin-left: 112px;"> 
               <a href="board_list.do?page=${curpage>1?curpage-1:curpage }"><img src="image/prev_icon.gif"></a>
               &nbsp;
               <a href="board_list.do?page=${curpage<totalpage?curpage+1:curpage }"><img src="image/next_icon.gif"></a>

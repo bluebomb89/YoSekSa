@@ -296,14 +296,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
          
       </div>
       
-      <nav align="center">
-         <li class="pagination" style="margin-top: 80px;">
-            <a href="recipe.sek?page=${curpage>1?curpage-1:curpage }"><img src="images/prev_icon.gif"></a> &nbsp;
-                 <a href="recipe.sek?page=${curpage<totalpage?curpage+1:curpage }"><img src="images/next_icon.gif"></a>&nbsp;&nbsp;
-               ${curpage } page / ${totalpage } pages
-         </li>
-      </nav>
-      
       <div class="recipe_btn_group" style="margin: 0 auto;" align="center">
 			<div class="recipe_btn" role="group" aria-label="First group">
 				<a href="recipe.sek?page=${curpage>1?curpage-1:curpage }">
