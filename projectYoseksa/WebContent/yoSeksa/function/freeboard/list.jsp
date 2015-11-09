@@ -72,27 +72,28 @@ body.modal-open { overflow: inherit; padding-right: 0 !important; }
 $(function(){
 
 	$('#btnSub').click(function(){
-
+		
 		var free_content=$('#free_content').val();
 		if(free_content=="")
 		{
-			alert("내용은 반드시 입력해야 합니다!!");
+			$('#contSpan').text("내용은 반드시 입력해야 합니다!!");
 			$('#free_content').focus();
 			return;
 		}
-		$('#free_content').text("");
+		$('#contSpan').text("");
 		
 		var free_pw=$('#free_pw').val();
 		if(free_pw=="")
 		{
-			alert("비밀번호는 반드시 입력해야 합니다!!");
+			$('#pwdSpan').text("비밀번호는 반드시 입력해야 합니다!!");
 			$('#free_pw').focus();
 			return;
 		}
-		$('#free_pw').text("");
+		$('#pwdSpan').text("");
 		
-		$('#free_write_frm').submit();
+		$('#freewriteForm').submit();
 	});
+	
 	$('#btnCancel').click(function(){
 		history.back();
 	});
@@ -182,26 +183,31 @@ $(function(){
 
 <body class="cbp-spmenu-push">
 	<!-- 민영이는 주석 전까지만 작업 하세요 -->
-	<form name="free_write_frm" id="free_write_frm" method=post action="freeboard_insert_ok.sek">
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: block; margin: 0 auto;">
-		<h4 align="center" style="margin-top: 60px; font-size: 17px; color: #000000">글 작성</h4>
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true"
+		style="display: block; margin: 0 auto;">
+		<h4 align="center"
+			style="margin-top: 60px; font-size: 17px; color: #000000">글 작성</h4>
 		<div class="modal-body" style="padding-bottom: 0px;">
-			<textarea name=board_tx id="free_content" class="form-control" placeholder="내용" style="height: 210px; width: 446px; margin-left: 80px; border: 1px solid #CACACA; background-color: rgb(255, 255, 255);"></textarea>
-			<br> 
+		<form name="freewriteForm" id="freewriteForm" method=post action="freeboard_insert_ok.sek">
+			<textarea name="free_content" id="free_content" class="form-control"
+				placeholder="내용"
+				style="height: 210px; width: 446px; margin-left: 80px; border: 1px solid #CACACA; background-color: rgb(255, 255, 255);"></textarea>
+			<br> <span id="nameSpan" style="color: red; text-align: center"></span>
 			<div class="write_pic2" style="width: 400px; margin-top: 5px;">
+			
 				<!-- 게시글 비밀번호 시작 -->
 				<p>
-					<label for="free_pw">비밀번호</label>
-					<input type=password id="free_pw" name="pwd">
+					<label for="userpwd">비밀번호</label>
+					<input type=password id="free_pw" name="free_pw">
 					<br>
+					<span id="pwdSpan" style="color:red; textalign: center"></span>
 				</p>			
 				<!-- 게시글 비밀번호끝 -->
 			</div>
+		</form>
 		</div>
-	</div>
-	</form>
-		<div class="modal-footer"
-			style="margin-bottom: 20px; margin-right: 70px; padding-top: 0px;">
+		<div class="modal-footer" style="margin-bottom: 20px; margin-right: 70px; padding-top: 0px;">
 			<button type="button" class="btn btn-primary" id="btnSub">등록</button>
 			<button type="button" class="btn btn-default" id="btnCancel" style="background-color: rgba(255, 255, 255, 0);">취소</button>
 		</div>

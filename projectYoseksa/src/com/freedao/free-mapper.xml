@@ -22,13 +22,23 @@
       SELECT COUNT(*) FROM yoseksa_freeboard
     </select>
     <!--  데이터 추가 -->
-    <insert id="freeboardInsert" parameterType="Freeboard">
-      <!-- Sequence -->
+    <!-- <insert id="freeboardInsert" parameterType="Freeboard">
+      Sequence
       <selectKey keyProperty="free_no" resultType="int" order="BEFORE">
         SELECT NVL(MAX(free_no)+1,1) as free_no FROM yoseksa_freeboard
       </selectKey>
       INSERT INTO yoseksa_freeboard VALUES(
         #{board_no},#{free_no},#{member_no},#{free_pw},#{nickname},#{free_content},SYSDATE
+      )
+    </insert> -->
+    
+    <insert id="freeboardInsert" parameterType="Freeboard">
+      <!-- Sequence -->
+      <selectKey keyProperty="free_no" resultType="int" order="BEFORE">
+        SELECT NVL(MAX(free_no)+1,1) as free_no FROM yoseksa_freeboard
+      </selectKey>
+      INSERT INTO yoseksa_freeboard(free_no,free_pw,nickname,free_content) VALUES(
+        #{free_no},#{free_pw},#{nickname},#{free_content}
       )
     </insert>
     
