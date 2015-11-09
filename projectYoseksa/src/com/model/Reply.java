@@ -87,7 +87,7 @@ public class Reply {
 		req.setAttribute("rcurpage", rcurpage);
 		return "yoSeksa/function/recipe/recipe_reply.jsp";
 	}
-	@RequestMapping("reply_view.sek")
+	@RequestMapping("reply_re.sek")
 	public String reply_re(HttpServletRequest req){
 		String recipe_no=req.getParameter("re_recipe_no");
 		String root=req.getParameter("re_reply_no");
@@ -97,10 +97,20 @@ public class Reply {
 		{
 			rPage="1";
 		}
+		System.out.println("댓글에 댓글 넘버"+root);
 		//DB연동
 		ReplylDTO d=new ReplylDTO();
 		d.setRecipe_no(Integer.parseInt(recipe_no));
 		d.setReply_content(reply_content);
+//		HttpSession session=req.getSession();
+//		String id=(String)session.getAttribute("id");
+//		String name=(String)session.getAttribute("name");
+		String reply_nickname="댓글에 댓글 이름";
+		int member_no=1;
+		int board_no=2;
+		d.setReply_nickname(reply_nickname);
+		d.setMember_no(member_no);
+		d.setBoard_no(board_no);
 		// 댓글에댓글 DB
 		ReplylDTO rd=rdao.replyParentInfo(Integer.parseInt(root));
 		rdao.replyStepIncrement(rd);
