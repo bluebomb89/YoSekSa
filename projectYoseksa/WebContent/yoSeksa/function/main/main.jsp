@@ -225,7 +225,10 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 							align="bottom"
 							style="margin-bottom: 20px; margin-left: 140px;">
 							<div class="textwidget">
-								Yosek<em>Yosek</em>Yosek<br>Yosek
+								YosekYosekYosekYosekYosekYosekYosekYosek<em>
+								YosekYosekYosekYosekYosekYosekYosekYosek</em>
+								YosekYosekYosekYosekYosekYosekYosekYosek<br>
+								YosekYosekYosekYosekYosekYosekYosekYosek
 							</div>
 						</li>
 					</div>
@@ -242,7 +245,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 									
 											&nbsp;Seoul: +00 (010) 0000 0000
 
-											<div style="margin-left: 45px;">Sinchon:+00 (010) 0000 0000</div>
+											<div style="margin-left: 45px;">Sinchon: +00 (010) 0000 0000</div>
 								</div>	
 								
 								<div style="margin-top: 3px;">
