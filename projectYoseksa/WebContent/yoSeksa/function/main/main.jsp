@@ -12,7 +12,6 @@
 <link rel="stylesheet" href="yoSeksa/css/list//app.css?ver=4.0.8">
 <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 <!-- script -->
-<<<<<<< HEAD
 <script type="text/javascript">
 $(function(){
    $('#login_Btn').click(function(){
@@ -66,8 +65,7 @@ $(function(){
 </script>
 <!-- 가입모달 끝 -->
 
-=======
->>>>>>> refs/remotes/origin/master
+
 </head>
 
 <body  class="cbp-spmenu-push">

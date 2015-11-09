@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ page trimDirectiveWhitespaces="true" %>
 <%
-	request.setCharacterEncoding("EUC-KR");
+   request.setCharacterEncoding("EUC-KR");
 %>
 <!DOCTYPE HTML>
 <html>
@@ -79,127 +79,127 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 * Visit http://www.dynamicdrive.com/ for full source code
 ***********************************************/
 
-	var enablepersist="on" //Enable saving state of content structure using session cookies? (on/off)
-	var collapseprevious="yes" //Collapse previously open content when opening present? (yes/no)
-	
-	if (document.getElementById){
-		document.write('<style type="text/css">')
-		document.write('.switchcontent{display:none;}')
-		document.write('</style>')
-	}
-	
-	function getElementbyClass(classname){
-		ccollect=new Array()
-		var inc=0
-		var alltags=document.all? document.all : document.getElementsByTagName("*")
-		for (i=0; i<alltags.length; i++){
-		if (alltags[i].className==classname)
-		ccollect[inc++]=alltags[i]
-		}
-	}
-	
-	function contractcontent(omit){
-	var inc=0
-	while (ccollect[inc]){
-		if (ccollect[inc].id!=omit)
-		ccollect[inc].style.display="none"
-		inc++
-		}
-	}
-	
-	function expandcontent(cid){
-	if (typeof ccollect!="undefined"){
-		if (collapseprevious=="yes")
-		contractcontent(cid)
-		document.getElementById(cid).style.display=(document.getElementById(cid).style.display!="block")? "block" : "none"
-		}
-	}
-	
-	function revivecontent(){
-	contractcontent("omitnothing")
-	selectedItem=getselectedItem()
-	selectedComponents=selectedItem.split("|")
-	for (i=0; i<selectedComponents.length-1; i++)
-	document.getElementById(selectedComponents[i]).style.display="block"
-	}
-	
-	function get_cookie(Name) { 
-	var search = Name + "="
-	var returnvalue = "";
-	if (document.cookie.length > 0) {
-		offset = document.cookie.indexOf(search)
-	if (offset != -1) { 
-		offset += search.length
-		end = document.cookie.indexOf(";", offset);
-		if (end == -1) end = document.cookie.length;
-			returnvalue=unescape(document.cookie.substring(offset, end))
-		}
-	}
-	return returnvalue;
-	}
-	
-	function getselectedItem(){
-	if (get_cookie(window.location.pathname) != ""){
-		selectedItem=get_cookie(window.location.pathname)
-		return selectedItem
-	}
-	else
-	return ""
-	}
-	
-	function saveswitchstate(){
-	var inc=0, selectedItem=""
-	while (ccollect[inc]){
-		if (ccollect[inc].style.display=="block")
-		selectedItem+=ccollect[inc].id+"|"
-		inc++
-	}
-	
-	document.cookie=window.location.pathname+"="+selectedItem
-	}
-	
-	function do_onload(){
-		getElementbyClass("switchcontent")
-		if (enablepersist=="on" && typeof ccollect!="undefined")
-			revivecontent()
-	}
-	
-	
-	if (window.addEventListener)
-		window.addEventListener("load", do_onload, false)
-	else if (window.attachEvent)
-		window.attachEvent("onload", do_onload)
-	else if (document.getElementById)
-		window.onload=do_onload
-	
-	if (enablepersist=="on" && document.getElementById)
-		window.onunload=saveswitchstate
-		
-		$(function() {
-	        // submit 될 때, 유효성 검사 기능 수행
-	        $("#join_form").validate({
-	          // 유효성 검사 규칙
-	          rules : {
-	            sender : "required",
-	            receiver : "required",
-	            subject : "required",
-	            content : "required"
-	          },
-	          // 사용자에게 보여질 메시지
-	          messages : {
-	            sender : "보내는 분의 메일 주소를 입력하세요.",
-	            receiver : "받는 분의 메일 주소를 입력하세요.",
-	            subject : "제목을 입력하세요.",
-	            content : "내용을 입력하세요."
-	          }
-	        });
-	      });
+   var enablepersist="on" //Enable saving state of content structure using session cookies? (on/off)
+   var collapseprevious="yes" //Collapse previously open content when opening present? (yes/no)
+   
+   if (document.getElementById){
+      document.write('<style type="text/css">')
+      document.write('.switchcontent{display:none;}')
+      document.write('</style>')
+   }
+   
+   function getElementbyClass(classname){
+      ccollect=new Array()
+      var inc=0
+      var alltags=document.all? document.all : document.getElementsByTagName("*")
+      for (i=0; i<alltags.length; i++){
+      if (alltags[i].className==classname)
+      ccollect[inc++]=alltags[i]
+      }
+   }
+   
+   function contractcontent(omit){
+   var inc=0
+   while (ccollect[inc]){
+      if (ccollect[inc].id!=omit)
+      ccollect[inc].style.display="none"
+      inc++
+      }
+   }
+   
+   function expandcontent(cid){
+   if (typeof ccollect!="undefined"){
+      if (collapseprevious=="yes")
+      contractcontent(cid)
+      document.getElementById(cid).style.display=(document.getElementById(cid).style.display!="block")? "block" : "none"
+      }
+   }
+   
+   function revivecontent(){
+   contractcontent("omitnothing")
+   selectedItem=getselectedItem()
+   selectedComponents=selectedItem.split("|")
+   for (i=0; i<selectedComponents.length-1; i++)
+   document.getElementById(selectedComponents[i]).style.display="block"
+   }
+   
+   function get_cookie(Name) { 
+   var search = Name + "="
+   var returnvalue = "";
+   if (document.cookie.length > 0) {
+      offset = document.cookie.indexOf(search)
+   if (offset != -1) { 
+      offset += search.length
+      end = document.cookie.indexOf(";", offset);
+      if (end == -1) end = document.cookie.length;
+         returnvalue=unescape(document.cookie.substring(offset, end))
+      }
+   }
+   return returnvalue;
+   }
+   
+   function getselectedItem(){
+   if (get_cookie(window.location.pathname) != ""){
+      selectedItem=get_cookie(window.location.pathname)
+      return selectedItem
+   }
+   else
+   return ""
+   }
+   
+   function saveswitchstate(){
+   var inc=0, selectedItem=""
+   while (ccollect[inc]){
+      if (ccollect[inc].style.display=="block")
+      selectedItem+=ccollect[inc].id+"|"
+      inc++
+   }
+   
+   document.cookie=window.location.pathname+"="+selectedItem
+   }
+   
+   function do_onload(){
+      getElementbyClass("switchcontent")
+      if (enablepersist=="on" && typeof ccollect!="undefined")
+         revivecontent()
+   }
+   
+   
+   if (window.addEventListener)
+      window.addEventListener("load", do_onload, false)
+   else if (window.attachEvent)
+      window.attachEvent("onload", do_onload)
+   else if (document.getElementById)
+      window.onload=do_onload
+   
+   if (enablepersist=="on" && document.getElementById)
+      window.onunload=saveswitchstate
+      
+      $(function() {
+           // submit 될 때, 유효성 검사 기능 수행
+           $("#join_form").validate({
+             // 유효성 검사 규칙
+             rules : {
+               sender : "required",
+               receiver : "required",
+               subject : "required",
+               content : "required"
+             },
+             // 사용자에게 보여질 메시지
+             messages : {
+               sender : "보내는 분의 메일 주소를 입력하세요.",
+               receiver : "받는 분의 메일 주소를 입력하세요.",
+               subject : "제목을 입력하세요.",
+               content : "내용을 입력하세요."
+             }
+           });
+         });
 </script>
 </head>
-<body class="body" style="background-image:URL('yoSeksa/images/qna_background.jpg'); height: inherit; overflow: hidden;">
+<body style="background-image:URL('yoSeksa/images/qna_background.jpg')">
 
 
-<div class="container">
+
 <div id="qna_title">
 <span>Q&A를 통해서 궁금증을 해결하세요.</span>
 </div>
@@ -215,106 +215,56 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 <div id="qna_div">
-	<h5 onClick="expandcontent('sc1')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;요섹사는 어떤곳인가요?</span></h5>
-	<div id="sc1" class="switchcontent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<span>
-	요섹사</span>
-	</div>
-	
-	<h5 onClick="expandcontent('sc2')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;아이디를 변경 할 수 있나요?</span></h5>
-	<div id="sc2" class="switchcontent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<span>
-	아이디는 변경이 불가능 합니다.
-	</span>
-	</div>
-	
-	<h5 onClick="expandcontent('sc3')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;회원이 아닐 경우 서비스를 이용 할 수 없나요?</span></h5>
-	<div id="sc3" class="switchcontent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<span>
-	요섹사의 오든 서비스는 회원을 기반으로 제공되고 있습니다.
-	</span>
-	</div>
-	
-	<h5 onClick="expandcontent('sc4')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;검색은 어떻게 하나요?</span></h5>
-	<div id="sc4" class="switchcontent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<span>
-	검색하세요
-	</span>
-	</div>
-	
-	<h5 onClick="expandcontent('sc5')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;레시피 추가는 어디서 하나요?</span></h5>
-	<div id="sc5" class="switchcontent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<span>
-	추가하세요
-	</span>
-	</div>
-	
-	<h5 onClick="expandcontent('sc6')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;회원 정보를 바꿀수 있나요?</span></h5>
-	<div id="sc6" class="switchcontent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<span>
-	네
-	</span>
-	</div>
-	
-	<h5 onClick="expandcontent('sc7')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;여기는?</span></h5>
-	<div id="sc7" class="switchcontent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<span>
-	요섹사
-	</span>
-	</div>
-	<h5 onClick="expandcontent('sc8')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;E-mail보내기</span></h5>
-	<div id="sc8" class="switchcontent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<form class="form-horizontal" method="post" action="yoSeksa/function/QnA/SendMail.jsp">
-        <fieldset>
-          <div class="form-group">
-            <label class="control-label col-sm-2" for="sender" style="width: 110px;">받는주소 <font color='red'>*</font></label>
-            <div class="col-sm-10">
-              <input type="text" name="sender" id="sender" class="form-control" value="iqee9932@naver.com" readonly="readonly"/>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="control-label col-sm-2" for="receiver" style="width: 110px;">보낼주소 <font color='red'>*</font></label>
-            <div class="col-sm-10">
-              <input type="text" name="receiver" id="receiver" class="form-control" placeholder="받는 분의 이메일 주소를 입력하세요." />
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="control-label col-sm-2" for="subject" style="width: 110px;">메일제목<font color='red'> *</font></label>
-            <div class="col-sm-10">
-              <input type="text" name="subject" id="subject" class="form-control" placeholder="이메일의 제목을 입력하세요." />
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="control-label col-sm-2" for="content" style="width: 110px;">내용입력<font color='red'> *</font></label>
-            <div class="col-sm-10">
-              <textarea name="content" id="content" class="ckeditor" style="width:320px; height:150px;"></textarea>
-            </div>
-          </div>
-          <div class="form-actions text-right" style="margin-right: 140px; margin-top: 0px; padding-top: 0px; padding-bottom: 0px; margin-bottom: 0px;">
-            <input type="submit" class="btn btn-primary" value="메일보내기" />
-            <input type="reset" class="btn" value="다시작성" />
-          </div>
-
-        </fieldset>
-      </form>
-	</div>
-</div>
-</div>
-
-<br><br><br>
-
-<!-- <div id="qna_label2">
-<div class="alert alert-info" role="alert"><h5 onClick="expandcontent('email1')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">여러분들이 자주 묻는 질문</span>&nbsp;</span></h5></div>
-	
-	<div id="email1" class="switchcontent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<div class="container">
-
-      <form class="form-horizontal" method="post" action="yoSeksa/function/QnA/SendMail.jsp">
-        <fieldset style="margin-left: 500px; margin-top: 550px;">
-          <div class="form-group">
+   <h5 onClick="expandcontent('sc1')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;요섹사는 어떤곳인가요?</span></h5>
+   <div id="sc1" class="switchcontent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <span>
+   요섹사</span>
+   </div>
+   
+   <h5 onClick="expandcontent('sc2')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;아이디를 변경 할 수 있나요?</span></h5>
+   <div id="sc2" class="switchcontent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <span>
+   아이디는 변경이 불가능 합니다.
+   </span>
+   </div>
+   
+   <h5 onClick="expandcontent('sc3')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;회원이 아닐 경우 서비스를 이용 할 수 없나요?</span></h5>
+   <div id="sc3" class="switchcontent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <span>
+   요섹사의 오든 서비스는 회원을 기반으로 제공되고 있습니다.
+   </span>
+   </div>
+   
+   <h5 onClick="expandcontent('sc4')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;검색은 어떻게 하나요?</span></h5>
+   <div id="sc4" class="switchcontent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <span>
+   검색하세요
+   </span>
+   </div>
+   
+   <h5 onClick="expandcontent('sc5')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;레시피 추가는 어디서 하나요?</span></h5>
+   <div id="sc5" class="switchcontent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <span>
+   추가하세요
+   </span>
+   </div>
+   
+   <h5 onClick="expandcontent('sc6')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;회원 정보를 바꿀수 있나요?</span></h5>
+   <div id="sc6" class="switchcontent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <span>
+   네
+   </span>
+   </div>
+   
+   <h5 onClick="expandcontent('sc7')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;여기는?</span></h5>
+   <div id="sc7" class="switchcontent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <span>
+   요섹사
+   </span>
+   </div>
+   <h5 onClick="expandcontent('sc8')" style="cursor:hand; cursor:pointer"><span><span class="label label-warning">Q</span>&nbsp;E-mail보내기</span></h5>
+   <div id="sc8" class="switchcontent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	      <div class="form-group">
             <label class="control-label col-sm-2" for="sender">보내는주소 <font color='red'>*</font></label>
             <div class="col-sm-10">
               <input type="text" name="sender" id="sender" class="form-control" value="iqee9932@naver.com" readonly="readonly"/>
@@ -348,32 +298,29 @@ margin-bottom: 0px;">
             <input type="submit" class="btn btn-primary" value="메일보내기" />
             <input type="reset" class="btn" value="다시작성" />
           </div>
-
-        </fieldset>
-      </form>
-
-    </div>
-
-<br><br><br>
+   </div>
 </div>
+
+<!-- <div id="qna_label2">
+<div class="alert alert-success" role="alert">1:1문의</div>
 </div> -->
 
 <!-- <div id="email_form_div">
-	<div id="email_form">
-		<input type="text" class="form-control" placeholder="email">
-	</div>
-	<div id="contenet_form">
-		<textarea class="form-control" rows="5" col="4" placeholder="content"></textarea>
-	</div>
-	<div id="button_form">
-		<button type="button" class="btn btn-success">Success</button>
-	</div>
+   <div id="email_form">
+      <input type="text" class="form-control" placeholder="email">
+   </div>
+   <div id="contenet_form">
+      <textarea class="form-control" rows="5" col="4" placeholder="content"></textarea>
+   </div>
+   <div id="button_form">
+      <button type="button" class="btn btn-success">Success</button>
+   </div>
 </div> -->
-<!-- <div class="container">
+<div class="container" style="position: initial;">
 
       <form class="form-horizontal" method="post" action="yoSeksa/function/QnA/SendMail.jsp">
         <fieldset style="margin-left: 500px; margin-top: 550px;">
-          <div class="form-group">
+          <!-- <div class="form-group">
             <label class="control-label col-sm-2" for="sender">보내는주소 <font color='red'>*</font></label>
             <div class="col-sm-10">
               <input type="text" name="sender" id="sender" class="form-control" value="iqee9932@naver.com" readonly="readonly"/>
@@ -406,14 +353,14 @@ margin-bottom: 0px;">
 margin-bottom: 0px;">
             <input type="submit" class="btn btn-primary" value="메일보내기" />
             <input type="reset" class="btn" value="다시작성" />
-          </div>
+          </div> -->
 
         </fieldset>
       </form>
 
     </div>
 
-<br><br><br> -->
+<br><br><br>
 
 
 
