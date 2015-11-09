@@ -18,8 +18,14 @@ $(function(){
 	});
 });
 function reply_reBtn(){
-	var recipe_no=$('#recipe_no').val();
-	sendMessage("GET", "recipe_reply.sek", param, reply_coment);
+	var re_recipe_no=$('#re_recipe_no').val();
+	var re_reply_no=$('#re_reply_no').val();
+	var re_reply_content=$('#re_reply_content').val();
+	var param="re_recipe_no="+re_recipe_no+"&re_reply_no="+re_reply_no+"&re_reply_content="+re_reply_content;
+	sendMessage("GET", "recipe_reply.sek", param, re_reply_coment);
+}
+function re_reply_coment(){
+	
 }
 </script>
  <div class="view_reply">
@@ -37,6 +43,8 @@ function reply_reBtn(){
       </div>
         <c:forEach var="i" items="${rvdto }">
 	        <div id="recipeCommentList_1">
+	        	<input type=hidden id="re_recipe_no" name=bno value="${ i.recipe_no}">
+	        	<input type=hidden id="re_reply_no" name=rno value="${ i.reply_no}">
 	        	<div class="media reply_list">
 	        		<!-- 회원 이미지 등록 -->
 	        		<div class="media-left">
@@ -50,7 +58,7 @@ function reply_reBtn(){
 					<form id="reply_re" method="post">
 		       			<div id="reply_rv">
 	 				        <div class="input-group">
-					          <textarea id="recipeReply" name="frm[cmt_tx_content]" class="form-control" placeholder="자신만의 비법이 있으신가요?" style="height:100px; width:100%; resize:none;"></textarea>
+					          <textarea id="re_reply_content" name="frm[cmt_tx_content]" class="form-control" placeholder="자신만의 비법이 있으신가요?" style="height:100px; width:100%; resize:none;"></textarea>
 					          <span class="input-group-btn">
 					          	<button onclick="reply_reBtn()" id="replyBtna" class="btn btn-default" type="button" style="height:100px; width:100px;"></button>
 					          </span>

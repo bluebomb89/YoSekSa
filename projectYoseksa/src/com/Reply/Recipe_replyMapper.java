@@ -5,6 +5,8 @@ import java.util.List;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.SelectKey;
+import org.apache.ibatis.annotations.Update;
+import org.w3c.dom.stylesheets.LinkStyle;
 
 public interface Recipe_replyMapper  {
 	@SelectKey(before = true, keyProperty = "reply_no", resultType = int.class, statement = {"SELECT NVL(MAX(reply_no)+1,1) as reply_no FROM yoseksa_reply"})
@@ -17,4 +19,8 @@ public interface Recipe_replyMapper  {
 	public List<ReplylDTO> replyView(int recipe_no);
 	@Select("SELECT count(*) from yoseksa_reply where recipe_no=#{recipe_no}")
 	public int replyTotal(int recipe_no);
+	@Select("SELECT group_id,group_step,group_tab FROM reply WHERE recipe_no=#{recipe_no}")
+	public ReplylDTO replyParentInfo(int recipe_no);
+	@Update("UPDATE reply SET group_step=group_step+1 WHERE group_id=#{group_id} AND group_step>#{group_step}")
+	public void replyStepIncrement(ReplylDTO d);
 }

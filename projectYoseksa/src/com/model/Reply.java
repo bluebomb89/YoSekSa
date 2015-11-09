@@ -89,7 +89,27 @@ public class Reply {
 	}
 	@RequestMapping("reply_view.sek")
 	public String reply_re(HttpServletRequest req){
-		
+		String recipe_no=req.getParameter("re_recipe_no");
+		String root=req.getParameter("re_reply_no");
+		String reply_content=req.getParameter("re_reply_content");
+		String rPage=req.getParameter("rpage");
+		if(rPage==null || rPage=="")
+		{
+			rPage="1";
+		}
+		//DB연동
+		ReplylDTO d=new ReplylDTO();
+		d.setRecipe_no(Integer.parseInt(recipe_no));
+		d.setReply_content(reply_content);
+		// 댓글에댓글 DB
+		ReplylDTO rd=rdao.replyParentInfo(Integer.parseInt(root));
+		rdao.replyStepIncrement(rd);
+		d.setGroup_id(rd.getGroup_id());
+		d.setGroup_step(rd.getGroup_step()+1);
+		d.setGroup_tab(rd.getGroup_tab()+1);
+		rdao.replyReInsert(d);
+		rdao.replyDepthIncrement(Integer.parseInt(root));
+		return "yoSeksa/function/recipe/recipe_reply.jsp";
 	}
 }
 
