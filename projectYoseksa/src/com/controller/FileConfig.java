@@ -12,7 +12,7 @@ public class FileConfig {
 //         String path="C:\\Users\\sist\\git\\YoSekSa\\projectYoseksa\\src\\";
 //        홍의경로
 //        홍의경로
-         String path="C:\\Users\\ssd\\git\\YoSekSa\\projectYoseksa\\src\\";
+//         String path="C:\\Users\\ssd\\git\\YoSekSa\\projectYoseksa\\src\\";
 //        승현경로
 //         String path="C:\\Users\\sist\\git\\YoSekSa\\projectYoseksa\\src\\";
 //         String path="C:\\Users\\ssd\\git\\yoseksaProject\\projectYoseksa\\src\\";
@@ -20,9 +20,9 @@ public class FileConfig {
 //         String path="C:\\Users\\sist\\git\\YoSekSa\\projectYoseksa\\src\\";
 //         String path="C:\\Users\\sist\\git\\YoSekSa\\projectYoseksa\\src\\";
 //        태진경로
-//         String path="C:\\Users\\sist\\git\\YoSekSa\\projectYoseksa\\src\\";
+         String path="C:\\Users\\sist\\git\\YoSekSa\\projectYoseksa\\src\\";
 //        우식경로
-         String path="C:\\Users\\sist-77\\git\\YoSekSa\\projectYoseksa\\src\\";
+//         String path="C:\\Users\\sist-77\\git\\YoSekSa\\projectYoseksa\\src\\";
 
          String temp=pack.replace('.', '\\');
          File dir=new File(path+temp);

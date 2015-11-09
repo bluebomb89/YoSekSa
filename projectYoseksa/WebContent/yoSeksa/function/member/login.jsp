@@ -69,9 +69,9 @@ $(function(){
 							<form name="frmMem" id="login_frm" method="post" action="member_login.sek">
 								<div id="login-formA" class="login-box">
 									<label for="">아이디</label>
-										<input type="text" name="sUID" id="member_id" maxlength="16">
+										<input type="text" name="member_id" id="member_id" maxlength="16">
 									<label for="">비밀번호</label>
-										<input type="password" name="sUPW" id="member_pw" maxlength="32">
+										<input type="password" name="member_pw" id="member_pw" maxlength="32">
 										<input type="button" class="btn-typeB3" id="login_Btn" value="Login" style="font-size: 9pt;">
 								</div>
 							</form>
