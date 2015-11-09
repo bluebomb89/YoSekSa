@@ -10,6 +10,7 @@ public class DiaryDTO {
 	private Date diary_date;
 	private Date diary_regdate;
 	private String diary_bld;
+	private String recipe_sub;
 	public int getMgr_no() {
 		return mgr_no;
 	}
@@ -51,6 +52,12 @@ public class DiaryDTO {
 	}
 	public void setDiary_bld(String diary_bld) {
 		this.diary_bld = diary_bld;
+	}
+	public String getRecipe_sub() {
+		return recipe_sub;
+	}
+	public void setRecipe_sub(String recipe_sub) {
+		this.recipe_sub = recipe_sub;
 	}
 
 	
