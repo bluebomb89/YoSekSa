@@ -106,7 +106,7 @@ public class Recipe {
    public String recipe_insert(HttpServletRequest req) throws IOException{
       String enctype="UTF-8";
 //    영권경로
-      String path="C:\\javaDev\\jasb\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\projectYoseksa\\yoSeksa\\contentImg";
+//      String path="C:\\javaDev\\jasb\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\projectYoseksa\\yoSeksa\\contentImg";
 //      승현경로
       String path="C:\\webDev\\project\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\projectYoseksa\\yoSeksa";
 //      태진경로
