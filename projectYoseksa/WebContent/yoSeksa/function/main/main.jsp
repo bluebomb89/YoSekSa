@@ -93,21 +93,19 @@ $(function(){
 						
 						<c:if test="${sessionScope.member_id==null }">
 					  		<li class="login_null">로그인을 해주십시오</li>
+					  		<li class="login">
+							<a href="yoSeksa/function/member/login.jsp" title="로그인"><img src="yoSeksa/images/Login.gif" onmouseover="this.src='yoSeksa/images/Login2.gif';" onmouseout="this.src='yoSeksa/images/Login.gif';" style="width: 30px;"></a>
+						</li>
 				    	</c:if>
 				    	<c:if test="${sessionScope.member_id!=null }">
 				    		
 					  		<li class="login_ok">
 					  		<img src="http://image.melon.co.kr/resource/image/cmt/web/common/noArtist03_54.jpg" width="54" height="54">
 					  		닉네임:${nickname }
-					  		<!-- <input type="button" name="logoutBtn" id="logoutBtn" value="로그아웃"> -->
+					  		<input type="button" name="logoutBtn" id="logoutBtn" value="로그아웃">
 					  		</li>
-					  		
-				    	</c:if>
-						
-						<li class="login">
-							<a href="yoSeksa/function/member/login.jsp" title="로그인"><img src="yoSeksa/images/Login.gif" onmouseover="this.src='yoSeksa/images/Login2.gif';" onmouseout="this.src='yoSeksa/images/Login.gif';" style="width: 30px;"></a>
-						</li>
-							
+
+						</c:if>
 						<li class="fun">
 						<a href="/mypage/heart/product.asp" title="즐겨찾는 음식"><img src="yoSeksa/images/fun.gif" onmouseover="this.src='yoSeksa/images/fun2.gif';" onmouseout="this.src='yoSeksa/images/fun.gif';" style=" width: 30px;" value="삭제하기" onclick="button_event();"></a>
 						</li>
