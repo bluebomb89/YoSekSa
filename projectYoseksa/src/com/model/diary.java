@@ -19,7 +19,13 @@ public class diary {
 	@RequestMapping("diary.sek")
 	public String freeboard(HttpServletRequest req) throws IOException{
 		req.setAttribute("jsp",	"../calendar/cal_iframe.html");
+				
+		List<DiaryDTO> dlist=DiaryDAO.diaryListData();		
+		req.setAttribute("dlist", dlist);
+		
 		return "yoSeksa/function/main/main.jsp";
+		/*return "yoSeksa/function/calendar/calendar.jsp";*/
+		
 	}
 	 @RequestMapping("diary_search.sek")
 	   public String diary_search(HttpServletRequest req) throws IOException{
@@ -72,22 +78,20 @@ public class diary {
 	}
 	 
 	@RequestMapping("diary_search_ok.sek")
-		public String diary_search_ok(HttpServletRequest req) throws IOException{
-			
+		public String diary_search_ok(HttpServletRequest req) throws IOException{	
 			
 			req.setCharacterEncoding("UTF-8");
 			
-			String reno=req.getParameter("reno");
-			String resub=req.getParameter("resub");
-			String strDate=req.getParameter("date");
-			String bld=req.getParameter("bld");
+			String reno=req.getParameter("reno");//검색한 레시피 고유번호
+			String resub=req.getParameter("resub");//레시피 제목
+			String strDate=req.getParameter("date");//사용자가 달력에서 클릭한 날짜
+			String bld=req.getParameter("bld");//아침 점심 저녁
 			
-			DateToString dts=new DateToString();
+			DateToString dts=new DateToString();//사용자가 클릭한 String형 날짜를 Date 형으로 변환
 			
-			Date date=dts.toDate(strDate);
+			Date date=dts.toDate(strDate);// ""
 			
-			System.out.println("dateToString : "+date);
-			
+			System.out.println("dateToString : "+date);	
 			
 			System.out.println("■■■■■■■■■■■■■■RecipeDiraySearchResultOK.java■■■■■■■■■■■■■■■");
 			System.out.println("result_ok board_no: "+ reno);
@@ -95,18 +99,17 @@ public class diary {
 			System.out.println("result_ok date : "+ strDate);
 			System.out.println("result_ok bld : "+ bld);
 			
-/*			Map map=new HashMap();
-			map.put("reno", reno);
-			map.put("date", strDate);
-			map.put("bld", bld);*/
-			
 			DiaryDTO d=new DiaryDTO();
-			d.setBoard_no(Integer.parseInt(reno));
-			d.setDiary_bld(bld);
+			d.setRecipe_no(Integer.parseInt(reno));
+			d.setMember_no(1);;
+			d.setBoard_no(4);
 			d.setDiary_date(date);
-			
+			d.setDiary_bld(bld);	
 			
 			DiaryDAO.diaryInsert(d);
+			
+			
+			
 			return "yoSeksa/function/calendar/add_recipe_popup_search_result_ok.jsp";
 		}	 
 }

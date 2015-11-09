@@ -140,14 +140,54 @@ CREATE TABLE yoseksa_recipe(
    CONSTRAINT yr_fk_member_no FOREIGN KEY(member_no) REFERENCES yoseksa_member(member_no)
 );
 
+
+INSERT INTO yoseksa_recipe VALUES(1,'','','','','','','가','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(2,'','','','','','','나다','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(3,'','','','','','','아도아','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(4,'','','','','','','오소도리','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(5,'','','','','','','일낭','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(6,'','','','','','','흐꼬로','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(7,'','','','','','','가자미','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(8,'','','','','','','나로투','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(9,'','','','','','','소투사','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(10,'','','','','','','자오타','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(11,'','','','','','','나방','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(12,'','','','','','','유루나','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(13,'','','','','','','카오라','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(14,'','','','','','','타로아','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(15,'','','','','','','쇼핑도','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(16,'','','','','','','오나디','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(17,'','','','','','','비비도','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(18,'','','','','','','가나도','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(19,'','','','','','','시돠','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(20,'','','','','','','솨니','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(21,'','','','','','','증고','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(22,'','','','','','','오지침','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(23,'','','','','','','비지침','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(24,'','','','','','','시침','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(25,'','','','','','','보지침','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(26,'','','','','','','시지침','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(27,'','','','','','','도도지침','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(28,'','','','','','','키도라지침','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(29,'','','','','','','키노지침','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(30,'','','','','','','수오다로닏지침','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(31,'','','','','','','대베로지침','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(32,'','','','','','','포타오지침','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(33,'','','','','','','코안지침','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(34,'','','','','','','사지지침','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(35,'','','','','','','제로지침','image',SYSDATE,1,1);
+INSERT INTO yoseksa_recipe VALUES(36,'','','','','','','민카지침','image',SYSDATE,1,1);
+
+
+
 -- 요리순서 사진및 내용 저장
 CREATE TABLE yoseksa_recipec(
-	recipe_no NUMBER,
-	recipec_no NUMBER,
-	recipec_photo VARCHAR2(200) CONSTRAINT yrc_nn_recipec_photo NOT NULL,
-	recipec_cont CLOB CONSTRAINT yrc_nn_recipec_cont NOT NULL,
-	CONSTRAINT yrc_pk_recipec_no PRIMARY KEY(recipec_no),
-	CONSTRAINT yrc_fk_recipec_no FOREIGN KEY(recipe_no) REFERENCES yoseksa_recipe(recipe_no)
+   recipe_no NUMBER,
+   recipec_no NUMBER,
+   recipec_photo VARCHAR2(200) CONSTRAINT yrc_nn_recipec_photo NOT NULL,
+   recipec_cont CLOB CONSTRAINT yrc_nn_recipec_cont NOT NULL,
+   CONSTRAINT yrc_pk_recipec_no PRIMARY KEY(recipec_no),
+   CONSTRAINT yrc_fk_recipec_no FOREIGN KEY(recipe_no) REFERENCES yoseksa_recipe(recipe_no)
 );
 -- 양념 테이블
 CREATE TABLE yoseksa_source(
@@ -214,11 +254,14 @@ INSERT INTO yoseksa_notice VALUES(5,3,1,'공지사항제목','공지사항 내�
 -- 달력 테이블
 CREATE table yoseksa_diary(
    mgr_no NUMBER,
+   recipe_no NUMBER,
    member_no NUMBER,
    board_no NUMBER DEFAULT 4,
-   diary_date DATE DEFAULT SYSDATE,
+   diary_date DATE,
+   diary_regdate DATE DEFAULT SYSDATE,
    diary_bld VARCHAR2(100) CONSTRAINT yd_nn_diary_bld NOT NULL,
    CONSTRAINT yd_pk_mgr_no PRIMARY KEY(mgr_no),
+   CONSTRAINT yd_fk_recipe_no FOREIGN KEY(recipe_no) REFERENCES yoseksa_recipe(recipe_no),
    CONSTRAINT yd_fk_member_no FOREIGN KEY(member_no) REFERENCES yoseksa_member(member_no),
    CONSTRAINT yd_fk_board_no FOREIGN KEY(board_no) REFERENCES yoseksa_boardmgr(board_no)
 );

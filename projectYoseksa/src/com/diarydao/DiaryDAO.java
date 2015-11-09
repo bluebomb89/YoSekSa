@@ -65,14 +65,8 @@ public class DiaryDAO {
 	{
 		SqlSession session=null;
 		try {
-			session=ssf.openSession(true);
-			System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-			System.out.println("getBoard_no : "+d.getBoard_no());
-			System.out.println("getDiary_bld : "+d.getDiary_bld());
-			System.out.println("getDiary_date : "+d.getDiary_date());
-			
-			
-			session.insert("diaryInsert",d);	
+			session=ssf.openSession(true);			
+			session.insert("diaryInsert",d);
 			System.out.println("2");
 		} catch (Exception ex) {
 			// TODO: handle exception
@@ -81,11 +75,28 @@ public class DiaryDAO {
 		finally{
 			if(session!=null)
 				session.close();
-			System.out.println("Sdfsdfsdfsdfdsdfsdf");
 		}
 	}
-	
-	
-	
+	///////////////////////////////////////////////////////
+		//다이어리에 출력
+	public static List<DiaryDTO> diaryListData()
+	{
+		List<DiaryDTO> list=new ArrayList<DiaryDTO>();
+		SqlSession session=null;
+		try{
+			session=ssf.openSession();
+			list=session.selectList("diaryListData");
+			System.out.println("실행했다!!!!!!!!!!!!!!!!");
+		}catch(Exception ex){
+			System.out.println(ex.getMessage());
+		}finally{
+			if(session!=null)
+				session.close();
+		}
+		return list;		
+	}
 
+	
+	
+	
 }
