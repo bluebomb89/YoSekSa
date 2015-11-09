@@ -6,8 +6,13 @@
 <head>
 <meta charset="UTF-8">
 <title></title>
+
 <link href="yoSeksa/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="yoSeksa/css/component.css" rel="stylesheet" type="text/css"  />
+<link rel="stylesheet" href="yoSeksa/css/list/onepage_201401.css" type="text/css">
+<link rel="stylesheet" href="yoSeksa/css/list/app.css?ver=4.0.8">
+<link href="yoSeksa/css/list/loginform.css" type="text/css" rel="stylesheet" media="all">
+
 
 <!-- script -->
 <script type="text/javascript">
@@ -71,22 +76,30 @@ $(function(){
                <button id="showLeftPush"><img src="yoSeksa/images/menu-icon.png" alt=""></button>
          </section>
          
+   
+         
+         
          <!-- 꽁 -->
+         
+        
+
          <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
        	   <h3>menu</h3>
        	  <nav id="side-nav" style=" margin-top: 240px;">
 			<div class="search-wrap">
 			</div>
 				<ul class="nav">
+				
+
+				
 					
 								<!-- <img src="yoSeksa/images/Login.gif" style=" width: 30px;"> -->
 							<!-- http://localhost:8080/projectYoseksa/yoSeksa/function/member/login.jsp -->
 						<li class="login">
 							<a href="yoSeksa/function/member/login.jsp" title="로그인"><img src="yoSeksa/images/Login.gif" onmouseover="this.src='yoSeksa/images/Login2.gif';" onmouseout="this.src='yoSeksa/images/Login.gif';" style="width: 30px;"></a>
 						</li>
-						<!-- 클릭 모달 -->
-						<!-- Large modal -->
-						
+		
+						 						
 												<li class="fun">
 						<a href="/mypage/heart/product.asp" title="즐겨찾는 음식"><img src="yoSeksa/images/fun.gif" onmouseover="this.src='yoSeksa/images/fun2.gif';" onmouseout="this.src='yoSeksa/images/fun.gif';" style=" width: 30px;" value="삭제하기" onclick="button_event();"></a>
 						</li>
