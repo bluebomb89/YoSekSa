@@ -221,7 +221,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
     <!-- Placed at the end of the document so the pages load faster -->
     <div class="footer-color-wrap">
 		<footer class="content-info container" role="contentinfo"
-			style="left: 120px;">
+			style="left: 115px;">
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="howmuch">
@@ -231,7 +231,10 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 							align="bottom"
 							style="margin-bottom: 20px; margin-left: 140px;">
 							<div class="textwidget">
-								Yosek<em>Yosek</em>Yosek<br>Yosek
+								YosekYosekYosekYosekYosekYosekYosekYosek<em>
+								YosekYosekYosekYosekYosekYosekYosekYosek</em>
+								YosekYosekYosekYosekYosekYosekYosekYosek<br>
+								YosekYosekYosekYosekYosekYosekYosekYosek
 							</div>
 						</li>
 					</div>
@@ -248,12 +251,12 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 									
 											&nbsp;Seoul: +00 (010) 0000 0000
 
-											<div style="margin-left: 45px;">Sinchon:+00 (010) 0000 0000</div>
+											<div style="margin-left: 45.7px;">Sinchon: +00 (010) 0000 0000</div>
 								</div>	
 								
-								<div style="margin-top: 3px;">
+								<div style="margin-top: 10px;">
 								<img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/bigemail.png"> 
-									<a href="mailto:yo@sek.sa" style="margin-left: 3px;">Yo@sek.sa</a>
+									<a href="mailto:yo@sek.sa" style="margin-left: 5px;">Yo@sek.sa</a>
 								</div>
 							</div>
 						</li>
