@@ -27,6 +27,7 @@ function reply_reBtn(){
 	var re_recipe_no=$('#re_recipe_no').val();
 	var re_reply_no=$('#re_reply_no').val();
 	var re_reply_content=$('#re_reply_content').val();
+	alert(re_reply_content);
 	var param="re_recipe_no="+re_recipe_no+"&re_reply_no="+re_reply_no+"&re_reply_content="+re_reply_content;
 	sendMessage("GET", "reply_re.sek", param, re_reply_coment);
 }
@@ -36,7 +37,8 @@ function re_reply_coment(){
 </script>
  <div class="view_reply">
         <div class="reply_tit">의견 <span id="recipeCommentListCount">${rtotal }</span></div>
-               <div class="reply_write">
+       <c:if test="${sessionScope.nickname!=null }">
+       <div class="reply_write">
       <form id="insCmtFrm" method="post">
         <div class="info_pic"><img class="media-object" src="../recipe/zxcvvxzcvcxv_files/pf_100_100.png" data-holder-rendered="true"></div>
         <div class="input-group">
@@ -44,16 +46,15 @@ function re_reply_coment(){
           <span class="input-group-btn">
           	<button onclick="replyBtn()" id="replyBtna" class="btn btn-default" type="button" style="height:100px; width:100px;"></button>
           </span>
+       
         </div>
       </form>
       </div>
+         </c:if>
         <c:forEach var="i" items="${rvdto }">
 	        <div id="recipeCommentList_1">
-	        	게시물 번호 : ${ i.recipe_no}<input type=hidden id="re_recipe_no" name=bno value="${ i.recipe_no}">
-	        	댓글 번호 :${ i.reply_no}<input type=hidden id="re_reply_no" name=rno value="${ i.reply_no}">
-	        	그룹 스텝 : ${ i.group_step}
-	        	그룹 탭 : ${ i.group_tab}
-	        	루트 : ${ i.root}
+	        	<input type=hidden id="re_recipe_no" name=bno value="${ i.recipe_no}">
+	        	<input type=hidden id="re_reply_no" name=rno value="${ i.reply_no}">
 	        	<div class="media reply_list">					
 		       <c:if test="${i.group_tab!=0 }">
 	            <c:forEach var="a" begin="1" end="${i.group_tab }" step="1">
@@ -69,6 +70,7 @@ function re_reply_coment(){
 	       			<b class="info_name_f">${i.reply_nickname }</b><fmt:formatDate value="${i.reply_date}" pattern="yyyy년 MM월 dd일"/></h4>
 	       			${i.reply_content } &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="댓글" id="replyClick${i.reply_no}" class="ccc">
 	       			<!-- 댓글에 댓글 -->
+					<c:if test="${sessionScope.nickname!=null }">
 		       			<div class="reply_rv" id="replyClick${i.reply_no }">
 	 				        <div class="input-group">
 					          <textarea id="re_reply_content" name="frm[cmt_tx_content]" class="form-control" placeholder="자신만의 비법이 있으신가요?" style="height:100px; width:100%; resize:none;"></textarea>
@@ -76,7 +78,8 @@ function re_reply_coment(){
 					          	<button onclick="reply_reBtn()" id="replyBtn" class="btn btn-default" type="button" style="height:100px; width:100px;"></button>
 					          </span>
 					        </div>
-		       			</div>	
+		       			</div>
+					</c:if>
 	       			</div>
 	     		</div>
 	      	</div>

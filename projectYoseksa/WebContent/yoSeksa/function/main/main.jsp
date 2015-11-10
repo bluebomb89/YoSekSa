@@ -230,7 +230,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 			style="left: 115px;">
 			<div class="row">
 				<div class="col-lg-12" style=" top: 30px;">
-					<div class="howmuch">
+					<div class="howmuch" style="margin-top: 20px">
 						<li id="text-4" class="widget widget_text">
 							<h3>About Us</h3> <img
 							src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/separator.png"
@@ -245,7 +245,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 						</li>
 					</div>
 					<div class="gotaquestion">
-						<a class="anchorfix" id="questions"></a>
+						<a class="anchorfix" id="questions" style="margin-top: 20px"></a>
 						<li id="text-5" class="widget widget_text">
 							<h3>Get in Touch</h3> 
 							<img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/separator.png" align="bottom" style="margin-bottom: 20px; margin-left: 120px;">
@@ -278,7 +278,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 	</footer>
 	</div>
 	<div class="blacky-back" style="padding-bottom: 105px;">
-		<div class="f-menu">
+		<div class="f-menu" style="height: 60px;">
 			<ul id="menu-primary-navigation-1" class="menu">
 				<li class="active menu-home"><a href="/">Home</a></li>
 				<li class="menu-divider">/</li>

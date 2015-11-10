@@ -6,6 +6,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
+<style>
+	a:LINK {color: yellowgreen; font-size: 11pt; text-decoration: none;}
+    a:VISITED {color: yellowgreen; text-decoration: none;}
+    a:ACTIVE {color: #fff; text-decoration: none;}
+    a:HOVER {color: #fff; text-decoration: none;}
+</style>
+<link href="yoSeksa/css/calendar.css" type="text/css" rel="stylesheet" media="all">
+
 <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 <script type="text/javascript">
 var httpRequest=null;
@@ -63,19 +71,19 @@ $(function(){
 <body>
 <font color=white>
 	<div id="search_div">	
-	총페이지 : ${recipe_search_totalpage }<br>	
+<%-- 	총페이지 : ${recipe_search_totalpage }<br>	
 	bld : ${bld }<br>
-	date : ${date }<br>
-			<table>
+	date : ${date }<br> --%>
+			<table id="searchReTable" style="border-collapse: collapse;" cellpadding="2">
 				<tr>
-					<td>번호</td>
-					<td>제목</td>
+<!-- 					<td>번호</td> -->
+					<td style="border-bottom: solid 1px;border-bottom-color: #00ff40;">레시피 검색결과</td>
 				</tr>
 				<c:forEach var="rs" items="${recipe_search_list }">
 				<tr>
-					<td>${rs.recipe_no }</td>
+<%-- 					<td>${rs.recipe_no }</td> --%>
 					<td>
-						<a href="#" onclick="diary_Insert('${rs.recipe_no }','${rs.recipe_sub }','${bld }','${date }')">${rs.recipe_sub }></a>						
+						<a href="#" onclick="diary_Insert('${rs.recipe_no }','${rs.recipe_sub }','${bld }','${date }')">${rs.recipe_sub }</a>						
 						<%-- <a href="diary_search_ok.sek?reno=${rs.recipe_no }&resub=${rs.recipe_sub }&bld=${bld }&date=${date }">${rs.recipe_sub }</a> --%>	
 					</td>
 				</tr>
@@ -83,7 +91,5 @@ $(function(){
 			</table>			
 	</div>
 </font>
-
-
 </body>
 </html>
