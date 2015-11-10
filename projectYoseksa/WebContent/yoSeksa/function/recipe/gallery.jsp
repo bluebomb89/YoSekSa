@@ -6,6 +6,37 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <!--/script-->
+<!-- 마우스 오버 이미지 확대 -->
+
+<script type="text/javascript">
+            $(document).ready(function() {
+                  
+                var xOffset = 10;
+                var yOffset = 30;
+ 
+                $(document).on("mouseover",".thumbna",function(e){ //마우스 오버시
+                     
+                    $("body").append("<p id='preview'><img src='"+ $(this).attr("src") +"' width='400px' /></p>"); //보여줄 이미지를 선언                       
+                    $("#preview")
+                        .css("top",(e.pageY - xOffset) + "px")
+                        .css("left",(e.pageX + yOffset) + "px")
+                        .fadeIn("fast"); //미리보기 화면 설정 셋팅
+                });
+                 
+                $(document).on("mousemove",".thumbna",function(e){ //마우스 이동시
+                    $("#preview")
+                        .css("top",(e.pageY - xOffset) + "px")
+                        .css("left",(e.pageX + yOffset) + "px");
+                });
+                 
+                $(document).on("mouseout",".thumbna",function(){ //마우스 아웃시
+                    $("#preview").remove();
+                });
+                  
+            });
+        </script>
+
+<!-- 이미지 확대 끝 -->
 <script>
    var curListType = '';
    var curAllSel = false;
@@ -184,6 +215,18 @@
       });
    });
 </script>
+<style>
+	       /* 미리보기 스타일 셋팅 */
+            #preview{
+                z-index: 9999;
+                position:absolute;
+                border:0px solid #ccc;
+                background:#333;
+                padding:1px;
+                display:none;
+                color:#fff;
+            }
+</style>
 </head>
 <body class="cbp-spmenu-push">
 
@@ -220,10 +263,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- //footer -->
 
 <!--script------------------------------------------------------------------------------------------------------->
-   <div class="container"
-      style="margin-top: 60px; margin-left: 30px; padding-top: 40px;">
+   <div class="container" style="margin-top: 60px; padding-top: 40px; width: 1250px;">
       <div class="top_title"
-         style="padding-bottom: 11px; padding-top: 10px; border-top-width: 1px; width: 1120px;">
+         style="padding-bottom: 11px; padding-top: 10px; border-top-width: 1px; width: 1200px;">
          <h3 style="margin-bottom: 0px; margin-top: 0px; width: 200px;">My
             Recipe</h3>
          <div class="top_title_r" style="padding-top: 0px;">
@@ -272,16 +314,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!---------------------------------------------------------------------------------------------------- ------------------>
 
    <!-- /.row -->
-      <div class="col-md-12" style="margin-top: 20px;">
+      <div class="col-md-12" >
          <c:forEach var='dto' items="${list}">
-         <div class="col-sm-3 col-md-3.5">
+         <div class="col-sm-3 col-md-3.5" style="padding-right: 5px; padding-left: 5px;
+">
             <div class="thumbnail" style="margin-bottom: 5px;">
-               <a href="recipe_content.sek?rno=${dto.recipe_no }"><img src="yoSeksa/contentImg/${dto.recipe_img }" alt="" style="height: 130px;"></a>
+               <a href="recipe_content.sek?rno=${dto.recipe_no }"><img src="yoSeksa/contentImg/${dto.recipe_img }" alt="" style="height: 230px; width: 270px;" class="thumbna"></a>
                <div class="caption">
                   <h3>${dto.recipe_sub }</h3>
                   <div align="center" style="margin-top: 10px;">
-                     <a href="#" class="btn btn-primary" role="button">
-                     <span class="glyphicon glyphicon-heart" aria-hidden="true"></span></a>
                      <a href="#" class="btn btn-default" role="button">
                      <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></a>
                   </div>
@@ -313,7 +354,5 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</a>
 			</div>
 		</div>
-
-
 </body>
 </html>
