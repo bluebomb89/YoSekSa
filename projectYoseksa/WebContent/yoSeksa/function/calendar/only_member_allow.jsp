@@ -5,6 +5,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
+</head>
+
+<body>
+<br><br><br><br><br><br>
+<div align="center">
+	<img src="yoSeksa/images/joinus.jpg" width="700" height="600">
+</div>
+</body>
+
 <script type="text/javascript">
 	alert("회원만 이용 가능합니다");
 </script>
+
+</html>
