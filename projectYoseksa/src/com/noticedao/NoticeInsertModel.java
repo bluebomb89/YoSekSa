@@ -1,5 +1,6 @@
 package com.noticedao;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -26,6 +27,7 @@ public class NoticeInsertModel implements YoseksaModel{
 		NoticeDTO d=new NoticeDTO();
 		d.setNotice_sub(notice_sub);
 		d.setNotice_content(notice_content);
+
 		// DB쩔짭쨉쩔
 		NoticeDAO.noticeInsert(d);
 //		�뿬湲곌퉴吏� DB �씤�꽌�듃
