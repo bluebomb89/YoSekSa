@@ -44,15 +44,15 @@ $(function(){
 <script>
 function button_event(){
 if (confirm("회원만 사용 가능한 기능입니다")== true)
-			{
-    			return "yoSeksa/member/login.jsp";
-			}
+         {
+             return "yoSeksa/member/login.jsp";
+         }
 
-else		
-			{   
-    		
-				return "yoSeksa/main/main.jsp";
-			}
+else      
+         {   
+          
+            return "yoSeksa/main/main.jsp";
+         }
 }
 //-->
 </script>
@@ -61,9 +61,9 @@ else
  <!-- 회원가입창 모달 -->
  <script type="text/javascript">
 $(function(){
-	$("#popbutton").click(function(){
-		$('div.modal').modal({remote : 'layer.html'});
-	})
+   $("#popbutton").click(function(){
+      $('div.modal').modal({remote : 'layer.html'});
+   })
 })
 </script>
 <!-- 가입모달 끝 -->
@@ -85,52 +85,52 @@ $(function(){
         
 
          <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
-       	   <h3>menu</h3>
-       	  <nav id="side-nav" style=" margin-top: 240px;">
-			<div class="search-wrap">
-			</div>
-				<ul class="nav">
-						
-								<!-- 로그인 -->						
-						
-						<c:if test="${sessionScope.member_id==null }">
-					  		<li class="login_null" align="center">로그인을 해주십시오</li>
-					  		<li class="login">
-							<a href="yoSeksa/function/member/login.jsp" title="로그인"><img src="yoSeksa/images/Login.gif" onmouseover="this.src='yoSeksa/images/Login2.gif';" onmouseout="this.src='yoSeksa/images/Login.gif';" style="width: 30px;"></a>
-						</li>
-				    	</c:if>
-				    	<c:if test="${sessionScope.member_id!=null }">
-				    		
-				    		<!-- 로그아웃 -->
-				    		
-					  		<li class="login_ok">
-					  		
-					  		<form method=post action="member_logout.sek" id="logout_frm">
-					  			<img src="http://image.melon.co.kr/resource/image/cmt/web/common/noArtist03_54.jpg" width="54" height="54">
-					  			닉네임:${nickname }					  			
-					  			
-					  			<li class="logout">
-					  			<a type="button" id="logout_Btn" class="logout_Btn" title="로그아웃"><img src="yoSeksa/images/Logout.gif" onmouseover="this.src='yoSeksa/images/Logout2.gif';" onmouseout="this.src='yoSeksa/images/Logout.gif';" style="width: 30px;"></a>
-					  			<!-- <input type="button" name="logout_Btn" id="logout_Btn" value="로그아웃" align="center"> -->
-					  			
-					  			</li>
-					  		</form>
-					  		</li>
+             <h3>menu</h3>
+            <nav id="side-nav" style=" margin-top: 240px;">
+         <div class="search-wrap">
+         </div>
+            <ul class="nav">
+                  
+                        <!-- 로그인 -->                  
+                  
+                  <c:if test="${sessionScope.member_id==null }">
+                       <li class="login_null" align="center">로그인을 해주십시오</li>
+                       <li class="login">
+                     <a href="yoSeksa/function/member/login.jsp" title="로그인"><img src="yoSeksa/images/Login.gif" onmouseover="this.src='yoSeksa/images/Login2.gif';" onmouseout="this.src='yoSeksa/images/Login.gif';" style="width: 30px;"></a>
+                  </li>
+                   </c:if>
+                   <c:if test="${sessionScope.member_id!=null }">
+                      
+                      <!-- 로그아웃 -->
+                      
+                       <li class="login_ok">
+                       
+                       <form method=post action="member_logout.sek" id="logout_frm">
+                          <img src="http://image.melon.co.kr/resource/image/cmt/web/common/noArtist03_54.jpg" width="54" height="54">
+                          닉네임:${nickname }                          
+                          
+                          <li class="logout">
+                          <a type="button" id="logout_Btn" class="logout_Btn" title="로그아웃"><img src="yoSeksa/images/Logout.gif" onmouseover="this.src='yoSeksa/images/Logout2.gif';" onmouseout="this.src='yoSeksa/images/Logout.gif';" style="width: 30px;"></a>
+                          <!-- <input type="button" name="logout_Btn" id="logout_Btn" value="로그아웃" align="center"> -->
+                          
+                          </li>
+                       </form>
+                       </li>
 
-						</c:if>
-						<li class="fun">
-						<a href="/mypage/heart/product.asp" title="즐겨찾는 음식"><img src="yoSeksa/images/fun.gif" onmouseover="this.src='yoSeksa/images/fun2.gif';" onmouseout="this.src='yoSeksa/images/fun.gif';" style=" width: 30px;" value="삭제하기" onclick="button_event();"></a>
-						</li>
-								
-						<li class="cart">
-						<a href="http://localhost:8080/projectYoseksa/diary.sek" title="일정 관리"><img src="yoSeksa/images/calen.gif" onmouseover="this.src='yoSeksa/images/calen2.gif';" onmouseout="this.src='yoSeksa/images/calen.gif';" style=" width: 30px;"></a>
-						</li>
-						
-						<li class="cart">
-						<a href="http://localhost:8080/projectYoseksa/recipe.sek" title="레시피"><img src="yoSeksa/images/recipe.gif" onmouseover="this.src='yoSeksa/images/recipe2.gif';" onmouseout="this.src='yoSeksa/images/recipe.gif';" style="width: 30px;"></a>
-						</li>
-				</ul>
-		</nav>
+                  </c:if>
+                  <li class="fun">
+                  <a href="/mypage/heart/product.asp" title="즐겨찾는 음식"><img src="yoSeksa/images/fun.gif" onmouseover="this.src='yoSeksa/images/fun2.gif';" onmouseout="this.src='yoSeksa/images/fun.gif';" style=" width: 30px;" value="삭제하기" onclick="button_event();"></a>
+                  </li>
+                        
+                  <li class="cart">
+                  <a href="http://localhost:8080/projectYoseksa/diary.sek" title="일정 관리"><img src="yoSeksa/images/calen.gif" onmouseover="this.src='yoSeksa/images/calen2.gif';" onmouseout="this.src='yoSeksa/images/calen.gif';" style=" width: 30px;"></a>
+                  </li>
+                  
+                  <li class="cart">
+                  <a href="http://localhost:8080/projectYoseksa/recipe.sek" title="레시피"><img src="yoSeksa/images/recipe.gif" onmouseover="this.src='yoSeksa/images/recipe2.gif';" onmouseout="this.src='yoSeksa/images/recipe.gif';" style="width: 30px;"></a>
+                  </li>
+            </ul>
+      </nav>
          <!-- <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left cbp-spmenu-open" id="cbp-spmenu-s1" style=" width: 200px;"> -->
          <!-- 꽁 -->
          
@@ -226,76 +226,76 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <div class="footer-color-wrap">
-		<footer class="content-info container" role="contentinfo"
-			style="left: 115px;">
-			<div class="row">
-				<div class="col-lg-12" style=" top: 30px;">
-					<div class="howmuch" style="margin-top: 20px">
-						<li id="text-4" class="widget widget_text">
-							<h3>About Us</h3> <img
-							src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/separator.png"
-							align="bottom"
-							style="margin-bottom: 20px; margin-left: 140px;">
-							<div class="textwidget">
-								YosekYosekYosekYosekYosekYosekYosekYosek<em>
-								YosekYosekYosekYosekYosekYosekYosekYosek</em>
-								YosekYosekYosekYosekYosekYosekYosekYosek<br>
-								YosekYosekYosekYosekYosekYosekYosekYosek
-							</div>
-						</li>
-					</div>
-					<div class="gotaquestion">
-						<a class="anchorfix" id="questions" style="margin-top: 20px"></a>
-						<li id="text-5" class="widget widget_text">
-							<h3>Get in Touch</h3> 
-							<img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/separator.png" align="bottom" style="margin-bottom: 20px; margin-left: 120px;">
-							<div class="textwidget">
-								
-								<div>
-									<img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/phone.png">
-									
-									
-											&nbsp;Seoul: +82 10) 0000 0000
+      <footer class="content-info container" role="contentinfo"
+         style="left: 115px;">
+         <div class="row">
+            <div class="col-lg-12" style=" top: 30px;">
+               <div class="howmuch" style="margin-top: 20px">
+                  <li id="text-4" class="widget widget_text">
+                     <h3>About Us</h3> <img
+                     src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/separator.png"
+                     align="bottom"
+                     style="margin-bottom: 20px; margin-left: 140px;">
+                     <div class="textwidget">
+                        YosekYosekYosekYosekYosekYosekYosekYosek<em>
+                        YosekYosekYosekYosekYosekYosekYosekYosek</em>
+                        YosekYosekYosekYosekYosekYosekYosekYosek<br>
+                        YosekYosekYosekYosekYosekYosekYosekYosek
+                     </div>
+                  </li>
+               </div>
+               <div class="gotaquestion">
+                  <a class="anchorfix" id="questions" style="margin-top: 20px"></a>
+                  <li id="text-5" class="widget widget_text">
+                     <h3>Get in Touch</h3> 
+                     <img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/separator.png" align="bottom" style="margin-bottom: 20px; margin-left: 120px;">
+                     <div class="textwidget">
+                        
+                        <div>
+                           <img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/phone.png">
+                           
+                           
+                                 &nbsp;Seoul: +82 10) 0000 0000
 
-											<div style="margin-left: 45.7px;">Sinchon: +82 10) 0000 0000</div>
-								</div>	
-								
-								<div style="margin-top: 10px;">
-								<img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/bigemail.png"> 
-									<a href="mailto:yo@sek.sa" style="margin-left: 5px;">Yo@sek.sa</a>
-								</div>
-							</div>
-						</li>
-					</div>					
-				</div>
-				<div class="social-links">
-					<!--<a target="_blank" href="http://www.facebook.com/InfinVision"><img width="29" height="60" alt="facebook" src=" http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/f-social-facebook.png" ></a>
-			<a target="_blank" href="http://twitter.com/infinvision"><img width="29" height="60" alt="twitter" src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/f-social-twitter.png"></a>
-			<a target="_blank" href="http://www.linkedin.com/company/infinvision"><img width="29" height="60" alt="linkedin" src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/f-social-linkedin.png"></a>
-			<a target="_blank" href="https://plus.google.com/+Infinvision"><img width="29" height="60" alt="googleplus" src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/f-social-google.png"></a>-->
-				</div>
-			</div>
-	</footer>
-	</div>
-	<div class="blacky-back" style="padding-bottom: 105px;">
-		<div class="f-menu" style="height: 60px;">
-			<ul id="menu-primary-navigation-1" class="menu">
-				<li class="active menu-home"><a href="/">Home</a></li>
-				<li class="menu-divider">/</li>
-				<li class="menu-projects"><a href="/projects/">Projects</a></li>
-				<li class="menu-divider">/</li>
-				<li class="menu-workshops-briefings"><a href="#">Workshops
-						&amp; Briefings</a></li>
-				<li class="menu-divider">/</li>
-				<li class="menu-about"><a href="/about/">About</a></li>
-				<li class="menu-divider">/</li>
-				<li class="menu-ideas"><a href="/blog/">Ideas</a></li>
-				<li class="menu-divider">/</li>
+                                 <div style="margin-left: 45.7px;">Sinchon: +82 10) 0000 0000</div>
+                        </div>   
+                        
+                        <div style="margin-top: 10px;">
+                        <img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/bigemail.png"> 
+                           <a href="mailto:yo@sek.sa" style="margin-left: 5px;">Yo@sek.sa</a>
+                        </div>
+                     </div>
+                  </li>
+               </div>               
+            </div>
+            <div class="social-links">
+               <!--<a target="_blank" href="http://www.facebook.com/InfinVision"><img width="29" height="60" alt="facebook" src=" http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/f-social-facebook.png" ></a>
+         <a target="_blank" href="http://twitter.com/infinvision"><img width="29" height="60" alt="twitter" src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/f-social-twitter.png"></a>
+         <a target="_blank" href="http://www.linkedin.com/company/infinvision"><img width="29" height="60" alt="linkedin" src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/f-social-linkedin.png"></a>
+         <a target="_blank" href="https://plus.google.com/+Infinvision"><img width="29" height="60" alt="googleplus" src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/f-social-google.png"></a>-->
+            </div>
+         </div>
+   </footer>
+   </div>
+   <div class="blacky-back" style="padding-bottom: 105px;">
+      <div class="f-menu" style="height: 60px;">
+         <ul id="menu-primary-navigation-1" class="menu">
+            <li class="active menu-home"><a href="/">Home</a></li>
+            <li class="menu-divider">/</li>
+            <li class="menu-projects"><a href="/projects/">Projects</a></li>
+            <li class="menu-divider">/</li>
+            <li class="menu-workshops-briefings"><a href="#">Workshops
+                  &amp; Briefings</a></li>
+            <li class="menu-divider">/</li>
+            <li class="menu-about"><a href="/about/">About</a></li>
+            <li class="menu-divider">/</li>
+            <li class="menu-ideas"><a href="/blog/">Ideas</a></li>
+            <li class="menu-divider">/</li>
 
-			</ul>
-		</div>
-		<div class="f-copy">© Copyright 2014 InfinVision Ltd. All rights reserved.</div>
-	</div>
+         </ul>
+      </div>
+      <div class="f-copy">© Copyright 2014 InfinVision Ltd. All rights reserved.</div>
+   </div>
 
 </body>
 </html>
