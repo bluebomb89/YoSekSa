@@ -1,3 +1,7 @@
+<%@page import="java.text.DecimalFormat"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="com.diarydao.DiaryDAO"%>
+<%@page import="com.diarydao.DiaryDTO"%>
 <%@page session="true" import="java.util.*" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -227,7 +231,7 @@ function addRecipeOnTable(year,month,day)
 </script>
 
 </head>
-<body style="background-image: url('yoSeksa/images/calendar_background.jpg')">
+<body id="diary_main_body" style="background-image: url('yoSeksa/images/calendar_background.jpg')">
 
 
 <div id="embed-container">
@@ -305,20 +309,29 @@ function addRecipeOnTable(year,month,day)
 		      <td style="<%=bgStyle %>" align="left" valign="top">&nbsp;<a href="#" onclick="addRecipeOnTable(<%=currYear %>,<%=currMonth+1 %>,<%=dispDay %>)"><%=dispDay%></a><br>
 		      
 		
-		
-			<c:forEach var="dlist" items="${dlist }">
+<%
+			List<DiaryDTO> dlist=DiaryDAO.diaryListData();
+
+
+			SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
+			DecimalFormat df=new DecimalFormat("00");
+			String dlDate;
+			String calDate=currYear+"-"+df.format((currMonth+1))+"-"+df.format(dispDay);
 			
-				
-		<%-- 		<c:if test="${dlist. }">
-				
-				</c:if> --%>
-				
-				${dlist.diary_bld }
-				${dlist.diary_regdate }
+			//out.println(calDate);
 			
-			</c:forEach>
-			
-		
+			for(DiaryDTO dl:dlist)
+			{
+				dlDate=sdf.format(dl.getDiary_date());
+				if(dlDate.equals(calDate.trim()))
+				{
+					out.println(dl.getRecipe_sub());
+					out.println(dl.getDiary_bld());
+				}
+				
+				
+			}
+%>		
 		
 		      </td>
 		<%

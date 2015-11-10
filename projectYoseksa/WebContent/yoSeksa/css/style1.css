@@ -269,12 +269,12 @@ ul.callbacks_tabs.callbacks1_tabs {
     min-height: 363px;
 }
 .recipe-search{
-	min-height: 363px;
+	min-height: 726px;
 }
 .recipe-search h5{
     text-align: center;
     font-family: 'LobsterTwo-Regular';
-    color: #ADA4A6;
+    color: #909090;
     font-size: 16px;
     margin: 0;
 }

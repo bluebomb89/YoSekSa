@@ -1,6 +1,7 @@
 body{
 	background-size: cover;
-    height: initial;
+   
+   
 }
 #icon_zoom{
 	position: absolute;
@@ -85,11 +86,6 @@ span.glyphicon.glyphicon-search{
     background-color: rgba(245, 245, 245, 0);
     border-top: 1px solid rgba(229, 229, 229, 0);
 }
-.body{
-	    height: inherit;
-}
-
-
 
 
 

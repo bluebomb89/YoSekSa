@@ -10,8 +10,8 @@
 <link href="yoSeksa/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="yoSeksa/css/component.css" rel="stylesheet" type="text/css"  />
 <link rel="stylesheet" href="yoSeksa/css/list/onepage_201401.css" type="text/css">
-<link rel="stylesheet" href="yoSeksa/css/list/app.css?ver=4.0.8">
-<link href="yoSeksa/css/list/loginform.css" type="text/css" rel="stylesheet" media="all">
+<link rel="stylesheet" href="yoSeksa/css/list//app.css?ver=4.0.8">
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 
 
 <!-- script -->
@@ -90,18 +90,35 @@ $(function(){
 			<div class="search-wrap">
 			</div>
 				<ul class="nav">
-				
-
-				
-					
-								<!-- <img src="yoSeksa/images/Login.gif" style=" width: 30px;"> -->
-							<!-- http://localhost:8080/projectYoseksa/yoSeksa/function/member/login.jsp -->
-						<li class="login">
+						
+								<!-- 로그인 -->						
+						
+						<c:if test="${sessionScope.member_id==null }">
+					  		<li class="login_null" align="center">로그인을 해주십시오</li>
+					  		<li class="login">
 							<a href="yoSeksa/function/member/login.jsp" title="로그인"><img src="yoSeksa/images/Login.gif" onmouseover="this.src='yoSeksa/images/Login2.gif';" onmouseout="this.src='yoSeksa/images/Login.gif';" style="width: 30px;"></a>
 						</li>
-		
-						 						
-												<li class="fun">
+				    	</c:if>
+				    	<c:if test="${sessionScope.member_id!=null }">
+				    		
+				    		<!-- 로그아웃 -->
+				    		
+					  		<li class="login_ok">
+					  		
+					  		<form method=post action="member_logout.sek" id="logout_frm">
+					  			<img src="http://image.melon.co.kr/resource/image/cmt/web/common/noArtist03_54.jpg" width="54" height="54">
+					  			닉네임:${nickname }					  			
+					  			
+					  			<li class="logout">
+					  			<a type="button" id="logout_Btn" class="logout_Btn" title="로그아웃"><img src="yoSeksa/images/Logout.gif" onmouseover="this.src='yoSeksa/images/Logout2.gif';" onmouseout="this.src='yoSeksa/images/Logout.gif';" style="width: 30px;"></a>
+					  			<!-- <input type="button" name="logout_Btn" id="logout_Btn" value="로그아웃" align="center"> -->
+					  			
+					  			</li>
+					  		</form>
+					  		</li>
+
+						</c:if>
+						<li class="fun">
 						<a href="/mypage/heart/product.asp" title="즐겨찾는 음식"><img src="yoSeksa/images/fun.gif" onmouseover="this.src='yoSeksa/images/fun2.gif';" onmouseout="this.src='yoSeksa/images/fun.gif';" style=" width: 30px;" value="삭제하기" onclick="button_event();"></a>
 						</li>
 								
@@ -136,17 +153,11 @@ $(function(){
                      <li class="active"><a href="yoseksa.sek">Home</a></li>
                      <li><a class="scroll" id=startmain href="#section1">검색메인</a></li>
                      <li><a class="scroll" href="#services">공지</a></li>
-                     <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">자유게시판<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                           <li><a href="freeboard.sek">about1</a></li>
-                           <li><a href="freeboard_list.sek">about2</a></li>
-                           <li><a href="recipe_content.sek">레시피 내용보기</a></li>           
-                        </ul>
-                     </li>
+                     <li><a href="freeboard_list.sek">자유 게시판</a></li>
                      <li><a href="diary.sek">캘린더</a></li>
-                     <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
+                     <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">나만의 레시피<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                           <li><a href="recipe.sek">gallery1</a></li>
+                           <li><a href="recipe.sek">나만의 레시피</a></li>
                            <li><a href="qna.sek">Q&A</a></li>
                            <li><a href="join.sek">회원가입</a></li>           
                         </ul>
@@ -216,7 +227,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
     <!-- Placed at the end of the document so the pages load faster -->
     <div class="footer-color-wrap">
 		<footer class="content-info container" role="contentinfo"
-			style="left: 120px;">
+			style="left: 115px;">
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="howmuch">
@@ -226,7 +237,10 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 							align="bottom"
 							style="margin-bottom: 20px; margin-left: 140px;">
 							<div class="textwidget">
-								Yosek<em>Yosek</em>Yosek<br>Yosek
+								YosekYosekYosekYosekYosekYosekYosekYosek<em>
+								YosekYosekYosekYosekYosekYosekYosekYosek</em>
+								YosekYosekYosekYosekYosekYosekYosekYosek<br>
+								YosekYosekYosekYosekYosekYosekYosekYosek
 							</div>
 						</li>
 					</div>
@@ -243,12 +257,12 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 									
 											&nbsp;Seoul: +00 (010) 0000 0000
 
-											<div style="margin-left: 45px;">Sinchon:+00 (010) 0000 0000</div>
+											<div style="margin-left: 45.7px;">Sinchon: +00 (010) 0000 0000</div>
 								</div>	
 								
-								<div style="margin-top: 3px;">
+								<div style="margin-top: 10px;">
 								<img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/bigemail.png"> 
-									<a href="mailto:yo@sek.sa" style="margin-left: 3px;">Yo@sek.sa</a>
+									<a href="mailto:yo@sek.sa" style="margin-left: 5px;">Yo@sek.sa</a>
 								</div>
 							</div>
 						</li>
