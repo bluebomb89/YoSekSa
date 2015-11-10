@@ -100,9 +100,11 @@ $(function(){
 				    	<c:if test="${sessionScope.member_id!=null }">
 				    		
 					  		<li class="login_ok">
-					  		<img src="http://image.melon.co.kr/resource/image/cmt/web/common/noArtist03_54.jpg" width="54" height="54">
-					  		닉네임:${nickname }
-					  		<input type="button" name="logoutBtn" id="logoutBtn" value="로그아웃">
+					  		<form method=post action="member_logout.sek" id="logout_frm">
+					  			<img src="http://image.melon.co.kr/resource/image/cmt/web/common/noArtist03_54.jpg" width="54" height="54">
+					  			닉네임:${nickname }
+					  			<input type="button" name="logout_Btn" id="logout_Btn" value="로그아웃">
+					  		</form>
 					  		</li>
 
 						</c:if>

@@ -91,7 +91,7 @@ public class Member {
 		
 		HttpSession session=req.getSession();
 		session.invalidate();
-		return "main.sek";
+		return "yoseksa.sek";
 	}
 	@RequestMapping("join.sek")
 	public String join(HttpServletRequest req) throws IOException{

@@ -36,7 +36,7 @@ function diary_Insert(recipe_no,recipe_sub,bld,date){
 	var bld=bld;
 	var date=date;
 	var param="?reno="+recipe_no+"&resub="+recipe_sub+"&bld="+bld+"&date="+date;
-	sendMessage('GET', param, "diary_insert.sek?", diary_result);
+	sendMessage('GET', param, "diary_insert.sek", diary_result);
 }
 function diary_result(){
 	if(httpRequest.readyState==4){
