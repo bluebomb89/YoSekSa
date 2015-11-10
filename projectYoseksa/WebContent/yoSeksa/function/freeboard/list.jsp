@@ -266,10 +266,10 @@ body.modal-open {
 						</ul>
 						<p>
 							<button type="button" class="btn btn-primary btn-lg"
-								style="margin-top: 15px;" data-toggle="modal"
-								data-target="#myModal">게시물을 등록해주세요</button>
-						<p class="count">
-							전체글 <span class="number">${max_no }</span>건
+								style="float:right;font-weight:bold;margin-top: 5px;padding-top: 5px;padding-bottom: 5px;" data-toggle="modal"
+								data-target="#myModal">등록</button>
+						<p class="count" style="font-size: 15;">
+							전체글 <span class="number" style="font-size: 20px;">${max_no }</span>건
 						</p>
 
 					</div>
@@ -295,7 +295,7 @@ body.modal-open {
 	</div>
 	<!-- 게시판 -->
 	<c:forEach var="dto" items="${list }">
-		<div id="section_rvew" class="section_rvew" style="margin-left: 100px;margin-right: 100px;background:#f1f1f2;">
+		<div id="section_rvew" class="section_rvew" style="margin-left: 130px;margin-right: 130px;background:#f1f1f2;">
 			<div class="d_cmtpgn " id="d_cmtpgn">
 				<div class="list_cmt" id="d_cmtpgn_cmt_list_wrapper" style="">
 
