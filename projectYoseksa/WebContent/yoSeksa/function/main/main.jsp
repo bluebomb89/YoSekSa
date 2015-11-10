@@ -154,7 +154,7 @@ $(function(){
                      <li><a class="scroll" id=startmain href="yoseksa.sek#section1">검색메인</a></li>
                      <li><a class="scroll" href="yoseksa.sek#services">공지</a></li>
                      <li><a href="freeboard_list.sek">자유 게시판</a></li>
-                     <li><a href="diary.sek">캘린더</a></li>
+                     <li><a href="diary.sek">캘린더</a></li> 
                      <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">나만의 레시피<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                            <li><a href="recipe.sek">나만의 레시피</a></li>
