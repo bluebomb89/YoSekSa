@@ -9,7 +9,6 @@
 <!-- 마우스 오버 이미지 확대 -->
 
 <script type="text/javascript">
-
 function change1(obj){
     obj.style.border = '2px solid green';
 }
@@ -188,6 +187,7 @@ function change2(obj){
 <link href="yoSeksa/css/owl.carousel.css" rel="stylesheet">
 <link href="yoSeksa/css/owl.theme.css" rel="stylesheet">
 <link href="yoSeksa/css/index.css" rel="stylesheet">
+<link href="yoSeksa/css/notice.css" rel="stylesheet">
 <link href="yoSeksa/css/style3.css" type="text/css" rel="stylesheet" media="all">
 <!--script-->
 
@@ -205,23 +205,6 @@ function change2(obj){
 <script src="yoSeksa/js/easing.js"></script>
 <script src="yoSeksa/js/bootstrap.js"></script> 
 <!--/script-->
-<script type="text/javascript">
-   $(document).ready(function() {
-      /* affix the navbar after scroll below header */
-      $('#nav').affix({
-         offset: {top: $('header').height()-$('#nav').height()}
-      });
-      
-      /* affix-top 에서 affix로 수정될대 이벤트 발생*/
-      $('#nav').on("affix.bs.affix",function(){
-         $("#startmain").text("haa!");
-      });
-      /* affix에서 affix-top으로 전환될때 이벤트 발생*/
-      $('#nav').on("affix-top.bs.affix",function(){
-         $("#startmain").text("Search");
-      });
-   });
-</script>
 <style>
 	       /* 미리보기 스타일 셋팅 */
             #preview{
@@ -272,29 +255,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!--script------------------------------------------------------------------------------------------------------->
    <div class="container" style="margin-top: 60px; padding-top: 40px; width: 1250px;">
       <div class="top_title"
-         style="padding-bottom: 11px; padding-top: 10px; border-top-width: 1px; width: 1200px;">
-         <h3 style="margin-bottom: 0px; margin-top: 0px; width: 200px;">My
+         style="padding-bottom: 11px; padding-top: 10px; border-top-width: 1px; width: 1200px; ">
+         <h3 style="margin-bottom: 0px; margin-top: 0px; width: 200px; margin-left:540px;">My
             Recipe</h3>
          <div class="top_title_r" style="padding-top: 0px;">
-            <div class="btn-group" role="group" aria-label="Basic example">
-               <button type="button" id="listTypeSel_thumb"
-                  class="btn btn-default btn-lg active"
-                  onclick="doChangeListType('thumb')">
-                  <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
-               </button>
-               <button type="button" id="listTypeSel_list"
-                  class="btn btn-default btn-lg" onclick="doChangeListType('list')">
-                  <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
-               </button>
-            </div>
+            
             <div class="btn-group" role="group">
-               <button id="allSelectToggle" type="button" class="btn btn-default"
-                  onclick="doAllSelect()"
-                  style="color: rgb(102, 102, 102); margin-right: 6px;">전체선택</button>
-               <button type="button" class="btn btn-default" onclick="doDelete()"
-                  style="margin-right: 6px;">
-                  <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-               </button>
+               
 
                <a href="recipe_enroll.sek"><button type="button"
                      class="btn btn-default" onclick="" style="margin-right: 6px;">
@@ -303,6 +270,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </div>
          </div>
       </div>
+   </div>
 <!----------------------------------------------------------------------------------------------------------------------->
 
 <!-- 검색 창 -------------------------------------------------------------------------------------------- ------------------>
@@ -323,22 +291,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
    <!-- /.row -->
       <div class="col-md-12" >
          <c:forEach var='dto' items="${list}">
-         <div class="col-sm-3 col-md-3.5" style="padding-right: 5px; padding-left: 5px;
-">
+         <div class="col-sm-3 col-md-3.5" style="padding-right: 5px; padding-left: 5px; margin-bottom: 20px;">
             <div class="thumbnail" style="margin-bottom: 5px; border:2px solid #ddd" onmouseout="change2(this)" onmouseover="change1(this)">
                <a href="recipe_content.sek?rno=${dto.recipe_no }"><img src="yoSeksa/contentImg/${dto.recipe_img }" alt="" style="height: 230px; width: 270px;" class="thumbna"></a>
                <div class="caption">
                   <h3>${dto.recipe_sub }</h3>
                   <div align="center" style="margin-top: 10px;">
-                     <a href="#" class="btn btn-default" role="button">
+                     <a href="diary.sek" class="btn btn-default" role="button">
                      <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></a>
                   </div>
                </div>
             </div>
-            <div class="list_check" align="center">
-               <input type="checkbox" id="selRecipe_thumb_6836049" value="3770820"
-                  style="margin-bottom: 10px;">
-            </div>
+            
          </div>
          </c:forEach>
          

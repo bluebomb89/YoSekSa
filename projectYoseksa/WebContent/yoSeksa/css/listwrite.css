@@ -5852,3 +5852,7 @@ a.badge:focus {
 .btn btn-default{
 	background-color: #F43C60;
 }
+.footer-color-wrap, .blacky-back {
+    float: none;
+    width: 100%;
+}

@@ -68,7 +68,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           padding-bottom: 40px;
         }
       }
-    </style>
+</style>
 
 
 <script type="text/javascript">
@@ -315,7 +315,7 @@ function window_onload() {  //테스트를 위해 window객체의 onload 이벤�
    <form class="form-horizontal" method="post" action="yoSeksa/function/QnA/SendMail.jsp">
         <fieldset style="margin-left: 0px; margin-top: 0px;">
 	      <div class="form-group">
-            <label class="control-label col-sm-2" for="sender" style=" width: 130px;">관리자주소 <font color='red'>*</font></label>
+            <label class="control-label col-sm-2" for="sender" style=" width: 130px;">관리자주소 <font color='red'>*</font></label>
             <div class="col-sm-10">
               <input type="text" name="sender" id="sender" class="form-control" value="iqee9932@naver.com" readonly="readonly"/>
             </div>
@@ -324,7 +324,7 @@ function window_onload() {  //테스트를 위해 window객체의 onload 이벤�
           <div class="form-group">
             <label class="control-label col-sm-2" for="receiver" style=" width: 130px;">보내는주소 <font color='red'>*</font></label>
             <div class="col-sm-10">
-              <input type="text" name="receiver" id="receiver" class="form-control" placeholder="받는 분의 이메일 주소를 입력하세요." />
+              <input type="text" name="receiver" id="receiver" class="form-control" placeholder="보내는 분의 이메일 주소를 입력하세요." />
             </div>
           </div>
 
