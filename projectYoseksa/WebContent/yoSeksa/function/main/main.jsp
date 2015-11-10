@@ -110,7 +110,7 @@ $(function(){
 					  			닉네임:${nickname }					  			
 					  			
 					  			<li class="logout">
-					  			<a href="" type="button" id="logout_Btn" class="logout_Btn" title="로그아웃"><img src="yoSeksa/images/Logout.gif" onmouseover="this.src='yoSeksa/images/Logout2.gif';" onmouseout="this.src='yoSeksa/images/Logout.gif';" style="width: 30px;"></a>
+					  			<a type="button" id="logout_Btn" class="logout_Btn" title="로그아웃"><img src="yoSeksa/images/Logout.gif" onmouseover="this.src='yoSeksa/images/Logout2.gif';" onmouseout="this.src='yoSeksa/images/Logout.gif';" style="width: 30px;"></a>
 					  			<!-- <input type="button" name="logout_Btn" id="logout_Btn" value="로그아웃" align="center"> -->
 					  			
 					  			</li>
