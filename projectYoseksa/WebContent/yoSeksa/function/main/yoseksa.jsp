@@ -320,7 +320,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 <!-- services -->
  <!-- testimonial -->
 <div id="mangae-show" style="padding-top: 2px;">
-	<div class="testimonial" id="mangae-view">
+	<div class="testimonial" id="mangae-view" style="padding-bottom: 0px;">
 		<%-- <jsp:include page="${mangae }"></jsp:include> --%>
 	</div>
 </div>

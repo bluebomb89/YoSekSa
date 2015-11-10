@@ -79,15 +79,11 @@ span.glyphicon.glyphicon-search{
 	width: 350px;
 }
 
-.form-actions {
-    padding: 21px 20px 22px;
-    margin-top: 22px;
+.form-action {
+    padding-bottom: 22px;
     margin-bottom: 22px;
+    margin-right: 50px;
     background-color: rgba(245, 245, 245, 0);
     border-top: 1px solid rgba(229, 229, 229, 0);
 }
-
-
-
-
 

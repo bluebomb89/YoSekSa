@@ -210,10 +210,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </script>
 
 <!--script-->
-
-
-
-
 <script type="text/javascript">
 Shadowbox.init({
 	players:["iframe"]
@@ -223,13 +219,59 @@ function addRecipeOnTable(year,month,day)
 	Shadowbox.open({
 		content:'yoSeksa/function/calendar/add_recipe_popup.jsp?year='+year+'&month='+month+'&day='+day,
 		player:'iframe',
-		title:'ADD NEW RECIPE',
+		title:'다이어리에 레시피를 추가해보세요!',
 		width:800,
 		height:600
 	});
 }
 </script>
 
+
+<!-- 마우스 오버 이미지 확대 -->
+
+<script type="text/javascript">
+            $(document).ready(function() {
+                  
+                var xOffset = 10;
+                var yOffset = 30;
+ 
+                $(document).on("mouseover",".thumbna",function(e){ //마우스 오버시
+                     
+                    $("body").append("<p id='preview'><img src='"+ $(this).attr("src") +"' width='400px' /></p>"); //보여줄 이미지를 선언                       
+                    $("#preview")
+                        .css("top",(e.pageY - xOffset) + "px")
+                        .css("left",(e.pageX + yOffset) + "px")
+                        .fadeIn("fast"); //미리보기 화면 설정 셋팅
+                });
+                 
+                $(document).on("mousemove",".thumbna",function(e){ //마우스 이동시
+                    $("#preview")
+                        .css("top",(e.pageY - xOffset) + "px")
+                        .css("left",(e.pageX + yOffset) + "px");
+                });
+                 
+                $(document).on("mouseout",".thumbna",function(){ //마우스 아웃시
+                    $("#preview").remove();
+                });
+                  
+            });
+        </script>
+        
+        <style>
+	       /* 미리보기 스타일 셋팅 */
+            #preview{
+                z-index: 9999;
+                position:absolute;
+                border:0px solid #ccc;
+                background:#333;
+                padding:1px;
+                display:none;
+                color:#fff;
+            }
+</style>
+        
+
+<!-- 이미지 확대 끝 -->
 </head>
 <body id="diary_main_body" style="background-image: url('yoSeksa/images/calendar_background.jpg')">
 
@@ -238,41 +280,39 @@ function addRecipeOnTable(year,month,day)
 
 		<table border='0' width='100%' height="10%" celpadding='0' cellspacing='0'>
 		  <tr>
-		   <td width='33%' align='right' valign='middle'><a href="diary.sek?month=<%=currMonth%>&year=<%=currYear%>&action=0"><font size="4">◀</font></a></td>
-		   <td width='33%' align='center' valign='middle'><b><font size="4" color="white"><%=getDateName (cal.get(cal.MONTH)) + " " + cal.get(cal.YEAR)%></font></b></td>
-		   <td width='33%' align='left' valign='middle'><a href="diary.sek?month=<%=currMonth%>&year=<%=currYear%>&action=1"><font size="4">▶</font></a></td>
+		   <td width='33%' align='right' valign='middle'><a href="diary.sek?month=<%=currMonth%>&year=<%=currYear%>&action=0"><font size="4" color="#592424">◀</font></a></td>
+		   <td width='33%' align='center' valign='middle'><b><font size="4" color="#592424"><%=getDateName (cal.get(cal.MONTH)) + " " + cal.get(cal.YEAR)%></font></b></td>
+		   <td width='33%' align='left' valign='middle'><a href="diary.sek?month=<%=currMonth%>&year=<%=currYear%>&action=1"><font size="4" color="#592424">▶</font></a></td>
 		  </tr>
 		</table>
 		<table border="0" width="100%" height="90%" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" cellspacing="0">
 		  <td width="100%" height="90%">
 		    <table id="mealtable" border="0" width=100% height="90%" style="border-collapse: collapse;background-color: rgba( 255, 255, 255, 0 )" bordercolor="#f4f4f4" cellpadding="10" cellspacing="0" >
-		     <tr style="border-bottom: solid 1px;border-bottom-color: rgba( 255, 255, 255, 0.2">
+		     <tr style="border-bottom: solid 1px;border-bottom-color: rgba( 255, 255, 255, 0.2)">
 		          <td width="14%" align="center" nowrap bordercolor="#666666" style="background-color: rgba( 255, 255, 255, 0 )">
-		          <font color="#FFFFFF"><b>Sun</b></font></td>
+		          <font color="#B30000" size="5"><b>Sun</b></font></td>
 		          <td width="14%" align="center" nowrap bordercolor="#666666" style="background-color: rgba( 255, 255, 255, 0 )">
-		          <font color="#FFFFFF"><b>Mon</b></font></td>
+		          <font color="#592424" size="5"><b>Mon</b></font></td>
 		          <td width="14%" align="center" nowrap bordercolor="#666666" style="background-color: rgba( 255, 255, 255, 0 )">
-		          <font color="#FFFFFF"><b>Tues</b></font></td>
+		          <font color="#7d3333" size="5"><b>Tues</b></font></td>
 		          <td width="14%" align="center" nowrap bordercolor="#666666" style="background-color: rgba( 255, 255, 255, 0 )">
-		         <font color="#FFFFFF"><b>Wed</b></font></td>
+		         <font color="#592424" size="5"><b>Wed</b></font></td>
 		          <td width="14%" align="center" nowrap bordercolor="#666666" style="background-color: rgba( 255, 255, 255, 0 )">
-		          <font color="#FFFFFF"><b>Thurs</b></font></td>
+		          <font color="#7d3333" size="5"><b>Thurs</b></font></td>
 		          <td width="14%" align="center" nowrap bordercolor="#666666" style="background-color: rgba( 255, 255, 255, 0 )">
-		          <font color="#FFFFFF"><b>Fri</b></font></td>
+		          <font color="#592424" size="5"><b>Fri</b></font></td>
 		          <td width="14%" align="center" nowrap bordercolor="#666666" style="background-color: rgba( 255, 255, 255, 0 )">
-		          <font color="#FFFFFF"><b>Sat</b></font></td>
+		          <font color="#000099" size="5"><b>Sat</b></font></td>
 		     </tr>
 		<%
 		
-		//'Calendar loop
-		
+		//'Calendar loop		
 		
 		   int currDay;
 		   String todayColor;
 		   String bgStyle;
 		   int count = 1;
-		   int dispDay = 1;
-		
+		   int dispDay = 1;	
 		
 		   for (int w = 1; w < 7; w++)
 		   {
@@ -307,28 +347,47 @@ function addRecipeOnTable(year,month,day)
 		                  }
 		%> 
 		      <td style="<%=bgStyle %>" align="left" valign="top">&nbsp;<a href="#" onclick="addRecipeOnTable(<%=currYear %>,<%=currMonth+1 %>,<%=dispDay %>)"><%=dispDay%></a><br>
-		      
-		
 <%
 			List<DiaryDTO> dlist=DiaryDAO.diaryListData();
-
-
 			SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
 			DecimalFormat df=new DecimalFormat("00");
 			String dlDate;
-			String calDate=currYear+"-"+df.format((currMonth+1))+"-"+df.format(dispDay);
-			
-			//out.println(calDate);
-			
+			String calDate=currYear+"-"+df.format((currMonth+1))+"-"+df.format(dispDay);			
+			String dlBld;			
 			for(DiaryDTO dl:dlist)
 			{
-				dlDate=sdf.format(dl.getDiary_date());
-				if(dlDate.equals(calDate.trim()))
+				dlDate=sdf.format(dl.getDiary_date());//2010-1-1  => 2010-01-01 형으로 변환
+				dlBld=dl.getDiary_bld();
+				if(dlBld.equals("Breakfast"))
 				{
-					out.println(dl.getRecipe_sub());
-					out.println(dl.getDiary_bld());
+					dlBld="B";
+				}
+				else if(dlBld.equals("Lunch"))
+				{
+					dlBld="L";
+				}
+				else
+				{
+					dlBld="D";
 				}
 				
+				if(dlDate.equals(calDate.trim()))//사용자가 클릭한 날짜와 켈린더의 날짜가 서로 일치하면
+				{
+%>					<!-- 아점저 출력 --><!-- 레시피 제목 출력 -->
+					&nbsp;&nbsp;<a href="recipe_content.sek?rno=<%=dl.getRecipe_no() %>" id="dateDisplay">
+					<b><%=dlBld %></b>&nbsp;<%=dl.getRecipe_sub() %>
+<%
+						if(!dl.getRecipe_img().equals("image"))//이미지 파일이 등록돼있으면 출력
+						{
+%>
+								<img src="yoSeksa/contentImg/<%=dl.getRecipe_img() %>" class="thumbna" height="40px" width="40px">
+<%
+						}
+%>
+						</a>									
+					<br>												
+<%
+				}				
 				
 			}
 %>		

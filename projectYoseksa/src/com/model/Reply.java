@@ -21,6 +21,7 @@ public class Reply {
 		String recipe_no=req.getParameter("recipe_no");
 		String reply_content=req.getParameter("reply_content");
 		String rPage=req.getParameter("rpage");
+		System.out.println("댓글내용"+reply_content);
 		if(rPage==null)
 		{
 			rPage="1";
