@@ -6,6 +6,30 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+
+<%-- <c:if test="${sessionScope.nickname == null}">
+	<c:redirect url="diary_loginPlz.sek"/>
+</c:if>
+------------${sessionScope.member_id }
+ --%>
+<%
+		HttpSession session2=request.getSession();
+		int member_no=(int) session.getAttribute("member_no");		
+		String nickname=(String)session.getAttribute("nickname");
+	
+		String id=(String)session.getAttribute("member_id");
+		
+		if(nickname==null || nickname=="")
+		{
+%>
+			<script language="javascript">
+				location.replace("diary_loginPlz.sek"); 
+			</script>
+<%
+		}
+
+%>
 <%
 // Global Vars
 int action = 0;  // incoming request for moving calendar up(1) down(0) for month
@@ -348,7 +372,11 @@ function addRecipeOnTable(year,month,day)
 		%> 
 		      <td style="<%=bgStyle %>" align="left" valign="top">&nbsp;<a href="#" onclick="addRecipeOnTable(<%=currYear %>,<%=currMonth+1 %>,<%=dispDay %>)"><%=dispDay%></a><br>
 <%
-			List<DiaryDTO> dlist=DiaryDAO.diaryListData();
+
+			
+			Map map=new HashMap();
+			map.put("member_no", member_no);
+			List<DiaryDTO> dlist=DiaryDAO.diaryListData(map);
 			SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
 			DecimalFormat df=new DecimalFormat("00");
 			String dlDate;

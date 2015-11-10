@@ -79,14 +79,13 @@ public class DiaryDAO {
 	}
 	///////////////////////////////////////////////////////
 		//다이어리에 출력
-	public static List<DiaryDTO> diaryListData()
+	public static List<DiaryDTO> diaryListData(Map map)
 	{
 		List<DiaryDTO> list=new ArrayList<DiaryDTO>();
 		SqlSession session=null;
 		try{
 			session=ssf.openSession();
-			list=session.selectList("diaryListData");
-			System.out.println("실행했다!!!!!!!!!!!!!!!!");
+			list=session.selectList("diaryListData",map);
 		}catch(Exception ex){
 			System.out.println(ex.getMessage());
 		}finally{
