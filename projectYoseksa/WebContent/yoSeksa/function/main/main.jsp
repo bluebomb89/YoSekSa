@@ -142,7 +142,7 @@ $(function(){
       <!-- 왼쪽상단에 있는 버튼을 클릭했을때 나오는 링크or속성값을 지정하는곳 -->
       <!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
        <script src="yoSeksa/js/classie.js"></script>
-<!-- 타이틀 메뉴바 -->
+<!-- 타이틀 메뉴바 --> 
 <div class="navbar navbar-inverse navbar-static-top affix-top" id="nav">
       <div class="container">
          <nav class="navbar navbar-default">
