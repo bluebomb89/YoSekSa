@@ -200,7 +200,7 @@ function notice_result(){
 css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어주면 된다.
 -->
 <!-- 메인화면 -->
-<header class="masthead">
+<header class="masthead" style="overflow-x: hidden;">
 <div class="theTron animated panel-section dark">
   <div id="kb-bg" class="activated-KB"></div>
   <h1 class="">WelCome <span>To</span> Yoseksa<br>

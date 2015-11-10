@@ -187,6 +187,7 @@ function change2(obj){
 <link href="yoSeksa/css/owl.carousel.css" rel="stylesheet">
 <link href="yoSeksa/css/owl.theme.css" rel="stylesheet">
 <link href="yoSeksa/css/index.css" rel="stylesheet">
+<link href="yoSeksa/css/notice.css" rel="stylesheet">
 <link href="yoSeksa/css/style3.css" type="text/css" rel="stylesheet" media="all">
 <!--script-->
 
@@ -204,23 +205,6 @@ function change2(obj){
 <script src="yoSeksa/js/easing.js"></script>
 <script src="yoSeksa/js/bootstrap.js"></script> 
 <!--/script-->
-<script type="text/javascript">
-   $(document).ready(function() {
-      /* affix the navbar after scroll below header */
-      $('#nav').affix({
-         offset: {top: $('header').height()-$('#nav').height()}
-      });
-      
-      /* affix-top 에서 affix로 수정될대 이벤트 발생*/
-      $('#nav').on("affix.bs.affix",function(){
-         $("#startmain").text("haa!");
-      });
-      /* affix에서 affix-top으로 전환될때 이벤트 발생*/
-      $('#nav').on("affix-top.bs.affix",function(){
-         $("#startmain").text("Search");
-      });
-   });
-</script>
 <style>
 	       /* 미리보기 스타일 셋팅 */
             #preview{
