@@ -91,19 +91,29 @@ $(function(){
 			</div>
 				<ul class="nav">
 						
+								<!-- 로그인 -->						
+						
 						<c:if test="${sessionScope.member_id==null }">
-					  		<li class="login_null">로그인을 해주십시오</li>
+					  		<li class="login_null" align="center">로그인을 해주십시오</li>
 					  		<li class="login">
 							<a href="yoSeksa/function/member/login.jsp" title="로그인"><img src="yoSeksa/images/Login.gif" onmouseover="this.src='yoSeksa/images/Login2.gif';" onmouseout="this.src='yoSeksa/images/Login.gif';" style="width: 30px;"></a>
 						</li>
 				    	</c:if>
 				    	<c:if test="${sessionScope.member_id!=null }">
 				    		
+				    		<!-- 로그아웃 -->
+				    		
 					  		<li class="login_ok">
+					  		
 					  		<form method=post action="member_logout.sek" id="logout_frm">
 					  			<img src="http://image.melon.co.kr/resource/image/cmt/web/common/noArtist03_54.jpg" width="54" height="54">
-					  			닉네임:${nickname }
-					  			<input type="button" name="logout_Btn" id="logout_Btn" value="로그아웃">
+					  			닉네임:${nickname }					  			
+					  			
+					  			<li class="logout">
+					  			<a href="" type="button" id="logout_Btn" class="logout_Btn" title="로그아웃"><img src="yoSeksa/images/Logout.gif" onmouseover="this.src='yoSeksa/images/Logout2.gif';" onmouseout="this.src='yoSeksa/images/Logout.gif';" style="width: 30px;"></a>
+					  			<!-- <input type="button" name="logout_Btn" id="logout_Btn" value="로그아웃" align="center"> -->
+					  			
+					  			</li>
 					  		</form>
 					  		</li>
 
