@@ -9,9 +9,6 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <!-- css -->
-<link rel="stylesheet"
-	href="yoSeksa/css/list/main.min.css">
-	<link href="yoSeksa/css/notice.css" rel="stylesheet">
 <link href="yoSeksa/css/bootstrap.css" type="text/css" rel="stylesheet"
 	media="all">
 <link href="yoSeksa/css/component.css" rel="stylesheet" type="text/css" />
@@ -46,6 +43,10 @@
 
 <link href="yoSeksa/css/listwrite.css" rel="stylesheet">
 <link rel="stylesheet" href="yoSeksa/css/list/ggong.css" type="text/css">
+
+
+<link rel="stylesheet"
+	href="yoSeksa/css/list/main.min.css?ver=9dbd7d094ab56a14e3b2a984b20ea357">
 
 <!-- //footer -->
 <script src="yoSeksa/js/saved_resource"></script>
