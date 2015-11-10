@@ -9,7 +9,7 @@ public class FileConfig {
 //       영권경로
 //       String path="C:\\Users\\남영권\\git\\yoseksaProject\\projectYoseksa\\src\\";
 //       민영경로
-//         String path="C:\\Users\\sist\\git\\YoSekSa\\projectYoseksa\\src\\";
+         String path="C:\\Users\\sist\\git\\YoSekSa\\projectYoseksa\\src\\";
 //        홍의경로
 //        홍의경로
          String path="C:\\Users\\ssd\\git\\YoSekSa\\projectYoseksa\\src\\";
@@ -22,7 +22,7 @@ public class FileConfig {
 //        태진경로
 //         String path="C:\\Users\\sist\\git\\YoSekSa\\projectYoseksa\\src\\";
 //        우식경로
-//        String path="C:\\Users\\sist-77\\git\\YoSekSa\\projectYoseksa\\src\\";
+        String path="C:\\Users\\sist-77\\git\\YoSekSa\\projectYoseksa\\src\\";
 //         String path="C:\\Users\\sist-77\\git\\YoSekSa\\projectYoseksa\\src\\";
 
 

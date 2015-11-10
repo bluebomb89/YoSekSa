@@ -203,8 +203,8 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 <header class="masthead" style="overflow-x: hidden;">
 <div class="theTron animated panel-section dark">
   <div id="kb-bg" class="activated-KB"></div>
-  <h1 class="">WelCome <span>To</span> Yoseksa<br>
-  <a class="scroll" id=startmain href="#section1">검색메인</a></h1>
+  <a class="scroll" id=startmain href="#section1"><h1 class="">WelCome <span>To</span> Yoseksa<br>
+  </a></h1>
   
   </div>
 

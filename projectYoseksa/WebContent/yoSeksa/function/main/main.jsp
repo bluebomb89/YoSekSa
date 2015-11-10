@@ -142,7 +142,7 @@ $(function(){
       <!-- 왼쪽상단에 있는 버튼을 클릭했을때 나오는 링크or속성값을 지정하는곳 -->
       <!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
        <script src="yoSeksa/js/classie.js"></script>
-<!-- 타이틀 메뉴바 -->
+<!-- 타이틀 메뉴바 --> 
 <div class="navbar navbar-inverse navbar-static-top affix-top" id="nav">
       <div class="container">
          <nav class="navbar navbar-default">
@@ -151,10 +151,10 @@ $(function(){
                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav navbar-right">
                      <li class="active"><a href="yoseksa.sek">Home</a></li>
-                     <li><a class="scroll" id=startmain href="#section1">검색메인</a></li>
-                     <li><a class="scroll" href="#services">공지</a></li>
+                     <li><a class="scroll" id=startmain href="yoseksa.sek#section1">검색메인</a></li>
+                     <li><a class="scroll" href="yoseksa.sek#services">공지</a></li>
                      <li><a href="freeboard_list.sek">자유 게시판</a></li>
-                     <li><a href="diary.sek">캘린더</a></li>
+                     <li><a href="diary.sek">캘린더</a></li> 
                      <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">나만의 레시피<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                            <li><a href="recipe.sek">나만의 레시피</a></li>

@@ -16,20 +16,22 @@
 <title>회원 가입</title>
 
 		<link rel="stylesheet" href="http://www.webnoriter.com/~imsi/store/css/default_shop.css">
-	<link rel="stylesheet" href="http://www.webnoriter.com/~imsi/store/skin/shop/basic/style.css">
-	<link rel="stylesheet" href="http://www.webnoriter.com/~imsi/store/skin/member/basic/style.css">
-	<link href="../../css/styleggong.css" type="text/css" rel="stylesheet" media="all">
-	<link href="../../css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
-	<link href="../../css/owl.theme.css" rel="stylesheet">
-	<link href="../../css/component.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="http://www.webnoriter.com/~imsi/store/skin/shop/basic/style.css">
+		<link rel="stylesheet" href="http://www.webnoriter.com/~imsi/store/skin/member/basic/style.css">
+		<!-- <link href="yoSeksa/css/styleggong.css" type="text/css" rel="stylesheet" media="all"> -->
+		<link href="yoSeksa/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+		<link href="yoSeksa/css/default_shop.css" type="text/css" rel="stylesheet" media="all">
+		<!-- <link href="yoSeksa/css/owl.theme.css" rel="stylesheet">
+		<link href="yoSeksa/css/component.css" rel="stylesheet" type="text/css"> -->
+	
 	<!-- jQuery (necessary JavaScript plugins) -->
 
 	<!-- Custom Theme files -->
 
-	<link href="../../css/style.css" type="text/css" rel="stylesheet" media="all">
-	<link href="../../css/bootstrapTheme.css" rel="stylesheet">
-	<link href="../../css/custom.css" rel="stylesheet">
-	<link href="../../css/owl.carousel.css" rel="stylesheet">
+	<link href="yoSeksa/css/style.css" type="text/css" rel="stylesheet" media="all">
+	<link href="yoSeksa/css/bootstrapTheme.css" rel="stylesheet">
+	<link href="yoSeksa/css/custom.css" rel="stylesheet">
+	<link href="yoSeksa/css/owl.carousel.css" rel="stylesheet">
 
 
 	<!-- Custom Theme files -->
@@ -44,19 +46,19 @@
 
 	<!-- //footer -->
 	
-	<script type="text/javascript" src="../../js/saved_resource"></script>
-	<script type="text/javascript" src="../../js/jquery.min.js"></script>
-	<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
-	<script src="../../js/modernizr.custom.js"></script>
-	<script src="../../js/jquery-1.11.1.min.js"></script>
-	<script src="../../js/responsiveslides.min.js"></script>
-	<script type="text/javascript" src="../../js/jquery.cycle.all.js"></script>
-	<script src="../../js/owl.carousel.js"></script>
-	<script src="../../js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="yoSeksa/js/saved_resource"></script>
+	<script type="text/javascript" src="yoSeksa/js/jquery.min.js"></script>
+	<script type="text/javascript" src="yoSeksa/js/bootstrap.min.js"></script>
+	<script src="yoSeksa/js/modernizr.custom.js"></script>
+	<script src="yoSeksa/js/jquery-1.11.1.min.js"></script>
+	<script src="yoSeksa/js/responsiveslides.min.js"></script>
+	<script type="text/javascript" src="yoSeksa/js/jquery.cycle.all.js"></script>
+	<script src="yoSeksa/js/owl.carousel.js"></script>
+	<script src="yoSeksa/js/owl.carousel.min.js"></script>
 
 	<!--/animated-css-->
-	<script type="text/javascript" src="../../js/move-top.js"></script>
-	<script type="text/javascript" src="../../js/easing.js"></script>
+	<script type="text/javascript" src="yoSeksa/js/move-top.js"></script>
+	<script type="text/javascript" src="yoSeksa/js/easing.js"></script>
 
 	<!--/script-->
 	<script type="text/javascript">
@@ -228,9 +230,30 @@ $(function(){
 	</script>
 	<!--script-->
 
+<style type="text/css">
+	
+	span{
+	
+	 		height:100%; !important;
+	 		margin:0; !important;
+	 		padding:0; !important;
+	 		font-family:Dotum, "돋움"; !important;
+	 		font-size:12px; color:#4b4b4b; !important;
+	
+		}
+.nav > li{
+  			margin: 0;	!important;
+  			font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; !important;
+  			font-size: 16px; !important;
+  			line-height: 22px; !important;
+  			color: #869690; !important;
+/*   			background-color: #ffffff; !important; */
+		}
+</style>
 </head>
 
-<body style="cursor: default;">
+
+ <body style="cursor: default;">
 
 	<!-- 중단 -->
 	<div id="wrapper">
@@ -270,8 +293,8 @@ $(function(){
 								</tr>
 								<tr>
 									<th scope="row">
-										<label for="reg_member_pw_re">비밀번호 확인
-											<strong class="sound_only">필수</strong>
+										<label for="reg_member_pw_re">비밀번호 확인 
+											<strong class="sound_only" >필수</strong>
 										</label>
 									</th>
 									<td>
@@ -316,8 +339,12 @@ $(function(){
 					<div class="btn_confirm">
 						<input type="submit" value="회원가입" id="btnSub"
 							class="btn_submit" accesskey="s"> 
-						<input type="button">
-						<a href="" class="btnCancel">취소</a>
+						
+						<input type="button" value="돌아가기" id="btnSub" class="btn_submit"
+							onclick="self.location='yoSeksa/main/main.jsp';" >
+							
+							
+						
 					</div>
 				</form>
 			</div>
