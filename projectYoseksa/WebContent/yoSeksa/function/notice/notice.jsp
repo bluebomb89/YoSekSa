@@ -166,7 +166,7 @@ $(function(){
 <body>
        <div class="container" id="noticeboard">
          <div class="service-info" id="serviceyo" style="height: 47px;">
-			<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="float: left;">
+			<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id="notice_btn" style="float: left;">
                	등록
         	</button>
             <h3 style="padding: 0;margin: 0;margin-right: 44px;">Notice</h3>

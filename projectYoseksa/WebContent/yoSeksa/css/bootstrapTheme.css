@@ -208,7 +208,7 @@ body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 22px;
-  color: #869690;
+  color: #000000;
   background-color: #ffffff;
 }
 a {
@@ -900,7 +900,7 @@ input,
 button,
 select,
 textarea {
-  font-size: 16px;
+  font-size: 11.5px;
   font-weight: normal;
   line-height: 22px;
 }
