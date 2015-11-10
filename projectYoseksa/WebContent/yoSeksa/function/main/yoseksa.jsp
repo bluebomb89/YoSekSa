@@ -203,7 +203,10 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 <header class="masthead">
 <div class="theTron animated panel-section dark">
   <div id="kb-bg" class="activated-KB"></div>
-  <h1 class="">Well Come <span>To</span> Yoseksa</div>
+  <h1 class="">WelCome <span>To</span> Yoseksa<br>
+  <a class="scroll" id=startmain href="#section1">검색메인</a></h1>
+  
+  </div>
 
 </header>
 <!-- 서비스눌렀을때 검색화면이동 -->
