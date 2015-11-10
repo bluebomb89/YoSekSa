@@ -7,58 +7,59 @@
 
 <!DOCTYPE HTML>
 <html>
-<head>
-
-<meta http-equiv="imagetoolbar" content="no">
-<meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<head>
+		<meta http-equiv="imagetoolbar" content="no">
+		<meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <title>회원 가입</title>
 
-<link rel="stylesheet" href="http://www.webnoriter.com/~imsi/store/css/default_shop.css">
-<link rel="stylesheet" href="http://www.webnoriter.com/~imsi/store/skin/shop/basic/style.css">
-<link rel="stylesheet" href="http://www.webnoriter.com/~imsi/store/skin/member/basic/style.css">
-<link href="../../css/styleggong.css" type="text/css" rel="stylesheet" media="all">
-<link href="../../css/bootstrap.css" type="text/css" rel="stylesheet"
-	media="all">
-<link href="../../css/owl.theme.css" rel="stylesheet">
-<link href="../../css/component.css" rel="stylesheet" type="text/css" />
-<!-- jQuery (necessary JavaScript plugins) -->
+		<link rel="stylesheet" href="http://www.webnoriter.com/~imsi/store/css/default_shop.css">
+	<link rel="stylesheet" href="http://www.webnoriter.com/~imsi/store/skin/shop/basic/style.css">
+	<link rel="stylesheet" href="http://www.webnoriter.com/~imsi/store/skin/member/basic/style.css">
+	<link href="../../css/styleggong.css" type="text/css" rel="stylesheet" media="all">
+	<link href="../../css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+	<link href="../../css/owl.theme.css" rel="stylesheet">
+	<link href="../../css/component.css" rel="stylesheet" type="text/css" />
+	<!-- jQuery (necessary JavaScript plugins) -->
 
-<!-- Custom Theme files -->
-<link href="../../css/style.css" type="text/css" rel="stylesheet"
-	media="all">
-<link href="../../css/bootstrapTheme.css" rel="stylesheet">
-<link href="../../css/custom.css" rel="stylesheet">
-<link href="../../css/owl.carousel.css" rel="stylesheet">
+	<!-- Custom Theme files -->
+
+	<link href="../../css/style.css" type="text/css" rel="stylesheet" media="all">
+	<link href="../../css/bootstrapTheme.css" rel="stylesheet">
+	<link href="../../css/custom.css" rel="stylesheet">
+	<link href="../../css/owl.carousel.css" rel="stylesheet">
 
 
-<!-- Custom Theme files -->
-<!--//theme-style-->
+	<!-- Custom Theme files -->
+	<!--//theme-style-->
 
-<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
-<script type="application/x-javascript">
-	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
-</script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+	<script type="application/x-javascript">
+	 addEventListener("load", 
+	 function() { setTimeout(hideURLbar, 0); }, false); 
+	 function hideURLbar(){ window.scrollTo(0,1); } 
+	</script>
 
-<!-- //footer -->
-<script type="text/javascript" src="../../js/saved_resource"></script>
-<script type="text/javascript" src="../../js/jquery.min.js"></script>
-<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
-<script src="../../js/modernizr.custom.js"></script>
-<script src="../../js/jquery-1.11.1.min.js"></script>
-<script src="../../js/responsiveslides.min.js"></script>
-<script type="text/javascript" src="../../js/jquery.cycle.all.js"></script>
-<script src="../../js/owl.carousel.js"></script>
-<script src="../../js/owl.carousel.min.js"></script>
+	<!-- //footer -->
+	
+	<script type="text/javascript" src="../../js/saved_resource"></script>
+	<script type="text/javascript" src="../../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/modernizr.custom.js"></script>
+	<script src="../../js/jquery-1.11.1.min.js"></script>
+	<script src="../../js/responsiveslides.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery.cycle.all.js"></script>
+	<script src="../../js/owl.carousel.js"></script>
+	<script src="../../js/owl.carousel.min.js"></script>
 
-<!--/animated-css-->
-<script type="text/javascript" src="../../js/move-top.js"></script>
-<script type="text/javascript" src="../../js/easing.js"></script>
+	<!--/animated-css-->
+	<script type="text/javascript" src="../../js/move-top.js"></script>
+	<script type="text/javascript" src="../../js/easing.js"></script>
 
-<!--/script-->
-<script type="text/javascript">
+	<!--/script-->
+	<script type="text/javascript">
 	jQuery(document).ready(function($) {
 		$(".scroll").click(function(event) {
 			event.preventDefault();
@@ -71,9 +72,9 @@
 		});
 
 	});
-</script>
+	</script>
 
-<script>
+	<script>
 	$(document).ready(function() {
 
 		var owl = $("#owl-demo");
@@ -102,9 +103,9 @@
 		})
 
 	});
-</script>
+	</script>
 
-<script type="text/javascript">
+	<script type="text/javascript">
 	$(document).ready(function() {
 		/* affix the navbar after scroll below header */
 		$('#nav').affix({
@@ -113,9 +114,9 @@
 			}
 		});
 	});
-</script>
+	</script>
 
-<script>
+	<script>
 	$(function() {
 		$("#slider").responsiveSlides({
 			auto : true,
@@ -195,11 +196,11 @@
 		
 	}
 	
-</script>
+	</script>
 
-<script type="text/javascript">
-// window.onload=function(){}
-// $(document).ready(function(){})
+	<script type="text/javascript">
+	// window.onload=function(){}
+	// $(document).ready(function(){})
 $(function(){
 	//$('#username').val("admin");
 	$('#btnSub').click(function(){
@@ -224,8 +225,8 @@ $(function(){
 		history.back();
 	});
 });
-</script>
-<!--script-->
+	</script>
+	<!--script-->
 
 </head>
 
@@ -314,8 +315,9 @@ $(function(){
 					<!-- 등록/취소 버튼 -->
 					<div class="btn_confirm">
 						<input type="submit" value="회원가입" id="btnSub"
-							class="btn_submit" accesskey="s"> <a
-							href="http://www.webnoriter.com/~imsi/store" class="btnCancel">취소</a>
+							class="btn_submit" accesskey="s"> 
+						<input type="button">
+						<a href="" class="btnCancel">취소</a>
 					</div>
 				</form>
 			</div>
@@ -323,8 +325,8 @@ $(function(){
 		</div>
 
 		<!-- 하단 시작 { -->
-	</div>
+		</div>
 
-	<script src="../../js/bootstrap.js"></script>
-</body>
+	<!-- <script src="../../js/bootstrap.js"></script> -->
+	</body>
 </html>
