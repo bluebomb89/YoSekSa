@@ -11,6 +11,14 @@ public class DiaryDTO {
 	private Date diary_regdate;
 	private String diary_bld;
 	private String recipe_sub;
+	private String recipe_img;
+	
+	public String getRecipe_img() {
+		return recipe_img;
+	}
+	public void setRecipe_img(String recipe_img) {
+		this.recipe_img = recipe_img;
+	}
 	public int getMgr_no() {
 		return mgr_no;
 	}

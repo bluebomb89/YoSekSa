@@ -1,0 +1,6 @@
+#searchReTable{
+	border-collapse: collapse;
+}
+.th{
+	border-bottom: solid 1px;border-bottom-color: #00ff40;
+}

@@ -20,7 +20,7 @@ public class diary {
 	public String diary(HttpServletRequest req) throws IOException{
 		
 		
-		String currYear=req.getParameter("currYear");
+/*		String currYear=req.getParameter("currYear");
 		String currMonth=req.getParameter("currMonth");		
 		String action=req.getParameter("action");
 
@@ -28,7 +28,7 @@ public class diary {
 		req.setAttribute("year", currYear);
 		req.setAttribute("month", currMonth);
 		req.setAttribute("action", action);
-		
+		*/
 		req.setAttribute("jsp",	"../calendar/calendar.jsp");
 		
 		return "yoSeksa/function/main/main.jsp";

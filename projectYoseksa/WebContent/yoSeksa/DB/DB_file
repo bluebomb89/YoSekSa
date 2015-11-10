@@ -184,8 +184,8 @@ INSERT INTO yoseksa_recipe VALUES(36,'','','','','','','민카지침','image',SY
 CREATE TABLE yoseksa_recipec(
    recipe_no NUMBER,
    recipec_no NUMBER,
-   recipec_photo VARCHAR2(200) CONSTRAINT yrc_nn_recipec_photo NOT NULL,
-   recipec_cont CLOB CONSTRAINT yrc_nn_recipec_cont NOT NULL,
+   recipec_photo VARCHAR2(200) CONSTRAINT yrca_nn_recipeca_photo NOT NULL,
+   recipec_cont CLOB CONSTRAINT yrca_nn_recipeca_cont NOT NULL,
    CONSTRAINT yrc_pk_recipec_no PRIMARY KEY(recipec_no),
    CONSTRAINT yrc_fk_recipec_no FOREIGN KEY(recipe_no) REFERENCES yoseksa_recipe(recipe_no)
 );
