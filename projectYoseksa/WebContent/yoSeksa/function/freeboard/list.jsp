@@ -242,7 +242,7 @@ body.modal-open {
 									확인되지 않는 글들은 의 판단하에 임의로 삭제 가능합니다.</dt>
 							</dl>
 						</div>
-						<ul class="boardNotice">
+						<ul class="boardNotice" style="margin-left: 0px">
 							<li>
 								<dl>
 									<dd>
@@ -265,13 +265,14 @@ body.modal-open {
 							</li>
 						</ul>
 						<p>
+							<button type="button" class="btn btn-primary btn-lg"
+								style="margin-top: 15px;" data-toggle="modal"
+								data-target="#myModal">게시물을 등록해주세요</button>
 						<p class="count">
 							전체글 <span class="number">${max_no }</span>건
 						</p>
 
 					</div>
-					<button type="button" class="btn btn-primary btn-lg"
-						data-toggle="modal" data-target="#myModal">게시물을 등록해주세요</button>
 				</div>
 			</div>
 		</div>
@@ -294,67 +295,84 @@ body.modal-open {
 	</div>
 	<!-- 게시판 -->
 	<c:forEach var="dto" items="${list }">
-	<div id="section>
-		<div id="section_rvew" class="section_rvew"
-			style="margin-left: 100px; margin-right: 100px;">
+		<div id="section_rvew" class="section_rvew" style="margin-left: 100px;margin-right: 100px;background:#f1f1f2;">
 			<div class="d_cmtpgn " id="d_cmtpgn">
 				<div class="list_cmt" id="d_cmtpgn_cmt_list_wrapper" style="">
 
 					<li class="first_child">
 						<div class="wrap_cmt_cntt d_cmtpgn_cmt_wrapper">
 							<div class="wrap_nicnmname d_cmtpgn_cmt_member_wrapper">
-								<span class="thumb_wrap"> <a class="thumb d_cmtpgn_user" style="cursor: pointer; text-decoration: none;"> <img src="http://image.melon.co.kr/resource/image/cmt/web/common/noArtist03_54.jpg" width="54" height="54">
+								<span class="thumb_wrap"> <a class="thumb d_cmtpgn_user"
+									style="cursor: pointer; text-decoration: none;"> <img
+										src="http://image.melon.co.kr/resource/image/cmt/web/common/noArtist03_54.jpg"
+										width="54" height="54">
 								</a>
 								</span>
 								<div class="ellipsis" style="max-width: 102px;">
-									<a class="thumb d_cmtpgn_user" style="cursor: pointer; text-decoration: none;"> <span class="d_cmtpgn_member_nickname" title="닉네임">yoseki</span>
+									<a class="thumb d_cmtpgn_user"
+										style="cursor: pointer; text-decoration: none;"> <span
+										class="d_cmtpgn_member_nickname" title="닉네임">${dto.nickname }</span>
 									</a>
 								</div>
 							</div>
-							<div><span title="새 글" class="icon_new d_cmtpgn_icon"></span> <span class="date" style="float:right">2015-11-09</span>
-												 <span class="date"><span class="time"></span></span></div>
-<div class="wrap_cntt d_cmtpgn_cmt_cont_wrapper">
+							<div class="wrap_cntt d_cmtpgn_cmt_cont_wrapper">
 								<div class="cntt">
-									<div class="cmt_text d_cmtpgn_cmt_full_contents" style="-ms-word-break: break-all; word-break: break-all; word-break: break-word; word-wrap: break-word; -webkit-hyphens: auto; -ms-hyphens: auto; hyphens: auto; display: block">
-  
+									<div class="cmt_text d_cmtpgn_cmt_full_contents"
+										style="-ms-word-break: break-all; word-break: break-all; word-break: break-word; word-wrap: break-word; -webkit-hyphens: auto; -ms-hyphens: auto; hyphens: auto; display: block">
+										<div>
+											<span title="새 글" class="icon_new d_cmtpgn_icon"></span> <span
+												class="date" style="float: right">${dto.dbday }</span> <span
+												class="date"> <span class="time"></span>
+											</span>
+										</div>
 										<div class="cmt_cont">
-											
-											<p>abcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefg</p>
+											<p>${dto.free_content }</p>
 										</div>
 
 									</div>
 								</div>
-								
-							</div>
-<div class="wrap_btn d_cmtpgn_cmt_info_wrapper" style="float:right">
+
+								<div class="wrap_btn d_cmtpgn_cmt_info_wrapper">
 
 
 									<!-- 수정하기 -->
 									<div class="wrap_btn_right">
+										<button type="button" title="댓글 보기"
+											class="btn_text arrow_d02 d_cmtpgn_adcmt_expand_btn"
+											role="button">
+											<span class="odd_span"> <span class="text">댓글 <strong
+													class="d_cmtpgn_adcmt_cnt">0</strong>개
+											</span>
+											</span>
+										</button>
 										<span class="wrap_btn_recm d_cmtpgn_recm_box">
-											<button type="button" title="댓글 보기" class="btn_text arrow_d02 d_cmtpgn_adcmt_expand_btn" role="button">
-												<span class="odd_span"> <span class="text">댓글
-														<strong class="d_cmtpgn_adcmt_cnt">0</strong>개
-												</span>
-												</span>
-											</button>
-											<button type="button" title="글 수정" class="btn_recm positive d_cmtpgn_cmt_recm_btn">
-												<span class="odd_span"> <a href=""><img src="yoSeksa/images/board1.gif" align="absbottom" style="width: 27px;"></a>
+											<button type="button" title="글 수정"
+												class="btn_recm positive d_cmtpgn_cmt_recm_btn">
+												<span class="odd_span"> <a href=""><img
+														src="yoSeksa/images/board1.gif" align="absbottom"
+														style="width: 27px;"></a>
 												</span>
 											</button> <!-- 삭제하기 -->
-											<button type="button" title="글 삭제하기" class="btn_recm negative d_cmtpgn_cmt_non_recm_btn" data-toggle="modal" data-target="#remove" "="">
-												<span class="odd_span"> <a href=""><img style="width: 25px; margin-top: 3px;" align="absbottom" src="yoSeksa/images/board2.gif"> </a>
+											<button type="button" title="글 삭제하기"
+												class="btn_recm negative d_cmtpgn_cmt_non_recm_btn"
+												data-toggle="modal" data-target="#remove"">
+												<span class="odd_span"> <a href=""><img
+														style="width: 25px; margin-top: 3px;" align="absbottom"
+														src="yoSeksa/images/board2.gif"> </a>
 												</span>
 											</button>
 										</span>
 									</div>
 								</div>
+							</div>
 						</div>
 					</li>
 				</div>
 			</div>
 		</div>
-		</div>
+		<div class="blank" style="
+    height: 15px;
+"></div>
 	</c:forEach>
 
 	<!-- 페이지 나누는 부분 -->
@@ -367,7 +385,7 @@ body.modal-open {
 			class="btn_pre disabled d_cmtpgn_navigator" title="이전"> <span>이전</span>
 		</a> <span class="page_num"> <strong> <span class="none">현재페이지</span>${curpage }
 		</strong>
-		</span> <span class="page_num"> <strong> <span class="none">마지막페이지</span>${totalpage }
+		</span>&nbsp;&nbsp;/&nbsp; <span class="page_num"> <strong> <span class="none">마지막페이지</span>${totalpage }
 		</strong>
 		</span> <a
 			href="freeboard_list.sek?page=${curpage<totalpage?curpage+1:curpage }"
@@ -377,80 +395,6 @@ body.modal-open {
 				페이지</span>
 		</a>
 	</div>
-	</div>
-	</div>
-	</div>
 
-	<!-- 푸터 -->
-
-	<div class="footer-color-wrap">
-		<footer class="content-info container" role="contentinfo"
-			style="left: 120px;">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="howmuch">
-						<li id="text-4" class="widget widget_text">
-							<h3>About Us</h3> <img
-							src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/separator.png"
-							align="absbottom"
-							;="" style="margin-bottom: 20px; margin-left: 140px;">
-							<div class="textwidget">
-								Yosek<em>Yosek</em>Yosek<br>Yosek
-							</div>
-						</li>
-					</div>
-					<div class="gotaquestion">
-						<a class="anchorfix" id="questions"></a>
-						<li id="text-5" class="widget widget_text">
-							<h3>Get in Touch</h3> <img
-							src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/separator.png"
-							align="bottom" style="margin-bottom: 20px; margin-left: 140px;">
-							<div class="textwidget">
-								<div style="position: absolute;">
-									<img
-										src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/phone.png">
-									<div>
-										<div>Seoul: +00 (010) 0000 0000</div>
-
-										<div>Sinchon:+00 (010) 0000 0000</div>
-									</div>
-								</div>
-								<img
-									src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/bigemail.png"
-									style="margin-bottom: 100px; margin-top: 100px;"> <a
-									href="mailto:yo@sek.sa" style="margin-left: 5px;">Yo@sek.sa</a>
-							</div>
-						</li>
-					</div>
-				</div>
-				<div class="social-links">
-					<!--<a target="_blank" href="http://www.facebook.com/InfinVision"><img width="29" height="60" alt="facebook" src=" http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/f-social-facebook.png" ></a>
-			<a target="_blank" href="http://twitter.com/infinvision"><img width="29" height="60" alt="twitter" src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/f-social-twitter.png"></a>
-			<a target="_blank" href="http://www.linkedin.com/company/infinvision"><img width="29" height="60" alt="linkedin" src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/f-social-linkedin.png"></a>
-			<a target="_blank" href="https://plus.google.com/+Infinvision"><img width="29" height="60" alt="googleplus" src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/f-social-google.png"></a>-->
-				</div>
-			</div>
-		</footer>
-	</div>
-	<div class="blacky-back" style="padding-bottom: 350px;">
-		<div class="f-menu">
-			<ul id="menu-primary-navigation-1" class="menu">
-				<li class="active menu-home"><a href="/">Home</a></li>
-				<li class="menu-divider">/</li>
-				<li class="menu-projects"><a href="/projects/">Projects</a></li>
-				<li class="menu-divider">/</li>
-				<li class="menu-workshops-briefings"><a href="#">Workshops
-						&amp; Briefings</a></li>
-				<li class="menu-divider">/</li>
-				<li class="menu-about"><a href="/about/">About</a></li>
-				<li class="menu-divider">/</li>
-				<li class="menu-ideas"><a href="/blog/">Ideas</a></li>
-				<li class="menu-divider">/</li>
-
-			</ul>
-		</div>
-		<div class="f-copy">© Copyright 2014 InfinVision Ltd. All rights
-			reserved.</div>
-	</div>
 </body>
 </html>
