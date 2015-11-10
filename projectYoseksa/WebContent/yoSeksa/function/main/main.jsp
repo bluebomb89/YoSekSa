@@ -141,17 +141,11 @@ $(function(){
                      <li class="active"><a href="yoseksa.sek">Home</a></li>
                      <li><a class="scroll" id=startmain href="#section1">검색메인</a></li>
                      <li><a class="scroll" href="#services">공지</a></li>
-                     <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">자유게시판<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                           <li><a href="freeboard.sek">about1</a></li>
-                           <li><a href="freeboard_list.sek">about2</a></li>
-                           <li><a href="recipe_content.sek">레시피 내용보기</a></li>           
-                        </ul>
-                     </li>
+                     <li><a href="freeboard_list.sek">자유 게시판</a></li>
                      <li><a href="diary.sek">캘린더</a></li>
-                     <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
+                     <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">나만의 레시피<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                           <li><a href="recipe.sek">gallery1</a></li>
+                           <li><a href="recipe.sek">나만의 레시피</a></li>
                            <li><a href="qna.sek">Q&A</a></li>
                            <li><a href="join.sek">회원가입</a></li>           
                         </ul>
