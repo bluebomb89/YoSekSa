@@ -59,6 +59,7 @@ function replyBtn(){
 	var reply_content=$('#recipeReply').val();
 	var recipe_no=$('#recipe_no').val();
 	var param="reply_content="+reply_content+"&recipe_no="+recipe_no;
+	alert(reply_content);
 	sendMessage("GET", "recipe_reply.sek", param, reply_coment);
 }
 function reply_coment(){
