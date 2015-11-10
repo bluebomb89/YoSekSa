@@ -6,6 +6,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <!-- css -->
 <link href="yoSeksa/css/bootstrap.css" type="text/css" rel="stylesheet"
@@ -24,14 +25,14 @@
 <link href="yoSeksa/css/owl.theme.css" rel="stylesheet">
 <link href="yoSeksa/css/index.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="yoSeksa/css/font.css">
-<link rel="stylesheet" type="text/css"
-	href="yoSeksa/css/font-awesome.min.css">
+<!-- <link rel="stylesheet" type="text/css"
+	href="yoSeksa/css/font-awesome.min.css"> -->
 <link rel="stylesheet" type="text/css"
 	href="yoSeksa/css/recipe_content.css">
 <link rel="stylesheet" href="yoSeksa/css/list/b0zjmc9xwx.css"
 	type="text/css">
-<link rel="stylesheet" href="yoSeksa/css/list/kt3ych75bx.css"
-	type="text/css">
+<!-- <link rel="stylesheet" href="yoSeksa/css/list/kt3ych75bx.css"
+	type="text/css"> -->
 
 <!-- 댓글 css 파일 네임 변경 -->
 <link rel="stylesheet" href="yoSeksa/css/list/ktwzk0vhtx.css"
@@ -46,6 +47,7 @@
 
 <link rel="stylesheet"
 	href="yoSeksa/css/list/main.min.css?ver=9dbd7d094ab56a14e3b2a984b20ea357">
+
 <!-- //footer -->
 <script src="yoSeksa/js/saved_resource"></script>
 <script src="yoSeksa/js/modernizr.custom.js"></script>
@@ -62,6 +64,10 @@
 body.modal-open {
 	overflow: inherit;
 	padding-right: 0 !important;
+}
+
+html, body {
+	height: auto;
 }
 </style>
 <script type="text/javascript">
@@ -108,9 +114,9 @@ body.modal-open {
 			$('#freewriteForm').submit();
 		});
 
-/* 		$('#btnCancel').click(function() {
-			history.back();
-		}); */
+		/* 		$('#btnCancel').click(function() {
+		 history.back();
+		 }); */
 	});
 </script>
 
@@ -210,7 +216,8 @@ body.modal-open {
 					placeholder="내용"
 					style="height: 210px; width: 446px; margin-left: 80px; border: 1px solid #CACACA; background-color: rgb(255, 255, 255);"></textarea>
 				<br> <span id="nameSpan" style="color: red; text-align: center"></span>
-				<div class="write_pic2" style="width: 400px; margin-top: 5px;margin-left: 80px;">
+				<div class="write_pic2"
+					style="width: 400px; margin-top: 5px; margin-left: 80px;">
 
 					<!-- 게시글 비밀번호 시작 -->
 					<p>
@@ -225,8 +232,8 @@ body.modal-open {
 		<div class="modal-footer"
 			style="margin-bottom: 20px; margin-right: 70px; padding-top: 0px;">
 			<button type="button" class="btn btn-primary" id="btnSub">등록</button>
-			<button type="button" class="btn btn-primary" id="btnCancel" data-dismiss="modal"
-				>취소</button>
+			<button type="button" class="btn btn-primary" id="btnCancel"
+				data-dismiss="modal">취소</button>
 		</div>
 	</div>
 
@@ -236,42 +243,21 @@ body.modal-open {
 			<div class="tabReview">
 				<div class="reviewWrap">
 					<div class="goodReview">
-						<div class="top">
-							<dl class="topSub">
-								<dt class="warning">상대방에 대한 심한 비방, 욕설을 포함한 글, 광고홍보성 글, 실명이
-									확인되지 않는 글들은 의 판단하에 임의로 삭제 가능합니다.</dt>
-							</dl>
-						</div>
-						<ul class="boardNotice" style="margin-left: 0px">
-							<li>
-								<dl>
-									<dd>
-										<a href="javascript:;"
-											onclick="window.open('/common/board/noticeboardview_pop.asp?id=489', 'noticeboardview_pop', 'width=636, height=500, scrollbars=yes');return false;">
-											<span class="subject"></span>[NEW]게시판 운영방안 및 게시물 삭제 기준 안내
-										</a>
-									</dd>
-								</dl>
-							</li>
-							<li>
-								<dl>
-									<dd>
-										<a href="javascript:;"
-											onclick="window.open('/common/board/noticeboardview_pop.asp?id=335', 'noticeboardview_pop', 'width=636, height=500, scrollbars=yes');return false;">
-											<span class="subject">[필독]</span>저작권법 관련 내용입니다. 필독해주세요!
-										</a>
-									</dd>
-								</dl>
-							</li>
-						</ul>
-						<p>
-							<button type="button" class="btn btn-primary btn-lg"
-								style="float: right; font-weight: bold; margin-top: 5px; padding-top: 5px; padding-bottom: 5px;"
-								data-toggle="modal" data-target="#myModal">등록</button>
-						<p class="count" style="font-size: 15;">
-							전체글 <span class="number" style="font-size: 20px;">${max_no }</span>건
-						</p>
 
+
+						<div id="board_title" align="center">
+							<h3
+								style="border-bottom-width: 0px; margin-bottom: 0px; margin-top: 15px; font-size: 34px;">Freeboard</h3>
+						</div>
+						<div>
+							<p>
+								<button type="button" class="btn btn-primary btn-lg"
+									style="float: right; font-weight: bold; margin-top: 5px; padding-top: 5px; padding-bottom: 5px;"
+									data-toggle="modal" data-target="#myModal">등록</button>
+							<p class="count" style="font-size: 15;">
+								전체글 <span class="number" style="font-size: 20px;">${max_no }</span>건
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -281,18 +267,13 @@ body.modal-open {
 		<div class="hSpace70">
 			<!-- 여백 70 -->
 		</div>
-		<div class="hSpace30">
+		<div class="hSpace10">
 			<!-- 여백 30 -->
 		</div>
 
 	</div>
 
-	<div id="ajax_review">
-		<ul class="boardList" totcnt="0" od="">
-			<!-- <img src="yoSeksa/images/reply_ico.png" align="absbottom" style="margin-top: 13px; margin-left: 395px;"> -->
-
-		</ul>
-	</div>
+	<hr style="margin-left: 120px; width: 1000px;">
 	<!-- 게시판 -->
 	<c:forEach var="dto" items="${list }">
 		<div id="section_rvew" class="section_rvew"
@@ -315,8 +296,8 @@ body.modal-open {
 										class="d_cmtpgn_member_nickname" title="닉네임">${dto.nickname }</span>
 									</a>
 									<c:if test="${today==dto.dbday }">
-												<span title="새 글" class="icon_new d_cmtpgn_icon"></span>
-											</c:if>
+										<span title="새 글" class="icon_new d_cmtpgn_icon"></span>
+									</c:if>
 								</div>
 							</div>
 							<div class="wrap_cntt d_cmtpgn_cmt_cont_wrapper">
@@ -325,15 +306,16 @@ body.modal-open {
 										style="-ms-word-break: break-all; word-break: break-all; word-break: break-word; word-wrap: break-word; -webkit-hyphens: auto; -ms-hyphens: auto; hyphens: auto; display: block">
 										<div>
 
-											
 
-											 <span
-												class="date" style="float: right">${dto.dbday }</span> <span
-												class="date"> <span class="time"></span>
+
+											<span class="date" style="float: right">${dto.dbday }</span>
+											<span class="date"> <span class="time"></span>
 											</span>
 										</div>
 										<div class="cmt_cont">
+											<pre>
 											<p>${dto.free_content }</p>
+										</pre>
 										</div>
 
 									</div>
@@ -390,7 +372,8 @@ body.modal-open {
 			class="btn_pre disabled d_cmtpgn_navigator" title="이전"> <span>이전</span>
 		</a> <span class="page_num"> <strong> <span class="none">현재페이지</span>${curpage }
 		</strong>
-		</span>&nbsp;&nbsp;/&nbsp; <span class="page_num"> <strong> <span class="none">마지막페이지</span>${totalpage }
+		</span>&nbsp;&nbsp;/&nbsp; <span class="page_num"> <strong> <span
+				class="none">마지막페이지</span>${totalpage }
 		</strong>
 		</span> <a
 			href="freeboard_list.sek?page=${curpage<totalpage?curpage+1:curpage }"
