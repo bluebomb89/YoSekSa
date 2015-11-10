@@ -73,6 +73,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <script type="text/javascript">
 
+function change1(obj){
+    obj.style.background = '#f3f3f3';
+    obj.style.color = '#634343';
+}
+function change2(obj){
+    obj.style.background = '#634343';
+    obj.style.color = '#f3f3f3';
+}
+
+
 /***********************************************
 * Contractible Headers script- 짤 Dynamic Drive (www.dynamicdrive.com)
 * This notice must stay intact for legal use. Last updated Oct 21st, 2003.
@@ -331,8 +341,8 @@ function window_onload() {  //테스트를 위해 window객체의 onload 이벤�
               <textarea name="content" id="content" class="ckeditor" style="width:320px; height:150px;"></textarea>
             </div>
           </div>
-          <div class="form-actions text-right" style="margin-right: 140px; margin-top: 0px; padding-top: 0px; padding-bottom: 0px; margin-bottom: 0px; width: 130px;">
-            <input type="submit" class="btn btn-primary" value="메일보내기" />
+          <div class="form-action text-right">
+            <input type="submit" class="btn btn-primary" value="메일보내기" onmouseout="change2(this)" onmouseover="change1(this)" style="background-color:#634343;" />
             <input type="reset" class="btn" value="다시작성" />
           </div>
           </fieldset>

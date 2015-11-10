@@ -229,7 +229,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 		<footer class="content-info container" role="contentinfo"
 			style="left: 115px;">
 			<div class="row">
-				<div class="col-lg-12">
+				<div class="col-lg-12" style=" top: 30px;">
 					<div class="howmuch">
 						<li id="text-4" class="widget widget_text">
 							<h3>About Us</h3> <img
@@ -255,9 +255,9 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 									<img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/phone.png">
 									
 									
-											&nbsp;Seoul: +00 (010) 0000 0000
+											&nbsp;Seoul: +82 10) 0000 0000
 
-											<div style="margin-left: 45.7px;">Sinchon: +00 (010) 0000 0000</div>
+											<div style="margin-left: 45.7px;">Sinchon: +82 10) 0000 0000</div>
 								</div>	
 								
 								<div style="margin-top: 10px;">
@@ -277,7 +277,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 			</div>
 	</footer>
 	</div>
-	<div class="blacky-back" style="padding-bottom: 130px;">
+	<div class="blacky-back" style="padding-bottom: 105px;">
 		<div class="f-menu">
 			<ul id="menu-primary-navigation-1" class="menu">
 				<li class="active menu-home"><a href="/">Home</a></li>
