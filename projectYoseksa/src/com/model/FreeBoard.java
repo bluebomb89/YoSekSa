@@ -23,6 +23,7 @@ public class FreeBoard {
 	 @RequestMapping("freeboard_list.sek")
 	   public String freeboard_list(HttpServletRequest req)
 	   {
+		 
 		 String strPage=req.getParameter("page");
 		    if(strPage==null)
 		    	strPage="1";
@@ -115,8 +116,9 @@ public class FreeBoard {
 	   }
 	 
 	 @RequestMapping("freeboard_insert.sek")
-	   public String freeboard_insert(HttpServletRequest req)
+	   public String freeboard_insert(HttpServletRequest req) throws IOException
 	   {
+		 req.setCharacterEncoding("UTF-8");
 		 	System.out.println("인써트");
 		 	req.setAttribute("title", "글쓰기");
 		 	req.setAttribute("jsp", "../freeboard/list.jsp");
@@ -126,15 +128,23 @@ public class FreeBoard {
 	 @RequestMapping("freeboard_insert_ok.sek")
 	   public String board_insert(HttpServletRequest req)throws IOException
 	   {
-		 	req.setCharacterEncoding("EUC-KR");
+		 	req.setCharacterEncoding("UTF-8");
+		 	
 			//String nickname=req.getParameter("nickname");
-			String nickname="yoseki";
+		 	HttpSession session=req.getSession();
+			int member_no=(int) session.getAttribute("member_no");
+			String nickname=(String)session.getAttribute("nickname");
+			//String nickname="yoseki";
+			System.out.println("no:"+member_no);
+			System.out.println("nick:"+nickname);
 		 	String free_content=req.getParameter("free_content");
 			String free_pw=req.getParameter("free_pw");
 			System.out.println("pw:"+free_pw);
 			System.out.println("content:"+free_content);
 			System.out.println("인서트오케이");
 			FreeBoardDTO d=new FreeBoardDTO();
+			req.setAttribute("today", new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
+			d.setMember_no(member_no);
 			d.setNickname(nickname);
 			d.setFree_content(free_content);
 			d.setFree_pw(free_pw);
