@@ -15,7 +15,7 @@
 	</select>
 	
 	<select id="memberGetInfo" resultType="Yo_Member" parameterType="String">
-		SELECT member_pw,nickname FROM yoseksa_member
+		SELECT member_no,member_pw,nickname FROM yoseksa_member
 		WHERE member_id=#{member_id}
 	</select>
 </mapper>

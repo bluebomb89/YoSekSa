@@ -67,7 +67,90 @@ $(document).ready(function() {
       var a= id+"-cont";
       $('#'+a).slideToggle("fast");
       });
+   $('.notice_list').click(function(){
+	  $(this).attr(id); 
+   });
+	   
 });
+</script>
+<script>
+function nbtnUp(){
+	/* > 버튼 클릭시 자동번호 증가 */
+	for(var i=1; i<6; i++){
+		var btn=$('#nbtn'+i).text();
+		var b=parseInt(btn);
+		b=b+1
+		$('#nbtn'+i).text(b);
+	}
+}
+function nbtnDown(){
+	/* > 버튼 클릭시 자동번호 감소 */
+	if($('#nbtn1').text()!=1){
+		for(var i=1; i<6; i++){
+			var btn=$('#nbtn'+i).text();
+			var b=parseInt(btn);
+			b=b-1
+			$('#nbtn'+i).text(b);
+		}	
+	}
+	
+}
+</script>
+<script type="text/javascript">
+var httpRequest=null;
+function createHttpRequest(){
+	if(window.ActiveXObject){ //IE 6.0 이상
+		return new ActiveXObject("Msxml2.XMLHTTP");
+		//Microsoft.XMLHTTP 6.0이하일때
+	}else if(window.XMLHttpRequest){ // 크롬 , ff
+		return new XMLHttpRequest();
+	}else{ // 호환이 안될때
+		return null; //지원하지 않는 브라우저
+	}
+}
+function sendMessage(method,param,url,callback){
+	// 서버 연결 DWR,DOJO
+	httpRequest=createHttpRequest();
+	httpRequest.open(method,url+param,true);
+	// true: 비동기 false:동기
+	httpRequest.onreadystatechange=callback;
+	httpRequest.send(null);
+}
+function nidcheck_result(){
+	if(httpRequest.readyState==4){
+		if(httpRequest.status==200){
+			var res=httpRequest.responseText;
+			$('#noticeboard').html(res);
+			// 보여주면서 div에 값저장
+			//alert(res);
+		}		
+	}
+}
+function nidcheck1(){
+	var mspage=$('#nbtn1').text();
+	param="?page="+mspage;
+	sendMessage('GET', param, "notice_list.sek", nidcheck_result);
+}
+function nidcheck2(){
+	var mspage=$('#nbtn2').text();
+	param="?page="+mspage;
+	sendMessage('GET', param, "notice_list.sek", nidcheck_result);
+}
+function nidcheck3(){
+	var mspage=$('#nbtn3').text();
+	param="?page="+mspage;
+	sendMessage('GET', param, "notice_list.sek", nidcheck_result);
+}
+function nidcheck4(){
+	var mspage=$('#nbtn4').text();
+	param="?page="+mspage;
+	sendMessage('GET', param, "notice_list.sek", nidcheck_result);
+}
+function nidcheck5(){
+	var mspage=$('#nbtn5').text();
+	param="?page="+mspage;
+	sendMessage('GET', param, "notice_list.sek", nidcheck_result);
+}
 </script>
 <!-- <script type="text/javascript">
 $(function(){
@@ -81,18 +164,18 @@ $(function(){
 });
 </script> -->
 <body>
-       <div class="container">
-         <div class="service-info" id="serviceyo">
-            <h3>Notice</h3>
-            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-               등록
-            </button>
+       <div class="container" id="noticeboard">
+         <div class="service-info" id="serviceyo" style="height: 47px;">
+			<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="float: left;">
+               	등록
+        	</button>
+            <h3 style="padding: 0;margin: 0;margin-right: 44px;">Notice</h3>
                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                  <div class="modal-dialog">
                    <div class="modal-content">
                      <div class="modal-header">
                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                       <h4 class="modal-title" id="myModalLabel">공지 사항</h4>
+                       <h4 class="modal-title" id="myModalLabel" >공지 사항</h4>
                      </div>
                      <div class="modal-body">
                        <!-- 데이터 입력 -->
@@ -119,7 +202,7 @@ $(function(){
                  </div>
                </div>
          </div>
-         
+         <div >
           <c:forEach var="ndto" items="${notice_list }">
             <div class="showmenu" id="menu${ndto.notice_no }">
                <div class="noticesub">제목 ${ndto.notice_sub }</div>
@@ -130,15 +213,19 @@ $(function(){
                </div>
             </div>
          </c:forEach>
-         <div style=" margin-top: 30px;margin-left: 112px;"> 
-              <a href="board_list.do?page=${curpage>1?curpage-1:curpage }"><img src="image/prev_icon.gif"></a>
-              &nbsp;
-              <a href="board_list.do?page=${curpage<totalpage?curpage+1:curpage }"><img src="image/next_icon.gif"></a>
-              &nbsp;&nbsp;
-              ${notice_curpage } page / ${notice_totalpage } pages
-          </div>
-          
-         <!-- Modal -->
+         </div>
+        <!-- 버튼 -->
+	    <div class="recipe_btn_group" align="center" >
+			<div class="recipe_btn" role="group" aria-label="First group" style="padding-top: 20px;">
+				<button type="button" class="btn btn-default" onclick="nbtnDown()">＜</button>
+				<button type="button" class="btn btn-default" id="nbtn1" onclick="nidcheck1()">${npage }</button>
+				<button type="button" class="btn btn-default" id="nbtn2" onclick="nidcheck2()">${npage+1 }</button>
+				<button type="button" class="btn btn-default" id="nbtn3" onclick="nidcheck3()">${npage+2}</button>
+				<button type="button" class="btn btn-default" id="nbtn4" onclick="nidcheck4()">${npage+3 }</button>
+				<button type="button" class="btn btn-default" id="nbtn5" onclick="nidcheck5()">${npage+4 }</button>
+				<button type="button" class="btn btn-default" onclick="nbtnUp()">＞</button>
+			</div>
+		</div>
 
     </div>
 </body>

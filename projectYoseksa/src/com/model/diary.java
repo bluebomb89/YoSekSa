@@ -17,7 +17,7 @@ import com.recipedao.RecipeDTO;
 @Controller("diary")
 public class diary {
 	@RequestMapping("diary.sek")
-	public String freeboard(HttpServletRequest req) throws IOException{
+	public String diary(HttpServletRequest req) throws IOException{
 		
 		
 		String currYear=req.getParameter("currYear");
@@ -30,9 +30,6 @@ public class diary {
 		req.setAttribute("action", action);
 		
 		req.setAttribute("jsp",	"../calendar/calendar.jsp");
-				
-		List<DiaryDTO> dlist=DiaryDAO.diaryListData();		
-		req.setAttribute("dlist", dlist);
 		
 		return "yoSeksa/function/main/main.jsp";
 		
@@ -87,7 +84,7 @@ public class diary {
 		return "yoSeksa/function/calendar/add_recipe_popup_search_result.jsp";
 	}
 	 
-	@RequestMapping("diary_search_ok.sek")
+/*	@RequestMapping("diary_search_ok.sek")
 		public String diary_search_ok(HttpServletRequest req) throws IOException{	
 			
 			req.setCharacterEncoding("UTF-8");
@@ -121,5 +118,48 @@ public class diary {
 			
 			
 			return "yoSeksa/function/calendar/add_recipe_popup_search_result_ok.jsp";
-		}	 
+		}
+	*/
+	@RequestMapping("diary_insert.sek")
+	public String diary_insert(HttpServletRequest req) throws IOException{
+		
+		
+		req.setCharacterEncoding("UTF-8");
+		
+		String reno=req.getParameter("reno");//검색한 레시피 고유번호
+		String resub=req.getParameter("resub");//레시피 제목
+		String strDate=req.getParameter("date");//사용자가 달력에서 클릭한 날짜
+		String bld=req.getParameter("bld");//아침 점심 저녁
+		
+		DateToString dts=new DateToString();//사용자가 클릭한 String형 날짜를 Date 형으로 변환
+		
+		Date date=dts.toDate(strDate);// ""
+		
+		System.out.println("dateToString : "+date);	
+		
+		System.out.println("■■■■■■■■■■■■■■diary_insert.java■■■■■■■■■■■■■■■");
+		System.out.println("result_ok board_no: "+ reno);
+		System.out.println("result_ok keyword : "+ resub);
+		System.out.println("result_ok date : "+ strDate);
+		System.out.println("result_ok bld : "+ bld);
+		
+		DiaryDTO d=new DiaryDTO();
+		d.setRecipe_no(Integer.parseInt(reno));
+		d.setMember_no(1);;
+		d.setBoard_no(4);
+		d.setDiary_date(date);
+		d.setDiary_bld(bld);	
+		
+		DiaryDAO.diaryInsert(d);
+		
+		req.setAttribute("jsp", "../calendar/calendar.jsp");
+		
+		
+		
+		return "yoSeksa/function/main/main.jsp";
+		
+	}
+	
+
+	
 }

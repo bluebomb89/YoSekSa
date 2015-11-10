@@ -21,6 +21,8 @@
 	    INSERT INTO yoseksa_diary VALUES(#{mgr_no},#{recipe_no},#{member_no},#{board_no},#{diary_date},SYSDATE,#{diary_bld})
 	</insert>
 	<select id="diaryListData" resultType="Diary">
-	    SELECT mgr_no,recipe_no,member_no,board_no,diary_date,diary_regdate,diary_bld FROM yoseksa_diary
+	    SELECT mgr_no,yd.recipe_no,yd.member_no,yd.board_no,diary_date,diary_regdate,diary_bld,yr.recipe_sub
+	    FROM yoseksa_diary yd, yoseksa_recipe yr
+	    WHERE yd.recipe_no=yr.recipe_no	    
 	</select>
 </mapper>

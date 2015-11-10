@@ -91,18 +91,30 @@ $(function(){
 			</div>
 				<ul class="nav">
 						
+								<!-- 로그인 -->						
+						
 						<c:if test="${sessionScope.member_id==null }">
-					  		<li class="login_null">로그인을 해주십시오</li>
+					  		<li class="login_null" align="center">로그인을 해주십시오</li>
 					  		<li class="login">
 							<a href="yoSeksa/function/member/login.jsp" title="로그인"><img src="yoSeksa/images/Login.gif" onmouseover="this.src='yoSeksa/images/Login2.gif';" onmouseout="this.src='yoSeksa/images/Login.gif';" style="width: 30px;"></a>
 						</li>
 				    	</c:if>
 				    	<c:if test="${sessionScope.member_id!=null }">
 				    		
+				    		<!-- 로그아웃 -->
+				    		
 					  		<li class="login_ok">
-					  		<img src="http://image.melon.co.kr/resource/image/cmt/web/common/noArtist03_54.jpg" width="54" height="54">
-					  		닉네임:${nickname }
-					  		<input type="button" name="logoutBtn" id="logoutBtn" value="로그아웃">
+					  		
+					  		<form method=post action="member_logout.sek" id="logout_frm">
+					  			<img src="http://image.melon.co.kr/resource/image/cmt/web/common/noArtist03_54.jpg" width="54" height="54">
+					  			닉네임:${nickname }					  			
+					  			
+					  			<li class="logout">
+					  			<a type="button" id="logout_Btn" class="logout_Btn" title="로그아웃"><img src="yoSeksa/images/Logout.gif" onmouseover="this.src='yoSeksa/images/Logout2.gif';" onmouseout="this.src='yoSeksa/images/Logout.gif';" style="width: 30px;"></a>
+					  			<!-- <input type="button" name="logout_Btn" id="logout_Btn" value="로그아웃" align="center"> -->
+					  			
+					  			</li>
+					  		</form>
 					  		</li>
 
 						</c:if>
@@ -141,17 +153,11 @@ $(function(){
                      <li class="active"><a href="yoseksa.sek">Home</a></li>
                      <li><a class="scroll" id=startmain href="#section1">검색메인</a></li>
                      <li><a class="scroll" href="#services">공지</a></li>
-                     <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">자유게시판<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                           <li><a href="freeboard.sek">about1</a></li>
-                           <li><a href="freeboard_list.sek">about2</a></li>
-                           <li><a href="recipe_content.sek">레시피 내용보기</a></li>           
-                        </ul>
-                     </li>
+                     <li><a href="freeboard_list.sek">자유 게시판</a></li>
                      <li><a href="diary.sek">캘린더</a></li>
-                     <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
+                     <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">나만의 레시피<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                           <li><a href="recipe.sek">gallery1</a></li>
+                           <li><a href="recipe.sek">나만의 레시피</a></li>
                            <li><a href="qna.sek">Q&A</a></li>
                            <li><a href="join.sek">회원가입</a></li>           
                         </ul>
@@ -223,7 +229,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 		<footer class="content-info container" role="contentinfo"
 			style="left: 115px;">
 			<div class="row">
-				<div class="col-lg-12">
+				<div class="col-lg-12" style=" top: 30px;">
 					<div class="howmuch">
 						<li id="text-4" class="widget widget_text">
 							<h3>About Us</h3> <img
@@ -249,9 +255,9 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 									<img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/phone.png">
 									
 									
-											&nbsp;Seoul: +00 (010) 0000 0000
+											&nbsp;Seoul: +82 10) 0000 0000
 
-											<div style="margin-left: 45.7px;">Sinchon: +00 (010) 0000 0000</div>
+											<div style="margin-left: 45.7px;">Sinchon: +82 10) 0000 0000</div>
 								</div>	
 								
 								<div style="margin-top: 10px;">
@@ -271,7 +277,7 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
 			</div>
 	</footer>
 	</div>
-	<div class="blacky-back" style="padding-bottom: 130px;">
+	<div class="blacky-back" style="padding-bottom: 105px;">
 		<div class="f-menu">
 			<ul id="menu-primary-navigation-1" class="menu">
 				<li class="active menu-home"><a href="/">Home</a></li>

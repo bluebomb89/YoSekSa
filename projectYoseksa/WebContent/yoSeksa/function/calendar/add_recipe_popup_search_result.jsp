@@ -8,12 +8,49 @@
 <title>Insert title here</title>
 <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 <script type="text/javascript">
-function ok(keyword)
-{
-	alert("야");
-	//페이지 이동하여 DB처리한다
-	/* location.replace("http://localhost:8080/projectYoseksa/diary_search_ok.sek?keyword="+keyword+"&bld="+bld+"&date="+date); */
+var httpRequest=null;
+function createHttpRequest(){
+	if(window.ActiveXObject){ //IE 6.0 이상
+		return new ActiveXObject("Msxml2.XMLHTTP");
+		//Microsoft.XMLHTTP 6.0이하일때
+	}else if(window.XMLHttpRequest){ // 크롬 , ff
+		return new XMLHttpRequest();
+	}else{ // 호환이 안될때
+		return null; //지원하지 않는 브라우저
+	}
 }
+function sendMessage(method,param,url,callback){
+	// 서버 연결 DWR,DOJO
+	httpRequest=createHttpRequest();
+	httpRequest.open(method,url+param,true);
+	// true: 비동기 false:동기
+	httpRequest.onreadystatechange=callback;
+	httpRequest.send(null);
+}
+
+
+
+function diary_Insert(recipe_no,recipe_sub,bld,date){
+	var recipe_no=recipe_no;
+	var recipe_sub=recipe_sub;
+	var bld=bld;
+	var date=date;
+	var param="?reno="+recipe_no+"&resub="+recipe_sub+"&bld="+bld+"&date="+date;
+	sendMessage('GET', param, "diary_insert.sek", diary_result);
+}
+function diary_result(){
+	if(httpRequest.readyState==4){
+		if(httpRequest.status==200){
+			var res=httpRequest.responseText;
+			//alert(res);
+			alert("다이어리에 등록 하였습니다");	
+			$('#diary_main_body',parent.parent.document).html(res);
+			parent.parent.Shadowbox.close();// 부모의 부모창 닫기
+			
+		}		
+	}
+}
+
 </script>
 <!-- <script type="text/javascript">
 var xkeyword="";
@@ -37,7 +74,10 @@ $(function(){
 				<c:forEach var="rs" items="${recipe_search_list }">
 				<tr>
 					<td>${rs.recipe_no }</td>
-					<td><a href="diary_search_ok.sek?reno=${rs.recipe_no }&resub=${rs.recipe_sub }&bld=${bld }&date=${date }">${rs.recipe_sub }</a></td>
+					<td>
+						<a href="#" onclick="diary_Insert('${rs.recipe_no }','${rs.recipe_sub }','${bld }','${date }')">${rs.recipe_sub }></a>						
+						<%-- <a href="diary_search_ok.sek?reno=${rs.recipe_no }&resub=${rs.recipe_sub }&bld=${bld }&date=${date }">${rs.recipe_sub }</a> --%>	
+					</td>
 				</tr>
 				</c:forEach>
 			</table>			
