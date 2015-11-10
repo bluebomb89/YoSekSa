@@ -67,6 +67,56 @@ $(function(){
 	alert(xkeyword);
 });
 </script> -->
+
+</script>
+
+
+<!-- 마우스 오버 이미지 확대 -->
+<!-- $('#body',parent.document) -->
+<script type="text/javascript">
+            $(document).ready(function() {
+                  
+                var xOffset = 10;
+                var yOffset = 30;
+ 
+                $(document).on("mouseover",".thumbna",function(e){ //마우스 오버시
+                     
+                    $("body").append("<p id='preview'><img src='"+ $(this).attr("src") +"' width='200px' height='200px' /></p>"); //보여줄 이미지를 선언                       
+                    $("#preview")
+                        .css("top",(e.pageY - xOffset) + "px")
+                        .css("left",(e.pageX + yOffset) + "px")
+                        .fadeIn("fast"); //미리보기 화면 설정 셋팅
+                });
+                 
+                $(document).on("mousemove",".thumbna",function(e){ //마우스 이동시
+                    $("#preview")
+                        .css("top",(e.pageY - xOffset) + "px")
+                        .css("left",(e.pageX + yOffset) + "px");
+                });
+                 
+                $(document).on("mouseout",".thumbna",function(){ //마우스 아웃시
+                    $("#preview").remove();
+                });
+                  
+            });
+        </script>
+        
+        <style>
+          /* 미리보기 스타일 셋팅 */
+            #preview{
+                z-index: 9999;
+                position:absolute;
+                border:0px solid #ccc;
+                background:#333;
+                padding:1px;
+                display:none;
+                color:#fff;
+            }
+</style>
+        
+
+<!-- 이미지 확대 끝 -->
+
 </head>
 <body>
 <font color=white>
@@ -83,7 +133,11 @@ $(function(){
 				<tr>
 <%-- 					<td>${rs.recipe_no }</td> --%>
 					<td>
-						<a href="#" onclick="diary_Insert('${rs.recipe_no }','${rs.recipe_sub }','${bld }','${date }')">${rs.recipe_sub }</a>						
+						<a href="#" onclick="diary_Insert('${rs.recipe_no }','${rs.recipe_sub }','${bld }','${date }')">${rs.recipe_sub }
+						<c:if test="${rs.recipe_img!='image' }">
+							<img src="yoSeksa/contentImg/${rs.recipe_img }" class="thumbna" height="40px" width="40px">
+						</c:if>						
+						</a>						
 						<%-- <a href="diary_search_ok.sek?reno=${rs.recipe_no }&resub=${rs.recipe_sub }&bld=${bld }&date=${date }">${rs.recipe_sub }</a> --%>	
 					</td>
 				</tr>
