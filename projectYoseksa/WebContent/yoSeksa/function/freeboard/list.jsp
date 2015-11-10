@@ -108,9 +108,9 @@ body.modal-open {
 			$('#freewriteForm').submit();
 		});
 
-		$('#btnCancel').click(function() {
+/* 		$('#btnCancel').click(function() {
 			history.back();
-		});
+		}); */
 	});
 </script>
 
@@ -210,7 +210,7 @@ body.modal-open {
 					placeholder="내용"
 					style="height: 210px; width: 446px; margin-left: 80px; border: 1px solid #CACACA; background-color: rgb(255, 255, 255);"></textarea>
 				<br> <span id="nameSpan" style="color: red; text-align: center"></span>
-				<div class="write_pic2" style="width: 400px; margin-top: 5px;">
+				<div class="write_pic2" style="width: 400px; margin-top: 5px;margin-left: 80px;">
 
 					<!-- 게시글 비밀번호 시작 -->
 					<p>
@@ -225,8 +225,8 @@ body.modal-open {
 		<div class="modal-footer"
 			style="margin-bottom: 20px; margin-right: 70px; padding-top: 0px;">
 			<button type="button" class="btn btn-primary" id="btnSub">등록</button>
-			<button type="button" class="btn btn-default" id="btnCancel"
-				style="background-color: rgba(255, 255, 255, 0);">취소</button>
+			<button type="button" class="btn btn-primary" id="btnCancel" data-dismiss="modal"
+				>취소</button>
 		</div>
 	</div>
 
@@ -266,8 +266,8 @@ body.modal-open {
 						</ul>
 						<p>
 							<button type="button" class="btn btn-primary btn-lg"
-								style="float:right;font-weight:bold;margin-top: 5px;padding-top: 5px;padding-bottom: 5px;" data-toggle="modal"
-								data-target="#myModal">등록</button>
+								style="float: right; font-weight: bold; margin-top: 5px; padding-top: 5px; padding-bottom: 5px;"
+								data-toggle="modal" data-target="#myModal">등록</button>
 						<p class="count" style="font-size: 15;">
 							전체글 <span class="number" style="font-size: 20px;">${max_no }</span>건
 						</p>
@@ -295,7 +295,8 @@ body.modal-open {
 	</div>
 	<!-- 게시판 -->
 	<c:forEach var="dto" items="${list }">
-		<div id="section_rvew" class="section_rvew" style="margin-left: 130px;margin-right: 130px;background:#f1f1f2;">
+		<div id="section_rvew" class="section_rvew"
+			style="margin-left: 130px; margin-right: 130px; background: #f1f1f2;">
 			<div class="d_cmtpgn " id="d_cmtpgn">
 				<div class="list_cmt" id="d_cmtpgn_cmt_list_wrapper" style="">
 
@@ -313,6 +314,9 @@ body.modal-open {
 										style="cursor: pointer; text-decoration: none;"> <span
 										class="d_cmtpgn_member_nickname" title="닉네임">${dto.nickname }</span>
 									</a>
+									<c:if test="${today==dto.dbday }">
+												<span title="새 글" class="icon_new d_cmtpgn_icon"></span>
+											</c:if>
 								</div>
 							</div>
 							<div class="wrap_cntt d_cmtpgn_cmt_cont_wrapper">
@@ -320,7 +324,10 @@ body.modal-open {
 									<div class="cmt_text d_cmtpgn_cmt_full_contents"
 										style="-ms-word-break: break-all; word-break: break-all; word-break: break-word; word-wrap: break-word; -webkit-hyphens: auto; -ms-hyphens: auto; hyphens: auto; display: block">
 										<div>
-											<span title="새 글" class="icon_new d_cmtpgn_icon"></span> <span
+
+											
+
+											 <span
 												class="date" style="float: right">${dto.dbday }</span> <span
 												class="date"> <span class="time"></span>
 											</span>
@@ -370,9 +377,7 @@ body.modal-open {
 				</div>
 			</div>
 		</div>
-		<div class="blank" style="
-    height: 15px;
-"></div>
+		<div class="blank" style="height: 15px;"></div>
 	</c:forEach>
 
 	<!-- 페이지 나누는 부분 -->
@@ -385,7 +390,7 @@ body.modal-open {
 			class="btn_pre disabled d_cmtpgn_navigator" title="이전"> <span>이전</span>
 		</a> <span class="page_num"> <strong> <span class="none">현재페이지</span>${curpage }
 		</strong>
-		</span> <span class="page_num"> <strong> <span class="none">마지막페이지</span>${totalpage }
+		</span>&nbsp;&nbsp;/&nbsp; <span class="page_num"> <strong> <span class="none">마지막페이지</span>${totalpage }
 		</strong>
 		</span> <a
 			href="freeboard_list.sek?page=${curpage<totalpage?curpage+1:curpage }"
