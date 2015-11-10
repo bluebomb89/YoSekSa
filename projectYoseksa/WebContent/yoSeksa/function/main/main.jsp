@@ -226,9 +226,8 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <div class="footer-color-wrap">
-		<footer class="content-info container" role="contentinfo"
-			style="left: 115px;">
-			<div class="row">
+		<footer class="content-info container" role="contentinfo" style="padding-left: 115px">
+			<div class="row" style="margin-left: 30px;">
 				<div class="col-lg-12" style=" top: 30px;">
 					<div class="howmuch" style="margin-top: 20px">
 						<li id="text-4" class="widget widget_text">
