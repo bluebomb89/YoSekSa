@@ -226,36 +226,35 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <div class="footer-color-wrap">
-      <footer class="content-info container" role="contentinfo"
-         style="left: 115px;">
-         <div class="row">
-            <div class="col-lg-12" style=" top: 30px;">
-               <div class="howmuch" style="margin-top: 20px">
-                  <li id="text-4" class="widget widget_text">
-                     <h3>About Us</h3> <img
-                     src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/separator.png"
-                     align="bottom"
-                     style="margin-bottom: 20px; margin-left: 140px;">
-                     <div class="textwidget">
-                        YosekYosekYosekYosekYosekYosekYosekYosek<em>
-                        YosekYosekYosekYosekYosekYosekYosekYosek</em>
-                        YosekYosekYosekYosekYosekYosekYosekYosek<br>
-                        YosekYosekYosekYosekYosekYosekYosekYosek
-                     </div>
-                  </li>
-               </div>
-               <div class="gotaquestion">
-                  <a class="anchorfix" id="questions" style="margin-top: 20px"></a>
-                  <li id="text-5" class="widget widget_text">
-                     <h3>Get in Touch</h3> 
-                     <img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/separator.png" align="bottom" style="margin-bottom: 20px; margin-left: 120px;">
-                     <div class="textwidget">
-                        
-                        <div>
-                           <img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/phone.png">
-                           
-                           
-                                 &nbsp;Seoul: +82 10) 0000 0000
+		<footer class="content-info container" role="contentinfo" style="padding-left: 115px">
+			<div class="row" style="margin-left: 30px;">
+				<div class="col-lg-12" style=" top: 30px;">
+					<div class="howmuch" style="margin-top: 20px">
+						<li id="text-4" class="widget widget_text">
+							<h3>About Us</h3> <img
+							src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/separator.png"
+							align="bottom"
+							style="margin-bottom: 20px; margin-left: 140px;">
+							<div class="textwidget">
+								YosekYosekYosekYosekYosekYosekYosekYosek<em>
+								YosekYosekYosekYosekYosekYosekYosekYosek</em>
+								YosekYosekYosekYosekYosekYosekYosekYosek<br>
+								YosekYosekYosekYosekYosekYosekYosekYosek
+							</div>
+						</li>
+					</div>
+					<div class="gotaquestion">
+						<a class="anchorfix" id="questions" style="margin-top: 20px"></a>
+						<li id="text-5" class="widget widget_text">
+							<h3>Get in Touch</h3> 
+							<img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/separator.png" align="bottom" style="margin-bottom: 20px; margin-left: 120px;">
+							<div class="textwidget">
+								
+								<div>
+									<img src="http://infinvision.com/wp-content/themes/infinvisionv2/assets/img/phone.png">
+									
+									
+											&nbsp;Seoul: +82 10) 0000 0000
 
                                  <div style="margin-left: 45.7px;">Sinchon: +82 10) 0000 0000</div>
                         </div>   

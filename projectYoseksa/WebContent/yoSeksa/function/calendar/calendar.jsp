@@ -301,7 +301,6 @@ function addRecipeOnTable(year,month,day)
 
 
 <div id="embed-container">
-
 		<table border='0' width='100%' height="10%" celpadding='0' cellspacing='0'>
 		  <tr>
 		   <td width='33%' align='right' valign='middle'><a href="diary.sek?month=<%=currMonth%>&year=<%=currYear%>&action=0"><font size="4" color="#592424">◀</font></a></td>
