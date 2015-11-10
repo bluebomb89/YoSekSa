@@ -165,17 +165,17 @@ $(function(){
 </script> -->
 <body>
        <div class="container" id="noticeboard">
-         <div class="service-info" id="serviceyo">
-            <h3>Notice</h3>
-            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-               등록
-            </button>
+         <div class="service-info" id="serviceyo" style="height: 47px;">
+			<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="float: left;">
+               	등록
+        	</button>
+            <h3 style="padding: 0;margin: 0;margin-right: 44px;">Notice</h3>
                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                  <div class="modal-dialog">
                    <div class="modal-content">
                      <div class="modal-header">
                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                       <h4 class="modal-title" id="myModalLabel">공지 사항</h4>
+                       <h4 class="modal-title" id="myModalLabel" >공지 사항</h4>
                      </div>
                      <div class="modal-body">
                        <!-- 데이터 입력 -->
@@ -216,7 +216,7 @@ $(function(){
          </div>
         <!-- 버튼 -->
 	    <div class="recipe_btn_group" align="center" >
-			<div class="recipe_btn" role="group" aria-label="First group">
+			<div class="recipe_btn" role="group" aria-label="First group" style="padding-top: 20px;">
 				<button type="button" class="btn btn-default" onclick="nbtnDown()">＜</button>
 				<button type="button" class="btn btn-default" id="nbtn1" onclick="nidcheck1()">${npage }</button>
 				<button type="button" class="btn btn-default" id="nbtn2" onclick="nidcheck2()">${npage+1 }</button>
