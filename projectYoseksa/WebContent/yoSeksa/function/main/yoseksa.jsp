@@ -318,15 +318,15 @@ css안에 이미지 이런식으로 추가하고 div안에 클래스명 넣어�
          </div>
       </div>
 <!-- services -->
-<!-- 여기에 공지사항 추가 -->
-<div id="services"  style="padding-top: 51px">
-	<jsp:include page="${ntpage }"></jsp:include>
-</div>
  <!-- testimonial -->
 <div id="mangae-show" style="padding-top: 2px;">
 	<div class="testimonial" id="mangae-view">
 		<%-- <jsp:include page="${mangae }"></jsp:include> --%>
 	</div>
+</div>
+<!-- 여기에 공지사항 추가 -->
+<div id="services"  style="padding-top: 51px">
+	<jsp:include page="${ntpage }"></jsp:include>
 </div>
 <!-- projects -->
 <!-- footer -->

@@ -118,8 +118,7 @@ function btnDown(){
 				</c:forEach>
 			</c:if>
 	</div>
-</div>
-		    <!-- 버튼 -->
+			    <!-- 버튼 -->
 	    <div class="recipe_btn_group" align="center" >
 			<div class="recipe_btn" role="group" aria-label="First group">
 				<button type="button" class="btn btn-default" onclick="btnDown()">＜</button>
@@ -131,5 +130,7 @@ function btnDown(){
 				<button type="button" class="btn btn-default" onclick="btnUp()">＞</button>
 			</div>
 		</div>
+</div>
+
 </body>
 </html>

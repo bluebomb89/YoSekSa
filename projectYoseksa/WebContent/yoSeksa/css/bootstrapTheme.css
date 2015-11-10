@@ -2714,7 +2714,7 @@ button.close {
 .btn.active,
 .btn.disabled,
 .btn[disabled] {
-  color: #3fbf79;
+  color: #656766;
   background-color: #e6e6e6;
   *background-color: #d9d9d9;
 }

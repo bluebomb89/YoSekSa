@@ -1,6 +1,8 @@
 package com.model;
 
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -16,7 +18,7 @@ import com.noticedao.NoticeDTO;
 @Controller("notice")
 public class notice {
 	@RequestMapping("notice_insert.sek")
-	public String recipe_content(HttpServletRequest req) throws IOException{
+	public String recipe_content(HttpServletRequest req) throws IOException, ParseException{
 		// TODO Auto-generated method stub
 				req.setCharacterEncoding("EUC-KR");
 		/*		String name=req.getParameter("name");
@@ -53,4 +55,36 @@ public class notice {
 			    req.setAttribute("notice_totalpage", totalpage);
 				return "yoSeksa/function/notice/notice.jsp";
 	}
+	@RequestMapping("notice_list.sek")
+	public String notice_list(HttpServletRequest req){
+		String strPage=req.getParameter("page");
+	    if(strPage==null)
+	    	strPage="1";
+	    int curpage=Integer.parseInt(strPage);
+	    int rowSize=10;
+	    int start=(curpage*rowSize)-(rowSize-1);
+	    int end=curpage*rowSize;
+	    Map map=new HashMap();
+	    map.put("start", start); // #{start} get("start")
+	    map.put("end", end);
+	    List<NoticeDTO> list=NoticeDAO.noticeListData(map);
+	    int totalpage=NoticeDAO.noticeTotalPage();
+	    req.setAttribute("notice_today", new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
+	    req.setAttribute("notice_list", list);
+	    req.setAttribute("notice_curpage", curpage);
+	    req.setAttribute("notice_totalpage", totalpage);
+	    req.setAttribute("npage", strPage);
+	    return "yoSeksa/function/notice/notice.jsp";
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
