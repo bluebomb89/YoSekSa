@@ -20,7 +20,7 @@ public class diary {
 	public String diary(HttpServletRequest req) throws IOException{
 		
 		
-		String currYear=req.getParameter("currYear");
+/*		String currYear=req.getParameter("currYear");
 		String currMonth=req.getParameter("currMonth");		
 		String action=req.getParameter("action");
 
@@ -28,7 +28,7 @@ public class diary {
 		req.setAttribute("year", currYear);
 		req.setAttribute("month", currMonth);
 		req.setAttribute("action", action);
-		
+		*/
 		req.setAttribute("jsp",	"../calendar/calendar.jsp");
 		
 		return "yoSeksa/function/main/main.jsp";
@@ -84,7 +84,7 @@ public class diary {
 		return "yoSeksa/function/calendar/add_recipe_popup_search_result.jsp";
 	}
 	 
-	@RequestMapping("diary_search_ok.sek")
+/*	@RequestMapping("diary_search_ok.sek")
 		public String diary_search_ok(HttpServletRequest req) throws IOException{	
 			
 			req.setCharacterEncoding("UTF-8");
@@ -119,7 +119,7 @@ public class diary {
 			
 			return "yoSeksa/function/calendar/add_recipe_popup_search_result_ok.jsp";
 		}
-	
+	*/
 	@RequestMapping("diary_insert.sek")
 	public String diary_insert(HttpServletRequest req) throws IOException{
 		
