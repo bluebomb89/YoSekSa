@@ -9,6 +9,13 @@
 <!-- 마우스 오버 이미지 확대 -->
 
 <script type="text/javascript">
+
+function change1(obj){
+    obj.style.border = '2px solid green';
+}
+function change2(obj){
+    obj.style.border = '2px solid #ddd';
+}
             $(document).ready(function() {
                   
                 var xOffset = 10;
@@ -318,7 +325,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
          <c:forEach var='dto' items="${list}">
          <div class="col-sm-3 col-md-3.5" style="padding-right: 5px; padding-left: 5px;
 ">
-            <div class="thumbnail" style="margin-bottom: 5px;">
+            <div class="thumbnail" style="margin-bottom: 5px; border:2px solid #ddd" onmouseout="change2(this)" onmouseover="change1(this)">
                <a href="recipe_content.sek?rno=${dto.recipe_no }"><img src="yoSeksa/contentImg/${dto.recipe_img }" alt="" style="height: 230px; width: 270px;" class="thumbna"></a>
                <div class="caption">
                   <h3>${dto.recipe_sub }</h3>

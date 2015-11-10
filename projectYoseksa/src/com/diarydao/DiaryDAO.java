@@ -86,7 +86,6 @@ public class DiaryDAO {
 		try{
 			session=ssf.openSession();
 			list=session.selectList("diaryListData");
-			System.out.println("실행했다!!!!!!!!!!!!!!!!");
 		}catch(Exception ex){
 			System.out.println(ex.getMessage());
 		}finally{
