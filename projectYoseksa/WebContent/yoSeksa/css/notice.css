@@ -213,12 +213,12 @@ body {
   background-color: #ffffff;
 }
 a {
-  color: #3fbf79;
+  color: #ffffff;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #2c8555;
+  color: #ffffff;
   text-decoration: underline;
 }
 .img-rounded {
@@ -2486,7 +2486,7 @@ table th[class*="span"],
   clear: both;
   font-weight: normal;
   line-height: 22px;
-  color: #BDAF95;
+  color: #B3A58C;
   white-space: nowrap;
 }
 .dropdown-menu > li > a:hover,
@@ -2495,7 +2495,7 @@ table th[class*="span"],
 .dropdown-submenu:focus > a {
   text-decoration: none;
   color: #ffffff;
-  background-color: #3cb774;
+  background-color: #000000;
 }
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
@@ -5333,4 +5333,7 @@ a.badge:focus {
 }
 #noticeboard{
 	min-height: 330px;
+}
+.btn-primary:hover{
+	background-color: black;
 }
