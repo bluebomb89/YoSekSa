@@ -151,8 +151,8 @@ $(function(){
                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav navbar-right">
                      <li class="active"><a href="yoseksa.sek">Home</a></li>
-                     <li><a class="scroll" id=startmain href="#section1">검색메인</a></li>
-                     <li><a class="scroll" href="#services">공지</a></li>
+                     <li><a class="scroll" id=startmain href="yoseksa.sek#section1">검색메인</a></li>
+                     <li><a class="scroll" href="yoseksa.sek#services">공지</a></li>
                      <li><a href="freeboard_list.sek">자유 게시판</a></li>
                      <li><a href="diary.sek">캘린더</a></li>
                      <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">나만의 레시피<span class="caret"></span></a>
