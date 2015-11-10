@@ -15,7 +15,6 @@ public class ReplyDTO {
 	private int depth;
 	private String dbday;
 	private Date reply_date;
-		
 	
 	public Date getReply_date() {
 		return reply_date;

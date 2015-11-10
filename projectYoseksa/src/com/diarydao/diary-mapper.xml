@@ -24,5 +24,6 @@
 	    SELECT mgr_no,yd.recipe_no,yd.member_no,yd.board_no,diary_date,diary_regdate,diary_bld,yr.recipe_sub,recipe_img
 	    FROM yoseksa_diary yd, yoseksa_recipe yr
 	    WHERE yd.recipe_no=yr.recipe_no
+	    AND yd.member_no=#{member_no}
 	</select>
 </mapper>
