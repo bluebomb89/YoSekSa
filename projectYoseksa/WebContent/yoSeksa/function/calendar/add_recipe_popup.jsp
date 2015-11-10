@@ -58,7 +58,7 @@ $(function(){
 <div id="addRecipeOnTable">	
 	<center>
 		<div id="h2_title">
-			<h2>요리를 추가하세요!${year }-${month }-${day }</h2>
+			<h2>요리를 추가하세요!</h2>
 		</div>
 	</center>
 	
@@ -88,8 +88,7 @@ $(function(){
       </div>      
        -->
       
-	
-	<form name="search">
+
 	  <div id="bld">
 	   <input type="radio" name="bld" value="Breakfast">&nbsp;아침&nbsp;&nbsp;<span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span><br><br>
 	   <input type="radio" name="bld" value="Lunch" checked>&nbsp;점심&nbsp;&nbsp;<span class="glyphicon glyphicon-glass" aria-hidden="true"></span><br><br>
@@ -101,8 +100,7 @@ $(function(){
        	<label>요리명</label>
       	<input type="text" id="keyword" name="keyword" class="form_input_recipe"><br>
         <input type="button" id="searchBtn" value="검색" class="form_input_recipe">
-       </div>
-       </form>       
+       </div>   
         
        <div id="food_search_result">
               

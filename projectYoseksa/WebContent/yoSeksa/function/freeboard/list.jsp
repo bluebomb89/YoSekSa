@@ -186,7 +186,7 @@ $(function(){
    <!-- 민영이는 주석 전까지만 작업 하세요 -->
    <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
       aria-labelledby="myModalLabel" aria-hidden="true"
-      style="display: block; margin: 0 auto; z-index: -1">
+      style="display: block; margin: 0 auto;">
       <h4 align="center"
          style="margin-top: 60px; font-size: 17px; color: #000000">글 작성</h4>
       <div class="modal-body" style="padding-bottom: 0px;">

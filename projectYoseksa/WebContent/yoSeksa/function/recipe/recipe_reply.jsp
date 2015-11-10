@@ -13,13 +13,14 @@ $(function(){
 		var param="recipe_no="+recipe_no+"&rpage="+rpage;
 		sendMessage("GET", "reply_view.sek", param, reply_view);
 	});
-	$('.reply_rv').hide();
-	$('.ccc').click(function(){
-		var a=$(this).attr('id');
-		alert(a);
-		$('#replyClick120').show();
-		$('#'+a).show();
-	})
+	var a=0;
+	if(a==0){
+		/* $('.reply_rv').hide(); */	
+	}else{
+		$('#replyClick120').hide();
+	}
+	$('#replyClick120').hide();
+	
 	
 });
 function reply_reBtn(){

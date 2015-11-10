@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import com.Reply.ReplyDAO;
 import com.Reply.ReplylDTO;
@@ -25,11 +26,9 @@ public class Reply {
 			rPage="1";
 		}
 		int rcurpage=Integer.parseInt(rPage);
-//		HttpSession session=req.getSession();
-//		String id=(String)session.getAttribute("id");
-//		String name=(String)session.getAttribute("name");
-		String reply_nickname="임의의 이름";
-		int member_no=1;
+		HttpSession session=req.getSession();
+		int member_no=(int) session.getAttribute("member_no");
+		String reply_nickname=(String)session.getAttribute("nickname");
 		int board_no=2;
 		d.setRecipe_no(Integer.parseInt(recipe_no));
 		d.setReply_content(reply_content);
