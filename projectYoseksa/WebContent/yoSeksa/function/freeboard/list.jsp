@@ -69,6 +69,13 @@ body.modal-open {
 html, body {
 	height: auto;
 }
+
+hr {
+	margin-top: 5px;
+	margin-bottom: 20px;
+	border: 0;
+	border-top: 2px solid #757575;
+}
 </style>
 <script type="text/javascript">
 	$(document).ready(function() {
@@ -254,8 +261,10 @@ html, body {
 								<button type="button" class="btn btn-primary btn-lg"
 									style="float: right; font-weight: bold; margin-top: 5px; padding-top: 5px; padding-bottom: 5px;"
 									data-toggle="modal" data-target="#myModal">등록</button>
-							<p class="count" style="font-size: 15;">
-								전체글 <span class="number" style="font-size: 20px;">${max_no }</span>건
+							<p class="count" style="font-size: 15;padding-bottom: 5px;">
+								<font size="3"><b> 총 <span class="number"
+										style="font-size: 25px;">21</span>개의 글이 있습니다.
+								</b></font>
 							</p>
 						</div>
 					</div>
@@ -361,7 +370,7 @@ html, body {
 		</div>
 		<div class="blank" style="height: 15px;"></div>
 	</c:forEach>
-
+	<hr style="margin-left: 120px; width: 1000px;">
 	<!-- 페이지 나누는 부분 -->
 	<div class="paginate" id="d_cmtpgn_paginate_wrapper" style="">
 
