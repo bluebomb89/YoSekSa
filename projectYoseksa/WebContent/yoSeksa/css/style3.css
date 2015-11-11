@@ -81,8 +81,8 @@ header {
 }
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-    color: #fff;
-    background-color: #F43C60;
+    color: #000000;
+    background-color: #ffffff;
 }
 #footer > .container {
   

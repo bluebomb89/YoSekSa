@@ -2485,7 +2485,7 @@ table th[class*="span"],
   clear: both;
   font-weight: normal;
   line-height: 22px;
-  color: #333333;
+  color: #B3A58C;
   white-space: nowrap;
 }
 .dropdown-menu > li > a:hover,
@@ -2494,7 +2494,7 @@ table th[class*="span"],
 .dropdown-submenu:focus > a {
   text-decoration: none;
   color: #ffffff;
-  background-color: #3cb774;
+  background-color: #000000;
 }
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
@@ -3942,7 +3942,7 @@ input[type="submit"].btn.btn-mini {
 }
 .navbar-inverse .brand,
 .navbar-inverse .nav > li > a {
-  color: #999999;
+  color: #c5c5c5;
 }
 .navbar-inverse .brand:hover,
 .navbar-inverse .nav > li > a:hover,
