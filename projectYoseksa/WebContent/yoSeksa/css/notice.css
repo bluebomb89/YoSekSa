@@ -206,10 +206,10 @@ textarea {
 }
 body {
   margin: 0;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: initial;
   font-size: 16px;
   line-height: 22px;
-  color: #869690;
+  color: #FFFFFF;
   background-color: #ffffff;
 }
 a {

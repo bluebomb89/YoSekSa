@@ -232,13 +232,24 @@ $(function(){
 
 <style type="text/css">
 	
+	label {
+	
+
+	 margin: 0;
+ 	 font-family: initial;
+  	 font-size: 13px;
+   	 line-height: 22px;
+  	 color: #000000;
+  	/*  background-color: #ffffff; */
+}
+	
 	span{
 	
 	 		height:100%; !important;
 	 		margin:0; !important;
 	 		padding:0; !important;
 	 		font-family:Dotum, "돋움"; !important;
-	 		font-size:12px; color:#4b4b4b; !important;
+	 		font-size:12px; color:#000000; !important;
 	
 		}
 .nav > li{
@@ -246,7 +257,7 @@ $(function(){
   			font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; !important;
   			font-size: 16px; !important;
   			line-height: 22px; !important;
-  			color: #869690; !important;
+  			color: #ffffff; !important;
 /*   			background-color: #ffffff; !important; */
 		}
 </style>

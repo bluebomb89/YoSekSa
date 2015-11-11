@@ -208,7 +208,7 @@ body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 22px;
-  color: #000000;
+  color: #FFFFFF;
   background-color: #ffffff;
 }
 a {
@@ -3959,7 +3959,7 @@ input[type="submit"].btn.btn-mini {
 .navbar-inverse .nav > li > a:focus,
 .navbar-inverse .nav > li > a:hover {
   background-color: transparent;
-  color: #ffffff;
+  color: #000000;
 }
 .navbar-inverse .nav .active > a,
 .navbar-inverse .nav .active > a:hover,

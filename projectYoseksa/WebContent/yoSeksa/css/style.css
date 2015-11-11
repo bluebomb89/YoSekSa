@@ -135,11 +135,11 @@ span.glyphicon.glyphicon-search {
     padding: 1.45em 1.3em;
 }
 .navbar-default .navbar-nav > li > a {
-    color: #fff;
+    color: #999999;
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-    color: #fff;
-    background-color: #F43C60;
+    color: #000000;
+    background-color: #ffffff;
 }
 .caret {
     margin-left: 9px;
