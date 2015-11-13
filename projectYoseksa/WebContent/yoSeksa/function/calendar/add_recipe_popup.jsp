@@ -42,6 +42,8 @@ $(function(){
 		else{
 			$('#schResult').attr("src", "http://localhost:8080/projectYoseksa/diary_search.sek?keyword="+keyword+"&bld="+bld+"&date="+date);
 			//$('#schResult').attr("src", "http://211.238.142.76:8080/projectYoseksa/diary_search.sek?keyword="+keyword+"&bld="+bld+"&date="+date);
+			//$('#schResult').attr("src", "http://localhost:8080/projectYoseksa/diary_search.sek?keyword="+keyword+"&bld="+bld+"&date="+date);
+			$('#schResult').attr("src", "http://localhost:8080/projectYoseksa/diary_search.sek?keyword="+keyword+"&bld="+bld+"&date="+date);
 			/* $('#schResult').attr("src", "../../function/calendar/add_recipe_popup_search_result.jsp?keyword="+keyword+"&bld="+bld+"&date="+date); */
 			return;
 		}

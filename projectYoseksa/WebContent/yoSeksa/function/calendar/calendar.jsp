@@ -145,7 +145,7 @@ Calendar cal = Calendar.getInstance();
 <head>
 
 <style>
-   a:LINK {color: #fff; font-size: 15pt; text-decoration: none;}
+   a:LINK {color: #fff; font-size: 12pt; text-decoration: none;}
     a:VISITED {color: #fff; text-decoration: none;}
     a:ACTIVE {color: #fff; text-decoration: none;}
     a:HOVER {color: #000000; text-decoration: none;}

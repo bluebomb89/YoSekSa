@@ -4,7 +4,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<link href="yoSeksa/css/style.css" type="text/css" rel="stylesheet" media="all">
 <title>Insert title here</title>
+<style>
+	.nav > li{
+  			margin: 0;	!important;
+  			font-family: initial; !important;
+  			font-size: 16px; !important;
+  			line-height: 22px; !important;
+  			color: #ffffff; !important;
+/*   			background-color: #ffffff; !important; */
+		}
+</style>
 </head>
 
 <body>

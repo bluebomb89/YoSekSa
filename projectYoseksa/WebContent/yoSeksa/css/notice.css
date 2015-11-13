@@ -206,10 +206,10 @@ textarea {
 }
 body {
   margin: 0;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: initial;
   font-size: 16px;
   line-height: 22px;
-  color: #869690;
+  color: #FFFFFF;
   background-color: #ffffff;
 }
 a {
@@ -662,7 +662,7 @@ h2 {
   font-size: 32px;
 }
 h3 {
-  font-size: 24px;
+  font-size: 18px;
 }
 h4 {
   font-size: 20px;
@@ -3423,7 +3423,7 @@ button.close {
 }
 .navbar-inverse .brand,
 .navbar-inverse .nav > li > a {
-  color: #000000;
+  color: ##c5c5c5;
 }
 .navbar-inverse .brand:hover,
 .navbar-inverse .nav > li > a:hover,

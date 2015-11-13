@@ -96,6 +96,7 @@ public class diary {
 		{
 			System.out.println("sub : "+d.getRecipe_sub());
 			System.out.println("no : "+d.getRecipe_no());
+			System.out.println("img : "+d.getRecipe_img());
 		}
 		
 		System.out.println("totalpage : "+totalpage);
